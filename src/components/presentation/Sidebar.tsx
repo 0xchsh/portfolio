@@ -23,7 +23,7 @@ export function Sidebar({
           key={section.id}
           onClick={() => onSectionClick(index)}
           className={cn(
-            'px-2 py-1 text-left rounded-md transition-colors w-fit',
+            'px-2 py-0.75 text-left rounded-md transition-colors w-fit cursor-pointer',
             'hover:bg-accent hover:text-accent-foreground',
             index === currentSectionIndex
               ? 'bg-accent text-accent-foreground font-medium'

@@ -48,7 +48,7 @@ export function Presentation({ data }: PresentationProps) {
 
       <div className="flex-1 relative min-h-0 border-0">
         {/* Sidebar - positioned over content */}
-        <aside className="hidden md:block absolute left-0 top-0 bottom-0 w-48 p-4 overflow-y-auto border-0 z-10">
+        <aside className="hidden md:block absolute left-0 top-0 bottom-0 w-48 p-4 pt-[120px] overflow-y-auto border-0 z-10">
           {currentProject && (
             <Sidebar
               sections={currentProject.sections}

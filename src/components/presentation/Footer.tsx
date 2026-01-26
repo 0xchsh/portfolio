@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface FooterProps {
@@ -35,7 +36,7 @@ export function Footer({ className }: FooterProps) {
 
   const kbdClass = (key: string) =>
     cn(
-      'inline-flex items-center justify-center w-6 h-6 rounded font-medium text-sm',
+      'inline-flex items-center justify-center w-6 h-6 rounded font-medium text-sm font-mono',
       isActive(key) ? 'bg-muted-foreground/30 text-foreground' : 'bg-secondary'
     );
 
@@ -46,29 +47,36 @@ export function Footer({ className }: FooterProps) {
         className
       )}
     >
-      <div className="flex items-center gap-4">
-        <span className="hidden sm:inline-flex items-center gap-1">
-          <kbd className={kbdClass('ArrowLeft')}>←</kbd>
-          <kbd className={kbdClass('ArrowRight')}>→</kbd>
-          projects
+      {/* Left - Keyboard shortcuts */}
+      <div className="hidden sm:flex items-center gap-4">
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-flex items-center gap-1">
+            <kbd className={kbdClass('ArrowLeft')}><ArrowLeft className="w-3 h-3" /></kbd>
+            <kbd className={kbdClass('ArrowRight')}><ArrowRight className="w-3 h-3" /></kbd>
+          </span>
+          Projects
         </span>
-        <span className="hidden sm:inline-flex items-center gap-1">
-          <kbd className={kbdClass('ArrowUp')}>↑</kbd>
-          <kbd className={kbdClass('ArrowDown')}>↓</kbd>
-          sections
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-flex items-center gap-1">
+            <kbd className={kbdClass('ArrowUp')}><ArrowUp className="w-3 h-3" /></kbd>
+            <kbd className={kbdClass('ArrowDown')}><ArrowDown className="w-3 h-3" /></kbd>
+          </span>
+          Sections
         </span>
         <span className="hidden md:inline-flex items-center gap-2">
-          <kbd className="inline-flex items-center justify-center w-6 h-6 rounded font-medium text-sm bg-secondary">T</kbd>
-          theme
+          <kbd className={kbdClass('t')}>T</kbd>
+          Theme
         </span>
       </div>
+
+      {/* Right - ch.sh • Built with Claude */}
       <div>
         Built with{' '}
         <a
           href="https://github.com/0xchsh/portfolio"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 decoration-dotted decoration-muted-foreground/40 hover:text-foreground transition-colors"
+          className="underline underline-offset-2 decoration-dotted decoration-muted-foreground/50 hover:text-foreground transition-colors"
         >
           Claude
         </a>
