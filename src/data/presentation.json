@@ -21,7 +21,7 @@
         },
         {
           "id": "freighter-design-system",
-          "title": "Design System",
+          "title": "Design system",
           "description": "Before Freighter Mobile, I'd built the Stellar Design System — an opinionated React component library used across SDF's web products. For mobile, I ported the core primitives to React Native and extended them with patterns that felt native: bottom sheets for contextual actions, gesture-driven interactions, and touch-friendly sizing throughout.\n\nThe goal was consistency without rigidity. Someone moving between the extension and the mobile app should feel like they're in the same product family, even if the interactions differ. Colours, typography, and spacing stayed constant. What changed was how components behaved — sheets instead of modals, swipes instead of hovers.",
           "footnotes": "thankful for that head start",
           "mockups": [
@@ -48,7 +48,7 @@
         },
         {
           "id": "freighter-signing",
-          "title": "Transaction Signing",
+          "title": "Transaction signing",
           "description": "This was the most interesting problem. Stellar transactions can contain multiple operations, each with different implications. Signing something you don't understand is how people lose funds.\n\nWe integrated Blockaid for real-time transaction simulation — before you sign, you see exactly what will change: tokens in, tokens out, new trustlines, permissions granted. The UI surfaces this as a plain-English summary with clear risk indicators. If something looks suspicious, you'll know.\n\nThe technical challenge was balancing speed with thoroughness. Simulation adds latency, but we kept it under 300ms in most cases. Fast enough that it doesn't feel like waiting; slow enough to actually protect you.",
           "footnotes": "",
           "mockups": [
@@ -75,7 +75,7 @@
         },
         {
           "id": "freighter-manage-assets",
-          "title": "Manage Assets",
+          "title": "Manage assets",
           "description": "Stellar handles assets differently than most chains. Before you can hold a token, you need to establish a trustline with its issuer — an explicit opt-in. It's a security feature, but it creates UX friction that other wallets often fumble.\n\nWe made adding trustlines feel as simple as adding a contact. Search or paste an asset, review the issuer, tap to add. Behind the scenes, we're submitting a changeTrust operation and locking up 0.5 XLM in reserve. To the user, it's just \"now I can receive this token.\"\n\nRemoving trustlines — which frees up that reserve — is equally straightforward. The complexity is real; we just don't make you feel it.",
           "footnotes": "",
           "mockups": [
@@ -110,7 +110,7 @@
         },
         {
           "id": "snack-existing-tools",
-          "title": "Why Not Existing Tools",
+          "title": "Why not existing tools",
           "description": "I looked at Linktree, Bento, and Notion. The first two are identity-centric: you have one profile, and links live there alongside everything else about you. The creator is the main event, not the content.\n\nNotion was simple enough for managing a list, but sharing was clunky. Viewers often needed an account, and lists lived alongside notes and databases — not as standalone, shareable pages.\n\nI wanted something content-first. A tool where the list is the product, not a feature buried inside something else.",
           "footnotes": "",
           "mockups": [
@@ -119,7 +119,7 @@
         },
         {
           "id": "snack-core-idea",
-          "title": "The Core Idea",
+          "title": "The core idea",
           "description": "Snack is curated lists, designed to be shared. You collect links around a theme — resources, inspiration, tools, whatever — and publish them as a clean, standalone page. No profile clutter, no social graph, no follower counts.\n\nThe constraint is intentional. Links only. No images, no embeds, no text blocks. This keeps lists lightweight and forces clarity: if something's worth adding, it earns its spot.",
           "footnotes": "simplicity as a feature, not a limitation",
           "mockups": [
@@ -128,7 +128,7 @@
         },
         {
           "id": "snack-creating",
-          "title": "Creating a List",
+          "title": "Creating a list",
           "description": "Once you have an account, creating a list takes under a minute. Set an emoji, add a title, paste your links. That's it.\n\nThe fastest flow is clipboard-first: copy a URL, paste it directly into the list. Snack scrapes the metadata automatically — title, description, favicon — so you don't have to format anything. There's a click-to-add option too, but paste trains the behaviour. The goal was to make adding links feel closer to memory than form-filling.\n\nOne action, one result. No friction between \"I found something good\" and \"it's in my list.\"",
           "footnotes": "",
           "mockups": [
@@ -137,7 +137,7 @@
         },
         {
           "id": "snack-lesson",
-          "title": "The $30K Lesson",
+          "title": "The $30K lesson",
           "description": "Last year, I spent $30,000 out-of-pocket to hire a dev agency for a software idea I believed in. After six months, we had a working MVP. The problem: too costly to continue, not enough distribution to justify the spend. I felt the weight of sunk cost settling in. I still loved the idea, but had no path forward.\n\nThen Claude Code became available. I decided to rebuild from scratch.\n\nSince May 2025, I've shipped the entire product — and more — maintaining it solo on a $20/month Anthropic subscription. What took six months and five figures now takes afternoons.",
           "footnotes": "still processing this, honestly",
           "mockups": [
@@ -146,7 +146,7 @@
         },
         {
           "id": "snack-lightweight",
-          "title": "Keeping It Light",
+          "title": "Keeping it light",
           "description": "The trickiest UX challenge was staying lightweight. Every feature had to pass a simple test: can this be done in one click or one keyboard shortcut?\n\nSaving a list? One click. Adding a link from the extension? One click. Copying the share URL? One click. If something required a modal, a confirmation step, or multiple taps, it probably didn't belong.\n\nThis philosophy shaped what didn't make it in as much as what did. Constraints aren't limitations — they're what give the product shape.",
           "footnotes": "",
           "mockups": [
@@ -155,7 +155,7 @@
         },
         {
           "id": "snack-features",
-          "title": "Features That Compound",
+          "title": "Features that compound",
           "description": "A few things that make Snack feel considered:\n\nAnalytics show you which links get clicked and how your lists perform over time. Dynamic OG images mean every list looks good when shared — no manual preview setup. The browser extension lets you save links directly from Twitter without leaving the page. And Discover surfaces other public lists, so the platform itself becomes a source of inspiration.\n\nNone of these are groundbreaking on their own. But together, they add up to something that feels complete — like every edge case was thought through.",
           "footnotes": "",
           "mockups": [
@@ -164,7 +164,7 @@
         },
         {
           "id": "snack-didnt-build",
-          "title": "What We Didn't Build",
+          "title": "What we didn't build",
           "description": "No following. No comments. No profiles beyond the basics. Snack isn't a social network — it's a tool for making shareable lists.\n\nThis was deliberate. Social features create expectations: notifications, feeds, engagement loops. They shift focus from the content to the creator. I wanted Snack to stay quiet. You make a list, you share it, people use it. That's the whole interaction.\n\nThe only social-adjacent feature is saving: you can bookmark lists you like. But even that's private — no public \"liked by\" counts, no pressure to perform.",
           "footnotes": "",
           "mockups": [
@@ -173,7 +173,7 @@
         },
         {
           "id": "snack-whats-next",
-          "title": "What's Next",
+          "title": "What's next",
           "description": "The mobile app is currently in progress, also being built with Claude Code. The goal is the same: keep it fast, keep it focused, make list creation feel native to however you browse.\n\nThe hardest part isn't building features — it's resisting the urge to add more. Every new thing risks diluting what makes Snack work. So far, the constraint has been the product's best feature.",
           "footnotes": "still figuring out the marketing side, but that's a different case study",
           "mockups": [
