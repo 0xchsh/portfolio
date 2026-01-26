@@ -3,6 +3,8 @@
 import { useState, useCallback, useMemo, useRef } from 'react';
 import type { PresentationData } from '@/types/presentation';
 
+type NavigationDirection = 'left' | 'right' | null;
+
 interface UsePresentationReturn {
   currentProjectIndex: number;
   currentSectionIndex: number;
@@ -16,11 +18,13 @@ interface UsePresentationReturn {
   prevProject: () => void;
   totalProjects: number;
   totalSections: number;
+  navigationDirection: NavigationDirection;
 }
 
 export function usePresentation(data: PresentationData): UsePresentationReturn {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [navigationDirection, setNavigationDirection] = useState<NavigationDirection>(null);
 
   // Store remembered section indices for each project
   const sectionMemory = useRef<Record<number, number>>({});
@@ -39,12 +43,16 @@ export function usePresentation(data: PresentationData): UsePresentationReturn {
   const totalSections = currentProject?.sections.length ?? 0;
 
   // Helper to switch projects while remembering/restoring section
-  const switchToProject = useCallback((newProjectIndex: number) => {
+  const switchToProject = useCallback((newProjectIndex: number, direction?: NavigationDirection) => {
     // Save current section for current project
     sectionMemory.current[currentProjectIndex] = currentSectionIndex;
 
     // Get remembered section for target project (default to 0)
     const rememberedSection = sectionMemory.current[newProjectIndex] ?? 0;
+
+    // Set direction based on index change if not provided
+    const navDirection = direction ?? (newProjectIndex > currentProjectIndex ? 'right' : 'left');
+    setNavigationDirection(navDirection);
 
     setCurrentProjectIndex(newProjectIndex);
     setCurrentSectionIndex(rememberedSection);
@@ -110,5 +118,6 @@ export function usePresentation(data: PresentationData): UsePresentationReturn {
     prevProject,
     totalProjects,
     totalSections,
+    navigationDirection,
   };
 }

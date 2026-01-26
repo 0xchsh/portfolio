@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Download, Globe, Twitter, Mail } from 'lucide-react';
 import type { Project } from '@/types/presentation';
@@ -21,6 +22,14 @@ export function Header({
   onProjectClick,
   className,
 }: HeaderProps) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('hi@ch.sh');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <header
       className={cn(
@@ -33,36 +42,36 @@ export function Header({
         <img
           src="/images/pfp.gif"
           alt="Logo"
-          className="h-[72px] w-[72px] shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:mix-blend-lighten -mt-2 cursor-pointer"
+          className="h-[72px] w-[72px] shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-2 cursor-pointer transition-[filter] duration-200 ease"
         />
         {/* Hover menu */}
         <div className="absolute left-full top-16 -translate-x-4 -translate-y-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 ease-out z-50">
-          <div className="flex flex-col gap-1 py-2 px-3 bg-secondary rounded-md shadow-lg min-w-[120px]">
+          <div className="flex flex-col p-1 bg-secondary rounded-md shadow-lg min-w-[120px]">
             <a
               href="https://ch.sh"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-base leading-6 text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 px-3 py-1 rounded-md text-base leading-6 text-secondary-foreground hover:bg-accent transition-colors"
             >
-              <Globe className="w-4 h-4 opacity-50" />
+              <Globe className="w-4 h-4 opacity-70" />
               ch.sh
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/chshux"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-base leading-6 text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 px-3 py-1 rounded-md text-base leading-6 text-secondary-foreground hover:bg-accent transition-colors"
             >
-              <Twitter className="w-4 h-4 opacity-50" />
+              <Twitter className="w-4 h-4 opacity-70" />
               twitter
             </a>
-            <a
-              href="mailto:hello@ch.sh"
-              className="flex items-center gap-2 text-base leading-6 text-muted-foreground hover:text-foreground transition-colors"
+            <button
+              onClick={handleCopyEmail}
+              className="flex items-center gap-2 px-3 py-1 rounded-md text-base leading-6 text-secondary-foreground hover:bg-accent transition-colors cursor-pointer"
             >
-              <Mail className="w-4 h-4 opacity-50" />
-              email
-            </a>
+              <Mail className="w-4 h-4 opacity-70" />
+              {copied ? 'copied' : 'hi@ch.sh'}
+            </button>
           </div>
         </div>
       </div>
@@ -74,10 +83,10 @@ export function Header({
             key={project.id}
             onClick={() => onProjectClick(index)}
             className={cn(
-              'px-2 py-1 rounded-md transition-colors flex items-center gap-2 cursor-pointer',
+              'px-2.5 py-1 rounded-md transition-colors flex items-center gap-2 cursor-pointer text-base leading-6',
               'hover:bg-accent hover:text-accent-foreground',
               index === currentProjectIndex
-                ? 'bg-secondary text-secondary-foreground font-medium'
+                ? 'bg-secondary text-secondary-foreground'
                 : 'text-muted-foreground'
             )}
           >
@@ -110,8 +119,8 @@ export function Header({
         href={downloadUrl}
         download
         className={cn(
-          'flex items-center gap-2 px-2 py-1 rounded-md transition-colors',
-          'bg-secondary text-secondary-foreground',
+          'flex items-center gap-2 px-2 py-1 rounded-md transition-colors text-base leading-6',
+          'text-muted-foreground',
           'hover:bg-accent hover:text-accent-foreground'
         )}
       >
