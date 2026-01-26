@@ -9,6 +9,7 @@ export interface Section {
   id: string;
   title: string;
   description: string;
+  footnotes?: string;
   mockups: Mockup[];
 }
 
@@ -16,6 +17,7 @@ export interface Project {
   id: string;
   name: string;
   icon?: string;
+  link?: string;
   sections: Section[];
 }
 

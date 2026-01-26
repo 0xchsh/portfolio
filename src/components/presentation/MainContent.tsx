@@ -51,7 +51,17 @@ export function MainContent({ section, className }: MainContentProps) {
       )}
     >
       <MockupGrid mockups={displayedSection.mockups} />
-      <Description text={displayedSection.description} />
+      <div className="flex flex-col gap-4 max-w-[35rem] w-full">
+        <Description text={displayedSection.description} />
+        {displayedSection.footnotes && (
+          <>
+            <div className="border-t border-dotted border-muted-foreground/30" />
+            <p className="text-muted-foreground text-sm leading-[22px] whitespace-pre-line">
+              {displayedSection.footnotes}
+            </p>
+          </>
+        )}
+      </div>
     </div>
   );
 }

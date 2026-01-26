@@ -1,5 +1,7 @@
 'use client';
 
+import { Squircle } from '@squircle-js/react';
+import { List, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { Section } from '@/types/presentation';
 
@@ -10,6 +12,7 @@ interface SidebarProps {
   currentSectionIndex: number;
   onSectionClick: (index: number) => void;
   direction?: NavigationDirection;
+  projectLink?: string;
   className?: string;
 }
 
@@ -18,6 +21,7 @@ export function Sidebar({
   currentSectionIndex,
   onSectionClick,
   direction,
+  projectLink,
   className,
 }: SidebarProps) {
   return (
@@ -29,21 +33,51 @@ export function Sidebar({
         className
       )}
     >
+      {/* Content header */}
+      <div className="flex items-center gap-2 px-2 py-1 text-muted-foreground text-base leading-6">
+        <List className="w-4 h-4" />
+        <span>Content</span>
+      </div>
+
+      {/* Section links */}
       {sections.map((section, index) => (
-        <button
+        <Squircle
           key={section.id}
-          onClick={() => onSectionClick(index)}
-          className={cn(
-            'px-2 py-1 text-left rounded-md transition-colors w-fit cursor-pointer text-base leading-6',
-            'hover:bg-accent hover:text-accent-foreground',
-            index === currentSectionIndex
-              ? 'bg-accent text-accent-foreground'
-              : 'text-muted-foreground'
-          )}
+          asChild
+          cornerRadius={8}
+          cornerSmoothing={1}
         >
-          {section.title}
-        </button>
+          <button
+            onClick={() => onSectionClick(index)}
+            className={cn(
+              'px-2 py-1 text-left transition-colors w-fit cursor-pointer text-base leading-6 whitespace-nowrap',
+              'hover:bg-accent hover:text-accent-foreground',
+              index === currentSectionIndex
+                ? 'bg-accent text-accent-foreground'
+                : 'text-muted-foreground'
+            )}
+          >
+            {section.title}
+          </button>
+        </Squircle>
       ))}
+
+      {/* Project link */}
+      {projectLink && (
+        <a
+          href={projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => {
+            e.preventDefault();
+            window.open(projectLink, '_blank', 'noopener,noreferrer');
+          }}
+          className="flex items-center gap-2 px-2 py-1 text-muted-foreground text-base leading-6 mt-4 hover:text-foreground transition-colors cursor-pointer"
+        >
+          <Globe className="w-4 h-4 flex-shrink-0" />
+          <span>{projectLink.replace(/^https?:\/\//, '')}</span>
+        </a>
+      )}
     </nav>
   );
 }

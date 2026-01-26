@@ -5,41 +5,90 @@
   },
   "projects": [
     {
-      "id": "project-1",
+      "id": "freighter",
       "name": "Freighter",
       "icon": "<svg viewBox=\"0 0 118 119\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M54.9438 19.6822C52.9352 19.6822 51.2174 18.3046 50.4683 16.4408C46.5946 6.8027 37.1786 0 26.1777 0C11.7202 0 0 11.7494 0 26.243C0 40.7366 11.7202 52.486 26.1777 52.486C37.1786 52.486 46.5946 45.6833 50.4683 36.0451C51.2174 34.1814 52.9352 32.8037 54.9438 32.8037H69.7703C72.2003 32.8037 74.1703 34.7737 74.1703 37.2037V50.2729C74.1703 52.7029 76.1402 54.6729 78.5703 54.6729H82.8591C85.2892 54.6729 87.2591 52.7029 87.2591 50.2729V37.1667C87.2591 34.7571 89.2125 32.8037 91.6221 32.8037C94.0317 32.8037 95.985 34.7571 95.985 37.1667V50.2729C95.985 52.7029 97.955 54.6729 100.385 54.6729H104.674C107.104 54.6729 109.074 52.7029 109.074 50.2729V37.1667C109.074 34.7571 111.027 32.8037 113.437 32.8037C115.846 32.8037 117.8 30.8504 117.8 28.4408V24.0822C117.8 21.6522 115.83 19.6822 113.4 19.6822H54.9438ZM39.2666 26.243C39.2666 33.4898 33.4065 39.3645 26.1777 39.3645C18.949 39.3645 13.0889 33.4898 13.0889 26.243C13.0889 18.9962 18.949 13.1215 26.1777 13.1215C33.4065 13.1215 39.2666 18.9962 39.2666 26.243Z\" fill=\"currentColor\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M62.856 98.4112C64.8647 98.4112 66.5824 99.7888 67.3315 101.653C71.2052 111.291 80.6212 118.093 91.6221 118.093C106.08 118.093 117.8 106.344 117.8 91.8504C117.8 77.3568 106.08 65.6075 91.6221 65.6075C80.6212 65.6075 71.2052 72.4101 67.3315 82.0483C66.5824 83.912 64.8647 85.2897 62.856 85.2897H48.0296C45.5995 85.2897 43.6296 83.3197 43.6296 80.8897V67.8205C43.6296 65.3905 41.6596 63.4205 39.2296 63.4205H34.9407C32.5106 63.4205 30.5407 65.3905 30.5407 67.8205V80.9267C30.5407 83.3363 28.5873 85.2897 26.1777 85.2897C23.7681 85.2897 21.8148 83.3363 21.8148 80.9267L21.8148 67.8205C21.8148 65.3905 19.8448 63.4205 17.4148 63.4205H13.1259C10.6959 63.4205 8.72592 65.3905 8.72592 67.8205L8.72592 80.9267C8.72592 83.3363 6.77255 85.2897 4.36296 85.2897C1.95337 85.2897 2.69032e-06 87.243 2.48019e-06 89.6526L2.1001e-06 94.0112C1.88819e-06 96.4412 1.96995 98.4112 4.4 98.4112H62.856ZM78.5332 91.8504C78.5332 84.6036 84.3933 78.7289 91.6221 78.7289C98.8509 78.7289 104.711 84.6036 104.711 91.8504C104.711 99.0972 98.8509 104.972 91.6221 104.972C84.3933 104.972 78.5332 99.0972 78.5332 91.8504Z\" fill=\"currentColor\"/></svg>",
+      "link": "https://freighter.app",
       "sections": [
         {
-          "id": "snack-overview",
-          "title": "About",
-          "description": "Snack is a social link curation platform that helps users discover and share curated collections of links. The design focuses on clean typography and intuitive navigation.",
-          "mockups": [
-            { "id": "snack-1", "type": "desktop", "src": "/images/snack-desktop-1.png", "alt": "Snack homepage" }
-          ]
-        },
-        {
-          "id": "snack-collections",
+          "id": "freighter-brief",
           "title": "Overview",
-          "description": "Users can create themed collections with custom covers and descriptions. Each collection supports drag-and-drop reordering and inline editing.",
+          "description": "Stellar had an extension wallet but no mobile app. We needed a flagship — something we could point people to when they asked \"how do I get started with Stellar?\" It had to be approachable for newcomers without feeling stripped-down for power users. The deadline was Meridian, our annual conference in September 2025, where attendees would use it live.\n\nThe team was small: three engineers, one PM, and me as the sole designer. Five months from kickoff to launch. We'd be building on React Native, which meant I could extend our existing Stellar Design System rather than starting from scratch — a meaningful head start.",
+          "footnotes": "",
           "mockups": [
-            { "id": "snack-2", "type": "frame", "src": "", "alt": "Mobile collection" }
+            { "id": "freighter-1", "type": "frame", "src": "", "alt": "Freighter overview" }
           ]
         },
         {
-          "id": "snack-discovery",
-          "title": "Discovery",
-          "description": "The discovery feed surfaces trending collections and follows. Personalized recommendations based on user interests and engagement patterns.",
+          "id": "freighter-design-system",
+          "title": "Design System",
+          "description": "Before Freighter Mobile, I'd built the Stellar Design System — an opinionated React component library used across SDF's web products. For mobile, I ported the core primitives to React Native and extended them with patterns that felt native: bottom sheets for contextual actions, gesture-driven interactions, and touch-friendly sizing throughout.\n\nThe goal was consistency without rigidity. Someone moving between the extension and the mobile app should feel like they're in the same product family, even if the interactions differ. Colours, typography, and spacing stayed constant. What changed was how components behaved — sheets instead of modals, swipes instead of hovers.",
+          "footnotes": "thankful for that head start",
           "mockups": [
-            { "id": "snack-6", "type": "desktop", "src": "/images/snack-desktop-4.png", "alt": "Discovery feed" }
+            { "id": "freighter-2", "type": "frame", "src": "", "alt": "Stellar Design System" }
           ]
         },
         {
-          "id": "snack-profile",
-          "title": "Profile",
-          "description": "User profiles showcase their collections and activity. Stats include total links saved, collections created, and follower count.",
+          "id": "freighter-home",
+          "title": "Home",
+          "description": "The home screen needed to answer three questions immediately: what do I have, what's it worth, and what just happened? Balances sit at the top with a clear total. Below that, recent activity — just enough to orient you without overwhelming.\n\nWe kept actions minimal: send, receive, and a shortcut to Discover. Everything else lives a tap away. The information density is deliberately low. Crypto wallets often try to surface everything at once. We wanted calm.",
+          "footnotes": "",
           "mockups": [
-            { "id": "snack-7", "type": "mobile", "src": "/images/snack-mobile-3.png", "alt": "Profile mobile" },
-            { "id": "snack-8", "type": "mobile", "src": "/images/snack-mobile-4.png", "alt": "Profile settings" }
+            { "id": "freighter-3", "type": "frame", "src": "", "alt": "Home screen" }
+          ]
+        },
+        {
+          "id": "freighter-history",
+          "title": "History",
+          "description": "Transaction history on Stellar can get noisy — trustline changes, path payments, claimable balances. Most of it means nothing to someone who just wants to know \"did my payment go through?\"\n\nWe grouped related operations into single entries where possible, and wrote human-readable summaries for each type. \"Sent 50 USDC to G...X4R\" instead of raw operation data. Tapping expands the full detail for anyone who wants it, but the default view prioritises clarity over completeness.",
+          "footnotes": "human-readable first, raw data on request",
+          "mockups": [
+            { "id": "freighter-4", "type": "frame", "src": "", "alt": "Transaction history" }
+          ]
+        },
+        {
+          "id": "freighter-signing",
+          "title": "Transaction Signing",
+          "description": "This was the most interesting problem. Stellar transactions can contain multiple operations, each with different implications. Signing something you don't understand is how people lose funds.\n\nWe integrated Blockaid for real-time transaction simulation — before you sign, you see exactly what will change: tokens in, tokens out, new trustlines, permissions granted. The UI surfaces this as a plain-English summary with clear risk indicators. If something looks suspicious, you'll know.\n\nThe technical challenge was balancing speed with thoroughness. Simulation adds latency, but we kept it under 300ms in most cases. Fast enough that it doesn't feel like waiting; slow enough to actually protect you.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "freighter-5", "type": "frame", "src": "public/images", "alt": "Transaction signing" }
+          ]
+        },
+        {
+          "id": "freighter-discover",
+          "title": "Discover",
+          "description": "This is our main differentiator. No other Stellar wallet has a dedicated screen for ecosystem apps. We wanted Freighter to feel less like a vault and more like a portal — a place where you can actually do things, not just hold assets.\n\nWe launched with ten curated dApps, including Blend, Stellar's flagship DeFi protocol. Each app opens in an in-app browser with WalletConnect handling the connection flow. You never leave Freighter; you're just... using things. The connection handshake is seamless enough that it feels native.\n\nFor developers, Discover is distribution. For users, it's access. Both matter.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "freighter-6", "type": "frame", "src": "", "alt": "Discover screen" }
+          ]
+        },
+        {
+          "id": "freighter-send",
+          "title": "Send",
+          "description": "Sending should be trivial. Address, asset, amount, confirm. We added QR scanning, recent recipients, and paste detection — the small conveniences that reduce friction.\n\nThe interesting bit is what happens after you hit send. The same Blockaid-powered preview appears: here's exactly what this transaction will do. One final moment of clarity before anything irreversible happens. Most of the time you'll glance and confirm. But for the one time something's wrong, it's everything.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "freighter-7", "type": "frame", "src": "", "alt": "Send flow" }
+          ]
+        },
+        {
+          "id": "freighter-manage-assets",
+          "title": "Manage Assets",
+          "description": "Stellar handles assets differently than most chains. Before you can hold a token, you need to establish a trustline with its issuer — an explicit opt-in. It's a security feature, but it creates UX friction that other wallets often fumble.\n\nWe made adding trustlines feel as simple as adding a contact. Search or paste an asset, review the issuer, tap to add. Behind the scenes, we're submitting a changeTrust operation and locking up 0.5 XLM in reserve. To the user, it's just \"now I can receive this token.\"\n\nRemoving trustlines — which frees up that reserve — is equally straightforward. The complexity is real; we just don't make you feel it.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "freighter-8", "type": "frame", "src": "", "alt": "Manage assets" }
+          ]
+        },
+        {
+          "id": "freighter-retrospective",
+          "title": "Retrospective",
+          "description": "We shipped an MVP for internal testing, then a beta for the community, then v1 for launch. Phases made sense on paper but created friction in practice — it was hard to keep everyone aligned on which version we were discussing, and the final polish got squeezed.\n\nIf I did it again, I'd collapse the early phases and push toward v1 faster. The feedback from MVP and beta was valuable, but we could have gathered it with a tighter loop. More time for polish, less time reconciling phase definitions in Slack threads.",
+          "footnotes": "Freighter Mobile was a team effort. Thanks to the engineering team — Cassio, Leo, and Danilo — for building something this solid in five months. To Piyal and Aristides for support across the extension and backend. And to the broader Stellar team for the trust and feedback throughout. Launched September 2025 at Stellar Meridian.\n\nnext time: fewer versions, faster convergence",
+          "mockups": [
+            { "id": "freighter-9", "type": "frame", "src": "", "alt": "Retrospective" }
           ]
         }
       ]
@@ -48,29 +97,87 @@
       "id": "project-2",
       "name": "Snack",
       "icon": "<svg viewBox=\"0 0 148 148\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M77.6795 36.0907C87.8664 29.7393 98.7387 28.5239 108.897 35.8964C119.902 43.8851 122.827 55.7956 121.396 68.5364C120.021 80.7828 114.761 91.4785 105.439 100.007C104.16 101.176 103.29 104.079 103.802 105.678C105.261 110.258 106.473 114.192 100.591 116.498C94.3151 118.961 93.1443 114.06 91.1541 110.229C90.9516 109.842 90.6338 109.511 90.198 108.916C80.4605 108.916 58.0515 108.99 57.9073 108.99C57.9073 108.99 56.7089 110.987 55.7484 112.599C53.5824 116.229 51.4261 118.523 46.8883 116.277C42.8281 114.271 41.2923 111.477 43.6243 107.363C45.5708 103.922 44.59 101.819 41.774 99.1319C28.8987 86.8439 23.8039 71.2859 27.3857 54.1977C31.4291 34.9071 49.5455 24.7399 69.0408 35.2551C71.8801 36.7878 74.0227 38.3712 77.6795 36.0907ZM62.8575 95.2777H85.0822C81.2488 85.997 77.8776 77.831 73.9067 68.2188C69.8878 78.0602 66.6195 86.0705 62.8575 95.2777ZM106.632 55.7273C103.702 44.7325 91.5835 41.2821 83.2259 48.9871C82.3113 49.8302 81.5226 51.8999 81.9221 52.8999C86.6083 64.5994 91.5323 76.2026 96.8389 88.8988C106.423 78.8004 109.95 68.1656 106.632 55.7273ZM64.607 49.0503C59.4952 42.9289 48.7605 43.7313 44.2386 50.3616C36.6155 61.5367 39.6561 77.6077 50.8088 88.4064C51.2356 88.2885 61.036 65.1819 65.554 53.8981C66.0806 52.5816 65.5536 50.1856 64.607 49.0503Z\" fill=\"currentColor\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M88.7994 0C109.521 0 119.883 0.000614564 127.797 4.03333C134.759 7.58064 140.419 13.2408 143.967 20.2028C147.999 28.1175 148 38.4787 148 59.2006V88.7994C148 109.521 147.999 119.883 143.967 127.797C140.419 134.759 134.759 140.419 127.797 143.967C119.883 147.999 109.521 148 88.7994 148H59.2006L51.8988 147.992C36.4968 147.939 27.7659 147.527 20.9525 144.334L20.2028 143.967C13.4583 140.53 7.9357 135.111 4.37207 128.446L4.03333 127.797C0.000614564 119.883 0 109.521 0 88.7994V59.2006C0 39.1269 -4.37399e-05 28.7754 3.66597 20.9525L4.03333 20.2028C7.46979 13.4583 12.889 7.9357 19.5539 4.37207L20.2028 4.03333C27.128 0.504759 35.9258 0.0626736 51.8988 0.00752767L59.2006 0H88.7994ZM59.2006 12.3333C48.6361 12.3333 41.4536 12.3435 35.9025 12.797C30.4957 13.2388 27.7307 14.0394 25.8018 15.0222C21.1605 17.3871 17.3871 21.1605 15.0222 25.8018C14.0394 27.7307 13.2388 30.4956 12.797 35.9025C12.3435 41.4536 12.3333 48.6361 12.3333 59.2006V88.7994C12.3333 99.3639 12.3435 106.546 12.797 112.098C13.2388 117.504 14.0394 120.269 15.0222 122.198C17.3871 126.839 21.1605 130.613 25.8018 132.978C27.7307 133.961 30.4956 134.761 35.9025 135.203C41.4536 135.657 48.6361 135.667 59.2006 135.667H88.7994C99.3639 135.667 106.546 135.657 112.098 135.203C117.504 134.761 120.269 133.961 122.198 132.978C126.839 130.613 130.613 126.839 132.978 122.198C133.961 120.269 134.761 117.504 135.203 112.098C135.657 106.546 135.667 99.3639 135.667 88.7994V59.2006C135.667 48.6361 135.657 41.4536 135.203 35.9025C134.761 30.4957 133.961 27.7307 132.978 25.8018C130.613 21.1605 126.839 17.3871 122.198 15.0222C120.269 14.0394 117.504 13.2388 112.098 12.797C106.546 12.3435 99.3639 12.3333 88.7994 12.3333H59.2006Z\" fill=\"currentColor\"/></svg>",
+      "link": "https://snack.xyz",
       "sections": [
         {
-          "id": "mapper-overview",
+          "id": "snack-problem",
           "title": "Overview",
           "description": "I was building a directory of the best-designed crypto websites. They have this unique visual style — bold, experimental, unapologetically weird — and if you're building in crypto, you want references. Similar to how people use Godly or Mobbin for inspiration, but nothing like that existed for web3.\n\nSo I made one myself in Framer. It worked, but the process was painful. Every directory I found was custom-built from scratch. I wanted a way to spin up curated lists quickly — focused on links, not identity. Lists that were designed to be shared, not buried in a notes app.",
+          "footnotes": "",
           "mockups": [
-            { "id": "mapper-1", "type": "desktop", "src": "/images/mapper-desktop-1.png", "alt": "Mapper main view" }
+            { "id": "snack-1", "type": "frame", "src": "", "alt": "Snack overview" }
           ]
         },
         {
-          "id": "mapper-lists",
-          "title": "Lists",
-          "description": "Create themed lists of locations like 'Best Coffee Shops' or 'Weekend Hikes'. Lists can be public or private and shared with friends.",
+          "id": "snack-existing-tools",
+          "title": "Why Not Existing Tools",
+          "description": "I looked at Linktree, Bento, and Notion. The first two are identity-centric: you have one profile, and links live there alongside everything else about you. The creator is the main event, not the content.\n\nNotion was simple enough for managing a list, but sharing was clunky. Viewers often needed an account, and lists lived alongside notes and databases — not as standalone, shareable pages.\n\nI wanted something content-first. A tool where the list is the product, not a feature buried inside something else.",
+          "footnotes": "",
           "mockups": [
-            { "id": "mapper-4", "type": "desktop", "src": "/images/mapper-desktop-2.png", "alt": "List view" }
+            { "id": "snack-2", "type": "frame", "src": "", "alt": "Existing tools comparison" }
           ]
         },
         {
-          "id": "mapper-collab",
-          "title": "Collaboration",
-          "description": "Plan trips with friends using collaborative maps. Real-time updates, comments, and voting on locations make group planning easy.",
+          "id": "snack-core-idea",
+          "title": "The Core Idea",
+          "description": "Snack is curated lists, designed to be shared. You collect links around a theme — resources, inspiration, tools, whatever — and publish them as a clean, standalone page. No profile clutter, no social graph, no follower counts.\n\nThe constraint is intentional. Links only. No images, no embeds, no text blocks. This keeps lists lightweight and forces clarity: if something's worth adding, it earns its spot.",
+          "footnotes": "simplicity as a feature, not a limitation",
           "mockups": [
-            { "id": "mapper-6", "type": "desktop", "src": "/images/mapper-desktop-4.png", "alt": "Collaboration view" }
+            { "id": "snack-3", "type": "frame", "src": "", "alt": "Core concept" }
+          ]
+        },
+        {
+          "id": "snack-creating",
+          "title": "Creating a List",
+          "description": "Once you have an account, creating a list takes under a minute. Set an emoji, add a title, paste your links. That's it.\n\nThe fastest flow is clipboard-first: copy a URL, paste it directly into the list. Snack scrapes the metadata automatically — title, description, favicon — so you don't have to format anything. There's a click-to-add option too, but paste trains the behaviour. The goal was to make adding links feel closer to memory than form-filling.\n\nOne action, one result. No friction between \"I found something good\" and \"it's in my list.\"",
+          "footnotes": "",
+          "mockups": [
+            { "id": "snack-4", "type": "frame", "src": "", "alt": "Creating a list" }
+          ]
+        },
+        {
+          "id": "snack-lesson",
+          "title": "The $30K Lesson",
+          "description": "Last year, I spent $30,000 out-of-pocket to hire a dev agency for a software idea I believed in. After six months, we had a working MVP. The problem: too costly to continue, not enough distribution to justify the spend. I felt the weight of sunk cost settling in. I still loved the idea, but had no path forward.\n\nThen Claude Code became available. I decided to rebuild from scratch.\n\nSince May 2025, I've shipped the entire product — and more — maintaining it solo on a $20/month Anthropic subscription. What took six months and five figures now takes afternoons.",
+          "footnotes": "still processing this, honestly",
+          "mockups": [
+            { "id": "snack-5", "type": "frame", "src": "", "alt": "The journey" }
+          ]
+        },
+        {
+          "id": "snack-lightweight",
+          "title": "Keeping It Light",
+          "description": "The trickiest UX challenge was staying lightweight. Every feature had to pass a simple test: can this be done in one click or one keyboard shortcut?\n\nSaving a list? One click. Adding a link from the extension? One click. Copying the share URL? One click. If something required a modal, a confirmation step, or multiple taps, it probably didn't belong.\n\nThis philosophy shaped what didn't make it in as much as what did. Constraints aren't limitations — they're what give the product shape.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "snack-6", "type": "frame", "src": "", "alt": "Lightweight UX" }
+          ]
+        },
+        {
+          "id": "snack-features",
+          "title": "Features That Compound",
+          "description": "A few things that make Snack feel considered:\n\nAnalytics show you which links get clicked and how your lists perform over time. Dynamic OG images mean every list looks good when shared — no manual preview setup. The browser extension lets you save links directly from Twitter without leaving the page. And Discover surfaces other public lists, so the platform itself becomes a source of inspiration.\n\nNone of these are groundbreaking on their own. But together, they add up to something that feels complete — like every edge case was thought through.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "snack-7", "type": "frame", "src": "", "alt": "Features" }
+          ]
+        },
+        {
+          "id": "snack-didnt-build",
+          "title": "What We Didn't Build",
+          "description": "No following. No comments. No profiles beyond the basics. Snack isn't a social network — it's a tool for making shareable lists.\n\nThis was deliberate. Social features create expectations: notifications, feeds, engagement loops. They shift focus from the content to the creator. I wanted Snack to stay quiet. You make a list, you share it, people use it. That's the whole interaction.\n\nThe only social-adjacent feature is saving: you can bookmark lists you like. But even that's private — no public \"liked by\" counts, no pressure to perform.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "snack-8", "type": "frame", "src": "", "alt": "What we didn't build" }
+          ]
+        },
+        {
+          "id": "snack-whats-next",
+          "title": "What's Next",
+          "description": "The mobile app is currently in progress, also being built with Claude Code. The goal is the same: keep it fast, keep it focused, make list creation feel native to however you browse.\n\nThe hardest part isn't building features — it's resisting the urge to add more. Every new thing risks diluting what makes Snack work. So far, the constraint has been the product's best feature.",
+          "footnotes": "still figuring out the marketing side, but that's a different case study",
+          "mockups": [
+            { "id": "snack-9", "type": "frame", "src": "", "alt": "What's next" }
           ]
         }
       ]
@@ -79,13 +186,14 @@
       "id": "project-3",
       "name": "Laboratory",
       "icon": "<svg viewBox=\"0 0 150 127\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M75.0172 -0.157715C83.5739 -0.157715 91.8557 1.49678 99.6907 4.73825C103.849 6.46027 107.835 8.65501 111.546 11.2212L110.756 11.6264L100.584 16.7249C92.8179 12.4705 83.9863 10.242 75.0172 10.242H74.6048C67.6976 10.3095 60.9622 11.6601 54.6048 14.26C48.2474 16.8937 42.543 20.6417 37.6632 25.4363C27.6976 35.262 22.1993 48.2954 22.1993 62.1392C22.1993 64.4014 22.3368 66.6637 22.6461 68.926L22.7491 69.635L23.4021 69.2974L149.966 5.8525V17.5353L128.763 28.1713L118.351 33.3712L25.8076 79.7984L25.3952 80.0347L15.8419 84.7956V84.7619L15.3952 84.9645L0 92.6967V81.0139L5.22337 78.414C9.58763 76.2193 12.1993 71.6947 11.8213 66.8663C11.7182 65.2793 11.6495 63.6924 11.6495 62.1054C11.6495 53.6979 13.3333 45.5267 16.6323 37.8282C19.8282 30.3998 24.3986 23.7481 30.2062 18.008C36.0138 12.3017 42.7835 7.77712 50.3437 4.63695C58.1443 1.49678 66.4605 -0.157715 75.0172 -0.157715Z\" fill=\"currentColor\"/><path d=\"M144.777 47.4513L150 44.8514V33.1686L31.5464 92.5279L21.134 97.7277L0 108.33V120.013L126.564 56.703L127.216 56.3653L127.32 57.0744C127.629 59.3367 127.766 61.6327 127.766 63.895C127.766 77.7387 122.268 90.8059 112.302 100.598C107.423 105.392 101.718 109.14 95.3608 111.774C89.0034 114.408 82.268 115.758 75.3608 115.792H74.9828C65.9794 115.792 57.1134 113.53 49.3471 109.275L48.9347 109.478L38.4192 114.745C42.1306 117.312 46.1168 119.506 50.3093 121.262C58.1443 124.504 66.4261 126.158 74.9828 126.158C83.5395 126.158 91.8557 124.504 99.6564 121.262C107.182 118.122 113.986 113.631 119.794 107.891C125.601 102.151 130.172 95.4992 133.368 88.0709C136.667 80.3724 138.351 72.2012 138.351 63.7937C138.351 62.2067 138.316 60.586 138.179 58.999C137.801 54.1706 140.412 49.646 144.777 47.4513Z\" fill=\"currentColor\"/></svg>",
+      "link": "https://lab.stellar.org",
       "sections": [
         {
           "id": "synth-overview",
           "title": "Overview",
           "description": "Synth is a music creation tool that lets anyone make beats and melodies. The interface is designed to be approachable for beginners while powerful enough for pros.",
           "mockups": [
-            { "id": "synth-1", "type": "desktop", "src": "/images/synth-desktop-1.png", "alt": "Synth main interface" }
+            { "id": "synth-1", "type": "frame", "src": "/images/synth-frame-1.png", "alt": "Synth main interface" }
           ]
         },
         {
@@ -93,7 +201,7 @@
           "title": "Sequencer",
           "description": "The step sequencer allows pattern creation with drag-and-drop ease. Supports multiple instruments, tempo control, and pattern chaining.",
           "mockups": [
-            { "id": "synth-2", "type": "desktop", "src": "/images/synth-desktop-2.png", "alt": "Sequencer view" }
+            { "id": "synth-2", "type": "frame", "src": "/images/synth-frame-2.png", "alt": "Sequencer view" }
           ]
         },
         {
@@ -101,7 +209,7 @@
           "title": "Instruments",
           "description": "A library of synthesizers and drum machines with customizable parameters. Each instrument has a unique visual identity and sound profile.",
           "mockups": [
-            { "id": "synth-5", "type": "desktop", "src": "/images/synth-desktop-4.png", "alt": "Instrument browser" }
+            { "id": "synth-5", "type": "frame", "src": "/images/synth-frame-4.png", "alt": "Instrument browser" }
           ]
         },
         {

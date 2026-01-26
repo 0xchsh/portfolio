@@ -1,5 +1,6 @@
 'use client';
 
+import { Squircle } from '@squircle-js/react';
 import { usePresentation } from '@/hooks/usePresentation';
 import { useKeyboardNavigation } from '@/hooks/useKeyboardNavigation';
 import { useTheme } from '@/components/providers/ThemeProvider';
@@ -48,8 +49,8 @@ export function Presentation({ data }: PresentationProps) {
       />
 
       <div className="flex-1 relative min-h-0 border-0">
-        {/* Sidebar - positioned over content */}
-        <aside className="hidden md:block absolute left-0 top-0 bottom-0 w-48 p-4 pt-24 overflow-y-auto border-0 z-10">
+        {/* Sidebar - positioned over content (hidden on mobile) */}
+        <aside className="hidden sm:block absolute left-0 top-0 bottom-0 w-max p-4 pt-24 border-0 z-10">
           {currentProject && (
             <Sidebar
               key={currentProjectIndex}
@@ -57,9 +58,35 @@ export function Presentation({ data }: PresentationProps) {
               currentSectionIndex={currentSectionIndex}
               onSectionClick={setSection}
               direction={navigationDirection}
+              projectLink={currentProject.link}
             />
           )}
         </aside>
+
+        {/* Mobile section selector */}
+        {currentProject && (
+          <div className="sm:hidden px-4 py-2 flex gap-2 overflow-x-auto">
+            {currentProject.sections.map((section, index) => (
+              <Squircle
+                key={section.id}
+                asChild
+                cornerRadius={8}
+                cornerSmoothing={1}
+              >
+                <button
+                  onClick={() => setSection(index)}
+                  className={`px-3 py-1.5 text-sm whitespace-nowrap transition-colors ${
+                    index === currentSectionIndex
+                      ? 'bg-accent text-accent-foreground'
+                      : 'text-muted-foreground'
+                  }`}
+                >
+                  {section.title}
+                </button>
+              </Squircle>
+            ))}
+          </div>
+        )}
 
         {/* Main content area - full width */}
         <main className="w-full h-full flex flex-col overflow-y-auto">
