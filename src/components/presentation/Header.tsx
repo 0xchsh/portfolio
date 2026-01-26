@@ -11,6 +11,7 @@ interface HeaderProps {
   currentProjectIndex: number;
   downloadUrl: string;
   onProjectClick: (index: number) => void;
+  onLogoClick: () => void;
   className?: string;
 }
 
@@ -20,6 +21,7 @@ export function Header({
   currentProjectIndex,
   downloadUrl,
   onProjectClick,
+  onLogoClick,
   className,
 }: HeaderProps) {
   return (
@@ -30,11 +32,13 @@ export function Header({
       )}
     >
       {/* Logo */}
-      <img
-        src="/images/pfp.gif"
-        alt="Logo"
-        className="h-12 w-12 sm:h-[72px] sm:w-[72px] shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-1 sm:-mt-2 transition-[filter] duration-200 ease"
-      />
+      <button onClick={onLogoClick} className="cursor-pointer">
+        <img
+          src="/images/pfp.gif"
+          alt="Logo"
+          className="h-12 w-12 sm:h-[72px] sm:w-[72px] shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-1 sm:-mt-2 transition-[filter] duration-200 ease"
+        />
+      </button>
 
       {/* Project tabs */}
       <nav className="hidden sm:flex items-center gap-0.5">

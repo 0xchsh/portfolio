@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Squircle } from '@squircle-js/react';
-import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown, Globe, Twitter, Mail } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown, Globe, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface FooterProps {
@@ -115,8 +115,8 @@ export function Footer({ className }: FooterProps) {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-3 py-1 text-base leading-6 text-secondary-foreground hover:bg-muted-foreground/15 transition-colors"
                 >
-                  <Twitter className="w-4 h-4 opacity-70" />
-                  twitter
+                  <svg className="w-4 h-4 opacity-70" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  chshux
                 </a>
               </Squircle>
               <Squircle asChild cornerRadius={6} cornerSmoothing={1}>

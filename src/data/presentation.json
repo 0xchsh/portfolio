@@ -76,7 +76,7 @@
         {
           "id": "freighter-manage-assets",
           "title": "Manage assets",
-          "description": "Stellar handles assets differently than most chains. Before you can hold a token, you need to establish a trustline with its issuer — an explicit opt-in. It's a security feature, but it creates UX friction that other wallets often fumble.\n\nWe made adding trustlines feel as simple as adding a contact. Search or paste an asset, review the issuer, tap to add. Behind the scenes, we're submitting a changeTrust operation and locking up 0.5 XLM in reserve. To the user, it's just \"now I can receive this token.\"\n\nRemoving trustlines — which frees up that reserve — is equally straightforward. The complexity is real; we just don't make you feel it.",
+          "description": "Stellar handles assets differently than most chains. Before you can hold a token, you need to establish a trustline with its issuer — an explicit opt-in. It's a security feature, but it creates UX friction that other wallets often fumble.\n\nWe made adding trustlines feel as simple as adding a contact. Search or paste an asset, review the issuer, tap to add. Behind the scenes, we're submitting a `changeTrust` operation and locking up 0.5 XLM in reserve. To the user, it's just \"now I can receive this token.\"\n\nRemoving trustlines — which frees up that reserve — is equally straightforward. The complexity is real; we just don't make you feel it.",
           "footnotes": "",
           "mockups": [
             { "id": "freighter-8", "type": "frame", "src": "", "alt": "Manage assets" }
