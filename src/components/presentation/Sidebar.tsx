@@ -40,7 +40,7 @@ export function Sidebar({
       </div>
 
       {/* Section links */}
-      <div className="ml-[15px] pl-[9px] border-l border-dotted border-muted-foreground/30 flex flex-col mt-2">
+      <div className="ml-[15px] pl-[9px] border-l border-dotted border-muted-foreground/30 flex flex-col gap-0.5 mt-2">
         {sections.map((section, index) => (
           <Squircle
             key={section.id}

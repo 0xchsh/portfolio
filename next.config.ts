@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    root: "/Users/carloshin/Desktop/01 Projects/Cursor/claude-chsh",
+  },
 };
 
 export default nextConfig;

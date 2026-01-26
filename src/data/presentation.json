@@ -86,7 +86,7 @@
           "id": "freighter-retrospective",
           "title": "Retrospective",
           "description": "We shipped an MVP for internal testing, then a beta for the community, then v1 for launch. Phases made sense on paper but created friction in practice — it was hard to keep everyone aligned on which version we were discussing, and the final polish got squeezed.\n\nIf I did it again, I'd collapse the early phases and push toward v1 faster. The feedback from MVP and beta was valuable, but we could have gathered it with a tighter loop. More time for polish, less time reconciling phase definitions in Slack threads.",
-          "footnotes": "Freighter Mobile was a team effort. Thanks to the engineering team — Cassio, Leo, and Danilo — for building something this solid in five months. To Piyal and Aristides for support across the extension and backend. And to the broader Stellar team for the trust and feedback throughout. Launched September 2025 at Stellar Meridian.\n\nnext time: fewer versions, faster convergence",
+          "footnotes": "Freighter Mobile was a team effort. Thanks to the engineering team — Cassio, Leo, and Danilo — for building something this solid in five months. To Piyal and Aristides for support across the extension and backend. And to the broader Stellar team for the trust and feedback throughout. [Launched](https://youtu.be/DFPbiondrxc?si=FR6Z3RNZ1ZHHECJd&t=638) September 2025 at Stellar Meridian.\n\nnext time: fewer versions, faster convergence",
           "mockups": [
             { "id": "freighter-9", "type": "frame", "src": "", "alt": "Retrospective" }
           ]

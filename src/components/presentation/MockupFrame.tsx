@@ -12,7 +12,7 @@ export function MockupFrame({ mockup, className }: MockupFrameProps) {
   const { type, src, alt } = mockup;
 
   const widthClass = {
-    mobile: 'w-[180px] sm:w-[240px]',
+    mobile: 'w-[240px] sm:w-[320px]',
     desktop: 'w-full max-w-[560px]',
     frame: 'w-full max-w-[560px]',
   }[type];

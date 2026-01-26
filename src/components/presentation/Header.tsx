@@ -1,9 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import { Squircle } from '@squircle-js/react';
 import { cn } from '@/lib/utils';
-import { Download, Globe, Twitter, Mail } from 'lucide-react';
+import { Download } from 'lucide-react';
 import type { Project } from '@/types/presentation';
 
 interface HeaderProps {
@@ -23,14 +22,6 @@ export function Header({
   onProjectClick,
   className,
 }: HeaderProps) {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText('hi@ch.sh');
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <header
       className={cn(
@@ -38,69 +29,15 @@ export function Header({
         className
       )}
     >
-      {/* Logo with hover menu */}
-      <div className="relative group">
-        <img
-          src="/images/pfp.gif"
-          alt="Logo"
-          className="h-12 w-12 sm:h-[72px] sm:w-[72px] shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-1 sm:-mt-2 cursor-pointer transition-[filter] duration-200 ease"
-        />
-        {/* Hover menu */}
-        <div className="absolute left-full top-10 sm:top-16 -translate-x-4 -translate-y-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 ease-out z-50">
-          <Squircle
-            cornerRadius={10}
-            cornerSmoothing={1}
-            className="flex flex-col p-1 bg-secondary shadow-lg min-w-[120px]"
-          >
-            <Squircle
-              asChild
-              cornerRadius={6}
-              cornerSmoothing={1}
-            >
-              <a
-                href="https://ch.sh"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-1 text-base leading-6 text-secondary-foreground hover:bg-accent transition-colors"
-              >
-                <Globe className="w-4 h-4 opacity-70" />
-                ch.sh
-              </a>
-            </Squircle>
-            <Squircle
-              asChild
-              cornerRadius={6}
-              cornerSmoothing={1}
-            >
-              <a
-                href="https://x.com/chshux"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-1 text-base leading-6 text-secondary-foreground hover:bg-accent transition-colors"
-              >
-                <Twitter className="w-4 h-4 opacity-70" />
-                twitter
-              </a>
-            </Squircle>
-            <Squircle
-              asChild
-              cornerRadius={6}
-              cornerSmoothing={1}
-            >
-              <button
-                onClick={handleCopyEmail}
-                className="flex items-center gap-2 px-3 py-1 text-base leading-6 text-secondary-foreground hover:bg-accent transition-colors cursor-pointer"
-              >
-                <Mail className="w-4 h-4 opacity-70" />
-                {copied ? 'copied' : 'hi@ch.sh'}
-              </button>
-            </Squircle>
-          </Squircle>
-        </div>
-      </div>
+      {/* Logo */}
+      <img
+        src="/images/pfp.gif"
+        alt="Logo"
+        className="h-12 w-12 sm:h-[72px] sm:w-[72px] shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-1 sm:-mt-2 transition-[filter] duration-200 ease"
+      />
 
       {/* Project tabs */}
-      <nav className="hidden sm:flex items-center gap-2">
+      <nav className="hidden sm:flex items-center gap-0.5">
         {projects.map((project, index) => (
           <Squircle
             key={project.id}

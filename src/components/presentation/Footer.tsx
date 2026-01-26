@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Squircle } from '@squircle-js/react';
-import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown, Globe, Twitter, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface FooterProps {
@@ -11,6 +11,13 @@ interface FooterProps {
 
 export function Footer({ className }: FooterProps) {
   const [activeKeys, setActiveKeys] = useState<Set<string>>(new Set());
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('hi@ch.sh');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -50,7 +57,7 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer
       className={cn(
-        'flex items-center justify-between px-4 sm:px-6 py-3 bg-background text-muted-foreground text-sm sm:text-base',
+        'flex items-center justify-between px-8 pt-3 pb-8 bg-background text-muted-foreground text-sm sm:text-base',
         className
       )}
     >
@@ -76,18 +83,56 @@ export function Footer({ className }: FooterProps) {
         </span>
       </div>
 
-      {/* Right - ch.sh • Built with Claude */}
-      <div>
-        Built with{' '}
-        <a
-          href="https://github.com/0xchsh/portfolio"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-4 decoration-dotted decoration-muted-foreground/50 hover:text-foreground transition-colors"
-        >
-          Claude
-        </a>
-        <span className="text-orange-500">*</span>
+      {/* Right - Built by Charles with Claude */}
+      <div className="flex items-center gap-1">
+        Built by{' '}
+        <div className="relative group inline-block">
+          <span className="text-foreground underline underline-offset-4 decoration-dotted decoration-muted-foreground/50 hover:text-muted-foreground transition-colors cursor-pointer">
+            Charles
+          </span>
+          {/* Hover menu */}
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out z-50">
+            <Squircle
+              cornerRadius={10}
+              cornerSmoothing={1}
+              className="flex flex-col p-1 bg-secondary shadow-lg min-w-[120px]"
+            >
+              <Squircle asChild cornerRadius={6} cornerSmoothing={1}>
+                <a
+                  href="https://ch.sh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-1 text-base leading-6 text-secondary-foreground hover:bg-muted-foreground/15 transition-colors"
+                >
+                  <Globe className="w-4 h-4 opacity-70" />
+                  ch.sh
+                </a>
+              </Squircle>
+              <Squircle asChild cornerRadius={6} cornerSmoothing={1}>
+                <a
+                  href="https://x.com/chshux"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-1 text-base leading-6 text-secondary-foreground hover:bg-muted-foreground/15 transition-colors"
+                >
+                  <Twitter className="w-4 h-4 opacity-70" />
+                  twitter
+                </a>
+              </Squircle>
+              <Squircle asChild cornerRadius={6} cornerSmoothing={1}>
+                <button
+                  onClick={handleCopyEmail}
+                  className="flex items-center gap-2 px-3 py-1 text-base leading-6 text-secondary-foreground hover:bg-muted-foreground/15 transition-colors cursor-pointer"
+                >
+                  <Mail className="w-4 h-4 opacity-70" />
+                  <span className="w-[58px] text-left">{copied ? 'copied' : 'hi@ch.sh'}</span>
+                </button>
+              </Squircle>
+            </Squircle>
+          </div>
+        </div>
+
+with <a href="https://github.com/0xchsh/portfolio" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-4 decoration-dotted decoration-muted-foreground/50 hover:text-muted-foreground transition-colors">Claude</a><span className="text-orange-500 -ml-0.5">*</span>
       </div>
     </footer>
   );

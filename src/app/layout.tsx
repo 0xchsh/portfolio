@@ -20,10 +20,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ch.sh - portfolio review",
   description: "Interactive design portfolio presentation",
-  icons: {
-    icon: "/images/favicon.png",
-    apple: "/images/favicon.png",
-  },
 };
 
 export default function RootLayout({

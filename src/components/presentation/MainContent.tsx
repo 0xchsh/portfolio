@@ -6,6 +6,41 @@ import { MockupGrid } from './MockupGrid';
 import { Description } from './Description';
 import type { Section } from '@/types/presentation';
 
+// Parse markdown-style links [text](url) and render as anchor tags
+function parseLinks(text: string): React.ReactNode[] {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    // Add text before the link
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    // Add the link
+    parts.push(
+      <a
+        key={match.index}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-foreground underline underline-offset-4 decoration-dotted decoration-muted-foreground/50 hover:text-muted-foreground transition-colors"
+      >
+        {match[1]}
+      </a>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : [text];
+}
+
 interface MainContentProps {
   section: Section | undefined;
   className?: string;
@@ -57,7 +92,7 @@ export function MainContent({ section, className }: MainContentProps) {
           <>
             <div className="border-t border-dotted border-muted-foreground/30" />
             <p className="text-muted-foreground text-sm leading-[22px] whitespace-pre-line">
-              {displayedSection.footnotes}
+              {parseLinks(displayedSection.footnotes)}
             </p>
           </>
         )}
