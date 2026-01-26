@@ -33,7 +33,7 @@ export function Footer({ className }: FooterProps) {
       <div>
         Built with{' '}
         <a
-          href="https://claude.ai"
+          href="https://github.com/0xchsh/portfolio"
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-2 hover:text-foreground transition-colors"
