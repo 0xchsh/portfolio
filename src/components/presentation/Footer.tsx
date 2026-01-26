@@ -40,6 +40,7 @@ export function Footer({ className }: FooterProps) {
         >
           Claude
         </a>
+        <span className="text-orange-500">*</span>
       </div>
     </footer>
   );
