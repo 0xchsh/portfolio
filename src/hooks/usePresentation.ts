@@ -78,6 +78,11 @@ export function usePresentation(data: PresentationData): UsePresentationReturn {
       sectionMemory.current[currentProjectIndex] = currentSectionIndex;
       setCurrentProjectIndex(prev => prev + 1);
       setCurrentSectionIndex(0);
+    } else {
+      // Loop back to first section of first project
+      sectionMemory.current[currentProjectIndex] = currentSectionIndex;
+      setCurrentProjectIndex(0);
+      setCurrentSectionIndex(0);
     }
   }, [currentSectionIndex, totalSections, currentProjectIndex, totalProjects]);
 
@@ -90,8 +95,15 @@ export function usePresentation(data: PresentationData): UsePresentationReturn {
       const prevProjectSections = data.projects[currentProjectIndex - 1].sections.length;
       setCurrentProjectIndex(prev => prev - 1);
       setCurrentSectionIndex(prevProjectSections - 1);
+    } else {
+      // Loop back to last section of last project
+      sectionMemory.current[currentProjectIndex] = currentSectionIndex;
+      const lastProjectIndex = totalProjects - 1;
+      const lastProjectSections = data.projects[lastProjectIndex].sections.length;
+      setCurrentProjectIndex(lastProjectIndex);
+      setCurrentSectionIndex(lastProjectSections - 1);
     }
-  }, [currentSectionIndex, currentProjectIndex, data.projects]);
+  }, [currentSectionIndex, currentProjectIndex, data.projects, totalProjects]);
 
   const nextProject = useCallback(() => {
     if (currentProjectIndex < totalProjects - 1) {
