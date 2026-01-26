@@ -27,7 +27,7 @@ export function Sidebar({
   return (
     <nav
       className={cn(
-        'flex flex-col gap-1',
+        'flex flex-col',
         direction === 'right' && 'animate-slide-in-from-right',
         direction === 'left' && 'animate-slide-in-from-left',
         className
@@ -40,27 +40,29 @@ export function Sidebar({
       </div>
 
       {/* Section links */}
-      {sections.map((section, index) => (
-        <Squircle
-          key={section.id}
-          asChild
-          cornerRadius={8}
-          cornerSmoothing={1}
-        >
-          <button
-            onClick={() => onSectionClick(index)}
-            className={cn(
-              'px-2 py-1 text-left transition-colors w-fit cursor-pointer text-base leading-6 whitespace-nowrap',
-              'hover:bg-accent hover:text-accent-foreground',
-              index === currentSectionIndex
-                ? 'bg-accent text-accent-foreground'
-                : 'text-muted-foreground'
-            )}
+      <div className="ml-[15px] pl-[9px] border-l border-dotted border-muted-foreground/30 flex flex-col mt-2">
+        {sections.map((section, index) => (
+          <Squircle
+            key={section.id}
+            asChild
+            cornerRadius={8}
+            cornerSmoothing={1}
           >
-            {section.title}
-          </button>
-        </Squircle>
-      ))}
+            <button
+              onClick={() => onSectionClick(index)}
+              className={cn(
+                'px-2 py-1 text-left transition-colors w-fit cursor-pointer text-base leading-6 whitespace-nowrap',
+                'hover:bg-accent hover:text-accent-foreground',
+                index === currentSectionIndex
+                  ? 'bg-accent text-accent-foreground'
+                  : 'text-muted-foreground'
+              )}
+            >
+              {section.title}
+            </button>
+          </Squircle>
+        ))}
+      </div>
 
       {/* Project link */}
       {projectLink && (
@@ -72,7 +74,7 @@ export function Sidebar({
             e.preventDefault();
             window.open(projectLink, '_blank', 'noopener,noreferrer');
           }}
-          className="flex items-center gap-2 px-2 py-1 text-muted-foreground text-base leading-6 mt-4 hover:text-foreground transition-colors cursor-pointer"
+          className="flex items-center gap-2 px-2 py-1 text-muted-foreground text-base leading-6 mt-2 hover:text-foreground transition-colors cursor-pointer"
         >
           <Globe className="w-4 h-4 flex-shrink-0" />
           <span>{projectLink.replace(/^https?:\/\//, '')}</span>

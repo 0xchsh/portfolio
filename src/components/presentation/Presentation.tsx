@@ -50,7 +50,7 @@ export function Presentation({ data }: PresentationProps) {
 
       <div className="flex-1 relative min-h-0 border-0">
         {/* Sidebar - positioned over content (hidden on mobile) */}
-        <aside className="hidden sm:block absolute left-0 top-0 bottom-0 w-max p-4 pt-24 border-0 z-10">
+        <aside className="hidden sm:block absolute left-0 top-0 bottom-0 w-max p-4 pt-12 border-0 z-10">
           {currentProject && (
             <Sidebar
               key={currentProjectIndex}
