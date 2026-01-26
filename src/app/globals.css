@@ -195,6 +195,14 @@ body {
     @apply bg-background text-foreground;
     letter-spacing: var(--tracking-normal);
   }
+  ::selection {
+    background: oklch(0.9219 0 0);
+    color: oklch(0.1448 0 0);
+  }
+  .dark ::selection {
+    background: oklch(0.4386 0 0);
+    color: oklch(0.9851 0 0);
+  }
 }
 
 /* Sidebar navigation animations */
@@ -233,4 +241,21 @@ body {
   .animate-slide-in-from-left {
     animation: none;
   }
+}
+
+/* Custom dotted lines matching text-decoration style */
+.dotted-line-vertical {
+  background-image: radial-gradient(circle, var(--muted-foreground) 0.5px, transparent 0.5px);
+  background-size: 1px 3px;
+  background-repeat: repeat-y;
+  background-position: left center;
+  opacity: 0.3;
+}
+
+.dotted-line-horizontal {
+  background-image: radial-gradient(circle, var(--muted-foreground) 0.5px, transparent 0.5px);
+  background-size: 3px 1px;
+  background-repeat: repeat-x;
+  background-position: center;
+  opacity: 0.3;
 }

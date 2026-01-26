@@ -87,7 +87,7 @@ export function Footer({ className }: FooterProps) {
       <div className="flex items-center gap-1">
         Built by{' '}
         <div className="relative group inline-block">
-          <span className="text-foreground underline underline-offset-4 decoration-dotted decoration-muted-foreground/50 hover:text-muted-foreground transition-colors cursor-pointer">
+          <span className="text-foreground border-b border-dotted border-muted-foreground/50 hover:text-muted-foreground transition-colors cursor-pointer">
             Charles
           </span>
           {/* Hover menu */}
@@ -132,7 +132,7 @@ export function Footer({ className }: FooterProps) {
           </div>
         </div>
 
-with <a href="https://github.com/0xchsh/portfolio" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-4 decoration-dotted decoration-muted-foreground/50 hover:text-muted-foreground transition-colors">Claude</a><span className="text-orange-500 -ml-0.5">*</span>
+with <a href="https://github.com/0xchsh/portfolio" target="_blank" rel="noopener noreferrer" className="text-foreground border-b border-dotted border-muted-foreground/50 hover:text-muted-foreground transition-colors">Claude</a><span className="text-orange-500 -ml-0.5">*</span>
       </div>
     </footer>
   );

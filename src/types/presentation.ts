@@ -3,6 +3,7 @@ export interface Mockup {
   type: 'mobile' | 'desktop' | 'frame';
   src: string;
   alt: string;
+  caption?: string;
 }
 
 export interface Section {

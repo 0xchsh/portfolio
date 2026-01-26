@@ -25,7 +25,7 @@ function parseLinks(text: string): React.ReactNode[] {
         href={match[2]}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-foreground underline underline-offset-4 decoration-dotted decoration-muted-foreground/50 hover:text-muted-foreground transition-colors"
+        className="text-foreground underline underline-offset-4 decoration-dashed decoration-muted-foreground/50 hover:text-muted-foreground transition-colors"
       >
         {match[1]}
       </a>
