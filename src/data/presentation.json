@@ -52,11 +52,9 @@
         {
           "id": "mapper-overview",
           "title": "Overview",
-          "description": "Mapper is a location-based discovery app that helps users find and save interesting places. Features include custom maps, sharing, and collaborative planning.",
+          "description": "I was building a directory of the best-designed crypto websites. They have this unique visual style — bold, experimental, unapologetically weird — and if you're building in crypto, you want references. Similar to how people use Godly or Mobbin for inspiration, but nothing like that existed for web3.\n\nSo I made one myself in Framer. It worked, but the process was painful. Every directory I found was custom-built from scratch. I wanted a way to spin up curated lists quickly — focused on links, not identity. Lists that were designed to be shared, not buried in a notes app.",
           "mockups": [
-            { "id": "mapper-1", "type": "desktop", "src": "/images/mapper-desktop-1.png", "alt": "Mapper main view" },
-            { "id": "mapper-2", "type": "mobile", "src": "/images/mapper-mobile-1.png", "alt": "Mapper mobile" },
-            { "id": "mapper-3", "type": "mobile", "src": "/images/mapper-mobile-2.png", "alt": "Location detail" }
+            { "id": "mapper-1", "type": "desktop", "src": "/images/mapper-desktop-1.png", "alt": "Mapper main view" }
           ]
         },
         {
@@ -64,8 +62,7 @@
           "title": "Lists",
           "description": "Create themed lists of locations like 'Best Coffee Shops' or 'Weekend Hikes'. Lists can be public or private and shared with friends.",
           "mockups": [
-            { "id": "mapper-4", "type": "desktop", "src": "/images/mapper-desktop-2.png", "alt": "List view" },
-            { "id": "mapper-5", "type": "desktop", "src": "/images/mapper-desktop-3.png", "alt": "List creation" }
+            { "id": "mapper-4", "type": "desktop", "src": "/images/mapper-desktop-2.png", "alt": "List view" }
           ]
         },
         {
@@ -73,10 +70,7 @@
           "title": "Collaboration",
           "description": "Plan trips with friends using collaborative maps. Real-time updates, comments, and voting on locations make group planning easy.",
           "mockups": [
-            { "id": "mapper-6", "type": "desktop", "src": "/images/mapper-desktop-4.png", "alt": "Collaboration view" },
-            { "id": "mapper-7", "type": "mobile", "src": "/images/mapper-mobile-3.png", "alt": "Mobile collab" },
-            { "id": "mapper-8", "type": "mobile", "src": "/images/mapper-mobile-4.png", "alt": "Comments" },
-            { "id": "mapper-9", "type": "mobile", "src": "/images/mapper-mobile-5.png", "alt": "Voting" }
+            { "id": "mapper-6", "type": "desktop", "src": "/images/mapper-desktop-4.png", "alt": "Collaboration view" }
           ]
         }
       ]
@@ -99,9 +93,7 @@
           "title": "Sequencer",
           "description": "The step sequencer allows pattern creation with drag-and-drop ease. Supports multiple instruments, tempo control, and pattern chaining.",
           "mockups": [
-            { "id": "synth-2", "type": "desktop", "src": "/images/synth-desktop-2.png", "alt": "Sequencer view" },
-            { "id": "synth-3", "type": "desktop", "src": "/images/synth-desktop-3.png", "alt": "Pattern editor" },
-            { "id": "synth-4", "type": "mobile", "src": "/images/synth-mobile-1.png", "alt": "Mobile sequencer" }
+            { "id": "synth-2", "type": "desktop", "src": "/images/synth-desktop-2.png", "alt": "Sequencer view" }
           ]
         },
         {
@@ -109,8 +101,7 @@
           "title": "Instruments",
           "description": "A library of synthesizers and drum machines with customizable parameters. Each instrument has a unique visual identity and sound profile.",
           "mockups": [
-            { "id": "synth-5", "type": "desktop", "src": "/images/synth-desktop-4.png", "alt": "Instrument browser" },
-            { "id": "synth-6", "type": "desktop", "src": "/images/synth-desktop-5.png", "alt": "Synth controls" }
+            { "id": "synth-5", "type": "desktop", "src": "/images/synth-desktop-4.png", "alt": "Instrument browser" }
           ]
         },
         {
@@ -118,10 +109,7 @@
           "title": "Export",
           "description": "Export creations in various formats including WAV, MP3, and MIDI. Direct sharing to social platforms and collaboration features.",
           "mockups": [
-            { "id": "synth-7", "type": "mobile", "src": "/images/synth-mobile-2.png", "alt": "Export options" },
-            { "id": "synth-8", "type": "mobile", "src": "/images/synth-mobile-3.png", "alt": "Share screen" },
-            { "id": "synth-9", "type": "mobile", "src": "/images/synth-mobile-4.png", "alt": "Sharing complete" },
-            { "id": "synth-10", "type": "mobile", "src": "/images/synth-mobile-5.png", "alt": "Social preview" }
+            { "id": "synth-7", "type": "mobile", "src": "/images/synth-mobile-2.png", "alt": "Export options" }
           ]
         }
       ]

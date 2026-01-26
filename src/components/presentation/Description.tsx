@@ -11,7 +11,7 @@ export function Description({ text, className }: DescriptionProps) {
   return (
     <p
       className={cn(
-        'text-muted-foreground leading-relaxed text-left max-w-[35rem]',
+        'text-muted-foreground leading-relaxed text-left max-w-[35rem] whitespace-pre-line',
         className
       )}
     >
