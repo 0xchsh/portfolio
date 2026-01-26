@@ -38,7 +38,7 @@ export function Header({
             key={project.id}
             onClick={() => onProjectClick(index)}
             className={cn(
-              'px-2 py-1 text-sm rounded-md transition-colors flex items-center gap-1',
+              'px-2 py-1 rounded-md transition-colors flex items-center gap-2',
               'hover:bg-accent hover:text-accent-foreground',
               index === currentProjectIndex
                 ? 'bg-secondary text-secondary-foreground font-medium'
@@ -47,7 +47,7 @@ export function Header({
           >
             {project.icon && (
               <span
-                className="w-3.5 h-3.5 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full"
+                className="w-4 h-4 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full"
                 dangerouslySetInnerHTML={{ __html: project.icon }}
               />
             )}
@@ -60,7 +60,7 @@ export function Header({
       <select
         value={currentProjectIndex}
         onChange={(e) => onProjectClick(Number(e.target.value))}
-        className="md:hidden bg-secondary text-secondary-foreground px-2 py-1 rounded-md text-sm border-none outline-none"
+        className="md:hidden bg-secondary text-secondary-foreground px-2 py-1 rounded-md border-none outline-none"
       >
         {projects.map((project, index) => (
           <option key={project.id} value={index}>
@@ -74,7 +74,7 @@ export function Header({
         href={downloadUrl}
         download
         className={cn(
-          'flex items-center gap-2 px-2 py-1 text-sm rounded-md transition-colors',
+          'flex items-center gap-2 px-2 py-1 rounded-md transition-colors',
           'bg-secondary text-secondary-foreground',
           'hover:bg-accent hover:text-accent-foreground'
         )}
