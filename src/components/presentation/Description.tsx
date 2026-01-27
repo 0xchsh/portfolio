@@ -18,7 +18,7 @@ function parseInlineCode(text: string): React.ReactNode[] {
     parts.push(
       <code
         key={match.index}
-        className="text-orange-500 font-mono text-[0.9em]"
+        className="text-orange-500 font-mono text-[0.9em] bg-muted px-1.5 py-0.5 rounded"
       >
         {match[1]}
       </code>

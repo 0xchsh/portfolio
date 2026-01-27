@@ -36,7 +36,7 @@ export function Header({
         <img
           src="/images/pfp.gif"
           alt="Logo"
-          className="h-12 w-12 sm:h-[72px] sm:w-[72px] shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-1 sm:-mt-2 transition-[filter] duration-200 ease"
+          className="h-12 w-12 sm:h-24 sm:w-24 shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-1 sm:-mt-2 transition-[filter] duration-200 ease"
         />
       </button>
 

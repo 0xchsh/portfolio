@@ -11,10 +11,10 @@
       "link": "https://freighter.app",
       "sections": [
         {
-          "id": "freighter-brief",
+          "id": "freighter-overview",
           "title": "Overview",
-          "description": "Stellar had an extension wallet but no mobile app. We needed a flagship, something we could point people to when they asked \"how do I get started with Stellar?\" It had to be approachable for newcomers without feeling stripped down for power users. The deadline was Meridian, our annual conference in September 2025, where attendees would use it live.\n\nThe team was small: three engineers, one PM, and me as the sole designer. Five months from kickoff to launch. We'd be building on React Native, which meant I could extend our existing Stellar Design System rather than starting from scratch.",
-          "footnotes": "a meaningful head start",
+          "description": "Freighter is Stellar's flagship wallet. We had a browser extension but no mobile app, so when someone asked \"how do I get started with Stellar?\" we didn't have a great answer.\n\nA small team: three engineers, one PM, and me as the sole designer. Five months to ship before Meridian, our annual conference where attendees would use it live.\n\nIt launched at Meridian as planned. ~2k daily active users, ~31k monthly.",
+          "footnotes": "I also designed and built freighter.app in Framer.",
           "mockups": [
             { "id": "freighter-1", "type": "mobile", "src": "", "alt": "Freighter overview", "caption": "Home" },
             { "id": "freighter-2", "type": "mobile", "src": "", "alt": "Freighter overview", "caption": "Send" },
@@ -22,18 +22,9 @@
           ]
         },
         {
-          "id": "freighter-design-system",
-          "title": "Stellar Design System",
-          "description": "Before Freighter Mobile, I'd built the Stellar Design System: an opinionated React component library used across SDF's web products. For mobile, I ported the core primitives to React Native and extended them with patterns that felt native. Bottom sheets for contextual actions. Gesture-driven interactions. Touch-friendly sizing throughout.\n\nThe goal was consistency without rigidity. Someone moving between the extension and the mobile app should feel like they're in the same product family, even if the interactions differ. Colours, typography, and spacing stayed constant. What changed was how components behaved: sheets instead of modals, swipes instead of hovers.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "freighter-3", "type": "frame", "src": "", "alt": "Stellar Design System", "caption": "Component library" }
-          ]
-        },
-        {
           "id": "freighter-home",
           "title": "Home",
-          "description": "The home screen needed to answer three questions immediately: what do I have, what's it worth, and what just happened? Balances sit at the top with a clear total. Below, recent activity shows just enough to orient you without overwhelming.\n\nWe kept actions minimal: send, receive, and a shortcut to Discover. Everything else lives a tap away. The information density is deliberately low. Crypto wallets often try to surface everything at once. We wanted calm.",
+          "description": "The home screen answers three questions: what do I have, what's it worth, and what's changed? Balance sits at the top. Below, Tokens and Collectibles tabs let users navigate holdings without overwhelming the default view.\n\nLoading states preserve layout dimensions, preventing content shift as data arrives. Primary actions are minimal: Add, Send, Swap, Copy. Everything else lives a tap away. Crypto wallets often try to surface everything at once. We wanted calm.",
           "footnotes": "",
           "mockups": [
             { "id": "freighter-4", "type": "frame", "src": "", "alt": "Home screen", "caption": "Home screen" }
@@ -42,55 +33,64 @@
         {
           "id": "freighter-history",
           "title": "History",
-          "description": "Transaction history on Stellar can get noisy. Trustline changes, path payments, claimable balances. Most of it means nothing to someone who just wants to know \"did my payment go through?\"\n\nWe grouped related operations into single entries where possible and wrote human-readable summaries for each type. \"Sent 50 USDC to G...X4R\" instead of raw operation data. Tapping expands the full detail for anyone who wants it, but the default view prioritises clarity over completeness.",
-          "footnotes": "human-readable first, raw data on request",
+          "description": "Transaction history on Stellar can get noisy. Trustline changes, path payments, claimable balances. Most of it means nothing to someone who just wants to know \"did my payment go through?\"\n\nWe wrote human-readable summaries for each operation type. \"Swapped XLM → USDC\" instead of raw operation data. Tapping expands full details: status, rate, fee, XDR. Progressive disclosure. Clarity first, completeness on request.",
+          "footnotes": "",
           "mockups": [
             { "id": "freighter-5", "type": "frame", "src": "", "alt": "Transaction history", "caption": "Transaction history" }
           ]
         },
         {
-          "id": "freighter-signing",
-          "title": "Transaction signing",
-          "description": "This was the most interesting problem. Stellar transactions can contain multiple operations, each with different implications. Signing something you don't understand is how people lose funds.\n\nWe integrated Blockaid for real-time transaction simulation. Before you sign, you see exactly what will change: tokens in, tokens out, new trustlines, permissions granted. The UI surfaces this as a plain-English summary with clear risk indicators. If something looks suspicious, you'll know.\n\nThe technical challenge was balancing speed with thoroughness. Simulation adds latency, but we kept it under 300ms in most cases. Fast enough that it doesn't feel like waiting. Slow enough to actually protect you.",
+          "id": "freighter-discover",
+          "title": "Discover",
+          "description": "This is our main differentiator. No other Stellar wallet has a dedicated screen for ecosystem apps. We wanted Freighter to feel less like a vault and more like a portal.\n\nWe launched with ten curated dApps including Blend, Phoenix, StellarX, and Allbridge. Each opens in an in-app browser with WalletConnect handling the connection. You never leave Freighter.\n\nFor developers, Discover is distribution. For users, it's access.",
           "footnotes": "",
           "mockups": [
-            { "id": "freighter-6", "type": "frame", "src": "public/images", "alt": "Transaction signing", "caption": "Blockaid simulation" }
+            { "id": "freighter-6", "type": "frame", "src": "", "alt": "Discover screen", "caption": "Discover dApps" }
           ]
         },
         {
-          "id": "freighter-discover",
-          "title": "Discover",
-          "description": "This is our main differentiator. No other Stellar wallet has a dedicated screen for ecosystem apps. We wanted Freighter to feel less like a vault and more like a portal: a place where you can actually do things, not just hold assets.\n\nWe launched with ten curated dApps, including Blend (Stellar's flagship DeFi protocol). Each app opens in an in-app browser with WalletConnect handling the connection flow. You never leave Freighter; you're just using things. The connection handshake is seamless enough that it feels native.\n\nFor developers, Discover is distribution. For users, it's access. Both matter.",
+          "id": "freighter-collectibles",
+          "title": "Collectibles",
+          "description": "Collectibles on Stellar are typically Soroban-based NFTs (like Stellar Frogs) or domain names (Soroban Domains). The Collectibles tab groups them by collection with a count badge.\n\nThe detail view shows metadata: name, collection, token ID, description. Actions: View, Send, or overflow menu for refresh metadata, save to photos, hide, or report as spam. Hidden collectibles matter. Spam NFTs are a real problem, so users can hide unwanted items and report them.",
           "footnotes": "",
           "mockups": [
-            { "id": "freighter-7", "type": "frame", "src": "", "alt": "Discover screen", "caption": "Discover dApps" }
+            { "id": "freighter-7", "type": "frame", "src": "", "alt": "Collectibles", "caption": "Collectibles" }
           ]
         },
         {
           "id": "freighter-send",
           "title": "Send",
-          "description": "Sending should be trivial. Address, asset, amount, confirm. We added QR scanning, recent recipients, and paste detection: the small conveniences that reduce friction.\n\nThe interesting bit is what happens after you hit send. The same Blockaid-powered preview appears, showing exactly what this transaction will do. One final moment of clarity before anything irreversible happens. Most of the time you'll glance and confirm. But for the one time something's wrong, it's everything.",
+          "description": "Sending should be trivial. The flow: recipient selection (address, contact picker, QR scan), asset selection, amount entry with real-time USD conversion, review, biometric confirmation, then success or failure.\n\nEach step validates before proceeding. Errors caught early, not at final submission. The percentage shortcuts (25%, 50%, 75%, Max) account for minimum XLM reserves so users don't accidentally lock themselves out.",
           "footnotes": "",
           "mockups": [
             { "id": "freighter-8", "type": "frame", "src": "", "alt": "Send flow", "caption": "Send flow" }
           ]
         },
         {
-          "id": "freighter-manage-assets",
-          "title": "Manage assets",
-          "description": "Stellar handles assets differently than most chains. Before you can hold a token, you need to establish a trustline with its issuer — an explicit opt-in. It's a security feature, but it creates UX friction that other wallets often fumble.\n\nWe made adding trustlines feel as simple as adding a contact. Search or paste an asset, review the issuer, tap to add. Behind the scenes, we're submitting a `changeTrust` operation and locking up 0.5 XLM in reserve. To the user, it's just \"now I can receive this token.\"\n\nRemoving trustlines — which frees up that reserve — is equally straightforward. The complexity is real; we just don't make you feel it.",
+          "id": "freighter-swap",
+          "title": "Swap",
+          "description": "Swap uses Stellar's built-in orderbook DEX. We query Horizon's strictSendPaths endpoint for path finding, which returns optimal routes through the orderbook.\n\nThe flow mirrors Send: select token to swap from, select token to receive, enter amount, review, confirm. Swap Settings expose slippage tolerance (default 1%), transaction timeout, and fee. Tucked away but accessible for power users.",
           "footnotes": "",
           "mockups": [
-            { "id": "freighter-9", "type": "frame", "src": "", "alt": "Manage assets", "caption": "Asset management" }
+            { "id": "freighter-9", "type": "frame", "src": "", "alt": "Swap flow", "caption": "Swap flow" }
           ]
         },
         {
-          "id": "freighter-retrospective",
-          "title": "What I'd do differently",
-          "description": "We shipped an MVP for internal testing, then a beta for the community, then v1 for launch. Phases made sense on paper but created friction in practice. It was hard to keep everyone aligned on which version we were discussing, and the incremental polish got squeezed.\n\nIf I did it again, I'd collapse the early phases and push toward v1 faster. The feedback from MVP and beta was valuable, but we could have gathered it with a tighter loop. More time for polish, less time reconciling phase definitions in Slack threads.",
-          "footnotes": "Freighter Mobile was a team effort. Thanks to the engineering team (Cassio, Leo, and Danilo) for building something this solid in five months. To Keeks for keeping us on track and shipping on time. To Piyal and Aristides for support across the extension and backend. And to the broader Stellar team for the trust and feedback throughout. Launched September 2025 at Stellar Meridian.\n\nnext time: fewer versions, faster convergence",
+          "id": "freighter-transactions",
+          "title": "Transactions",
+          "description": "Stellar transactions can contain multiple operations, each with different implications. Signing something you don't understand is how people lose funds.\n\nWe integrated Blockaid for real-time simulation. Three risk levels: Malicious (block and explain), Suspicious (warn and let user decide), Safe (proceed). Messaging is specific: \"This contract has drained funds\" rather than generic \"Dangerous.\"\n\nThe UI shows simulated results before signing. Expanding reveals full details. Progressive disclosure: human-readable first, raw data for those who want it.",
+          "footnotes": "",
           "mockups": [
-            { "id": "freighter-10", "type": "frame", "src": "", "alt": "Retrospective", "caption": "Lessons learned" }
+            { "id": "freighter-10", "type": "frame", "src": "", "alt": "Transaction signing", "caption": "Blockaid simulation" }
+          ]
+        },
+        {
+          "id": "freighter-takeaways",
+          "title": "Takeaways",
+          "description": "If I did it again, I'd collapse the early phases and push toward polish faster. The phased approach (MVP, beta, v1) made sense on paper but created alignment friction in practice. More time for craft, less time reconciling version definitions in Slack.\n\nThanks to the engineering team (Cassio, Leo, Danilo), Keeks for keeping us on track, Piyal and Aristides for support across the extension and backend, and the broader Stellar team.",
+          "footnotes": "next time: fewer versions, faster convergence\n\nLaunched September 2025 at Stellar Meridian.",
+          "mockups": [
+            { "id": "freighter-11", "type": "frame", "src": "", "alt": "Takeaways", "caption": "Team" }
           ]
         }
       ]
@@ -191,35 +191,84 @@
       "link": "https://lab.stellar.org",
       "sections": [
         {
-          "id": "synth-overview",
+          "id": "lab-overview",
           "title": "Overview",
-          "description": "Synth is a music creation tool that lets anyone make beats and melodies. The interface is designed to be approachable for beginners while powerful enough for pros.",
+          "description": "Stellar Lab is where developers experiment with the Stellar network. Build transactions, sign them, simulate, submit, explore smart contracts.\n\nThe old Lab was built by engineers years ago and hadn't been touched since. It worked, but it looked like it worked. Meanwhile, Stellar's smart contracts platform (Soroban) was launching, and the Lab needed to support entirely new features.\n\nMy job was to redesign it: bring the visual language in line with the rest of Stellar's products, support smart contracts, and do this without alienating developers who'd built muscle memory around the existing flow. Raise the quality dramatically while preserving the mental model.",
+          "footnotes": "",
           "mockups": [
-            { "id": "synth-1", "type": "frame", "src": "/images/synth-frame-1.png", "alt": "Synth main interface", "caption": "Main interface" }
+            { "id": "lab-1", "type": "frame", "src": "", "alt": "Lab overview", "caption": "Lab homepage" }
           ]
         },
         {
-          "id": "synth-sequencer",
-          "title": "Sequencer",
-          "description": "The step sequencer allows pattern creation with drag-and-drop ease. Supports multiple instruments, tempo control, and pattern chaining.",
+          "id": "lab-design-system",
+          "title": "Stellar Design System",
+          "description": "This project became the first real implementation of Stellar Design System v3. We had components, tokens, and documentation. What we didn't have was a complex, form-heavy developer tool putting pressure on all of it at once.\n\nThe Lab exposed gaps immediately. Form validation patterns fell apart with fifteen fields on screen. The type scale needed adjustments for dense technical content. Some components didn't exist yet.\n\nEvery edge case became a contribution back to SDS. Input states for long cryptographic strings. Error messaging for transaction validation. The sort of details that only surface when you're building something real.",
+          "footnotes": "",
           "mockups": [
-            { "id": "synth-2", "type": "frame", "src": "/images/synth-frame-2.png", "alt": "Sequencer view", "caption": "Step sequencer" }
+            { "id": "lab-2", "type": "frame", "src": "", "alt": "Stellar Design System", "caption": "Design system" }
           ]
         },
         {
-          "id": "synth-instruments",
-          "title": "Instruments",
-          "description": "A library of synthesizers and drum machines with customizable parameters. Each instrument has a unique visual identity and sound profile.",
+          "id": "lab-local-storage",
+          "title": "Save to local storage",
+          "description": "Developers were constantly copying and pasting. Keys, transaction XDR, contract IDs. The same strings, over and over, across different parts of the tool.\n\nSo we built a save system. Keypairs, API requests, transactions, smart contract IDs. Everything lives in browser local storage, organised by network: Testnet for experimentation, Mainnet for production, Futurenet for bleeding-edge features.\n\nBuilding a transaction? Prefill the source account from saved keypairs. Found a contract worth revisiting? Save the ID. Small conveniences that compound into something that actually feels considered.",
+          "footnotes": "",
           "mockups": [
-            { "id": "synth-5", "type": "frame", "src": "/images/synth-frame-4.png", "alt": "Instrument browser", "caption": "Instrument library" }
+            { "id": "lab-3", "type": "frame", "src": "", "alt": "Local storage", "caption": "Saved items" }
           ]
         },
         {
-          "id": "synth-export",
-          "title": "Export",
-          "description": "Export creations in various formats including WAV, MP3, and MIDI. Direct sharing to social platforms and collaboration features.",
+          "id": "lab-account",
+          "title": "Account",
+          "description": "Creating an account on Stellar means generating a keypair, then funding it. On Testnet and Futurenet, Friendbot handles funding with 10,000 test XLM.\n\nThe old flow required mental overhead. Generate keys, copy them somewhere, navigate to a different page, paste, fund. The new flow keeps everything together. Generate, optionally save with a name, fund with one click.\n\nSaved keypairs display the account's XLM balance, last saved date, and quick actions: copy public key, reveal secret key, fund if unfunded. Account management as a proper dashboard rather than disconnected utilities.",
+          "footnotes": "",
           "mockups": [
-            { "id": "synth-7", "type": "mobile", "src": "/images/synth-mobile-2.png", "alt": "Export options", "caption": "Export options" }
+            { "id": "lab-4", "type": "frame", "src": "", "alt": "Account", "caption": "Account management" }
+          ]
+        },
+        {
+          "id": "lab-transactions",
+          "title": "Transactions",
+          "description": "The transaction builder is the heart of the Lab. Source account, sequence number, base fee, memo, time bounds, then operations. Every field has validation, helper text, and links to docs. \"Fetch next sequence\" pulls the right number automatically. \"Set to 5 min from now\" handles time bounds without timestamp math.\n\nSigning was harder. Transactions can require multiple signatures: secret key, browser wallet, hardware wallet, or pre-computed signature. The temptation was to hide this behind tabs.\n\nWe show everything at once. Four cards, stacked. It looks dense because it is dense, but it matches how developers actually work with multi-sig.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "lab-5", "type": "frame", "src": "", "alt": "Transactions", "caption": "Transaction builder" }
+          ]
+        },
+        {
+          "id": "lab-api-explorer",
+          "title": "API Explorer",
+          "description": "The API Explorer lets you test Stellar's RPC methods and Horizon endpoints directly in the browser. No Postman, no curl, no context switching.\n\nThree categories: RPC Query Methods for reading blockchain data, Simulation & Fees for validating transactions before execution, Transaction Execution for submitting to the network.\n\nEach method has typed inputs and inline documentation. Submit a request, see the response, save it or share a link. Instead of describing a failing request over Slack, just send a URL. The design challenge was density: some endpoints have a dozen parameters. Collapsible sections and sensible defaults kept the common case simple.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "lab-6", "type": "frame", "src": "", "alt": "API Explorer", "caption": "API Explorer" }
+          ]
+        },
+        {
+          "id": "lab-smart-contracts",
+          "title": "Smart Contracts",
+          "description": "Soroban brought smart contracts to Stellar, and the Lab needed to support the full lifecycle.\n\nContract Explorer is the entry point. Paste a contract ID and get everything: creation date, creator, Wasm hash, source code, storage state, version history, and generated bindings for TypeScript, Rust, Python, Java. Invoke methods directly from the browser with type hints from the contract spec.\n\nSmart Contract List shows contracts on the network. Upload and Deploy handles the deployment flow. The goal: make smart contracts feel as accessible as the rest of the Lab, whether you're exploring or shipping.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "lab-7", "type": "frame", "src": "", "alt": "Smart Contracts", "caption": "Contract Explorer" }
+          ]
+        },
+        {
+          "id": "lab-dashboard",
+          "title": "Transaction Dashboard",
+          "description": "The dashboard gives you a real-time view of submitted transactions. Status, hash, timestamps, links to block explorers.\n\nThis was a late addition based on feedback. The old Lab had no memory of what you'd submitted. Send a transaction, see a success message, then nothing. Want to verify it landed? Copy the hash and check an external explorer.\n\nThe dashboard keeps a running log. Pending transactions show status as they propagate. Completed ones link to their ledger entry. Failed ones surface the error. A small feature that makes the Lab feel like an integrated environment.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "lab-8", "type": "frame", "src": "", "alt": "Transaction Dashboard", "caption": "Transaction dashboard" }
+          ]
+        },
+        {
+          "id": "lab-takeaways",
+          "title": "Takeaways",
+          "description": "Developer tools have a different relationship with complexity. The instinct to simplify, to hide options, can make things harder for people who know exactly what they need. The signing flow shows four methods at once. It looks busy, but developers working with multi-sig don't want to hunt through tabs.\n\nSmall conveniences compound. Saving a keypair takes two seconds. Prefilling from it takes one. None feel like features alone, but together they're the difference between a tool that fights you and one that gets out of the way.\n\nRedesigning something people use is a trust exercise. You earn it by respecting what worked before.",
+          "footnotes": "Thanks to Jane (PM), Jeesun and Iveta (Eng). Built on Stellar Design System v3.",
+          "mockups": [
+            { "id": "lab-9", "type": "frame", "src": "", "alt": "Takeaways", "caption": "Team" }
           ]
         }
       ]
