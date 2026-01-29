@@ -57,9 +57,12 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer
       className={cn(
-        'flex items-center justify-between px-8 pt-3 pb-8 bg-background text-muted-foreground text-sm sm:text-base',
+        'sticky bottom-0 z-30 flex items-center justify-between px-8 pt-8 pb-8 text-muted-foreground text-sm sm:text-base',
         className
       )}
+      style={{
+        background: 'linear-gradient(to top, hsl(var(--background)) 0%, hsl(var(--background)) 70%, transparent 100%)',
+      }}
     >
       {/* Left - Keyboard shortcuts */}
       <div className="hidden sm:flex items-center gap-4 text-base leading-6">

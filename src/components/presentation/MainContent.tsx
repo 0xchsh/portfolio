@@ -80,7 +80,7 @@ export function MainContent({ section, className }: MainContentProps) {
   return (
     <div
       className={cn(
-        'flex-1 flex flex-col items-center justify-center gap-6 md:gap-8 p-4 md:p-8 transition-opacity duration-150',
+        'flex-1 flex flex-col items-center justify-center gap-6 md:gap-8 p-4 md:p-8 pb-40 transition-opacity duration-150',
         isVisible ? 'opacity-100' : 'opacity-0',
         className
       )}

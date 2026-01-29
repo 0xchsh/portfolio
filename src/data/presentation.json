@@ -7,7 +7,7 @@
     {
       "id": "freighter",
       "name": "Freighter",
-      "icon": "<svg viewBox=\"0 0 118 119\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M54.9438 19.6822C52.9352 19.6822 51.2174 18.3046 50.4683 16.4408C46.5946 6.8027 37.1786 0 26.1777 0C11.7202 0 0 11.7494 0 26.243C0 40.7366 11.7202 52.486 26.1777 52.486C37.1786 52.486 46.5946 45.6833 50.4683 36.0451C51.2174 34.1814 52.9352 32.8037 54.9438 32.8037H69.7703C72.2003 32.8037 74.1703 34.7737 74.1703 37.2037V50.2729C74.1703 52.7029 76.1402 54.6729 78.5703 54.6729H82.8591C85.2892 54.6729 87.2591 52.7029 87.2591 50.2729V37.1667C87.2591 34.7571 89.2125 32.8037 91.6221 32.8037C94.0317 32.8037 95.985 34.7571 95.985 37.1667V50.2729C95.985 52.7029 97.955 54.6729 100.385 54.6729H104.674C107.104 54.6729 109.074 52.7029 109.074 50.2729V37.1667C109.074 34.7571 111.027 32.8037 113.437 32.8037C115.846 32.8037 117.8 30.8504 117.8 28.4408V24.0822C117.8 21.6522 115.83 19.6822 113.4 19.6822H54.9438ZM39.2666 26.243C39.2666 33.4898 33.4065 39.3645 26.1777 39.3645C18.949 39.3645 13.0889 33.4898 13.0889 26.243C13.0889 18.9962 18.949 13.1215 26.1777 13.1215C33.4065 13.1215 39.2666 18.9962 39.2666 26.243Z\" fill=\"currentColor\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M62.856 98.4112C64.8647 98.4112 66.5824 99.7888 67.3315 101.653C71.2052 111.291 80.6212 118.093 91.6221 118.093C106.08 118.093 117.8 106.344 117.8 91.8504C117.8 77.3568 106.08 65.6075 91.6221 65.6075C80.6212 65.6075 71.2052 72.4101 67.3315 82.0483C66.5824 83.912 64.8647 85.2897 62.856 85.2897H48.0296C45.5995 85.2897 43.6296 83.3197 43.6296 80.8897V67.8205C43.6296 65.3905 41.6596 63.4205 39.2296 63.4205H34.9407C32.5106 63.4205 30.5407 65.3905 30.5407 67.8205V80.9267C30.5407 83.3363 28.5873 85.2897 26.1777 85.2897C23.7681 85.2897 21.8148 83.3363 21.8148 80.9267L21.8148 67.8205C21.8148 65.3905 19.8448 63.4205 17.4148 63.4205H13.1259C10.6959 63.4205 8.72592 65.3905 8.72592 67.8205L8.72592 80.9267C8.72592 83.3363 6.77255 85.2897 4.36296 85.2897C1.95337 85.2897 2.69032e-06 87.243 2.48019e-06 89.6526L2.1001e-06 94.0112C1.88819e-06 96.4412 1.96995 98.4112 4.4 98.4112H62.856ZM78.5332 91.8504C78.5332 84.6036 84.3933 78.7289 91.6221 78.7289C98.8509 78.7289 104.711 84.6036 104.711 91.8504C104.711 99.0972 98.8509 104.972 91.6221 104.972C84.3933 104.972 78.5332 99.0972 78.5332 91.8504Z\" fill=\"currentColor\"/></svg>",
+      "icon": "<svg width=\"118\" height=\"118\" viewBox=\"0 0 118 118\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M53.1688 19.6667C52.2562 19.6667 51.4669 19.0455 51.1872 18.1769C47.7911 7.63063 37.8978 0 26.2222 0C11.7401 0 0 11.7401 0 26.2222C0 40.7044 11.7401 52.4444 26.2222 52.4444C37.8978 52.4444 47.7911 44.8138 51.1872 34.2676C51.4669 33.3989 52.2562 32.7778 53.1687 32.7778H72.2963C73.4009 32.7778 74.2963 33.6732 74.2963 34.7778V52.6296C74.2963 53.7342 75.1917 54.6296 76.2963 54.6296H85.4074C86.512 54.6296 87.4074 53.7342 87.4074 52.6296V34.7778C87.4074 33.6732 88.3028 32.7778 89.4074 32.7778H94.1481C95.2527 32.7778 96.1481 33.6732 96.1481 34.7778V52.6296C96.1481 53.7342 97.0436 54.6296 98.1481 54.6296H107.259C108.364 54.6296 109.259 53.7342 109.259 52.6296V34.7778C109.259 33.6732 110.155 32.7778 111.259 32.7778H116C117.105 32.7778 118 31.8823 118 30.7778V21.6667C118 20.5621 117.105 19.6667 116 19.6667H53.1688ZM39.3333 26.2222C39.3333 33.4633 33.4633 39.3333 26.2222 39.3333C18.9812 39.3333 13.1111 33.4633 13.1111 26.2222C13.1111 18.9812 18.9812 13.1111 26.2222 13.1111C33.4633 13.1111 39.3333 18.9812 39.3333 26.2222Z\" fill=\"currentColor\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M64.8312 98.3333C65.7438 98.3333 66.5331 98.9545 66.8128 99.8231C70.2089 110.369 80.1022 118 91.7778 118C106.26 118 118 106.26 118 91.7778C118 77.2956 106.26 65.5556 91.7778 65.5556C80.1022 65.5556 70.2089 73.1862 66.8128 83.7324C66.5331 84.6011 65.7438 85.2222 64.8313 85.2222H45.7037C44.5991 85.2222 43.7037 84.3268 43.7037 83.2222V65.3704C43.7037 64.2658 42.8083 63.3704 41.7037 63.3704H32.5926C31.488 63.3704 30.5926 64.2658 30.5926 65.3704L30.5926 83.2222C30.5926 84.3268 29.6972 85.2222 28.5926 85.2222H23.8519C22.7473 85.2222 21.8519 84.3268 21.8519 83.2222L21.8519 65.3704C21.8519 64.2658 20.9564 63.3704 19.8519 63.3704H10.7407C9.63618 63.3704 8.74075 64.2658 8.74075 65.3704L8.74074 83.2222C8.74074 84.3268 7.84531 85.2222 6.74074 85.2222H2C0.895433 85.2222 2.78724e-06 86.1176 2.69068e-06 87.2222L1.89416e-06 96.3333C1.7976e-06 97.4379 0.895435 98.3333 2 98.3333H64.8312ZM78.6667 91.7778C78.6667 84.5367 84.5367 78.6667 91.7778 78.6667C99.0188 78.6667 104.889 84.5367 104.889 91.7778C104.889 99.0188 99.0188 104.889 91.7778 104.889C84.5367 104.889 78.6667 99.0188 78.6667 91.7778Z\" fill=\"currentColor\"/></svg>",
       "link": "https://freighter.app",
       "sections": [
         {
@@ -27,7 +27,8 @@
           "description": "The home screen answers three questions: what do I have, what's it worth, and what's changed? Balance sits at the top. Below, Tokens and Collectibles tabs let users navigate holdings without overwhelming the default view.\n\nLoading states preserve layout dimensions, preventing content shift as data arrives. Primary actions are minimal: Add, Send, Swap, Copy. Everything else lives a tap away. Crypto wallets often try to surface everything at once. We wanted calm.",
           "footnotes": "",
           "mockups": [
-            { "id": "freighter-4", "type": "frame", "src": "", "alt": "Home screen", "caption": "Home screen" }
+            { "id": "freighter-4", "type": "mobile", "src": "/videos/freighter-home.mp4", "alt": "Home screen", "caption": "Home" },
+            { "id": "freighter-4b", "type": "mobile", "src": "/videos/freighter-wallets.mp4", "alt": "Wallets", "caption": "Wallets" }
           ]
         },
         {
@@ -102,84 +103,84 @@
       "link": "https://snack.xyz",
       "sections": [
         {
-          "id": "snack-problem",
+          "id": "snack-overview",
           "title": "Overview",
-          "description": "I was building a directory of the best-designed crypto websites. They have this unique visual style (bold, experimental, unapologetically weird) and if you're building in crypto, you want references. Similar to how people use Godly or Mobbin for inspiration, but nothing like that existed for web3.\n\nSo I made one myself in Framer. It worked, but the process was painful. Every directory I found was custom-built from scratch. I wanted a way to spin up curated lists quickly, focused on links rather than identity. Lists that were designed to be shared, not buried in a notes app.",
+          "description": "Snack is curated lists, designed to be shared. You collect links around a theme and publish them as a clean, standalone page. No profile clutter, no social graph, no follower counts.\n\nThe constraint is intentional. Links only. No images, no embeds, no text blocks. This keeps lists lightweight and forces clarity: if something's worth adding, it earns its spot.",
           "footnotes": "",
           "mockups": [
             { "id": "snack-1", "type": "frame", "src": "", "alt": "Snack overview", "caption": "Snack homepage" }
           ]
         },
         {
-          "id": "snack-existing-tools",
-          "title": "Why not existing tools",
-          "description": "I looked at Linktree, Bento, and Notion. The first two are identity-centric: you have one profile, and links live there alongside everything else about you. The creator is the main event, not the content.\n\nNotion was simple enough for managing a list, but sharing was clunky. Viewers often needed an account, and lists lived alongside notes and databases rather than as standalone, shareable pages.\n\nI wanted something content-first. A tool where the list is the product, not a feature buried inside something else.",
+          "id": "snack-existing",
+          "title": "What exists now",
+          "description": "I looked at Linktree, Bento, and Notion. The first two are identity-centric: you have one profile, and links live alongside everything else about you. The creator is the main event, not the content.\n\nNotion was simple enough for managing lists, but sharing was clunky. Lists lived alongside notes rather than as standalone pages.\n\nI wanted something content-first. A tool where the list is the product.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-2", "type": "frame", "src": "", "alt": "Existing tools comparison", "caption": "Competitor analysis" }
+            { "id": "snack-2", "type": "frame", "src": "", "alt": "Existing tools", "caption": "Competitor analysis" }
           ]
         },
         {
-          "id": "snack-core-idea",
-          "title": "The core idea",
-          "description": "Snack is curated lists, designed to be shared. You collect links around a theme (resources, inspiration, tools, whatever) and publish them as a clean, standalone page. No profile clutter, no social graph, no follower counts.\n\nThe constraint is intentional. Links only. No images, no embeds, no text blocks. This keeps lists lightweight and forces clarity: if something's worth adding, it earns its spot.",
-          "footnotes": "simplicity as a feature, not a limitation",
+          "id": "snack-lesson",
+          "title": "The $30K lesson",
+          "description": "Last year, I spent $30,000 to hire a dev agency for a software idea I believed in. After six months, we had a working MVP. Too costly to continue, not enough distribution to justify the spend.\n\nThen Claude Code became available. I rebuilt from scratch. Since May 2025, I've shipped the entire product and more, maintaining it solo on a $20/month subscription. What took six months and five figures now takes afternoons.",
+          "footnotes": "",
           "mockups": [
-            { "id": "snack-3", "type": "frame", "src": "", "alt": "Core concept", "caption": "List view" }
+            { "id": "snack-3", "type": "frame", "src": "", "alt": "The $30K lesson", "caption": "Development timeline" }
           ]
         },
         {
           "id": "snack-creating",
           "title": "Creating a list",
-          "description": "Once you have an account, creating a list takes under a minute. Set an emoji, add a title, paste your links. That's it.\n\nThe fastest flow is clipboard-first: copy a URL, paste it directly into the list. Snack scrapes the metadata automatically (title, description, favicon) so you don't have to format anything. There's a click-to-add option too, but paste trains the behaviour. The goal was to make adding links feel closer to muscle memory than form-filling.\n\nOne action, one result. No friction between \"I found something good\" and \"it's in my list.\"",
+          "description": "Creating a list takes under a minute. Set an emoji, add a title, paste your links.\n\nThe fastest flow is clipboard-first: copy a URL, paste it directly. Snack scrapes the metadata automatically (title, description, favicon) so you don't format anything. The goal was muscle memory over form-filling.\n\nOne action, one result. No friction between \"I found something good\" and \"it's in my list.\"",
           "footnotes": "",
           "mockups": [
             { "id": "snack-4", "type": "frame", "src": "", "alt": "Creating a list", "caption": "List editor" }
           ]
         },
         {
-          "id": "snack-lesson",
-          "title": "The $30K lesson",
-          "description": "Last year, I spent $30,000 out-of-pocket to hire a dev agency for a software idea I believed in. After six months, we had a working MVP. The problem: too costly to continue, not enough distribution to justify the spend. I felt the weight of sunk cost settling in. I still loved the idea, but had no path forward.\n\nThen Claude Code became available. I decided to rebuild from scratch.\n\nSince May 2025, I've shipped the entire product and more, maintaining it solo on a $20/month Anthropic subscription. What took six months and five figures now takes afternoons.",
-          "footnotes": "still processing this, honestly",
-          "mockups": [
-            { "id": "snack-5", "type": "frame", "src": "", "alt": "The journey", "caption": "Development timeline" }
-          ]
-        },
-        {
-          "id": "snack-lightweight",
-          "title": "Keeping it light",
-          "description": "The trickiest UX challenge was staying lightweight. Every feature had to pass a simple test: can this be done in one click or one keyboard shortcut?\n\nSaving a list? One click. Adding a link from the extension? One click. Copying the share URL? One click. If something required a modal, a confirmation step, or multiple taps, it probably didn't belong.\n\nThis philosophy shaped what didn't make it in as much as what did. Constraints aren't limitations. They're what give the product shape.",
+          "id": "snack-editing",
+          "title": "Editing a list",
+          "description": "There's no separate edit mode. If you're the creator, the list is simply editable. Click the emoji to change it. Click the title to rename. Drag to reorder. Paste from your clipboard to add one link or twenty.\n\nThis collapses the gap between viewing and editing to zero. You're always in the right context.\n\nI don't love the visual style of emojis, but they're the most unopinionated choice for this use case. Intentionally generic.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-6", "type": "frame", "src": "", "alt": "Lightweight UX", "caption": "One-click actions" }
+            { "id": "snack-5", "type": "frame", "src": "", "alt": "Editing a list", "caption": "Inline editing" }
           ]
         },
         {
-          "id": "snack-features",
-          "title": "Features that compound",
-          "description": "A few things that make Snack feel considered.\n\nAnalytics show you which links get clicked and how your lists perform over time. Dynamic OG images mean every list looks good when shared, no manual preview setup required. The browser extension lets you save links directly from Twitter without leaving the page. And Discover surfaces other public lists, so the platform itself becomes a source of inspiration.\n\nNone of these are groundbreaking on their own. But together, they add up to something that feels complete, like every edge case was thought through.",
+          "id": "snack-sharing",
+          "title": "Sharing a list",
+          "description": "Sharing is just a copy-link button. No share modals, no platform pickers. This mirrors how people actually share things: paste into iMessage, drop into a Twitter DM.\n\nDynamic OG images are generated automatically based on the emoji, title, and username. Every list looks good when shared without any manual setup. The small things that make sharing feel effortless.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-7", "type": "frame", "src": "", "alt": "Features", "caption": "Analytics dashboard" }
+            { "id": "snack-6", "type": "frame", "src": "", "alt": "Sharing a list", "caption": "Share preview" }
           ]
         },
         {
-          "id": "snack-didnt-build",
-          "title": "What we didn't build",
-          "description": "No following. No comments. No profiles beyond the basics. Snack isn't a social network. It's a tool for making shareable lists.\n\nThis was deliberate. Social features create expectations: notifications, feeds, engagement loops. They shift focus from the content to the creator. I wanted Snack to stay quiet. You make a list, you share it, people use it. That's the whole interaction.\n\nThe only social-adjacent feature is saving: you can bookmark lists you like. But even that's private. No public \"liked by\" counts, no pressure to perform.",
+          "id": "snack-extension",
+          "title": "Saving from X",
+          "description": "The browser extension lets you save links from any Twitter thread in one or two clicks. Find a thread with interesting links, click the extension, and save them all to an existing list or create a new one on the spot.\n\nThis bridges the gap between discovery and curation. You don't have to leave the page, open Snack, and manually paste. The flow stays unbroken.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-8", "type": "frame", "src": "", "alt": "What we didn't build", "caption": "Intentional constraints" }
+            { "id": "snack-7", "type": "frame", "src": "", "alt": "Browser extension", "caption": "Chrome extension" }
           ]
         },
         {
-          "id": "snack-whats-next",
-          "title": "What's next",
-          "description": "The mobile app is currently in progress, also being built with Claude Code. The goal is the same: keep it fast, keep it focused, make list creation feel native to however you browse.\n\nThe hardest part isn't building features. It's resisting the urge to add more. Every new thing risks diluting what makes Snack work. So far, the constraint has been the product's best feature.",
-          "footnotes": "still figuring out the marketing side, but that's a different case study",
+          "id": "snack-stats",
+          "title": "List stats",
+          "description": "Analytics show three things: total links across all your lists, total views, and how many times your lists have been saved by others.\n\nYou can also drill into each list individually to see how it's performing. The focus is on signal over noise: enough to understand what's resonating, not so much that you're drowning in dashboards.",
+          "footnotes": "",
           "mockups": [
-            { "id": "snack-9", "type": "frame", "src": "", "alt": "What's next", "caption": "Mobile app preview" }
+            { "id": "snack-8", "type": "frame", "src": "", "alt": "List stats", "caption": "Analytics" }
+          ]
+        },
+        {
+          "id": "snack-takeaways",
+          "title": "Takeaways",
+          "description": "Building Snack reinforced a few things I already believed but now have receipts for. Constraints sharpen products. One-click interactions compound into habits. And with the right tools, a solo designer can ship and maintain software that would have required a team two years ago.\n\nThe hardest part isn't building. It's resisting the urge to add more.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "snack-9", "type": "frame", "src": "", "alt": "Takeaways", "caption": "Reflection" }
           ]
         }
       ]

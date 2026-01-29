@@ -53,6 +53,14 @@ export function Presentation({ data }: PresentationProps) {
       />
 
       <div className="flex-1 relative min-h-0 border-0">
+        {/* Top fade gradient */}
+        <div
+          className="absolute top-0 left-0 right-0 h-24 pointer-events-none z-20"
+          style={{
+            background: 'linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 100%)'
+          }}
+        />
+
         {/* Sidebar - positioned over content (hidden on mobile) */}
         <aside className="hidden sm:block absolute left-0 top-0 bottom-0 w-max p-4 pt-16 border-0 z-10">
           {currentProject && (
@@ -92,8 +100,8 @@ export function Presentation({ data }: PresentationProps) {
           </div>
         )}
 
-        {/* Main content area - full width */}
-        <main className="w-full h-full flex flex-col overflow-y-auto">
+        {/* Main content area - full width, no scroll */}
+        <main className="w-full h-full flex flex-col overflow-hidden">
           <MainContent section={currentSection} />
         </main>
       </div>
