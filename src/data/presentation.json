@@ -27,8 +27,8 @@
           "description": "The home screen answers three questions: what do I have, what's it worth, and what's changed? Balance sits at the top. Below, Tokens and Collectibles tabs let users navigate holdings without overwhelming the default view.\n\nLoading states preserve layout dimensions, preventing content shift as data arrives. Primary actions are minimal: Add, Send, Swap, Copy. Everything else lives a tap away. Crypto wallets often try to surface everything at once. We wanted calm.",
           "footnotes": "",
           "mockups": [
-            { "id": "freighter-4", "type": "mobile", "src": "/videos/freighter-home.mp4", "alt": "Home screen", "caption": "Home" },
-            { "id": "freighter-4b", "type": "mobile", "src": "/videos/freighter-wallets.mp4", "alt": "Wallets", "caption": "Wallets" }
+            { "id": "freighter-4", "type": "mobile", "src": "/videos/freighter/freighter-home.mp4", "alt": "Home screen", "caption": "Home" },
+            { "id": "freighter-4b", "type": "mobile", "src": "/videos/freighter/freighter-wallets.mp4", "alt": "Wallets", "caption": "Wallets" }
           ]
         },
         {
@@ -108,7 +108,16 @@
           "description": "Snack is curated lists, designed to be shared. You collect links around a theme and publish them as a clean, standalone page. No profile clutter, no social graph, no follower counts.\n\nThe constraint is intentional. Links only. No images, no embeds, no text blocks. This keeps lists lightweight and forces clarity: if something's worth adding, it earns its spot.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-1", "type": "frame", "src": "", "alt": "Snack overview", "caption": "Snack homepage" }
+            { "id": "snack-1", "type": "frame", "src": "/videos/snack/nav.mp4", "alt": "Snack overview", "caption": "Snack homepage" }
+          ]
+        },
+        {
+          "id": "snack-menu",
+          "title": "Menu",
+          "description": "The menu is where you manage everything. Your lists, your profile, your settings. It stays out of the way until you need it.\n\nNo nested navigation, no hamburger menus hiding critical features. Everything is one tap away. The goal was to keep the interface flat: see what you have, act on it, move on.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "snack-1b", "type": "frame", "src": "/videos/snack/menu.mp4", "alt": "Menu", "caption": "Menu" }
           ]
         },
         {
@@ -135,7 +144,7 @@
           "description": "Creating a list takes under a minute. Set an emoji, add a title, paste your links.\n\nThe fastest flow is clipboard-first: copy a URL, paste it directly. Snack scrapes the metadata automatically (title, description, favicon) so you don't format anything. The goal was muscle memory over form-filling.\n\nOne action, one result. No friction between \"I found something good\" and \"it's in my list.\"",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-4", "type": "frame", "src": "", "alt": "Creating a list", "caption": "List editor" }
+            { "id": "snack-4", "type": "frame", "src": "/videos/snack/create-list.mp4", "alt": "Creating a list", "caption": "List editor" }
           ]
         },
         {
@@ -144,7 +153,7 @@
           "description": "There's no separate edit mode. If you're the creator, the list is simply editable. Click the emoji to change it. Click the title to rename. Drag to reorder. Paste from your clipboard to add one link or twenty.\n\nThis collapses the gap between viewing and editing to zero. You're always in the right context.\n\nI don't love the visual style of emojis, but they're the most unopinionated choice for this use case. Intentionally generic.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-5", "type": "frame", "src": "", "alt": "Editing a list", "caption": "Inline editing" }
+            { "id": "snack-5", "type": "frame", "src": "/videos/snack/edit-list.mp4", "alt": "Editing a list", "caption": "Inline editing" }
           ]
         },
         {

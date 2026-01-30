@@ -109,20 +109,14 @@ export function MockupFrame({ mockup, className }: MockupFrameProps) {
       )}
 
       {type === 'frame' && (
-        // Simple frame with centered image
+        // Simple frame with centered image/video
         <div className="relative">
           <Squircle asChild cornerRadius={16} cornerSmoothing={1}>
             <div
               className="overflow-hidden bg-muted flex items-center justify-center"
-              style={{ width: '640px', height: '366px', ...frameShadow }}
+              style={{ width: '640px', height: '441px', ...frameShadow }}
             >
-              {src && (
-                <img
-                  src={src}
-                  alt={alt}
-                  className="max-w-full max-h-full object-contain"
-                />
-              )}
+              {src && renderMedia('max-w-full max-h-full object-contain')}
             </div>
           </Squircle>
           {caption && (
