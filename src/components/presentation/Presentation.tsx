@@ -56,7 +56,7 @@ export function Presentation({ data }: PresentationProps) {
 
       {/* Desktop layout: sidebar positioned left, main content fills remaining height */}
       <div className="hidden md:flex flex-1 min-h-0 relative">
-        <aside className="absolute left-0 top-0 w-[220px] p-4 pt-2 z-10">
+        <aside className="absolute left-0 top-16 w-[220px] p-4 pt-2 z-10">
           <Sidebar
             key={currentProjectIndex}
             sections={currentProject?.sections ?? []}
@@ -69,6 +69,9 @@ export function Presentation({ data }: PresentationProps) {
         <main className="flex-1 overflow-y-auto flex justify-center min-h-0">
           <MainContent section={currentSection} />
         </main>
+        {/* Gradient fade overlays */}
+        <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
       </div>
 
       {/* Mobile layout: all sections stacked, scrollable */}

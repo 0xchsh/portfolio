@@ -40,14 +40,38 @@ interface DescriptionProps {
 }
 
 export function Description({ text, className }: DescriptionProps) {
+  // Split by ## headings to support subtitle sections
+  const sections = text.split(/^## /m);
+
   return (
-    <p
-      className={cn(
-        'text-foreground text-sm md:text-base leading-relaxed text-left max-w-[35rem] whitespace-pre-line',
-        className
-      )}
-    >
-      {parseInlineCode(text)}
-    </p>
+    <div className={cn('flex flex-col gap-4 text-left max-w-[35rem]', className)}>
+      {sections.map((section, i) => {
+        if (i === 0) {
+          // Text before any heading
+          if (!section.trim()) return null;
+          return (
+            <p key={i} className="text-foreground text-sm md:text-base leading-relaxed whitespace-pre-line">
+              {parseInlineCode(section.trim())}
+            </p>
+          );
+        }
+        // Section with a heading
+        const newlineIndex = section.indexOf('\n');
+        const title = newlineIndex !== -1 ? section.slice(0, newlineIndex).trim() : section.trim();
+        const body = newlineIndex !== -1 ? section.slice(newlineIndex + 1).trim() : '';
+        return (
+          <div key={i} className="flex flex-col gap-1">
+            <h3 className="text-muted-foreground text-xs md:text-sm font-medium uppercase tracking-wider">
+              {title}
+            </h3>
+            {body && (
+              <p className="text-foreground text-sm md:text-base leading-relaxed whitespace-pre-line">
+                {parseInlineCode(body)}
+              </p>
+            )}
+          </div>
+        );
+      })}
+    </div>
   );
 }

@@ -13,16 +13,16 @@
         {
           "id": "freighter-overview",
           "title": "Overview",
-          "description": "Freighter is Stellar's flagship non-custodial wallet. It launched in 2020 as a browser extension and expanded to mobile as smart contracts arrived on Stellar and mobile crypto usage increased.\n\nA small team: three engineers, one PM, and me as the sole designer. Five months to ship before Meridian, our annual conference where attendees would use it live.",
+          "description": "Freighter is Stellar's flagship non-custodial wallet. It launched in 2020 as a browser extension and expanded to mobile as smart contracts arrived on Stellar and mobile crypto usage grew.\n\nA small team: three engineers, one PM, and me as the sole designer. Five months to ship before Meridian, our annual conference where attendees would use it live.",
           "footnotes": "I also designed and built [freighter.app](https://freighter.app) in Framer.",
           "mockups": [
-            { "id": "freighter-1", "type": "mobile", "src": "/videos/freighter/home.mp4", "alt": "Freighter home screen", "caption": "" }
+            { "id": "freighter-1", "type": "frame", "src": "/videos/freighter/cover-freighter.png", "alt": "Freighter cover", "caption": "" }
           ]
         },
         {
           "id": "freighter-approach",
           "title": "Approach",
-          "description": "Smart contracts launched on Stellar in 2024, unlocking DeFi, NFTs, and more. We needed a mobile wallet simple enough for newcomers but powerful enough for what the network could do now.\n\nThe design followed Stellar Design System v3 with a bias toward shipping fast and refining after launch. The target audience ranged from first-time crypto users to DeFi-curious people who weren't yet native to the space, remittance senders, and English-speaking users outside the US.",
+          "description": "## Context\nSmart contracts launched on Stellar in 2024, unlocking DeFi, NFTs, and more. We needed a mobile wallet simple enough for newcomers but powerful enough for what the network could do now.\n\n## Principles\nThe design followed Stellar Design System v3 with a bias toward shipping fast and refining after launch.\n\n## Audience\nFirst-time crypto users, DeFi-curious people who weren't yet native to the space, remittance senders, and English-speaking users outside the US.",
           "footnotes": "SDS v3 was still wet paint. We were building the system while building on it.",
           "mockups": [
             { "id": "freighter-approach-1", "type": "frame", "src": "/videos/freighter/website.png", "alt": "Freighter website", "caption": "" }
@@ -31,7 +31,7 @@
         {
           "id": "freighter-home",
           "title": "Home",
-          "description": "The home screen organises holdings into Tokens, Positions, and Collectibles. Balance sits at the top. Below, tabs let users navigate without overwhelming the default view.\n\nWallets are managed from a dedicated sheet. Switch between accounts, create new ones, or import existing keys. Primary actions are minimal: Send, Swap, Copy. Everything else lives a tap away.",
+          "description": "The home screen organizes holdings into Tokens, Positions, and Collectibles. Balance sits at the top. Below, tabs let users navigate without overwhelming the default view.\n\nWallets are managed from a dedicated sheet. Switch between accounts, create new ones, or import existing keys. Primary actions are minimal: Send, Swap, Copy. Everything else lives a tap away.",
           "footnotes": "",
           "mockups": [
             { "id": "freighter-4", "type": "mobile", "src": "/videos/freighter/Tokens.png", "alt": "Tokens", "caption": "Tokens" },
@@ -53,8 +53,8 @@
         {
           "id": "freighter-discover",
           "title": "Discover",
-          "description": "Discover is the gateway to Stellar ecosystem apps. No other Stellar wallet has a dedicated screen for this. We wanted Freighter to feel less like a vault and more like a portal.\n\nApps are organised into DeFi, Learn, and Trending categories. Each opens in an in-app browser with WalletConnect handling the connection. You never leave Freighter.\n\nFor developers, Discover is distribution. For users, it's access.",
-          "footnotes": "No other Stellar wallet has this, and we are betting on the ecosystem growing into it.",
+          "description": "Discover is the gateway to Stellar ecosystem apps. No other Stellar wallet has a dedicated screen for this. We wanted Freighter to feel less like a vault and more like a portal.\n\nApps are organized into DeFi, Learn, and Trending categories. Each opens in an in-app browser with WalletConnect handling the connection. You never leave Freighter.\n\nFor developers, Discover is distribution. For users, it's access.",
+          "footnotes": "No other Stellar wallet has this. We're betting on the ecosystem growing into it.",
           "mockups": [
             { "id": "freighter-6", "type": "mobile", "src": "/videos/freighter/discover-1.mp4", "alt": "Gateway to Stellar", "caption": "Gateway to Stellar" },
             { "id": "freighter-6b", "type": "mobile", "src": "/videos/freighter/discover-2.mp4", "alt": "Ecosystem Apps", "caption": "Ecosystem Apps" },
@@ -73,7 +73,7 @@
         {
           "id": "freighter-takeaways",
           "title": "Takeaways",
-          "description": "Freighter Mobile launched at Meridian in September 2025. It's grown to 3K monthly active users. No traditional marketing, so we're getting creative with distribution.\n\nBuilding in phases felt safe, but a lot of that work only served the team. Prioritize what benefits users, not the process. Ship to real hands sooner.\n\nCrypto is already unfamiliar. Don't add friction to anxiety. Lean into patterns people trust. Familiar interactions make unfamiliar actions feel safe.",
+          "description": "Freighter Mobile launched at Meridian in September 2025. It's grown to 3K monthly active users with no traditional marketing.\n\nBuilding in phases felt safe, but a lot of that work only served the team. Ship to real hands sooner. Prioritize what benefits users, not the process.\n\nCrypto is already unfamiliar. Don't add friction to anxiety. Lean into patterns people trust. Familiar interactions make unfamiliar actions feel safe.",
           "footnotes": "Error states are first impressions",
           "mockups": [
             { "id": "freighter-13", "type": "frame", "src": "/videos/freighter/cover-freighter.png", "alt": "Freighter cover", "caption": "" }
@@ -90,16 +90,16 @@
         {
           "id": "snack-overview",
           "title": "Overview",
-          "description": "Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.",
+          "description": "Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.\n\nI designed and built the entire product solo — brand, frontend, backend, infrastructure. One person, end to end. It's live at snack.xyz.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-1", "type": "frame", "src": "/videos/snack/website.mp4", "alt": "Snack homepage", "caption": "" }
+            { "id": "snack-1", "type": "frame", "src": "/videos/snack/cover-snack.png", "alt": "Snack cover", "caption": "" }
           ]
         },
         {
           "id": "snack-approach",
           "title": "Approach",
-          "description": "Last year I spent $30,000 out of pocket on an agency MVP, and it became too costly to continue. Then Claude Code came out and I rebuilt everything and more from scratch within a month.\n\nThe design is clean and unopinionated. A minimum expandable product. The goal: create a list in less than 30 seconds.\n\nThe audience is terminally online people, tab hoarders, and creators and curators.",
+          "description": "## Context\nLast year I spent $30,000 out of pocket on an agency MVP, and it became too costly to continue. Then Claude Code came out and I rebuilt everything and more from scratch within a month.\n\n## Principles\nThe design is clean and unopinionated. A minimum expandable product. The goal: create a list in less than 30 seconds.\n\n## Audience\nTerminally online people, tab hoarders, and creators and curators.",
           "footnotes": "",
           "mockups": [
             { "id": "snack-approach-1", "type": "frame", "src": "/videos/snack/nav.mp4", "alt": "Your Lists", "caption": "" }
@@ -135,8 +135,8 @@
         {
           "id": "snack-takeaways",
           "title": "Takeaways",
-          "description": "An agency took 6 months and $30K. I rebuilt it in a month, solo. This is the new math. The leverage is real, and it's only getting wider.\n\nDistribution is still king. Doesn't matter how good the design is if no one sees it. Getting it into hands is the real work, and I'm still figuring that out.\n\nA browser extension and mobile app are both in progress. Same approach: solo build, fast iteration. Shipping soon.",
-          "footnotes": "The individual is now one to the nth power",
+          "description": "An agency took 6 months and $30K. I rebuilt it in a month, solo. The leverage from AI tooling is real, and it compounds.\n\nDistribution is still the hardest part. Doesn't matter how good the product is if no one sees it. Getting it into hands is the real work.\n\nA browser extension and mobile app are both in progress. Same approach: solo build, fast iteration.",
+          "footnotes": "Design, code, ship, repeat.",
           "mockups": [
             { "id": "snack-9", "type": "frame", "src": "/videos/snack/cover-snack.png", "alt": "Snack cover", "caption": "" }
           ]
@@ -155,13 +155,13 @@
           "description": "Stellar Laboratory is the preferred developer sandbox for the Stellar network. The core tool for building transactions, testing endpoints, and exploring the ledger.\n\nThe original Lab was functional but outdated. Soroban (smart contracts) and new network features required a full rebuild. My job was to bring the visual language in line with the rest of Stellar's products without alienating developers who'd built muscle memory around the existing flow.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-1", "type": "frame", "src": "/videos/lab/home.png", "alt": "Lab overview", "caption": "Lab homepage" }
+            { "id": "lab-1", "type": "frame", "src": "/videos/lab/cover-laboratory.png", "alt": "Laboratory cover", "caption": "" }
           ]
         },
         {
           "id": "lab-approach",
           "title": "Approach",
-          "description": "The original Lab was functional but dated. With Soroban and new network features shipping, developers needed a tool that could keep up. We rebuilt it from the ground up.\n\nThe Lab became the first stress test of SDS v3. Familiar flows on a new foundation, supporting every network feature.\n\nThe audience: Stellar developers, protocol-curious users, and hackathon builders.",
+          "description": "## Context\nSoroban and new network features were shipping fast. The existing Lab couldn't keep up. We rebuilt it from the ground up.\n\n## Principles\nThe Lab became the first stress test of SDS v3. Familiar flows on a new foundation, supporting every network feature.\n\n## Audience\nStellar developers, protocol-curious builders, and hackathon teams.",
           "footnotes": "",
           "mockups": [
             { "id": "lab-approach-1", "type": "frame", "src": "/videos/lab/build.png", "alt": "Build Transaction", "caption": "" }
@@ -170,7 +170,7 @@
         {
           "id": "lab-home",
           "title": "Home",
-          "description": "The home screen serves as the navigation hub. Every feature of the Lab is reachable from here: transactions, accounts, endpoints, contracts, and tools.\n\nThe layout prioritises discoverability. New users can scan what's available. Returning users jump straight to their workflow. The information architecture mirrors the developer mental model: what do I have, what do I want to build, where do I look things up.",
+          "description": "The home screen serves as the navigation hub. Every feature of the Lab is reachable from here: transactions, accounts, endpoints, contracts, and tools.\n\nThe layout prioritizes discoverability. New users can scan what's available. Returning users jump straight to their workflow. The information architecture mirrors the developer mental model: what do I have, what do I want to build, where do I look things up.",
           "footnotes": "",
           "mockups": [
             { "id": "lab-1b", "type": "frame", "src": "/videos/lab/home.png", "alt": "Home and Navigation", "caption": "Home and Navigation" }
