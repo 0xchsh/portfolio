@@ -19,13 +19,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Hello Anthropic - Portfolio Review",
-  description: "Interactive design portfolio presentation",
+  description: "Portfolio Review by Charles Shin",
   icons: {
     icon: "/images/favicon.png",
   },
   openGraph: {
     title: "Hello Anthropic - Portfolio Review",
-    description: "Interactive design portfolio presentation",
+    description: "Portfolio Review by Charles Shin",
     images: ["/images/og-image.png"],
   },
 };
