@@ -18,6 +18,7 @@ export function MockupFrame({ mockup, className }: MockupFrameProps) {
       loop
       muted
       playsInline
+      preload="auto"
       className="w-full h-auto"
     />
   ) : (
@@ -37,7 +38,7 @@ export function MockupFrame({ mockup, className }: MockupFrameProps) {
       <div
         className={cn(
           'overflow-hidden bg-secondary',
-          mockup.type === 'mobile' && 'w-[200px] sm:w-[240px] rounded-[28px]',
+          mockup.type === 'mobile' && 'w-[200px] md:w-[240px] rounded-[28px]',
           mockup.type === 'desktop' && 'w-full max-w-[560px] rounded-xl',
           mockup.type === 'frame' && 'w-full max-w-[560px] rounded-xl'
         )}

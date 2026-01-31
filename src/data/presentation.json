@@ -25,7 +25,7 @@
           "description": "Smart contracts launched on Stellar in 2024, unlocking DeFi, NFTs, and more. We needed a mobile wallet simple enough for newcomers but powerful enough for what the network could do now.\n\nThe design followed Stellar Design System v3 with a bias toward shipping fast and refining after launch. The target audience ranged from first-time crypto users to DeFi-curious people who weren't yet native to the space, remittance senders, and English-speaking users outside the US.",
           "footnotes": "SDS v3 was still wet paint. We were building the system while building on it.",
           "mockups": [
-            { "id": "freighter-approach-1", "type": "mobile", "src": "/videos/freighter/home.mp4", "alt": "Freighter home screen", "caption": "" }
+            { "id": "freighter-approach-1", "type": "frame", "src": "/videos/freighter/website.png", "alt": "Freighter website", "caption": "" }
           ]
         },
         {

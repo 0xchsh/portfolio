@@ -39,8 +39,8 @@ export function MockupGrid({ mockups, className }: MockupGridProps) {
       {/* Desktop: grid layout */}
       <div
         className={cn(
-          'hidden sm:flex justify-center',
-          allMobile ? 'flex-nowrap gap-4' : 'flex-wrap gap-6'
+          'hidden md:grid justify-items-center',
+          allMobile ? 'grid-cols-2 gap-4 max-w-[520px] mx-auto' : 'grid-cols-1 gap-6'
         )}
       >
         {mockups.map((mockup) => (
@@ -49,7 +49,7 @@ export function MockupGrid({ mockups, className }: MockupGridProps) {
       </div>
 
       {/* Mobile: carousel */}
-      <div className="sm:hidden">
+      <div className="md:hidden">
         <div className="relative">
           <div className="flex justify-center">
             <MockupFrame

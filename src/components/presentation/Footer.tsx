@@ -57,12 +57,12 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer
       className={cn(
-        'sm:sticky sm:bottom-0 z-30 flex items-center justify-center sm:justify-between px-4 sm:px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm sm:text-base',
+        'md:sticky md:bottom-0 z-30 flex items-center justify-start md:justify-between px-4 md:px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm md:text-base',
         className
       )}
     >
       {/* Left - Keyboard shortcuts */}
-      <div className="hidden sm:flex items-center gap-4 text-base leading-6">
+      <div className="hidden md:flex items-center gap-4 text-base leading-6">
         <span className="inline-flex items-center gap-2">
           <span className="inline-flex items-center gap-1">
             <Kbd keyName="ArrowLeft"><ArrowLeft className="w-3 h-3" /></Kbd>

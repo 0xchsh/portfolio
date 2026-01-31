@@ -31,7 +31,7 @@ export function Header({
   return (
     <header
       className={cn(
-        'flex items-start justify-between px-4 sm:px-6 pt-4 sm:pt-6 pb-3 bg-background/80 backdrop-blur-xl',
+        'flex items-start justify-between px-4 md:px-6 pt-4 md:pt-6 pb-3 bg-background/80 backdrop-blur-xl',
         className
       )}
     >
@@ -40,14 +40,14 @@ export function Header({
         <img
           src="/images/pfp.gif"
           alt="Logo"
-          className="h-12 w-12 sm:h-24 sm:w-24 shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-1 sm:-mt-2 transition-[filter] duration-200 ease"
+          className="h-12 w-12 md:h-24 md:w-24 shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-1 md:-mt-2 transition-[filter] duration-200 ease"
         />
       </button>
 
       {/* Center: Project tabs (desktop) / Project dropdown (mobile) */}
       <div className="flex items-center justify-center flex-1 min-w-0">
         {/* Desktop project tabs */}
-        <nav className="hidden sm:flex items-center gap-0.5">
+        <nav className="hidden md:flex items-center gap-0.5">
           {projects.map((project, index) => (
             <Squircle
               key={project.id}
@@ -79,7 +79,7 @@ export function Header({
 
         {/* Mobile project selector */}
         <Squircle asChild cornerRadius={8} cornerSmoothing={1}>
-          <div className="sm:hidden relative">
+          <div className="md:hidden relative">
             <select
               value={currentProjectIndex}
               onChange={(e) => onProjectClick(Number(e.target.value))}
@@ -117,7 +117,7 @@ export function Header({
           <button
             onClick={onToggleTheme}
             className={cn(
-              'sm:hidden flex items-center justify-center p-1.5 transition-colors cursor-pointer text-base leading-6',
+              'md:hidden flex items-center justify-center p-1.5 transition-colors cursor-pointer text-base leading-6',
               'text-muted-foreground',
               'hover:bg-accent hover:text-accent-foreground'
             )}
@@ -140,13 +140,13 @@ export function Header({
             href={downloadUrl}
             download
             className={cn(
-              'flex items-center gap-2 p-1.5 sm:px-2 sm:py-1 transition-colors text-base leading-6',
+              'flex items-center gap-2 p-1.5 md:px-2 md:py-1 transition-colors text-base leading-6',
               'text-muted-foreground',
               'hover:bg-accent hover:text-accent-foreground'
             )}
           >
             <Download className="w-4 h-4 opacity-50" />
-            <span className="hidden sm:inline">Download</span>
+            <span className="hidden md:inline">Download</span>
           </a>
         </Squircle>
       </div>

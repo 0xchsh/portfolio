@@ -40,7 +40,7 @@ export function Presentation({ data }: PresentationProps) {
   });
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden sm:overflow-hidden">
+    <div className="h-screen flex flex-col overflow-hidden md:overflow-hidden">
       {/* Header */}
       <Header
         title={data.meta.title}
@@ -55,7 +55,7 @@ export function Presentation({ data }: PresentationProps) {
       />
 
       {/* Desktop layout: sidebar positioned left, main content fills remaining height */}
-      <div className="hidden sm:flex flex-1 min-h-0 relative">
+      <div className="hidden md:flex flex-1 min-h-0 relative">
         <aside className="absolute left-0 top-0 w-[220px] p-4 pt-2 z-10">
           <Sidebar
             key={currentProjectIndex}
@@ -66,13 +66,13 @@ export function Presentation({ data }: PresentationProps) {
             projectLink={currentProject?.link}
           />
         </aside>
-        <main className="flex-1 flex items-center justify-center min-h-0">
+        <main className="flex-1 overflow-y-auto flex justify-center min-h-0">
           <MainContent section={currentSection} />
         </main>
       </div>
 
       {/* Mobile layout: all sections stacked, scrollable */}
-      <div className="sm:hidden flex-1 overflow-y-auto">
+      <div className="md:hidden flex-1 overflow-y-auto">
         {currentProject?.sections.map((section) => (
           <MobileSection key={section.id} section={section} />
         ))}
@@ -81,7 +81,7 @@ export function Presentation({ data }: PresentationProps) {
       </div>
 
       {/* Footer - desktop only (sticky) */}
-      <Footer className="shrink-0 hidden sm:flex" />
+      <Footer className="shrink-0 hidden md:flex" />
     </div>
   );
 }

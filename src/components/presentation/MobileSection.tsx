@@ -50,7 +50,7 @@ export function MobileSection({ section, className }: MobileSectionProps) {
         className
       )}
     >
-      <h2 className="text-muted-foreground text-sm font-medium uppercase tracking-wider self-start">
+      <h2 className="text-muted-foreground text-sm font-medium tracking-wider self-start">
         {section.title}
       </h2>
 
