@@ -136,7 +136,7 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer
       className={cn(
-        'desktop:sticky desktop:bottom-0 z-30 flex items-center justify-start desktop:justify-between px-4 desktop:px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm desktop:text-base max-w-[35rem] desktop:max-w-full mx-auto desktop:mx-0',
+        'desktop:sticky desktop:bottom-0 z-30 flex flex-col items-center desktop:flex-row desktop:justify-between px-4 desktop:px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm desktop:text-base',
         className
       )}
     >
@@ -163,7 +163,7 @@ export function Footer({ className }: FooterProps) {
       </div>
 
       {/* Right - Built by Charles with Claude */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 max-w-[35rem] w-full desktop:max-w-none desktop:w-auto">
         Built by{' '}
         <div className="relative group inline-block">
           <span className="text-foreground border-b border-dotted border-muted-foreground/50 hover:text-muted-foreground transition-colors cursor-pointer">
