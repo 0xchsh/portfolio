@@ -18,8 +18,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ch.sh - portfolio review",
+  title: "Hello Anthropic - Portfolio Review",
   description: "Interactive design portfolio presentation",
+  icons: {
+    icon: "/images/favicon.png",
+  },
+  openGraph: {
+    title: "Hello Anthropic - Portfolio Review",
+    description: "Interactive design portfolio presentation",
+    images: ["/images/og-image.png"],
+  },
 };
 
 export default function RootLayout({

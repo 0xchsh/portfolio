@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "CH.SH",
-    "downloadUrl": "/downloads/portfolio.pdf"
+    "downloadUrl": "/downloads/anthropic-portfolio-shin-min.pdf"
   },
   "projects": [
     {
@@ -13,85 +13,70 @@
         {
           "id": "freighter-overview",
           "title": "Overview",
-          "description": "Freighter is Stellar's flagship wallet. We had a browser extension but no mobile app, so when someone asked \"how do I get started with Stellar?\" we didn't have a great answer.\n\nA small team: three engineers, one PM, and me as the sole designer. Five months to ship before Meridian, our annual conference where attendees would use it live.\n\nIt launched at Meridian as planned. ~2k daily active users, ~31k monthly.",
-          "footnotes": "I also designed and built freighter.app in Framer.",
+          "description": "Freighter is Stellar's flagship non-custodial wallet. It launched in 2020 as a browser extension and expanded to mobile as smart contracts arrived on Stellar and mobile crypto usage increased.\n\nA small team: three engineers, one PM, and me as the sole designer. Five months to ship before Meridian, our annual conference where attendees would use it live.",
+          "footnotes": "I also designed and built [freighter.app](https://freighter.app) in Framer.",
           "mockups": [
-            { "id": "freighter-1", "type": "mobile", "src": "", "alt": "Freighter overview", "caption": "Home" },
-            { "id": "freighter-2", "type": "mobile", "src": "", "alt": "Freighter overview", "caption": "Send" },
-            { "id": "freighter-3", "type": "mobile", "src": "", "alt": "Freighter overview", "caption": "Discover" }
+            { "id": "freighter-1", "type": "mobile", "src": "/videos/freighter/home.mp4", "alt": "Freighter home screen", "caption": "" }
+          ]
+        },
+        {
+          "id": "freighter-approach",
+          "title": "Approach",
+          "description": "Smart contracts launched on Stellar in 2024, unlocking DeFi, NFTs, and more. We needed a mobile wallet simple enough for newcomers but powerful enough for what the network could do now.\n\nThe design followed Stellar Design System v3 with a bias toward shipping fast and refining after launch. The target audience ranged from first-time crypto users to DeFi-curious people who weren't yet native to the space, remittance senders, and English-speaking users outside the US.",
+          "footnotes": "SDS v3 was still wet paint. We were building the system while building on it.",
+          "mockups": [
+            { "id": "freighter-approach-1", "type": "mobile", "src": "/videos/freighter/home.mp4", "alt": "Freighter home screen", "caption": "" }
           ]
         },
         {
           "id": "freighter-home",
           "title": "Home",
-          "description": "The home screen answers three questions: what do I have, what's it worth, and what's changed? Balance sits at the top. Below, Tokens and Collectibles tabs let users navigate holdings without overwhelming the default view.\n\nLoading states preserve layout dimensions, preventing content shift as data arrives. Primary actions are minimal: Add, Send, Swap, Copy. Everything else lives a tap away. Crypto wallets often try to surface everything at once. We wanted calm.",
+          "description": "The home screen organises holdings into Tokens, Positions, and Collectibles. Balance sits at the top. Below, tabs let users navigate without overwhelming the default view.\n\nWallets are managed from a dedicated sheet. Switch between accounts, create new ones, or import existing keys. Primary actions are minimal: Send, Swap, Copy. Everything else lives a tap away.",
           "footnotes": "",
           "mockups": [
-            { "id": "freighter-4", "type": "mobile", "src": "/videos/freighter/freighter-home.mp4", "alt": "Home screen", "caption": "Home" },
-            { "id": "freighter-4b", "type": "mobile", "src": "/videos/freighter/freighter-wallets.mp4", "alt": "Wallets", "caption": "Wallets" }
+            { "id": "freighter-4", "type": "mobile", "src": "/videos/freighter/Tokens.png", "alt": "Tokens", "caption": "Tokens" },
+            { "id": "freighter-4b", "type": "mobile", "src": "/videos/freighter/Positions.png", "alt": "Positions", "caption": "Positions" },
+            { "id": "freighter-4c", "type": "mobile", "src": "/videos/freighter/Collectibles.png", "alt": "Collectibles", "caption": "Collectibles" },
+            { "id": "freighter-4d", "type": "mobile", "src": "/videos/freighter/wallets.mp4", "alt": "Wallets", "caption": "Wallets" }
           ]
         },
         {
           "id": "freighter-history",
           "title": "History",
-          "description": "Transaction history on Stellar can get noisy. Trustline changes, path payments, claimable balances. Most of it means nothing to someone who just wants to know \"did my payment go through?\"\n\nWe wrote human-readable summaries for each operation type. \"Swapped XLM → USDC\" instead of raw operation data. Tapping expands full details: status, rate, fee, XDR. Progressive disclosure. Clarity first, completeness on request.",
+          "description": "Transaction history on Stellar can get noisy. Trustline changes, path payments, claimable balances. Most of it means nothing to someone who just wants to know \"did my payment go through?\"\n\nWe wrote human-readable summaries for each operation type. \"Swapped XLM to USDC\" instead of raw operation data. Tapping a transaction expands full details: status, rate, fee, XDR. Progressive disclosure. Clarity first, completeness on request.",
           "footnotes": "",
           "mockups": [
-            { "id": "freighter-5", "type": "frame", "src": "", "alt": "Transaction history", "caption": "Transaction history" }
+            { "id": "freighter-5", "type": "mobile", "src": "/videos/freighter/Past Transactions.png", "alt": "Past Transactions", "caption": "Past Transactions" },
+            { "id": "freighter-5b", "type": "mobile", "src": "/videos/freighter/history-details.mp4", "alt": "Transaction Details", "caption": "Transaction Details" }
           ]
         },
         {
           "id": "freighter-discover",
           "title": "Discover",
-          "description": "This is our main differentiator. No other Stellar wallet has a dedicated screen for ecosystem apps. We wanted Freighter to feel less like a vault and more like a portal.\n\nWe launched with ten curated dApps including Blend, Phoenix, StellarX, and Allbridge. Each opens in an in-app browser with WalletConnect handling the connection. You never leave Freighter.\n\nFor developers, Discover is distribution. For users, it's access.",
-          "footnotes": "",
+          "description": "Discover is the gateway to Stellar ecosystem apps. No other Stellar wallet has a dedicated screen for this. We wanted Freighter to feel less like a vault and more like a portal.\n\nApps are organised into DeFi, Learn, and Trending categories. Each opens in an in-app browser with WalletConnect handling the connection. You never leave Freighter.\n\nFor developers, Discover is distribution. For users, it's access.",
+          "footnotes": "No other Stellar wallet has this, and we are betting on the ecosystem growing into it.",
           "mockups": [
-            { "id": "freighter-6", "type": "frame", "src": "", "alt": "Discover screen", "caption": "Discover dApps" }
-          ]
-        },
-        {
-          "id": "freighter-collectibles",
-          "title": "Collectibles",
-          "description": "Collectibles on Stellar are typically Soroban-based NFTs (like Stellar Frogs) or domain names (Soroban Domains). The Collectibles tab groups them by collection with a count badge.\n\nThe detail view shows metadata: name, collection, token ID, description. Actions: View, Send, or overflow menu for refresh metadata, save to photos, hide, or report as spam. Hidden collectibles matter. Spam NFTs are a real problem, so users can hide unwanted items and report them.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "freighter-7", "type": "frame", "src": "", "alt": "Collectibles", "caption": "Collectibles" }
-          ]
-        },
-        {
-          "id": "freighter-send",
-          "title": "Send",
-          "description": "Sending should be trivial. The flow: recipient selection (address, contact picker, QR scan), asset selection, amount entry with real-time USD conversion, review, biometric confirmation, then success or failure.\n\nEach step validates before proceeding. Errors caught early, not at final submission. The percentage shortcuts (25%, 50%, 75%, Max) account for minimum XLM reserves so users don't accidentally lock themselves out.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "freighter-8", "type": "frame", "src": "", "alt": "Send flow", "caption": "Send flow" }
-          ]
-        },
-        {
-          "id": "freighter-swap",
-          "title": "Swap",
-          "description": "Swap uses Stellar's built-in orderbook DEX. We query Horizon's strictSendPaths endpoint for path finding, which returns optimal routes through the orderbook.\n\nThe flow mirrors Send: select token to swap from, select token to receive, enter amount, review, confirm. Swap Settings expose slippage tolerance (default 1%), transaction timeout, and fee. Tucked away but accessible for power users.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "freighter-9", "type": "frame", "src": "", "alt": "Swap flow", "caption": "Swap flow" }
+            { "id": "freighter-6", "type": "mobile", "src": "/videos/freighter/discover-1.mp4", "alt": "Gateway to Stellar", "caption": "Gateway to Stellar" },
+            { "id": "freighter-6b", "type": "mobile", "src": "/videos/freighter/discover-2.mp4", "alt": "Ecosystem Apps", "caption": "Ecosystem Apps" },
+            { "id": "freighter-6c", "type": "mobile", "src": "/videos/freighter/in-app-browser.png", "alt": "In-app Browser", "caption": "In-app Browser" }
           ]
         },
         {
           "id": "freighter-transactions",
           "title": "Transactions",
-          "description": "Stellar transactions can contain multiple operations, each with different implications. Signing something you don't understand is how people lose funds.\n\nWe integrated Blockaid for real-time simulation. Three risk levels: Malicious (block and explain), Suspicious (warn and let user decide), Safe (proceed). Messaging is specific: \"This contract has drained funds\" rather than generic \"Dangerous.\"\n\nThe UI shows simulated results before signing. Expanding reveals full details. Progressive disclosure: human-readable first, raw data for those who want it.",
-          "footnotes": "",
+          "description": "Transactions cover everything from sending and swapping to signing dApp requests and adding trustlines. Each flow validates at every step so errors are caught early, not at final submission.\n\nSecurity is layered throughout. Blockaid runs real-time simulation on every transaction, surfacing risk levels from suspicious to malicious with specific messaging. Flagged addresses and tokens are called out before interaction. The review screen shows simulated results before signing, with full details available on expansion.\n\nThe pattern across all transaction flows: human-readable first, raw data for those who want it.",
+          "footnotes": "Blockaid simulates what will happen before you sign. Think of it as a preview for your money.",
           "mockups": [
-            { "id": "freighter-10", "type": "frame", "src": "", "alt": "Transaction signing", "caption": "Blockaid simulation" }
+            { "id": "freighter-10", "type": "mobile", "src": "/videos/freighter/review-transactions.mp4", "alt": "Transaction review", "caption": "Review" }
           ]
         },
         {
           "id": "freighter-takeaways",
           "title": "Takeaways",
-          "description": "If I did it again, I'd collapse the early phases and push toward polish faster. The phased approach (MVP, beta, v1) made sense on paper but created alignment friction in practice. More time for craft, less time reconciling version definitions in Slack.\n\nThanks to the engineering team (Cassio, Leo, Danilo), Keeks for keeping us on track, Piyal and Aristides for support across the extension and backend, and the broader Stellar team.",
-          "footnotes": "next time: fewer versions, faster convergence\n\nLaunched September 2025 at Stellar Meridian.",
+          "description": "Freighter Mobile launched at Meridian in September 2025. It's grown to 3K monthly active users. No traditional marketing, so we're getting creative with distribution.\n\nBuilding in phases felt safe, but a lot of that work only served the team. Prioritize what benefits users, not the process. Ship to real hands sooner.\n\nCrypto is already unfamiliar. Don't add friction to anxiety. Lean into patterns people trust. Familiar interactions make unfamiliar actions feel safe.",
+          "footnotes": "Error states are first impressions",
           "mockups": [
-            { "id": "freighter-11", "type": "frame", "src": "", "alt": "Takeaways", "caption": "Team" }
+            { "id": "freighter-13", "type": "frame", "src": "/videos/freighter/cover-freighter.png", "alt": "Freighter cover", "caption": "" }
           ]
         }
       ]
@@ -105,91 +90,55 @@
         {
           "id": "snack-overview",
           "title": "Overview",
-          "description": "Snack is curated lists, designed to be shared. You collect links around a theme and publish them as a clean, standalone page. No profile clutter, no social graph, no follower counts.\n\nThe constraint is intentional. Links only. No images, no embeds, no text blocks. This keeps lists lightweight and forces clarity: if something's worth adding, it earns its spot.",
+          "description": "Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-1", "type": "frame", "src": "/videos/snack/nav.mp4", "alt": "Snack overview", "caption": "Snack homepage" }
+            { "id": "snack-1", "type": "frame", "src": "/videos/snack/website.mp4", "alt": "Snack homepage", "caption": "" }
           ]
         },
         {
-          "id": "snack-menu",
-          "title": "Menu",
-          "description": "The menu is where you manage everything. Your lists, your profile, your settings. It stays out of the way until you need it.\n\nNo nested navigation, no hamburger menus hiding critical features. Everything is one tap away. The goal was to keep the interface flat: see what you have, act on it, move on.",
+          "id": "snack-approach",
+          "title": "Approach",
+          "description": "Last year I spent $30,000 out of pocket on an agency MVP, and it became too costly to continue. Then Claude Code came out and I rebuilt everything and more from scratch within a month.\n\nThe design is clean and unopinionated. A minimum expandable product. The goal: create a list in less than 30 seconds.\n\nThe audience is terminally online people, tab hoarders, and creators and curators.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-1b", "type": "frame", "src": "/videos/snack/menu.mp4", "alt": "Menu", "caption": "Menu" }
+            { "id": "snack-approach-1", "type": "frame", "src": "/videos/snack/nav.mp4", "alt": "Your Lists", "caption": "" }
           ]
         },
         {
-          "id": "snack-existing",
-          "title": "What exists now",
-          "description": "I looked at Linktree, Bento, and Notion. The first two are identity-centric: you have one profile, and links live alongside everything else about you. The creator is the main event, not the content.\n\nNotion was simple enough for managing lists, but sharing was clunky. Lists lived alongside notes rather than as standalone pages.\n\nI wanted something content-first. A tool where the list is the product.",
-          "footnotes": "",
+          "id": "snack-create",
+          "title": "Create",
+          "description": "Creating a list takes under thirty seconds. Set an emoji, add a title, paste your links.\n\nThe fastest flow is clipboard-first: copy a URL, paste it directly. Snack scrapes the metadata automatically (title, description, favicon) so you don't format anything. The goal was muscle memory over form-filling.\n\nOne action, one result. No friction between \"I found something good\" and \"it's in my list.\"",
+          "footnotes": "The best interface is the one you've already used. Everyone knows Cmd+V.",
           "mockups": [
-            { "id": "snack-2", "type": "frame", "src": "", "alt": "Existing tools", "caption": "Competitor analysis" }
+            { "id": "snack-4", "type": "frame", "src": "/videos/snack/create-list.mp4", "alt": "Creating a list", "caption": "Creating a list" }
           ]
         },
         {
-          "id": "snack-lesson",
-          "title": "The $30K lesson",
-          "description": "Last year, I spent $30,000 to hire a dev agency for a software idea I believed in. After six months, we had a working MVP. Too costly to continue, not enough distribution to justify the spend.\n\nThen Claude Code became available. I rebuilt from scratch. Since May 2025, I've shipped the entire product and more, maintaining it solo on a $20/month subscription. What took six months and five figures now takes afternoons.",
+          "id": "snack-edit",
+          "title": "Edit",
+          "description": "There's no separate edit mode. If you're the creator, the list is always editable. Click the emoji to change it. Click the title to rename. Drag to reorder. Paste from your clipboard to add one link or twenty.\n\nThis collapses the gap between viewing and editing to zero. You're always in the right context.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-3", "type": "frame", "src": "", "alt": "The $30K lesson", "caption": "Development timeline" }
+            { "id": "snack-5", "type": "frame", "src": "/videos/snack/edit-list.mp4", "alt": "Editing a list", "caption": "Editing a list" }
           ]
         },
         {
-          "id": "snack-creating",
-          "title": "Creating a list",
-          "description": "Creating a list takes under a minute. Set an emoji, add a title, paste your links.\n\nThe fastest flow is clipboard-first: copy a URL, paste it directly. Snack scrapes the metadata automatically (title, description, favicon) so you don't format anything. The goal was muscle memory over form-filling.\n\nOne action, one result. No friction between \"I found something good\" and \"it's in my list.\"",
+          "id": "snack-manage",
+          "title": "Manage",
+          "description": "Managing lists is where the product comes together. Your dashboard shows all your lists with stats: total links, total views, and saves by others.\n\nSharing is a copy-link button. Dynamic OG images are generated automatically based on the emoji, title, and username. Every list looks good when shared without any manual setup.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-4", "type": "frame", "src": "/videos/snack/create-list.mp4", "alt": "Creating a list", "caption": "List editor" }
-          ]
-        },
-        {
-          "id": "snack-editing",
-          "title": "Editing a list",
-          "description": "There's no separate edit mode. If you're the creator, the list is simply editable. Click the emoji to change it. Click the title to rename. Drag to reorder. Paste from your clipboard to add one link or twenty.\n\nThis collapses the gap between viewing and editing to zero. You're always in the right context.\n\nI don't love the visual style of emojis, but they're the most unopinionated choice for this use case. Intentionally generic.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "snack-5", "type": "frame", "src": "/videos/snack/edit-list.mp4", "alt": "Editing a list", "caption": "Inline editing" }
-          ]
-        },
-        {
-          "id": "snack-sharing",
-          "title": "Sharing a list",
-          "description": "Sharing is just a copy-link button. No share modals, no platform pickers. This mirrors how people actually share things: paste into iMessage, drop into a Twitter DM.\n\nDynamic OG images are generated automatically based on the emoji, title, and username. Every list looks good when shared without any manual setup. The small things that make sharing feel effortless.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "snack-6", "type": "frame", "src": "", "alt": "Sharing a list", "caption": "Share preview" }
-          ]
-        },
-        {
-          "id": "snack-extension",
-          "title": "Saving from X",
-          "description": "The browser extension lets you save links from any Twitter thread in one or two clicks. Find a thread with interesting links, click the extension, and save them all to an existing list or create a new one on the spot.\n\nThis bridges the gap between discovery and curation. You don't have to leave the page, open Snack, and manually paste. The flow stays unbroken.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "snack-7", "type": "frame", "src": "", "alt": "Browser extension", "caption": "Chrome extension" }
-          ]
-        },
-        {
-          "id": "snack-stats",
-          "title": "List stats",
-          "description": "Analytics show three things: total links across all your lists, total views, and how many times your lists have been saved by others.\n\nYou can also drill into each list individually to see how it's performing. The focus is on signal over noise: enough to understand what's resonating, not so much that you're drowning in dashboards.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "snack-8", "type": "frame", "src": "", "alt": "List stats", "caption": "Analytics" }
+            { "id": "snack-6", "type": "frame", "src": "/videos/snack/menu.mp4", "alt": "Managing a list", "caption": "Managing a list" }
           ]
         },
         {
           "id": "snack-takeaways",
           "title": "Takeaways",
-          "description": "Building Snack reinforced a few things I already believed but now have receipts for. Constraints sharpen products. One-click interactions compound into habits. And with the right tools, a solo designer can ship and maintain software that would have required a team two years ago.\n\nThe hardest part isn't building. It's resisting the urge to add more.",
-          "footnotes": "",
+          "description": "An agency took 6 months and $30K. I rebuilt it in a month, solo. This is the new math. The leverage is real, and it's only getting wider.\n\nDistribution is still king. Doesn't matter how good the design is if no one sees it. Getting it into hands is the real work, and I'm still figuring that out.\n\nA browser extension and mobile app are both in progress. Same approach: solo build, fast iteration. Shipping soon.",
+          "footnotes": "The individual is now one to the nth power",
           "mockups": [
-            { "id": "snack-9", "type": "frame", "src": "", "alt": "Takeaways", "caption": "Reflection" }
+            { "id": "snack-9", "type": "frame", "src": "/videos/snack/cover-snack.png", "alt": "Snack cover", "caption": "" }
           ]
         }
       ]
@@ -203,82 +152,91 @@
         {
           "id": "lab-overview",
           "title": "Overview",
-          "description": "Stellar Lab is where developers experiment with the Stellar network. Build transactions, sign them, simulate, submit, explore smart contracts.\n\nThe old Lab was built by engineers years ago and hadn't been touched since. It worked, but it looked like it worked. Meanwhile, Stellar's smart contracts platform (Soroban) was launching, and the Lab needed to support entirely new features.\n\nMy job was to redesign it: bring the visual language in line with the rest of Stellar's products, support smart contracts, and do this without alienating developers who'd built muscle memory around the existing flow. Raise the quality dramatically while preserving the mental model.",
+          "description": "Stellar Laboratory is the preferred developer sandbox for the Stellar network. The core tool for building transactions, testing endpoints, and exploring the ledger.\n\nThe original Lab was functional but outdated. Soroban (smart contracts) and new network features required a full rebuild. My job was to bring the visual language in line with the rest of Stellar's products without alienating developers who'd built muscle memory around the existing flow.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-1", "type": "frame", "src": "", "alt": "Lab overview", "caption": "Lab homepage" }
+            { "id": "lab-1", "type": "frame", "src": "/videos/lab/home.png", "alt": "Lab overview", "caption": "Lab homepage" }
           ]
         },
         {
-          "id": "lab-design-system",
-          "title": "Stellar Design System",
-          "description": "This project became the first real implementation of Stellar Design System v3. We had components, tokens, and documentation. What we didn't have was a complex, form-heavy developer tool putting pressure on all of it at once.\n\nThe Lab exposed gaps immediately. Form validation patterns fell apart with fifteen fields on screen. The type scale needed adjustments for dense technical content. Some components didn't exist yet.\n\nEvery edge case became a contribution back to SDS. Input states for long cryptographic strings. Error messaging for transaction validation. The sort of details that only surface when you're building something real.",
+          "id": "lab-approach",
+          "title": "Approach",
+          "description": "The original Lab was functional but dated. With Soroban and new network features shipping, developers needed a tool that could keep up. We rebuilt it from the ground up.\n\nThe Lab became the first stress test of SDS v3. Familiar flows on a new foundation, supporting every network feature.\n\nThe audience: Stellar developers, protocol-curious users, and hackathon builders.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-2", "type": "frame", "src": "", "alt": "Stellar Design System", "caption": "Design system" }
+            { "id": "lab-approach-1", "type": "frame", "src": "/videos/lab/build.png", "alt": "Build Transaction", "caption": "" }
           ]
         },
         {
-          "id": "lab-local-storage",
-          "title": "Save to local storage",
-          "description": "Developers were constantly copying and pasting. Keys, transaction XDR, contract IDs. The same strings, over and over, across different parts of the tool.\n\nSo we built a save system. Keypairs, API requests, transactions, smart contract IDs. Everything lives in browser local storage, organised by network: Testnet for experimentation, Mainnet for production, Futurenet for bleeding-edge features.\n\nBuilding a transaction? Prefill the source account from saved keypairs. Found a contract worth revisiting? Save the ID. Small conveniences that compound into something that actually feels considered.",
+          "id": "lab-home",
+          "title": "Home",
+          "description": "The home screen serves as the navigation hub. Every feature of the Lab is reachable from here: transactions, accounts, endpoints, contracts, and tools.\n\nThe layout prioritises discoverability. New users can scan what's available. Returning users jump straight to their workflow. The information architecture mirrors the developer mental model: what do I have, what do I want to build, where do I look things up.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-3", "type": "frame", "src": "", "alt": "Local storage", "caption": "Saved items" }
+            { "id": "lab-1b", "type": "frame", "src": "/videos/lab/home.png", "alt": "Home and Navigation", "caption": "Home and Navigation" }
+          ]
+        },
+        {
+          "id": "lab-select-network",
+          "title": "Select Network",
+          "description": "Network selection is the first decision a developer makes. Testnet for experimentation, Mainnet for production, Futurenet for bleeding-edge features.\n\nThe network selector persists across the entire Lab. Switching networks updates all saved items, endpoints, and account states. No ambiguity about which environment you're working in.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "lab-2", "type": "frame", "src": "/videos/lab/select-network.png", "alt": "Select network", "caption": "Choose a network" }
+          ]
+        },
+        {
+          "id": "lab-connect-wallet",
+          "title": "Connect Wallet",
+          "description": "Connecting a wallet lets developers sign transactions directly from the Lab using their browser wallet. This bridges the gap between building a transaction and submitting it.\n\nSupported wallets include Freighter and other Stellar-compatible extensions. Once connected, the wallet's public key is available for prefilling source accounts and signing.",
+          "footnotes": "",
+          "mockups": [
+            { "id": "lab-2b", "type": "frame", "src": "/videos/lab/connect-wallet.png", "alt": "Connect wallet", "caption": "Connect Wallet" }
+          ]
+        },
+        {
+          "id": "lab-view-xdr",
+          "title": "View XDR",
+          "description": "XDR is Stellar's binary encoding format. Every transaction, operation, and result is encoded in it. The View XDR tool converts XDR to human-readable JSON.\n\nPaste an XDR string, see the decoded structure. This is essential for debugging: when a transaction fails or behaves unexpectedly, XDR decoding is the first place developers go.",
+          "footnotes": "Think of XDR as a zip file for blockchain transactions. Useful, unreadable, needs a decoder.",
+          "mockups": [
+            { "id": "lab-3", "type": "frame", "src": "/videos/lab/xdr.png", "alt": "View XDR", "caption": "Convert XDR to JSON" }
           ]
         },
         {
           "id": "lab-account",
           "title": "Account",
-          "description": "Creating an account on Stellar means generating a keypair, then funding it. On Testnet and Futurenet, Friendbot handles funding with 10,000 test XLM.\n\nThe old flow required mental overhead. Generate keys, copy them somewhere, navigate to a different page, paste, fund. The new flow keeps everything together. Generate, optionally save with a name, fund with one click.\n\nSaved keypairs display the account's XLM balance, last saved date, and quick actions: copy public key, reveal secret key, fund if unfunded. Account management as a proper dashboard rather than disconnected utilities.",
-          "footnotes": "",
+          "description": "Creating an account on Stellar means generating a keypair, then funding it. On Testnet and Futurenet, Friendbot handles funding with 10,000 test XLM.\n\nThe new flow keeps everything together. Generate, optionally save with a name, fund with one click. Saved keypairs display the account's XLM balance, last saved date, and quick actions. Account management as a proper dashboard rather than disconnected utilities.",
+          "footnotes": "Friendbot is Stellar's faucet — a bot that gives you free test tokens.",
           "mockups": [
-            { "id": "lab-4", "type": "frame", "src": "", "alt": "Account", "caption": "Account management" }
+            { "id": "lab-4", "type": "frame", "src": "/videos/lab/account.mp4", "alt": "Account", "caption": "Create a wallet" }
           ]
         },
         {
           "id": "lab-transactions",
           "title": "Transactions",
-          "description": "The transaction builder is the heart of the Lab. Source account, sequence number, base fee, memo, time bounds, then operations. Every field has validation, helper text, and links to docs. \"Fetch next sequence\" pulls the right number automatically. \"Set to 5 min from now\" handles time bounds without timestamp math.\n\nSigning was harder. Transactions can require multiple signatures: secret key, browser wallet, hardware wallet, or pre-computed signature. The temptation was to hide this behind tabs.\n\nWe show everything at once. Four cards, stacked. It looks dense because it is dense, but it matches how developers actually work with multi-sig.",
+          "description": "The transaction builder is the heart of the Lab. Source account, sequence number, base fee, memo, time bounds, then operations. Every field has validation, helper text, and links to docs.\n\nSigning supports multiple methods: secret key, browser wallet, hardware wallet, or pre-computed signature. We show all four at once. It looks dense because it is dense, but it matches how developers actually work with multi-sig.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-5", "type": "frame", "src": "", "alt": "Transactions", "caption": "Transaction builder" }
+            { "id": "lab-5", "type": "frame", "src": "/videos/lab/transaction.mp4", "alt": "Transactions", "caption": "Build a transaction" }
           ]
         },
         {
-          "id": "lab-api-explorer",
-          "title": "API Explorer",
-          "description": "The API Explorer lets you test Stellar's RPC methods and Horizon endpoints directly in the browser. No Postman, no curl, no context switching.\n\nThree categories: RPC Query Methods for reading blockchain data, Simulation & Fees for validating transactions before execution, Transaction Execution for submitting to the network.\n\nEach method has typed inputs and inline documentation. Submit a request, see the response, save it or share a link. Instead of describing a failing request over Slack, just send a URL. The design challenge was density: some endpoints have a dozen parameters. Collapsible sections and sensible defaults kept the common case simple.",
+          "id": "lab-contract-explorer",
+          "title": "Contract Explorer",
+          "description": "Contract Explorer lets you learn about any Soroban smart contract. Paste a contract ID and get everything: creation date, creator, Wasm hash, source code, storage state, version history, and generated bindings for TypeScript, Rust, Python, Java.\n\nInvoke methods directly from the browser with type hints from the contract spec. The goal: make smart contracts feel as accessible as the rest of the Lab.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-6", "type": "frame", "src": "", "alt": "API Explorer", "caption": "API Explorer" }
-          ]
-        },
-        {
-          "id": "lab-smart-contracts",
-          "title": "Smart Contracts",
-          "description": "Soroban brought smart contracts to Stellar, and the Lab needed to support the full lifecycle.\n\nContract Explorer is the entry point. Paste a contract ID and get everything: creation date, creator, Wasm hash, source code, storage state, version history, and generated bindings for TypeScript, Rust, Python, Java. Invoke methods directly from the browser with type hints from the contract spec.\n\nSmart Contract List shows contracts on the network. Upload and Deploy handles the deployment flow. The goal: make smart contracts feel as accessible as the rest of the Lab, whether you're exploring or shipping.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "lab-7", "type": "frame", "src": "", "alt": "Smart Contracts", "caption": "Contract Explorer" }
-          ]
-        },
-        {
-          "id": "lab-dashboard",
-          "title": "Transaction Dashboard",
-          "description": "The dashboard gives you a real-time view of submitted transactions. Status, hash, timestamps, links to block explorers.\n\nThis was a late addition based on feedback. The old Lab had no memory of what you'd submitted. Send a transaction, see a success message, then nothing. Want to verify it landed? Copy the hash and check an external explorer.\n\nThe dashboard keeps a running log. Pending transactions show status as they propagate. Completed ones link to their ledger entry. Failed ones surface the error. A small feature that makes the Lab feel like an integrated environment.",
-          "footnotes": "",
-          "mockups": [
-            { "id": "lab-8", "type": "frame", "src": "", "alt": "Transaction Dashboard", "caption": "Transaction dashboard" }
+            { "id": "lab-7", "type": "frame", "src": "/videos/lab/contract-explorer.png", "alt": "Contract Explorer", "caption": "Learn about a smart contract" }
           ]
         },
         {
           "id": "lab-takeaways",
           "title": "Takeaways",
-          "description": "Developer tools have a different relationship with complexity. The instinct to simplify, to hide options, can make things harder for people who know exactly what they need. The signing flow shows four methods at once. It looks busy, but developers working with multi-sig don't want to hunt through tabs.\n\nSmall conveniences compound. Saving a keypair takes two seconds. Prefilling from it takes one. None feel like features alone, but together they're the difference between a tool that fights you and one that gets out of the way.\n\nRedesigning something people use is a trust exercise. You earn it by respecting what worked before.",
-          "footnotes": "Thanks to Jane (PM), Jeesun and Iveta (Eng). Built on Stellar Design System v3.",
+          "description": "Since relaunch: 21K monthly active users with sessions averaging nearly 8 minutes. No drop-off from the old Lab. Devs made the switch without friction.\n\nYou can't design developer tools without using them. I had to dogfood Lab constantly. If I didn't feel the friction myself, I'd have missed it entirely.\n\nThe old Lab had rough edges but devs knew how it worked. We kept the patterns they relied on. Familiar doesn't mean outdated, it means trusted.",
+          "footnotes": "Respect users' muscle memory",
           "mockups": [
-            { "id": "lab-9", "type": "frame", "src": "", "alt": "Takeaways", "caption": "Team" }
+            { "id": "lab-9", "type": "frame", "src": "/videos/lab/cover-laboratory.png", "alt": "Laboratory cover", "caption": "" }
           ]
         }
       ]

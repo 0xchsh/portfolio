@@ -1,12 +1,12 @@
 'use client';
 
-import { Squircle } from '@squircle-js/react';
 import { usePresentation } from '@/hooks/usePresentation';
 import { useKeyboardNavigation } from '@/hooks/useKeyboardNavigation';
 import { useTheme } from '@/components/providers/ThemeProvider';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 import { MainContent } from './MainContent';
+import { MobileSection } from './MobileSection';
 import { Footer } from './Footer';
 import type { PresentationData } from '@/types/presentation';
 
@@ -15,19 +15,20 @@ interface PresentationProps {
 }
 
 export function Presentation({ data }: PresentationProps) {
-  const { toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
+
   const {
     currentProjectIndex,
     currentSectionIndex,
     currentProject,
     currentSection,
-    setProject,
-    setSection,
-    nextSection,
-    prevSection,
+    direction,
+    goToProject,
     nextProject,
     prevProject,
-    navigationDirection,
+    goToSection,
+    nextSection,
+    prevSection,
   } = usePresentation(data);
 
   useKeyboardNavigation({
@@ -39,74 +40,48 @@ export function Presentation({ data }: PresentationProps) {
   });
 
   return (
-    <div className="h-screen flex flex-col bg-background">
+    <div className="h-screen flex flex-col overflow-hidden sm:overflow-hidden">
+      {/* Header */}
       <Header
         title={data.meta.title}
         projects={data.projects}
         currentProjectIndex={currentProjectIndex}
         downloadUrl={data.meta.downloadUrl}
-        onProjectClick={setProject}
-        onLogoClick={() => {
-          setProject(0);
-          setSection(0);
-        }}
+        onProjectClick={goToProject}
+        onLogoClick={() => goToProject(0)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        className="shrink-0 z-40"
       />
 
-      <div className="flex-1 relative min-h-0 border-0">
-        {/* Top fade gradient */}
-        <div
-          className="absolute top-0 left-0 right-0 h-24 pointer-events-none z-20"
-          style={{
-            background: 'linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 100%)'
-          }}
-        />
-
-        {/* Sidebar - positioned over content (hidden on mobile) */}
-        <aside className="hidden sm:block absolute left-0 top-0 bottom-0 w-max p-4 pt-16 border-0 z-10">
-          {currentProject && (
-            <Sidebar
-              key={currentProjectIndex}
-              sections={currentProject.sections}
-              currentSectionIndex={currentSectionIndex}
-              onSectionClick={setSection}
-              direction={navigationDirection}
-              projectLink={currentProject.link}
-            />
-          )}
+      {/* Desktop layout: sidebar positioned left, main content fills remaining height */}
+      <div className="hidden sm:flex flex-1 min-h-0 relative">
+        <aside className="absolute left-0 top-0 w-[220px] p-4 pt-2 z-10">
+          <Sidebar
+            key={currentProjectIndex}
+            sections={currentProject?.sections ?? []}
+            currentSectionIndex={currentSectionIndex}
+            onSectionClick={goToSection}
+            direction={direction}
+            projectLink={currentProject?.link}
+          />
         </aside>
-
-        {/* Mobile section selector */}
-        {currentProject && (
-          <div className="sm:hidden px-4 py-2 flex gap-2 overflow-x-auto">
-            {currentProject.sections.map((section, index) => (
-              <Squircle
-                key={section.id}
-                asChild
-                cornerRadius={8}
-                cornerSmoothing={1}
-              >
-                <button
-                  onClick={() => setSection(index)}
-                  className={`px-3 py-1.5 text-sm whitespace-nowrap transition-colors ${
-                    index === currentSectionIndex
-                      ? 'bg-accent text-accent-foreground'
-                      : 'text-muted-foreground'
-                  }`}
-                >
-                  {section.title}
-                </button>
-              </Squircle>
-            ))}
-          </div>
-        )}
-
-        {/* Main content area - full width, no scroll */}
-        <main className="w-full h-full flex flex-col overflow-hidden">
+        <main className="flex-1 flex items-center justify-center min-h-0">
           <MainContent section={currentSection} />
         </main>
       </div>
 
-      <Footer />
+      {/* Mobile layout: all sections stacked, scrollable */}
+      <div className="sm:hidden flex-1 overflow-y-auto">
+        {currentProject?.sections.map((section) => (
+          <MobileSection key={section.id} section={section} />
+        ))}
+        {/* Footer at bottom of scroll stack on mobile */}
+        <Footer className="shrink-0" />
+      </div>
+
+      {/* Footer - desktop only (sticky) */}
+      <Footer className="shrink-0 hidden sm:flex" />
     </div>
   );
 }

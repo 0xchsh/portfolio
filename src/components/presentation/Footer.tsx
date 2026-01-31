@@ -57,7 +57,7 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer
       className={cn(
-        'sticky bottom-0 z-30 flex items-center justify-between px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm sm:text-base',
+        'sm:sticky sm:bottom-0 z-30 flex items-center justify-center sm:justify-between px-4 sm:px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm sm:text-base',
         className
       )}
     >
