@@ -136,7 +136,7 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer
       className={cn(
-        'desktop:sticky desktop:bottom-0 z-30 flex items-center justify-start desktop:justify-between desktop:px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm desktop:text-base max-w-[35rem] desktop:max-w-full mx-auto desktop:mx-0',
+        'desktop:sticky desktop:bottom-0 z-30 flex items-center justify-start desktop:justify-between px-4 desktop:px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm desktop:text-base max-w-[35rem] desktop:max-w-full mx-auto desktop:mx-0',
         className
       )}
     >
