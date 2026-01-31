@@ -83,7 +83,7 @@ export function Presentation({ data }: PresentationProps) {
             <MobileSection section={section} />
             {i < (currentProject.sections.length - 1) && (
               <div className="flex justify-center">
-                <div className="w-[240px] h-px border-t border-dotted border-muted-foreground/10" />
+                <div className="w-[240px] h-px border-t border-dotted border-muted-foreground/30" />
               </div>
             )}
           </div>

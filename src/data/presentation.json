@@ -16,16 +16,30 @@
           "description": "Freighter is Stellar's flagship non-custodial wallet. It launched in 2020 as a browser extension and expanded to mobile as smart contracts arrived on Stellar and mobile crypto usage grew.\n\nA small team: three engineers, one PM, and me as the sole designer. Five months to ship before Meridian, our annual conference where attendees would use it live.",
           "footnotes": "I also designed and built [freighter.app](https://freighter.app) in Framer.",
           "mockups": [
-            { "id": "freighter-1", "type": "frame", "src": "/videos/freighter/cover-freighter.png", "alt": "Freighter cover", "caption": "" }
+            {
+              "id": "freighter-1",
+              "type": "frame",
+              "src": "/videos/freighter/cover-freighter.png",
+              "alt": "Freighter cover",
+              "caption": "",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4UlEQVR4nDWRW0hTcQDG/2fn7Oysk2tLZJ7dTrtYW4dMukttGSFSqGHYDaIHJSpahfRSL2IRXcBFCPbU3oKiB8OCLogRtGCPBZHgg0bYTKIwH6Ko8Yv/oofv8fvx+/jEj3GYuQmlE3BnFww40J38TjYxT6s9yxZ7ik3RN7SEyqwJjtMQGEIz2nCJOEIEERLwYQRKp2C0DU5nYF9qkWyiQuuqGTbb73BCk1j+YTxmJ261CUUW/+fnE/h0G0p5GNkJ+cwfelKL5BJzbLWnSYceUR+4iMfMoesJVCWMIsIIYSFEI6I6CZUivDwDw1kJ+M1RZ4n29Eea7VdYDTfwrziCYWxA15OoahSXsFBkWYbXsHAXJs5CQRqkf3GpFwbzSxzqKnOy/yEHeq4SDu1AFVE0NVazcAlpYiF4C5/vw9MBuLUbLrRUOeZ8Y3tTmXikSMQ6R/3KLkzvOtyqjarFcCmRfxBFAqZhYQyenYfRThjaBofT86y3JwgFC9TV9WOY7SwzHDyeJG7NRpUWcooSQTAHlcfwfBCKB+Fyrkrv2lnS0TGs4HX8/j6W+zrwepsx9BS6bqNpsVokRPAVvryAUgHuHYdre6rsd96TiT+gMXgFf6APn28vprkR01hds5BvyDnS5i8O8CzWp5UYkwAAAABJRU5ErkJggg=="
+            }
           ]
         },
         {
           "id": "freighter-approach",
           "title": "Approach",
           "description": "## Context\nSmart contracts launched on Stellar in 2024, unlocking DeFi, NFTs, and more. We needed a mobile wallet simple enough for newcomers but powerful enough for what the network could do now.\n\n## Principles\n- Followed Stellar Design System v3\n- Bias toward shipping fast and refining after launch\n\n## Audience\nFirst-time crypto users, DeFi-curious people who weren't yet native to the space, remittance senders, and English-speaking users outside the US.",
-          "footnotes": "Utilizing our design system for React Native mobile development.",
+          "footnotes": "",
           "mockups": [
-            { "id": "freighter-approach-1", "type": "frame", "src": "/videos/freighter/website.png", "alt": "Freighter website", "caption": "" }
+            {
+              "id": "freighter-approach-1",
+              "type": "frame",
+              "src": "/videos/freighter/website.png",
+              "alt": "Freighter website",
+              "caption": "",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABbklEQVR4nI2RwUoCURSGbzKOxFBcmbHGGk1qnGsNNYTSbKyNQi/gwo29QVvduAicCFoJSWQthATduqgewV5A6CHat/3jnpwwsnDxce+c8///OTPDFCUCdzePxvkdliIMhmFM0aeEzwY0TYMQAqVSCZxzgnEeRzJpQTiHkPdoVANjDKq6AlVdBWOxKYx6prkBy0qDc51gX5c4pUtBuXyKfn+AZvMCnZt79HoDBME1Op1bFIsnpAnNMwE6Eol1MKag1QowmbxhNHpGEFxhOBySeTx+Rb3e+DuAcx1xbiC2rOKy/gS8Ay+PHzS1VjtDoeDTkFn9jwDLShGmmYST3Uchfwzv4Ai2nYUQOWQyGeqFul8BQgjCdffgODa2d7aQSm+SUSLrEqmRoYnE2vwAIQQZLMuiD6soCp22bX/3/w1wXZf+uTy73Qe0220yh7UFNsjBNE14nodKpYJqtQrf96m20AYSub58jXBtOVnW5gV8AoZQBtGpuqbAAAAAAElFTkSuQmCC"
+            }
           ]
         },
         {
@@ -34,10 +48,37 @@
           "description": "The home screen organizes holdings into Tokens, Positions, and Collectibles. Balance sits at the top. Below, tabs let users navigate without overwhelming the default view.\n\nWallets are managed from a dedicated sheet. Switch between accounts, create new ones, or import existing keys. Primary actions are minimal: Send, Swap, Copy. Everything else lives a tap away.",
           "footnotes": "",
           "mockups": [
-            { "id": "freighter-4", "type": "mobile", "src": "/videos/freighter/Tokens.png", "alt": "Tokens", "caption": "Tokens" },
-            { "id": "freighter-4b", "type": "mobile", "src": "/videos/freighter/Positions.png", "alt": "Positions", "caption": "Positions" },
-            { "id": "freighter-4c", "type": "mobile", "src": "/videos/freighter/Collectibles.png", "alt": "Collectibles", "caption": "Collectibles" },
-            { "id": "freighter-4d", "type": "mobile", "src": "/videos/freighter/wallets.mp4", "alt": "Wallets", "caption": "Wallets" }
+            {
+              "id": "freighter-4",
+              "type": "mobile",
+              "src": "/videos/freighter/Tokens.png",
+              "alt": "Tokens",
+              "caption": "Tokens",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABa0lEQVR4nD2Rv0sCYRjH38k4usRM8x1eTHAQusFFQuL0LrrTy06w4hRaQpfC1MHIAhcDVwOh/8B/wKGtJaK1oaaCoLWtqSm8bzwv2fDwfd/3+/z48LxMCPHJOQfn3J+rEIL0i5lWDolEgi7/kU6noWkaWHwt7gcCAUSjUSSTSdBZVVUIIXymLCjo9/sYj8eYTCaYTqfodDpQFhWwUCiEbreL0egag8GVTGg2T6GqQbBC0YGu51Au70HXDeRzJhynhIP9KljRtlCwbZjmFrLZLCzLgq7rMtjRcQulXRfBpSWsRCIShuiJmN3cvqBx0oZtbRMhwsth5A0D3mENDP6PpK3XGzKbADOZDDzPA7t/eMNZ7xKGkZcLIJPmebUq2PP7N1rtLkzTlLOoLXXYqbhgd49POO9dyAcyaVOpVAobm1kwTVufOY4jW5Ix19hqbMZon0RJ6rquVAqqZpzzVzI9z/OHwyEqlYr/90sfvz2XwUERdj3pAAAAAElFTkSuQmCC"
+            },
+            {
+              "id": "freighter-4b",
+              "type": "mobile",
+              "src": "/videos/freighter/Positions.png",
+              "alt": "Positions",
+              "caption": "Positions",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABgklEQVR4nD3RTWsTURTG8UtrhhIm9+YOTWbmzuTOS6ZNTcIwxrRWLIhVCtUUcSN0Ka2IO3WnuCruFL+GX6DfQUHcCy7cunPnQuj8ZSK6eg784DkHjlBK/ZBSIqWs/6VSqsmfIoj7zYB0l4BUCt/36fV6iCQK6tTGuFKhpMuKEKy12w3WIrp6QDq7iekpumHC4aMX7G7P0J6HKOZ7THb2sHGIsRlHxydsz2f4foAYZgnjrRGhMUQm5PJmQRTHy71isVhwa38fz+tSbJTcvveEKAowxiDyfEhVVVhrsUnCzrXr5Hn+F61NGI8n/88vimJZHzS1AztgtFkscc1xcFotRLvDqtttcEi+NSW2KX2T45ucu/2A4zJApNmcavclw/IBaXGH16fP+XV+n4/PriCG6Q1Gk8dEoyPKjUO+vXoPv5/y6d0BIgwHF8aW6DCjyuecn53x+csH3rx9eCG01mitWF/XWDvA6bisrF6i5XQQUsqvzYvSNK2n0yl5ltWe56G1/v4HvjSkJ42KACEAAAAASUVORK5CYII="
+            },
+            {
+              "id": "freighter-4c",
+              "type": "mobile",
+              "src": "/videos/freighter/Collectibles.png",
+              "alt": "Collectibles",
+              "caption": "Collectibles",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABeElEQVR4nD2RPWsUYRSFr2xWk2Xe907eyY47yWRmhx1ks04+BEnEjcI2wYCmsFHBD7C3sFhECMFGbMSU+QGBNNqIELBL7x8QQbS0E2vJPDLjanE43PPAvXCuqOoPVcUYUxpjap/MP6WzEOJ5Xq0KVh6GIWG7jcRxXPb7F+rAa7VQ62Gdz6wLSkmSlF4vI4o6qO/TalnmzkwTO4sspksM1h/S7W8S50O2t27z8emI94+WkDy7TrE2JhvcJe/d4PjJC/g64mS8Wt3sk2Qj2ourbOQjvr85gN/vOD58gETzEWmW0YkXiM5HXLm8wvq1q+TLKbKz/ZpnO295ufacYThARGhIg7PNaWR884gPt074lO1xzxWIbRLM+lhV5NXGLl829/kVbfFY5hDfw1lbFyLD+YvciS9xfyqk8GZoGoP+gzLTRM41EGuYUv0PaqhWT53q31WTfic6Fd/3qb4QBAFJkuCco8oqiTHmcwW73W5ZFAVpmpYVMMZ8+wMQdaRMFFJPHwAAAABJRU5ErkJggg=="
+            },
+            {
+              "id": "freighter-4d",
+              "type": "mobile",
+              "src": "/videos/freighter/wallets.mp4",
+              "alt": "Wallets",
+              "caption": "Wallets"
+            }
           ]
         },
         {
@@ -46,8 +87,21 @@
           "description": "Transaction history on Stellar can get noisy. Trustline changes, path payments, claimable balances. Most of it means nothing to someone who just wants to know \"did my payment go through?\"\n\nWe wrote human-readable summaries for each operation type. \"Swapped XLM to USDC\" instead of raw operation data. Tapping a transaction expands full details: status, rate, fee, XDR. Progressive disclosure. Clarity first, completeness on request.",
           "footnotes": "",
           "mockups": [
-            { "id": "freighter-5", "type": "mobile", "src": "/videos/freighter/Past Transactions.png", "alt": "Past Transactions", "caption": "Past Transactions" },
-            { "id": "freighter-5b", "type": "mobile", "src": "/videos/freighter/history-details.mp4", "alt": "Transaction Details", "caption": "Transaction Details" }
+            {
+              "id": "freighter-5",
+              "type": "mobile",
+              "src": "/videos/freighter/Past Transactions.png",
+              "alt": "Past Transactions",
+              "caption": "Past Transactions",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABeElEQVR4nDWQTUsCYRDHn4OnB+opW9JYQkiSklpdlbXStK1W23QRJVOxF+lY0MulzxBB4KEuEQS9HKNDX6CP0FHq0FWC6BYRuP94BjoMw/Cb+c9/himK0hVCQAjh/mfOOTjnX6xQLCIcDstCAopRVYWqqmC/P9/uwf4+hn0+AoqioFavwXEcl7VvHlAsVVCwbfj9fvQJgWgqgehMAmzv9B6FShXbm00YhkHT1WoVtm2DPT6/YL25gYimkaSE6cUFJFNzYJ8fXRwdHZIpCaWxlDlPDazz9oqtVoukpKzH40E2kyUP7Gz3CrVKExF9miTHJseRWc0huZAGi07o1CnvktA75CXXMtjl1R2KTgmWZSEUCmHAO4hYOolJfQqsff2EzdYO7QwEAjRprljIWktg57dPWKvV4TgFgvIJ8bQBfTYOdnxy0TOX88jnLHqhPCU2a0A3Ej1GRSyGYDAIIfrp1hH/CGUmhOhomoZyuew2Gg2YpulKp5zz9z/gi7vXra0JJgAAAABJRU5ErkJggg=="
+            },
+            {
+              "id": "freighter-5b",
+              "type": "mobile",
+              "src": "/videos/freighter/history-details.mp4",
+              "alt": "Transaction Details",
+              "caption": "Transaction Details"
+            }
           ]
         },
         {
@@ -56,9 +110,28 @@
           "description": "Discover is the gateway to Stellar ecosystem apps. No other Stellar wallet has a dedicated screen for this. We wanted Freighter to feel less like a vault and more like a portal.\n\nApps are organized into DeFi, Learn, and Trending categories. Each opens in an in-app browser with WalletConnect handling the connection. You never leave Freighter.\n\nFor developers, Discover is distribution. For users, it's access.",
           "footnotes": "No other Stellar wallet has this. We're betting on the ecosystem growing into it.",
           "mockups": [
-            { "id": "freighter-6", "type": "mobile", "src": "/videos/freighter/discover-1.mp4", "alt": "Gateway to Stellar", "caption": "Gateway to Stellar" },
-            { "id": "freighter-6b", "type": "mobile", "src": "/videos/freighter/discover-2.mp4", "alt": "Ecosystem Apps", "caption": "Ecosystem Apps" },
-            { "id": "freighter-6c", "type": "mobile", "src": "/videos/freighter/in-app-browser.png", "alt": "In-app Browser", "caption": "In-app Browser" }
+            {
+              "id": "freighter-6",
+              "type": "mobile",
+              "src": "/videos/freighter/discover-1.mp4",
+              "alt": "Gateway to Stellar",
+              "caption": "Gateway to Stellar"
+            },
+            {
+              "id": "freighter-6b",
+              "type": "mobile",
+              "src": "/videos/freighter/discover-2.mp4",
+              "alt": "Ecosystem Apps",
+              "caption": "Ecosystem Apps"
+            },
+            {
+              "id": "freighter-6c",
+              "type": "mobile",
+              "src": "/videos/freighter/in-app-browser.png",
+              "alt": "In-app Browser",
+              "caption": "In-app Browser",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABs0lEQVR4nB2PT2hScQDHf9ApPNVB6I8XX7jQlQyzuabD9/aH1Ezf9D2tvamV5rCt1mBzW382xWBOSoJCajcjKmKHOgQ7rGt07hJ06BR0q44Fvk88Dx++8P3yhe9XBKbGf3p9I3jPnDOD8lRfXe4hXO6hX2K+sYqaniGWSLG4vM75mMpJjw+rIGLRlOlwujhw8FCfw/ajHHFIFqbIr1ZotNo0th6x9fAJhVIFVb/MRCSBSGg68USa6UyB0twCY2MyRq6E3xdCfPz0mWe778gtVKi1t9GuzdJ+sUM8oyP+mLD/7QfTpRmMpTK3W3epdupcqc4jZC3GnY06m7UmYSViXeFCXCcYmkDkymXS2Vmiqo6RKzI6Gub63C2Gh2VE980uT1+9ZW2jyWZzG9XI8Li7QySZQvzuwZe//3j9co/i8iJL7XtUOzWK6zcRF7NZ6g9a/a8razXOjoSZnIwTCI4jbtxf4f2HfTrPu2iXCgSCMrpxtT9OnDrt7knSCcKyQj5fIBKN4pQkBge9PXHccQxJcjIw4MLv9xMKhVAUBbvdjhBCfLXZbJZpappGMpk0PR6PFXz/D5lM5aSjVJSmAAAAAElFTkSuQmCC"
+            }
           ]
         },
         {
@@ -67,7 +140,13 @@
           "description": "Transactions cover everything from sending and swapping to signing dApp requests and adding trustlines. Each flow validates at every step so errors are caught early, not at final submission.\n\nSecurity is layered throughout. Blockaid runs real-time simulation on every transaction, surfacing risk levels from suspicious to malicious with specific messaging. Flagged addresses and tokens are called out before interaction. The review screen shows simulated results before signing, with full details available on expansion.\n\nThe pattern across all transaction flows: human-readable first, raw data for those who want it.",
           "footnotes": "Blockaid simulates what will happen before you sign, surfacing risks before they cost anything.",
           "mockups": [
-            { "id": "freighter-10", "type": "mobile", "src": "/videos/freighter/review-transactions.mp4", "alt": "Transaction review", "caption": "Review" }
+            {
+              "id": "freighter-10",
+              "type": "mobile",
+              "src": "/videos/freighter/review-transactions.mp4",
+              "alt": "Transaction review",
+              "caption": "Review"
+            }
           ]
         },
         {
@@ -91,7 +170,14 @@
           "description": "Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.\n\nI designed and built the entire product solo — brand, frontend, backend, infrastructure. One person, end to end. It's live at snack.xyz.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-1", "type": "frame", "src": "/videos/snack/cover-snack.png", "alt": "Snack cover", "caption": "" }
+            {
+              "id": "snack-1",
+              "type": "frame",
+              "src": "/videos/snack/cover-snack.png",
+              "alt": "Snack cover",
+              "caption": "",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4UlEQVR4nC2QXUjTARTFj5gZEQwSWuyp1GHFMjAsXJaxB6WPfzWXlZDkQxmFBVJZPSiGFulDUVk9WKgoCMUqM4y0YgzFcmxUzo9olFCLFWWLjCiLX2zu4XC4D/ee37kyJJwS5RK1Eu2ZwrfXQrRxA3Q4oaWQ35fW8ON8OtGGVL7Wii81YqpORBuEmuYlc1aiXuL6XOHOTmbYuZjR3RZGtpsIFIkXW0TQJcb3iDfl4t1BEa4Sn04JzbRXM1G1Ce+O5QwamfiLrTw2p9ARo5Hokrgr0WcWA6uFv0gES8TbAyJyUoiPPeC9AB2VfKvdysDKhbRI3JRok+iUuC3RI/EkQwytE8FiMXkoUQFfM3Sf5t+1Ml5uTo8n3pCYcBUynJdN0Mgn4FjBwxThyRLP14uxXSJyQtBqR7RV8LPJ4HVpBt1SHD0mtxSf+0xJeKypDOYswO9YxHjJUj5U2vhz2YCndSh8NIdRl5l+i7iV6BxDvifxaL7wLEvimT2NkW1WQmU5hI84mD5XCl01EOhEQ3bFl+9o9kDMezWL69toYmznEkL7snh/eBWR47lEzxTw96oTHhyDUCu6n/hyTL1zhNcmXhlpTFbY+Fxt53t9AdON+fy6mMdMcy60rgW3A4b3w9QV/gMr5UBTR1qcNwAAAABJRU5ErkJggg=="
+            }
           ]
         },
         {
@@ -100,7 +186,13 @@
           "description": "## Context\nLast year I spent $30,000 out of pocket on an agency MVP, and it became too costly to continue. Then Claude Code came out and I rebuilt everything and more from scratch within a month.\n\n## Principles\n- Clean and unopinionated design\n- A minimum expandable product\n- Create a list in less than 30 seconds\n\n## Audience\nTerminally online people, tab hoarders, and creators and curators.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-approach-1", "type": "frame", "src": "/videos/snack/nav.mp4", "alt": "Your Lists", "caption": "" }
+            {
+              "id": "snack-approach-1",
+              "type": "frame",
+              "src": "/videos/snack/nav.mp4",
+              "alt": "Your Lists",
+              "caption": ""
+            }
           ]
         },
         {
@@ -109,7 +201,13 @@
           "description": "Creating a list takes under thirty seconds. Set an emoji, add a title, paste your links.\n\nThe fastest flow is clipboard-first: copy a URL, paste it directly. Snack scrapes the metadata automatically (title, description, favicon) so you don't format anything. The goal was muscle memory over form-filling.\n\nOne action, one result. No friction between \"I found something good\" and \"it's in my list.\"",
           "footnotes": "Clipboard-first means zero learning curve.",
           "mockups": [
-            { "id": "snack-4", "type": "frame", "src": "/videos/snack/create-list.mp4", "alt": "Creating a list", "caption": "Creating a list" }
+            {
+              "id": "snack-4",
+              "type": "frame",
+              "src": "/videos/snack/create-list.mp4",
+              "alt": "Creating a list",
+              "caption": "Creating a list"
+            }
           ]
         },
         {
@@ -118,7 +216,13 @@
           "description": "There's no separate edit mode. If you're the creator, the list is always editable. Click the emoji to change it. Click the title to rename. Drag to reorder. Paste from your clipboard to add one link or twenty.\n\nThis collapses the gap between viewing and editing to zero. You're always in the right context.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-5", "type": "frame", "src": "/videos/snack/edit-list.mp4", "alt": "Editing a list", "caption": "Editing a list" }
+            {
+              "id": "snack-5",
+              "type": "frame",
+              "src": "/videos/snack/edit-list.mp4",
+              "alt": "Editing a list",
+              "caption": "Editing a list"
+            }
           ]
         },
         {
@@ -127,7 +231,13 @@
           "description": "Managing lists is where the product comes together. Your dashboard shows all your lists with stats: total links, total views, and saves by others.\n\nSharing is a copy-link button. Dynamic OG images are generated automatically based on the emoji, title, and username. Every list looks good when shared without any manual setup.",
           "footnotes": "",
           "mockups": [
-            { "id": "snack-6", "type": "frame", "src": "/videos/snack/menu.mp4", "alt": "Managing a list", "caption": "Managing a list" }
+            {
+              "id": "snack-6",
+              "type": "frame",
+              "src": "/videos/snack/menu.mp4",
+              "alt": "Managing a list",
+              "caption": "Managing a list"
+            }
           ]
         },
         {
@@ -151,7 +261,14 @@
           "description": "Stellar Laboratory is the preferred developer sandbox for the Stellar network. The core tool for building transactions, testing endpoints, and exploring the ledger.\n\nThe original Lab was functional but outdated. Soroban (smart contracts) and new network features required a full rebuild. My job was to bring the visual language in line with the rest of Stellar's products without alienating developers who'd built muscle memory around the existing flow.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-1", "type": "frame", "src": "/videos/lab/cover-laboratory.png", "alt": "Laboratory cover", "caption": "" }
+            {
+              "id": "lab-1",
+              "type": "frame",
+              "src": "/videos/lab/cover-laboratory.png",
+              "alt": "Laboratory cover",
+              "caption": "",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAABYlAAAWJQFJUiTwAAABa0lEQVR4nG2SSytEARiG31L2NlbkL8hSlI2F/AEbC6wspLEQKcklshCTBeUuG0QpZXJpiiKXQbnl5DRnDMZgGJfRhB4d56hJFt/yed73rU8tHmivB28bLEzC0SZEDLgz4MGExyDEg/BiwZsF7+59XgMR0EA3jPbC/DjsrEHoFKKmC5vw5ApeLUjYcNCBYyewvQiyU1dmYc8P1vGf9H8En2E4W4eaKgtl+1BgA062IXQGNwZEDQd8TBHY9ZNh+AjD7hIUF+8gDSJ1ovA5XBsOHHEFX3H4iAHPwBuQcBoM9yTIyV1F6kFqRvKgK1fwC9vV45dO8u05HPhhzJuktOQQpU+5cAtSHVIVSk2/N539p1swPQINnij5hQGUsYg0gdSP1IXUhFSDVIFs+Ge76SQG/DDUm6S6MkRB0T7KWkZpc0jjSF6kDqRGpFqnQep2+wdmxqC1MUZ52QV5+bso04c0jTSC1OcK7AYepGq+AdXZvIMYwIzjAAAAAElFTkSuQmCC"
+            }
           ]
         },
         {
@@ -160,7 +277,14 @@
           "description": "## Context\nSoroban and new network features were shipping fast. The existing Lab couldn't keep up. We rebuilt it from the ground up.\n\n## Principles\n- First stress test of SDS v3\n- Familiar flows on a new foundation\n- Supporting every network feature\n\n## Audience\nStellar developers, protocol-curious builders, and hackathon teams.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-approach-1", "type": "frame", "src": "/videos/lab/build.png", "alt": "Build Transaction", "caption": "" }
+            {
+              "id": "lab-approach-1",
+              "type": "frame",
+              "src": "/videos/lab/build.png",
+              "alt": "Build Transaction",
+              "caption": "",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABhklEQVR4nGVRzUoCYRT9tq16hfZBT1DQK/QStQxcuShCGYwWbaYfhgpciRBuGqZgjMZRg7F0FGVGIUcXauBMYLhzd+Je+QarxeF+zNxz7jn3CtM0kUgkUK28IggG8H2fMR6P/yEIAti2jWw2CyHEErqu84/5fM5V0zQoioJmsxmLrYpGUcRYLBbMEeQgl8shir64gQRJhKCqaoyrSy12QgLEIa6wLAv9/gfCcIrRaMT2kskkW12d3uv2YrKMQS5FOn2KjHKORr2NVquDlxcTrltnUWqQ8DyPIxJI0HEcrsIwHnF8lGLycDDEwf4htja3kTo5g+e1f4kQqVyuxm8W0HUduv6A2feMY6yvbfB2d3f24LouN9p2JSaRffmmSIKyLJcY8RkbDQe19ypPJ6LcvrTe63aZXHfdpQOZiwSo8fbmDulUBoVCgYWpFovPbJ3ckgPDMHCtXuCtVoOQtuQUuoR8r0KecBqG+JxM4FgW/E4HgiZIAYJhPCGfv+dvEnTvv7BKJY7xA+9TPWyP0WGiAAAAAElFTkSuQmCC"
+            }
           ]
         },
         {
@@ -169,7 +293,14 @@
           "description": "The home screen serves as the navigation hub. Every feature of the Lab is reachable from here: transactions, accounts, endpoints, contracts, and tools.\n\nThe layout prioritizes discoverability. New users can scan what's available. Returning users jump straight to their workflow. The information architecture mirrors the developer mental model: what do I have, what do I want to build, where do I look things up.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-1b", "type": "frame", "src": "/videos/lab/home.png", "alt": "Home and Navigation", "caption": "Home and Navigation" }
+            {
+              "id": "lab-1b",
+              "type": "frame",
+              "src": "/videos/lab/home.png",
+              "alt": "Home and Navigation",
+              "caption": "Home and Navigation",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABn0lEQVR4nH1RTUsCURR9bdq0bRstKgiKsG9o2deiwP5CbYr2LaRF0E/wF1RQtHFlUkkhooKKVAa9lJFUGs2PZqZG1IUFJ+6VJxLRg8O8uR/n3XOPkPIJxydHyGQysEwThmH8ic/PD/5qmoZIOAwhRBu+i1s8JtNIp7LI5V5h23YH1UoV5XKFm0ulEoPizWYTrVaLIa4uryFlCuVyFcVC8ReBibfiO0zThpbOI/dSRK3W4Jyu60wootEoSAYF1Qs0KrE7nRsYHR3D1OQ0hoaGMT4+AbfbDTpUQ7UimUwikUh0GtWI2WwWDocDLtc+9vZcWFxcxszMLHZ2djmvphTdIysCNc331ze2NrexurIGKZ+h6wVYVnuZ/xKYpsV3OqKnvW0pZUdiN8RfBKRfxdS2bbuGeqPeiSsZTNCtKfWcxtnpOdtHrlxd3vDr+Vwe93cPsEwLmpaB1+tru0BJWiT9NBp1xGIJDA6McBM19/X2M2EoFMH83AIM4x3BYAQrS+tMJMgBKlbjE5nH42EXKHdwcIh4LM5xv9/PdWR9IBBgCT/dFVhgjwo3vAAAAABJRU5ErkJggg=="
+            }
           ]
         },
         {
@@ -178,7 +309,14 @@
           "description": "Network selection is the first decision a developer makes. Testnet for experimentation, Mainnet for production, Futurenet for bleeding-edge features.\n\nThe network selector persists across the entire Lab. Switching networks updates all saved items, endpoints, and account states. No ambiguity about which environment you're working in.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-2", "type": "frame", "src": "/videos/lab/select-network.png", "alt": "Select network", "caption": "Choose a network" }
+            {
+              "id": "lab-2",
+              "type": "frame",
+              "src": "/videos/lab/select-network.png",
+              "alt": "Select network",
+              "caption": "Choose a network",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABVklEQVR4nG1Su2qEUBC9rbWdpV9hkYDpLC1lISALKWwtbS1zu41siiwuqYS8QNLJ5gHWks4NhI24KTb4EbOcSWYxkOJwHzPnzJl7R+V5To7j0O3NHTXNGzVNQ3Vd8yooioKQh/vL+ZzCMCSl1A+yLKO+76nrOk5O05QTQMAZsdnFjJIk4X3btnz/0bb0td2S0lozaRgGDkZRxI4gglhZlnS1WBwEkQMgBmdKrO2+d7T53DDRMAyybZssy+I97uAA4tIS4uCq6fSMjo9O6OH+kZ6fXlk5jmN2JUCbEMAKgaqqmAx3arm8psnklFarF1qv35nsui5XDYKAfN9nMgAxuIUAyFiV1uesJm8gAkLCGZUhBlHsQUQbvwKabcsLg4SqUkGqjVsD+SCAygAE0B+Sx+Sx3f+gZEjkf+Xr5CyDNcb4ngcJIjI0+CrTNP88nFgGpB3P83gO9kHK9FOXD+itAAAAAElFTkSuQmCC"
+            }
           ]
         },
         {
@@ -187,7 +325,14 @@
           "description": "Connecting a wallet lets developers sign transactions directly from the Lab using their browser wallet. This bridges the gap between building a transaction and submitting it.\n\nSupported wallets include Freighter and other Stellar-compatible extensions. Once connected, the wallet's public key is available for prefilling source accounts and signing.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-2b", "type": "frame", "src": "/videos/lab/connect-wallet.png", "alt": "Connect wallet", "caption": "Connect Wallet" }
+            {
+              "id": "lab-2b",
+              "type": "frame",
+              "src": "/videos/lab/connect-wallet.png",
+              "alt": "Connect wallet",
+              "caption": "Connect Wallet",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABqElEQVR4nE1SPWvCUBTN4lCLEbX5IEHEkFYRf42z/8NB/ECsg5OLk1AHJ/s/XNqpgiaNJu3qIGLF2ihyyr32SR+cR97Nvefce96TDMNAPB6HYZiwbRuFQgH5fB65XI5B38Vi8RrLZDJQVRWSJF1gGAYXplIpVKtVBEHA2Gw2WK/X8DwPk8kEi8UCp9MJtVoNd7KMB8vCvW1D0jUdREIEzWYTrutiPp9jtVrhfD7jfRlgsVzicDiAVqvVQiwW4xqCRFs2m2WCRqMBx3Ewm80Q+D5+whDP4zGrC4JKpcKt30SjFwLlTkUqqUCWk6jX6vADH9Pp9K/oG68vDlzHw36/x2634zFFB6ZpUgcmNFVD7FZGp9NhFVILwyOOYYi39w84roev7ZbHIgLqlsxkAk3TkE6nkUgk0O12mYDMEivwP9lMihHIJ8qlGibQ9YuJRFQulzEajdDv9zEYDDAcPqFRb6HdfkSv1+N4qVTiDq4jkIGWZbGR4k2QAiURNF1jcnEmQaHOBLSJmxAklCDONCvh/5n+i/h1BJFEKpFIBIqiMEhd3LkAxcRN/AL1YHMvnE72IwAAAABJRU5ErkJggg=="
+            }
           ]
         },
         {
@@ -196,7 +341,14 @@
           "description": "XDR is Stellar's binary encoding format. Every transaction, operation, and result is encoded in it. The View XDR tool converts XDR to human-readable JSON.\n\nPaste an XDR string, see the decoded structure. This is essential for debugging: when a transaction fails or behaves unexpectedly, XDR decoding is the first place developers go.",
           "footnotes": "Most developers hit View XDR before anything else when debugging.",
           "mockups": [
-            { "id": "lab-3", "type": "frame", "src": "/videos/lab/xdr.png", "alt": "View XDR", "caption": "Convert XDR to JSON" }
+            {
+              "id": "lab-3",
+              "type": "frame",
+              "src": "/videos/lab/xdr.png",
+              "alt": "View XDR",
+              "caption": "Convert XDR to JSON",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeElEQVR4nHVSPU/CUBR9Gw4MnbRLmfgLLEJi3CAORF1BwVgMMTj4A0AWcOIjGjBxAL9oZCFR04CEAUYSDRBgKW6sXVmPua95DYQwnN7b9t7zzrn3MU3T4Pf78fnxhelkim63i9FotBGNRgO5XA6MMQvl8gNmsz/M53NekMlkeAG9G4axEYvFAqZpgp2Gz3F0GIKud/D7M4CqqnA4tuByueB2u3lUFAWyLK9AkiSUSiUwktTr9bgKYqaPhPp7HS/PbxytVhv9fp/bo7ics2QyCU2r2RaomWxQJHvFQhH5fAHNpm43L4NRYaVSsT3TUC1SDYPhcKV4eZidtqWKUaMA/RDyNm1BkD3e3eNb11cJSMFtNot9nw/RSBSxi0skrq55FLmYEeG1VrMIaB2C4Klahex0wuPZRejkzG5UY/E1ArLOt0B+J+MxB7Hueb04DgaRvknzAdK9EFgjoAeRiAtCeSQchrKzjUDggJ9MKuLxBI+pVJo3EzER/ANSXfqYkILZAgAAAABJRU5ErkJggg=="
+            }
           ]
         },
         {
@@ -205,7 +357,13 @@
           "description": "Creating an account on Stellar means generating a keypair, then funding it. On Testnet and Futurenet, Friendbot handles funding with 10,000 test XLM.\n\nThe new flow keeps everything together. Generate, optionally save with a name, fund with one click. Saved keypairs display the account's XLM balance, last saved date, and quick actions. Account management as a proper dashboard rather than disconnected utilities.",
           "footnotes": "Friendbot is Stellar's faucet — a bot that gives you free test tokens.",
           "mockups": [
-            { "id": "lab-4", "type": "frame", "src": "/videos/lab/account.mp4", "alt": "Account", "caption": "Create a wallet" }
+            {
+              "id": "lab-4",
+              "type": "frame",
+              "src": "/videos/lab/account.mp4",
+              "alt": "Account",
+              "caption": "Create a wallet"
+            }
           ]
         },
         {
@@ -214,7 +372,13 @@
           "description": "The transaction builder is the heart of the Lab. Source account, sequence number, base fee, memo, time bounds, then operations. Every field has validation, helper text, and links to docs.\n\nSigning supports multiple methods: secret key, browser wallet, hardware wallet, or pre-computed signature. We show all four at once. It looks dense because it is dense, but it matches how developers actually work with multi-sig.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-5", "type": "frame", "src": "/videos/lab/transaction.mp4", "alt": "Transactions", "caption": "Build a transaction" }
+            {
+              "id": "lab-5",
+              "type": "frame",
+              "src": "/videos/lab/transaction.mp4",
+              "alt": "Transactions",
+              "caption": "Build a transaction"
+            }
           ]
         },
         {
@@ -223,7 +387,14 @@
           "description": "Contract Explorer lets you learn about any Soroban smart contract. Paste a contract ID and get everything: creation date, creator, Wasm hash, source code, storage state, version history, and generated bindings for TypeScript, Rust, Python, Java.\n\nInvoke methods directly from the browser with type hints from the contract spec. The goal: make smart contracts feel as accessible as the rest of the Lab.",
           "footnotes": "",
           "mockups": [
-            { "id": "lab-7", "type": "frame", "src": "/videos/lab/contract-explorer.png", "alt": "Contract Explorer", "caption": "Learn about a smart contract" }
+            {
+              "id": "lab-7",
+              "type": "frame",
+              "src": "/videos/lab/contract-explorer.png",
+              "alt": "Contract Explorer",
+              "caption": "Learn about a smart contract",
+              "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmUlEQVR4nF2RzU7CUBCFr76FcaEbX0y3uvABWOMKNZFogqQoYg2gCIua2gax2qQBSyIpKEUNIHYh1EhYsfGYueRWocnp/Z3vzsxhhmEgFAqhUq7A8zw4joNqtcrns2q327AsC9lMBoyxiQzDgO/7GAz6wQVFUeC6Ll8/N5scSiII3SWNx2OMRiOwXC4Hx6kFB3PzE3I4HMZ2JIITSeJAXdc5UGRDDxCUpVIyLs4L6HTe8fryhuWlFSwsLPJMXlot9LqdqRIo8L+YLGextroOVb1Bvf6Mp0YTvv8F+fQMR4lj5PMF3h/LKnPROYEEjBlGCZqmwvM++CvpdJqnu7GxiUhkF7s7e0gkktiPxnAYS/BHRLkEYWIx2ehC0zToqgq7YvPGCn32P/k46wqjQNFdGuOHSSTjSZi3pSkHhChtslmUwQFkhwCY9xau1SJct4VGvRFIACiYrJckaeICdZs2hEVU/9Z2GFdFBVbZhF7SYFp3Qddt2+a2By5QAEFEXd1eDwWlgGjsAJeagodaFeVHG9/DIf6+H/6n+78tZE9RIgzJwgAAAABJRU5ErkJggg=="
+            }
           ]
         },
         {

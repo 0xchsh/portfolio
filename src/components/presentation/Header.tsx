@@ -31,7 +31,7 @@ export function Header({
   return (
     <header
       className={cn(
-        'flex items-start justify-between px-4 desktop:px-6 pt-4 desktop:pt-6 pb-3 bg-background/80 backdrop-blur-xl',
+        'flex items-start justify-between px-4 desktop:px-6 pt-4 desktop:pt-6 pb-3 bg-background/80 backdrop-blur-sm',
         className
       )}
     >

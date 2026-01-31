@@ -17,11 +17,37 @@ function MobileCarousel({
 }) {
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const pausedRef = useRef(false);
+
+  // Auto-advance every 4 seconds
+  useEffect(() => {
+    autoplayRef.current = setInterval(() => {
+      if (!pausedRef.current) {
+        setCurrentIndex((prev) =>
+          prev === mockups.length - 1 ? 0 : prev + 1
+        );
+      }
+    }, 4000);
+
+    return () => {
+      if (autoplayRef.current) clearInterval(autoplayRef.current);
+    };
+  }, [mockups.length, setCurrentIndex]);
+
+  const pauseAutoplay = useCallback(() => {
+    pausedRef.current = true;
+  }, []);
+
+  const resumeAutoplay = useCallback(() => {
+    pausedRef.current = false;
+  }, []);
 
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    pauseAutoplay();
     touchStartX.current = e.touches[0].clientX;
     touchEndX.current = e.touches[0].clientX;
-  }, []);
+  }, [pauseAutoplay]);
 
   const handleTouchMove = useCallback((e: React.TouchEvent) => {
     touchEndX.current = e.touches[0].clientX;
@@ -32,17 +58,18 @@ function MobileCarousel({
     const threshold = 50;
 
     if (delta > threshold) {
-      // Swipe left → next
       setCurrentIndex((prev) =>
         prev === mockups.length - 1 ? 0 : prev + 1
       );
     } else if (delta < -threshold) {
-      // Swipe right → prev
       setCurrentIndex((prev) =>
         prev === 0 ? mockups.length - 1 : prev - 1
       );
     }
-  }, [mockups.length, setCurrentIndex]);
+
+    // Resume autoplay after a brief delay
+    setTimeout(resumeAutoplay, 4000);
+  }, [mockups.length, setCurrentIndex, resumeAutoplay]);
 
   return (
     <div className="desktop:hidden">
@@ -140,8 +167,8 @@ export function MockupGrid({ mockups, className }: MockupGridProps) {
       {/* Desktop: grid layout */}
       <div
         className={cn(
-          'hidden desktop:flex flex-wrap justify-center',
-          allMobile && mobileCount <= 3 ? 'flex-nowrap gap-4' : allMobile ? 'gap-4 max-w-[520px] mx-auto' : 'gap-6'
+          'hidden desktop:flex flex-wrap justify-center gap-4',
+          allMobile && mobileCount >= 3 ? 'max-w-[520px] wide:max-w-none wide:flex-nowrap mx-auto wide:mx-0' : allMobile ? 'flex-nowrap' : 'gap-6'
         )}
       >
         {mockups.map((mockup) => (

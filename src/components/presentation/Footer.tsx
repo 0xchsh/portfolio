@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Squircle } from '@squircle-js/react';
 import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown, Globe, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -9,15 +9,94 @@ interface FooterProps {
   className?: string;
 }
 
+function PixelAlien({ size, className, style }: { size: number; className?: string; style?: React.CSSProperties }) {
+  return (
+    <svg
+      viewBox="0 0 150 125"
+      fill="currentColor"
+      width={size}
+      height={size * (125 / 150)}
+      className={className}
+      style={style}
+    >
+      <rect x="75" width="25" height="25" />
+      <rect x="50" width="25" height="25" />
+      <rect x="25" width="25" height="25" />
+      <rect x="100" width="25" height="25" />
+      <rect x="125" width="25" height="25" />
+      <rect x="25" y="25" width="25" height="25" />
+      <rect x="50" y="25" width="25" height="25" />
+      <rect x="100" y="25" width="25" height="25" />
+      <rect x="25" y="50" width="25" height="25" />
+      <rect x="50" y="50" width="25" height="25" />
+      <rect x="75" y="50" width="25" height="25" />
+      <rect x="100" y="50" width="25" height="25" />
+      <rect x="125" y="50" width="25" height="25" />
+      <rect y="75" width="25" height="25" />
+      <rect x="25" y="75" width="25" height="25" />
+      <rect x="50" y="75" width="25" height="25" />
+      <rect x="75" y="75" width="25" height="25" />
+      <rect x="100" y="75" width="25" height="25" />
+      <rect x="125" y="75" width="25" height="25" />
+      <rect x="25" y="100" width="25" height="25" />
+      <rect x="75" y="100" width="25" height="25" />
+      <rect x="125" y="100" width="25" height="25" />
+    </svg>
+  );
+}
+
+interface Particle {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  rotation: number;
+}
+
 export function Footer({ className }: FooterProps) {
   const [activeKeys, setActiveKeys] = useState<Set<string>>(new Set());
   const [copied, setCopied] = useState(false);
+  const [particles, setParticles] = useState<Particle[]>([]);
+  const particleIdRef = useRef(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const spawnParticle = useCallback(() => {
+    const id = particleIdRef.current++;
+    const x = (Math.random() - 0.5) * 80;
+    const y = -(Math.random() * 40 + 20);
+    const size = Math.random() * 16 + 16;
+    const rotation = (Math.random() - 0.5) * 60;
+
+    setParticles((prev) => [...prev, { id, x, y, size, rotation }]);
+
+    setTimeout(() => {
+      setParticles((prev) => prev.filter((p) => p.id !== id));
+    }, 1200);
+  }, []);
+
+  const handleClaudeEnter = useCallback(() => {
+    spawnParticle();
+    intervalRef.current = setInterval(spawnParticle, 300);
+  }, [spawnParticle]);
+
+  const handleClaudeLeave = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, []);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText('hi@ch.sh');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -57,7 +136,7 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer
       className={cn(
-        'desktop:sticky desktop:bottom-0 z-30 flex items-center justify-start desktop:justify-between desktop:px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm desktop:text-base max-w-[35rem] desktop:max-w-none mx-auto',
+        'desktop:sticky desktop:bottom-0 z-30 flex items-center justify-start desktop:justify-between desktop:px-8 pt-8 pb-8 bg-background text-muted-foreground text-sm desktop:text-base max-w-[35rem] desktop:max-w-full mx-auto desktop:mx-0',
         className
       )}
     >
@@ -132,7 +211,24 @@ export function Footer({ className }: FooterProps) {
           </div>
         </div>
 
-with <a href="https://github.com/0xchsh/portfolio" target="_blank" rel="noopener noreferrer" className="text-foreground border-b border-dotted border-muted-foreground/50 hover:text-muted-foreground transition-colors">Claude</a><span className="text-orange-500 -ml-0.5">*</span>
+with <span className="relative inline-block" onMouseEnter={handleClaudeEnter} onMouseLeave={handleClaudeLeave}>
+          {particles.map((p) => (
+            <PixelAlien
+              key={p.id}
+              size={p.size}
+              className="absolute pointer-events-none select-none text-foreground"
+              style={{
+                left: '50%',
+                bottom: '100%',
+                '--confetti-x': `${p.x}px`,
+                '--confetti-y': `${p.y}px`,
+                '--confetti-r': `${p.rotation}deg`,
+                animation: 'confetti-burst 1200ms ease-out forwards',
+              } as React.CSSProperties}
+            />
+          ))}
+          <a href="https://github.com/0xchsh/portfolio" target="_blank" rel="noopener noreferrer" className="text-foreground border-b border-dotted border-muted-foreground/50 hover:text-muted-foreground transition-colors">Claude</a>
+        </span><span className="text-orange-500 -ml-0.5">*</span>
       </div>
     </footer>
   );

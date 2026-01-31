@@ -4,6 +4,7 @@ export interface Mockup {
   src: string;
   alt: string;
   caption?: string;
+  blurDataURL?: string;
 }
 
 export interface Section {
