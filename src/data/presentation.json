@@ -167,8 +167,8 @@
         {
           "id": "snack-overview",
           "title": "Overview",
-          "description": "Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.\n\nI designed and built the entire product solo — brand, frontend, backend, infrastructure. One person, end to end. It's live at snack.xyz.",
-          "footnotes": "",
+          "description": "Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.\n\nThe core interaction is paste-to-save: drop a URL, and Snack scrapes the metadata instantly. No formatting, no organizing, just a running list you can share with one link. It's live at snack.xyz.",
+          "footnotes": "You can see the original [directory](https://noundation.framer.website/resources/pages) I built on Framer.",
           "mockups": [
             {
               "id": "snack-1",
@@ -355,7 +355,7 @@
           "id": "lab-account",
           "title": "Account",
           "description": "Creating an account on Stellar means generating a keypair, then funding it. On Testnet and Futurenet, Friendbot handles funding with 10,000 test XLM.\n\nThe new flow keeps everything together. Generate, optionally save with a name, fund with one click. Saved keypairs display the account's XLM balance, last saved date, and quick actions. Account management as a proper dashboard rather than disconnected utilities.",
-          "footnotes": "Friendbot is Stellar's faucet — a bot that gives you free test tokens.",
+          "footnotes": "Friendbot is Stellar's faucet, a bot that gives you free test tokens.",
           "mockups": [
             {
               "id": "lab-4",
