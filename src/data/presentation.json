@@ -22,8 +22,8 @@
         {
           "id": "freighter-approach",
           "title": "Approach",
-          "description": "## Context\nSmart contracts launched on Stellar in 2024, unlocking DeFi, NFTs, and more. We needed a mobile wallet simple enough for newcomers but powerful enough for what the network could do now.\n\n## Principles\nThe design followed Stellar Design System v3 with a bias toward shipping fast and refining after launch.\n\n## Audience\nFirst-time crypto users, DeFi-curious people who weren't yet native to the space, remittance senders, and English-speaking users outside the US.",
-          "footnotes": "SDS v3 was still wet paint. We were building the system while building on it.",
+          "description": "## Context\nSmart contracts launched on Stellar in 2024, unlocking DeFi, NFTs, and more. We needed a mobile wallet simple enough for newcomers but powerful enough for what the network could do now.\n\n## Principles\n- Followed Stellar Design System v3\n- Bias toward shipping fast and refining after launch\n\n## Audience\nFirst-time crypto users, DeFi-curious people who weren't yet native to the space, remittance senders, and English-speaking users outside the US.",
+          "footnotes": "Utilizing our design system for React Native mobile development.",
           "mockups": [
             { "id": "freighter-approach-1", "type": "frame", "src": "/videos/freighter/website.png", "alt": "Freighter website", "caption": "" }
           ]
@@ -65,7 +65,7 @@
           "id": "freighter-transactions",
           "title": "Transactions",
           "description": "Transactions cover everything from sending and swapping to signing dApp requests and adding trustlines. Each flow validates at every step so errors are caught early, not at final submission.\n\nSecurity is layered throughout. Blockaid runs real-time simulation on every transaction, surfacing risk levels from suspicious to malicious with specific messaging. Flagged addresses and tokens are called out before interaction. The review screen shows simulated results before signing, with full details available on expansion.\n\nThe pattern across all transaction flows: human-readable first, raw data for those who want it.",
-          "footnotes": "Blockaid simulates what will happen before you sign. Think of it as a preview for your money.",
+          "footnotes": "Blockaid simulates what will happen before you sign, surfacing risks before they cost anything.",
           "mockups": [
             { "id": "freighter-10", "type": "mobile", "src": "/videos/freighter/review-transactions.mp4", "alt": "Transaction review", "caption": "Review" }
           ]
@@ -75,9 +75,7 @@
           "title": "Takeaways",
           "description": "Freighter Mobile launched at Meridian in September 2025. It's grown to 3K monthly active users with no traditional marketing.\n\nBuilding in phases felt safe, but a lot of that work only served the team. Ship to real hands sooner. Prioritize what benefits users, not the process.\n\nCrypto is already unfamiliar. Don't add friction to anxiety. Lean into patterns people trust. Familiar interactions make unfamiliar actions feel safe.",
           "footnotes": "Error states are first impressions",
-          "mockups": [
-            { "id": "freighter-13", "type": "frame", "src": "/videos/freighter/cover-freighter.png", "alt": "Freighter cover", "caption": "" }
-          ]
+          "mockups": []
         }
       ]
     },
@@ -99,7 +97,7 @@
         {
           "id": "snack-approach",
           "title": "Approach",
-          "description": "## Context\nLast year I spent $30,000 out of pocket on an agency MVP, and it became too costly to continue. Then Claude Code came out and I rebuilt everything and more from scratch within a month.\n\n## Principles\nThe design is clean and unopinionated. A minimum expandable product. The goal: create a list in less than 30 seconds.\n\n## Audience\nTerminally online people, tab hoarders, and creators and curators.",
+          "description": "## Context\nLast year I spent $30,000 out of pocket on an agency MVP, and it became too costly to continue. Then Claude Code came out and I rebuilt everything and more from scratch within a month.\n\n## Principles\n- Clean and unopinionated design\n- A minimum expandable product\n- Create a list in less than 30 seconds\n\n## Audience\nTerminally online people, tab hoarders, and creators and curators.",
           "footnotes": "",
           "mockups": [
             { "id": "snack-approach-1", "type": "frame", "src": "/videos/snack/nav.mp4", "alt": "Your Lists", "caption": "" }
@@ -109,7 +107,7 @@
           "id": "snack-create",
           "title": "Create",
           "description": "Creating a list takes under thirty seconds. Set an emoji, add a title, paste your links.\n\nThe fastest flow is clipboard-first: copy a URL, paste it directly. Snack scrapes the metadata automatically (title, description, favicon) so you don't format anything. The goal was muscle memory over form-filling.\n\nOne action, one result. No friction between \"I found something good\" and \"it's in my list.\"",
-          "footnotes": "The best interface is the one you've already used. Everyone knows Cmd+V.",
+          "footnotes": "Clipboard-first means zero learning curve.",
           "mockups": [
             { "id": "snack-4", "type": "frame", "src": "/videos/snack/create-list.mp4", "alt": "Creating a list", "caption": "Creating a list" }
           ]
@@ -136,10 +134,8 @@
           "id": "snack-takeaways",
           "title": "Takeaways",
           "description": "An agency took 6 months and $30K. I rebuilt it in a month, solo. The leverage from AI tooling is real, and it compounds.\n\nDistribution is still the hardest part. Doesn't matter how good the product is if no one sees it. Getting it into hands is the real work.\n\nA browser extension and mobile app are both in progress. Same approach: solo build, fast iteration.",
-          "footnotes": "Design, code, ship, repeat.",
-          "mockups": [
-            { "id": "snack-9", "type": "frame", "src": "/videos/snack/cover-snack.png", "alt": "Snack cover", "caption": "" }
-          ]
+          "footnotes": "The individual is now one to the nth power.",
+          "mockups": []
         }
       ]
     },
@@ -161,7 +157,7 @@
         {
           "id": "lab-approach",
           "title": "Approach",
-          "description": "## Context\nSoroban and new network features were shipping fast. The existing Lab couldn't keep up. We rebuilt it from the ground up.\n\n## Principles\nThe Lab became the first stress test of SDS v3. Familiar flows on a new foundation, supporting every network feature.\n\n## Audience\nStellar developers, protocol-curious builders, and hackathon teams.",
+          "description": "## Context\nSoroban and new network features were shipping fast. The existing Lab couldn't keep up. We rebuilt it from the ground up.\n\n## Principles\n- First stress test of SDS v3\n- Familiar flows on a new foundation\n- Supporting every network feature\n\n## Audience\nStellar developers, protocol-curious builders, and hackathon teams.",
           "footnotes": "",
           "mockups": [
             { "id": "lab-approach-1", "type": "frame", "src": "/videos/lab/build.png", "alt": "Build Transaction", "caption": "" }
@@ -198,7 +194,7 @@
           "id": "lab-view-xdr",
           "title": "View XDR",
           "description": "XDR is Stellar's binary encoding format. Every transaction, operation, and result is encoded in it. The View XDR tool converts XDR to human-readable JSON.\n\nPaste an XDR string, see the decoded structure. This is essential for debugging: when a transaction fails or behaves unexpectedly, XDR decoding is the first place developers go.",
-          "footnotes": "Think of XDR as a zip file for blockchain transactions. Useful, unreadable, needs a decoder.",
+          "footnotes": "Most developers hit View XDR before anything else when debugging.",
           "mockups": [
             { "id": "lab-3", "type": "frame", "src": "/videos/lab/xdr.png", "alt": "View XDR", "caption": "Convert XDR to JSON" }
           ]
@@ -235,9 +231,7 @@
           "title": "Takeaways",
           "description": "Since relaunch: 21K monthly active users with sessions averaging nearly 8 minutes. No drop-off from the old Lab. Devs made the switch without friction.\n\nYou can't design developer tools without using them. I had to dogfood Lab constantly. If I didn't feel the friction myself, I'd have missed it entirely.\n\nThe old Lab had rough edges but devs knew how it worked. We kept the patterns they relied on. Familiar doesn't mean outdated, it means trusted.",
           "footnotes": "Respect users' muscle memory",
-          "mockups": [
-            { "id": "lab-9", "type": "frame", "src": "/videos/lab/cover-laboratory.png", "alt": "Laboratory cover", "caption": "" }
-          ]
+          "mockups": []
         }
       ]
     }

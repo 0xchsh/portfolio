@@ -46,11 +46,11 @@ export function MobileSection({ section, className }: MobileSectionProps) {
   return (
     <section
       className={cn(
-        'flex flex-col items-center gap-5 px-4 py-8 border-b border-dotted border-muted-foreground/15 last:border-b-0',
+        'flex flex-col items-center gap-5 px-4 py-8',
         className
       )}
     >
-      <h2 className="text-muted-foreground text-sm font-medium tracking-wider self-start">
+      <h2 className="text-muted-foreground text-base font-medium tracking-[-0.02em] max-w-[35rem] w-full">
         {section.title}
       </h2>
 

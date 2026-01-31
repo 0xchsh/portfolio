@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import type { Mockup } from '@/types/presentation';
 
@@ -9,23 +10,32 @@ interface MockupFrameProps {
 }
 
 export function MockupFrame({ mockup, className }: MockupFrameProps) {
+  const [loaded, setLoaded] = useState(false);
   const isVideo = mockup.src.endsWith('.mp4');
+
+  const mediaClass = loaded
+    ? 'opacity-100 transition-opacity duration-300 ease-in-out'
+    : 'opacity-0';
 
   const media = isVideo ? (
     <video
+      key={mockup.src}
       src={mockup.src}
       autoPlay
       loop
       muted
       playsInline
       preload="auto"
-      className="w-full h-auto"
+      onLoadedData={() => setLoaded(true)}
+      className={cn('w-full h-full object-cover', mediaClass)}
     />
   ) : (
     <img
+      key={mockup.src}
       src={mockup.src}
       alt={mockup.alt}
-      className="w-full h-auto"
+      onLoad={() => setLoaded(true)}
+      className={cn('w-full h-full object-cover object-top', mediaClass)}
     />
   );
 
@@ -38,9 +48,9 @@ export function MockupFrame({ mockup, className }: MockupFrameProps) {
       <div
         className={cn(
           'overflow-hidden bg-secondary',
-          mockup.type === 'mobile' && 'w-[200px] md:w-[240px] rounded-[28px]',
-          mockup.type === 'desktop' && 'w-full max-w-[560px] rounded-xl',
-          mockup.type === 'frame' && 'w-full max-w-[560px] rounded-xl'
+          mockup.type === 'mobile' && 'w-[200px] desktop:w-[240px] rounded-[28px] aspect-[9/19.5]',
+          mockup.type === 'desktop' && 'w-full max-w-[35rem] desktop:max-w-none rounded-xl aspect-video',
+          mockup.type === 'frame' && 'w-full max-w-[35rem] desktop:max-w-none rounded-xl aspect-video'
         )}
       >
         {media}

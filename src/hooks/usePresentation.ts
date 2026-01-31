@@ -24,16 +24,14 @@ export function usePresentation(data: PresentationData) {
   );
 
   const nextProject = useCallback(() => {
-    if (currentProjectIndex < data.projects.length - 1) {
-      goToProject(currentProjectIndex + 1);
-    }
+    const nextIndex = (currentProjectIndex + 1) % data.projects.length;
+    goToProject(nextIndex);
   }, [currentProjectIndex, data.projects.length, goToProject]);
 
   const prevProject = useCallback(() => {
-    if (currentProjectIndex > 0) {
-      goToProject(currentProjectIndex - 1);
-    }
-  }, [currentProjectIndex, goToProject]);
+    const prevIndex = (currentProjectIndex - 1 + data.projects.length) % data.projects.length;
+    goToProject(prevIndex);
+  }, [currentProjectIndex, data.projects.length, goToProject]);
 
   const goToSection = useCallback((index: number) => {
     setCurrentSectionIndex(index);

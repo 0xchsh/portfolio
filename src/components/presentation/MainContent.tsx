@@ -80,7 +80,7 @@ export function MainContent({ section, className }: MainContentProps) {
   return (
     <div
       className={cn(
-        'w-full max-w-[640px] flex flex-col items-center gap-4 md:gap-6 px-4 md:px-8 my-auto pt-8 pb-24 transition-opacity duration-150',
+        'w-full max-w-[640px] flex flex-col items-center gap-4 desktop:gap-6 px-4 desktop:px-8 my-auto pt-8 pb-24 transition-opacity duration-150',
         isVisible ? 'opacity-100' : 'opacity-0',
         className
       )}

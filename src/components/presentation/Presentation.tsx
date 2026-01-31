@@ -40,7 +40,7 @@ export function Presentation({ data }: PresentationProps) {
   });
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden md:overflow-hidden">
+    <div className="h-screen flex flex-col overflow-hidden desktop:overflow-hidden">
       {/* Header */}
       <Header
         title={data.meta.title}
@@ -55,7 +55,7 @@ export function Presentation({ data }: PresentationProps) {
       />
 
       {/* Desktop layout: sidebar positioned left, main content fills remaining height */}
-      <div className="hidden md:flex flex-1 min-h-0 relative">
+      <div className="hidden desktop:flex flex-1 min-h-0 relative">
         <aside className="absolute left-0 top-16 w-[220px] p-4 pt-2 z-10">
           <Sidebar
             key={currentProjectIndex}
@@ -75,16 +75,27 @@ export function Presentation({ data }: PresentationProps) {
       </div>
 
       {/* Mobile layout: all sections stacked, scrollable */}
-      <div className="md:hidden flex-1 overflow-y-auto">
-        {currentProject?.sections.map((section) => (
-          <MobileSection key={section.id} section={section} />
+      <div className="desktop:hidden flex-1 overflow-y-auto">
+        {/* Gradient fade overlay - top */}
+        <div className="sticky top-0 left-0 right-0 h-12 bg-gradient-to-b from-background to-transparent pointer-events-none z-10 -mb-12" />
+        {currentProject?.sections.map((section, i) => (
+          <div key={section.id}>
+            <MobileSection section={section} />
+            {i < (currentProject.sections.length - 1) && (
+              <div className="flex justify-center">
+                <div className="w-[240px] h-px border-t border-dotted border-muted-foreground/10" />
+              </div>
+            )}
+          </div>
         ))}
         {/* Footer at bottom of scroll stack on mobile */}
         <Footer className="shrink-0" />
+        {/* Gradient fade overlay - bottom */}
+        <div className="sticky bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent pointer-events-none z-10 -mt-12" />
       </div>
 
       {/* Footer - desktop only (sticky) */}
-      <Footer className="shrink-0 hidden md:flex" />
+      <Footer className="shrink-0 hidden desktop:flex" />
     </div>
   );
 }
