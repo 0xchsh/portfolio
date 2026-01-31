@@ -69,29 +69,31 @@ export function Presentation({ data }: PresentationProps) {
         <main className="flex-1 overflow-y-auto flex justify-center min-h-0">
           <MainContent section={currentSection} />
         </main>
-        {/* Gradient fade overlays */}
-        <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
+        {/* Fade overlays — using mask so bg-background transitions with theme */}
+        <div className="absolute top-0 left-0 right-0 h-12 bg-background pointer-events-none z-10" style={{ maskImage: 'linear-gradient(to bottom, black, transparent)' }} />
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-background pointer-events-none z-10" style={{ maskImage: 'linear-gradient(to top, black, transparent)' }} />
       </div>
 
       {/* Mobile layout: all sections stacked, scrollable */}
       <div className="desktop:hidden flex-1 overflow-y-auto">
-        {/* Gradient fade overlay - top */}
-        <div className="sticky top-0 left-0 right-0 h-12 bg-gradient-to-b from-background to-transparent pointer-events-none z-10 -mb-12" />
+        {/* Fade overlay - top */}
+        <div className="sticky top-0 left-0 right-0 h-12 bg-background pointer-events-none z-10 -mb-12" style={{ maskImage: 'linear-gradient(to bottom, black, transparent)' }} />
         {currentProject?.sections.map((section, i) => (
           <div key={section.id}>
             <MobileSection section={section} />
             {i < (currentProject.sections.length - 1) && (
-              <div className="flex justify-center">
-                <div className="w-[240px] h-px border-t border-dotted border-muted-foreground/30" />
+              <div className="flex justify-center gap-1">
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((j) => (
+                  <div key={j} className="w-px h-6 border-l border-dotted border-muted-foreground/30" />
+                ))}
               </div>
             )}
           </div>
         ))}
         {/* Footer at bottom of scroll stack on mobile */}
         <Footer className="shrink-0" />
-        {/* Gradient fade overlay - bottom */}
-        <div className="sticky bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent pointer-events-none z-10 -mt-12" />
+        {/* Fade overlay - bottom */}
+        <div className="sticky bottom-0 left-0 right-0 h-12 bg-background pointer-events-none z-10 -mt-12" style={{ maskImage: 'linear-gradient(to top, black, transparent)' }} />
       </div>
 
       {/* Footer - desktop only (sticky) */}
