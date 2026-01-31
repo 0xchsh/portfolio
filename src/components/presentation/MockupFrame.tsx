@@ -23,8 +23,8 @@ export function MockupFrame({ mockup, className }: MockupFrameProps) {
           'overflow-hidden relative',
           isVideo ? 'bg-black' : 'bg-secondary',
           mockup.type === 'mobile' && 'w-[200px] desktop:w-[240px] rounded-[28px] aspect-[9/19.5]',
-          mockup.type === 'desktop' && 'w-full max-w-[35rem] desktop:max-w-none rounded-xl aspect-video',
-          mockup.type === 'frame' && 'w-full max-w-[35rem] desktop:max-w-none rounded-xl aspect-video'
+          mockup.type === 'desktop' && cn('w-full max-w-[35rem] desktop:max-w-none rounded-xl', !isVideo && 'aspect-video'),
+          mockup.type === 'frame' && cn('w-full max-w-[35rem] desktop:max-w-none rounded-xl', !isVideo && 'aspect-video')
         )}
       >
         {isVideo ? (
@@ -36,7 +36,7 @@ export function MockupFrame({ mockup, className }: MockupFrameProps) {
             muted
             playsInline
             preload="auto"
-            className="w-full h-full object-cover"
+            className="w-full h-auto block"
           />
         ) : (
           <Image
