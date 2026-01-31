@@ -1,41 +1,9 @@
 'use client';
 
-import { cn } from '@/lib/utils';
+import { cn, parseLinks } from '@/lib/utils';
 import { MockupGrid } from './MockupGrid';
 import { Description } from './Description';
 import type { Section } from '@/types/presentation';
-
-// Parse markdown-style links [text](url) and render as anchor tags
-function parseLinks(text: string): React.ReactNode[] {
-  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  const parts: React.ReactNode[] = [];
-  let lastIndex = 0;
-  let match;
-
-  while ((match = linkRegex.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index));
-    }
-    parts.push(
-      <a
-        key={match.index}
-        href={match[2]}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-foreground underline underline-offset-4 decoration-dashed decoration-muted-foreground/50 hover:text-muted-foreground transition-colors"
-      >
-        {match[1]}
-      </a>
-    );
-    lastIndex = match.index + match[0].length;
-  }
-
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
-  }
-
-  return parts.length > 0 ? parts : [text];
-}
 
 interface MobileSectionProps {
   section: Section;

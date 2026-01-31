@@ -14,7 +14,7 @@
           "id": "freighter-overview",
           "title": "Overview",
           "description": "Freighter is Stellar's flagship non-custodial wallet. It launched in 2020 as a browser extension and expanded to mobile as smart contracts arrived on Stellar and mobile crypto usage grew.\n\nA small team: three engineers, one PM, and me as the sole designer. Five months to ship before Meridian, our annual conference where attendees would use it live.",
-          "footnotes": "I also designed and built [freighter.app](https://freighter.app) in Framer.",
+          "footnotes": "The marketing site [freighter.app](https://freighter.app) was also designed and built in Framer.",
           "mockups": [
             {
               "id": "freighter-1",
@@ -152,7 +152,7 @@
         {
           "id": "freighter-takeaways",
           "title": "Takeaways",
-          "description": "Freighter Mobile launched at Meridian in September 2025. It's grown to 3K monthly active users with no traditional marketing.\n\nBuilding in phases felt safe, but a lot of that work only served the team. Ship to real hands sooner. Prioritize what benefits users, not the process.\n\nCrypto is already unfamiliar. Don't add friction to anxiety. Lean into patterns people trust. Familiar interactions make unfamiliar actions feel safe.",
+          "description": "Freighter Mobile launched at Meridian in September 2025. It's grown to 3K monthly active users through organic growth.\n\nBuilding in phases felt safe, but a lot of that work only served the team. Ship to real hands sooner. Prioritize what benefits users, not the process.\n\nCrypto is already unfamiliar. Don't add friction to anxiety. Lean into patterns people trust. Familiar interactions make unfamiliar actions feel safe.",
           "footnotes": "Error states are first impressions",
           "mockups": []
         }
@@ -168,7 +168,7 @@
           "id": "snack-overview",
           "title": "Overview",
           "description": "Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.\n\nThe core interaction is paste-to-save: drop a URL, and Snack scrapes the metadata instantly. No formatting, no organizing, just a running list you can share with one link. It's live at snack.xyz.",
-          "footnotes": "You can see the original [directory](https://noundation.framer.website/resources/pages) I built on Framer.",
+          "footnotes": "See the original [directory](https://noundation.framer.website/resources/pages) built on Framer.",
           "mockups": [
             {
               "id": "snack-1",
@@ -243,7 +243,7 @@
         {
           "id": "snack-takeaways",
           "title": "Takeaways",
-          "description": "An agency took 6 months and $30K. I rebuilt it in a month, solo. The leverage from AI tooling is real, and it compounds.\n\nDistribution is still the hardest part. Doesn't matter how good the product is if no one sees it. Getting it into hands is the real work.\n\nA browser extension and mobile app are both in progress. Same approach: solo build, fast iteration.",
+          "description": "After an agency approach proved too costly, AI tooling made it possible to rebuild from scratch. The leverage is real and it compounds.\n\nDistribution is still the hardest part. Doesn't matter how good the product is if no one sees it. Getting it into hands is the real work.\n\nA browser extension and mobile app are both in progress.",
           "footnotes": "The individual is now one to the nth power.",
           "mockups": []
         }

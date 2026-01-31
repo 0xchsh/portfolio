@@ -19,11 +19,21 @@ function MobileCarousel({
   const touchEndX = useRef(0);
   const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const pausedRef = useRef(false);
+  const isDesktopRef = useRef(false);
+
+  // Track desktop breakpoint to pause autoplay when carousel is hidden
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 860px)');
+    isDesktopRef.current = mq.matches;
+    const handler = (e: MediaQueryListEvent) => { isDesktopRef.current = e.matches; };
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   // Auto-advance every 4 seconds
   useEffect(() => {
     autoplayRef.current = setInterval(() => {
-      if (!pausedRef.current) {
+      if (!pausedRef.current && !isDesktopRef.current) {
         setCurrentIndex((prev) =>
           prev === mockups.length - 1 ? 0 : prev + 1
         );
