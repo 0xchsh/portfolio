@@ -2,7 +2,7 @@
 
 import { Squircle } from '@squircle-js/react';
 import { cn } from '@/lib/utils';
-import { Download, Sun, Moon } from 'lucide-react';
+import { Download, Sun, Moon, FileText } from 'lucide-react';
 import type { Project } from '@/types/presentation';
 
 interface HeaderProps {
@@ -131,6 +131,7 @@ export function Header({
           </button>
         </Squircle>
 
+        {/* Mobile: direct PDF download */}
         <Squircle
           asChild
           cornerRadius={8}
@@ -140,15 +141,63 @@ export function Header({
             href={downloadUrl}
             download
             className={cn(
-              'flex items-center gap-2 p-1.5 desktop:px-2 desktop:py-1 transition-colors text-base leading-6',
+              'desktop:hidden flex items-center gap-2 p-1.5 transition-colors text-base leading-6',
               'text-muted-foreground',
               'hover:bg-accent hover:text-accent-foreground'
             )}
           >
             <Download className="w-4 h-4 opacity-50" />
-            <span className="hidden desktop:inline">Download</span>
           </a>
         </Squircle>
+
+        {/* Desktop: dropdown with Figma + PDF */}
+        <div className="relative group hidden desktop:block">
+          <Squircle
+            asChild
+            cornerRadius={8}
+            cornerSmoothing={1}
+          >
+            <button
+              className={cn(
+                'flex items-center gap-2 px-2 py-1 transition-colors text-base leading-6 cursor-pointer',
+                'text-muted-foreground',
+                'hover:bg-accent hover:text-accent-foreground'
+              )}
+            >
+              <Download className="w-4 h-4 opacity-50" />
+              Download
+            </button>
+          </Squircle>
+          <div className="absolute right-0 top-full mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out z-50">
+            <Squircle
+              cornerRadius={10}
+              cornerSmoothing={1}
+              className="flex flex-col p-1 bg-secondary shadow-lg w-[168px]"
+            >
+              <Squircle asChild cornerRadius={6} cornerSmoothing={1}>
+                <a
+                  href="https://www.figma.com/proto/wKXOpYmEzyw4cEgsfCLsiP/Anthropic-Design-Review?page-id=171%3A51631&node-id=228-57261&viewport=969%2C650%2C0.04&t=7xzGjRdd04V0KXWd-1&scaling=contain&content-scaling=fixed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-1 text-base leading-6 text-secondary-foreground hover:bg-muted-foreground/15 transition-colors"
+                >
+                  <svg className="w-4 h-4 opacity-70" viewBox="0 0 24 24" fill="currentColor"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5ZM5 12a3.5 3.5 0 0 1 3.5-3.5H12v7H8.5A3.5 3.5 0 0 1 5 12Zm0 6.5A3.5 3.5 0 0 1 8.5 15H12v3.5a3.5 3.5 0 1 1-7 0ZM12 2h3.5a3.5 3.5 0 1 1 0 7H12V2Zm0 7h3.5a3.5 3.5 0 1 1 0 7H12V9Z"/></svg>
+                  Figma link
+                </a>
+              </Squircle>
+              <Squircle asChild cornerRadius={6} cornerSmoothing={1}>
+                <a
+                  href={downloadUrl}
+                  download
+                  className="flex items-center gap-2 px-3 py-1 text-base leading-6 text-secondary-foreground hover:bg-muted-foreground/15 transition-colors"
+                >
+                  <FileText className="w-4 h-4 opacity-70" />
+                  PDF download
+                </a>
+              </Squircle>
+            </Squircle>
+          </div>
+        </div>
       </div>
     </header>
   );
