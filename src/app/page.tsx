@@ -96,7 +96,7 @@ function FarcasterIcon({ size = 16 }: { size?: number }) {
 }
 
 const connect = [
-  { name: 'X', desc: '@chshux', href: 'https://x.com/chshux', icon: 'x' },
+  { name: 'X.com', desc: '@chshux', href: 'https://x.com/chshux', icon: 'x' },
   { name: 'GitHub', desc: '@0xchsh', href: 'https://github.com/0xchsh', icon: 'github' },
   { name: 'Farcaster', desc: '@chsh.eth', href: 'https://warpcast.com/chsh.eth', icon: 'farcaster' },
 ] as const;
@@ -113,7 +113,7 @@ export default async function Home() {
 
   return (
     <PageShell>
-      <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-16 desktop:pt-20 pb-8">
+      <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-16 desktop:pt-20 pb-[120px]">
         {/* Avatar */}
         <Image
           src="/images/pfp.gif"
@@ -222,8 +222,8 @@ export default async function Home() {
               <div key={item.name} className="flex items-center gap-2">
                 <div className="flex items-center gap-3 shrink-0">
                   <span className="text-neutral-950 shrink-0">
-                    {item.icon === 'x' && <XLogo size={16} weight="fill" />}
-                    {item.icon === 'github' && <GithubLogo size={16} weight="fill" />}
+                    {item.icon === 'x' && <XLogo size={16} weight="bold" />}
+                    {item.icon === 'github' && <GithubLogo size={16} weight="bold" />}
                     {item.icon === 'farcaster' && <FarcasterIcon size={16} />}
                   </span>
                   <a href={item.href} target="_blank" rel="noopener noreferrer" className={`text-sm ${linkClass}`}>{item.name}</a>
