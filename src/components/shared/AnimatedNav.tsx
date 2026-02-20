@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useRef, useState, useLayoutEffect, type ComponentType } from 'react';
 import { cn } from '@/lib/utils';
 import {
-  HandWaving, GridNine, Rows, Smiley, ArrowLeft, ArrowRight,
+  HandWaving, GridNine, Rows, ArrowLeft, ArrowRight,
 } from '@phosphor-icons/react';
 
 type PhosphorIcon = ComponentType<{ size?: number; weight?: string }>;
@@ -14,7 +14,6 @@ const navItems: { href: string; label: string; icon: PhosphorIcon }[] = [
   { href: '/', label: 'About', icon: HandWaving },
   { href: '/work', label: 'Work', icon: GridNine },
   { href: '/feed', label: 'Feed', icon: Rows },
-  { href: '/contact', label: 'Contact', icon: Smiley },
 ];
 
 // Persists across re-mounts within the same session
@@ -95,13 +94,16 @@ export function AnimatedNav() {
           );
         })}
       </nav>
-      <div className="overflow-hidden">
+      <div className={cn(
+        'overflow-hidden transition-all ease-out',
+        hovered ? 'max-h-6 duration-300' : 'max-h-0 duration-500',
+      )}>
         <span
           className={cn(
-            'flex items-center justify-center gap-1 text-[10px] text-neutral-400 transition-all duration-200 ease-out',
+            'flex items-center justify-center gap-1 text-[10px] text-neutral-400 transition-all ease-out',
             hovered
-              ? 'opacity-100 translate-y-0 mt-1'
-              : 'opacity-0 translate-y-2 mt-0 pointer-events-none h-0',
+              ? 'opacity-100 translate-y-0 mt-1 duration-300'
+              : 'opacity-0 translate-y-1 mt-1 duration-500 pointer-events-none',
           )}
         >
         <ArrowLeft size={10} weight="bold" />

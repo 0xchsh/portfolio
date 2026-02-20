@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { useRef, useState, useLayoutEffect } from 'react';
 
-const routes = ['/', '/work', '/feed', '/contact'];
+const routes = ['/', '/work', '/feed'];
 
 export function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

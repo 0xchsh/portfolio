@@ -127,7 +127,11 @@ export default async function Home() {
         {/* Bio */}
         <div className="mt-6 text-base leading-relaxed text-neutral-400">
           <p>
-            I&apos;m <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>Charles</a>, a product designer based in Chicago. I like thinking deeply about interfaces — how they look, feel, and behave.
+            I&apos;m <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>Charles</a>, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use.
+          </p>
+
+          <p className="mt-4">
+            I&apos;m drawn to crypto and AI because they&apos;re both rails for freedom — crypto for financial autonomy, AI for creative autonomy. Both fields demand solving problems that didn&apos;t exist a year ago, and that&apos;s the work I find most interesting.
           </p>
 
           <p className="mt-4">
@@ -140,12 +144,11 @@ export default async function Home() {
           </p>
 
           <p className="mt-4">
-            Previously, I worked on checkout experiences and mobile at{' '}
+            Previously at{' '}
             <a href="https://warbyparker.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Warby Parker</a>
-            , and interned at{' '}
-            <a href="https://uber.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Uber</a> and{' '}
-            <a href="https://weebly.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Weebly</a>
-            . In my free time I vibecode, experiment with brands, and build my ideas.
+            ,{' '}
+            <a href="https://uber.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Uber</a>, and{' '}
+            <a href="https://weebly.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Weebly</a>. I do my best work iterating fast with talented engineers, staying close to the thing we&apos;re making.
           </p>
 
           <p className="mt-4">
