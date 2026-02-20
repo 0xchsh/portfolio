@@ -1,0 +1,72 @@
+{
+  "experiments": [
+    { "title": "Unicode loaders", "number": "009", "href": "https://chsh-009.vercel.app/" },
+    { "title": "Recipes", "number": "008", "href": "https://chsh-008.vercel.app/" },
+    { "title": "Whiteboard", "number": "007", "href": "https://chsh-007.vercel.app/" },
+    { "title": "Noise machine", "number": "006", "href": "https://chsh-006.vercel.app/" },
+    { "title": "Promptless UI", "number": "005", "href": "https://chsh-005.vercel.app/" },
+    { "title": "Midjourney controls", "number": "004", "href": "https://chsh-004.vercel.app/" },
+    { "title": "Shopping list", "number": "003", "href": "https://chsh-003.vercel.app/" },
+    { "title": "Timezones", "number": "002", "href": "https://chsh-002.vercel.app/" },
+    { "title": "Websafe colors", "number": "001", "href": "https://chsh-001.vercel.app/" }
+  ],
+  "lists": [
+    { "title": "Must-have software", "href": "https://app.snack.xyz/charles/T773dJ7t" },
+    { "title": "Must-have hardware", "href": "https://app.snack.xyz/charles/kJwtD9E9" },
+    { "title": "Must-listen mixes", "href": "https://app.snack.xyz/charles/T9SqGbhs" }
+  ],
+  "writing": [
+    { "title": "Introduction to RGB", "slug": "article-001", "href": "/posts/article-001" },
+    { "title": "Hyperbrand: Opepen", "slug": "article-002", "href": "/posts/article-002" }
+  ],
+  "art": [
+    {
+      "title": "RGB Signatures",
+      "year": "2024",
+      "images": [
+        "https://framerusercontent.com/images/MKjzR3zSxtd763fhCL34rq5AQs.gif",
+        "https://framerusercontent.com/images/jgcVsYmjcCwXm6R0gaGeuL5P2g.png"
+      ],
+      "size": "16,777,216",
+      "type": ["NFT"],
+      "collectionHref": "https://rgb.fun/",
+      "collectionLabel": "Mint on rgb.fun"
+    },
+    {
+      "title": "RGB Friends",
+      "year": "2024",
+      "images": [
+        "https://framerusercontent.com/images/6sMJ3uhCeGGG7EbSkDjAOMZujE.gif",
+        "https://framerusercontent.com/images/jQlpmJlpeYmoHQV3aFXVRct4UmE.png"
+      ],
+      "size": "26,500+",
+      "type": ["Generative", "NFT"],
+      "collectionHref": "https://highlight.xyz/mint/66744e64e610ed36adeb1a64",
+      "collectionLabel": "Mint on Highlight"
+    },
+    {
+      "title": "Hyperbrand: Opepen",
+      "year": "2023",
+      "images": [
+        "https://framerusercontent.com/images/IJbzb6nK9tUZDpUFxW6VC4peeFo.gif",
+        "https://framerusercontent.com/images/DuACajQRkuGJED2kKmf2tu08WVk.png"
+      ],
+      "size": "100",
+      "type": ["NFT"],
+      "collectionHref": "https://zora.co/collect/zora:0x787c6366341fbb8a7bfff1064009bce60796338f",
+      "collectionLabel": "Mint on Zora"
+    },
+    {
+      "title": "Zorps",
+      "year": "2023",
+      "images": [
+        "https://framerusercontent.com/images/rP5ah6Zn65At63TW7y44ntdAnU.png",
+        "https://framerusercontent.com/images/iGTfuMc0GZYBDKDAfuwTao2e3E.jpg"
+      ],
+      "size": "100",
+      "type": ["NFT"],
+      "collectionHref": "https://zora.co/collect/zora:0x525e87462e5f4b0703dce7ed18f55dd72aea3bde",
+      "collectionLabel": "Mint on Zora"
+    }
+  ]
+}
