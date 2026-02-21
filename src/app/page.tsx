@@ -79,6 +79,7 @@ const experience = [
 ];
 
 const projects = [
+  { name: 'ClawPanel', desc: 'Dashboard for OpenClaw', year: '2026', href: '#', icon: '/icons/clawpanel.svg', badge: 'In progress' },
   { name: 'Snack', desc: 'List curation tool', year: '2025', href: 'https://snack.xyz', icon: '/icons/snack.svg' },
   { name: 'rgb.fun', desc: 'NFT collection (16,777,216)', year: '2024', href: 'https://rgb.fun', icon: '/icons/rgb.svg' },
   { name: 'rgb.so', desc: 'Onchain media', year: '2023', href: 'https://rgb.so', icon: '/icons/rgb.svg' },
@@ -138,9 +139,9 @@ export default async function Home() {
             I&apos;m currently the Lead Product Designer at{' '}
             <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className={linkClass}>Stellar</a>
             , where I&apos;ve shipped consumer{' '}
-            <Link href="/writings" className={linkClass}>wallets</Link>, developer{' '}
-            <Link href="/writings" className={linkClass}>tools</Link>, and enterprise{' '}
-            <Link href="/writings" className={linkClass}>products</Link> for the last 6+ years.
+            <a href="https://freighter.app/" target="_blank" rel="noopener noreferrer" className={linkClass}>wallets</a>, developer{' '}
+            <a href="https://lab.stellar.org/" target="_blank" rel="noopener noreferrer" className={linkClass}>tools</a>, and enterprise{' '}
+            <a href="https://github.com/stellar/stellar-disbursement-platform-frontend" target="_blank" rel="noopener noreferrer" className={linkClass}>products</a> for the last 6+ years.
           </p>
 
           <p className="mt-4">
@@ -206,12 +207,21 @@ export default async function Home() {
                     >
                       {item.name}
                     </a>
-                    <span className="text-sm text-neutral-400">·</span>
-                    <span className="text-sm text-neutral-400">{item.desc}</span>
+                    {item.desc ? (
+                      <>
+                        <span className="text-sm text-neutral-400">·</span>
+                        <span className="text-sm text-neutral-400">{item.desc}</span>
+                      </>
+                    ) : null}
                   </div>
                 </div>
                 <Dot />
-                <span className="text-sm text-neutral-400 shrink-0">{item.year}</span>
+                <div className="flex items-center gap-1.5 shrink-0">
+                  {item.badge && (
+                    <span className="text-[10px] font-semibold uppercase tracking-wide text-white bg-blue-500 px-1.5 rounded-[6px] leading-[20px]">{item.badge}</span>
+                  )}
+                  <span className="text-sm text-neutral-400">{item.year}</span>
+                </div>
               </div>
             ))}
           </div>
