@@ -137,11 +137,7 @@ export default async function Home() {
 
           <p className="mt-4">
             I&apos;m currently the Lead Product Designer at{' '}
-            <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className={linkClass}>Stellar</a>
-            , where I&apos;ve shipped consumer{' '}
-            <a href="https://freighter.app/" target="_blank" rel="noopener noreferrer" className={linkClass}>wallets</a>, developer{' '}
-            <a href="https://lab.stellar.org/" target="_blank" rel="noopener noreferrer" className={linkClass}>tools</a>, and enterprise{' '}
-            <a href="https://github.com/stellar/stellar-disbursement-platform-frontend" target="_blank" rel="noopener noreferrer" className={linkClass}>products</a> for the last 6+ years.
+            <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className={linkClass}>Stellar</a>.
           </p>
 
           <p className="mt-4">
