@@ -55,7 +55,7 @@ export async function PageShell({
       <header className="fixed top-0 left-0 right-0 z-20">
         <div className="flex justify-between items-start p-4"
           style={{
-            background: 'linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255 / 0.8) 50%, rgb(255 255 255 / 0) 100%)',
+            background: 'linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
             paddingBottom: '1rem',
           }}
         >
@@ -77,8 +77,8 @@ export async function PageShell({
       <footer className={staticFooter ? 'w-full z-10' : 'fixed bottom-0 left-0 right-0 z-10'}>
         <div className="flex justify-between items-center p-4"
           style={{
-            background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255 / 0.9) 40%, rgb(255 255 255 / 0.6) 70%, rgb(255 255 255 / 0) 100%)',
-            paddingTop: '2rem',
+            background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
+            paddingTop: '1rem',
           }}
         >
           <AgentModeToggle />

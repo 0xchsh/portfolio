@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Agentation } from "agentation";
 import { SquircleNoScript } from "@squircle-js/react";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geist = Geist({
@@ -18,14 +19,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hello Anthropic - Portfolio Review",
-  description: "Portfolio Review by Charles Shin",
+  title: "Charles Shin – Portfolio",
+  description: "Hello! I'm Charles, a software designer building ai + onchain experiences based in Chicago.",
   icons: {
     icon: "/images/favicon.png",
   },
   openGraph: {
-    title: "Hello Anthropic - Portfolio Review",
-    description: "Portfolio Review by Charles Shin",
+    title: "Charles Shin – Portfolio",
+    description: "Hello! I'm Charles, a software designer building ai + onchain experiences based in Chicago.",
     images: ["/images/og-image.png"],
   },
 };
@@ -39,11 +40,22 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}
+        suppressHydrationWarning
       >
         <SquircleNoScript />
         <ThemeProvider>
           {children}
         </ThemeProvider>
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            style: {
+              background: '#f0fdf4',
+              border: '1px solid #bbf7d0',
+              color: '#15803d',
+            },
+          }}
+        />
         {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
     </html>

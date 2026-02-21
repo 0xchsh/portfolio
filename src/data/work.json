@@ -1,0 +1,209 @@
+[
+  {
+    "title": "Freighter",
+    "description": "Stellar wallet extension",
+    "src": [
+      "/work/freighter/00-cover-freighter.png"
+    ],
+    "link": "https://freighter.app",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4UlEQVR4nDWRW0hTcQDG/2fn7Oysk2tLZJ7dTrtYW4dMukttGSFSqGHYDaIHJSpahfRSL2IRXcBFCPbU3oKiB8OCLogRtGCPBZHgg0bYTKIwH6Ko8Yv/oofv8fvx+/jEj3GYuQmlE3BnFww40J38TjYxT6s9yxZ7ik3RN7SEyqwJjtMQGEIz2nCJOEIEERLwYQRKp2C0DU5nYF9qkWyiQuuqGTbb73BCk1j+YTxmJ261CUUW/+fnE/h0G0p5GNkJ+cwfelKL5BJzbLWnSYceUR+4iMfMoesJVCWMIsIIYSFEI6I6CZUivDwDw1kJ+M1RZ4n29Eea7VdYDTfwrziCYWxA15OoahSXsFBkWYbXsHAXJs5CQRqkf3GpFwbzSxzqKnOy/yEHeq4SDu1AFVE0NVazcAlpYiF4C5/vw9MBuLUbLrRUOeZ8Y3tTmXikSMQ6R/3KLkzvOtyqjarFcCmRfxBFAqZhYQyenYfRThjaBofT86y3JwgFC9TV9WOY7SwzHDyeJG7NRpUWcooSQTAHlcfwfBCKB+Fyrkrv2lnS0TGs4HX8/j6W+zrwepsx9BS6bqNpsVokRPAVvryAUgHuHYdre6rsd96TiT+gMXgFf6APn28vprkR01hds5BvyDnS5i8O8CzWp5UYkwAAAABJRU5ErkJggg=="
+    ]
+  },
+  {
+    "title": "Freighter",
+    "description": "Home",
+    "src": [
+      "/work/freighter/01-home.mp4"
+    ],
+    "link": "https://freighter.app",
+    "logo": null,
+    "ratio": "1:1",
+    "blurDataURLs": [
+      null
+    ]
+  },
+  {
+    "title": "Freighter",
+    "description": "History",
+    "src": [
+      "/work/freighter/02-past-transactions.png",
+      "/work/freighter/02-history-details.mp4",
+      "/work/freighter/02-wallets.mp4"
+    ],
+    "link": "https://freighter.app",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABeElEQVR4nDWQTUsCYRDHn4OnB+opW9JYQkiSklpdlbXStK1W23QRJVOxF+lY0MulzxBB4KEuEQS9HKNDX6CP0FHq0FWC6BYRuP94BjoMw/Cb+c9/himK0hVCQAjh/mfOOTjnX6xQLCIcDstCAopRVYWqqmC/P9/uwf4+hn0+AoqioFavwXEcl7VvHlAsVVCwbfj9fvQJgWgqgehMAmzv9B6FShXbm00YhkHT1WoVtm2DPT6/YL25gYimkaSE6cUFJFNzYJ8fXRwdHZIpCaWxlDlPDazz9oqtVoukpKzH40E2kyUP7Gz3CrVKExF9miTHJseRWc0huZAGi07o1CnvktA75CXXMtjl1R2KTgmWZSEUCmHAO4hYOolJfQqsff2EzdYO7QwEAjRprljIWktg57dPWKvV4TgFgvIJ8bQBfTYOdnxy0TOX88jnLHqhPCU2a0A3Ej1GRSyGYDAIIfrp1hH/CGUmhOhomoZyuew2Gg2YpulKp5zz9z/gi7vXra0JJgAAAABJRU5ErkJggg==",
+      null,
+      null
+    ]
+  },
+  {
+    "title": "Freighter",
+    "description": "Discover",
+    "src": [
+      "/work/freighter/03-discover-1.mp4",
+      "/work/freighter/03-discover-2.mp4",
+      "/work/freighter/03-in-app-browser.png"
+    ],
+    "link": "https://freighter.app",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null,
+      null,
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABs0lEQVR4nB2PT2hScQDHf9ApPNVB6I8XX7jQlQyzuabD9/aH1Ezf9D2tvamV5rCt1mBzW382xWBOSoJCajcjKmKHOgQ7rGt07hJ06BR0q44Fvk88Dx++8P3yhe9XBKbGf3p9I3jPnDOD8lRfXe4hXO6hX2K+sYqaniGWSLG4vM75mMpJjw+rIGLRlOlwujhw8FCfw/ajHHFIFqbIr1ZotNo0th6x9fAJhVIFVb/MRCSBSGg68USa6UyB0twCY2MyRq6E3xdCfPz0mWe778gtVKi1t9GuzdJ+sUM8oyP+mLD/7QfTpRmMpTK3W3epdupcqc4jZC3GnY06m7UmYSViXeFCXCcYmkDkymXS2Vmiqo6RKzI6Gub63C2Gh2VE980uT1+9ZW2jyWZzG9XI8Li7QySZQvzuwZe//3j9co/i8iJL7XtUOzWK6zcRF7NZ6g9a/a8razXOjoSZnIwTCI4jbtxf4f2HfTrPu2iXCgSCMrpxtT9OnDrt7knSCcKyQj5fIBKN4pQkBge9PXHccQxJcjIw4MLv9xMKhVAUBbvdjhBCfLXZbJZpappGMpk0PR6PFXz/D5lM5aSjVJSmAAAAAElFTkSuQmCC"
+    ]
+  },
+  {
+    "title": "Freighter",
+    "description": "Transactions",
+    "src": [
+      "/work/freighter/04-details.mp4",
+      "/work/freighter/04-details-mal.mp4",
+      "/work/freighter/04-review-transactions.mp4"
+    ],
+    "link": "https://freighter.app",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "title": "Freighter",
+    "description": "Website",
+    "src": [
+      "/work/freighter/05-website.png"
+    ],
+    "link": "https://freighter.app",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABbklEQVR4nI2RwUoCURSGbzKOxFBcmbHGGk1qnGsNNYTSbKyNQi/gwo29QVvduAicCFoJSWQthATduqgewV5A6CHat/3jnpwwsnDxce+c8///OTPDFCUCdzePxvkdliIMhmFM0aeEzwY0TYMQAqVSCZxzgnEeRzJpQTiHkPdoVANjDKq6AlVdBWOxKYx6prkBy0qDc51gX5c4pUtBuXyKfn+AZvMCnZt79HoDBME1Op1bFIsnpAnNMwE6Eol1MKag1QowmbxhNHpGEFxhOBySeTx+Rb3e+DuAcx1xbiC2rOKy/gS8Ay+PHzS1VjtDoeDTkFn9jwDLShGmmYST3Uchfwzv4Ai2nYUQOWQyGeqFul8BQgjCdffgODa2d7aQSm+SUSLrEqmRoYnE2vwAIQQZLMuiD6soCp22bX/3/w1wXZf+uTy73Qe0220yh7UFNsjBNE14nodKpYJqtQrf96m20AYSub58jXBtOVnW5gV8AoZQBtGpuqbAAAAAAElFTkSuQmCC"
+    ]
+  },
+  {
+    "title": "Snack",
+    "description": "Grocery list app",
+    "src": [
+      "/work/snack/00 cover-snack.png"
+    ],
+    "link": "https://snack.xyz",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4UlEQVR4nC2QXUjTARTFj5gZEQwSWuyp1GHFMjAsXJaxB6WPfzWXlZDkQxmFBVJZPSiGFulDUVk9WKgoCMUqM4y0YgzFcmxUzo9olFCLFWWLjCiLX2zu4XC4D/ee37kyJJwS5RK1Eu2ZwrfXQrRxA3Q4oaWQ35fW8ON8OtGGVL7Wii81YqpORBuEmuYlc1aiXuL6XOHOTmbYuZjR3RZGtpsIFIkXW0TQJcb3iDfl4t1BEa4Sn04JzbRXM1G1Ce+O5QwamfiLrTw2p9ARo5Hokrgr0WcWA6uFv0gES8TbAyJyUoiPPeC9AB2VfKvdysDKhbRI3JRok+iUuC3RI/EkQwytE8FiMXkoUQFfM3Sf5t+1Ml5uTo8n3pCYcBUynJdN0Mgn4FjBwxThyRLP14uxXSJyQtBqR7RV8LPJ4HVpBt1SHD0mtxSf+0xJeKypDOYswO9YxHjJUj5U2vhz2YCndSh8NIdRl5l+i7iV6BxDvifxaL7wLEvimT2NkW1WQmU5hI84mD5XCl01EOhEQ3bFl+9o9kDMezWL69toYmznEkL7snh/eBWR47lEzxTw96oTHhyDUCu6n/hyTL1zhNcmXhlpTFbY+Fxt53t9AdON+fy6mMdMcy60rgW3A4b3w9QV/gMr5UBTR1qcNwAAAABJRU5ErkJggg=="
+    ]
+  },
+  {
+    "title": "Snack",
+    "description": "Create list",
+    "src": [
+      "/work/snack/01 create-list.mp4"
+    ],
+    "link": "https://snack.xyz",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null
+    ]
+  },
+  {
+    "title": "Snack",
+    "description": "Edit list",
+    "src": [
+      "/work/snack/02 edit-list.mp4"
+    ],
+    "link": "https://snack.xyz",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null
+    ]
+  },
+  {
+    "title": "Snack",
+    "description": "Menu",
+    "src": [
+      "/work/snack/03 menu.mp4"
+    ],
+    "link": "https://snack.xyz",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null
+    ]
+  },
+  {
+    "title": "Snack",
+    "description": "Navigation",
+    "src": [
+      "/work/snack/04 nav.mp4"
+    ],
+    "link": "https://snack.xyz",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null
+    ]
+  },
+  {
+    "title": "Snack",
+    "description": "Website",
+    "src": [
+      "/work/snack/05 website.mp4"
+    ],
+    "link": "https://snack.xyz",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null
+    ]
+  },
+  {
+    "title": "Laboratory",
+    "description": "Stellar developer tools",
+    "src": [
+      "/work/lab/00 cover-laboratory.png"
+    ],
+    "link": null,
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAABYlAAAWJQFJUiTwAAABa0lEQVR4nG2SSytEARiG31L2NlbkL8hSlI2F/AEbC6wspLEQKcklshCTBeUuG0QpZXJpiiKXQbnl5DRnDMZgGJfRhB4d56hJFt/yed73rU8tHmivB28bLEzC0SZEDLgz4MGExyDEg/BiwZsF7+59XgMR0EA3jPbC/DjsrEHoFKKmC5vw5ApeLUjYcNCBYyewvQiyU1dmYc8P1vGf9H8En2E4W4eaKgtl+1BgA062IXQGNwZEDQd8TBHY9ZNh+AjD7hIUF+8gDSJ1ovA5XBsOHHEFX3H4iAHPwBuQcBoM9yTIyV1F6kFqRvKgK1fwC9vV45dO8u05HPhhzJuktOQQpU+5cAtSHVIVSk2/N539p1swPQINnij5hQGUsYg0gdSP1IXUhFSDVIFs+Ge76SQG/DDUm6S6MkRB0T7KWkZpc0jjSF6kDqRGpFqnQep2+wdmxqC1MUZ52QV5+bso04c0jTSC1OcK7AYepGq+AdXZvIMYwIzjAAAAAElFTkSuQmCC"
+    ]
+  },
+  {
+    "title": "Laboratory",
+    "description": "Account",
+    "src": [
+      "/work/lab/01 account.mp4"
+    ],
+    "link": null,
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null
+    ]
+  },
+  {
+    "title": "Laboratory",
+    "description": "Transaction",
+    "src": [
+      "/work/lab/02 transaction.mp4"
+    ],
+    "link": null,
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null
+    ]
+  }
+]

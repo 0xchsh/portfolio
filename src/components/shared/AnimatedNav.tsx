@@ -63,6 +63,7 @@ export function AnimatedNav() {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      className="relative"
     >
       <nav ref={navRef} className="relative flex items-center gap-1.5">
         {/* Pill indicator */}
@@ -94,23 +95,18 @@ export function AnimatedNav() {
           );
         })}
       </nav>
-      <div className={cn(
-        'overflow-hidden transition-all ease-out',
-        hovered ? 'max-h-6 duration-300' : 'max-h-0 duration-500',
-      )}>
-        <span
-          className={cn(
-            'flex items-center justify-center gap-1 text-[10px] text-neutral-400 transition-all ease-out',
-            hovered
-              ? 'opacity-100 translate-y-0 mt-1 duration-300'
-              : 'opacity-0 translate-y-1 mt-1 duration-500 pointer-events-none',
-          )}
-        >
+      <span
+        className={cn(
+          'absolute left-0 right-0 top-full flex items-center justify-center gap-1 text-[10px] text-neutral-400 transition-all ease-out',
+          hovered
+            ? 'opacity-100 translate-y-1 duration-300'
+            : 'opacity-0 translate-y-0 duration-500 pointer-events-none',
+        )}
+      >
         <ArrowLeft size={10} weight="bold" />
         Use arrow keys to navigate
         <ArrowRight size={10} weight="bold" />
-        </span>
-      </div>
+      </span>
     </div>
   );
 }
