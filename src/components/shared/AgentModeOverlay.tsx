@@ -5,20 +5,17 @@ import { AgentModeToggle } from '@/components/shared/AgentModeToggle';
 
 const MARKDOWN = `# Charles Shin
 
-> Product designer building ai + onchain experiences, based in Chicago.
+> Product Designer focused on onchain and ai experiences, based in Chicago.
 
 ## About
 
-I'm Charles, a product designer based in Chicago. I care about making
-interfaces and interactions that feel simple, clear, and enjoyable to
-use — especially in crypto and AI, where you're designing patterns for
-the first time.
+I'm Charles, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use — especially in crypto and AI, where you're designing patterns for the first time.
 
 I'm currently the Lead Product Designer at Stellar (https://stellar.org).
 
-Previously at Warby Parker, Uber, and Weebly. I do my best work
-iterating fast with talented engineers, staying close to the thing
-we're making.
+Previously at Warby Parker, Uber, and Weebly. I do my best work iterating fast with talented engineers, staying close to the thing we're making.
+
+If you're working on something interesting, let's chat. Send me an email at hi@ch.sh or dm on x.com (@chshux).
 
 ## Experience
 

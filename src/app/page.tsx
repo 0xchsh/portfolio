@@ -117,12 +117,11 @@ export default async function Home() {
       <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-16 desktop:pt-20 pb-[120px]">
         {/* Avatar */}
         <Image
-          src="/images/pfp.gif"
+          src="/images/pfp.png"
           alt="Charles Shin"
           width={48}
           height={48}
           className="rounded-full"
-          unoptimized
         />
 
         {/* Bio */}
@@ -191,14 +190,18 @@ export default async function Home() {
                 <div className="flex items-center gap-3 shrink-0">
                   <Image src={item.icon} alt={item.name} width={16} height={16} className="shrink-0" />
                   <div className="flex items-center gap-1">
-                    <a
-                      href={item.href}
-                      target={item.href.startsWith('http') ? '_blank' : undefined}
-                      rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className={`text-sm ${linkClass}`}
-                    >
-                      {item.name}
-                    </a>
+                    {item.href === '#' ? (
+                      <span className="text-sm text-neutral-400 font-medium">{item.name}</span>
+                    ) : (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-sm ${linkClass}`}
+                      >
+                        {item.name}
+                      </a>
+                    )}
                     {item.desc ? (
                       <>
                         <span className="text-sm text-neutral-400">·</span>

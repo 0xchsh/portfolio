@@ -13,7 +13,7 @@ const linkClass =
 export default function Feed() {
   return (
     <PageShell>
-      <main className="flex-1 w-full max-w-[420px] mx-auto px-4 pt-16 desktop:pt-20 pb-8">
+      <main className="flex-1 w-full max-w-[420px] mx-auto px-4 pt-16 desktop:pt-20 pb-[120px]">
         {/* ── Experiments ─────────────────────────────────────────── */}
         <section className="flex flex-col gap-4">
           <span className={mutedLabel}>

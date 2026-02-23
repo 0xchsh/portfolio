@@ -2,7 +2,7 @@
 
 import { Squircle } from '@squircle-js/react';
 import { cn } from '@/lib/utils';
-import { Download, Sun, Moon, FileText } from 'lucide-react';
+import { Download, FileText } from 'lucide-react';
 import type { Project } from '@/types/presentation';
 
 interface HeaderProps {
@@ -38,9 +38,9 @@ export function Header({
       {/* Logo */}
       <button onClick={onLogoClick} className="cursor-pointer shrink-0">
         <img
-          src="/images/pfp.gif"
+          src="/images/pfp.png"
           alt="Logo"
-          className="h-12 w-12 desktop:h-24 desktop:w-24 shrink-0 object-cover -scale-x-100 invert dark:invert-0 dark:brightness-150 -mt-1 desktop:-mt-2 transition-[filter] duration-200 ease"
+          className="h-12 w-12 desktop:h-24 desktop:w-24 shrink-0 object-cover -scale-x-100 invert -mt-1 desktop:-mt-2"
         />
       </button>
 
@@ -83,7 +83,7 @@ export function Header({
             <select
               value={currentProjectIndex}
               onChange={(e) => onProjectClick(Number(e.target.value))}
-              className="appearance-none bg-secondary text-secondary-foreground pl-3 pr-7 py-1.5 border-none outline-none text-sm font-medium cursor-pointer"
+              className="appearance-none bg-secondary text-secondary-foreground pl-3 pr-7 py-1.5 border-none outline-none text-sm cursor-pointer"
               style={{ borderRadius: 'inherit' }}
             >
               {projects.map((project, index) => (
@@ -107,30 +107,8 @@ export function Header({
         </Squircle>
       </div>
 
-      {/* Right: Theme toggle + Download */}
+      {/* Right: Download */}
       <div className="flex items-center gap-1 shrink-0">
-        <Squircle
-          asChild
-          cornerRadius={8}
-          cornerSmoothing={1}
-        >
-          <button
-            onClick={onToggleTheme}
-            className={cn(
-              'desktop:hidden flex items-center justify-center p-1.5 transition-colors cursor-pointer text-base leading-6',
-              'text-muted-foreground',
-              'hover:bg-accent hover:text-accent-foreground'
-            )}
-            aria-label="Toggle theme"
-          >
-            {theme === 'light' ? (
-              <Moon className="w-4 h-4 opacity-50" />
-            ) : (
-              <Sun className="w-4 h-4 opacity-50" />
-            )}
-          </button>
-        </Squircle>
-
         {/* Mobile: direct PDF download */}
         <Squircle
           asChild
