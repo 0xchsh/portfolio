@@ -128,11 +128,7 @@ export default async function Home() {
         {/* Bio */}
         <div className="mt-6 text-base leading-relaxed text-neutral-400">
           <p>
-            I&apos;m <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>Charles</a>, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use.
-          </p>
-
-          <p className="mt-4">
-            I&apos;m drawn to crypto and AI because they&apos;re both rails for freedom — crypto for financial autonomy, AI for creative autonomy. Both fields demand solving problems that didn&apos;t exist a year ago, and that&apos;s the work I find most interesting.
+            I&apos;m <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>Charles</a>, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use — especially in crypto and AI, where you&apos;re designing patterns for the first time.
           </p>
 
           <p className="mt-4">
