@@ -97,11 +97,12 @@ export function AnimatedNav() {
       </nav>
       <span
         className={cn(
-          'absolute left-0 right-0 top-full flex items-center justify-center gap-1 text-[10px] text-neutral-400 transition-all ease-out',
+          'absolute left-1/2 top-1/2 -translate-y-1/2 flex items-center gap-1 font-mono text-[10px] uppercase tracking-wide text-neutral-400 whitespace-nowrap transition-all ease-out',
           hovered
-            ? 'opacity-100 translate-y-1 duration-300'
-            : 'opacity-0 translate-y-0 duration-500 pointer-events-none',
+            ? 'opacity-100 translate-x-[6px] duration-100'
+            : 'opacity-0 translate-x-[2px] duration-100 pointer-events-none',
         )}
+        style={{ left: '100%' }}
       >
         <ArrowLeft size={10} weight="bold" />
         Use arrow keys to navigate
