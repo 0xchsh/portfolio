@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Agentation } from "agentation";
 import { SquircleNoScript } from "@squircle-js/react";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { AgentModeProvider } from "@/components/providers/AgentModeProvider";
 import { Toaster } from "sonner";
 import "./globals.css";
 
@@ -44,7 +45,9 @@ export default function RootLayout({
       >
         <SquircleNoScript />
         <ThemeProvider>
-          {children}
+          <AgentModeProvider>
+            {children}
+          </AgentModeProvider>
         </ThemeProvider>
         <Toaster
           position="top-center"

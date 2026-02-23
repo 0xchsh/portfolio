@@ -2,6 +2,7 @@ import { WeatherIcon } from '@/components/home/WeatherIcon';
 import { LiveClock } from '@/components/home/LiveClock';
 import { FooterTicker } from '@/components/shared/FooterTicker';
 import { AgentModeToggle } from '@/components/shared/AgentModeToggle';
+import { AgentModeOverlay } from '@/components/shared/AgentModeOverlay';
 import { KeyboardNav } from '@/components/home/KeyboardNav';
 import { AnimatedNav } from '@/components/shared/AnimatedNav';
 import { PageTransition } from '@/components/shared/PageTransition';
@@ -50,6 +51,7 @@ export async function PageShell({
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 flex flex-col">
+      <AgentModeOverlay />
       <KeyboardNav />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <header className="fixed top-0 left-0 right-0 z-20">
