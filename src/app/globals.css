@@ -202,23 +202,40 @@ body {
 }
 
 @keyframes badge-shimmer {
-  0% {
-    background-position: -100% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  0% { opacity: 0; left: -100%; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; left: 200%; }
+  100% { opacity: 0; left: 200%; }
 }
 
 .badge-shimmer {
-  background-image: linear-gradient(
-    100deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.25) 50%,
-    transparent 70%
-  );
-  background-size: 200% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent 20%, rgba(255, 255, 255, 0.3) 50%, transparent 80%);
   animation: badge-shimmer 3s ease-in-out infinite;
+  opacity: 0;
+}
+
+/* Sonner toast centering */
+[data-sonner-toaster][data-x-position="center"] {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] {
+  width: fit-content !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 @keyframes fade-slide-up {

@@ -56,6 +56,7 @@ export default function RootLayout({
               background: '#f0fdf4',
               border: '1px solid #bbf7d0',
               color: '#15803d',
+              padding: '8px 16px',
             },
           }}
         />
