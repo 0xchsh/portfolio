@@ -76,7 +76,7 @@ export async function PageShell({
       </PageTransition>
 
       {/* ── Footer ─────────────────────────────────────────────────────── */}
-      <footer className={staticFooter ? 'w-full z-10' : 'fixed bottom-0 left-0 right-0 z-10'}>
+      <footer className={staticFooter ? 'w-full z-10' : 'w-full z-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0'}>
         <div className="flex justify-between items-center p-4"
           style={{
             background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
