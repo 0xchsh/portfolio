@@ -52,7 +52,7 @@ export function MainContent({ section, className }: MainContentProps) {
     >
       <MockupGrid mockups={displayedSection.mockups} />
       {displayedSection.mockups.length === 0 && (
-        <h2 className="text-muted-foreground text-sm font-medium tracking-[-0.02em] max-w-[35rem] w-full">
+        <h2 className="text-muted-foreground text-sm tracking-[-0.02em] max-w-[35rem] w-full">
           {displayedSection.title}
         </h2>
       )}

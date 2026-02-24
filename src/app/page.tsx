@@ -4,6 +4,7 @@ import { XLogo, GithubLogo, EnvelopeSimple } from '@phosphor-icons/react/dist/ss
 import { Avatar } from '@/components/home/Avatar';
 import { CommitGraph } from '@/components/home/CommitGraph';
 import { CopyEmail } from '@/components/home/CopyEmail';
+import { FadeIn } from '@/components/shared/FadeIn';
 import { PageShell } from '@/components/shared/PageShell';
 
 export const revalidate = 3600;
@@ -117,45 +118,52 @@ export default async function Home() {
     <PageShell>
       <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-16 desktop:pt-20 pb-[120px]">
         {/* Avatar */}
-        <Avatar />
+        <FadeIn>
+          <Avatar />
+        </FadeIn>
 
         {/* Bio */}
-        <div className="mt-6 text-base leading-relaxed text-neutral-400">
-          <p>
-            I&apos;m <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>Charles</a>, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use — especially in crypto and AI, where you&apos;re designing patterns for the first time.
-          </p>
+        <FadeIn delay={50}>
+          <div className="mt-6 text-base leading-relaxed text-neutral-400">
+            <p>
+              I&apos;m <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>Charles</a>, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use — especially in crypto and AI, where you&apos;re designing patterns for the first time.
+            </p>
 
-          <p className="mt-4">
-            I&apos;m currently the Lead Product Designer at{' '}
-            <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className={linkClass}>Stellar</a>.
-          </p>
+            <p className="mt-4">
+              I&apos;m currently the Lead Product Designer at{' '}
+              <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className={linkClass}>Stellar</a>.
+            </p>
 
-          <p className="mt-4">
-            Previously at{' '}
-            <a href="https://warbyparker.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Warby Parker</a>
-            ,{' '}
-            <a href="https://uber.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Uber</a>, and{' '}
-            <a href="https://weebly.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Weebly</a>. I do my best work iterating fast with talented engineers, staying close to the thing we&apos;re making.
-          </p>
+            <p className="mt-4">
+              Previously at{' '}
+              <a href="https://warbyparker.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Warby Parker</a>
+              ,{' '}
+              <a href="https://uber.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Uber</a>, and{' '}
+              <a href="https://weebly.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Weebly</a>. I do my best work iterating fast with talented engineers, staying close to the thing we&apos;re making.
+            </p>
 
-          <p className="mt-4">
-            If you&apos;re working on something interesting, let&apos;s chat. Send me an email at{' '}
-            <CopyEmail className={linkClass} /> or dm on{' '}
-            <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>x.com</a>
-          </p>
-        </div>
+            <p className="mt-4">
+              If you&apos;re working on something interesting, let&apos;s chat. Send me an email at{' '}
+              <CopyEmail className={linkClass} /> or dm on{' '}
+              <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>x.com</a>
+            </p>
+          </div>
+        </FadeIn>
 
         {/* ── Commit Activity ─────────────────────────────────────────── */}
-        <section className="mt-12 flex flex-col gap-2">
-          <div className="flex items-center gap-2">
-            <span className={mutedLabel}>Last 30 Days</span>
-            <Dot />
-            <span className={mutedLabel}>{commitData.totalCommits} Commits</span>
-          </div>
-          <CommitGraph days={commitData.days} />
-        </section>
+        <FadeIn delay={100}>
+          <section className="mt-12 flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <span className={mutedLabel}>Last 30 Days</span>
+              <Dot />
+              <span className={mutedLabel}>{commitData.totalCommits} Commits</span>
+            </div>
+            <CommitGraph days={commitData.days} />
+          </section>
+        </FadeIn>
 
         {/* ── Experience ──────────────────────────────────────────────── */}
+        <FadeIn delay={150}>
         <section className="mt-12 flex flex-col gap-4">
           <span className={mutedLabel}>Experience</span>
           <div className="flex flex-col gap-2">
@@ -175,8 +183,10 @@ export default async function Home() {
             ))}
           </div>
         </section>
+        </FadeIn>
 
         {/* ── Projects ────────────────────────────────────────────────── */}
+        <FadeIn delay={200}>
         <section className="mt-12 flex flex-col gap-4">
           <span className={mutedLabel}>Projects</span>
           <div className="flex flex-col gap-2">
@@ -186,7 +196,7 @@ export default async function Home() {
                   <Image src={item.icon} alt={item.name} width={16} height={16} className="shrink-0" />
                   <div className="flex items-center gap-1">
                     {item.href === '#' ? (
-                      <span className="text-sm text-neutral-950 font-medium underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-400 hover:line-through hover:decoration-solid hover:decoration-neutral-400 transition-colors duration-100 cursor-default">{item.name}</span>
+                      <span className="text-sm text-neutral-950 font-medium underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-400 hover:decoration-neutral-400 transition-colors duration-100 cursor-default">{item.name}</span>
                     ) : (
                       <a
                         href={item.href}
@@ -216,8 +226,10 @@ export default async function Home() {
             ))}
           </div>
         </section>
+        </FadeIn>
 
         {/* ── Connect ────────────────────────────────────────────────── */}
+        <FadeIn delay={250}>
         <section className="mt-12 flex flex-col gap-4">
           <span className={mutedLabel}>Connect</span>
           <div className="flex flex-col gap-2">
@@ -247,6 +259,7 @@ export default async function Home() {
             </div>
           </div>
         </section>
+        </FadeIn>
       </main>
     </PageShell>
   );

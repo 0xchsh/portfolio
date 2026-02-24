@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { FadeIn } from '@/components/shared/FadeIn';
 import { PageShell } from '@/components/shared/PageShell';
 import feedData from '@/data/feed.json';
 
@@ -15,6 +16,7 @@ export default function Feed() {
     <PageShell>
       <main className="flex-1 w-full max-w-[420px] mx-auto px-4 pt-16 desktop:pt-20 pb-[120px]">
         {/* ── Experiments ─────────────────────────────────────────── */}
+        <FadeIn>
         <section className="flex flex-col gap-4">
           <span className={mutedLabel}>
             Exper<span className="text-neutral-300">/</span>Ai
@@ -39,8 +41,10 @@ export default function Feed() {
             ))}
           </div>
         </section>
+        </FadeIn>
 
         {/* ── Lists ───────────────────────────────────────────────── */}
+        <FadeIn delay={50}>
         <section className="mt-12 flex flex-col gap-4">
           <span className={mutedLabel}>Lists</span>
           <div className="flex flex-col gap-2">
@@ -57,8 +61,10 @@ export default function Feed() {
             ))}
           </div>
         </section>
+        </FadeIn>
 
         {/* ── Writing ─────────────────────────────────────────────── */}
+        <FadeIn delay={100}>
         <section className="mt-12 flex flex-col gap-4">
           <span className={mutedLabel}>Writing</span>
           <div className="flex flex-col gap-2">
@@ -75,8 +81,10 @@ export default function Feed() {
             ))}
           </div>
         </section>
+        </FadeIn>
 
         {/* ── Art ──────────────────────────────────────────────────── */}
+        <FadeIn delay={150}>
         <section className="mt-12 flex flex-col gap-8">
           <span className={mutedLabel}>Art</span>
           {feedData.art.map((project) => (
@@ -150,6 +158,7 @@ export default function Feed() {
             </div>
           ))}
         </section>
+        </FadeIn>
       </main>
     </PageShell>
   );

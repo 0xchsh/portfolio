@@ -20,7 +20,7 @@ function SingleMedia({ src, alt, blurDataURL }: { src: string; alt: string; blur
       src={src}
       alt={alt}
       fill
-      className="object-cover"
+      className="object-cover object-top"
       sizes="(max-width: 640px) 100vw, (max-width: 860px) 50vw, 33vw"
       placeholder={blurDataURL ? 'blur' : 'empty'}
       blurDataURL={blurDataURL || undefined}

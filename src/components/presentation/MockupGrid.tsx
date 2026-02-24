@@ -1,10 +1,13 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { MockupFrame } from './MockupFrame';
 import type { Mockup } from '@/types/presentation';
+
+const layoutTransition = { type: 'spring', stiffness: 300, damping: 30 } as const;
 
 function MobileCarousel({
   mockups,
@@ -150,6 +153,23 @@ interface MockupGridProps {
 
 export function MockupGrid({ mockups, className }: MockupGridProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isWide, setIsWide] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const wideMq = window.matchMedia('(min-width: 1280px)');
+    const motionMq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsWide(wideMq.matches);
+    setReducedMotion(motionMq.matches);
+    const wideHandler = (e: MediaQueryListEvent) => setIsWide(e.matches);
+    const motionHandler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    wideMq.addEventListener('change', wideHandler);
+    motionMq.addEventListener('change', motionHandler);
+    return () => {
+      wideMq.removeEventListener('change', wideHandler);
+      motionMq.removeEventListener('change', motionHandler);
+    };
+  }, []);
 
   // Reset carousel index when mockups change
   useEffect(() => {
@@ -161,6 +181,8 @@ export function MockupGrid({ mockups, className }: MockupGridProps) {
   const isSingle = mockups.length === 1;
   const allMobile = mockups.every((m) => m.type === 'mobile');
   const mobileCount = mockups.filter((m) => m.type === 'mobile').length;
+  const animatesAtWide = allMobile && mobileCount >= 3;
+  const transition = reducedMotion ? { duration: 0 } : layoutTransition;
 
   // Desktop: show grid for multiple mobile mockups, single for others
   // Mobile viewport: carousel for multiple, full-width for single
@@ -175,16 +197,27 @@ export function MockupGrid({ mockups, className }: MockupGridProps) {
   return (
     <div className={cn('w-full', className)}>
       {/* Desktop: grid layout */}
-      <div
+      <motion.div
+        layout
         className={cn(
           'hidden desktop:flex flex-wrap justify-center gap-4',
-          allMobile && mobileCount >= 3 ? 'max-w-[520px] wide:max-w-none wide:flex-nowrap mx-auto wide:mx-0' : allMobile ? 'flex-nowrap' : 'gap-6'
+          !animatesAtWide && allMobile && 'flex-nowrap',
+          !allMobile && 'gap-6'
         )}
+        style={animatesAtWide ? {
+          maxWidth: isWide ? 'none' : '520px',
+          flexWrap: isWide ? 'nowrap' : 'wrap',
+          marginLeft: isWide ? '0' : 'auto',
+          marginRight: isWide ? '0' : 'auto',
+        } : undefined}
+        transition={transition}
       >
         {mockups.map((mockup) => (
-          <MockupFrame key={mockup.id} mockup={mockup} />
+          <motion.div key={mockup.id} layout transition={transition}>
+            <MockupFrame mockup={mockup} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Mobile: carousel with swipe */}
       <MobileCarousel

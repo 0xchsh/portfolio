@@ -61,7 +61,7 @@ export function Description({ text, className }: DescriptionProps) {
         const body = newlineIndex !== -1 ? section.slice(newlineIndex + 1).trim() : '';
         return (
           <div key={i} className="flex flex-col gap-1">
-            <h3 className="text-muted-foreground text-xs desktop:text-sm font-medium uppercase tracking-wider">
+            <h3 className="text-muted-foreground text-xs desktop:text-sm uppercase tracking-wider">
               {title}
             </h3>
             {body && (

@@ -18,7 +18,7 @@ export function MobileSection({ section, className }: MobileSectionProps) {
         className
       )}
     >
-      <h2 className="text-muted-foreground text-base font-medium tracking-[-0.02em] max-w-[35rem] w-full">
+      <h2 className="text-muted-foreground text-base tracking-[-0.02em] max-w-[35rem] w-full">
         {section.title}
       </h2>
 
