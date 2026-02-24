@@ -8,7 +8,7 @@ import {
   HandWaving, GridNine, Rows, ArrowLeft, ArrowRight,
 } from '@phosphor-icons/react';
 
-type PhosphorIcon = ComponentType<{ size?: number; weight?: string }>;
+type PhosphorIcon = ComponentType<{ size?: number; weight?: 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone' }>;
 
 const navItems: { href: string; label: string; icon: PhosphorIcon }[] = [
   { href: '/', label: 'About', icon: HandWaving },

@@ -196,7 +196,7 @@ export default async function Home() {
                   <Image src={item.icon} alt={item.name} width={16} height={16} className="shrink-0" />
                   <div className="flex items-center gap-1">
                     {item.href === '#' ? (
-                      <span className="text-sm text-neutral-950 font-medium underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-400 hover:decoration-neutral-400 transition-colors duration-100 cursor-default">{item.name}</span>
+                      <span className="text-sm text-neutral-950 font-medium">{item.name}</span>
                     ) : (
                       <a
                         href={item.href}
