@@ -37,7 +37,7 @@ async function getLatestCommit() {
   }
 }
 
-const mutedLabel = 'text-xs uppercase text-neutral-400 tracking-wide';
+const mutedLabel = 'text-sm uppercase text-neutral-400 tracking-wide';
 
 export async function PageShell({
   children,

@@ -220,7 +220,7 @@ export default async function Home() {
                   {item.badge && (
                     <span className="text-[10px] font-semibold uppercase tracking-wide text-white bg-blue-500 px-1.5 rounded-[6px] leading-[20px]">{item.badge}</span>
                   )}
-                  <span className="text-sm text-neutral-400">{item.year}</span>
+                  {!item.badge && <span className="text-sm text-neutral-400">{item.year}</span>}
                 </div>
               </div>
             ))}

@@ -10,7 +10,7 @@ export function AgentModeToggle({ variant = 'light' }: { variant?: 'light' | 'da
   return (
     <button
       onClick={toggleAgentMode}
-      className={`flex items-center gap-1.5 text-xs tracking-wide transition-colors duration-150 cursor-pointer ${
+      className={`flex items-center gap-1.5 text-sm tracking-wide transition-colors duration-150 cursor-pointer ${
         isDark
           ? 'text-neutral-500 hover:text-neutral-300'
           : 'text-neutral-400 hover:text-neutral-600'
