@@ -55,10 +55,10 @@ export async function PageShell({
       <KeyboardNav />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <header className="fixed top-0 left-0 right-0 z-20">
-        <div className="flex justify-between items-start p-4"
+        <div className="flex justify-between items-start p-6"
           style={{
             background: 'linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
-            paddingBottom: '1rem',
+            paddingBottom: '1.5rem',
           }}
         >
           <AnimatedNav />
@@ -77,10 +77,10 @@ export async function PageShell({
 
       {/* ── Footer ─────────────────────────────────────────────────────── */}
       <footer className={staticFooter ? 'w-full z-10' : 'w-full z-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0'}>
-        <div className="flex justify-between items-center p-4"
+        <div className="flex justify-between items-center p-6"
           style={{
             background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
-            paddingTop: '1rem',
+            paddingTop: '1.5rem',
           }}
         >
           <AgentModeToggle />

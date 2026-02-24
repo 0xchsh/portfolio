@@ -107,10 +107,10 @@ export function MobileFrame({ src, alt, blurDataURL, transparent }: { src: strin
   );
 }
 
-// Grid masonry: grid-auto-rows=1px, gap=12px (gap-3)
-// span = ceil((contentHeight + gap) / (rowHeight + gap))
+// Grid masonry: grid-auto-rows=1px, row-gap=0, col-gap=24px
+// Span = content height + 24px visual row gap
 function computeSpan(height: number) {
-  return Math.ceil((height + 12) / 13);
+  return Math.round(height) + 24;
 }
 
 export function WorkCard({ item }: { item: WorkItem }) {
