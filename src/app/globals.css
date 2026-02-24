@@ -227,15 +227,11 @@ body {
 }
 
 /* Sonner toast centering */
-[data-sonner-toaster][data-x-position="center"] {
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-}
-
-[data-sonner-toaster] [data-sonner-toast] {
+[data-sonner-toaster][data-x-position="center"] [data-sonner-toast] {
   width: fit-content !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  right: 0 !important;
+  left: 0 !important;
+  margin: 0 auto !important;
 }
 
 @keyframes fade-slide-up {
