@@ -201,6 +201,26 @@ body {
   animation: shimmer 1.5s ease-in-out infinite;
 }
 
+@keyframes badge-shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.badge-shimmer {
+  background-image: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: badge-shimmer 3s ease-in-out infinite;
+}
+
 @keyframes fade-slide-up {
   from {
     opacity: 0;

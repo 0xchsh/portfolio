@@ -177,12 +177,18 @@ function DesktopNav() {
       </nav>
       <span
         className={cn(
-          'absolute left-1/2 top-1/2 -translate-y-1/2 flex items-center gap-1 font-mono text-[10px] uppercase tracking-wide text-neutral-400 whitespace-nowrap transition-all ease-out',
-          hovered
-            ? 'opacity-100 translate-x-[6px] duration-100'
-            : 'opacity-0 translate-x-[2px] duration-100 pointer-events-none',
+          'absolute top-1/2 flex items-center gap-1 font-mono text-[10px] uppercase tracking-wide text-neutral-400 whitespace-nowrap',
+          !hovered && 'pointer-events-none',
         )}
-        style={{ left: '100%' }}
+        style={{
+          left: '100%',
+          opacity: hovered ? 1 : 0,
+          transform: `translateY(-50%) translateX(${hovered ? '6px' : '2px'})`,
+          filter: hovered ? 'blur(0px)' : 'blur(5px)',
+          transition: hovered
+            ? 'opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1), transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1), filter 150ms cubic-bezier(0.215, 0.61, 0.355, 1)'
+            : 'opacity 100ms ease, transform 100ms ease, filter 100ms ease',
+        }}
       >
         <ArrowLeft size={10} weight="bold" />
         Use arrow keys to navigate

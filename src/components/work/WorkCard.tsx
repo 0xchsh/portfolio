@@ -6,12 +6,13 @@ import { Squircle } from '@squircle-js/react';
 import type { WorkItem } from '@/app/work/page';
 import { Lightbox } from './Lightbox';
 
-function SingleMedia({ src, alt, blurDataURL }: { src: string; alt: string; blurDataURL?: string | null }) {
+function SingleMedia({ src, alt, blurDataURL, objectPosition }: { src: string; alt: string; blurDataURL?: string | null; objectPosition?: string }) {
   const isVideo = src.endsWith('.mp4');
+  const pos = objectPosition || 'top';
 
   if (isVideo) {
     return (
-      <VideoWithBlur src={src} className="w-full h-full object-cover object-top" />
+      <VideoWithBlur src={src} className={`w-full h-full object-cover object-${pos}`} />
     );
   }
 
@@ -20,7 +21,8 @@ function SingleMedia({ src, alt, blurDataURL }: { src: string; alt: string; blur
       src={src}
       alt={alt}
       fill
-      className="object-cover object-top"
+      className="object-cover"
+      style={{ objectPosition: pos }}
       sizes="(max-width: 640px) 100vw, (max-width: 860px) 50vw, 33vw"
       placeholder={blurDataURL ? 'blur' : 'empty'}
       blurDataURL={blurDataURL || undefined}
@@ -152,7 +154,7 @@ export function WorkCard({ item }: { item: WorkItem }) {
           }}
           onClick={() => setIsOpen(true)}
         >
-          <SingleMedia src={item.src[0]} alt={item.title} blurDataURL={item.blurDataURLs?.[0]} />
+          <SingleMedia src={item.src[0]} alt={item.title} blurDataURL={item.blurDataURLs?.[0]} objectPosition={item.objectPosition} />
         </div>
       ) : (
         <div
