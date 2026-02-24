@@ -63,26 +63,6 @@ export default function Feed() {
         </section>
         </FadeIn>
 
-        {/* ── Writing ─────────────────────────────────────────────── */}
-        <FadeIn delay={100}>
-        <section className="mt-12 flex flex-col gap-4">
-          <span className={mutedLabel}>Writing</span>
-          <div className="flex flex-col gap-2">
-            {feedData.writing.map((item) => (
-              <div key={item.slug} className="flex items-center gap-2">
-                <a href={item.href} className={`text-sm ${linkClass}`}>
-                  {item.title}
-                </a>
-                <span className="text-sm text-neutral-400">·</span>
-                <span className="text-sm text-neutral-400">
-                  {item.slug}
-                </span>
-              </div>
-            ))}
-          </div>
-        </section>
-        </FadeIn>
-
         {/* ── Art ──────────────────────────────────────────────────── */}
         <FadeIn delay={150}>
         <section className="mt-12 flex flex-col gap-8">
@@ -91,9 +71,14 @@ export default function Feed() {
             <div key={project.title} className="flex flex-col gap-4">
               {/* Title + year */}
               <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-neutral-950">
+                <a
+                  href={project.collectionHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-sm font-semibold ${linkClass}`}
+                >
                   {project.title}
-                </span>
+                </a>
                 <Dot />
                 <span className="text-sm text-neutral-400 shrink-0">
                   {project.year}
@@ -119,42 +104,22 @@ export default function Feed() {
               </div>
 
               {/* Metadata */}
-              <div className="flex flex-col gap-1">
+              <div className="grid grid-cols-2 gap-2">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-neutral-400 w-8">Size</span>
-                  <span className="text-xs text-neutral-950 font-medium">
+                  <span className="text-sm text-neutral-400">Size</span>
+                  <span className="text-sm text-neutral-950 font-medium">
                     {project.size}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-neutral-400 w-8">Type</span>
-                  <div className="flex items-center gap-1">
-                    {project.type.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs text-neutral-950 font-medium"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                  <span className="text-sm text-neutral-400">Type</span>
+                  <span className="text-sm text-neutral-950 font-medium">
+                    {project.type.join(', ')}
+                  </span>
                 </div>
               </div>
 
               {/* Link */}
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-neutral-400">
-                  See full collection
-                </span>
-                <a
-                  href={project.collectionHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-sm ${linkClass}`}
-                >
-                  {project.collectionLabel}
-                </a>
-              </div>
             </div>
           ))}
         </section>
