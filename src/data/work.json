@@ -173,7 +173,7 @@
     "src": [
       "/work/lab/00 cover-laboratory.png"
     ],
-    "link": null,
+    "link": "https://lab.stellar.org",
     "logo": null,
     "ratio": "16:9",
     "blurDataURLs": [
@@ -186,7 +186,7 @@
     "src": [
       "/work/lab/01 account.mp4"
     ],
-    "link": null,
+    "link": "https://lab.stellar.org",
     "logo": null,
     "ratio": "16:9",
     "blurDataURLs": [
@@ -199,7 +199,7 @@
     "src": [
       "/work/lab/02 transaction.mp4"
     ],
-    "link": null,
+    "link": "https://lab.stellar.org",
     "logo": null,
     "ratio": "16:9",
     "blurDataURLs": [

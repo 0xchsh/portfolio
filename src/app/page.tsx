@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { XLogo, GithubLogo, EnvelopeSimple } from '@phosphor-icons/react/dist/ssr';
+import { Avatar } from '@/components/home/Avatar';
 import { CommitGraph } from '@/components/home/CommitGraph';
 import { CopyEmail } from '@/components/home/CopyEmail';
 import { PageShell } from '@/components/shared/PageShell';
@@ -82,10 +83,10 @@ const projects = [
   { name: 'ClawPanel', desc: 'Dashboard for OpenClaw', year: '2026', href: '#', icon: '/icons/clawpanel.svg', badge: 'In progress' },
   { name: 'Snack', desc: 'List curation tool', year: '2025', href: 'https://snack.xyz', icon: '/icons/snack.svg' },
   { name: 'rgb.fun', desc: 'NFT collection (16,777,216)', year: '2024', href: 'https://rgb.fun', icon: '/icons/rgb.svg' },
-  { name: 'rgb.so', desc: 'Onchain media', year: '2023', href: 'https://rgb.so', icon: '/icons/rgb.svg' },
-  { name: 'Noundation', desc: 'Community design system', year: '2022', href: '#', icon: '/icons/noundation.svg' },
-  { name: 'Noundation UI', desc: 'Framer design kit', year: '2022', href: '#', icon: '/icons/noundation.svg' },
-  { name: 'Rat Labs', desc: 'Onchain product studio', year: '2021', href: '#', icon: '/icons/ratlabs.svg' },
+  { name: 'rgb.so', desc: 'Onchain media', year: '2023', href: 'https://rgbso.framer.website/', icon: '/icons/rgb.svg' },
+  { name: 'Noundation', desc: 'Community design system', year: '2022', href: 'https://noundation.framer.website/', icon: '/icons/noundation.svg' },
+  { name: 'Noundation UI', desc: 'Framer design kit', year: '2022', href: 'https://noundationkit.framer.website/landing', icon: '/icons/noundation.svg' },
+  { name: 'Rat Labs', desc: 'Onchain product studio', year: '2021', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg' },
 ];
 
 function FarcasterIcon({ size = 16 }: { size?: number }) {
@@ -116,13 +117,7 @@ export default async function Home() {
     <PageShell>
       <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-16 desktop:pt-20 pb-[120px]">
         {/* Avatar */}
-        <Image
-          src="/images/pfp.png"
-          alt="Charles Shin"
-          width={48}
-          height={48}
-          className="rounded-full"
-        />
+        <Avatar />
 
         {/* Bio */}
         <div className="mt-6 text-base leading-relaxed text-neutral-400">
@@ -191,7 +186,7 @@ export default async function Home() {
                   <Image src={item.icon} alt={item.name} width={16} height={16} className="shrink-0" />
                   <div className="flex items-center gap-1">
                     {item.href === '#' ? (
-                      <span className="text-sm text-neutral-400 font-medium">{item.name}</span>
+                      <span className="text-sm text-neutral-950 font-medium underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-400 hover:line-through hover:decoration-solid hover:decoration-neutral-400 transition-colors duration-100 cursor-default">{item.name}</span>
                     ) : (
                       <a
                         href={item.href}
