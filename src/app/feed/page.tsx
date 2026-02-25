@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Flask, ListBullets } from '@phosphor-icons/react/dist/ssr';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { PageShell } from '@/components/shared/PageShell';
 import feedData from '@/data/feed.json';
@@ -25,6 +26,7 @@ export default function Feed() {
           <div className="flex flex-col gap-2">
             {feedData.experiments.map((item) => (
               <div key={item.number} className="flex items-center gap-2">
+                <Flask size={14} weight="regular" className="text-neutral-400 shrink-0" />
                 <a
                   href={item.href}
                   target="_blank"
@@ -49,15 +51,17 @@ export default function Feed() {
           <span className={mutedLabel}>Lists</span>
           <div className="flex flex-col gap-2">
             {feedData.lists.map((item) => (
-              <a
-                key={item.title}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`text-sm ${linkClass}`}
-              >
-                {item.title}
-              </a>
+              <div key={item.title} className="flex items-center gap-2">
+                <ListBullets size={14} weight="regular" className="text-neutral-400 shrink-0" />
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-sm ${linkClass}`}
+                >
+                  {item.title}
+                </a>
+              </div>
             ))}
           </div>
         </section>
