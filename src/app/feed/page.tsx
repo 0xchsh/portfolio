@@ -66,7 +66,7 @@ export default function Feed() {
 
         {/* ── Lists ───────────────────────────────────────────────── */}
         <FadeIn delay={50}>
-        <section className="mt-12 flex flex-col gap-4">
+        <section className="mt-8 flex flex-col gap-4">
           <span className={mutedLabel}>Lists</span>
           <div className="flex flex-col gap-2">
             {feedData.lists.map((item) => (
@@ -88,7 +88,7 @@ export default function Feed() {
 
         {/* ── Art ──────────────────────────────────────────────────── */}
         <FadeIn delay={150}>
-        <section className="mt-12 flex flex-col gap-8">
+        <section className="mt-8 flex flex-col gap-8">
           <span className={mutedLabel}>Art</span>
           {feedData.art.map((project) => (
             <div key={project.title} className="flex flex-col gap-4">

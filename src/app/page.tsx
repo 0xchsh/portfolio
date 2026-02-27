@@ -152,7 +152,7 @@ export default async function Home() {
 
         {/* ── Commit Activity ─────────────────────────────────────────── */}
         <FadeIn delay={100}>
-          <section className="mt-12 flex flex-col gap-2">
+          <section className="mt-8 flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className={mutedLabel}>Last 30 Days</span>
               <Dot />
@@ -164,7 +164,7 @@ export default async function Home() {
 
         {/* ── Experience ──────────────────────────────────────────────── */}
         <FadeIn delay={150}>
-        <section className="mt-12 flex flex-col gap-4">
+        <section className="mt-8 flex flex-col gap-4">
           <span className={mutedLabel}>Experience</span>
           <div className="flex flex-col gap-2">
             {experience.map((item) => (
@@ -187,7 +187,7 @@ export default async function Home() {
 
         {/* ── Projects ────────────────────────────────────────────────── */}
         <FadeIn delay={200}>
-        <section className="mt-12 flex flex-col gap-4">
+        <section className="mt-8 flex flex-col gap-4">
           <span className={mutedLabel}>Projects</span>
           <div className="flex flex-col gap-2">
             {projects.map((item) => (
@@ -230,7 +230,7 @@ export default async function Home() {
 
         {/* ── Connect ────────────────────────────────────────────────── */}
         <FadeIn delay={250}>
-        <section className="mt-12 flex flex-col gap-4">
+        <section className="mt-8 flex flex-col gap-4">
           <span className={mutedLabel}>Connect</span>
           <div className="flex flex-col gap-2">
             {connect.map((item) => (
