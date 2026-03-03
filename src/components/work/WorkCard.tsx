@@ -1,12 +1,11 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Squircle } from '@squircle-js/react';
 import type { WorkItem } from '@/app/work/page';
-import { Lightbox } from './Lightbox';
 
-function SingleMedia({ src, alt, blurDataURL, objectPosition }: { src: string; alt: string; blurDataURL?: string | null; objectPosition?: string }) {
+export function SingleMedia({ src, alt, blurDataURL, objectPosition }: { src: string; alt: string; blurDataURL?: string | null; objectPosition?: string }) {
   const isVideo = src.endsWith('.mp4');
   const pos = objectPosition || 'top';
 
@@ -116,8 +115,6 @@ function computeSpan(height: number) {
 export function WorkCard({ item }: { item: WorkItem }) {
   const contentRef = useRef<HTMLDivElement>(null);
   const [span, setSpan] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
-
   useEffect(() => {
     const el = contentRef.current;
     if (!el) return;
@@ -137,9 +134,8 @@ export function WorkCard({ item }: { item: WorkItem }) {
       {/* Media */}
       {isMobileSingle ? (
         <div
-          className="rounded-xl overflow-hidden flex items-center justify-center bg-neutral-100 border border-neutral-200 sm:cursor-pointer"
+          className="rounded-xl overflow-hidden flex items-center justify-center bg-neutral-100 border border-neutral-200"
           style={{ aspectRatio: '1 / 1' }}
-          onClick={() => setIsOpen(true)}
         >
           <div className="w-[36%]">
             <MobileFrame src={item.src[0]} alt={item.title} blurDataURL={item.blurDataURLs?.[0]} />
@@ -147,20 +143,18 @@ export function WorkCard({ item }: { item: WorkItem }) {
         </div>
       ) : isSingle ? (
         <div
-          className="rounded-xl overflow-hidden relative border border-neutral-200 sm:cursor-pointer"
+          className="rounded-xl overflow-hidden relative border border-neutral-200"
           style={{
             aspectRatio: '16 / 9',
             backgroundColor: '#f5f5f5',
           }}
-          onClick={() => setIsOpen(true)}
         >
           <SingleMedia src={item.src[0]} alt={item.title} blurDataURL={item.blurDataURLs?.[0]} objectPosition={item.objectPosition} />
         </div>
       ) : (
         <div
-          className="rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200 sm:cursor-pointer"
+          className="rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200"
           style={{ aspectRatio: '16 / 9' }}
-          onClick={() => setIsOpen(true)}
         >
           <div className="h-full flex items-center justify-center gap-3 px-10 py-8">
             {item.src.map((src, j) => (
@@ -202,7 +196,6 @@ export function WorkCard({ item }: { item: WorkItem }) {
           </>
         )}
       </div>
-      <Lightbox item={item} isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
     </div>
   );
