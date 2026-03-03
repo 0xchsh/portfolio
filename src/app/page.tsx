@@ -32,16 +32,20 @@ async function getCommitData() {
     const events = responses.flat();
     if (!Array.isArray(events)) return { days: [] as CommitDay[], totalCommits: 0 };
 
+    const TZ = 'America/Chicago';
+    const toLocalDate = (d: Date) =>
+      d.toLocaleDateString('en-CA', { timeZone: TZ }); // en-CA gives YYYY-MM-DD
+
     const now = new Date();
     const commitsByDay = new Map<string, { count: number; repos: Set<string> }>();
     for (let i = 29; i >= 0; i--) {
       const d = new Date(now.getTime() - i * 86_400_000);
-      commitsByDay.set(d.toISOString().split('T')[0], { count: 0, repos: new Set() });
+      commitsByDay.set(toLocalDate(d), { count: 0, repos: new Set() });
     }
 
     for (const event of events) {
       if (event.type === 'PushEvent') {
-        const date = new Date(event.created_at).toISOString().split('T')[0];
+        const date = toLocalDate(new Date(event.created_at));
         const entry = commitsByDay.get(date);
         if (entry) {
           entry.count += event.payload?.commits?.length || event.payload?.size || 1;
