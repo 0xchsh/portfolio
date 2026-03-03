@@ -228,10 +228,10 @@ export function WorkStack({ items }: { items: WorkItem[] }) {
   // Keyboard handler
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+      if (e.key === 'ArrowDown') {
         e.preventDefault();
         navigate(1);
-      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+      } else if (e.key === 'ArrowUp') {
         e.preventDefault();
         navigate(-1);
       }
