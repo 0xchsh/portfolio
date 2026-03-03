@@ -150,11 +150,20 @@ const STACK_CONFIG = [
 ];
 const HIDDEN_CONFIG = { scale: 0.88, translateY: -50, blur: 6, opacity: 0, z: 0 };
 
+const STORAGE_KEY = 'work-stack-index';
+
+function getStoredIndex(max: number): number {
+  try {
+    const v = parseInt(sessionStorage.getItem(STORAGE_KEY) || '0', 10);
+    return v >= 0 && v < max ? v : 0;
+  } catch { return 0; }
+}
+
 export function WorkStack({ items }: { items: WorkItem[] }) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(() => getStoredIndex(items.length));
   const [isAnimating, setIsAnimating] = useState(false);
   const [infoAnimating, setInfoAnimating] = useState(false);
-  const [displayIndex, setDisplayIndex] = useState(0);
+  const [displayIndex, setDisplayIndex] = useState(() => getStoredIndex(items.length));
   const containerRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useRef(false);
 
@@ -162,12 +171,11 @@ export function WorkStack({ items }: { items: WorkItem[] }) {
     reducedMotion.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }, []);
 
-  // Lock body scroll
+  // Persist index to sessionStorage
   useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = prev; };
-  }, []);
+    try { sessionStorage.setItem(STORAGE_KEY, String(activeIndex)); } catch {}
+  }, [activeIndex]);
+
 
   const navigate = useCallback((direction: 1 | -1) => {
     if (isAnimating) return;
