@@ -171,30 +171,25 @@ export function WorkStack({ items }: { items: WorkItem[] }) {
     reducedMotion.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }, []);
 
-  // Persist index to sessionStorage
-  useEffect(() => {
-    try { sessionStorage.setItem(STORAGE_KEY, String(activeIndex)); } catch {}
-  }, [activeIndex]);
-
+  function setIndex(next: number) {
+    setActiveIndex(next);
+    try { sessionStorage.setItem(STORAGE_KEY, String(next)); } catch {}
+  }
 
   const navigate = useCallback((direction: 1 | -1) => {
     if (isAnimating) return;
     setIsAnimating(true);
-
-    // Blur out the info bar
     setInfoAnimating(true);
 
     const next = (activeIndex + direction + items.length) % items.length;
-    setActiveIndex(next);
+    setIndex(next);
 
-    // Swap info text mid-transition
     const swapDelay = reducedMotion.current ? 0 : 80;
     setTimeout(() => {
       setDisplayIndex(next);
       requestAnimationFrame(() => setInfoAnimating(false));
     }, swapDelay);
 
-    // Unlock after transition
     const unlockDelay = reducedMotion.current ? 0 : DURATION;
     setTimeout(() => setIsAnimating(false), unlockDelay);
   }, [isAnimating, activeIndex, items.length]);
@@ -203,7 +198,7 @@ export function WorkStack({ items }: { items: WorkItem[] }) {
     if (isAnimating || index === activeIndex) return;
     setIsAnimating(true);
     setInfoAnimating(true);
-    setActiveIndex(index);
+    setIndex(index);
 
     const swapDelay = reducedMotion.current ? 0 : 80;
     setTimeout(() => {
