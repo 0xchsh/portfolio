@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import {
-  Spinner, CookingPot, Chalkboard, SpeakerHigh, CursorClick,
-  Sliders, ShoppingCart, Globe, Palette, ListBullets,
+  Spinner, Flask, Terminal, Robot, ListBullets,
 } from '@phosphor-icons/react/dist/ssr';
 import type { ComponentType } from 'react';
 import { FadeIn } from '@/components/shared/FadeIn';
@@ -17,15 +16,9 @@ const linkClass =
   'text-neutral-950 font-medium underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-500 hover:decoration-neutral-400 transition-colors duration-100';
 
 const experimentIcons: Record<string, ComponentType<{ size?: number; weight?: 'regular' }>> = {
-  'Unicode loaders': Spinner,
-  'Recipes': CookingPot,
-  'Whiteboard': Chalkboard,
-  'Noise machine': SpeakerHigh,
-  'Promptless UI': CursorClick,
-  'Midjourney controls': Sliders,
-  'Shopping list': ShoppingCart,
-  'Timezones': Globe,
-  'Websafe colors': Palette,
+  'Rat Labs': Flask,
+  'Clawpanel': Terminal,
+  'Otto': Robot,
 };
 
 export default function Feed() {

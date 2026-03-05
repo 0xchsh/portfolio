@@ -1,19 +1,13 @@
 {
   "experiments": [
-    { "title": "Unicode loaders", "number": "009", "href": "https://chsh-009.vercel.app/" },
-    { "title": "Recipes", "number": "008", "href": "https://chsh-008.vercel.app/" },
-    { "title": "Whiteboard", "number": "007", "href": "https://chsh-007.vercel.app/" },
-    { "title": "Noise machine", "number": "006", "href": "https://chsh-006.vercel.app/" },
-    { "title": "Promptless UI", "number": "005", "href": "https://chsh-005.vercel.app/" },
-    { "title": "Midjourney controls", "number": "004", "href": "https://chsh-004.vercel.app/" },
-    { "title": "Shopping list", "number": "003", "href": "https://chsh-003.vercel.app/" },
-    { "title": "Timezones", "number": "002", "href": "https://chsh-002.vercel.app/" },
-    { "title": "Websafe colors", "number": "001", "href": "https://chsh-001.vercel.app/" }
+    { "title": "Rat Labs", "number": "003", "href": "#" },
+    { "title": "Clawpanel", "number": "002", "href": "#" },
+    { "title": "Otto", "number": "001", "href": "#" }
   ],
   "lists": [
-    { "title": "Must-have software", "href": "https://app.snack.xyz/charles/T773dJ7t" },
-    { "title": "Must-have hardware", "href": "https://app.snack.xyz/charles/kJwtD9E9" },
-    { "title": "Must-listen mixes", "href": "https://app.snack.xyz/charles/T9SqGbhs" }
+    { "title": "Must-Have Software", "href": "https://app.snack.xyz/charles/T773dJ7t" },
+    { "title": "Must-Have Hardware", "href": "https://app.snack.xyz/charles/kJwtD9E9" },
+    { "title": "Must-Listen Mixes", "href": "https://app.snack.xyz/charles/T9SqGbhs" }
   ],
   "writing": [
     { "title": "Introduction to RGB", "slug": "article-001", "href": "/posts/article-001" },
