@@ -9,7 +9,7 @@
     "logo": null,
     "ratio": "16:9",
     "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABxElEQVR4nAG5AUb+AA8AHAAAAAAAAgkAExMGGxgMJisXQkgkamIzkm04pGYymWYym3k9tI9M05xU5nc+sAAUBSQNBhgtGT9RL2xvRZB4SZyDUK2KUrl8RKp9QLafVOm2Yv+nV/R/Qb95QLhoNp0AIA8zNh9JdEeWsnHm1oj/2Yv/x37/o2PalVPQp1ry2Hb//43//4v/33n/jErUXC+MADQbTHVHmr969uWU//Cb/+KR/7509p9e05BPy6RY7tZ0/+J6/9p2/8ps/5xR6lMmgABIJW11QKKIT76UVciUV8X/7P/mvf/qxP//6v//2f/7tP+5YP+yXf+gVPKBP8JLIngAqlr9xGr/tGD/n1TphkXIbTmnViuEQR1iQR1idDqyj0jckEnaiEXOeTu7XyqWViiIAL9l/9d0/79l/6dX+YhFzm01plMmgjYXXzsYY18qlmkxo2YwoWEsmFUkiEEabFAlgAByN7OBP8JyOK9lMJ1UJoY9GmguEVEmDEMyE1k/GGpBGmxBGmw5F2MzEVgrDE0yD1QAJwxJKwxNJwxJIgk+HAc4GAMzFgEtGAMzGgU2HAc4HQc8HAc4HAc4GgU2GAMzGgU29N2+klPSpIkAAAAASUVORK5CYII="
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPklEQVR4nGP4RyJgGAgND+690dNuYBDKf3DvDVEatm28ZKTfyCiWtGndaWJtYGAIZmBwuHXjMVEa8APaawAAYyCbNwzzC/UAAAAASUVORK5CYII="
     ]
   },
   {
@@ -91,19 +91,6 @@
   },
   {
     "title": "Snack",
-    "description": "List curation tool",
-    "src": [
-      "/work/snack/00 cover-snack.webp"
-    ],
-    "link": "https://snack.xyz",
-    "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABeElEQVR4nB2NTUiTAQCGH+oWeIkuhQaSQgRRhxKKDhF0lf4udYkKSehQMoYUBVEuEDoYCTZKJCSiHxMs6lI2qEsEA03zJxshKp85TMfmJn7bE9/gObwvvA8vb/WbpvS99uotPav7tUH3apPW5d00JxNlRsPaP3JPX+kLfaYPNa5ndF9VqNcd69YsyXjIl3WGS4xscKlkt/Zo0igktK16crzi9qJbgur6c4nBAq/zpEo057yht7WzbFfog6KJNWM5T2QlUyG9wcciA3n6c/StMlSg/lelOfB0xnNj5ZZ0GPsefgjs+FFp/1k5MhLyMk/vKj0rEcmVqPJujTeFyO5a5s4S7Yu0BVwNuFbl8gKtC9z8y/1luv/xNAfxRVrmOTXLsQwHZtgzTeMEDVPsmqJ2ksZpjmY4P0cs4G6WRBaaZtg5ydZRNqdgEPogCY+hH4bgK3VjHP7NyVkuzEcmNcPwHB5BB8ShFS5WuQLXoROesG2A3Z84lObg+H9Cz+2UsAuwPgAAAABJRU5ErkJggg=="
-    ]
-  },
-  {
-    "title": "Snack",
     "description": "Create list",
     "src": [
       "/work/snack/01 create-list.mp4"
@@ -139,19 +126,6 @@
     "ratio": "16:9",
     "blurDataURLs": [
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAmElEQVR4nK2OUQ0CMRBE18W6WAM1UCH9AkzUQR2MgyEBB10flbAWILkmhLvAcR/M32zmZZ+IyONAIgLAGGO1BlBr9e47pLyX1hqAiDCzWSNiDxhLNpdYM1sgpVRK8e7enWRrbWO4Ary7iKjqBACUUgB8BUiqas759aHWSvJ/SpfTWUTM7KjS/XZVVTMjOYEfSiTTkmnyUekJD2CzYM/3xkUAAAAASUVORK5CYII="
-    ]
-  },
-  {
-    "title": "Laboratory",
-    "description": "Stellar developer tools",
-    "src": [
-      "/work/lab/00 cover-laboratory.webp"
-    ],
-    "link": "https://lab.stellar.org",
-    "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABxElEQVR4nAG5AUb+AIVWqqN50rKG4b2S68eZ682c6cSX4LaQ2amK05mBzY50wIRfqXVBjWIjbU8EWE8PXwBfO5CTZru0gtXOleXcou3Zpu/OqO/Dp+24oOWyktWnd7iRUpJmJW86AFUiAEgsAVMAOyZ8dE2erXG715TZ6aPr67D24rb52rH20qXlxYjCpF6aYCRxFQBYAABUAABLBgBQACUecUgvhI1Wnsd8veqe3Pav7vSy8/Gx6uOe07Jpo2MseAANbQAPbgARbAANYBgKVgA6LXgtJnpRNIeUYKPSk8z/2///2P7/8f/swuzAo9iNgssyRaMeNpA6OYg1J3A2G18ARzR5JyN2ExdzOyyFc1ainXy6qIfCfmGoUUWZSU6mUl+yRk6iNTiKKyZ0MRlhQCBfAE4zfjQgdQoNaAAPbwYaeR4ohSsyjUBEnWFesXVwvWZgr0dCkzs0gz8vdk0xcVQwbABrRpRnRp9VOZJFMYpAMolNRJpmWamLc72je8amc8KRY7R+WadtV51qV5RmUoRiSHoAd1OjimC8jGnCjG3CjXbHmYHNsY3Y0JXg4pTg45Dd1o3Yxo3RrYjFkX+0d26ba1yRELTWC2RW0ZgAAAAASUVORK5CYII="
     ]
   },
   {
@@ -245,17 +219,16 @@
     ]
   },
   {
-    "title": "Caddy",
-    "description": "Predict the game",
+    "title": "Rat Labs",
+    "description": "Onchain product studio",
     "src": [
-      "/work/misc/caddy-logo.webp"
+      "/work/misc/ratlabs.webp"
     ],
-    "link": null,
+    "link": "https://ratlabs.xyz",
     "logo": null,
     "ratio": "16:9",
-    "objectPosition": "center",
     "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABYElEQVR4nC2QSyiEYRiFnyhkJZFbiqyEjRjXlEahyIok10g2FFMIC5eUCGXBZEHIRspGooSMQfiRZtwaZuGyYlxKyaVX35d6OovTOae3F2ckp+CMVJyCgdL7fGQmTY6qxVYsS2aZM4k1XsZjv9vhAHZgF/bgEFwmZDBErpvE0yu3LWLUymaxLOfJolnmM367gjiPUp0TcITyWIAsZsrrgDz2i61OZnLEmqqYTJGpdLEm/3SE81zOdQLHcJOCLOTIXL6nPuDCjDMLdwFvdf5fbTHSE/dPdzQ2ffdzBZ5K71WYBnlwrIf7uapzryrMwzAMY9qfhQXAnY30ebmzWYEl7Y5ANzRBFZRAERRqLYVO4KOR9wafbdiANVjWM9MwAUO62QrNum+BUeDT4nuWqNJbgdh92EdhBOCMUBj6e5uwijrhAHgqYztMpY0YLpO4y+Wlhk+L8l0mjCBVsOuVfXAE8wfyfqHWKwP2MAAAAABJRU5ErkJggg=="
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABA0lEQVR4nH2PwYqDMBRFQ63Y1sakQYyLLFxJKQX3UprFQLZDNtkFESGLARGy9TvFH3DrL8hQ7QidGXp4i3cv78K7wHF3vg9hgBAmbwYGyIeB4+7AQ/zAOTfGSCmrqpJSCiGKokiSZD1AmDwDhBBKadu2fd8Pw2Ct7bpumqZxHJVSlFJCyDOQ3+5aa2NMXdfW2rIsv2aaprHWNjN1XRtjtNb57Q7Olyvn/GNGKWWM+ZwRQizmCuf8fLm+dEjTNM9zxlgcxxjj1X/pAAO0asZYlmWU0iiKlqd/EyDgeoe/Psb434DrHQAAm63j7f0jhPhxiU4YncIwCsNo2Rd/7x+3jgfA5hv5JUlYD0KKzAAAAABJRU5ErkJggg=="
     ]
   }
 ]
