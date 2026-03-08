@@ -1,7 +1,7 @@
 import { FadeIn } from '@/components/shared/FadeIn';
 import { PageShell } from '@/components/shared/PageShell';
 import { WorkCard } from '@/components/work/WorkCard';
-import { WorkStack } from '@/components/work/WorkStack';
+import { WorkDesktop } from '@/components/work/WorkDesktop';
 import workItems from '@/data/work.json';
 
 export type WorkItem = {
@@ -20,9 +20,9 @@ export default function Work() {
 
   return (
     <PageShell staticFooter>
-      {/* Desktop: stacked card navigator */}
+      {/* Desktop: stacked card navigator or canvas */}
       <div className="hidden desktop:block flex-1">
-        <WorkStack items={items} />
+        <WorkDesktop items={items} />
       </div>
 
       {/* Mobile: vertical list */}
