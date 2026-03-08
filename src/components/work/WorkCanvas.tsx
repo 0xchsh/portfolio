@@ -23,9 +23,45 @@ function shuffleItems<T>(items: T[]): T[] {
 }
 
 const CARD_WIDTH = 380;
-const GAP_X = 48;
-const GAP_Y = 56;
+const GAP = 48;
 const COLS = 4;
+
+// Estimate card height based on its content type
+function estimateCardHeight(item: WorkItem): number {
+  const isSingle = item.src.length === 1;
+  const isMobileSingle = isSingle && item.ratio === '1:1';
+  const infoBarHeight = 32;
+
+  if (isMobileSingle) {
+    // Square aspect ratio
+    return CARD_WIDTH + infoBarHeight;
+  }
+  // 16:9 aspect ratio (both single desktop and multi-phone)
+  return Math.round(CARD_WIDTH * (9 / 16)) + infoBarHeight;
+}
+
+function computeMasonryPositions(items: WorkItem[]) {
+  const colWidth = CARD_WIDTH + GAP;
+  // Track the bottom edge of each column
+  const colBottoms = new Array(COLS).fill(0);
+  const positions: { x: number; y: number; h: number }[] = [];
+
+  for (let i = 0; i < items.length; i++) {
+    // Place in the shortest column
+    const col = colBottoms.indexOf(Math.min(...colBottoms));
+    const x = col * colWidth;
+    const y = colBottoms[col];
+    const h = estimateCardHeight(items[i]);
+
+    positions.push({ x, y, h });
+    colBottoms[col] = y + h + GAP;
+  }
+
+  const tileWidth = COLS * colWidth;
+  const tileHeight = Math.max(...colBottoms);
+
+  return { positions, tileWidth, tileHeight };
+}
 
 export function WorkCanvas({ items }: { items: WorkItem[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -36,28 +72,10 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
 
   const shuffled = useMemo(() => shuffleItems(items), [items]);
 
-  const { cellPositions, tileWidth, tileHeight } = useMemo(() => {
-    const rows = Math.ceil(shuffled.length / COLS);
-    const colWidth = CARD_WIDTH + GAP_X;
-    const cardHeight = Math.round(CARD_WIDTH * (9 / 16)) + 40;
-    const rowHeight = cardHeight + GAP_Y;
-
-    const positions: { x: number; y: number }[] = [];
-    for (let i = 0; i < shuffled.length; i++) {
-      const col = i % COLS;
-      const row = Math.floor(i / COLS);
-      positions.push({
-        x: col * colWidth,
-        y: row * rowHeight,
-      });
-    }
-
-    return {
-      cellPositions: positions,
-      tileWidth: COLS * colWidth,
-      tileHeight: rows * rowHeight,
-    };
-  }, [shuffled.length]);
+  const { positions, tileWidth, tileHeight } = useMemo(
+    () => computeMasonryPositions(shuffled),
+    [shuffled],
+  );
 
   const wrap = useCallback(
     (ox: number, oy: number) => ({
@@ -156,8 +174,8 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
               key={i}
               className="absolute"
               style={{
-                left: cellPositions[i].x,
-                top: cellPositions[i].y,
+                left: positions[i].x,
+                top: positions[i].y,
                 width: CARD_WIDTH,
               }}
             >

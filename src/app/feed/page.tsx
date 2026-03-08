@@ -38,14 +38,18 @@ export default function Feed() {
               return (
               <div key={item.number} className="flex items-center gap-2">
                 <span className="text-neutral-400 shrink-0"><Icon size={14} weight="regular" /></span>
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-sm ${linkClass}`}
-                >
-                  {item.title}
-                </a>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-sm ${linkClass}`}
+                  >
+                    {item.title}
+                  </a>
+                ) : (
+                  <span className="text-sm text-neutral-950 font-medium">{item.title}</span>
+                )}
                 <Dot />
                 <span className="text-sm text-neutral-400 shrink-0">
                   {item.number}

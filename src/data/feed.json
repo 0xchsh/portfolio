@@ -1,8 +1,8 @@
 {
   "experiments": [
-    { "title": "Rat Labs", "number": "003", "href": "#" },
-    { "title": "Clawpanel", "number": "002", "href": "#" },
-    { "title": "Otto", "number": "001", "href": "#" }
+    { "title": "Otto", "number": "003", "href": null },
+    { "title": "ClawPanel", "number": "002", "href": null },
+    { "title": "Rat Labs", "number": "001", "href": "https://www.ratlabs.xyz/" }
   ],
   "lists": [
     { "title": "Must-Have Software", "href": "https://app.snack.xyz/charles/T773dJ7t" },
