@@ -117,54 +117,28 @@
   },
   {
     "title": "Snack",
-    "description": "Edit list",
+    "description": "Dashboard",
     "src": [
-      "/work/snack/02 edit-list.mp4"
+      "/work/snack/02 dashboard.webp"
     ],
     "link": "https://snack.xyz",
     "logo": null,
     "ratio": "16:9",
     "blurDataURLs": [
-      null
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAn0lEQVR4nI2PywnDQAxE1YXv28Y2oEJcgTvYDraDgeSWw4TE4AJWkIOLUAluwYE9mE3An4cugnloJCKyXsDdrZi7/6QB5JwBHJjSLq/nQ1VTZVkWksMwWLFdYZrGUAFgxawYK7vCPH+2aDvrnpBSEpGu6zYNwNGF+w0hBFUleakSyVjJOV+qRFJEVHWLnlwY38/2gXPB3WOMfd+3wl+lL7DMsTkYprDbAAAAAElFTkSuQmCC"
     ]
   },
   {
     "title": "Snack",
-    "description": "Menu",
+    "description": "Stats",
     "src": [
-      "/work/snack/03 menu.mp4"
+      "/work/snack/05 stats.webp"
     ],
     "link": "https://snack.xyz",
     "logo": null,
     "ratio": "16:9",
     "blurDataURLs": [
-      null
-    ]
-  },
-  {
-    "title": "Snack",
-    "description": "Navigation",
-    "src": [
-      "/work/snack/04 nav.mp4"
-    ],
-    "link": "https://snack.xyz",
-    "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      null
-    ]
-  },
-  {
-    "title": "Snack",
-    "description": "Website",
-    "src": [
-      "/work/snack/05 website.mp4"
-    ],
-    "link": "https://snack.xyz",
-    "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      null
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAmElEQVR4nK2OUQ0CMRBE18W6WAM1UCH9AkzUQR2MgyEBB10flbAWILkmhLvAcR/M32zmZZ+IyONAIgLAGGO1BlBr9e47pLyX1hqAiDCzWSNiDxhLNpdYM1sgpVRK8e7enWRrbWO4Ary7iKjqBACUUgB8BUiqas759aHWSvJ/SpfTWUTM7KjS/XZVVTMjOYEfSiTTkmnyUekJD2CzYM/3xkUAAAAASUVORK5CYII="
     ]
   },
   {
