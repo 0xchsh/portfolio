@@ -13,7 +13,6 @@ type PhosphorIcon = ComponentType<{ size?: number; weight?: 'thin' | 'light' | '
 const navItems: { href: string; label: string; icon: PhosphorIcon }[] = [
   { href: '/', label: 'About', icon: HandWaving },
   { href: '/work', label: 'Work', icon: GridNine },
-  { href: '/feed', label: 'Feed', icon: Rows },
 ];
 
 function MobileNav() {
