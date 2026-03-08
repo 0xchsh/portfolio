@@ -250,6 +250,16 @@ body {
   animation: fade-slide-up 0.4s ease-out forwards;
 }
 
+.header-gradient {
+  background: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%);
+}
+
+@media (min-width: 860px) {
+  .header-gradient {
+    background: transparent;
+  }
+}
+
 @keyframes confetti-burst {
   0% {
     opacity: 1;

@@ -111,7 +111,7 @@ function Pagination({ total, current, onNavigate }: { total: number; current: nu
   useEffect(() => { setHovered(null); }, [current]);
 
   return (
-    <div className="flex items-center mr-6">
+    <div className="flex items-center">
       <div className="flex flex-col items-center" style={{ gap: 2 }}>
         {Array.from({ length: total }).map((_, i) => {
           const active = i === current;
@@ -263,10 +263,12 @@ export function WorkStack({ items }: { items: WorkItem[] }) {
       className="fixed inset-0 flex items-center justify-center px-6"
       style={{ paddingTop: 72, paddingBottom: 72 }}
     >
-      <div className="flex items-center max-w-[860px] w-full">
-        {/* Pagination */}
+      {/* Pagination — pinned to left edge */}
+      <div className="fixed left-8 top-1/2 -translate-y-1/2 z-30">
         <Pagination total={items.length} current={activeIndex} onNavigate={goTo} />
+      </div>
 
+      <div className="flex items-center max-w-[860px] w-full">
         {/* Stack + Info */}
         <div className="flex-1 min-w-0">
           {/* Card stack */}

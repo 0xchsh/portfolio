@@ -1,7 +1,7 @@
 import { FadeIn } from '@/components/shared/FadeIn';
 import { PageShell } from '@/components/shared/PageShell';
 import { WorkCard } from '@/components/work/WorkCard';
-import { WorkDesktop } from '@/components/work/WorkDesktop';
+import { WorkCanvas } from '@/components/work/WorkCanvas';
 import workItems from '@/data/work.json';
 
 export type WorkItem = {
@@ -19,10 +19,10 @@ export default function Work() {
   const items = workItems as WorkItem[];
 
   return (
-    <PageShell staticFooter>
-      {/* Desktop: stacked card navigator or canvas */}
+    <PageShell staticFooter transparentBg hideFooter>
+      {/* Desktop: infinite canvas */}
       <div className="hidden desktop:block flex-1">
-        <WorkDesktop items={items} />
+        <WorkCanvas items={items} />
       </div>
 
       {/* Mobile: vertical list */}

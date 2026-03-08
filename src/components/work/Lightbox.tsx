@@ -68,11 +68,14 @@ export function Lightbox({
   isOpen,
   onClose,
 }: {
-  item: WorkItem;
+  item: WorkItem | null;
   isOpen: boolean;
   onClose: () => void;
 }) {
   const isMobile = useIsMobile();
+  const lastItem = useRef<WorkItem | null>(null);
+  if (item) lastItem.current = item;
+  const displayItem = item || lastItem.current;
 
   // Close on Escape
   const handleKeyDown = useCallback(
@@ -94,11 +97,11 @@ export function Lightbox({
     };
   }, [isOpen, isMobile, handleKeyDown]);
 
-  // Don't render on mobile
-  if (isMobile) return null;
+  // Don't render on mobile or if no item ever set
+  if (isMobile || !displayItem) return null;
 
-  const isSingle = item.src.length === 1;
-  const isMobileSingle = isSingle && item.ratio === '1:1';
+  const isSingle = displayItem.src.length === 1;
+  const isMobileSingle = isSingle && displayItem.ratio === '1:1';
 
   return createPortal(
     <AnimatePresence>
@@ -113,6 +116,10 @@ export function Lightbox({
           {/* Backdrop */}
           <motion.div
             className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             onClick={onClose}
           />
 
@@ -128,23 +135,23 @@ export function Lightbox({
             {isMobileSingle ? (
               <div className="max-h-[calc(100%-2rem)] pointer-events-auto" style={{ height: '60%', aspectRatio: '9 / 19.5' }}>
                 <MobileFrame
-                  src={item.src[0]}
-                  alt={item.title}
-                  blurDataURL={item.blurDataURLs?.[0]}
+                  src={displayItem.src[0]}
+                  alt={displayItem.title}
+                  blurDataURL={displayItem.blurDataURLs?.[0]}
                   transparent
                 />
               </div>
             ) : isSingle ? (
               <div className="max-h-[calc(100%-2rem)] max-w-full pointer-events-auto" style={{ height: '70%', aspectRatio: '16 / 9' }}>
                 <DesktopFrame
-                  src={item.src[0]}
-                  alt={item.title}
-                  blurDataURL={item.blurDataURLs?.[0]}
+                  src={displayItem.src[0]}
+                  alt={displayItem.title}
+                  blurDataURL={displayItem.blurDataURLs?.[0]}
                 />
               </div>
             ) : (
               <div className="flex items-center justify-center gap-4 max-h-[calc(100%-2rem)] pointer-events-auto" style={{ height: '70%' }}>
-                {item.src.map((src, j) => (
+                {displayItem.src.map((src, j) => (
                   <div
                     key={j}
                     className="h-full"
@@ -152,8 +159,8 @@ export function Lightbox({
                   >
                     <MobileFrame
                       src={src}
-                      alt={`${item.title} ${j + 1}`}
-                      blurDataURL={item.blurDataURLs?.[j]}
+                      alt={`${displayItem.title} ${j + 1}`}
+                      blurDataURL={displayItem.blurDataURLs?.[j]}
                       transparent
                     />
                   </div>
@@ -163,9 +170,9 @@ export function Lightbox({
 
             {/* Info */}
             <div className="flex items-center gap-1 mt-3 pointer-events-auto">
-              {item.logo && (
+              {displayItem.logo && (
                 <Image
-                  src={item.logo}
+                  src={displayItem.logo}
                   alt=""
                   width={14}
                   height={14}
@@ -173,13 +180,13 @@ export function Lightbox({
                 />
               )}
               <span className="text-sm font-medium text-white">
-                {item.title}
+                {displayItem.title}
               </span>
-              {item.description && (
+              {displayItem.description && (
                 <>
                   <span className="text-sm text-neutral-400">·</span>
                   <span className="text-sm text-neutral-400">
-                    {item.description}
+                    {displayItem.description}
                   </span>
                 </>
               )}

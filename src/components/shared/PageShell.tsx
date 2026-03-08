@@ -42,27 +42,26 @@ const mutedLabel = 'text-sm uppercase text-neutral-400 tracking-wide';
 export async function PageShell({
   children,
   staticFooter,
+  transparentBg,
+  hideFooter,
 }: {
   currentPath?: string;
   children: React.ReactNode;
   staticFooter?: boolean;
+  transparentBg?: boolean;
+  hideFooter?: boolean;
 }) {
   const [weather, commitHash] = await Promise.all([getWeather(), getLatestCommit()]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 flex flex-col">
+    <div className={`min-h-screen flex flex-col ${transparentBg ? '' : 'bg-gradient-to-b from-white to-neutral-50'}`}>
       <AgentModeOverlay />
       <KeyboardNav />
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <header className="fixed top-0 left-0 right-0 z-20">
-        <div className="flex justify-between items-start p-6"
-          style={{
-            background: 'linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
-            paddingBottom: '1.5rem',
-          }}
-        >
+      <header className="fixed top-0 left-0 right-0 z-20 pointer-events-none">
+        <div className="flex justify-between items-start p-6 [&>*]:pointer-events-auto">
           <AnimatedNav />
-          <div className="flex items-center gap-2 text-sm">
+          <div className="flex items-center gap-2 text-sm bg-white/60 backdrop-blur-xl rounded-full px-3 py-1.5 border border-white/40 shadow-sm">
             <span className="text-neutral-400">Chicago, IL</span>
             <WeatherIcon code={weather.code} />
             <LiveClock />
@@ -76,20 +75,22 @@ export async function PageShell({
       </PageTransition>
 
       {/* ── Footer ─────────────────────────────────────────────────────── */}
-      <footer className={staticFooter ? 'w-full z-10' : 'w-full z-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0'}>
-        <div className="flex justify-between items-center p-6"
-          style={{
-            background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
-            paddingTop: '1.5rem',
-          }}
-        >
-          <AgentModeToggle />
-          <div className="flex items-center gap-3">
-            <FooterTicker commitHash={commitHash} />
-            <span className={mutedLabel}>신 © 2026</span>
+      {!hideFooter && (
+        <footer className={staticFooter ? 'w-full z-10' : 'w-full z-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0'}>
+          <div className="flex justify-between items-center p-6"
+            style={{
+              background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
+              paddingTop: '1.5rem',
+            }}
+          >
+            <AgentModeToggle />
+            <div className="flex items-center gap-3">
+              <FooterTicker commitHash={commitHash} />
+              <span className={mutedLabel}>신 © 2026</span>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      )}
     </div>
   );
 }

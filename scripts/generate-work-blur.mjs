@@ -13,7 +13,7 @@ for (const item of data) {
   const blurDataURLs = [];
 
   for (const src of item.src) {
-    if (src.endsWith('.png') || src.endsWith('.jpg') || src.endsWith('.jpeg')) {
+    if (src.endsWith('.png') || src.endsWith('.jpg') || src.endsWith('.jpeg') || src.endsWith('.webp')) {
       const filePath = join(ROOT, 'public', src);
       const buffer = await readFile(filePath);
       const { base64 } = await getPlaiceholder(buffer, { size: 16 });
