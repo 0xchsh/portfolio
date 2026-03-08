@@ -4,7 +4,6 @@ import { useRef, useState, useEffect, useMemo, useCallback } from 'react';
 import type { WorkItem } from '@/app/work/page';
 import { WorkCard } from './WorkCard';
 
-// Seeded random for deterministic shuffle
 function seededRandom(seed: number) {
   let s = seed;
   return () => {
@@ -23,10 +22,10 @@ function shuffleItems<T>(items: T[]): T[] {
   return shuffled;
 }
 
-const CARD_WIDTH = 400;
-const GAP = 24;
+const CARD_WIDTH = 380;
+const GAP_X = 48;
+const GAP_Y = 56;
 const COLS = 4;
-const AUTO_SPEED = 0.3; // px per frame
 
 export function WorkCanvas({ items }: { items: WorkItem[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -34,30 +33,22 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const isDragging = useRef(false);
   const dragStart = useRef({ x: 0, y: 0, offsetX: 0, offsetY: 0 });
-  const autoScrolling = useRef(true);
-  const rafRef = useRef<number>(0);
-  const resumeTimer = useRef<ReturnType<typeof setTimeout>>();
 
   const shuffled = useMemo(() => shuffleItems(items), [items]);
 
-  // Build a grid layout: cols x rows, with freeform jitter
   const { cellPositions, tileWidth, tileHeight } = useMemo(() => {
-    const rand = seededRandom(42);
     const rows = Math.ceil(shuffled.length / COLS);
-    const colWidth = CARD_WIDTH + GAP;
-    // Estimate card height as 16:9 + info bar
-    const cardHeight = Math.round(CARD_WIDTH * (9 / 16)) + 48;
-    const rowHeight = cardHeight + GAP;
+    const colWidth = CARD_WIDTH + GAP_X;
+    const cardHeight = Math.round(CARD_WIDTH * (9 / 16)) + 40;
+    const rowHeight = cardHeight + GAP_Y;
 
     const positions: { x: number; y: number }[] = [];
     for (let i = 0; i < shuffled.length; i++) {
       const col = i % COLS;
       const row = Math.floor(i / COLS);
-      const jitterX = (rand() - 0.5) * 40;
-      const jitterY = (rand() - 0.5) * 30;
       positions.push({
-        x: col * colWidth + jitterX,
-        y: row * rowHeight + jitterY,
+        x: col * colWidth,
+        y: row * rowHeight,
       });
     }
 
@@ -68,7 +59,6 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
     };
   }, [shuffled.length]);
 
-  // Wrap offset so tiling works seamlessly
   const wrap = useCallback(
     (ox: number, oy: number) => ({
       x: ((ox % tileWidth) + tileWidth) % tileWidth,
@@ -77,26 +67,20 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
     [tileWidth, tileHeight],
   );
 
-  // Auto-scroll animation
+  // Center on mount
   useEffect(() => {
-    const tick = () => {
-      if (autoScrolling.current && !isDragging.current) {
-        offsetRef.current.x -= AUTO_SPEED * 0.5;
-        offsetRef.current.y -= AUTO_SPEED;
-        setOffset({ ...offsetRef.current });
-      }
-      rafRef.current = requestAnimationFrame(tick);
-    };
-    rafRef.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, []);
+    const el = containerRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const startX = (rect.width - tileWidth) / 2;
+    const startY = (rect.height - tileHeight) / 2;
+    offsetRef.current = { x: startX, y: startY };
+    setOffset({ x: startX, y: startY });
+  }, [tileWidth, tileHeight]);
 
-  // Pointer drag
   const onPointerDown = (e: React.PointerEvent) => {
     if ((e.target as HTMLElement).closest('a')) return;
     isDragging.current = true;
-    autoScrolling.current = false;
-    clearTimeout(resumeTimer.current);
     dragStart.current = {
       x: e.clientX,
       y: e.clientY,
@@ -108,52 +92,37 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
 
   const onPointerMove = (e: React.PointerEvent) => {
     if (!isDragging.current) return;
-    const dx = e.clientX - dragStart.current.x;
-    const dy = e.clientY - dragStart.current.y;
     offsetRef.current = {
-      x: dragStart.current.offsetX + dx,
-      y: dragStart.current.offsetY + dy,
+      x: dragStart.current.offsetX + (e.clientX - dragStart.current.x),
+      y: dragStart.current.offsetY + (e.clientY - dragStart.current.y),
     };
     setOffset({ ...offsetRef.current });
   };
 
   const onPointerUp = () => {
     isDragging.current = false;
-    // Resume auto-scroll after 2s of inactivity
-    clearTimeout(resumeTimer.current);
-    resumeTimer.current = setTimeout(() => {
-      autoScrolling.current = true;
-    }, 2000);
   };
 
-  // Wheel to pan (overrides auto-scroll temporarily)
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
-      autoScrolling.current = false;
-      clearTimeout(resumeTimer.current);
       offsetRef.current = {
         x: offsetRef.current.x - e.deltaX,
         y: offsetRef.current.y - e.deltaY,
       };
       setOffset({ ...offsetRef.current });
-      resumeTimer.current = setTimeout(() => {
-        autoScrolling.current = true;
-      }, 2000);
     };
-
     el.addEventListener('wheel', onWheel, { passive: false });
     return () => el.removeEventListener('wheel', onWheel);
   }, []);
 
-  // Compute which tile copies we need to fill the viewport
-  const tiles = useMemo(() => {
-    if (!containerRef.current) return [{ tx: 0, ty: 0 }, { tx: 1, ty: 0 }, { tx: 0, ty: 1 }, { tx: 1, ty: 1 }, { tx: -1, ty: 0 }, { tx: 0, ty: -1 }, { tx: -1, ty: -1 }, { tx: 1, ty: -1 }, { tx: -1, ty: 1 }];
-    return [{ tx: 0, ty: 0 }, { tx: 1, ty: 0 }, { tx: 0, ty: 1 }, { tx: 1, ty: 1 }, { tx: -1, ty: 0 }, { tx: 0, ty: -1 }, { tx: -1, ty: -1 }, { tx: 1, ty: -1 }, { tx: -1, ty: 1 }];
-  }, []);
+  const tiles = [
+    { tx: -1, ty: -1 }, { tx: 0, ty: -1 }, { tx: 1, ty: -1 },
+    { tx: -1, ty: 0 },  { tx: 0, ty: 0 },  { tx: 1, ty: 0 },
+    { tx: -1, ty: 1 },  { tx: 0, ty: 1 },  { tx: 1, ty: 1 },
+  ];
 
   const wrapped = wrap(offset.x, offset.y);
 
