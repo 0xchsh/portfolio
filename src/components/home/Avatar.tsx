@@ -5,7 +5,6 @@ export function Avatar() {
     <div className="w-12 h-12 rounded-full overflow-hidden">
       <video
         autoPlay
-        loop
         muted
         playsInline
         poster="/images/pfp.png"
