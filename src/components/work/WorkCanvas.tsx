@@ -347,7 +347,7 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
             {cards.map((c, i) => (
               <div
                 key={i}
-                className="absolute cursor-pointer overflow-hidden"
+                className="absolute cursor-pointer overflow-hidden rounded-xl"
                 data-work-item={c.idx}
                 style={{
                   left: c.x,

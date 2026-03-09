@@ -130,9 +130,9 @@ export function WorkCardContent({ item }: { item: WorkItem }) {
       {isMobileSingle ? (
         <div
           className="rounded-xl overflow-hidden flex items-center justify-center bg-neutral-100 border border-neutral-200"
-          style={{ aspectRatio: '1 / 1' }}
+          style={{ aspectRatio: '16 / 9' }}
         >
-          <div className="w-[36%]">
+          <div className="h-[85%]" style={{ aspectRatio: '9 / 19.5' }}>
             <MobileFrame src={item.src[0]} alt={item.title} />
           </div>
         </div>
