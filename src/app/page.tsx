@@ -86,7 +86,7 @@ const experience = [
 
 const projects = [
   { name: 'ClawPanel', desc: 'Dashboard for OpenClaw', year: '2026', href: '#', icon: '/icons/clawpanel.svg', badge: 'In Progress' },
-  { name: 'Otto', desc: 'ChatGPT for your cars', year: '2026', href: '#', icon: '/icons/otto.svg', badge: 'In Progress' },
+  { name: 'Otto', desc: 'Ask anything about your cars', year: '2026', href: '#', icon: '/icons/otto.svg', badge: 'In Progress' },
   { name: 'Snack', desc: 'List curation tool', year: '2025', href: 'https://snack.xyz', icon: '/icons/snack.svg' },
   { name: 'Freighter', desc: 'Flagship Stellar wallet', year: '2025', href: 'https://freighter.app', icon: '/icons/freighter.svg' },
   { name: 'rgb.fun', desc: 'NFT collection (16,777,216)', year: '2024', href: 'https://rgb.fun', icon: '/icons/rgb.svg' },
