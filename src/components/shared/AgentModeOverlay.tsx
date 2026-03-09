@@ -70,7 +70,7 @@ If you're working on something interesting, let's chat. Send me an email at hi@c
 - Portfolio: ch.sh/work
 - Specialties: Product design, blockchain, AI interfaces, interaction design
 - Interests: Vibecoding, agentic workflows, automations, OpenClaw agents
-- In short: Design lead who ships fast with 8+ years of experience`;
+- In short: Design lead with 8+ years of experience, quick to adapt with any design tool, comfortable creating code via conversation`;
 
 function highlightLine(line: string, i: number) {
   // Headings: # or ##
