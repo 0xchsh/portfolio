@@ -121,7 +121,7 @@ export default async function Home() {
 
   return (
     <PageShell>
-      <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-24 desktop:pt-20 pb-[72px] sm:pb-[120px]">
+      <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-24 desktop:pt-20 pb-[72px] sm:pb-[120px] overflow-hidden">
         {/* Avatar */}
         <FadeIn>
           <Avatar />
@@ -173,13 +173,13 @@ export default async function Home() {
           <span className={mutedLabel}>Experience</span>
           <div className="flex flex-col gap-2">
             {experience.map((item) => (
-              <div key={item.name} className="flex items-center gap-2">
-                <div className="flex items-center gap-3 shrink-0">
+              <div key={item.name} className="flex items-center gap-2 min-w-0">
+                <div className="flex items-center gap-3 min-w-0 shrink-0">
                   <Image src={item.icon} alt={item.name} width={16} height={16} className="shrink-0" />
-                  <div className="flex items-center gap-1">
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" className={`text-sm ${linkClass}`}>{item.name}</a>
+                  <div className="flex items-center gap-1 min-w-0">
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className={`text-sm shrink-0 ${linkClass}`}>{item.name}</a>
                     <span className="text-sm text-neutral-400">·</span>
-                    <span className="text-sm text-neutral-400">{item.desc}</span>
+                    <span className="text-sm text-neutral-400 truncate">{item.desc}</span>
                   </div>
                 </div>
                 <Dot />
@@ -196,18 +196,18 @@ export default async function Home() {
           <span className={mutedLabel}>Projects</span>
           <div className="flex flex-col gap-2">
             {projects.map((item) => (
-              <div key={item.name} className="flex items-center gap-2">
-                <div className="flex items-center gap-3 shrink-0">
+              <div key={item.name} className="flex items-center gap-2 min-w-0">
+                <div className="flex items-center gap-3 min-w-0 shrink-0">
                   <Image src={item.icon} alt={item.name} width={16} height={16} className="shrink-0" />
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1 min-w-0">
                     {item.href === '#' ? (
-                      <span className="text-sm text-neutral-950 font-medium">{item.name}</span>
+                      <span className="text-sm text-neutral-950 font-medium shrink-0">{item.name}</span>
                     ) : (
                       <a
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`text-sm ${linkClass}`}
+                        className={`text-sm shrink-0 ${linkClass}`}
                       >
                         {item.name}
                       </a>
@@ -215,7 +215,7 @@ export default async function Home() {
                     {item.desc ? (
                       <>
                         <span className="text-sm text-neutral-400">·</span>
-                        <span className="text-sm text-neutral-400">{item.desc}</span>
+                        <span className="text-sm text-neutral-400 truncate">{item.desc}</span>
                       </>
                     ) : null}
                   </div>
@@ -244,8 +244,8 @@ export default async function Home() {
           <span className={mutedLabel}>Connect</span>
           <div className="flex flex-col gap-2">
             {connect.map((item) => (
-              <div key={item.name} className="flex items-center gap-2">
-                <div className="flex items-center gap-3 shrink-0">
+              <div key={item.name} className="flex items-center gap-2 min-w-0">
+                <div className="flex items-center gap-3 shrink-0 min-w-0">
                   <span className="text-neutral-950 shrink-0">
                     {item.icon === 'x' && <XLogo size={16} weight="bold" />}
                     {item.icon === 'github' && <GithubLogo size={16} weight="bold" />}
@@ -257,8 +257,8 @@ export default async function Home() {
                 <span className="text-sm text-neutral-400">{item.desc}</span>
               </div>
             ))}
-            <div className="flex items-center gap-2">
-              <div className="flex items-center gap-3 shrink-0">
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="flex items-center gap-3 shrink-0 min-w-0">
                 <span className="text-neutral-950 shrink-0">
                   <EnvelopeSimple size={16} weight="regular" />
                 </span>
