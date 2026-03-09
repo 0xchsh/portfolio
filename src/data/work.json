@@ -90,6 +90,16 @@
   },
   {
     "title": "Snack",
+    "description": "List curation tool",
+    "src": [
+      "/work/snack/00-snack-cover.png"
+    ],
+    "link": "https://snack.xyz",
+    "logo": "/icons/snack.svg",
+    "ratio": "16:9"
+  },
+  {
+    "title": "Snack",
     "description": "Create list",
     "src": [
       "/work/snack/01 create-list.mp4"
