@@ -25,9 +25,9 @@ export default function Work() {
       </div>
 
       {/* Mobile: vertical list */}
-      <main className="desktop:hidden flex-1 w-full px-6 pt-14 pb-16">
+      <main className="desktop:hidden flex-1 w-full px-6 pt-24 pb-16">
         <FadeIn>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-0">
             {items.map((item, i) => (
               <WorkCardContent key={`${item.title}-${i}`} item={item} />
             ))}

@@ -122,7 +122,7 @@ export default async function Home() {
 
   return (
     <PageShell>
-      <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-16 desktop:pt-20 pb-[72px] sm:pb-[120px]">
+      <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-24 desktop:pt-20 pb-[72px] sm:pb-[120px]">
         {/* Avatar */}
         <FadeIn>
           <Avatar />

@@ -162,7 +162,7 @@ export function WorkCardContent({ item }: { item: WorkItem }) {
       )}
 
       {/* Info */}
-      <div className="flex items-center gap-1 mt-2 mb-1">
+      <div className="flex items-center gap-1 mt-3 mb-6">
         {item.logo && (
           <Image
             src={item.logo}
