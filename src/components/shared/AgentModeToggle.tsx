@@ -16,7 +16,7 @@ export function AgentModeToggle({ variant = 'light' }: { variant?: 'light' | 'da
           : 'text-neutral-400 hover:text-neutral-600'
       }`}
     >
-      <span>For Agents</span>
+      <span>For agents</span>
       <div
         className={`relative w-6 h-3.5 rounded-full transition-colors duration-200 ${
           agentMode

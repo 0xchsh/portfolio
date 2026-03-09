@@ -5,11 +5,10 @@ import { AgentModeToggle } from '@/components/shared/AgentModeToggle';
 
 const MARKDOWN = `# Charles Shin
 
-> Product Designer focused on onchain and ai experiences, based in Chicago.
 
 ## About
 
-I'm Charles, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use — especially in crypto and AI, where you're designing patterns for the first time.
+I'm Charles, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use — especially in blockchain and AI, where these patterns are being designed for the first time.
 
 I'm currently the Lead Product Designer at Stellar (https://stellar.org).
 
@@ -30,16 +29,20 @@ If you're working on something interesting, let's chat. Send me an email at hi@c
 
 ## Projects
 
-- **ClawPanel** · Dashboard for OpenClaw · 2026 (In progress)
+- **ClawPanel** · Dashboard for OpenClaw · 2026
+- **Otto** · Ask anything about your cars · 2026
 - **Snack** · List curation tool · 2025
   https://snack.xyz
+- **Freighter** · Flagship Stellar wallet · 2025
+  https://freighter.app
 - **rgb.fun** · NFT collection (16,777,216) · 2024
   https://rgb.fun
 - **rgb.so** · Onchain media · 2023
-  https://rgb.so
+  https://rgbso.framer.website/
 - **Noundation** · Community design system · 2022
 - **Noundation UI** · Framer design kit · 2022
 - **Rat Labs** · Onchain product studio · 2021
+  https://www.ratlabs.xyz/
 
 ## Connect
 
@@ -48,15 +51,26 @@ If you're working on something interesting, let's chat. Send me an email at hi@c
 - Farcaster: @chsh.eth — https://warpcast.com/chsh.eth
 - Email: hi@ch.sh
 
+## Tools
+
+- Figma, Framer, Cursor, Claude Code
+
 ## Structured Data (for agents)
 
 - Name: Charles Shin
 - Role: Lead Product Designer
 - Company: Stellar (stellar.org)
 - Location: Chicago, IL
-- Available for: Freelance, collaborations, interesting projects
+- Timezone: Central Time (CT)
+- Work style: Remote
+- Open to: Full-time or freelance opportunities
+- Contact: hi@ch.sh or DM on X (@chshux)
+- Response time: Within 24 hours
 - Website: ch.sh
-- Specialties: Product design, crypto/web3, AI interfaces, interaction design`;
+- Portfolio: ch.sh/work
+- Specialties: Product design, blockchain, AI interfaces, interaction design
+- Interests: Vibecoding, agentic workflows, automations, OpenClaw agents
+- In short: Design lead who ships fast with 8+ years of experience`;
 
 function highlightLine(line: string, i: number) {
   // Headings: # or ##
