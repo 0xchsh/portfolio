@@ -3,7 +3,8 @@
     "title": "ClawPanel",
     "description": "Dashboard for OpenClaw",
     "src": [
-      "/work/clawpanel/clawpanel-01.png"
+      "/work/clawpanel/00-clawpanel-cover.png",
+      "/work/clawpanel/01-clawpanel.png"
     ],
     "link": null,
     "logo": "/icons/clawpanel.svg",
