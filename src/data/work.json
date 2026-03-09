@@ -3,11 +3,20 @@
     "title": "ClawPanel",
     "description": "Dashboard for OpenClaw",
     "src": [
-      "/work/clawpanel/00-clawpanel-cover.png",
-      "/work/clawpanel/01-clawpanel.png"
+      "/work/clawpanel/00-clawpanel-cover.webp"
     ],
     "link": null,
-    "logo": "/icons/clawpanel.svg",
+    "logo": null,
+    "ratio": "16:9"
+  },
+  {
+    "title": "ClawPanel",
+    "description": "Overview",
+    "src": [
+      "/work/clawpanel/01-clawpanel.webp"
+    ],
+    "link": null,
+    "logo": null,
     "ratio": "16:9"
   },
   {
@@ -19,7 +28,7 @@
       "/work/otto/otto-03.png"
     ],
     "link": null,
-    "logo": "/icons/otto.svg",
+    "logo": null,
     "ratio": "16:9"
   },
   {
@@ -92,10 +101,10 @@
     "title": "Snack",
     "description": "List curation tool",
     "src": [
-      "/work/snack/00-snack-cover.png"
+      "/work/snack/00-snack-cover.webp"
     ],
     "link": "https://snack.xyz",
-    "logo": "/icons/snack.svg",
+    "logo": null,
     "ratio": "16:9"
   },
   {

@@ -181,7 +181,7 @@ export function WeatherIcon({ code }: { code: number }) {
   else icon = <AnimatedSun />;
 
   return (
-    <span className="inline-flex">
+    <span className="inline-flex" style={{ mixBlendMode: 'normal', isolation: 'isolate' }}>
       {icon}
     </span>
   );

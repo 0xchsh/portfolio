@@ -17,6 +17,22 @@ function seededRandom(seed: number) {
 
 const COLS = 4;
 
+function isCover(item: WorkItem): boolean {
+  return item.src.some((s) => {
+    const name = s.split('/').pop() || '';
+    return name.startsWith('00-') || name.includes('cover');
+  });
+}
+
+function hasConflict(arr: WorkItem[], i: number, n: number): boolean {
+  if (n < 0 || n >= arr.length) return false;
+  // Same title neighbors
+  if (arr[i].title === arr[n].title) return true;
+  // Two covers next to each other
+  if (isCover(arr[i]) && isCover(arr[n])) return true;
+  return false;
+}
+
 function shuffleItems(items: WorkItem[]): WorkItem[] {
   const rand = seededRandom(7);
   const shuffled = [...items];
@@ -26,28 +42,24 @@ function shuffleItems(items: WorkItem[]): WorkItem[] {
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
 
-  // Fix adjacency: no same-title cards next to each other (horizontal or vertical)
-  for (let pass = 0; pass < 3; pass++) {
+  // Fix adjacency: no same-title or cover-cover cards next to each other
+  const getNeighbors = (i: number) => [i - 1, i + 1, i - COLS, i + COLS].filter(
+    (n) => n >= 0 && n < shuffled.length,
+  );
+
+  const conflictsAt = (idx: number) =>
+    getNeighbors(idx).some((n) => hasConflict(shuffled, idx, n));
+
+  for (let pass = 0; pass < 5; pass++) {
     for (let i = 0; i < shuffled.length; i++) {
-      const neighbors = [i - 1, i + 1, i - COLS, i + COLS];
-      for (const n of neighbors) {
-        if (n < 0 || n >= shuffled.length) continue;
-        if (shuffled[i].title === shuffled[n].title) {
-          for (let k = 0; k < shuffled.length; k++) {
-            if (k === i || k === n) continue;
-            const kNeighbors = [k - 1, k + 1, k - COLS, k + COLS];
-            const wouldConflict = kNeighbors.some(
-              (c) => c >= 0 && c < shuffled.length && shuffled[c].title === shuffled[i].title,
-            );
-            const iWouldConflict = neighbors.some(
-              (c) => c >= 0 && c < shuffled.length && c !== n && shuffled[c].title === shuffled[k].title,
-            );
-            if (!wouldConflict && !iWouldConflict) {
-              [shuffled[i], shuffled[k]] = [shuffled[k], shuffled[i]];
-              break;
-            }
-          }
-        }
+      if (!conflictsAt(i)) continue;
+      for (let k = 0; k < shuffled.length; k++) {
+        if (k === i) continue;
+        // Tentatively swap
+        [shuffled[i], shuffled[k]] = [shuffled[k], shuffled[i]];
+        if (!conflictsAt(i) && !conflictsAt(k)) break; // keep swap
+        // Undo
+        [shuffled[i], shuffled[k]] = [shuffled[k], shuffled[i]];
       }
     }
   }
