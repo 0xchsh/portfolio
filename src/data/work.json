@@ -1,5 +1,15 @@
 [
   {
+    "title": "ClawPanel",
+    "description": "Dashboard for OpenClaw",
+    "src": [
+      "/work/clawpanel/clawpanel-01.png"
+    ],
+    "link": null,
+    "logo": "/icons/clawpanel.svg",
+    "ratio": "16:9"
+  },
+  {
     "title": "Otto",
     "description": "Ask anything about your cars",
     "src": [

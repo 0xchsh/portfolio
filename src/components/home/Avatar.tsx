@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function Avatar() {
   return (
-    <div className="w-12 h-12 rounded-full overflow-hidden pop-in" style={{ animationDelay: '300ms' }}>
+    <div className="w-12 h-12 rounded-full overflow-hidden">
       <Image
         src="/images/pfp.png"
         alt="Charles Shin"
