@@ -1,5 +1,17 @@
 [
   {
+    "title": "Otto",
+    "description": "Ask anything about your cars",
+    "src": [
+      "/work/otto/otto-01.png",
+      "/work/otto/otto-02.png",
+      "/work/otto/otto-03.png"
+    ],
+    "link": null,
+    "logo": "/icons/otto.svg",
+    "ratio": "16:9"
+  },
+  {
     "title": "Freighter",
     "description": "Flagship Stellar wallet",
     "src": [
