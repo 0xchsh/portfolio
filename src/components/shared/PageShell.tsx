@@ -57,7 +57,7 @@ export async function PageShell({
       <header className="fixed top-0 left-0 right-0 z-20 pointer-events-none">
         <div className="flex justify-between items-start p-6 [&>*]:pointer-events-auto">
           <AnimatedNav />
-          <div className="flex items-center gap-2 text-sm bg-white/80 backdrop-blur-xl rounded-full px-3 py-1.5 border border-neutral-200/60 shadow-sm">
+          <div className="flex items-center gap-2 text-sm liquid-glass rounded-full px-3 py-1.5">
             <span className="text-neutral-400">Chicago, IL</span>
             <WeatherIcon code={weather.code} />
             <LiveClock />

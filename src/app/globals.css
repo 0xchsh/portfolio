@@ -226,6 +226,21 @@ body {
   opacity: 0;
 }
 
+/* Liquid glass pill */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(40px) saturate(1.6);
+  -webkit-backdrop-filter: blur(40px) saturate(1.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.liquid-glass > * {
+  mix-blend-mode: difference;
+}
+
 /* Sonner toast centering */
 [data-sonner-toaster][data-x-position="center"] [data-sonner-toast] {
   width: fit-content !important;

@@ -132,7 +132,7 @@ export default async function Home() {
         <FadeIn delay={50}>
           <div className="mt-6 text-base leading-relaxed text-neutral-400">
             <p>
-              I&apos;m <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>Charles</a>, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use — especially in blockchain and AI, where you&apos;re designing these patterns for the first time.
+              I&apos;m <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>Charles</a>, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use — especially in blockchain and AI, where these patterns are being designed for the first time.
             </p>
 
             <p className="mt-4">

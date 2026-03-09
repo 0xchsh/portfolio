@@ -158,7 +158,7 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
       for (let ty = -1; ty < tilesY; ty++) {
         const child = children[childIdx] as HTMLElement | undefined;
         if (child) {
-          child.style.transform = `translate(${w.x + tx * tileW}px, ${w.y + ty * tileH}px)`;
+          child.style.translate = `${w.x + tx * tileW}px ${w.y + ty * tileH}px`;
         }
         childIdx++;
       }
@@ -329,7 +329,7 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
               left: 0,
               width: tileW,
               height: tileH,
-              willChange: 'transform',
+              willChange: 'translate',
             }}
           >
             {cards.map((c, i) => (
