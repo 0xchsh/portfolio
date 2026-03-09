@@ -5,7 +5,7 @@ const mutedLabel = 'text-xs uppercase text-neutral-400 tracking-wide';
 
 export default function IntroductionToRGB() {
   return (
-    <PageShell staticFooter>
+    <PageShell>
       <main className="flex-1 w-full max-w-[452px] mx-auto px-4 pt-16 desktop:pt-20 pb-[120px]">
         <FadeIn>
           <span className={mutedLabel}>Article 001</span>

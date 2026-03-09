@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Squircle } from '@squircle-js/react';
 import type { WorkItem } from '@/app/work/page';
 
-export function SingleMedia({ src, alt, blurDataURL, objectPosition }: { src: string; alt: string; blurDataURL?: string | null; objectPosition?: string }) {
+export function SingleMedia({ src, alt, objectPosition }: { src: string; alt: string; objectPosition?: string }) {
   const isVideo = src.endsWith('.mp4');
   const pos = objectPosition || 'top';
 
@@ -20,51 +20,66 @@ export function SingleMedia({ src, alt, blurDataURL, objectPosition }: { src: st
       src={src}
       alt={alt}
       fill
+      unoptimized
       className="object-cover"
       style={{ objectPosition: pos }}
-      sizes="(max-width: 640px) 100vw, (max-width: 860px) 50vw, 33vw"
-      placeholder={blurDataURL ? 'blur' : 'empty'}
-      blurDataURL={blurDataURL || undefined}
     />
   );
 }
 
 export function VideoWithBlur({ src, className }: { src: string; className: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
+  const [inView, setInView] = useState(false);
+  const poster = src.replace('.mp4', '-poster.webp');
+
+  // Lazy load: only start loading video when near viewport
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setInView(true); observer.disconnect(); } },
+      { rootMargin: '400px' },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
+    if (!inView) return;
     const vid = videoRef.current;
     if (!vid) return;
-    // Handle already-loaded (cached) videos
-    if (vid.readyState >= 2) {
-      setLoaded(true);
-      return;
-    }
+    if (vid.readyState >= 2) { setLoaded(true); return; }
     const handler = () => setLoaded(true);
     vid.addEventListener('loadeddata', handler);
     return () => vid.removeEventListener('loadeddata', handler);
-  }, []);
+  }, [inView]);
 
   return (
-    <>
-      {!loaded && (
-        <div className="absolute inset-0 shimmer-bg" />
-      )}
-      <video
-        ref={videoRef}
-        src={src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className={`${className} transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+    <div ref={containerRef} className="absolute inset-0">
+      {/* Poster frame — shows instantly while video loads */}
+      <img
+        src={poster}
+        alt=""
+        className={`absolute inset-0 w-full h-full object-cover ${className.includes('object-top') ? 'object-top' : ''} transition-opacity duration-300 ${loaded ? 'opacity-0' : 'opacity-100'}`}
       />
-    </>
+      {inView && (
+        <video
+          ref={videoRef}
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`${className} transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        />
+      )}
+    </div>
   );
 }
 
-export function MobileFrame({ src, alt, blurDataURL, transparent }: { src: string; alt: string; blurDataURL?: string | null; transparent?: boolean }) {
+export function MobileFrame({ src, alt, transparent }: { src: string; alt: string; transparent?: boolean }) {
   const isVideo = src.endsWith('.mp4');
   const ref = useRef<HTMLDivElement>(null);
   const [radius, setRadius] = useState(32);
@@ -95,10 +110,8 @@ export function MobileFrame({ src, alt, blurDataURL, transparent }: { src: strin
             src={src}
             alt={alt}
             fill
+            unoptimized
             className="object-cover"
-            sizes="(max-width: 640px) 33vw, 15vw"
-            placeholder={blurDataURL ? 'blur' : 'empty'}
-            blurDataURL={blurDataURL || undefined}
           />
         )}
       </Squircle>
@@ -106,31 +119,13 @@ export function MobileFrame({ src, alt, blurDataURL, transparent }: { src: strin
   );
 }
 
-// Grid masonry: grid-auto-rows=1px, row-gap=0, col-gap=24px
-// Span = content height + 24px visual row gap
-function computeSpan(height: number) {
-  return Math.round(height) + 24;
-}
-
-export function WorkCard({ item }: { item: WorkItem }) {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [span, setSpan] = useState(0);
-  useEffect(() => {
-    const el = contentRef.current;
-    if (!el) return;
-    const update = () => setSpan(computeSpan(el.getBoundingClientRect().height));
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
-
+/** Presentation-only card — no grid/layout logic */
+export function WorkCardContent({ item }: { item: WorkItem }) {
   const isSingle = item.src.length === 1;
   const isMobileSingle = isSingle && item.ratio === '1:1';
 
   return (
-    <div style={span > 0 ? { gridRowEnd: `span ${span}` } : undefined}>
-    <div ref={contentRef}>
+    <>
       {/* Media */}
       {isMobileSingle ? (
         <div
@@ -138,7 +133,7 @@ export function WorkCard({ item }: { item: WorkItem }) {
           style={{ aspectRatio: '1 / 1' }}
         >
           <div className="w-[36%]">
-            <MobileFrame src={item.src[0]} alt={item.title} blurDataURL={item.blurDataURLs?.[0]} />
+            <MobileFrame src={item.src[0]} alt={item.title} />
           </div>
         </div>
       ) : isSingle ? (
@@ -149,7 +144,7 @@ export function WorkCard({ item }: { item: WorkItem }) {
             backgroundColor: '#f5f5f5',
           }}
         >
-          <SingleMedia src={item.src[0]} alt={item.title} blurDataURL={item.blurDataURLs?.[0]} objectPosition={item.objectPosition} />
+          <SingleMedia src={item.src[0]} alt={item.title} objectPosition={item.objectPosition} />
         </div>
       ) : (
         <div
@@ -159,7 +154,7 @@ export function WorkCard({ item }: { item: WorkItem }) {
           <div className="h-full flex items-center justify-center gap-3 px-10 py-8">
             {item.src.map((src, j) => (
               <div key={j} className="h-full" style={{ aspectRatio: '9 / 19.5' }}>
-                <MobileFrame src={src} alt={`${item.title} ${j + 1}`} blurDataURL={item.blurDataURLs?.[j]} />
+                <MobileFrame src={src} alt={`${item.title} ${j + 1}`} />
               </div>
             ))}
           </div>
@@ -196,7 +191,7 @@ export function WorkCard({ item }: { item: WorkItem }) {
           </>
         )}
       </div>
-    </div>
-    </div>
+    </>
   );
 }
+

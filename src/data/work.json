@@ -7,10 +7,7 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPklEQVR4nGP4RyJgGAgND+690dNuYBDKf3DvDVEatm28ZKTfyCiWtGndaWJtYGAIZmBwuHXjMVEa8APaawAAYyCbNwzzC/UAAAAASUVORK5CYII="
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Freighter",
@@ -20,10 +17,7 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "1:1",
-    "blurDataURLs": [
-      null
-    ]
+    "ratio": "1:1"
   },
   {
     "title": "Freighter",
@@ -35,12 +29,7 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABJElEQVR4nGVRMU+DUBh8AwsTAwM6MJCQoGIpakpbWpOiVEltdCBhwTAwODlp4uZkootNHNyc7Ojiwupf6S8hOXOPlBg7fMl77+7d9919QlGUlaZp+F+qqq6EbduwLGsDZIm6rlGWJQzDaB/zPEccxxDvXz9ILubIsgymaULXdYzPTuEHPYjruxf0hyPJDIJAgjx7ngfx8PyGMAzhum4ry1/dAx+iqiokSQLHcVqQwG7HbQYqikIWZQmSLAd6vfnA5exKSrOf3dnDZDZFbzSE9LkeZMPn5/Ib0/NGhkRjewv+4Ag73X2IeX6LKIqQpqlMiuDgZAwvOIS4f3ySnv5aoQJLLJaVTIiRMSGC/clxkxAv/EUmQWa8Jgmuhhf25ALokZNzZb9a2rSTzgL5JgAAAABJRU5ErkJggg==",
-      null,
-      null
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Freighter",
@@ -52,12 +41,7 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      null,
-      null,
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABYUlEQVR4nGWQS0sCcRTF79qVS6FFRsJYo4TPnLRSh9RqwGDGLEgbn2QP84ElqWmYCuEi6AP0LVwHrV0FLV0ILYK+w4n/f1mLH+dyOZxzubQoCLNlywr+YlpYmpFaTmM/riEYUZApXiAQisFqd3Iorh5hVXQw5z9Iu86i0uig9TBCdzCGmtRxfFqA1x8GhSK7iMYUHstS3F4JWjIF0eYGlep1ZMoVqOkU2LynHkAvleCXd0Dv0ykmn19I14qcs34d1ed7KCcJUOJS5123nT6Pdnm3eC9TcksBSP5tfgBTz3oAYTmGNYcESuo5XDWbOMwV0Oj1EFEUdIdD+DaDoPnPN+YA3iYfKHSqqI3baL2OkDzPgpjjrveIm3aPY3Nu8D6r3Q1ijsHTC38C62Wwg/gTPD4nLBYLZFmGrutcBUHgkMFggMlk4pjNZoiiCJfLBaPRCCKiGTNEo1Hk83lomsaNbP8L06zWb4FtpeAAAAAASUVORK5CYII="
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Freighter",
@@ -69,12 +53,7 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      null,
-      null,
-      null
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Freighter",
@@ -84,10 +63,7 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAxUlEQVR4nGNgAYOZvUdZcAM1NTUXFxcIm4GFhQMN8fDwwxGmLAMyx9XVffmyVa2tHStXrN+wYVtnZ+/UKTOtLGxwamhoaF61au2B/YdDgsNWrVo7dcrMVavW5uYW4NTAwsLRX3/8/8v/1w/8d3BwCAsL09LSw+4kQUFBSbxAUFAQRYMSDMjKyiKrk5WVhUth1yApKQmWAwFubm7CGgQFBa2trdev37R+/Xpzc3NBQUHCGpSUlNTU1PT09LS0tIjSgOwMTA0Ax6RImZd7S5YAAAAASUVORK5CYII="
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Snack",
@@ -97,10 +73,7 @@
     ],
     "link": "https://snack.xyz",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      null
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Snack",
@@ -110,10 +83,7 @@
     ],
     "link": "https://snack.xyz",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAn0lEQVR4nI2PywnDQAxE1YXv28Y2oEJcgTvYDraDgeSWw4TE4AJWkIOLUAluwYE9mE3An4cugnloJCKyXsDdrZi7/6QB5JwBHJjSLq/nQ1VTZVkWksMwWLFdYZrGUAFgxawYK7vCPH+2aDvrnpBSEpGu6zYNwNGF+w0hBFUleakSyVjJOV+qRFJEVHWLnlwY38/2gXPB3WOMfd+3wl+lL7DMsTkYprDbAAAAAElFTkSuQmCC"
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Snack",
@@ -123,10 +93,7 @@
     ],
     "link": "https://snack.xyz",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAmElEQVR4nK2OUQ0CMRBE18W6WAM1UCH9AkzUQR2MgyEBB10flbAWILkmhLvAcR/M32zmZZ+IyONAIgLAGGO1BlBr9e47pLyX1hqAiDCzWSNiDxhLNpdYM1sgpVRK8e7enWRrbWO4Ary7iKjqBACUUgB8BUiqas759aHWSvJ/SpfTWUTM7KjS/XZVVTMjOYEfSiTTkmnyUekJD2CzYM/3xkUAAAAASUVORK5CYII="
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Laboratory",
@@ -136,10 +103,7 @@
     ],
     "link": "https://lab.stellar.org",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      null
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Laboratory",
@@ -149,27 +113,19 @@
     ],
     "link": "https://lab.stellar.org",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      null
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Eco",
     "description": "Cross-chain bridge",
     "src": [
-      "/work/eco/eco-mobile-01.webp",
-      "/work/eco/eco-mobile-02.webp",
-      "/work/eco/eco-mobile-03.webp"
+      "/work/misc/eco-01.webp",
+      "/work/misc/eco-02.webp",
+      "/work/misc/eco-03.webp"
     ],
     "link": "https://portal.eco.com/",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABG0lEQVR4nHWOy0oDQRBFeyEIIsSN6BfoJviKI0nm1U6P3T3tfHQWEY2PiBJR/ACJCCHGYXyEeKVqiCtdHKruvVXdJV4/vnF2cYXx5A0zAF/TGVOU7xDzpijGPECUn1MeENRQOBq9YHD/iKfhM2vyxTycFCWub265/hkO7h6qL+Zh77LPB532+uh0T9DpnjOkhTEGUkpQtdYyyUGTtSChtWaRO4djY2HbATJtqs04jqEPEziZwPkRMj9EJlW1GQQRTKR4I93zoHcaMGFYhf8hbGYQG4W2jn4hTb5I0xREnuc4sjn8KIHneQjpWaUUN845HiDIoyOFlAq7jX14zRb8doBW00d9a5uPFBubdQhRw+LyGmor61hYWmVN/g9V6hXxPNoBfAAAAABJRU5ErkJggg==",
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABRklEQVR4nHWQzUoCURzF76InCIJw2UZ6gp4raN+2TTt3LoQkIxd9gBgximSKk6JY1jgzOWpagzLjqPmBRfCLO4OLFi0OnHPuPYfDXzifK2IncezBkB9g+fXtQ2oxnS0ZOiO8yRzJJdZcSLJOrXGVrgWP9mBIWsmi6RbT+QrHnWM7C1xvFtQWK4++aXU8ao130koBq+sEtfprj3K9Ta3RI5ooEYnlKagthBzTeNH+jHq4SOF64yDZ/7AZuRNWiyXL0RjjNofnjhDyR6Vap60ZuHqLbkHFVHLYuhkks9k8fa2JkbmjEk+iRuOYpUqw9j8IZzbFGHRRrWcf9TfD19IXr1YHCXmZvrtAKdU4PTunWCojdLOFWq76NevzaU3T98RTQycaS5C8THGTyXOdUjg6jnBfLCP2Dw4RGyG2QrvshPfY3A77Wvq/KqyEtNX8IhEAAAAASUVORK5CYII=",
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAA9ElEQVR4nGM4fenGfwYGhv+btmz9//vP///PX74CYxCf4dqN2//37Dvw/9yFS/9BbBCGsRlADJguEJ4xey4YwyVrWnr+hyVk/ncNjPuva+v5X8vG8/+RU+cgko3NLf+TktP+B4WE/dfRM/wfFRMHNprhyLETYAY6BokzgIjO7t7/tk6e/z98+gy3G2znkWMn/guLiP6fNGUqXAIuuW33/v/TZs1FkYBLgvzo5OL6f8r8jv8Xrp5DlQT50dvHH2wvKGRQJEEuA9kHonEaC9JdWFQKDkoU16qqa4IlQJ6HuRquExSWIDtBCpEDH6wTFGwgnegOAgBBZGG1pionAwAAAABJRU5ErkJggg=="
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Checkmate",
@@ -181,12 +137,7 @@
     ],
     "link": null,
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABPElEQVR4nCVQTUvDQBRcEDyIf8Gbv1dQvIl4EIoolKqnHiwVBCXWYu0HwdYmTTbZ7GazbWJavI28l8CQ3XnzZoYV49EAeZ6hriu4tUVVVai2FZ7kEIKGUkqo3OI5G8HLZ3hVM1wtuxDGZCidxkfs4z57w234grPgASfLNoTWGoREaQxW37gOezgNOmgFfQiZKh4SojjDIo3xGHm4WHUhlM5BIJFSColSWGnF9oLsiHBWg/IJJBzG86YQbVrrcPeeonCG8xcyaYZ2ds6EMabJlilvsy3nUW6i+U/FEmWbtqRkkjYSjcxYvot5GnHLn2WEKAqYDMOQhSLfOEwmE/i+z884nU5B37r8hajrGp7noSgKJvO/CrvdDpttDUGWYv+QcXR8DLF3wGfmnXNs1e/3cNNp47LVxufXGGVZ4h/T/oj3gKlvHAAAAABJRU5ErkJggg==",
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABPElEQVR4nF1QPUvDUBS9k65uXVz8Af4Ef4JdHZyloEXQvxBwtZQiiN+1obW2hZSqg+BkySA1ndJGkrZDmqUEQqQphMCRe0OHeuHy3jvnvHvPveTYA3BalgXD/IbneXC9MYqfNVAYhlgsfhEEAX5cR+7zKILju6BsdhdEhI01wv+gj/dXZIiws72FJElWyUqljPzBPk6PchiNRjAMA77vp6SmaVAUBd1uV8ywMe4vpDMdY2jbAkTzaLVskiQwTRPtahXFwjnK94+wBkPpL+RkMkGpdIGXtobmUxWeO03Jy7c+6PAameM7bJ48YD1/C8rfQPCzmg7aK6Rg7koE/BacN8QZx7GYYtc8ipRlYjabiYCBZYrb/lcfreeWmGLRMuQng51OB7yMRqMJVVVRr9dTkjfS6/VkVl3X5VyW/gMcj3TroF666wAAAABJRU5ErkJggg==",
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABQklEQVR4nFVQPUvDUBS9W/1YqsWhu//BQdxcOlQdlIpSqK2iFSeRiIs/wMEpW0cLgaC01S6O6RIECVhbI6mmRoxEAlXaIIUOR96FRvrgcB6c984959Ljwz0EDMNA7a4G27bxYj/jtCSDet0e+v1fdDod1FtNBMEPukEA8/MV5DgOTNOErusM13WhaRo70O5OFvHYJBRFgaqq/EDcPc8DXZcvcbifge/7aH9/MA8PSbksjvJ5FAoFKDdXEBlCcTuzhc2NNM8V8weDwb8YjU5gYX4O1WoVF2WVU4fi+5uFllVHsVhEpVLhlKHYaDTQfKpzOtt3R3+ORwhEBFmWcSafMw8T03IygWQiwXYCI1XiMcJshHieelviJYRiNrWC9aVF3o4IJeqE4kFuFSfHe2xnfbVHbaNjhJnpKUiShLV0inlY5w/vqmTlGHkaNwAAAABJRU5ErkJggg=="
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Higher",
@@ -196,10 +147,7 @@
     ],
     "link": "https://aimhigher.net",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      null
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "RGB",
@@ -211,12 +159,7 @@
     ],
     "link": "https://rgbso.framer.website/",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABSUlEQVR4nFVRv0vDYBC9apsQgw2CJcEWoVQIhYCFKorSbiK4KrgLLo6d1dWpNQ5d+i+4SP4PBRcH3RpLOoSQEJr+5sl3QqDD+x53797jjo9c10W/30cYhlgulykmkwmoebkA7c+RJAlGoxGCIGCIAbq4DqAdfGE2mzHG4zG7FvMFyPM8DIdDdgpMp9M0mj7fP/D9+wPf9xHHMbtTMQxDdvZ6PTiOs7IUiUeIURRxQwyLFN7WNE0InNbrqB1bqB+ewLIsVKtVEK0RlE0JO5UK7m5uUTGLyOfzkCQJ1Nhbx5FxDl3XIcsyDMNgFqCnM8K9+cqFoijM2WYDVCqBnoVYfuNmJpP5dxgFkJQF7epbKBbKHFfb1ldjc7kcVFWFKqu4arWwocrQNA1EBLJtG+12G91uN+XHBxudzgsIAB8vDh8MBvwjUTQXbfwBbuQkS5njFSYAAAAASUVORK5CYII=",
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABd0lEQVR4nFWRz0sUcRjGn2uHbtGpo3TpHJ26dcpTh0Ai6NQf0CECCSSIQktkCzpoQWmejGS3GloC2c0pp0TWGZTCbSeZZnfKbcdW3V+t2yfmqwm98LwP7/s88ML7qFAokFSj0cD31+m0O2ZuNptoIl3i4YxD6ul7rk3YZOYD5hZ/8HZpA+noPXQkhU5OostZdPEVOvYA9Y0j0048QuczvF6pstXZ5cq4ty+em0WnptAli4Uvm/zu/WG91kQXXqKzNx3ODL2j//YH0k7EWnmb9EKF41fzaCr/je9xi9WvdZ7lQ8aeFzk9aDM6W0QfS5sUKztYTsT1x6sM3FnkxvQnnLUYbfzqUIlbhLUWn4MtY0zmZC8dSqHD95HuIt3axzDSCLJtm1wuR7lcJooiw0EQEMcxmn4ySebNC7LZLJZlHbDruihx/XN2u93/oJVl1wj1ep1er3cAIy57LmEYUq1WTSKJUEo+1d5Fe/G08X0fz/PMiZ+1HRPbX28MYyaz9giDAAAAAElFTkSuQmCC",
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABrElEQVR4nCWOO2hTARiFfwiuAV1E6FQIOEjAoUPtkMHBx1jsFRpCaEIK0mrEYKlQEDpopA4KhQoO0incoRYv8bZRLG2j6bVGLdpKHkqCmjSGmwdCHiQNn9w4nAPnwPk4kqv95Nff3ySKBuv7r/hh5vvZkkxGffhfjjOmTeDVfHi0aTxRD76oB6nsfiKVeEtsw2BH/cCmfkj2S5T91R2kkDlib/Mbh3tl8tsl0okSua8lvmebSK/Xo1arUa1WqdfrlMsmpmli9dLpdGg2m7TbbVqtVl+NRoNut4uoqkokEmElucKzj8skC8k+yRqJiFiGTB5DwoJ3PUAoFCIejyN2u51TAwMcvz6ILJ4g+OY226/1/9hMJkPy/S7FP0XShSxbqRSOO08Q/2MknU6zEVujUqlgmmVWPx9wcUnl8pKKGIaBrutomkb40QIvYms83XrH3PMYYj0NBAK4XC5sNhujVxRm785z7/4DxO1243A4cDqdKIrCfDjMycHTnB05j8zM5hn3HnDrUpC5C+d46L/KghbnjHINmQrmmb6ZIzQ6xcTIMO4hJ2M3ZnAMDfMPyZZB0wVdrHMAAAAASUVORK5CYII="
-    ]
+    "ratio": "16:9"
   },
   {
     "title": "Rat Labs",
@@ -226,9 +169,6 @@
     ],
     "link": "https://ratlabs.xyz",
     "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABA0lEQVR4nH2PwYqDMBRFQ63Y1sakQYyLLFxJKQX3UprFQLZDNtkFESGLARGy9TvFH3DrL8hQ7QidGXp4i3cv78K7wHF3vg9hgBAmbwYGyIeB4+7AQ/zAOTfGSCmrqpJSCiGKokiSZD1AmDwDhBBKadu2fd8Pw2Ct7bpumqZxHJVSlFJCyDOQ3+5aa2NMXdfW2rIsv2aaprHWNjN1XRtjtNb57Q7Olyvn/GNGKWWM+ZwRQizmCuf8fLm+dEjTNM9zxlgcxxjj1X/pAAO0asZYlmWU0iiKlqd/EyDgeoe/Psb434DrHQAAm63j7f0jhPhxiU4YncIwCsNo2Rd/7x+3jgfA5hv5JUlYD0KKzAAAAABJRU5ErkJggg=="
-    ]
+    "ratio": "16:9"
   }
 ]

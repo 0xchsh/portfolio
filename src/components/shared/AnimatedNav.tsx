@@ -44,7 +44,7 @@ function MobileNav() {
     <div ref={menuRef} className="relative sm:hidden">
       <button
         onClick={() => setOpen(v => !v)}
-        className="flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-full bg-white/60 backdrop-blur-xl border border-white/40 shadow-sm"
+        className="flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-xl border border-neutral-200/60 shadow-sm"
       >
         <ActiveIcon size={14} weight="regular" />
         {activeItem.label}
@@ -100,7 +100,7 @@ function DesktopNav() {
 
   return (
     <div className="relative hidden sm:block">
-      <nav className="relative flex items-center gap-0.5 bg-white/60 backdrop-blur-xl rounded-full px-1 py-1 border border-white/40 shadow-sm">
+      <nav className="relative flex items-center gap-0.5 bg-white/80 backdrop-blur-xl rounded-full px-1 py-1 border border-neutral-200/60 shadow-sm">
         {navItems.map(({ href, label, icon: Icon }) => {
           const isActive = pathname === href;
           return (

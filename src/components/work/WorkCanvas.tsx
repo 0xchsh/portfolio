@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect, useMemo, useCallback } from 'react';
 import type { WorkItem } from '@/app/work/page';
-import { WorkCard } from './WorkCard';
+import { WorkCardContent } from './WorkCard';
 import { Lightbox } from './Lightbox';
 
 // ── Seeded shuffle ──────────────────────────────────────────────────────────
@@ -344,7 +344,7 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
                   height: CARD_H,
                 }}
               >
-                <WorkCard item={shuffled[c.idx]} />
+                <WorkCardContent item={shuffled[c.idx]} />
               </div>
             ))}
           </div>

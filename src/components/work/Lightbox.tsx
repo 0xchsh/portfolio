@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import type { WorkItem } from '@/app/work/page';
 import { VideoWithBlur, MobileFrame } from './WorkCard';
 
-function DesktopFrame({ src, alt, blurDataURL }: { src: string; alt: string; blurDataURL?: string | null }) {
+function DesktopFrame({ src, alt }: { src: string; alt: string }) {
   const isVideo = src.endsWith('.mp4');
   const ref = useRef<HTMLDivElement>(null);
   const [radius, setRadius] = useState(16);
@@ -38,10 +38,8 @@ function DesktopFrame({ src, alt, blurDataURL }: { src: string; alt: string; blu
             src={src}
             alt={alt}
             fill
-            className="object-cover"
-            sizes="80vw"
-            placeholder={blurDataURL ? 'blur' : 'empty'}
-            blurDataURL={blurDataURL || undefined}
+            unoptimized
+            className="object-cover object-top"
           />
         )}
       </Squircle>
@@ -137,7 +135,6 @@ export function Lightbox({
                 <MobileFrame
                   src={displayItem.src[0]}
                   alt={displayItem.title}
-                  blurDataURL={displayItem.blurDataURLs?.[0]}
                   transparent
                 />
               </div>
@@ -146,7 +143,6 @@ export function Lightbox({
                 <DesktopFrame
                   src={displayItem.src[0]}
                   alt={displayItem.title}
-                  blurDataURL={displayItem.blurDataURLs?.[0]}
                 />
               </div>
             ) : (
@@ -160,7 +156,6 @@ export function Lightbox({
                     <MobileFrame
                       src={src}
                       alt={`${displayItem.title} ${j + 1}`}
-                      blurDataURL={displayItem.blurDataURLs?.[j]}
                       transparent
                     />
                   </div>

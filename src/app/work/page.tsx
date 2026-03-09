@@ -1,6 +1,6 @@
 import { FadeIn } from '@/components/shared/FadeIn';
 import { PageShell } from '@/components/shared/PageShell';
-import { WorkCard } from '@/components/work/WorkCard';
+import { WorkCardContent } from '@/components/work/WorkCard';
 import { WorkCanvas } from '@/components/work/WorkCanvas';
 import workItems from '@/data/work.json';
 
@@ -8,7 +8,6 @@ export type WorkItem = {
   title: string;
   description: string;
   src: string[];
-  blurDataURLs?: (string | null)[];
   link: string | null;
   logo: string | null;
   ratio: '16:9' | '1:1';
@@ -19,7 +18,7 @@ export default function Work() {
   const items = workItems as WorkItem[];
 
   return (
-    <PageShell staticFooter transparentBg hideFooter>
+    <PageShell variant="canvas">
       {/* Desktop: infinite canvas */}
       <div className="hidden desktop:block flex-1">
         <WorkCanvas items={items} />
@@ -30,7 +29,7 @@ export default function Work() {
         <FadeIn>
           <div className="flex flex-col gap-6">
             {items.map((item, i) => (
-              <WorkCard key={`${item.title}-${i}`} item={item} />
+              <WorkCardContent key={`${item.title}-${i}`} item={item} />
             ))}
           </div>
         </FadeIn>

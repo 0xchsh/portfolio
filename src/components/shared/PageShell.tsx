@@ -41,27 +41,23 @@ const mutedLabel = 'text-sm uppercase text-neutral-400 tracking-wide';
 
 export async function PageShell({
   children,
-  staticFooter,
-  transparentBg,
-  hideFooter,
+  variant = 'default',
 }: {
-  currentPath?: string;
   children: React.ReactNode;
-  staticFooter?: boolean;
-  transparentBg?: boolean;
-  hideFooter?: boolean;
+  variant?: 'default' | 'canvas';
 }) {
+  const isCanvas = variant === 'canvas';
   const [weather, commitHash] = await Promise.all([getWeather(), getLatestCommit()]);
 
   return (
-    <div className={`min-h-screen flex flex-col ${transparentBg ? '' : 'bg-gradient-to-b from-white to-neutral-50'}`}>
+    <div className={`min-h-screen flex flex-col ${isCanvas ? '' : 'bg-gradient-to-b from-white to-neutral-50'}`}>
       <AgentModeOverlay />
       <KeyboardNav />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <header className="fixed top-0 left-0 right-0 z-20 pointer-events-none">
         <div className="flex justify-between items-start p-6 [&>*]:pointer-events-auto">
           <AnimatedNav />
-          <div className="flex items-center gap-2 text-sm bg-white/60 backdrop-blur-xl rounded-full px-3 py-1.5 border border-white/40 shadow-sm">
+          <div className="flex items-center gap-2 text-sm bg-white/80 backdrop-blur-xl rounded-full px-3 py-1.5 border border-neutral-200/60 shadow-sm">
             <span className="text-neutral-400">Chicago, IL</span>
             <WeatherIcon code={weather.code} />
             <LiveClock />
@@ -75,8 +71,8 @@ export async function PageShell({
       </PageTransition>
 
       {/* ── Footer ─────────────────────────────────────────────────────── */}
-      {!hideFooter && (
-        <footer className={staticFooter ? 'w-full z-10' : 'w-full z-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0'}>
+      {!isCanvas && (
+        <footer className="w-full z-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0">
           <div className="flex justify-between items-center p-6"
             style={{
               background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
