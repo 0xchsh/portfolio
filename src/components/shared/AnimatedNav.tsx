@@ -5,14 +5,14 @@ import { usePathname } from 'next/navigation';
 import { useRef, useState, useEffect, type ComponentType } from 'react';
 import { cn } from '@/lib/utils';
 import {
-  HandWaving, GridNine, Rows,
+  HandWaving, SquaresFour, Rows,
 } from '@phosphor-icons/react';
 
 type PhosphorIcon = ComponentType<{ size?: number; weight?: 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone' }>;
 
 const navItems: { href: string; label: string; icon: PhosphorIcon }[] = [
   { href: '/', label: 'About', icon: HandWaving },
-  { href: '/work', label: 'Work', icon: GridNine },
+  { href: '/work', label: 'Work', icon: SquaresFour },
 ];
 
 function MobileNav() {

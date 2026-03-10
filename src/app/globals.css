@@ -279,6 +279,7 @@ body {
   }
 }
 
+
 .fade-in {
   opacity: 0;
   animation: fade-slide-up 0.25s ease-out forwards;
