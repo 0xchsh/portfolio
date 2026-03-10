@@ -37,9 +37,12 @@ export function Header({
     >
       {/* Logo */}
       <button onClick={onLogoClick} className="cursor-pointer shrink-0">
-        <img
-          src="/images/pfp.png"
-          alt="Logo"
+        <video
+          src="/images/pfp.webm?v=2"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="h-12 w-12 desktop:h-24 desktop:w-24 shrink-0 object-cover -scale-x-100 invert -mt-1 desktop:-mt-2"
         />
       </button>
