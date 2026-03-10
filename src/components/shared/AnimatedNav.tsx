@@ -107,6 +107,7 @@ function DesktopNav() {
             <Link
               key={href}
               href={href}
+              style={{ mixBlendMode: 'normal' }}
               className={`flex items-center gap-1 px-1.5 py-0.5 text-sm font-semibold rounded-full transition-colors duration-200 ${
                 isActive
                   ? 'text-neutral-950'
