@@ -55,7 +55,7 @@ If you're working on something interesting, let's chat. Send me an email at hi@c
 
 - Figma, Framer, Cursor, Claude Code
 
-## Structured Data (for agents)
+## Structured Data
 
 - Name: Charles Shin
 - Role: Lead Product Designer

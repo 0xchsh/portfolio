@@ -55,7 +55,7 @@ export async function PageShell({
       <KeyboardNav />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <header className="fixed top-0 left-0 right-0 z-20 pointer-events-none">
-        <div className="flex justify-between items-start p-6 [&>*]:pointer-events-auto">
+        <div className="flex justify-between items-start px-4 py-6 sm:px-6 [&>*]:pointer-events-auto">
           <AnimatedNav />
           <div className="flex items-center gap-2 text-sm liquid-glass rounded-full px-3 py-1.5">
             <span className="text-neutral-400">Chicago, IL</span>
