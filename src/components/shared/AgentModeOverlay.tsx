@@ -31,20 +31,18 @@ If you're working on something interesting, let's chat. Send me an email at hi@c
 
 - **ClawPanel** · Dashboard for OpenClaw · 2026
 - **Otto** · Ask anything about your cars · 2026
-- **ShinCN** · Personal brand design system · 2026
-  https://ui.ch.sh
 - **Snack** · List curation tool · 2025
   https://snack.xyz
-- **Freighter** · Flagship Stellar wallet · 2025
-  https://freighter.app
+- **ShinCN** · Personal brand design system · 2026
+  https://ui.ch.sh
+- **Rat Labs** · Onchain product studio · 2021
+  https://www.ratlabs.xyz/
 - **rgb.fun** · NFT collection (16,777,216) · 2024
   https://rgb.fun
 - **rgb.so** · Onchain media · 2023
   https://rgbso.framer.website/
 - **Noundation** · Community design system · 2022
 - **Noundation UI** · Framer design kit · 2022
-- **Rat Labs** · Onchain product studio · 2021
-  https://www.ratlabs.xyz/
 
 ## Connect
 
