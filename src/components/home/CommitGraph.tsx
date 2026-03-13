@@ -17,6 +17,27 @@ function formatDate(dateStr: string) {
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
+let audioCtx: AudioContext | null = null;
+function playClack() {
+  if (!audioCtx) audioCtx = new AudioContext();
+  const ctx = audioCtx;
+
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+
+  osc.type = 'square';
+  osc.frequency.setValueAtTime(1800, ctx.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.015);
+
+  gain.gain.setValueAtTime(0.08, ctx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.04);
+
+  osc.start(ctx.currentTime);
+  osc.stop(ctx.currentTime + 0.04);
+}
+
 export function CommitGraph({ days }: { days: CommitDay[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
   const max = Math.max(...days.map((d) => d.count), 1);
@@ -25,6 +46,7 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
   const handleEnter = useCallback((i: number) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setHovered(i);
+    playClack();
   }, []);
 
   const handleLeave = useCallback(() => {

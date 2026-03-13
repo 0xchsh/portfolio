@@ -53,7 +53,7 @@ export async function PageShell({
       <header className="fixed top-0 left-0 right-0 z-20 pointer-events-none">
         <div className="flex justify-between items-start px-4 py-6 sm:px-6 [&>*]:pointer-events-auto">
           <AnimatedNav />
-          <div className="flex items-center gap-2 text-sm liquid-glass rounded-full px-3 py-1.5">
+          <div className="flex items-center gap-1 text-sm liquid-glass rounded-full px-3 py-1.5">
             <span className="text-neutral-400">Chicago, IL</span>
             <WeatherIcon code={weather.code} />
             <LiveClock />
@@ -69,7 +69,7 @@ export async function PageShell({
       {/* ── Footer ─────────────────────────────────────────────────────── */}
       {!isCanvas && (
         <footer className="w-full z-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0">
-          <div className="flex justify-between items-center p-6"
+          <div className="flex justify-between items-end p-6"
             style={{
               background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
               paddingTop: '1.5rem',

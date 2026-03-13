@@ -31,6 +31,8 @@ If you're working on something interesting, let's chat. Send me an email at hi@c
 
 - **ClawPanel** · Dashboard for OpenClaw · 2026
 - **Otto** · Ask anything about your cars · 2026
+- **ShinCN** · Personal brand design system · 2026
+  https://ui.ch.sh
 - **Snack** · List curation tool · 2025
   https://snack.xyz
 - **Freighter** · Flagship Stellar wallet · 2025
@@ -199,7 +201,7 @@ export function AgentModeOverlay() {
       </div>
 
       <div
-        className="absolute bottom-0 left-0 right-0 px-6 py-6 flex justify-start"
+        className="absolute bottom-0 left-0 right-0 flex items-center p-6"
         style={{
           background: 'linear-gradient(to top, #111111 0%, #111111 50%, transparent 100%)',
           paddingTop: '2.5rem',

@@ -7,11 +7,20 @@ export function useGlobalHaptics() {
 
   useEffect(() => {
     function playClick() {
+      // Create context on first interaction — browsers allow it to start
+      // in 'running' state when created inside a user gesture
       if (!audioCtxRef.current) {
         audioCtxRef.current = new AudioContext();
       }
       const ctx = audioCtxRef.current;
-      if (ctx.state === 'suspended') ctx.resume();
+
+      // If still suspended, force resume synchronously within the gesture
+      if (ctx.state === 'suspended') {
+        ctx.resume();
+      }
+
+      // Schedule sound at a tiny offset to give context time to activate
+      const when = ctx.currentTime + 0.01;
 
       const duration = 0.008;
       const buffer = ctx.createBuffer(1, ctx.sampleRate * duration, ctx.sampleRate);
@@ -35,19 +44,21 @@ export function useGlobalHaptics() {
       filter.connect(gain);
       gain.connect(ctx.destination);
       source.onended = () => source.disconnect();
-      source.start();
+      source.start(when);
 
       if (navigator.vibrate) navigator.vibrate(8);
     }
 
-    function handleClick(e: MouseEvent) {
+    function handlePointerDown(e: PointerEvent) {
       const target = e.target as HTMLElement;
       if (target.closest('a, button, [role="button"], [data-haptic]')) {
         playClick();
       }
     }
 
-    document.addEventListener('click', handleClick, true);
-    return () => document.removeEventListener('click', handleClick, true);
+    document.addEventListener('pointerdown', handlePointerDown, true);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown, true);
+    };
   }, []);
 }
