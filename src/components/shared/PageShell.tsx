@@ -1,5 +1,6 @@
 import { WeatherIcon } from '@/components/home/WeatherIcon';
 import { LiveClock } from '@/components/home/LiveClock';
+import { WeatherPill } from '@/components/home/WeatherPill';
 import { AgentModeToggle } from '@/components/shared/AgentModeToggle';
 import { AgentModeOverlay } from '@/components/shared/AgentModeOverlay';
 import { KeyboardNav } from '@/components/home/KeyboardNav';
@@ -13,9 +14,17 @@ async function getWeather() {
     });
     if (!res.ok) throw new Error('Weather fetch failed');
     const data = await res.json();
-    return { code: parseInt(data.current_condition[0].weatherCode) };
+    const current = data.current_condition[0];
+    const today = data.weather?.[0];
+    return {
+      code: parseInt(current.weatherCode),
+      tempF: parseInt(current.temp_F),
+      desc: current.weatherDesc?.[0]?.value || '',
+      highF: today ? parseInt(today.maxtempF) : null,
+      lowF: today ? parseInt(today.mintempF) : null,
+    };
   } catch {
-    return { code: 113 };
+    return { code: 113, tempF: 0, desc: 'Clear', highF: null, lowF: null };
   }
 }
 
@@ -53,7 +62,8 @@ export async function PageShell({
       <header className="fixed top-0 left-0 right-0 z-20 pointer-events-none">
         <div className="flex justify-between items-start px-4 py-6 sm:px-6 [&>*]:pointer-events-auto">
           <AnimatedNav />
-          <div className="flex items-center gap-1 text-sm liquid-glass rounded-full px-3 py-1.5">
+          <WeatherPill weather={weather} />
+          <div className="flex items-center gap-1 text-sm btn-classic btn-classic-outline bg-background rounded-lg px-2.5 py-1 sm:hidden">
             <span className="text-neutral-400">Chicago, IL</span>
             <WeatherIcon code={weather.code} />
             <LiveClock />

@@ -4,8 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRef, useState, useEffect, type ComponentType } from 'react';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { ButtonGroup } from '@/components/ui/button-group';
 import {
-  HandWaving, SquaresFour, Rows,
+  HandWaving, SquaresFour,
 } from '@phosphor-icons/react';
 
 type PhosphorIcon = ComponentType<{ size?: number; weight?: 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone' }>;
@@ -44,7 +46,7 @@ function MobileNav() {
     <div ref={menuRef} className="relative sm:hidden">
       <button
         onClick={() => setOpen(v => !v)}
-        className="flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-full liquid-glass"
+        className="flex items-center gap-1.5 text-sm font-semibold px-2.5 py-1 rounded-lg btn-classic btn-classic-outline bg-background"
       >
         <ActiveIcon size={14} weight="regular" />
         {activeItem.label}
@@ -100,26 +102,25 @@ function DesktopNav() {
 
   return (
     <div className="relative hidden sm:block">
-      <nav className="relative flex items-center gap-0.5 liquid-glass rounded-full px-1 py-1">
+      <ButtonGroup>
         {navItems.map(({ href, label, icon: Icon }) => {
           const isActive = pathname === href;
           return (
-            <Link
+            <Button
               key={href}
-              href={href}
-              style={{ mixBlendMode: 'normal' }}
-              className={`flex items-center gap-1 px-1.5 py-0.5 text-sm font-semibold rounded-full transition-colors duration-200 ${
-                isActive
-                  ? 'text-neutral-950'
-                  : 'text-neutral-400 hover:text-neutral-950'
-              }`}
+              variant="outline"
+              size="sm"
+              render={<Link href={href} />}
+              className={cn(
+                !isActive && 'text-muted-foreground',
+              )}
             >
-              <Icon size={14} weight="regular" />
+              <Icon size={14} weight="regular" data-icon="inline-start" />
               {label}
-            </Link>
+            </Button>
           );
         })}
-      </nav>
+      </ButtonGroup>
     </div>
   );
 }

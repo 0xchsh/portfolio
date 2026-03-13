@@ -58,12 +58,18 @@ const weatherMap: Record<number, string> = {
   389: '/icons/weather/thunderstorms-rain.svg',
 };
 
-export function WeatherIcon({ code }: { code: number }) {
+export function WeatherIcon({ code, size = 22 }: { code: number; size?: number }) {
   const src = weatherMap[code] || '/icons/weather/clear-day.svg';
 
   return (
     <span className="inline-flex -mr-px" style={{ mixBlendMode: 'normal', isolation: 'isolate' }}>
-      <img src={src} alt="" width={24} height={24} />
+      <img
+        src={src}
+        alt=""
+        width={size}
+        height={size}
+        className="saturate-150 drop-shadow-[0_0_0.5px_rgba(0,0,0,0.25)]"
+      />
     </span>
   );
 }
