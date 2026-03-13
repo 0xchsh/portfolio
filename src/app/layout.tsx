@@ -4,6 +4,7 @@ import { Agentation } from "agentation";
 import { SquircleNoScript } from "@squircle-js/react";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { AgentModeProvider } from "@/components/providers/AgentModeProvider";
+import { GlobalHaptics } from "@/components/shared/GlobalHaptics";
 import { Toaster } from "sonner";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <SquircleNoScript />
+        <GlobalHaptics />
         <ThemeProvider>
           <AgentModeProvider>
             {children}
@@ -54,7 +56,7 @@ export default function RootLayout({
           toastOptions={{
             style: {
               background: '#f0fdf4',
-              border: '1px solid #bbf7d0',
+              border: 'none',
               color: '#15803d',
               padding: '8px 16px',
             },
