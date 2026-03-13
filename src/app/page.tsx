@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { XLogo, GithubLogo, EnvelopeSimple } from '@phosphor-icons/react/dist/ssr';
 import { Avatar } from '@/components/home/Avatar';
-import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { CommitGraph } from '@/components/home/CommitGraph';
 import { CopyEmail } from '@/components/home/CopyEmail';
 import { FadeIn } from '@/components/shared/FadeIn';
@@ -88,8 +88,8 @@ const experience = [
 const projects = [
   { name: 'ClawPanel', desc: 'Dashboard for OpenClaw', href: '#', icon: '/icons/clawpanel.svg', status: 'in-progress' as const },
   { name: 'Otto', desc: 'Ask anything about your cars', href: '#', icon: '/icons/otto.svg', status: 'in-progress' as const },
-  { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg', status: 'live' as const },
   { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', status: 'live' as const },
+  { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg', status: 'live' as const },
   { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', status: 'live' as const },
   { name: 'rgb.fun', desc: 'NFT collection (16,777,216)', href: 'https://rgb.fun', icon: '/icons/rgb.svg', status: 'live' as const },
   { name: 'rgb.so', desc: 'Onchain media', href: 'https://rgbso.framer.website/', icon: '/icons/rgb.svg', status: 'archived' as const },
@@ -97,18 +97,18 @@ const projects = [
   { name: 'Noundation UI', desc: 'Framer design kit', href: 'https://noundationkit.framer.website/landing', icon: '/icons/noundation.svg', status: 'archived' as const },
 ];
 
-function FarcasterIcon({ size = 16 }: { size?: number }) {
+function FarcasterIcon({ size = 16, className }: { size?: number; className?: string }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
       <path d="M18.24.24H5.76C2.5789.24 0 2.8188 0 6v12c0 3.1811 2.5789 5.76 5.76 5.76h12.48c3.1812 0 5.76-2.5789 5.76-5.76V6C24 2.8188 21.4212.24 18.24.24m.8155 17.1662v.504c.2868-.0256.5458.1905.5439.479v.5688h-5.1437v-.5688c-.0019-.2885.2576-.5047.5443-.479v-.504c0-.22.1525-.402.358-.458l-.0095-4.3645c-.1589-1.7366-1.6402-3.0979-3.4435-3.0979-1.8038 0-3.2846 1.3613-3.4435 3.0979l-.0096 4.3578c.2276.0424.5318.2083.5395.4648v.504c.2863-.0256.5457.1905.5438.479v.5688H4.3915v-.5688c-.0019-.2885.2575-.5047.5438-.479v-.504c0-.2529.2011-.4548.4536-.4724v-7.895h-.4905L4.2898 7.008l2.6405-.0005V5.0419h9.9495v1.9656h2.8219l-.6091 2.0314h-.4901v7.8949c.2519.0177.453.2195.453.4724" />
     </svg>
   );
 }
 
 const connect = [
-  { name: 'X.com', desc: '@chshux', href: 'https://x.com/chshux', icon: 'x' },
-  { name: 'GitHub', desc: '@0xchsh', href: 'https://github.com/0xchsh', icon: 'github' },
-  { name: 'Farcaster', desc: '@chsh.eth', href: 'https://warpcast.com/chsh.eth', icon: 'farcaster' },
+  { name: 'chshux', desc: '@chshux', href: 'https://x.com/chshux', icon: 'x' },
+  { name: '0xchsh', desc: '@0xchsh', href: 'https://github.com/0xchsh', icon: 'github' },
+  { name: 'chsh.eth', desc: '@chsh.eth', href: 'https://warpcast.com/chsh.eth', icon: 'farcaster' },
 ] as const;
 
 const linkClass = 'text-neutral-950 font-medium underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-500 hover:decoration-neutral-400 transition-colors duration-100';
@@ -157,8 +157,31 @@ export default async function Home() {
           </div>
         </FadeIn>
 
-        {/* ── Commit Activity ─────────────────────────────────────────── */}
+        {/* ── Connect ────────────────────────────────────────────────── */}
         <FadeIn delay={100}>
+        <section className="mt-8">
+          <div className="flex gap-2">
+            {connect.map((item) => (
+              <Button
+                key={item.name}
+                variant="outline"
+                size="sm"
+                className="flex-1"
+                render={<a href={item.href} target="_blank" rel="noopener noreferrer" />}
+              >
+                {item.icon === 'x' && <XLogo size={14} weight="bold" className="text-neutral-400" />}
+                {item.icon === 'github' && <GithubLogo size={14} weight="bold" className="text-neutral-400" />}
+                {item.icon === 'farcaster' && <FarcasterIcon size={14} className="text-neutral-400" />}
+                {item.name}
+              </Button>
+            ))}
+            <CopyEmail variant="pill" />
+          </div>
+        </section>
+        </FadeIn>
+
+        {/* ── Commit Activity ─────────────────────────────────────────── */}
+        <FadeIn delay={150}>
           <section className="mt-8 flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className={mutedLabel}>Last 30 Days</span>
@@ -170,7 +193,7 @@ export default async function Home() {
         </FadeIn>
 
         {/* ── Experience ──────────────────────────────────────────────── */}
-        <FadeIn delay={150}>
+        <FadeIn delay={200}>
         <section className="mt-8 flex flex-col gap-4">
           <span className={mutedLabel}>Experience</span>
           <div className="flex flex-col gap-2">
@@ -193,7 +216,7 @@ export default async function Home() {
         </FadeIn>
 
         {/* ── Projects ────────────────────────────────────────────────── */}
-        <FadeIn delay={200}>
+        <FadeIn delay={250}>
         <section className="mt-8 flex flex-col gap-4">
           <span className={mutedLabel}>Projects</span>
           <div className="flex flex-col gap-2">
@@ -236,28 +259,6 @@ export default async function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </section>
-        </FadeIn>
-
-        {/* ── Connect ────────────────────────────────────────────────── */}
-        <FadeIn delay={250}>
-        <section className="mt-8 flex flex-col gap-4">
-          <span className={mutedLabel}>Connect</span>
-          <div className="flex flex-wrap gap-2">
-            {connect.map((item) => (
-              <Badge
-                key={item.name}
-                variant="outline"
-                render={<a href={item.href} target="_blank" rel="noopener noreferrer" />}
-              >
-                {item.icon === 'x' && <XLogo size={12} weight="bold" />}
-                {item.icon === 'github' && <GithubLogo size={12} weight="bold" />}
-                {item.icon === 'farcaster' && <FarcasterIcon size={12} />}
-                {item.name}
-              </Badge>
-            ))}
-            <CopyEmail variant="pill" />
           </div>
         </section>
         </FadeIn>

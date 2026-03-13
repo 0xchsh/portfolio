@@ -1,8 +1,8 @@
 'use client';
 
-import { EnvelopeSimple } from '@phosphor-icons/react';
+import { Envelope } from '@phosphor-icons/react';
 import { toast } from 'sonner';
-import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 export function CopyEmail({ className, variant }: { className?: string; variant?: 'pill' }) {
   const handleCopy = () => {
@@ -12,13 +12,10 @@ export function CopyEmail({ className, variant }: { className?: string; variant?
 
   if (variant === 'pill') {
     return (
-      <Badge
-        variant="outline"
-        render={<button type="button" onClick={handleCopy} className="cursor-pointer" />}
-      >
-        <EnvelopeSimple size={12} weight="regular" />
+      <Button variant="outline" size="sm" className="flex-1" onClick={handleCopy}>
+        <Envelope size={14} weight="bold" className="text-neutral-400" />
         hi@ch.sh
-      </Badge>
+      </Button>
     );
   }
 
