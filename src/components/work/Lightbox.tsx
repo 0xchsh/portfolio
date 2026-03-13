@@ -174,9 +174,20 @@ export function Lightbox({
                   className="shrink-0"
                 />
               )}
-              <span className="text-sm font-medium text-white">
-                {displayItem.title}
-              </span>
+              {displayItem.link ? (
+                <a
+                  href={displayItem.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-white underline decoration-dotted decoration-neutral-500 underline-offset-[4px] hover:text-neutral-300 hover:decoration-neutral-400 transition-colors duration-100"
+                >
+                  {displayItem.title}
+                </a>
+              ) : (
+                <span className="text-sm font-medium text-white">
+                  {displayItem.title}
+                </span>
+              )}
               {displayItem.description && (
                 <>
                   <span className="text-sm text-neutral-400">·</span>

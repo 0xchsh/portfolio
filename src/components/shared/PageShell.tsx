@@ -1,6 +1,5 @@
 import { WeatherIcon } from '@/components/home/WeatherIcon';
 import { LiveClock } from '@/components/home/LiveClock';
-import { FooterTicker } from '@/components/shared/FooterTicker';
 import { AgentModeToggle } from '@/components/shared/AgentModeToggle';
 import { AgentModeOverlay } from '@/components/shared/AgentModeOverlay';
 import { KeyboardNav } from '@/components/home/KeyboardNav';
@@ -22,16 +21,13 @@ async function getWeather() {
 
 async function getLatestCommit() {
   try {
-    const res = await fetch('https://api.github.com/users/0xchsh/events?per_page=5', {
+    const res = await fetch('https://api.github.com/repos/0xchsh/portfolio/commits?per_page=1', {
       next: { revalidate: 3600 },
     });
     if (!res.ok) return null;
-    const events = await res.json();
-    const pushEvent = events.find((e: Record<string, unknown>) => e.type === 'PushEvent');
-    const payload = pushEvent?.payload as Record<string, unknown> | undefined;
-    const commits = payload?.commits as Array<Record<string, string>> | undefined;
+    const commits = await res.json();
     if (!commits?.length) return null;
-    return commits[commits.length - 1].sha.slice(0, 7);
+    return { sha: commits[0].sha.slice(0, 7), url: commits[0].html_url };
   } catch {
     return null;
   }
@@ -80,8 +76,20 @@ export async function PageShell({
             }}
           >
             <AgentModeToggle />
-            <div className="flex items-center gap-3">
-              <FooterTicker commitHash={commitHash} />
+            <div className="flex items-center gap-1">
+              {commitHash && (
+                <>
+                  <a
+                    href={commitHash.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm uppercase text-neutral-400 tracking-wide underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-500 hover:decoration-neutral-400 transition-colors duration-100"
+                  >
+                    {commitHash.sha}
+                  </a>
+                  <span className="text-neutral-300">·</span>
+                </>
+              )}
               <span className={mutedLabel}>신 © 2026</span>
             </div>
           </div>
