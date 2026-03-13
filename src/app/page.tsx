@@ -117,8 +117,22 @@ const mutedLabel = 'text-xs uppercase text-neutral-400 tracking-wide';
 // Page
 // ---------------------------------------------------------------------------
 
+async function getLatestCommit() {
+  try {
+    const res = await fetch('https://api.github.com/repos/0xchsh/portfolio/commits?per_page=1', {
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return null;
+    const commits = await res.json();
+    if (!commits?.length) return null;
+    return { sha: commits[0].sha.slice(0, 7), url: commits[0].html_url };
+  } catch {
+    return null;
+  }
+}
+
 export default async function Home() {
-  const commitData = await getCommitData();
+  const [commitData, latestCommit] = await Promise.all([getCommitData(), getLatestCommit()]);
 
   return (
     <PageShell>
@@ -236,6 +250,16 @@ export default async function Home() {
               </div>
             ))}
           </div>
+          {latestCommit && (
+            <a
+              href={latestCommit.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-xs text-neutral-300 font-mono hover:text-neutral-400 transition-colors duration-100`}
+            >
+              {latestCommit.sha}
+            </a>
+          )}
         </section>
         </FadeIn>
 
