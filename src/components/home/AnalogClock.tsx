@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 
-function getTimeInZone(tz: string) {
-  const now = new Date();
-  const str = now.toLocaleString('en-US', { timeZone: tz, hour12: false });
+function getTimeInZone(tz: string, now?: Date) {
+  const d = now ?? new Date();
+  const str = d.toLocaleString('en-US', { timeZone: tz, hour12: false });
   const [, timePart] = str.split(', ');
   const [h, m, s] = timePart.split(':').map(Number);
   return { h: h % 12, m, s };
@@ -31,39 +31,30 @@ export function AnalogClock({
   size = 96,
   offsetHours,
   offsetColor,
+  now,
 }: {
   timezone: string;
   label: string;
   size?: number;
   offsetHours?: number;
   offsetColor?: string;
+  now?: Date;
 }) {
-  const [time, setTime] = useState<{ h: number; m: number; s: number } | null>(null);
+  const [localNow, setLocalNow] = useState<Date | null>(null);
 
   useEffect(() => {
-    setTime(getTimeInZone(timezone));
-    const id = setInterval(() => setTime(getTimeInZone(timezone)), 1000);
+    if (now) return; // parent drives the clock
+    setLocalNow(new Date());
+    const id = setInterval(() => setLocalNow(new Date()), 1000);
     return () => clearInterval(id);
-  }, [timezone]);
+  }, [now]);
+
+  const currentDate = now ?? localNow;
+  const time = currentDate ? getTimeInZone(timezone, currentDate) : null;
 
   const cx = size / 2;
   const cy = size / 2;
   const r = size / 2 - 4;
-
-  // Hour markers (static, no hydration issue)
-  const markers = Array.from({ length: 12 }, (_, i) => {
-    const angle = (i * 30 - 90) * (Math.PI / 180);
-    const isQuarter = i % 3 === 0;
-    const outerR = r - 2;
-    const innerR = isQuarter ? r - 8 : r - 5;
-    return {
-      x1: Math.round((cx + Math.cos(angle) * innerR) * 100) / 100,
-      y1: Math.round((cy + Math.sin(angle) * innerR) * 100) / 100,
-      x2: Math.round((cx + Math.cos(angle) * outerR) * 100) / 100,
-      y2: Math.round((cy + Math.sin(angle) * outerR) * 100) / 100,
-      isQuarter,
-    };
-  });
 
   // Hand angles
   const secAngle = time ? time.s * 6 : 0;
@@ -81,13 +72,13 @@ export function AnalogClock({
     if (offsetHours < 0) {
       // Behind: arc from (current hour) back by N hours
       const startAngle = currentAngle;
-      const endAngle = currentAngle - offsetHours * 30; // negative * negative = positive
-      overlayPath = arcPath(cx, cy, r - 1, startAngle, endAngle);
+      const endAngle = currentAngle - offsetHours * 30;
+      overlayPath = arcPath(cx, cy, size / 2, startAngle, endAngle);
     } else {
       // Ahead: arc from (current hour minus offset) up to current hour
       const startAngle = currentAngle - offsetHours * 30;
       const endAngle = currentAngle;
-      overlayPath = arcPath(cx, cy, r - 1, startAngle, endAngle);
+      overlayPath = arcPath(cx, cy, size / 2, startAngle, endAngle);
     }
   }
 
@@ -111,20 +102,6 @@ export function AnalogClock({
               opacity={0.4}
             />
           )}
-
-          {/* Hour markers */}
-          {markers.map((m, i) => (
-            <line
-              key={i}
-              x1={m.x1}
-              y1={m.y1}
-              x2={m.x2}
-              y2={m.y2}
-              stroke={m.isQuarter ? '#a3a3a3' : '#d4d4d4'}
-              strokeWidth={m.isQuarter ? 1.5 : 0.75}
-              strokeLinecap="round"
-            />
-          ))}
 
           {time && (
             <>

@@ -110,6 +110,12 @@ export function WeatherPill({ weather }: { weather: Weather }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [btnWidth, setBtnWidth] = useState(0);
   const prices = useCryptoPrices();
+  const [now, setNow] = useState(() => new Date());
+
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(id);
+  }, []);
 
   useEffect(() => {
     if (!buttonRef.current) return;
@@ -156,7 +162,7 @@ export function WeatherPill({ weather }: { weather: Weather }) {
       >
         {/* Clocks */}
         <div
-          className={`${widgetCard} p-3 flex justify-between`}
+          className={`${widgetCard} p-3 flex justify-center gap-4`}
           style={{
             opacity: open ? 1 : 0,
             transform: open ? 'translateY(0)' : 'translateY(-8px)',
@@ -165,9 +171,9 @@ export function WeatherPill({ weather }: { weather: Weather }) {
               : 'opacity 120ms 0ms ease, transform 120ms 0ms ease',
           }}
         >
-          <AnalogClock timezone="America/Los_Angeles" label="PT" size={44} offsetHours={-2} offsetColor="#ef4444" />
-          <AnalogClock timezone="America/Chicago" label="CT" size={44} />
-          <AnalogClock timezone="America/New_York" label="ET" size={44} offsetHours={1} offsetColor="#22c55e" />
+          <AnalogClock timezone="America/Los_Angeles" label="PT" size={44} offsetHours={-2} offsetColor="#ef4444" now={now} />
+          <AnalogClock timezone="America/Chicago" label="CT" size={44} now={now} />
+          <AnalogClock timezone="America/New_York" label="ET" size={44} offsetHours={1} offsetColor="#22c55e" now={now} />
         </div>
 
         {/* Weather */}
