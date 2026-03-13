@@ -85,9 +85,9 @@ const experience = [
 ];
 
 const projects = [
-  { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg', status: 'live' as const },
   { name: 'ClawPanel', desc: 'Dashboard for OpenClaw', href: '#', icon: '/icons/clawpanel.svg', status: 'in-progress' as const },
   { name: 'Otto', desc: 'Ask anything about your cars', href: '#', icon: '/icons/otto.svg', status: 'in-progress' as const },
+  { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg', status: 'live' as const },
   { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', status: 'live' as const },
   { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', status: 'live' as const },
   { name: 'rgb.fun', desc: 'NFT collection (16,777,216)', href: 'https://rgb.fun', icon: '/icons/rgb.svg', status: 'live' as const },
@@ -196,7 +196,7 @@ export default async function Home() {
         <section className="mt-8 flex flex-col gap-4">
           <span className={mutedLabel}>Projects</span>
           <div className="flex flex-col gap-2">
-            {projects.map((item) => (
+            {projects.map((item, i) => (
               <div key={item.name} className="flex items-center gap-2 min-w-0">
                 <div className="flex items-center gap-3 min-w-0">
                   <Image src={item.icon} alt={item.name} width={16} height={16} className="shrink-0" />
@@ -227,7 +227,7 @@ export default async function Home() {
                     <span className="text-sm text-blue-500 badge-shimmer">In Progress</span>
                   )}
                   {item.status === 'live' && (
-                    <span className="flex items-center gap-1 text-sm text-neutral-400">Live<span className="relative flex h-1.5 w-1.5"><span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-50" /><span className="relative rounded-full h-1.5 w-1.5 bg-green-500" /></span></span>
+                    <span className="flex items-center gap-1 text-sm text-neutral-400">Live<span className="relative flex h-1.5 w-1.5"><span className="absolute -inset-0.5 rounded-full bg-green-400" style={{ animation: 'slow-ping 4s ease-out infinite', animationDelay: `${[0, 0, 0, 1000, 2000, 3000, 0, 0, 0][i]}ms` }} /><span className="relative rounded-full h-1.5 w-1.5 bg-green-500" /></span></span>
                   )}
                   {item.status === 'archived' && (
                     <span className="text-sm text-neutral-300 line-through">Archived</span>
