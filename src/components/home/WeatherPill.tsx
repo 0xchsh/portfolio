@@ -136,7 +136,7 @@ export function WeatherPill({ weather }: { weather: Weather }) {
   }, [open]);
 
   return (
-    <div ref={ref} className="relative hidden sm:block">
+    <div ref={ref} className="relative">
       <button
         ref={buttonRef}
         onClick={() => {
@@ -154,10 +154,14 @@ export function WeatherPill({ weather }: { weather: Weather }) {
 
       {/* Widget panel */}
       <div
-        className="absolute top-full right-0 mt-2 flex flex-col gap-3"
+        className="absolute top-full right-0 mt-2 flex flex-col gap-3 rounded-2xl p-2 -m-2"
         style={{
-          width: 200,
+          width: 216,
           pointerEvents: open ? 'auto' : 'none',
+          background: open ? 'linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.6))' : 'transparent',
+          backdropFilter: open ? 'blur(20px)' : 'none',
+          WebkitBackdropFilter: open ? 'blur(20px)' : 'none',
+          transition: 'background 200ms ease, backdrop-filter 200ms ease',
         }}
       >
         {/* Clocks */}

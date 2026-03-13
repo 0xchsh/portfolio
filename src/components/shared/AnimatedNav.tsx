@@ -46,7 +46,7 @@ function MobileNav() {
     <div ref={menuRef} className="relative sm:hidden">
       <button
         onClick={() => setOpen(v => !v)}
-        className="flex items-center gap-1.5 text-sm font-semibold px-2.5 py-1 rounded-lg btn-classic btn-classic-outline bg-background"
+        className="flex items-center gap-1.5 text-sm font-semibold px-2.5 h-7 rounded-lg btn-classic btn-classic-outline bg-background border border-transparent bg-clip-padding"
       >
         <ActiveIcon size={14} weight="regular" />
         {activeItem.label}

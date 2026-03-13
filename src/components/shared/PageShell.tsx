@@ -1,5 +1,3 @@
-import { WeatherIcon } from '@/components/home/WeatherIcon';
-import { LiveClock } from '@/components/home/LiveClock';
 import { WeatherPill } from '@/components/home/WeatherPill';
 import { AgentModeToggle } from '@/components/shared/AgentModeToggle';
 import { AgentModeOverlay } from '@/components/shared/AgentModeOverlay';
@@ -63,11 +61,6 @@ export async function PageShell({
         <div className="flex justify-between items-start px-4 py-6 sm:px-6 [&>*]:pointer-events-auto">
           <AnimatedNav />
           <WeatherPill weather={weather} />
-          <div className="flex items-center gap-1 text-sm btn-classic btn-classic-outline bg-background rounded-lg px-2.5 py-1 sm:hidden">
-            <span className="text-neutral-400">Chicago, IL</span>
-            <WeatherIcon code={weather.code} />
-            <LiveClock />
-          </div>
         </div>
       </header>
 
