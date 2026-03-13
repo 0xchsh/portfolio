@@ -108,20 +108,12 @@ export function WeatherPill({ weather }: { weather: Weather }) {
   const [openCount, setOpenCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const [btnWidth, setBtnWidth] = useState(0);
   const prices = useCryptoPrices();
   const [now, setNow] = useState(() => new Date());
 
   useEffect(() => {
     const id = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(id);
-  }, []);
-
-  useEffect(() => {
-    if (!buttonRef.current) return;
-    const ro = new ResizeObserver(([e]) => setBtnWidth(e.contentRect.width + 20)); // +padding
-    ro.observe(buttonRef.current);
-    return () => ro.disconnect();
   }, []);
 
   useEffect(() => {
@@ -145,18 +137,17 @@ export function WeatherPill({ weather }: { weather: Weather }) {
             return !v;
           });
         }}
-        className="inline-flex items-center justify-center gap-1 text-sm font-medium border border-transparent bg-clip-padding rounded-lg px-2.5 h-7 cursor-pointer w-[200px] btn-classic btn-classic-outline bg-background"
+        className="inline-flex items-center justify-center gap-1 text-sm font-medium border border-transparent bg-clip-padding rounded-lg px-2.5 h-7 cursor-pointer sm:w-[200px] btn-classic btn-classic-outline bg-background"
       >
-        <span className="text-neutral-400">Chicago, IL</span>
+        <span className="text-neutral-400 hidden sm:inline">Chicago, IL</span>
         <WeatherIcon code={weather.code} />
         <LiveClock />
       </button>
 
       {/* Widget panel */}
       <div
-        className="absolute top-full right-0 mt-2 flex flex-col gap-3 rounded-2xl p-2 -m-2"
+        className="absolute top-full right-0 mt-3 flex flex-col gap-3 rounded-2xl sm:w-[200px]"
         style={{
-          width: 216,
           pointerEvents: open ? 'auto' : 'none',
           background: open ? 'linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.6))' : 'transparent',
           backdropFilter: open ? 'blur(20px)' : 'none',
