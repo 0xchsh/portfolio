@@ -21,21 +21,21 @@ let audioCtx: AudioContext | null = null;
 function playClack() {
   if (!audioCtx) audioCtx = new AudioContext();
   const ctx = audioCtx;
-
+  const t = ctx.currentTime;
+  // Clock tick — sharp impulse into a resonant body
   const osc = ctx.createOscillator();
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(800, t);
+  osc.frequency.exponentialRampToValueAtTime(300, t + 0.015);
+
   const gain = ctx.createGain();
+  gain.gain.setValueAtTime(0.06, t);
+  gain.gain.exponentialRampToValueAtTime(0.001, t + 0.018);
+
   osc.connect(gain);
   gain.connect(ctx.destination);
-
-  osc.type = 'square';
-  osc.frequency.setValueAtTime(1800, ctx.currentTime);
-  osc.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.015);
-
-  gain.gain.setValueAtTime(0.08, ctx.currentTime);
-  gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.04);
-
-  osc.start(ctx.currentTime);
-  osc.stop(ctx.currentTime + 0.04);
+  osc.start(t);
+  osc.stop(t + 0.02);
 }
 
 export function CommitGraph({ days }: { days: CommitDay[] }) {
