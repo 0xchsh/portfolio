@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react';
 import type { CommitDay } from '@/app/page';
+import { playTick } from '@/lib/tick';
 
 function commitLevel(count: number, max: number): string {
   if (count === 0) return 'bg-neutral-200';
@@ -17,27 +18,6 @@ function formatDate(dateStr: string) {
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
-let audioCtx: AudioContext | null = null;
-function playClack() {
-  if (!audioCtx) audioCtx = new AudioContext();
-  const ctx = audioCtx;
-  const t = ctx.currentTime;
-  // Clock tick — sharp impulse into a resonant body
-  const osc = ctx.createOscillator();
-  osc.type = 'sine';
-  osc.frequency.setValueAtTime(800, t);
-  osc.frequency.exponentialRampToValueAtTime(300, t + 0.015);
-
-  const gain = ctx.createGain();
-  gain.gain.setValueAtTime(0.06, t);
-  gain.gain.exponentialRampToValueAtTime(0.001, t + 0.018);
-
-  osc.connect(gain);
-  gain.connect(ctx.destination);
-  osc.start(t);
-  osc.stop(t + 0.02);
-}
-
 export function CommitGraph({ days }: { days: CommitDay[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
   const max = Math.max(...days.map((d) => d.count), 1);
@@ -46,7 +26,7 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
   const handleEnter = useCallback((i: number) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setHovered(i);
-    playClack();
+    playTick();
   }, []);
 
   const handleLeave = useCallback(() => {

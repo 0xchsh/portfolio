@@ -4,6 +4,7 @@ import { useRef, useState, useEffect, useMemo, useCallback } from 'react';
 import type { WorkItem } from '@/app/work/page';
 import { WorkCardContent } from './WorkCard';
 import { Lightbox } from './Lightbox';
+import { playTick } from '@/lib/tick';
 
 // ── Seeded shuffle ──────────────────────────────────────────────────────────
 
@@ -124,6 +125,7 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
   const lastPointer = useRef({ x: 0, y: 0, t: 0 });
   const animFrame = useRef(0);
   const visibleRef = useRef<{ tiles: string; vw: number; vh: number }>({ tiles: '', vw: 0, vh: 0 });
+  const lastCell = useRef({ col: 0, row: 0 });
 
   // Wrap offset into tile space
   const wrap = useCallback(
@@ -142,6 +144,14 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
     const w = wrap(pos.current.x, pos.current.y);
     const vw = window.innerWidth;
     const vh = window.innerHeight;
+
+    // Tick when crossing a card boundary
+    const col = Math.floor(-pos.current.x / COL_W);
+    const row = Math.floor(-pos.current.y / ROW_H);
+    if (col !== lastCell.current.col || row !== lastCell.current.row) {
+      lastCell.current = { col, row };
+      playTick();
+    }
 
     // Update tile container positions
     const tilesX = Math.ceil(vw / tileW) + 2;
@@ -349,6 +359,7 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
                 key={i}
                 className="absolute cursor-pointer"
                 data-work-item={c.idx}
+                data-haptic
                 style={{
                   left: c.x,
                   top: c.y,

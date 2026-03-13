@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { XLogo, GithubLogo, EnvelopeSimple } from '@phosphor-icons/react/dist/ssr';
 import { Avatar } from '@/components/home/Avatar';
+import { Badge } from '@/components/ui/badge';
 import { CommitGraph } from '@/components/home/CommitGraph';
 import { CopyEmail } from '@/components/home/CopyEmail';
 import { FadeIn } from '@/components/shared/FadeIn';
@@ -243,31 +244,20 @@ export default async function Home() {
         <FadeIn delay={250}>
         <section className="mt-8 flex flex-col gap-4">
           <span className={mutedLabel}>Connect</span>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-wrap gap-2">
             {connect.map((item) => (
-              <div key={item.name} className="flex items-center gap-2 min-w-0">
-                <div className="flex items-center gap-3 min-w-0">
-                  <span className="text-neutral-950 shrink-0">
-                    {item.icon === 'x' && <XLogo size={16} weight="bold" />}
-                    {item.icon === 'github' && <GithubLogo size={16} weight="bold" />}
-                    {item.icon === 'farcaster' && <FarcasterIcon size={16} />}
-                  </span>
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" className={`text-sm ${linkClass}`}>{item.name}</a>
-                </div>
-                <Dot />
-                <span className="text-sm text-neutral-400">{item.desc}</span>
-              </div>
+              <Badge
+                key={item.name}
+                variant="outline"
+                render={<a href={item.href} target="_blank" rel="noopener noreferrer" />}
+              >
+                {item.icon === 'x' && <XLogo size={12} weight="bold" />}
+                {item.icon === 'github' && <GithubLogo size={12} weight="bold" />}
+                {item.icon === 'farcaster' && <FarcasterIcon size={12} />}
+                {item.name}
+              </Badge>
             ))}
-            <div className="flex items-center gap-2 min-w-0">
-              <div className="flex items-center gap-3 min-w-0">
-                <span className="text-neutral-950 shrink-0">
-                  <EnvelopeSimple size={16} weight="regular" />
-                </span>
-                <CopyEmail className={`text-sm ${linkClass}`} />
-              </div>
-              <Dot />
-              <span className="text-sm text-neutral-400">Email</span>
-            </div>
+            <CopyEmail variant="pill" />
           </div>
         </section>
         </FadeIn>
