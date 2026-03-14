@@ -79,7 +79,7 @@ export async function PageShell({
             }}
           >
             <AgentModeToggle />
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 translate-y-[4px]">
               {commitHash && (
                 <>
                   <a
