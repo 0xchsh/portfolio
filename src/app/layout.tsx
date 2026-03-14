@@ -39,9 +39,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}
+        className={`${geist.variable} ${geistMono.variable} font-sans antialiased max-w-[100vw]`}
         suppressHydrationWarning
       >
         <SquircleNoScript />
