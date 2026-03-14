@@ -137,7 +137,7 @@ export function WeatherPill({ weather }: { weather: Weather }) {
             return !v;
           });
         }}
-        className="inline-flex items-center justify-center gap-1 text-sm font-medium border border-transparent bg-clip-padding rounded-lg px-2.5 h-7 cursor-pointer sm:w-[200px] btn-classic btn-classic-outline bg-background"
+        className="inline-flex items-center justify-center gap-1 text-sm font-medium border border-transparent bg-clip-padding rounded-lg px-2.5 h-7 cursor-pointer sm:w-[204px] btn-classic btn-classic-outline bg-background"
       >
         <span className="text-neutral-400 hidden sm:inline">Chicago, IL</span>
         <WeatherIcon code={weather.code} />
@@ -146,7 +146,7 @@ export function WeatherPill({ weather }: { weather: Weather }) {
 
       {/* Widget panel */}
       <div
-        className="absolute top-full right-0 mt-3 flex flex-col gap-3 rounded-2xl sm:w-[200px]"
+        className="absolute top-full right-0 mt-3 flex flex-col gap-3 rounded-2xl sm:w-[204px]"
         style={{
           pointerEvents: open ? 'auto' : 'none',
           background: open ? 'linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.6))' : 'transparent',
@@ -184,7 +184,7 @@ export function WeatherPill({ weather }: { weather: Weather }) {
         >
           <div className="flex justify-between items-start">
             <div className="flex flex-col">
-              <span className="text-[10px] leading-none tracking-wide text-neutral-400 font-medium">Chicago, IL</span>
+              <span className="text-[10px] leading-tight tracking-wide text-neutral-400 font-medium">Chicago, IL</span>
               <div className="flex items-center gap-1 mt-1">
                 <WeatherIcon code={weather.code} size={28} />
                 <span className="text-2xl font-semibold text-neutral-950 leading-none">
@@ -192,7 +192,7 @@ export function WeatherPill({ weather }: { weather: Weather }) {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col items-end leading-tight">
+            <div className="flex flex-col items-end leading-none">
               <span className="text-[10px] text-neutral-400">{weather.desc}</span>
               {weather.highF !== null && weather.lowF !== null && (
                 <span className="text-[10px] text-neutral-400">
