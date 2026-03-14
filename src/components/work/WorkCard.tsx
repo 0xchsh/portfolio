@@ -27,15 +27,16 @@ export function SingleMedia({ src, alt, objectPosition }: { src: string; alt: st
   );
 }
 
-export function VideoWithBlur({ src, className }: { src: string; className: string }) {
+export function VideoWithBlur({ src, className, eager }: { src: string; className: string; eager?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
-  const [inView, setInView] = useState(false);
+  const [inView, setInView] = useState(eager ?? false);
   const poster = src.replace('.mp4', '-poster.webp');
 
   // Lazy load: only start loading video when near viewport
   useEffect(() => {
+    if (eager) return;
     const el = containerRef.current;
     if (!el) return;
     const observer = new IntersectionObserver(
@@ -44,7 +45,7 @@ export function VideoWithBlur({ src, className }: { src: string; className: stri
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [eager]);
 
   useEffect(() => {
     if (!inView) return;
@@ -79,7 +80,7 @@ export function VideoWithBlur({ src, className }: { src: string; className: stri
   );
 }
 
-export function MobileFrame({ src, alt, transparent }: { src: string; alt: string; transparent?: boolean }) {
+export function MobileFrame({ src, alt, transparent, eager }: { src: string; alt: string; transparent?: boolean; eager?: boolean }) {
   const isVideo = src.endsWith('.mp4');
   const ref = useRef<HTMLDivElement>(null);
   const [radius, setRadius] = useState(32);
@@ -104,7 +105,7 @@ export function MobileFrame({ src, alt, transparent }: { src: string; alt: strin
         style={{ aspectRatio: '9 / 19.5' }}
       >
         {isVideo ? (
-          <VideoWithBlur src={src} className="absolute inset-0 w-full h-full object-cover" />
+          <VideoWithBlur src={src} className="absolute inset-0 w-full h-full object-cover" eager={eager} />
         ) : (
           <Image
             src={src}

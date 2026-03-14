@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import type { WorkItem } from '@/app/work/page';
 import { VideoWithBlur, MobileFrame } from './WorkCard';
 
-function DesktopFrame({ src, alt }: { src: string; alt: string }) {
+function DesktopFrame({ src, alt, eager }: { src: string; alt: string; eager?: boolean }) {
   const isVideo = src.endsWith('.mp4');
   const ref = useRef<HTMLDivElement>(null);
   const [radius, setRadius] = useState(16);
@@ -32,7 +32,7 @@ function DesktopFrame({ src, alt }: { src: string; alt: string }) {
         style={{ aspectRatio: '16 / 9' }}
       >
         {isVideo ? (
-          <VideoWithBlur src={src} className="absolute inset-0 w-full h-full object-cover object-top" />
+          <VideoWithBlur src={src} className="absolute inset-0 w-full h-full object-cover object-top" eager={eager} />
         ) : (
           <Image
             src={src}
@@ -136,6 +136,7 @@ export function Lightbox({
                   src={displayItem.src[0]}
                   alt={displayItem.title}
                   transparent
+                  eager
                 />
               </div>
             ) : isSingle ? (
@@ -143,6 +144,7 @@ export function Lightbox({
                 <DesktopFrame
                   src={displayItem.src[0]}
                   alt={displayItem.title}
+                  eager
                 />
               </div>
             ) : (
@@ -157,6 +159,7 @@ export function Lightbox({
                       src={src}
                       alt={`${displayItem.title} ${j + 1}`}
                       transparent
+                      eager
                     />
                   </div>
                 ))}
