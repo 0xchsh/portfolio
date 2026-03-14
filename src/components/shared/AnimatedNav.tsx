@@ -101,7 +101,7 @@ function DesktopNav() {
   const pathname = usePathname();
 
   return (
-    <div className="relative hidden sm:block">
+    <div className="relative">
       <ButtonGroup>
         {navItems.map(({ href, label, icon: Icon }) => {
           const isActive = pathname === href;
@@ -126,10 +126,5 @@ function DesktopNav() {
 }
 
 export function AnimatedNav() {
-  return (
-    <>
-      <MobileNav />
-      <DesktopNav />
-    </>
-  );
+  return <DesktopNav />;
 }
