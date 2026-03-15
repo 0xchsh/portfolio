@@ -199,7 +199,7 @@ export function AgentModeOverlay() {
       </div>
 
       <div
-        className="absolute bottom-0 left-0 right-0 flex items-center p-6"
+        className="absolute bottom-0 left-0 right-0 flex items-center px-4 py-6 sm:px-6"
         style={{
           background: 'linear-gradient(to top, #111111 0%, #111111 50%, transparent 100%)',
           paddingTop: '2.5rem',

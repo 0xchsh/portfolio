@@ -72,7 +72,7 @@ export async function PageShell({
       {/* ── Footer ─────────────────────────────────────────────────────── */}
       {!isCanvas && (
         <footer className="w-full z-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0">
-          <div className="flex justify-between items-end p-6"
+          <div className="flex justify-between items-end px-4 py-6 sm:px-6"
             style={{
               background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
               paddingTop: '1.5rem',
