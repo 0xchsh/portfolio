@@ -40,16 +40,18 @@ export function AnalogClock({
   offsetColor?: string;
   now?: Date;
 }) {
+  const [mounted, setMounted] = useState(false);
   const [localNow, setLocalNow] = useState<Date | null>(null);
 
   useEffect(() => {
+    setMounted(true);
     if (now) return; // parent drives the clock
     setLocalNow(new Date());
     const id = setInterval(() => setLocalNow(new Date()), 1000);
     return () => clearInterval(id);
   }, [now]);
 
-  const currentDate = now ?? localNow;
+  const currentDate = mounted ? (now ?? localNow) : null;
   const time = currentDate ? getTimeInZone(timezone, currentDate) : null;
 
   const cx = size / 2;

@@ -45,12 +45,13 @@ function Sparkline({ data, up, width = 60, height = 24 }: { data: number[]; up: 
   const range = max - min || 1;
   const points = data.map((v, i) => {
     const x = (i / (data.length - 1)) * width;
-    const y = height - ((v - min) / range) * height;
+    const pad = 2;
+    const y = pad + (height - pad * 2) - ((v - min) / range) * (height - pad * 2);
     return `${x},${y}`;
   }).join(' ');
 
   return (
-    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className="block">
+    <svg width="100%" height={height} viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none" className="block">
       <polyline
         ref={pathRef}
         points={points}
@@ -206,7 +207,7 @@ export function WeatherPill({ weather }: { weather: Weather }) {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col items-end leading-none">
+            <div className="flex flex-col items-end leading-none gap-1">
               <span className="text-[10px] text-neutral-400">{weather.desc}</span>
               {weather.highF !== null && weather.lowF !== null && (
                 <span className="text-[10px] text-neutral-400">
@@ -235,12 +236,12 @@ export function WeatherPill({ weather }: { weather: Weather }) {
             <div key={coin.symbol} className={`${widgetCard} flex-1 p-3 overflow-hidden`}>
               <div className="flex items-center justify-between leading-none">
                 <span className="text-xs font-semibold text-neutral-950">{coin.symbol}</span>
-                <span className={`text-[10px] font-medium ${coin.up ? 'text-green-500' : 'text-red-500'}`}>
+                <span className={`text-[10px] font-medium tabular-nums ${coin.up ? 'text-green-500' : 'text-red-500'}`}>
                   {coin.up ? '+' : ''}{coin.change}%
                 </span>
               </div>
               {coin.sparkline.length > 0 && (
-                <div className="mt-1.5 -mx-1">
+                <div className="mt-1.5">
                   <Sparkline key={openCount} data={coin.sparkline} up={coin.up} width={80} height={32} />
                 </div>
               )}
