@@ -129,6 +129,20 @@ export function WeatherPill({ weather }: { weather: Weather }) {
 
   return (
     <div ref={ref} className="relative">
+      {/* Mobile-only fade overlay behind widgets */}
+      <div
+        className="fixed top-0 left-0 right-0 sm:hidden pointer-events-none"
+        style={{
+          height: '100vh',
+          opacity: open ? 1 : 0,
+          backdropFilter: 'blur(4px)',
+          WebkitBackdropFilter: 'blur(4px)',
+          background: 'linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0) 80%)',
+          transition: open
+            ? 'opacity 250ms cubic-bezier(0.215, 0.61, 0.355, 1)'
+            : 'opacity 150ms ease',
+        }}
+      />
       <button
         ref={buttonRef}
         onClick={() => {
