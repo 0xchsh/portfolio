@@ -44,9 +44,16 @@ function shuffleItems(items: WorkItem[]): WorkItem[] {
   }
 
   // Fix adjacency: no same-title or cover-cover cards next to each other
-  const getNeighbors = (i: number) => [i - 1, i + 1, i - COLS, i + COLS].filter(
-    (n) => n >= 0 && n < shuffled.length,
-  );
+  // (horizontally or vertically — diagonal is fine)
+  const getNeighbors = (i: number) => {
+    const col = i % COLS;
+    const neighbors: number[] = [];
+    if (col > 0) neighbors.push(i - 1);            // left
+    if (col < COLS - 1) neighbors.push(i + 1);      // right
+    if (i - COLS >= 0) neighbors.push(i - COLS);     // above
+    if (i + COLS < shuffled.length) neighbors.push(i + COLS); // below
+    return neighbors;
+  };
 
   const conflictsAt = (idx: number) =>
     getNeighbors(idx).some((n) => hasConflict(shuffled, idx, n));
