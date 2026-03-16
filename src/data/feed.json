@@ -1,5 +1,6 @@
 {
   "experiments": [
+    { "title": "AI Design Jobs", "number": "004", "href": "https://ai-design-jobs.vercel.app/" },
     { "title": "Otto", "number": "003", "href": null },
     { "title": "ClawPanel", "number": "002", "href": null },
     { "title": "Rat Labs", "number": "001", "href": "https://www.ratlabs.xyz/" }

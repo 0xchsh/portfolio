@@ -261,7 +261,14 @@ export function WorkCanvas({ items }: { items: WorkItem[] }) {
           const cardEl = (target as HTMLElement).closest('[data-work-item]');
           if (cardEl) {
             const idx = Number(cardEl.getAttribute('data-work-item'));
-            if (!isNaN(idx)) setLightboxItem(shuffled[idx]);
+            if (!isNaN(idx)) {
+              const clickedItem = shuffled[idx];
+              if (clickedItem.link) {
+                window.open(clickedItem.link, '_blank', 'noopener,noreferrer');
+              } else {
+                setLightboxItem(clickedItem);
+              }
+            }
             return;
           }
         }

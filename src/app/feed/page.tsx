@@ -16,6 +16,7 @@ const linkClass =
   'text-neutral-950 font-medium underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-500 hover:decoration-neutral-400 transition-colors duration-100';
 
 const experimentIcons: Record<string, ComponentType<{ size?: number; weight?: 'regular' }>> = {
+  'AI Design Jobs': Spinner,
   'Rat Labs': Flask,
   'Clawpanel': Terminal,
   'Otto': Robot,

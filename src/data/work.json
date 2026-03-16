@@ -204,6 +204,16 @@
     "ratio": "16:9"
   },
   {
+    "title": "AI Design Jobs",
+    "description": "Curated design roles at AI companies",
+    "src": [
+      "/work/misc/design-jobs-01.png"
+    ],
+    "link": "https://ai-design-jobs.vercel.app/",
+    "logo": null,
+    "ratio": "16:9"
+  },
+  {
     "title": "Rat Labs",
     "description": "Onchain product studio",
     "src": [
