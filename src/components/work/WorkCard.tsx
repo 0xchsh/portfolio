@@ -5,8 +5,12 @@ import Image from 'next/image';
 import { Squircle } from '@squircle-js/react';
 import type { WorkItem } from '@/app/work/page';
 
+function isVideoSrc(src: string) {
+  return src.endsWith('.mp4') || src.endsWith('.webm');
+}
+
 export function SingleMedia({ src, alt, objectPosition }: { src: string; alt: string; objectPosition?: string }) {
-  const isVideo = src.endsWith('.mp4');
+  const isVideo = isVideoSrc(src);
   const pos = objectPosition || 'top';
 
   if (isVideo) {
@@ -32,7 +36,7 @@ export function VideoWithBlur({ src, className, eager }: { src: string; classNam
   const containerRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
   const [inView, setInView] = useState(eager ?? false);
-  const poster = src.replace('.mp4', '-poster.webp');
+  const poster = src.replace(/\.(mp4|webm)$/, '-poster.webp');
 
   // Lazy load: only start loading video when near viewport
   useEffect(() => {
@@ -63,6 +67,7 @@ export function VideoWithBlur({ src, className, eager }: { src: string; classNam
       <img
         src={poster}
         alt=""
+        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
         className={`absolute inset-0 w-full h-full object-cover ${className.includes('object-top') ? 'object-top' : ''} transition-opacity duration-300 ${loaded ? 'opacity-0' : 'opacity-100'}`}
       />
       {inView && (
@@ -81,7 +86,7 @@ export function VideoWithBlur({ src, className, eager }: { src: string; classNam
 }
 
 export function MobileFrame({ src, alt, transparent, eager }: { src: string; alt: string; transparent?: boolean; eager?: boolean }) {
-  const isVideo = src.endsWith('.mp4');
+  const isVideo = isVideoSrc(src);
   const ref = useRef<HTMLDivElement>(null);
   const [radius, setRadius] = useState(32);
 

@@ -8,8 +8,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import type { WorkItem } from '@/app/work/page';
 import { VideoWithBlur, MobileFrame } from './WorkCard';
 
+function isVideoSrc(src: string) {
+  return src.endsWith('.mp4') || src.endsWith('.webm');
+}
+
 function DesktopFrame({ src, alt, eager }: { src: string; alt: string; eager?: boolean }) {
-  const isVideo = src.endsWith('.mp4');
+  const isVideo = isVideoSrc(src);
   const ref = useRef<HTMLDivElement>(null);
   const [radius, setRadius] = useState(16);
 
