@@ -7,7 +7,7 @@ import { AnalogClock } from '@/components/home/AnalogClock';
 
 type Weather = {
   code: number;
-  tempF: number;
+  tempF: number | null;
   desc: string;
   highF: number | null;
   lowF: number | null;
@@ -203,7 +203,7 @@ export function WeatherPill({ weather }: { weather: Weather }) {
               <div className="flex items-center gap-1 mt-1">
                 <WeatherIcon code={weather.code} size={28} />
                 <span className="text-2xl font-semibold text-neutral-950 leading-none">
-                  {weather.tempF}°
+                  {weather.tempF !== null ? `${weather.tempF}°` : '--'}
                 </span>
               </div>
             </div>

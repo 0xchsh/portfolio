@@ -5,24 +5,35 @@ import { KeyboardNav } from '@/components/home/KeyboardNav';
 import { AnimatedNav } from '@/components/shared/AnimatedNav';
 import { PageTransition } from '@/components/shared/PageTransition';
 
+const WMO_DESC: Record<number, string> = {
+  0: 'Clear', 1: 'Mainly clear', 2: 'Partly cloudy', 3: 'Overcast',
+  45: 'Foggy', 48: 'Foggy',
+  51: 'Drizzle', 53: 'Drizzle', 55: 'Drizzle',
+  61: 'Rain', 63: 'Rain', 65: 'Heavy rain',
+  71: 'Snow', 73: 'Snow', 75: 'Heavy snow', 77: 'Snow grains',
+  80: 'Showers', 81: 'Showers', 82: 'Heavy showers',
+  85: 'Snow showers', 86: 'Snow showers',
+  95: 'Thunderstorm', 96: 'Thunderstorm', 99: 'Thunderstorm',
+};
+
 async function getWeather() {
   try {
-    const res = await fetch('https://wttr.in/Chicago?format=j1', {
-      next: { revalidate: 1800 },
-    });
+    const res = await fetch(
+      'https://api.open-meteo.com/v1/forecast?latitude=41.8781&longitude=-87.6298&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FChicago&forecast_days=1',
+      { next: { revalidate: 1800 } }
+    );
     if (!res.ok) throw new Error('Weather fetch failed');
     const data = await res.json();
-    const current = data.current_condition[0];
-    const today = data.weather?.[0];
+    const code = data.current.weather_code as number;
     return {
-      code: parseInt(current.weatherCode),
-      tempF: parseInt(current.temp_F),
-      desc: current.weatherDesc?.[0]?.value || '',
-      highF: today ? parseInt(today.maxtempF) : null,
-      lowF: today ? parseInt(today.mintempF) : null,
+      code,
+      tempF: Math.round(data.current.temperature_2m) as number,
+      desc: WMO_DESC[code] ?? 'Clear',
+      highF: Math.round(data.daily.temperature_2m_max[0]) as number,
+      lowF: Math.round(data.daily.temperature_2m_min[0]) as number,
     };
   } catch {
-    return { code: 113, tempF: 0, desc: 'Clear', highF: null, lowF: null };
+    return { code: 0, tempF: null, desc: 'Clear', highF: null, lowF: null };
   }
 }
 
