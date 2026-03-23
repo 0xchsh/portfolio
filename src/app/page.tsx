@@ -86,15 +86,15 @@ const experience = [
 ];
 
 const projects = [
-  { name: 'ClawPanel', desc: 'Dashboard for OpenClaw', href: '#', icon: '/icons/clawpanel.svg', status: 'in-progress' as const },
-  { name: 'Otto', desc: 'Ask anything about your cars', href: '#', icon: '/icons/otto.svg', status: 'in-progress' as const },
-  { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', status: 'live' as const },
-  { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg', status: 'live' as const },
-  { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', status: 'live' as const },
-  { name: 'rgb.fun', desc: 'NFT collection (16,777,216)', href: 'https://rgb.fun', icon: '/icons/rgb.svg', status: 'live' as const },
-  { name: 'rgb.so', desc: 'Onchain media', href: 'https://rgbso.framer.website/', icon: '/icons/rgb.svg', status: 'archived' as const },
-  { name: 'Noundation', desc: 'Community design system', href: 'https://noundation.framer.website/', icon: '/icons/noundation.svg', status: 'archived' as const },
-  { name: 'Noundation UI', desc: 'Framer design kit', href: 'https://noundationkit.framer.website/landing', icon: '/icons/noundation.svg', status: 'archived' as const },
+  { name: 'ClawPanel', desc: 'Dashboard for OpenClaw', href: '#', icon: '/icons/clawpanel.svg', type: 'Dashboard' },
+  { name: 'Otto', desc: 'Ask anything about your cars', href: '#', icon: '/icons/otto.svg', type: 'iOS' },
+  { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', type: 'Tool' },
+  { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg', type: 'Design System' },
+  { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', type: 'Studio' },
+  { name: 'rgb.fun', desc: 'NFT collection (16,777,216)', href: 'https://rgb.fun', icon: '/icons/rgb.svg', type: 'Web' },
+  { name: 'rgb.so', desc: 'Onchain media', href: 'https://rgbso.framer.website/', icon: '/icons/rgb.svg', type: 'Web' },
+  { name: 'Noundation', desc: 'Community design system', href: 'https://noundation.framer.website/', icon: '/icons/noundation.svg', type: 'Design System' },
+  { name: 'Noundation UI', desc: 'Framer design kit', href: 'https://noundationkit.framer.website/landing', icon: '/icons/noundation.svg', type: 'Design Kit' },
 ];
 
 function FarcasterIcon({ size = 16, className }: { size?: number; className?: string }) {
@@ -246,17 +246,7 @@ export default async function Home() {
                   </div>
                 </div>
                 <Dot />
-                <div className="flex items-center gap-1.5 shrink-0">
-                  {item.status === 'in-progress' && (
-                    <span className="text-sm text-blue-500 badge-shimmer">In Progress</span>
-                  )}
-                  {item.status === 'live' && (
-                    <span className="flex items-center gap-1 text-sm text-neutral-400">Live<span className="relative flex h-1 w-1" style={{ top: 1 }}><span className="absolute -inset-0.5 rounded-full bg-green-400" style={{ animation: 'slow-ping 4s ease-out infinite', animationDelay: `${[0, 0, 0, 1000, 2000, 3000, 0, 0, 0][i]}ms`, animationFillMode: 'backwards' }} /><span className="relative rounded-full h-1 w-1 bg-green-500" /></span></span>
-                  )}
-                  {item.status === 'archived' && (
-                    <span className="text-sm text-neutral-300 line-through">Archived</span>
-                  )}
-                </div>
+                <span className="text-sm text-neutral-400 shrink-0">{item.type}</span>
               </div>
             ))}
           </div>
