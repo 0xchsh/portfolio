@@ -259,7 +259,7 @@ export default async function V2Home() {
   ]);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-clip">
       <AgentModeOverlay />
 
       {/* Top fade */}
