@@ -280,7 +280,7 @@ export default async function V2Home() {
                 <span>Ch</span><span className="transition-colors duration-150 group-hover/name:text-neutral-300 dark:group-hover/name:text-neutral-600">arles</span>{' '}
                 <span>Sh</span><span className="transition-colors duration-150 group-hover/name:text-neutral-300 dark:group-hover/name:text-neutral-600">in</span>
               </h1>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 w-fit">Software Designer</p>
+              <p className="text-sm text-neutral-400 dark:text-neutral-600 w-fit">Software Designer</p>
             </div>
             </FadeIn>
           </div>
@@ -421,7 +421,7 @@ export default async function V2Home() {
               <div className="opacity-0 group-hover/page:opacity-100 transition-opacity duration-200">
               <V2Controls />
               </div>
-              <span className="text-sm text-neutral-500 dark:text-neutral-400"><LiveClock /></span>
+              <span className="text-sm text-neutral-400 dark:text-neutral-600"><LiveClock /></span>
             </div>
 
             {/* Weather pill — mobile only */}
