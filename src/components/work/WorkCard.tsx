@@ -126,7 +126,7 @@ export function MobileFrame({ src, alt, transparent, eager }: { src: string; alt
 }
 
 /** Presentation-only card — no grid/layout logic */
-export function WorkCardContent({ item, mediaOnly, hideTitle }: { item: WorkItem; mediaOnly?: boolean; hideTitle?: boolean }) {
+export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }: { item: WorkItem; mediaOnly?: boolean; hideTitle?: boolean; hideDescription?: boolean }) {
   const isSingle = item.src.length === 1;
   const isMobileSingle = isSingle && item.ratio === '1:1';
 
@@ -215,7 +215,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle }: { item: WorkItem
         ) : (
           <span className="text-sm font-medium">{item.title}</span>
         ))}
-        {item.description && (
+        {item.description && !hideDescription && (
           <>
             {!hideTitle && <span className="text-sm text-neutral-400">·</span>}
             <span className="text-sm text-neutral-400">{item.description}</span>

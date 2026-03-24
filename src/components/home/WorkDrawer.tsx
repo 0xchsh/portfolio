@@ -34,7 +34,7 @@ export function WorkDrawer({ children }: { children: React.ReactNode }) {
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
             <div className="max-w-[704px] mx-auto py-5 pb-16 flex flex-col">
               {allWork.map((item, i) => (
-                <WorkCardContent key={i} item={item} />
+                <WorkCardContent key={i} item={item} hideDescription />
               ))}
             </div>
           </div>
