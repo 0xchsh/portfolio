@@ -176,7 +176,7 @@ type ProjectItem = {
 
 function ProjectRow({ item, hideIcon, directLink }: { item: ProjectItem; hideIcon?: boolean; directLink?: boolean }) {
   const rowClass =
-    'flex items-center gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
+    'flex items-start gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
   const inner = (
     <>
       {!hideIcon && (
@@ -220,7 +220,7 @@ const artItems = feedData.art as ArtItem[];
 
 function ArtRow({ item }: { item: ArtItem }) {
   const rowClass =
-    'flex items-center gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
+    'flex items-start gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
   return (
     <ArtDrawer item={item}>
       <button className={rowClass}>
