@@ -80,7 +80,7 @@ export function ProjectDrawer({
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className={`absolute left-0 top-0 inline-flex items-center text-xs font-medium text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full transition-opacity duration-500 ${showVisit ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                        className={`absolute left-0 top-0 inline-flex items-center text-sm font-medium text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full transition-opacity duration-500 ${showVisit ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                       >
                         Visit
                         <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
@@ -95,7 +95,7 @@ export function ProjectDrawer({
                   href={project.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden desktop:inline-flex items-center text-xs font-medium text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 dark:hover:text-neutral-100 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100 shrink-0"
+                  className="hidden desktop:inline-flex items-center text-sm font-medium text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 dark:hover:text-neutral-100 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100 shrink-0"
                 >
                   Visit
                   <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
