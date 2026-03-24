@@ -137,8 +137,8 @@ const caseStudies = [
 ];
 
 const archives = [
-  { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg' },
   { name: 'AI Design Jobs', desc: 'Curated roles at AI companies', href: 'https://ai-design-jobs.vercel.app/', icon: '/icons/aidesignjobs.png', workTitle: 'AI Design Jobs' },
+  { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg' },
   { name: 'Noundation', desc: 'Community design system', href: 'https://noundation.framer.website/', icon: '/icons/noundation.svg' },
   { name: 'Noundation UI', desc: 'Framer design kit', href: 'https://noundationkit.framer.website/landing', icon: '/icons/noundation.svg' },
 ];
