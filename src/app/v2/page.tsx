@@ -32,7 +32,7 @@ type CommitDay = {
 async function getCommitData() {
   try {
     const responses = await Promise.all(
-      [1, 2].map((page) =>
+      [1, 2, 3].map((page) =>
         fetch(
           `https://api.github.com/users/0xchsh/events?per_page=100&page=${page}`,
           { next: { revalidate: 3600 } },
@@ -442,7 +442,7 @@ export default async function V2Home() {
               <CommitGraph days={days} />
               <div className="flex items-center justify-between">
                 <span className={metaLabel}>Last 30 days</span>
-                <span className={metaLabel}>{totalCommits} commits</span>
+                <span className={`${metaLabel} tabular-nums`}>{totalCommits} commits</span>
               </div>
             </section>
 
