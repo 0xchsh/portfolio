@@ -156,7 +156,7 @@ const metaLabel =
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-4">
-      <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 shrink-0">{children}</span>
+      <span className="text-xs font-semibold text-neutral-400 dark:text-neutral-600 shrink-0">{children}</span>
       <div className="flex-1 border-t border-dotted border-neutral-200 dark:border-neutral-700 mt-px" />
     </div>
   );
