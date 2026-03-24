@@ -94,7 +94,7 @@ export function ProjectDrawer({
                           ))}
                         </div>
                       ) : (
-                        <div className="w-full rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700">
+                        <div className="w-full rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800">
                           {section.mockups[0].src.endsWith('.mp4') || section.mockups[0].src.endsWith('.webm') ? (
                             <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
                               <VideoWithBlur src={section.mockups[0].src} className="absolute inset-0 w-full h-full object-cover" eager />
