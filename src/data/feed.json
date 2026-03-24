@@ -103,7 +103,7 @@
         "NFT"
       ],
       "collectionHref": "https://rgb.fun/",
-      "collectionLabel": "Mint on rgb.fun",
+      "collectionLabel": "Collect on rgb.fun",
       "icon": null
     },
     {
@@ -145,7 +145,7 @@
         }
       ],
       "collectionHref": "https://highlight.xyz/mint/66744e64e610ed36adeb1a64",
-      "collectionLabel": "Mint on Highlight",
+      "collectionLabel": "Collect on Highlight",
       "links": [
         {
           "label": "Tweet by @chshux",
@@ -188,7 +188,7 @@
         "NFT"
       ],
       "collectionHref": "https://zora.co/collect/zora:0x787c6366341fbb8a7bfff1064009bce60796338f",
-      "collectionLabel": "Mint on Zora",
+      "collectionLabel": "Collect on Zora",
       "links": [
         {
           "label": "Original tweet",
@@ -209,7 +209,7 @@
         "NFT"
       ],
       "collectionHref": "https://zora.co/collect/zora:0x525e87462e5f4b0703dce7ed18f55dd72aea3bde",
-      "collectionLabel": "Mint on Zora",
+      "collectionLabel": "Collect on Zora",
       "links": [
         {
           "label": "Tweet by @chshux",
