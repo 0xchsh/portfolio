@@ -10,7 +10,7 @@ const MARKDOWN = `# Charles Shin
 
 I'm currently the Lead Product Designer at Stellar (https://stellar.org). Previously at Warby Parker, Uber, and Weebly.
 
-Running a small software factory off a Mac Mini. Wiring together agents — Claude Code, OpenClaw, Paperclip — and watching them ship things without me in the room. Still figuring out where the designer fits when the loop closes itself.
+Running a small software factory off a Mac Mini. Wiring together agents (Claude Code, OpenClaw, Paperclip) and watching them ship things without me in the room. Still figuring out where the designer fits when the loop closes itself.
 
 Most of my thinking lives at the intersection of crypto and AI: wallets that act, payments without friction, agents that own resources. These problems don't have design patterns yet. That's the whole point.
 
@@ -46,9 +46,9 @@ Reach me at hi@ch.sh or dm on x.com (@chshux).
 
 ## Connect
 
-- X: @chshux — https://x.com/chshux
-- GitHub: @0xchsh — https://github.com/0xchsh
-- Farcaster: @chsh.eth — https://warpcast.com/chsh.eth
+- X: @chshux · https://x.com/chshux
+- GitHub: @0xchsh · https://github.com/0xchsh
+- Farcaster: @chsh.eth · https://warpcast.com/chsh.eth
 - Email: hi@ch.sh
 
 ## Tools

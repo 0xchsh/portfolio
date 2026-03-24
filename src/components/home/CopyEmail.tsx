@@ -14,7 +14,7 @@ export function CopyEmailRow() {
   return (
     <button
       onClick={handleCopy}
-      className="group flex items-center gap-3 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)] cursor-pointer text-left"
+      className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)] cursor-pointer text-left"
     >
       <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center">
         <Envelope size={20} weight="bold" className="text-foreground" />

@@ -36,7 +36,7 @@ Wallets are managed from a dedicated sheet. Switch between accounts, create new 
     {
       text: `Transaction history on Stellar can get noisy. Trustline changes, path payments, claimable balances. Most of it means nothing to someone who just wants to know "did my payment go through?"
 
-We wrote human-readable summaries for each operation type. "Swapped XLM to USDC" instead of raw operation data. Tapping a transaction expands full details: status, rate, fee, XDR. Progressive disclosure — clarity first, completeness on request.`,
+We wrote human-readable summaries for each operation type. "Swapped XLM to USDC" instead of raw operation data. Tapping a transaction expands full details: status, rate, fee, XDR. Progressive disclosure: clarity first, completeness on request.`,
       mockups: [
         { src: '/videos/freighter/Past Transactions.webp', type: 'mobile' },
         { src: '/videos/freighter/history-details.mp4', type: 'mobile' },
@@ -82,7 +82,7 @@ Clean and unopinionated design. A minimum expandable product. Create a list in l
     {
       text: `Creating a list takes under thirty seconds. Set an emoji, add a title, paste your links.
 
-The fastest flow is clipboard-first: copy a URL, paste it directly. Snack scrapes the metadata automatically — title, description, favicon — so you don't format anything. One action, one result. No friction between "I found something good" and "it's in my list."`,
+The fastest flow is clipboard-first: copy a URL, paste it directly. Snack scrapes the metadata automatically (title, description, favicon) so you don't format anything. One action, one result. No friction between "I found something good" and "it's in my list."`,
       mockups: [{ src: '/videos/snack/create-list.mp4', type: 'frame' }],
     },
     {
@@ -106,14 +106,14 @@ Distribution is still the hardest part. Doesn't matter how good the product is i
 
   Laboratory: [
     {
-      text: `Stellar Laboratory is the preferred developer sandbox for the Stellar network — the core tool for building transactions, testing endpoints, and exploring the ledger.
+      text: `Stellar Laboratory is the preferred developer sandbox for the Stellar network, the core tool for building transactions, testing endpoints, and exploring the ledger.
 
 The original Lab was functional but outdated. Soroban (smart contracts) and new network features required a full rebuild. My job was to bring the visual language in line with the rest of Stellar's products without alienating developers who'd built muscle memory around the existing flow.`,
     },
     {
       text: `Soroban and new network features were shipping fast. The existing Lab couldn't keep up. We rebuilt it from the ground up.
 
-This was the first stress test of Stellar Design System v3 — familiar flows on a new foundation, supporting every network feature. Built for Stellar developers, protocol-curious builders, and hackathon teams.`,
+This was the first stress test of Stellar Design System v3. Familiar flows on a new foundation, supporting every network feature. Built for Stellar developers, protocol-curious builders, and hackathon teams.`,
       mockups: [{ src: '/videos/lab/build.webp', type: 'frame' }],
     },
     {

@@ -50,7 +50,7 @@
   "art": [
     {
       "title": "RGB Signatures",
-      "desc": "Binary visual representation",
+      "desc": "Onchain binary values",
       "year": "2024",
       "images": [
         "/work/art/rgb/signatures.gif",
@@ -59,7 +59,7 @@
       "sections": [
         {
           "image": "/work/art/rgb/01.webp",
-          "text": "RGB values follow an 8-bit color model — a range of 0 to 255 for each R, G, and B channel.",
+          "text": "RGB values follow an 8-bit color model: a range of 0 to 255 for each R, G, and B channel.",
           "blurDataURL": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoKAAUAAUAmJaQAA3AA/vyzqbwxgAAA"
         },
         {
@@ -74,7 +74,7 @@
         },
         {
           "image": "/work/art/rgb/04.webp",
-          "text": "The squares represent the binary values for each R, G, and B channel — 3 sets of 8 binary strings, 24 values in total.",
+          "text": "The squares represent the binary values for each R, G, and B channel: 3 sets of 8 binary strings, 24 values in total.",
           "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAABwAQCdASoKAAUAAUAmJaQEGAAG4AD+/KzTuteuGBgWTWNcGz4lGL2fZ9Wy9/zj4AAAAA=="
         },
         {
@@ -108,7 +108,7 @@
     },
     {
       "title": "RGB Friends",
-      "desc": "Generative pixel characters",
+      "desc": "Colorful generative characters",
       "year": "2024",
       "images": [
         "/work/art/rgb-friends/rgb-friends.gif",
@@ -159,7 +159,7 @@
     },
     {
       "title": "Hyperbrand: Opepen",
-      "desc": "Hypercultures extended",
+      "desc": "Daily brand remixes",
       "year": "2023",
       "icon": "/work/art/opepen/The Hundred.gif",
       "images": [
@@ -198,7 +198,7 @@
     },
     {
       "title": "Zorps",
-      "desc": "PFPs from Zorbs",
+      "desc": "Zorb profile collection",
       "year": "2023",
       "images": [
         "/work/art/zorps/zorps-01.webp",
