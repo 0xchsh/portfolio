@@ -3,7 +3,7 @@
 import { X } from '@phosphor-icons/react/dist/ssr';
 import { Drawer } from 'vaul';
 import workData from '@/data/work.json';
-import type { WorkItem } from '@/app/work/page';
+import type { WorkItem } from '@/components/work/WorkCard';
 import { WorkCardContent } from '@/components/work/WorkCard';
 
 const allWork = workData as WorkItem[];

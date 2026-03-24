@@ -5,7 +5,7 @@ import { X, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { Drawer } from 'vaul';
 import { useState, useEffect } from 'react';
 import workData from '@/data/work.json';
-import type { WorkItem } from '@/app/work/page';
+import type { WorkItem } from '@/components/work/WorkCard';
 import { WorkCardContent, VideoWithBlur } from '@/components/work/WorkCard';
 import { projectSummaries } from '@/data/project-summaries';
 import { caseStudySections } from '@/data/case-studies';

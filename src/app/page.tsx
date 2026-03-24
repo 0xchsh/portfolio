@@ -21,7 +21,7 @@ export const revalidate = 3600;
 // Types
 // ---------------------------------------------------------------------------
 
-type CommitDay = {
+export type CommitDay = {
   date: string;
   count: number;
   repos: string[];

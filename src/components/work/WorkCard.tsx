@@ -3,7 +3,15 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Squircle } from '@squircle-js/react';
-import type { WorkItem } from '@/app/work/page';
+export type WorkItem = {
+  title: string;
+  description: string;
+  src: string[];
+  link: string | null;
+  logo: string | null;
+  ratio: '16:9' | '1:1';
+  objectPosition?: string;
+};
 
 function isVideoSrc(src: string) {
   return src.endsWith('.mp4') || src.endsWith('.webm');

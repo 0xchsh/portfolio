@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { Squircle } from '@squircle-js/react';
 import { AnimatePresence, motion } from 'framer-motion';
-import type { WorkItem } from '@/app/work/page';
+import type { WorkItem } from '@/components/work/WorkCard';
 import { VideoWithBlur, MobileFrame } from './WorkCard';
 
 function isVideoSrc(src: string) {

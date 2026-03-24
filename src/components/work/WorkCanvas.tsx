@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect, useMemo, useCallback } from 'react';
-import type { WorkItem } from '@/app/work/page';
+import type { WorkItem } from '@/components/work/WorkCard';
 import { WorkCardContent } from './WorkCard';
 import { Lightbox } from './Lightbox';
 

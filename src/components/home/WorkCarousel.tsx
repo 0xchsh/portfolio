@@ -3,7 +3,7 @@
 import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import workData from '@/data/work.json';
 import { WorkDrawer } from '@/components/home/WorkDrawer';
-import type { WorkItem } from '@/app/work/page';
+import type { WorkItem } from '@/components/work/WorkCard';
 import { WorkCardContent } from '@/components/work/WorkCard';
 
 // Order is intentional: mobile-bg cards (Freighter, Checkmate, RGB, Eco) never appear back-to-back
