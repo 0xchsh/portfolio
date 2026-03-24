@@ -44,25 +44,27 @@ function MobileNav() {
 
   return (
     <div ref={menuRef} className="relative sm:hidden">
-      <button
+      <Button
+        variant="outline"
+        size="sm"
         onClick={() => setOpen(v => !v)}
-        className="flex items-center gap-1.5 text-sm font-semibold px-2.5 h-7 rounded-lg btn-classic btn-classic-outline bg-background border border-transparent bg-clip-padding"
+        className="font-semibold"
       >
-        <ActiveIcon size={14} weight="regular" />
+        <ActiveIcon weight="regular" data-icon="inline-start" />
         {activeItem.label}
         <svg
           width={12}
           height={12}
           viewBox="0 0 12 12"
           fill="none"
-          className={cn('ml-0.5 text-neutral-400 transition-transform duration-200', open && 'rotate-180')}
+          className={cn('ml-0.5 text-muted-foreground transition-transform duration-200', open && 'rotate-180')}
         >
           <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-      </button>
+      </Button>
       <div
         className={cn(
-          'absolute top-full left-0 mt-1.5 bg-white rounded-lg border border-neutral-200 shadow-lg py-1 min-w-[160px] z-50 origin-top-left',
+          'absolute top-full left-0 mt-1.5 bg-background rounded-lg border border-border shadow-lg py-1 min-w-[160px] z-50 origin-top-left',
           open ? 'pointer-events-auto' : 'pointer-events-none',
         )}
         style={{
@@ -83,11 +85,11 @@ function MobileNav() {
               className={cn(
                 'flex items-center gap-2 px-3 py-2 text-sm transition-colors',
                 isActive
-                  ? 'font-semibold text-neutral-950 bg-neutral-50'
-                  : 'text-neutral-500 hover:bg-neutral-50 hover:text-neutral-950',
+                  ? 'font-semibold text-foreground bg-muted'
+                  : 'text-muted-foreground hover:bg-muted hover:text-foreground',
               )}
             >
-              <Icon size={14} weight="regular" />
+              <Icon weight="regular" data-icon="inline-start" />
               {label}
             </Link>
           );

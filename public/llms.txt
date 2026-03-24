@@ -1,0 +1,68 @@
+# Charles Shin
+Software Designer
+
+## About
+
+Currently the Lead Product Designer at Stellar (https://stellar.org). Previously at Warby Parker, Uber, and Weebly.
+
+Designing interfaces and interactions that feel simple, clear, and enjoyable, especially in blockchain and AI, where new patterns are being shaped for the first time.
+
+Writing code through conversation and wiring agents together (Claude Code, OpenClaw, Paperclip).
+
+Reach me at hi@ch.sh or dm on x.com (@chshux).
+
+## Case Studies
+
+- **Freighter** · Flagship Stellar wallet · https://freighter.app
+- **Snack** · List curation tool · https://snack.xyz
+- **Laboratory** · Stellar developer sandbox · https://laboratory.stellar.org
+
+## Projects
+
+- **Otto** · Ask anything about your cars
+- **Rat Labs** · Onchain product studio · https://www.ratlabs.xyz/
+- **RGB** · Onchain media app · https://rgb.fun
+
+## Additional
+
+- **AI Design Jobs** · Curated roles at AI companies · https://ai-design-jobs.vercel.app/
+- **ShinCN** · Personal brand design system · https://ui.ch.sh
+- **Noundation** · Community design system · https://noundation.framer.website/
+- **Noundation UI** · Framer design kit · https://noundationkit.framer.website/landing
+
+## Art
+
+- **RGB Signatures** · Generative · 16,777,216 · https://rgb.fun
+- **RGB Friends** · Generative pixel characters · 26,500+ · https://highlight.xyz/mint/66744e64e610ed36adeb1a64
+- **Hyperbrand: Opepen** · Illustration · 100
+- **Zorps** · PFPs from Zorbs · 100 · https://zora.co/collect/zora:0x525e87462e5f4b0703dce7ed18f55dd72aea3bde
+- **rgb.fun** · NFT collection · 16,777,216 · https://rgb.fun
+
+## Connect
+
+- X: @chshux — https://x.com/chshux
+- GitHub: @0xchsh — https://github.com/0xchsh
+- Farcaster: @chsh.eth — https://warpcast.com/chsh.eth
+- Email: hi@ch.sh
+
+## Structured Data
+
+- Name: Charles Shin
+- Role: Lead Product Designer
+- Company: Stellar (stellar.org)
+- Location: Chicago, IL
+- Timezone: Central Time (CT)
+- Work style: Remote
+- Open to: Full-time or freelance opportunities
+- Contact: hi@ch.sh or DM on X (@chshux)
+- Response time: Within 24 hours
+- Website: ch.sh
+- Portfolio: ch.sh/work
+- Specialties: Product design, blockchain, AI interfaces, interaction design
+- Interests: Vibecoding, agentic workflows, automations, OpenClaw agents
+- In short: Design lead with 8+ years of experience, quick to adapt with any design tool, comfortable creating code via conversation
+
+## Design System
+
+- Skill: https://github.com/0xchsh/agent-skills/blob/main/shincn/SKILL.md
+- Install: npx skills add 0xchsh/agent-skills@shincn -g

@@ -72,7 +72,7 @@ export function ArtDrawer({
 
           {/* Body */}
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
-            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-8">
+            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-4">
               <div className="flex flex-row gap-8">
                 {item.images.map((src, i) => (
                   <div key={i} className="relative flex-1 aspect-square rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700">
@@ -88,8 +88,35 @@ export function ArtDrawer({
               </div>
               {projectSummaries[item.title] && (
                 <div className="text-sm leading-5 font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
-                  {projectSummaries[item.title].split('\n\n').map((para, i) => (
-                    <p key={i}>{para}</p>
+                  {projectSummaries[item.title].split('\n\n').map((block, i) => {
+                    const lines = block.split('\n');
+                    const isList = lines.every(l => l.startsWith('- '));
+                    if (isList) {
+                      return (
+                        <ul key={i} className="flex flex-col gap-1 list-none">
+                          {lines.map((l, j) => (
+                            <li key={j}>{l.slice(2)}</li>
+                          ))}
+                        </ul>
+                      );
+                    }
+                    return <p key={i}>{block}</p>;
+                  })}
+                </div>
+              )}
+              {item.links && item.links.length > 0 && (
+                <div className="flex flex-wrap gap-2 max-w-[480px] mx-auto w-full">
+                  {item.links.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-xs font-medium text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100"
+                    >
+                      {link.label}
+                      <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
+                    </a>
                   ))}
                 </div>
               )}
@@ -139,22 +166,6 @@ export function ArtDrawer({
                   )
                 );
               })()}
-              {item.links && item.links.length > 0 && (
-                <div className="flex flex-wrap gap-2 max-w-[480px] mx-auto w-full">
-                  {item.links.map((link, i) => (
-                    <a
-                      key={i}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-xs font-medium text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100"
-                    >
-                      {link.label}
-                      <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
-                    </a>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
         </Drawer.Content>

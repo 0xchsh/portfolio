@@ -109,7 +109,7 @@ export function ProjectDrawer({
 
           {/* Body */}
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
-            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-8">
+            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-4">
               {caseStudySections[project.name] ? (
                 caseStudySections[project.name].map((section, i) => (
                   <div key={i} className="flex flex-col gap-8">
@@ -161,9 +161,20 @@ export function ProjectDrawer({
                   )}
                   {projectSummaries[project.name] && (
                     <div className="text-sm leading-5 font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
-                      {projectSummaries[project.name].split('\n\n').map((para, i) => (
-                        <p key={i}>{para}</p>
-                      ))}
+                      {projectSummaries[project.name].split('\n\n').map((block, i) => {
+                        const lines = block.split('\n');
+                        const isList = lines.every(l => l.startsWith('- '));
+                        if (isList) {
+                          return (
+                            <ul key={i} className="flex flex-col gap-1 list-none">
+                              {lines.map((l, j) => (
+                                <li key={j}>{l.slice(2)}</li>
+                              ))}
+                            </ul>
+                          );
+                        }
+                        return <p key={i}>{block}</p>;
+                      })}
                     </div>
                   )}
                 </>

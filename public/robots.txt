@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# AI agent context
+LLMs-txt: https://ch.sh/llms.txt

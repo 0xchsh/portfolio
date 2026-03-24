@@ -153,17 +153,6 @@ function highlightLine(line: string, i: number) {
   return <span key={i} className="text-neutral-400">{line}</span>;
 }
 
-async function downloadMarkdown() {
-  const res = await fetch('https://raw.githubusercontent.com/0xchsh/charles-md/main/charles.md');
-  const text = await res.text();
-  const blob = new Blob([text], { type: 'text/markdown' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'charles.md';
-  a.click();
-  URL.revokeObjectURL(url);
-}
 
 export function AgentModeOverlay() {
   const { agentMode } = useAgentMode();
@@ -178,12 +167,14 @@ export function AgentModeOverlay() {
       style={{ background: '#111111' }}
     >
       <div className="absolute top-6 right-6 z-10">
-        <button
-          onClick={downloadMarkdown}
+        <a
+          href="https://github.com/0xchsh/agent-skills/blob/main/shincn/SKILL.md"
+          target="_blank"
+          rel="noopener noreferrer"
           className="font-mono text-sm text-neutral-500 hover:text-neutral-300 transition-colors cursor-pointer"
         >
-          charles.md
-        </button>
+          shincn ↗
+        </a>
       </div>
       <div className="flex-1 overflow-y-auto">
         <div className="max-w-[452px] mx-auto px-4 py-16 pb-24">

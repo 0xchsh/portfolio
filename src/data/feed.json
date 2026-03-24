@@ -128,7 +128,10 @@
       "size": "100",
       "type": ["NFT"],
       "collectionHref": "https://zora.co/collect/zora:0x525e87462e5f4b0703dce7ed18f55dd72aea3bde",
-      "collectionLabel": "Mint on Zora"
+      "collectionLabel": "Mint on Zora",
+      "links": [
+        { "label": "Tweet by @chshux", "href": "https://x.com/chshux/status/1739300093935911180?s=20" }
+      ]
     }
   ]
 }
