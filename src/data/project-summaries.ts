@@ -3,11 +3,7 @@ export const projectSummaries: Record<string, string> = {
 
 Color is just one expression of RGB. What if RGB values could be represented by emojis instead? rgb(255,153,0) could represent 🎩🤗😊 just as easily as Orange. This is the fundamental constraint RGB is centered around: the combination of 3 inputs to create 16,777,216 unique outputs.
 
-Signatures are the visual representations of RGB values contained in the metadata. The RGB Signature is the entry into the RGB ecosystem — non-arbitrary, equally unique, and equally rare. There will only ever be 16,777,216 of them.
-
-Signatures are generated from the binary representation of each RGB value. Each channel encodes to 8 bits, producing 3 sets of 8 binary strings — 24 values in total. Visually, 0 is a black square and 1 is a white square. These are arranged sequentially around a perfect square, with an empty space in the center. Markers are placed at the R, G, and B starting points, with one in the center.
-
-Combined, this results in an RGB Signature — a unique pixel pattern that encodes a specific color. There are 16,777,216 in total. No two are alike and each one can only be minted once.`,
+Signatures are the visual representations of RGB values contained in the metadata. The RGB Signature is the entry into the RGB ecosystem — non-arbitrary, equally unique, and equally rare. There will only ever be 16,777,216 of them.`,
 
   ClawPanel: `ClawPanel is the operational dashboard for OpenClaw, a browser automation backend built to run persistent agents, web scrapers, and long-running task queues. Without an interface, OpenClaw was a black box — jobs ran, sessions opened and closed, but there was no way to tell what was active, what had failed, or how the system was performing.
 
@@ -31,15 +27,19 @@ The core interaction is a chat thread anchored to a specific vehicle. Users add 
 
 When Otto references a specific component or procedure, it surfaces a card with structured information — part numbers, torque specs, tool requirements — that persists as a reference artifact in the thread. The visual design is deliberately restrained: clean and high-contrast, working equally well in a dark garage and bright daylight.`,
 
-  Snack: `Snack is a list curation tool built on the premise that links deserve better than bookmarks. Most people save dozens of URLs a month — articles, tools, restaurants, products — and almost all end up forgotten in a browser folder or a notes app. Snack was designed to fix that by making lists worth keeping and worth sharing.
+  Snack: `Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.
 
-The core product is simple: create a named list, add items, share the URL. The design effort was in making each step feel significantly lighter than existing alternatives. Creating a list takes one click and a name. Adding an item is a URL paste that auto-populates title, description, and thumbnail. Sharing produces a clean public page you'd actually want to send someone.
+The core interaction is paste-to-save: drop a URL, and Snack scrapes the metadata instantly. No formatting, no organizing, just a running list you can share with one link. It's live at snack.xyz.
 
-The dashboard surfaces the right list at the right moment without requiring manual organization — recency-first, with visual weight given to recently-updated lists.
+I spent $30,000 out of pocket on an agency MVP, then Claude Code came out and I rebuilt everything and more from scratch within a month. The leverage is real and it compounds.
 
-Items display with just a thumbnail and title by default — enough to scan and remember why something was saved. Expanding reveals the full description, tags, and any personal note. This two-level structure keeps the list compact and scannable even with fifty items.
+Creating a list takes under thirty seconds. Set an emoji, add a title, paste your links. The fastest flow is clipboard-first: copy a URL, paste it directly. Snack scrapes the metadata automatically — title, description, favicon — so you don't format anything. One action, one result. No friction between "I found something good" and "it's in my list."
 
-The share page is a distinct context from the dashboard. When someone lands on a shared list, they're not in an app — they're reading a recommendation. The layout shifts to an editorial feel: tighter typographic hierarchy, more whitespace, content over chrome. The goal was a page that felt like the list itself was the thing.`,
+There's no separate edit mode. If you're the creator, the list is always editable. Click the emoji to change it. Click the title to rename. Drag to reorder. Paste from your clipboard to add one link or twenty. No gap between viewing and editing.
+
+Your dashboard shows all your lists with stats: total links, total views, and saves by others. Dynamic OG images are generated automatically based on the emoji, title, and username. Every list looks good when shared without any manual setup.
+
+Distribution is still the hardest part. Doesn't matter how good the product is if no one sees it. A browser extension and mobile app are both in progress.`,
 
   ShinCN: `ShinCN is my personal design system — a component library and visual language maintained for use across my own projects. The name combines my last name with shadcn/ui, the component library it builds on top of.
 
@@ -84,4 +84,32 @@ For browsing, I built a spectrum grid view mapping a sampled slice of the color 
 Individual token pages are deliberately minimal: a full-screen color swatch, hex and RGB values, ownership information. Nothing else, because there's nothing else to say.
 
 Brand design presented a useful constraint: build an identity for a product whose content is all color. I settled on a maximally neutral container — white background, black type, minimal chrome — so whatever color is in focus dominates the page.`,
+
+  Freighter: `Freighter is Stellar's flagship non-custodial wallet. It launched in 2020 as a browser extension and expanded to mobile as smart contracts arrived on Stellar and mobile crypto usage grew.
+
+A small team: three engineers, one PM, and me as the sole designer. Five months to ship before Meridian, our annual conference where attendees would use it live.
+
+Smart contracts launched on Stellar in 2024, unlocking DeFi, NFTs, and more. We needed a mobile wallet simple enough for newcomers but powerful enough for what the network could do now. Designed for first-time crypto users, DeFi-curious people, remittance senders, and English-speaking users outside the US.
+
+The home screen organizes holdings into Tokens, Positions, and Collectibles. Balance sits at the top. Wallets are managed from a dedicated sheet — switch between accounts, create new ones, or import existing keys. Primary actions are minimal: Send, Swap, Copy.
+
+Transaction history on Stellar can get noisy. We wrote human-readable summaries for each operation type. "Swapped XLM to USDC" instead of raw operation data. Tapping a transaction expands full details: status, rate, fee, XDR. Progressive disclosure — clarity first, completeness on request.
+
+Discover is the gateway to Stellar ecosystem apps. No other Stellar wallet has a dedicated screen for this. Apps are organized into DeFi, Learn, and Trending categories. Each opens in an in-app browser with WalletConnect. For developers, it's distribution. For users, it's access.
+
+Transactions cover everything from sending and swapping to signing dApp requests and adding trustlines. Security is layered throughout — Blockaid runs real-time simulation on every transaction, surfacing risk levels with specific messaging before signing.
+
+Freighter Mobile launched at Meridian in September 2025. It's grown to 3K monthly active users through organic growth. The pattern across all flows: human-readable first, raw data for those who want it.`,
+
+  Laboratory: `Stellar Laboratory is the preferred developer sandbox for the Stellar network — the core tool for building transactions, testing endpoints, and exploring the ledger.
+
+The original Lab was functional but outdated. Soroban (smart contracts) and new network features required a full rebuild. My job was to bring the visual language in line with the rest of Stellar's products without alienating developers who'd built muscle memory around the existing flow.
+
+The home screen serves as the navigation hub. Every feature of the Lab is reachable from here: transactions, accounts, endpoints, contracts, and tools. The information architecture mirrors the developer mental model: what do I have, what do I want to build, where do I look things up.
+
+The transaction builder is the heart of the Lab. Source account, sequence number, base fee, memo, time bounds, then operations. Every field has validation, helper text, and links to docs. Signing supports multiple methods: secret key, browser wallet, hardware wallet, or pre-computed signature.
+
+Contract Explorer lets you learn about any Soroban smart contract. Paste a contract ID and get everything: creation date, creator, Wasm hash, source code, storage state, version history, and generated bindings for TypeScript, Rust, Python, Java. Invoke methods directly from the browser with type hints from the contract spec.
+
+Since relaunch: 21K monthly active users with sessions averaging nearly 8 minutes. No drop-off from the old Lab. You can't design developer tools without using them — I dogfooded Lab constantly. The old Lab had rough edges but devs knew how it worked. We kept the patterns they relied on. Familiar doesn't mean outdated, it means trusted.`,
 };

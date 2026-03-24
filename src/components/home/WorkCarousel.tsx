@@ -100,6 +100,8 @@ export function WorkCarousel() {
             style={{
               zIndex: isExiting ? 2 : isCurrent ? 1 : 0,
               opacity: isExiting || isCurrent ? 1 : 0,
+              willChange: 'transform',
+              transform: 'translateZ(0)',
             }}
             // Only the exiting slide fires advance — entering fires too but we ignore it
             onAnimationEnd={isExiting ? advance : undefined}
@@ -110,7 +112,7 @@ export function WorkCarousel() {
       })}
 
       {/* Corner artifact fix — inset ring covers anti-alias bleed on rounded overflow */}
-      <div className="absolute inset-0 rounded-[8px] ring-1 ring-inset ring-black/8 pointer-events-none" style={{ zIndex: 20 }} />
+      <div className="absolute inset-0 rounded-[8px] ring-1 ring-inset ring-black/[0.12] dark:ring-white/[0.06] pointer-events-none" style={{ zIndex: 20 }} />
 
       <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 10 }}>
         <Link

@@ -23,6 +23,40 @@
         "/work/art/rgb/signatures.gif",
         "/work/art/rgb/signatures.png"
       ],
+      "sections": [
+        {
+          "image": "/work/art/rgb/01.png",
+          "text": "RGB values follow an 8-bit color model — a range of 0 to 255 for each R, G, and B channel."
+        },
+        {
+          "image": "/work/art/rgb/02.png",
+          "text": "Encoded into binary, values can be expressed in 2 states: 0 & 1."
+        },
+        {
+          "image": "/work/art/rgb/03.png",
+          "text": "Visually, 0 is represented by a black square and 1 by a white square."
+        },
+        {
+          "image": "/work/art/rgb/04.png",
+          "text": "The squares represent the binary values for each R, G, and B channel — 3 sets of 8 binary strings, 24 values in total."
+        },
+        {
+          "image": "/work/art/rgb/05.png",
+          "text": "These visual values are arranged sequentially around a perfect square, with an empty space in the center."
+        },
+        {
+          "image": "/work/art/rgb/06.png",
+          "text": "Markers are placed at the R, G, and B starting points. One marker is placed in the center."
+        },
+        {
+          "image": "/work/art/rgb/07.png",
+          "text": "Combined altogether results in an RGB Signature."
+        },
+        {
+          "image": "/work/art/rgb/08.png",
+          "text": "There are 16,777,216 RGB Signatures in total. No two are alike and each one can only be minted once."
+        }
+      ],
       "size": "16,777,216",
       "type": ["NFT"],
       "collectionHref": "https://rgb.fun/",

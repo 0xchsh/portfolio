@@ -8,6 +8,7 @@ import { WeatherPill } from '@/components/home/WeatherPill';
 import { LiveClock } from '@/components/home/LiveClock';
 import { V2Controls } from '@/components/home/V2Controls';
 import { AgentModeOverlay } from '@/components/shared/AgentModeOverlay';
+import { FadeIn } from '@/components/shared/FadeIn';
 import { ProjectDrawer } from '@/components/home/ProjectDrawer';
 import { ArtDrawer } from '@/components/home/ArtDrawer';
 import feedData from '@/data/feed.json';
@@ -124,7 +125,6 @@ async function getWeather() {
 // ---------------------------------------------------------------------------
 
 const projects = [
-  { name: 'ClawPanel', desc: 'Dashboard for OpenClaw', href: '#', icon: '/icons/clawpanel.svg', workTitle: 'ClawPanel' },
   { name: 'Otto', desc: 'Ask anything about your cars', href: '#', icon: '/icons/otto.svg', workTitle: 'Otto' },
   { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', workTitle: 'Snack' },
   { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', workTitle: 'Rat Labs' },
@@ -133,7 +133,7 @@ const projects = [
 
 const caseStudies = [
   { name: 'Freighter', desc: 'Flagship Stellar wallet', href: 'https://freighter.app', icon: '/icons/freighter.svg', workTitle: 'Freighter' },
-  { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', workTitle: 'Snack' },
+  { name: 'Laboratory', desc: 'Stellar developer sandbox', href: 'https://laboratory.stellar.org', icon: '/icons/lab.svg', workTitle: 'Laboratory' },
 ];
 
 const archives = [
@@ -155,8 +155,8 @@ const metaLabel =
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-2">
-      <span className="text-xs text-neutral-500 dark:text-neutral-400 shrink-0">{children}</span>
+    <div className="flex items-center gap-4">
+      <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 shrink-0">{children}</span>
       <div className="flex-1 border-t border-dotted border-neutral-200 dark:border-neutral-700 mt-px" />
     </div>
   );
@@ -180,11 +180,11 @@ function ProjectRow({ item, hideIcon, directLink }: { item: ProjectItem; hideIco
   const inner = (
     <>
       {!hideIcon && (
-        <Image src={item.icon} alt={item.name} width={16} height={16} className="shrink-0 dark:invert mt-[2px]" />
+        <Image src={item.icon} alt={item.name} width={14} height={14} className="shrink-0 dark:invert mt-[3px]" />
       )}
       <div>
-        <p className="text-sm font-medium text-foreground">{item.name}</p>
-        <p className="text-sm text-neutral-500 dark:text-neutral-400">{item.desc}</p>
+        <p className="text-sm font-medium text-foreground leading-[20px]">{item.name}</p>
+        <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">{item.desc}</p>
       </div>
     </>
   );
@@ -223,12 +223,12 @@ function ArtRow({ item }: { item: ArtItem }) {
   return (
     <ArtDrawer item={item}>
       <button className={rowClass}>
-        <div className="shrink-0 w-4 h-4 rounded-[3px] overflow-hidden bg-neutral-100 dark:bg-neutral-800 mt-[2px]">
-          <Image src={item.images[0]} alt={item.title} width={16} height={16} unoptimized className="object-contain" />
+        <div className="shrink-0 w-3.5 h-3.5 rounded-[3px] overflow-hidden bg-neutral-100 dark:bg-neutral-800 mt-[3px]">
+          <Image src={item.images[0]} alt={item.title} width={14} height={14} unoptimized className="object-contain" />
         </div>
         <div>
-          <p className="text-sm font-medium text-foreground">{item.title}</p>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">{item.desc ?? 'NFT Collection'}</p>
+          <p className="text-sm font-medium text-foreground leading-[20px]">{item.title}</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">{item.desc ?? 'NFT Collection'}</p>
         </div>
       </button>
     </ArtDrawer>
@@ -269,10 +269,11 @@ export default async function V2Home() {
       <div className="max-w-[900px] mx-auto px-5 sm:px-8 pt-12 pb-16">
 
         {/* ── Two-column grid ──────────────────────────────────────────── */}
-        <div className="flex flex-col desktop:grid desktop:grid-cols-[320px_320px] desktop:gap-x-16 desktop:items-start desktop:w-fit desktop:mx-auto">
+        <div className="group/page flex flex-col desktop:grid desktop:grid-cols-[320px_320px] desktop:gap-x-16 desktop:items-start desktop:w-fit desktop:mx-auto">
 
           {/* Name / title — col 1 row 1 on desktop, order 1 on mobile */}
           <div className="desktop:col-start-1 desktop:row-start-1">
+            <FadeIn>
             <div className="mb-6 desktop:mb-8">
               <h1 className="text-sm font-semibold text-foreground leading-snug group/name cursor-default select-none w-fit">
                 <span>Ch</span><span className="transition-colors duration-150 group-hover/name:text-neutral-300 dark:group-hover/name:text-neutral-600">arles</span>{' '}
@@ -280,12 +281,14 @@ export default async function V2Home() {
               </h1>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 w-fit">Product Designer</p>
             </div>
+            </FadeIn>
           </div>
 
           {/* Bio + sections — col 1 row 2 on desktop, order 3 on mobile */}
           <div className="order-[3] desktop:order-none desktop:col-start-1 desktop:row-start-2">
 
             {/* Bio */}
+            <FadeIn delay={75}>
             <div className="text-sm leading-relaxed text-neutral-500 dark:text-neutral-400 flex flex-col gap-4">
               <p>
                 Currently the Lead Product Designer at{' '}
@@ -299,26 +302,40 @@ export default async function V2Home() {
                 Designing interfaces and interactions that feel simple, clear, and enjoyable, especially in blockchain and AI, where new patterns are being shaped for the first time.
               </p>
               <p>
-                Writing code through conversation. Agents wired together (Claude Code, OpenClaw, Paperclip). Figuring out where design creates the most leverage when agents handle the rest.
+                Writing code through conversation and wiring agents together (Claude Code, OpenClaw, Paperclip).
               </p>
               <p>
                 Reach me at <CopyEmail className={linkClass} /> or dm on{' '}
                 <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className={linkClass}>x.com</a>
               </p>
             </div>
+            </FadeIn>
 
             {/* Projects */}
+            <FadeIn delay={150}>
             <section className="mt-8">
               <SectionLabel>Projects</SectionLabel>
               <ProjectList items={projects} />
             </section>
+            </FadeIn>
 
+            <FadeIn delay={160}>
+            {/* Case Studies */}
+            <section className="mt-8">
+              <SectionLabel>Case Studies</SectionLabel>
+              <ProjectList items={caseStudies} />
+            </section>
+            </FadeIn>
+
+            <FadeIn delay={175}>
             {/* More */}
             <section className="mt-8">
               <SectionLabel>Additional</SectionLabel>
               <ProjectList items={archives} directLink />
             </section>
+            </FadeIn>
 
+            <FadeIn delay={200}>
             {/* Art */}
             <section className="mt-8">
               <SectionLabel>Art</SectionLabel>
@@ -328,8 +345,10 @@ export default async function V2Home() {
                 ))}
               </div>
             </section>
+            </FadeIn>
 
             {/* Connect */}
+            <FadeIn delay={225}>
             <section className="mt-8">
               <SectionLabel>Connect</SectionLabel>
               <div className="mt-4 flex flex-col gap-2">
@@ -353,8 +372,10 @@ export default async function V2Home() {
                 </a>
               </div>
             </section>
+            </FadeIn>
 
             {/* Footer — pfp + copyright + hash + weather */}
+            <FadeIn delay={275}>
             <div className="flex items-center justify-between mt-[72px]">
               <div className="flex items-center gap-[4px]">
                 <div className="flex items-center gap-2">
@@ -364,7 +385,7 @@ export default async function V2Home() {
                     loop
                     muted
                     playsInline
-                    className="w-4 h-4 rounded-[6px] object-cover"
+                    className="w-4 h-4 rounded-full object-cover shrink-0"
                   />
                   <span className="text-xs text-neutral-400 dark:text-neutral-600">신 © 2026</span>
                 </div>
@@ -382,19 +403,23 @@ export default async function V2Home() {
                   </>
                 )}
               </div>
-              <div className="hidden desktop:flex items-center gap-1.5">
-                <WeatherIcon code={weather.code} size={14} />
+              <div className="hidden desktop:flex items-center gap-[2px]">
+                <WeatherIcon code={weather.code} size={16} />
                 <span className="text-xs text-neutral-400 dark:text-neutral-600">Chicago, IL</span>
               </div>
             </div>
+            </FadeIn>
           </div>
 
           {/* Right column — col 2 rows 1-2 on desktop, order 2 on mobile */}
-          <div className="order-[2] desktop:order-none desktop:col-start-2 desktop:row-start-1 desktop:row-span-2 mt-6 desktop:mt-0 desktop:pt-5 desktop:sticky desktop:top-12">
+          <FadeIn delay={50} className="order-[2] desktop:order-none desktop:col-start-2 desktop:row-start-1 desktop:row-span-2 mt-6 desktop:mt-0 desktop:sticky desktop:top-12">
+          <div className="desktop:pt-5">
 
             {/* Controls + Time — desktop only, top of right column */}
             <div className="hidden desktop:flex mb-8 items-center justify-between">
+              <div className="opacity-0 group-hover/page:opacity-100 transition-opacity duration-200">
               <V2Controls />
+              </div>
               <span className="text-sm text-neutral-500 dark:text-neutral-400"><LiveClock /></span>
             </div>
 
@@ -414,6 +439,7 @@ export default async function V2Home() {
             </section>
 
           </div>
+          </FadeIn>
         </div>
       </div>
     </div>

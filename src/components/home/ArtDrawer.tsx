@@ -91,13 +91,14 @@ export function ArtDrawer({
               )}
               {item.sections?.map((section, i) => (
                 <div key={i} className="flex flex-col gap-6">
-                  <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                  <div className="w-full bg-neutral-100 dark:bg-neutral-800 rounded-xl">
                     <Image
                       src={section.image}
                       alt={`${item.title} ${i + 3}`}
-                      fill
+                      width={704}
+                      height={704}
                       unoptimized
-                      className="object-cover"
+                      className="w-full h-auto rounded-xl"
                     />
                   </div>
                   {section.text && (

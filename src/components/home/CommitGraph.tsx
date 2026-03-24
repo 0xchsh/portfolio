@@ -5,12 +5,12 @@ import type { CommitDay } from '@/app/page';
 import { playTick } from '@/lib/tick';
 
 function commitLevel(count: number, max: number): string {
-  if (count === 0) return 'bg-neutral-200 dark:bg-neutral-700';
+  if (count === 0) return 'bg-neutral-200 dark:bg-neutral-800';
   const ratio = count / max;
-  if (ratio <= 0.25) return 'bg-green-300 dark:bg-green-400';
-  if (ratio <= 0.5) return 'bg-green-500';
-  if (ratio <= 0.75) return 'bg-green-600';
-  return 'bg-green-800 dark:bg-green-700';
+  if (ratio <= 0.25) return 'bg-green-300 dark:bg-green-900';
+  if (ratio <= 0.5) return 'bg-green-500 dark:bg-green-700';
+  if (ratio <= 0.75) return 'bg-green-600 dark:bg-green-500';
+  return 'bg-green-800 dark:bg-green-400';
 }
 
 function formatDate(dateStr: string) {
