@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
+import { Squircle } from '@squircle-js/react';
 import workData from '@/data/work.json';
 import { WorkDrawer } from '@/components/home/WorkDrawer';
 import type { WorkItem } from '@/app/work/page';
@@ -74,8 +75,10 @@ export function WorkCarousel() {
   }, []);
 
   return (
-    <div
-      className="relative w-full aspect-video rounded-[8px] overflow-hidden bg-neutral-200 dark:bg-neutral-800 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.04)]"
+    <Squircle
+      cornerRadius={12}
+      cornerSmoothing={1}
+      className="relative w-full aspect-video overflow-hidden bg-neutral-200 dark:bg-neutral-800 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.04)]"
       style={{ isolation: 'isolate', transform: 'translateZ(0)' }}
     >
       {slides.map((slide, i) => {
@@ -100,9 +103,6 @@ export function WorkCarousel() {
         );
       })}
 
-      {/* Corner artifact fix — inset ring covers anti-alias bleed on rounded overflow */}
-      <div className="absolute inset-0 rounded-[8px] ring-1 ring-inset ring-neutral-200 dark:ring-neutral-700 pointer-events-none" style={{ zIndex: 20 }} />
-
       <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 10 }}>
         <WorkDrawer>
           <button className="px-3.5 py-1.5 rounded-full text-sm font-medium text-white backdrop-blur-md bg-black/20 border border-white/15 shadow-[0_1px_3px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.1)] transition-all duration-150 hover:bg-black/30">
@@ -110,6 +110,6 @@ export function WorkCarousel() {
           </button>
         </WorkDrawer>
       </div>
-    </div>
+    </Squircle>
   );
 }
