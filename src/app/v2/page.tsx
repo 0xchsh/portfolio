@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { XLogo, GithubLogo, Envelope } from '@phosphor-icons/react/dist/ssr';
+import { XLogo, GithubLogo, Envelope, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { WorkCarousel } from '@/components/home/WorkCarousel';
 import { WeatherIcon } from '@/components/home/WeatherIcon';
 import { CommitGraph } from '@/components/home/CommitGraph';
@@ -128,7 +128,7 @@ const projects = [
   { name: 'Otto', desc: 'Ask anything about your cars', href: '#', icon: '/icons/otto.svg', workTitle: 'Otto' },
   { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', workTitle: 'Snack' },
   { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', workTitle: 'Rat Labs' },
-  { name: 'RGB', desc: 'NFT collection (16,777,216)', href: 'https://rgb.fun', icon: '/icons/rgb.svg', workTitle: 'RGB' },
+  { name: 'RGB', desc: 'Onchain media app', href: 'https://rgb.fun', icon: '/icons/rgb.svg', workTitle: 'RGB' },
 ];
 
 const caseStudies = [
@@ -151,7 +151,7 @@ const linkClass =
   'text-neutral-800 dark:text-neutral-200 font-medium underline decoration-dotted decoration-neutral-300 dark:decoration-neutral-600 underline-offset-[3px] hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors duration-100';
 
 const metaLabel =
-  'text-xs text-neutral-500 dark:text-neutral-400';
+  'text-xs text-neutral-400 dark:text-neutral-600';
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -191,8 +191,9 @@ function ProjectRow({ item, hideIcon, directLink }: { item: ProjectItem; hideIco
 
   if (directLink) {
     return (
-      <a href={item.href} target="_blank" rel="noopener noreferrer" className={rowClass}>
+      <a href={item.href} target="_blank" rel="noopener noreferrer" className={`${rowClass} group`}>
         {inner}
+        <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
       </a>
     );
   }
@@ -279,7 +280,7 @@ export default async function V2Home() {
                 <span>Ch</span><span className="transition-colors duration-150 group-hover/name:text-neutral-300 dark:group-hover/name:text-neutral-600">arles</span>{' '}
                 <span>Sh</span><span className="transition-colors duration-150 group-hover/name:text-neutral-300 dark:group-hover/name:text-neutral-600">in</span>
               </h1>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 w-fit">Product Designer</p>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 w-fit">Software Designer</p>
             </div>
             </FadeIn>
           </div>
@@ -353,19 +354,19 @@ export default async function V2Home() {
               <SectionLabel>Connect</SectionLabel>
               <div className="mt-4 flex flex-col gap-2">
                 <div className="flex items-center gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)]">
-                  <Envelope size={16} weight="bold" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[1px]" />
+                  <Envelope size={14} weight="bold" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[1px]" />
                   <CopyEmail noIcon className="text-sm font-medium text-foreground cursor-pointer hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors duration-100" />
                 </div>
                 <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)] group">
-                  <XLogo size={16} className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[1px]" />
+                  <XLogo size={14} weight="bold" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[1px]" />
                   <span className="text-sm font-medium text-foreground">chshux</span>
                 </a>
                 <a href="https://github.com/0xchsh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)] group">
-                  <GithubLogo size={16} weight="fill" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[1px]" />
+                  <GithubLogo size={14} weight="fill" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[1px]" />
                   <span className="text-sm font-medium text-foreground">0xchsh</span>
                 </a>
                 <a href="https://farcaster.xyz/chsh.eth" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)] group">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[1px]" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[1px]" aria-hidden="true">
                     <path d="M18.24.24H5.76C2.5789.24 0 2.8188 0 6v12c0 3.1811 2.5789 5.76 5.76 5.76h12.48c3.1812 0 5.76-2.5789 5.76-5.76V6C24 2.8188 21.4212.24 18.24.24m.8155 17.1662v.504c.2868-.0256.5458.1905.5439.479v.5688h-5.1437v-.5688c-.0019-.2885.2576-.5047.5443-.479v-.504c0-.22.1525-.402.358-.458l-.0095-4.3645c-.1589-1.7366-1.6402-3.0979-3.4435-3.0979-1.8038 0-3.2846 1.3613-3.4435 3.0979l-.0096 4.3578c.2276.0424.5318.2083.5395.4648v.504c.2863-.0256.5457.1905.5438.479v.5688H4.3915v-.5688c-.0019-.2885.2575-.5047.5438-.479v-.504c0-.2529.2011-.4548.4536-.4724v-7.895h-.4905L4.2898 7.008l2.6405-.0005V5.0419h9.9495v1.9656h2.8219l-.6091 2.0314h-.4901v7.8949c.2519.0177.453.2195.453.4724" />
                   </svg>
                   <span className="text-sm font-medium text-foreground">chsh</span>

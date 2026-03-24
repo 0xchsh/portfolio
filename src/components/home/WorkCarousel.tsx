@@ -6,10 +6,11 @@ import workData from '@/data/work.json';
 import type { WorkItem } from '@/app/work/page';
 import { WorkCardContent } from '@/components/work/WorkCard';
 
-const ALLOWED = new Set([
-  'AI Design Jobs', 'Freighter', 'by.computer', 'Higher',
-  'Checkmate', 'Laboratory', 'Rat Labs', 'RGB', 'Eco', 'Snack',
-]);
+// Order is intentional: mobile-bg cards (Freighter, Checkmate, RGB, Eco) never appear back-to-back
+const ALLOWED = [
+  'AI Design Jobs', 'Freighter', 'by.computer', 'Checkmate',
+  'Higher', 'RGB', 'Laboratory', 'Eco', 'Rat Labs', 'Snack',
+];
 
 const PREFERRED: Record<string, string> = {
   Freighter: 'Home',
@@ -17,7 +18,7 @@ const PREFERRED: Record<string, string> = {
 };
 
 const allWork = workData as WorkItem[];
-const baseSlides = Array.from(ALLOWED).map((title) => {
+const baseSlides = ALLOWED.map((title) => {
   const preferred = PREFERRED[title];
   if (preferred) {
     const found = allWork.find((w) => w.title === title && w.description === preferred);
@@ -26,14 +27,6 @@ const baseSlides = Array.from(ALLOWED).map((title) => {
   return allWork.find((w) => w.title === title);
 }).filter((w): w is WorkItem => w !== undefined);
 
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
 
 // Exiting slide pushes down; incoming slide is already in place behind it
 const EXIT_ANIM = 'push-down-out 800ms cubic-bezier(0.4, 0, 0.2, 1) forwards';
@@ -45,10 +38,6 @@ export function WorkCarousel() {
   const [exitingIdx, setExitingIdx] = useState<number | null>(null);
   const slideRefs   = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Shuffle before first paint — stable SSR, randomised on client
-  useLayoutEffect(() => {
-    setSlides(shuffle([...baseSlides]));
-  }, []);
 
   const advance = useCallback(() => {
     const prev = indexRef.current;

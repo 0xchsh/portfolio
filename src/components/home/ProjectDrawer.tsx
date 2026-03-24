@@ -5,8 +5,9 @@ import { X } from '@phosphor-icons/react/dist/ssr';
 import { Drawer } from 'vaul';
 import workData from '@/data/work.json';
 import type { WorkItem } from '@/app/work/page';
-import { WorkCardContent } from '@/components/work/WorkCard';
+import { WorkCardContent, VideoWithBlur } from '@/components/work/WorkCard';
 import { projectSummaries } from '@/data/project-summaries';
+import { caseStudySections } from '@/data/case-studies';
 
 type Project = {
   name: string;
@@ -75,20 +76,61 @@ export function ProjectDrawer({
 
           {/* Body */}
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
-            <div className="max-w-[704px] mx-auto py-5 pb-16 flex flex-col gap-8">
-              {workItems.length > 0 && (
-                <div className="flex flex-col">
-                  {workItems.map((item, i) => (
-                    <WorkCardContent key={i} item={item} hideTitle />
-                  ))}
-                </div>
-              )}
-              {projectSummaries[project.name] && (
-                <div className="text-sm leading-[1.75] text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
-                  {projectSummaries[project.name].split('\n\n').map((para, i) => (
-                    <p key={i}>{para}</p>
-                  ))}
-                </div>
+            <div className="max-w-[704px] mx-auto py-5 pb-16 flex flex-col gap-10">
+              {caseStudySections[project.name] ? (
+                caseStudySections[project.name].map((section, i) => (
+                  <div key={i} className="flex flex-col gap-5">
+                    {section.mockups && section.mockups.length > 0 && (
+                      section.mockups[0].type === 'mobile' ? (
+                        <div className="flex gap-3 h-[300px]">
+                          {section.mockups.map((m, j) => (
+                            <div key={j} className="h-full rounded-[20px] overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex-1" style={{ aspectRatio: '9 / 19.5', flexGrow: 0, flexShrink: 0, width: `calc((100% - ${(section.mockups!.length - 1) * 12}px) / ${section.mockups!.length})` }}>
+                              {m.src.endsWith('.mp4') || m.src.endsWith('.webm') ? (
+                                <div className="relative w-full h-full">
+                                  <VideoWithBlur src={m.src} className="absolute inset-0 w-full h-full object-cover" eager />
+                                </div>
+                              ) : (
+                                <Image src={m.src} alt="" fill unoptimized className="object-cover" />
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="w-full rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700">
+                          {section.mockups[0].src.endsWith('.mp4') || section.mockups[0].src.endsWith('.webm') ? (
+                            <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
+                              <VideoWithBlur src={section.mockups[0].src} className="absolute inset-0 w-full h-full object-cover" eager />
+                            </div>
+                          ) : (
+                            <Image src={section.mockups[0].src} alt="" width={704} height={396} unoptimized className="w-full h-auto" />
+                          )}
+                        </div>
+                      )
+                    )}
+                    <div className="text-sm leading-[1.75] text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto w-full">
+                      {section.text.split('\n\n').map((para, j) => (
+                        <p key={j}>{para}</p>
+                      ))}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <>
+                  {workItems.length > 0 && (
+                    <div className="flex flex-col">
+                      {workItems.map((item, i) => (
+                        <WorkCardContent key={i} item={item} hideTitle />
+                      ))}
+                    </div>
+                  )}
+                  {projectSummaries[project.name] && (
+                    <div className="text-sm leading-[1.75] text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
+                      {projectSummaries[project.name].split('\n\n').map((para, i) => (
+                        <p key={i}>{para}</p>
+                      ))}
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </div>

@@ -49,7 +49,7 @@ export function ArtDrawer({
                 <p className="text-sm font-semibold text-foreground leading-snug">
                   {item.title}
                   <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
-                  <span className="font-normal text-neutral-400 dark:text-neutral-500">{item.year} · {item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
+                  <span className="font-normal text-neutral-400 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
                 </p>
               </div>
               <a
@@ -71,7 +71,7 @@ export function ArtDrawer({
             <div className="max-w-[704px] mx-auto py-5 pb-16 flex flex-col gap-8">
               <div className="flex flex-row gap-4">
                 {item.images.map((src, i) => (
-                  <div key={i} className="relative flex-1 aspect-square rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                  <div key={i} className="relative flex-1 aspect-square rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700">
                     <Image
                       src={src}
                       alt={`${item.title} ${i + 1}`}
@@ -91,7 +91,7 @@ export function ArtDrawer({
               )}
               {item.sections?.map((section, i) => (
                 <div key={i} className="flex flex-col gap-6">
-                  <div className="w-full bg-neutral-100 dark:bg-neutral-800 rounded-xl">
+                  <div className="w-full bg-neutral-100 dark:bg-neutral-800 rounded-xl border border-neutral-100 dark:border-neutral-700">
                     <Image
                       src={section.image}
                       alt={`${item.title} ${i + 3}`}

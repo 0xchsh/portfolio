@@ -71,6 +71,18 @@ I wanted to experiment with combining an internet-native constraint and establis
 
 Credit to Jack Butcher for creating Opepen as a canvas and for the many bits of inspiration.`,
 
+  RGB: `RGB is an onchain media app — a feed for digital collectibles where what you own is the content. Most onchain platforms are built around creation and trading. RGB takes a different angle: your collection is your profile, and curation is the product.
+
+Following someone on RGB means following what they collect, not just what they create. The feed surfaces owned work — organized by collector, by collection, by creator. Taste becomes visible. Provenance and aesthetics are primary. Price is secondary.
+
+The design challenge was making a feed of heterogeneous content feel cohesive. NFTs come in every shape, ratio, and medium — generative art, photography, 1/1 pieces, large editions. The layout adapts to the content without flattening it.
+
+Discovery is organized around collections rather than individual tokens. Browsing a collection on RGB is closer to browsing a gallery than a marketplace. The experience is cultural, not transactional.
+
+RGB extends the onchain infrastructure behind rgb.fun into a full media layer for the collector community. The goal: make onchain collecting feel as natural as scrolling a feed.
+
+RGB Signatures are the identity system. Each signature is a unique binary visual encoding of an RGB value — your color, your mark. On RGB the app, your signature is your avatar. 16,777,216 possible identities, each one yours the moment you mint it.`,
+
   'rgb.fun': `rgb.fun is an NFT collection representing every possible RGB color: 16,777,216 tokens, each a unique combination of red, green, and blue values. Each token is its color. No artwork, no generative traits, no rarity tiers — just pure color, onchain.
 
 The premise emerged from a question about the most minimal meaningful NFT. Most collections derive value from imagery, community, or narrative. rgb.fun strips all of that away and asks: is color alone interesting enough to collect? For designers, developers, and people who think about color obsessively, the answer was yes.
