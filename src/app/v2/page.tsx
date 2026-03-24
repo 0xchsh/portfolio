@@ -178,7 +178,7 @@ type ProjectItem = {
 
 function ProjectRow({ item, hideIcon, directLink }: { item: ProjectItem; hideIcon?: boolean; directLink?: boolean }) {
   const rowClass =
-    'flex items-start gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
+    'flex items-start gap-3 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
   const inner = (
     <>
       {!hideIcon && (
@@ -211,23 +211,25 @@ type ArtItem = {
   title: string;
   desc?: string;
   year: string;
+  icon?: string;
   images: string[];
   size: string;
   type: string[];
   collectionHref: string;
   collectionLabel: string;
+  links?: { label: string; href: string }[];
 };
 
 const artItems = feedData.art as ArtItem[];
 
 function ArtRow({ item }: { item: ArtItem }) {
   const rowClass =
-    'flex items-start gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
+    'flex items-start gap-3 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
   return (
     <ArtDrawer item={item}>
       <button className={rowClass}>
         <div className="shrink-0 w-3.5 h-3.5 rounded-[3px] overflow-hidden bg-neutral-100 dark:bg-neutral-800 mt-[3px]">
-          <Image src={item.images[0]} alt={item.title} width={14} height={14} unoptimized className="object-contain" />
+          <Image src={item.icon ?? item.images[0]} alt={item.title} width={14} height={14} unoptimized className="object-contain" />
         </div>
         <div>
           <p className="text-sm font-medium text-foreground leading-[20px]">{item.title}</p>

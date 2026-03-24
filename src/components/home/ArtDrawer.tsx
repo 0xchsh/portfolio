@@ -1,13 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { X } from '@phosphor-icons/react/dist/ssr';
+import { X, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { Drawer } from 'vaul';
 import { projectSummaries } from '@/data/project-summaries';
 
 type ArtSection = {
   image: string;
   text?: string;
+  half?: boolean;
+  quarter?: boolean;
 };
 
 type ArtItem = {
@@ -19,6 +21,7 @@ type ArtItem = {
   type: string[];
   collectionHref: string;
   collectionLabel: string;
+  links?: { label: string; href: string }[];
 };
 
 export function ArtDrawer({
@@ -59,6 +62,7 @@ export function ArtDrawer({
                 className="inline-flex items-center text-xs font-medium text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100"
               >
                 {item.collectionLabel}
+                <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
               </a>
             </div>
             <Drawer.Close className="absolute right-5 top-1/2 -translate-y-1/2 p-1 rounded-md text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-100">
@@ -89,27 +93,68 @@ export function ArtDrawer({
                   ))}
                 </div>
               )}
-              {item.sections?.map((section, i) => (
-                <div key={i} className="flex flex-col gap-8">
-                  <div className="w-full bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-100 dark:border-neutral-700">
-                    <Image
-                      src={section.image}
-                      alt={`${item.title} ${i + 3}`}
-                      width={704}
-                      height={704}
-                      unoptimized
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
-                  {section.text && (
-                    <div className="text-sm leading-5 font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
-                      {section.text.split('\n\n').map((para, j) => (
-                        <p key={j}>{para}</p>
+              {(() => {
+                const sections = item.sections ?? [];
+                const groups: (ArtSection | ArtSection[])[] = [];
+                let i = 0;
+                while (i < sections.length) {
+                  if (sections[i].quarter && sections[i + 1]?.quarter && sections[i + 2]?.quarter && sections[i + 3]?.quarter) {
+                    groups.push([sections[i], sections[i + 1], sections[i + 2], sections[i + 3]]);
+                    i += 4;
+                  } else if (sections[i].half && sections[i + 1]?.half) {
+                    groups.push([sections[i], sections[i + 1]]);
+                    i += 2;
+                  } else {
+                    groups.push(sections[i]);
+                    i++;
+                  }
+                }
+                return groups.map((group, gi) =>
+                  Array.isArray(group) ? (
+                    <div key={gi} className="flex flex-col gap-8">
+                      <div className="flex gap-3">
+                        {group.map((section, j) => (
+                          <div key={j} className="flex-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-100 dark:border-neutral-700 overflow-hidden">
+                            <Image src={section.image} alt={`${item.title} ${gi}-${j}`} width={176} height={176} unoptimized className="w-full h-auto" />
+                          </div>
+                        ))}
+                      </div>
+                      {group.map((section, j) => section.text && (
+                        <div key={j} className="text-sm leading-5 font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto w-full">
+                          {section.text.split('\n\n').map((para, k) => <p key={k}>{para}</p>)}
+                        </div>
                       ))}
                     </div>
-                  )}
+                  ) : (
+                    <div key={gi} className="flex flex-col gap-8">
+                      <div className="w-full bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-100 dark:border-neutral-700">
+                        <Image src={(group as ArtSection).image} alt={`${item.title} ${gi}`} width={704} height={704} unoptimized className="w-full h-auto rounded-lg" />
+                      </div>
+                      {(group as ArtSection).text && (
+                        <div className="text-sm leading-5 font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
+                          {(group as ArtSection).text!.split('\n\n').map((para, j) => <p key={j}>{para}</p>)}
+                        </div>
+                      )}
+                    </div>
+                  )
+                );
+              })()}
+              {item.links && item.links.length > 0 && (
+                <div className="flex flex-wrap gap-2 max-w-[480px] mx-auto w-full">
+                  {item.links.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-xs font-medium text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100"
+                    >
+                      {link.label}
+                      <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
+                    </a>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </Drawer.Content>

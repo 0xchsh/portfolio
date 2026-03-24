@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { X } from '@phosphor-icons/react/dist/ssr';
+import { X, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { Drawer } from 'vaul';
 import { useState, useEffect } from 'react';
 import workData from '@/data/work.json';
@@ -82,7 +82,8 @@ export function ProjectDrawer({
                         onClick={(e) => e.stopPropagation()}
                         className={`absolute left-0 top-0 inline-flex items-center text-xs font-medium text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full transition-opacity duration-500 ${showVisit ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                       >
-                        Visit ↗
+                        Visit
+                        <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
                       </a>
                     )}
                   </span>
@@ -97,6 +98,7 @@ export function ProjectDrawer({
                   className="hidden desktop:inline-flex items-center text-xs font-medium text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100 shrink-0"
                 >
                   Visit
+                  <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
                 </a>
               )}
             </div>

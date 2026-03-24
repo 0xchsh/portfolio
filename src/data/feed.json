@@ -72,34 +72,50 @@
       ],
       "size": "26,500+",
       "type": ["NFT"],
+      "sections": [
+        { "image": "/work/art/rgb-friends/anatomy.png" },
+        { "image": "/work/art/rgb-friends/collab-base.png", "half": true },
+        { "image": "/work/art/rgb-friends/collab-nouns.png", "half": true },
+        { "image": "/work/art/rgb-friends/collab-higher.png", "half": true },
+        { "image": "/work/art/rgb-friends/collab-pudgies.png", "half": true }
+      ],
       "collectionHref": "https://highlight.xyz/mint/66744e64e610ed36adeb1a64",
-      "collectionLabel": "Mint on Highlight"
+      "collectionLabel": "Mint on Highlight",
+      "links": [
+        { "label": "Tweet by @chshux", "href": "https://x.com/chshux/status/1803835217968533979?s=20" },
+        { "label": "Tweet by @Highlight_xyz", "href": "https://x.com/Highlight_xyz/status/1813556499156734332" }
+      ]
     },
     {
       "title": "Hyperbrand: Opepen",
       "desc": "Hypercultures extended",
       "year": "2023",
+      "icon": "/work/art/opepen/The Hundred.gif",
       "images": [
         "/work/art/opepen/opepen-01.jpeg",
         "/work/art/opepen/opepen-02.gif"
       ],
       "sections": [
         {
-          "image": "/work/art/opepen/opepen-03.jpeg",
-          "text": "The name of this collection is Hyperbrand: Opepen. The goal is to demonstrate Opepen as a hyperbrand.\n\nA hyperbrand is a crypto reputation that can proliferate for free and forever, without maintenance, interruption, or intermediaries. Other hyperbrands include Zora and Nouns."
+          "image": "/work/art/opepen/The Hundred.gif"
         },
         {
-          "image": "/work/art/opepen/opepen-04.jpeg"
+          "image": "/work/art/opepen/opepen-04.jpeg",
+          "half": true
         },
         {
           "image": "/work/art/opepen/opepen-05.jpeg",
+          "half": true,
           "text": "A brand is a memetic container for commerce. A hyperbrand is a memetic container for culture.\n\nTherefore, hyperbrand × brand = culture × commerce. Hyperbrands like Opepen, Zora, and Nouns have the unique ability to remix culture and commerce."
         }
       ],
       "size": "100",
       "type": ["NFT"],
       "collectionHref": "https://zora.co/collect/zora:0x787c6366341fbb8a7bfff1064009bce60796338f",
-      "collectionLabel": "Mint on Zora"
+      "collectionLabel": "Mint on Zora",
+      "links": [
+        { "label": "Original tweet", "href": "https://x.com/chshux/status/1737895581308321887?s=20" }
+      ]
     },
     {
       "title": "Zorps",

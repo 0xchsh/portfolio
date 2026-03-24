@@ -95,7 +95,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 // ---------------------------------------------------------------------------
 
 const rowClass =
-  'flex items-center gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
+  'flex items-center gap-3 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
 
 function AgentModeRow() {
   const { toggleAgentMode } = useAgentMode();
@@ -124,7 +124,7 @@ function CharlesMdRow() {
     <button onClick={handleDownload} className={`${rowClass} items-start group`}>
       <FileText size={14} weight="bold" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[3px]" />
       <div>
-        <p className="text-sm font-medium text-foreground leading-[20px] uppercase">charles.md</p>
+        <p className="text-sm font-medium text-foreground leading-[20px]">charles.md</p>
         <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">Design instructions for LLMs</p>
       </div>
       <DownloadSimple size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
