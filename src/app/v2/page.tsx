@@ -237,9 +237,9 @@ function ArtRow({ item }: { item: ArtItem }) {
 }
 
 function ProjectList({ items, hideIcon, directLink }: { items: ProjectItem[]; hideIcon?: boolean; directLink?: boolean }) {
-  if (items.length === 0) return <div className="mt-3" />;
+  if (items.length === 0) return <div className="mt-4" />;
   return (
-    <div className="mt-3 flex flex-col gap-2">
+    <div className="mt-4 flex flex-col gap-2">
       {items.map((item) => (
         <ProjectRow key={item.name} item={item} hideIcon={hideIcon} directLink={directLink} />
       ))}
@@ -340,7 +340,7 @@ export default async function V2Home() {
             {/* Art */}
             <section className="mt-8">
               <SectionLabel>Art</SectionLabel>
-              <div className="mt-3 flex flex-col gap-2">
+              <div className="mt-4 flex flex-col gap-2">
                 {artItems.map((item) => (
                   <ArtRow key={item.title} item={item} />
                 ))}
@@ -352,7 +352,7 @@ export default async function V2Home() {
             <FadeIn delay={225}>
             <section className="mt-8">
               <SectionLabel>Connect</SectionLabel>
-              <div className="mt-3 flex flex-col gap-2">
+              <div className="mt-4 flex flex-col gap-2">
                 <div className="flex items-center gap-3 px-3 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)]">
                   <Envelope size={14} weight="bold" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[1px]" />
                   <CopyEmail noIcon className="text-sm font-medium text-foreground cursor-pointer hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors duration-100" />
