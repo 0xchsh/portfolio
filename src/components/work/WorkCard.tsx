@@ -9,7 +9,7 @@ function isVideoSrc(src: string) {
   return src.endsWith('.mp4') || src.endsWith('.webm');
 }
 
-export function SingleMedia({ src, alt, objectPosition, eager }: { src: string; alt: string; objectPosition?: string; eager?: boolean }) {
+export function SingleMedia({ src, alt, objectPosition, eager, sizes }: { src: string; alt: string; objectPosition?: string; eager?: boolean; sizes?: string }) {
   const isVideo = isVideoSrc(src);
   const pos = objectPosition || 'top';
 
@@ -24,7 +24,7 @@ export function SingleMedia({ src, alt, objectPosition, eager }: { src: string; 
       src={src}
       alt={alt}
       fill
-      sizes="(min-width: 860px) 288px, 100vw"
+      sizes={sizes ?? '(min-width: 640px) 704px, 100vw'}
       className="object-cover"
       style={{ objectPosition: pos }}
     />
@@ -116,7 +116,7 @@ export function MobileFrame({ src, alt, transparent, eager }: { src: string; alt
             src={src}
             alt={alt}
             fill
-            unoptimized
+            sizes="(min-width: 640px) 220px, 50vw"
             className="object-cover"
           />
         )}
@@ -141,7 +141,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle }: { item: WorkItem
             </div>
           </div>
         ) : isSingle ? (
-          <SingleMedia src={item.src[0]} alt={item.title} objectPosition={item.objectPosition} eager />
+          <SingleMedia src={item.src[0]} alt={item.title} objectPosition={item.objectPosition} eager sizes="(min-width: 860px) 320px, 100vw" />
         ) : (
           <div className="h-full flex items-center justify-center gap-3 px-10 py-8">
             {item.src.map((src, j) => (

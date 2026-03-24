@@ -16,13 +16,11 @@ export const caseStudySections: Record<string, CaseStudySection[]> = {
       text: `Freighter is Stellar's flagship non-custodial wallet. It launched in 2020 as a browser extension and expanded to mobile as smart contracts arrived on Stellar and mobile crypto usage grew.
 
 A small team: three engineers, one PM, and me as the sole designer. Five months to ship before Meridian, our annual conference where attendees would use it live.`,
-      mockups: [{ src: '/videos/freighter/cover-freighter.png', type: 'frame' }],
     },
     {
       text: `Smart contracts launched on Stellar in 2024, unlocking DeFi, NFTs, and more. We needed a mobile wallet simple enough for newcomers but powerful enough for what the network could do now.
 
 Designed for first-time crypto users, DeFi-curious people, remittance senders, and English-speaking users outside the US. Followed Stellar Design System v3 with a bias toward shipping fast and refining after launch.`,
-      mockups: [{ src: '/videos/freighter/website.png', type: 'frame' }],
     },
     {
       text: `The home screen organizes holdings into Tokens, Positions, and Collectibles. Balance sits at the top. Below, tabs let users navigate without overwhelming the default view.
@@ -74,7 +72,6 @@ Crypto is already unfamiliar. Don't add friction to anxiety. Lean into patterns 
       text: `Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.
 
 The core interaction is paste-to-save: drop a URL, and Snack scrapes the metadata instantly. No formatting, no organizing, just a running list you can share with one link.`,
-      mockups: [{ src: '/videos/snack/cover-snack.png', type: 'frame' }],
     },
     {
       text: `I spent $30,000 out of pocket on an agency MVP, then Claude Code came out and I rebuilt everything and more from scratch within a month. The leverage is real and it compounds.
@@ -112,7 +109,6 @@ Distribution is still the hardest part. Doesn't matter how good the product is i
       text: `Stellar Laboratory is the preferred developer sandbox for the Stellar network — the core tool for building transactions, testing endpoints, and exploring the ledger.
 
 The original Lab was functional but outdated. Soroban (smart contracts) and new network features required a full rebuild. My job was to bring the visual language in line with the rest of Stellar's products without alienating developers who'd built muscle memory around the existing flow.`,
-      mockups: [{ src: '/videos/lab/cover-laboratory.png', type: 'frame' }],
     },
     {
       text: `Soroban and new network features were shipping fast. The existing Lab couldn't keep up. We rebuilt it from the ground up.
