@@ -312,19 +312,19 @@ export default async function V2Home() {
             </div>
             </FadeIn>
 
-            {/* Projects */}
             <FadeIn delay={150}>
-            <section className="mt-8">
-              <SectionLabel>Projects</SectionLabel>
-              <ProjectList items={projects} />
-            </section>
-            </FadeIn>
-
-            <FadeIn delay={160}>
             {/* Case Studies */}
             <section className="mt-8">
               <SectionLabel>Case Studies</SectionLabel>
               <ProjectList items={caseStudies} />
+            </section>
+            </FadeIn>
+
+            {/* Projects */}
+            <FadeIn delay={160}>
+            <section className="mt-8">
+              <SectionLabel>Projects</SectionLabel>
+              <ProjectList items={projects} />
             </section>
             </FadeIn>
 
