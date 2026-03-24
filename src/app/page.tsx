@@ -307,7 +307,7 @@ export default async function V2Home() {
             {/* Case Studies */}
             <section className="mt-8">
               <SectionLabel>Featured</SectionLabel>
-              <div className="mt-4 flex flex-col gap-3">
+              <div className="mt-3 desktop:mt-4 flex flex-col gap-3">
                 {caseStudies.map((item) => (
                   <ProjectRow key={item.name} item={item} />
                 ))}
@@ -319,7 +319,7 @@ export default async function V2Home() {
             <FadeIn delay={160}>
             <section className="mt-8">
               <SectionLabel>Projects</SectionLabel>
-              <div className="mt-4 flex flex-col gap-3">
+              <div className="mt-3 desktop:mt-4 flex flex-col gap-3">
                 {projects.map((item) => (
                   <ProjectRow key={item.name} item={item} directLink={item.directLink} />
                 ))}
@@ -331,7 +331,7 @@ export default async function V2Home() {
             {/* Art */}
             <section className="mt-8">
               <SectionLabel>Art</SectionLabel>
-              <div className="mt-4 flex flex-col gap-3">
+              <div className="mt-3 desktop:mt-4 flex flex-col gap-3">
                 {artItems.map((item) => (
                   <ArtRow key={item.title} item={item} />
                 ))}
@@ -343,7 +343,7 @@ export default async function V2Home() {
             <FadeIn delay={225}>
             <section className="mt-8">
               <SectionLabel>Connect</SectionLabel>
-              <div className="mt-4 flex flex-col gap-3">
+              <div className="mt-3 desktop:mt-4 flex flex-col gap-3">
                 <CopyEmailRow />
                 <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className="group flex items-start gap-3 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)]">
                   <XLogo size={14} weight="bold" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[3px]" />
