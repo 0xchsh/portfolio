@@ -15,7 +15,7 @@ Still in active development. I'm using it to figure out what a human-facing inte
 
 I got a new car and noticed the reverse camera had no beep. Took it to the dealership and they said software issue. Second shop, same answer. Third specialist finally told me it was a trim-level feature that had been cut from my model. Three visits for one fact that should've taken thirty seconds.
 
-Add your car once, year, make, model, trim, and every conversation already knows what you're driving.`,
+The reason Google doesn't work for this is that it has no idea what car you have. Otto does. Add your car once, year, make, model, trim, and every conversation already has your owner's manual loaded.`,
 
   Snack: `Snack is the simplest way to save and share links. Started when I tried to build a directory of the best crypto websites and realized there was no tool to just make one.
 
