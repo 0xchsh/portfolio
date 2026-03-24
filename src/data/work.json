@@ -1,49 +1,5 @@
 [
   {
-    "title": "ClawPanel",
-    "description": "Dashboard for OpenClaw",
-    "src": [
-      "/work/clawpanel/00-clawpanel-cover.webp"
-    ],
-    "link": null,
-    "logo": null,
-    "ratio": "16:9",
-    "cover": true,
-    "blurDataURLs": [
-      "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoKAAYAAUAmJYgCdDBAAZB5+gAA/v7Z7FgbJ2Mmu8t54TEmzklSQ1OPxcUlo21yHtRld/h8daeQAA=="
-    ]
-  },
-  {
-    "title": "ClawPanel",
-    "description": "Overview",
-    "src": [
-      "/work/clawpanel/01-clawpanel.webp"
-    ],
-    "link": null,
-    "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoKAAYAAUAmJZwC7AEPAjOwMAD+/t/PZvhIN6lQgIFLThejKFN1/Mu/XpIUAAAA"
-    ]
-  },
-  {
-    "title": "Otto",
-    "description": "",
-    "src": [
-      "/work/otto/otto-01.png",
-      "/work/otto/otto-02.png",
-      "/work/otto/otto-03.png"
-    ],
-    "link": null,
-    "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAj0lEQVR4nDWO2QrDIBRE/f+fi5JQklRtQbOpIfSpIQ+eoqEXhguzMCOc94QQKlJKnOeJGN+eaVnYto0YI9d1IZSSyKZBSom1lnKiHSyP0WC0Zpomcs6IURue2vCylnmeb3Loe7quRSlV4zmDWNe1lpRf2quzTCmtRdj3xLdM+rtucuc4PgjvPc65KpRECJEfraa5NG6Gtj0AAAAASUVORK5CYII=",
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAjklEQVR4nHWMOQ6DMAAE/SLyAN5Kz2eQkChIRyhSIAK2CT6wMRNB2mSblXZWI7z37PuONSs+JnqdEDHGazzhFiLSJQQ/Is5X13WUZUlRFMxSIpqmIc9zbll2dV3XX2fb3qmqCmstx3H8cW4hIKVCKo2zlkUphDGWYZyYpeL50ozaIdbVoJc3KQb6yfFQkQ9EJrf9KWug1AAAAABJRU5ErkJggg==",
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAlklEQVR4nFWOMQ6CQBBF525qjVdQT4WUaoG9WoproTbaWRFbCdBYsELY5ZkFSfQlk5n/M38yUlYVjsYaSgP3zCCPOMb3fRarJdfbjexVIOqgGAxHTKYzPG/M5XxCiqLAWtuecF3rN1LXNUel2EcRzyTBaUnTlHkQsNnuCMM1eZ53cWNM90HToLVGWvXFma6kH3752+zNDxGXthNGrx93AAAAAElFTkSuQmCC"
-    ]
-  },
-  {
     "title": "Freighter",
     "description": "Flagship Stellar wallet",
     "src": [
@@ -197,6 +153,59 @@
     "ratio": "16:9"
   },
   {
+    "title": "AI Design Jobs",
+    "description": "Curated design roles at AI companies",
+    "src": [
+      "/work/misc/design-jobs-01.png"
+    ],
+    "link": "https://ai-design-jobs.vercel.app/",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdUlEQVR4nFWNSwoEIAxDvf8JdalLERcqKv4ypIMyI8TQ8Jqqcw723lhrPWd2xYyu+HnvYYyB1hohhC+0D/bZAlIKAFprSCmh1vrXeNukkWDvXTTG4Ig5pyxwkRf4Hsgw5/xAtpVS4Jz7BZuAMUbx28jZWivgB9EW6k7gmn6OAAAAAElFTkSuQmCC"
+    ]
+  },
+  {
+    "title": "Otto",
+    "description": "",
+    "src": [
+      "/work/otto/otto-01.png",
+      "/work/otto/otto-02.png",
+      "/work/otto/otto-03.png"
+    ],
+    "link": null,
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAj0lEQVR4nDWO2QrDIBRE/f+fi5JQklRtQbOpIfSpIQ+eoqEXhguzMCOc94QQKlJKnOeJGN+eaVnYto0YI9d1IZSSyKZBSom1lnKiHSyP0WC0Zpomcs6IURue2vCylnmeb3Loe7quRSlV4zmDWNe1lpRf2quzTCmtRdj3xLdM+rtucuc4PgjvPc65KpRECJEfraa5NG6Gtj0AAAAASUVORK5CYII=",
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAjklEQVR4nHWMOQ6DMAAE/SLyAN5Kz2eQkChIRyhSIAK2CT6wMRNB2mSblXZWI7z37PuONSs+JnqdEDHGazzhFiLSJQQ/Is5X13WUZUlRFMxSIpqmIc9zbll2dV3XX2fb3qmqCmstx3H8cW4hIKVCKo2zlkUphDGWYZyYpeL50ozaIdbVoJc3KQb6yfFQkQ9EJrf9KWug1AAAAABJRU5ErkJggg==",
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAlklEQVR4nFWOMQ6CQBBF525qjVdQT4WUaoG9WoproTbaWRFbCdBYsELY5ZkFSfQlk5n/M38yUlYVjsYaSgP3zCCPOMb3fRarJdfbjexVIOqgGAxHTKYzPG/M5XxCiqLAWtuecF3rN1LXNUel2EcRzyTBaUnTlHkQsNnuCMM1eZ53cWNM90HToLVGWvXFma6kH3752+zNDxGXthNGrx93AAAAAElFTkSuQmCC"
+    ]
+  },
+  {
+    "title": "by.computer",
+    "description": "Download a business",
+    "src": [
+      "/work/by-computer/by-computer-01.webm"
+    ],
+    "link": null,
+    "logo": null,
+    "ratio": "16:9"
+  },
+  {
+    "title": "ShinCN",
+    "description": "Personal brand design system",
+    "src": [
+      "/work/misc/shincn.webp"
+    ],
+    "link": "https://ui.ch.sh",
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAAAwAQCdASoKAAoABUB8JaQAA3AA/vBjMEQDJxip2AA="
+    ]
+  },
+  {
     "title": "Eco",
     "description": "Cross-chain bridge",
     "src": [
@@ -242,7 +251,7 @@
   },
   {
     "title": "RGB",
-    "description": "",
+    "description": "Onchain media",
     "src": [
       "/work/misc/rgb-01.webp",
       "/work/misc/rgb-02.webp",
@@ -258,21 +267,8 @@
     ]
   },
   {
-    "title": "AI Design Jobs",
-    "description": "Curated design roles at AI companies",
-    "src": [
-      "/work/misc/design-jobs-01.png"
-    ],
-    "link": "https://ai-design-jobs.vercel.app/",
-    "logo": null,
-    "ratio": "16:9",
-    "blurDataURLs": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdUlEQVR4nFWNSwoEIAxDvf8JdalLERcqKv4ypIMyI8TQ8Jqqcw723lhrPWd2xYyu+HnvYYyB1hohhC+0D/bZAlIKAFprSCmh1vrXeNukkWDvXTTG4Ig5pyxwkRf4Hsgw5/xAtpVS4Jz7BZuAMUbx28jZWivgB9EW6k7gmn6OAAAAAElFTkSuQmCC"
-    ]
-  },
-  {
     "title": "Rat Labs",
-    "description": "",
+    "description": "Onchain product studio",
     "src": [
       "/work/misc/ratlabs.webp"
     ],
@@ -284,13 +280,31 @@
     ]
   },
   {
-    "title": "by.computer",
-    "description": "Download a business",
+    "title": "ClawPanel",
+    "description": "Browser automation dashboard",
     "src": [
-      "/work/by-computer/by-computer-01.webm"
+      "/work/clawpanel/00-clawpanel-cover.webp"
     ],
     "link": null,
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "cover": true,
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoKAAoABUB8JYgCdAEPCq8IAAD+78QmXI984ZaZBqrFYAAA"
+    ]
+  },
+  {
+    "title": "ClawPanel",
+    "description": "Overview",
+    "src": [
+      "/work/clawpanel/01-clawpanel.webp"
+    ],
+    "link": null,
+    "logo": null,
+    "ratio": "16:9",
+    "cover": true,
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAADQAQCdASoKAAoABUB8JYwC7AELZKd/AAD+6xxg12DaiLF2rK8AAA=="
+    ]
   }
 ]
