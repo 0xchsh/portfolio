@@ -405,7 +405,7 @@ export default async function V2Home() {
                 )}
               </div>
               <div className="flex items-center gap-[2px]">
-                <WeatherIcon code={weather.code} size={16} />
+                <WeatherIcon code={weather.code} size={20} />
                 <span className="text-sm text-neutral-500 dark:text-neutral-400">Chicago, IL</span>
               </div>
             </div>
