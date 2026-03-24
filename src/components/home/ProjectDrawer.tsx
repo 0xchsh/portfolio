@@ -81,7 +81,7 @@ export function ProjectDrawer({
                 caseStudySections[project.name].map((section, i) => (
                   <div key={i} className="flex flex-col gap-6">
                     {i > 0 && (
-                      <span className="font-['JetBrains_Mono',monospace] text-xs text-neutral-300 dark:text-neutral-700 select-none -mb-3">▒▒▒</span>
+                      <span className="font-['JetBrains_Mono',monospace] text-xs text-neutral-300 dark:text-neutral-700 select-none -mb-3 text-center">▒▒▒</span>
                     )}
                     {section.mockups && section.mockups.length > 0 && (
                       section.mockups[0].type === 'mobile' ? (
