@@ -125,8 +125,8 @@ async function getWeather() {
 // ---------------------------------------------------------------------------
 
 const projects = [
-  { name: 'Otto', desc: 'Ask anything about your cars', href: '#', icon: '/icons/otto.svg', workTitle: 'Otto' },
   { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', workTitle: 'Snack' },
+  { name: 'Otto', desc: 'Ask anything about your cars', href: '#', icon: '/icons/otto.svg', workTitle: 'Otto' },
   { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', workTitle: 'Rat Labs' },
   { name: 'RGB', desc: 'Onchain media app', href: 'https://rgb.fun', icon: '/icons/rgb.svg', workTitle: 'RGB' },
 ];
