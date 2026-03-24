@@ -10,6 +10,7 @@ type ArtSection = {
   text?: string;
   half?: boolean;
   quarter?: boolean;
+  blurDataURL?: string | null;
 };
 
 type ArtItem = {
@@ -158,7 +159,7 @@ export function ArtDrawer({
                       <div className="flex gap-8">
                         {group.map((section, j) => (
                           <div key={j} className="flex-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-100 dark:border-neutral-700 overflow-hidden">
-                            <Image src={section.image} alt={`${item.title} ${gi}-${j}`} width={176} height={176} unoptimized className="w-full h-auto" />
+                            <Image src={section.image} alt={`${item.title} ${gi}-${j}`} width={176} height={176} unoptimized placeholder={section.blurDataURL ? 'blur' : 'empty'} blurDataURL={section.blurDataURL ?? undefined} className="w-full h-auto" />
                           </div>
                         ))}
                       </div>
@@ -171,7 +172,7 @@ export function ArtDrawer({
                   ) : (
                     <div key={gi} className="flex flex-col gap-8">
                       <div className="w-full bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-100 dark:border-neutral-700">
-                        <Image src={(group as ArtSection).image} alt={`${item.title} ${gi}`} width={704} height={704} unoptimized className="w-full h-auto rounded-lg" />
+                        <Image src={(group as ArtSection).image} alt={`${item.title} ${gi}`} width={704} height={704} unoptimized placeholder={(group as ArtSection).blurDataURL ? 'blur' : 'empty'} blurDataURL={(group as ArtSection).blurDataURL ?? undefined} className="w-full h-auto rounded-lg" />
                       </div>
                       {(group as ArtSection).text && (
                         <div className="text-sm leading-5 font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">

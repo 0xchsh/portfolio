@@ -7,7 +7,10 @@
     ],
     "link": null,
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoKAAYAAUAmJYgCdDBAAZB5+gAA/v7Z7FgbJ2Mmu8t54TEmzklSQ1OPxcUlo21yHtRld/h8daeQAA=="
+    ]
   },
   {
     "title": "ClawPanel",
@@ -17,7 +20,10 @@
     ],
     "link": null,
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoKAAYAAUAmJZwC7AEPAjOwMAD+/t/PZvhIN6lQgIFLThejKFN1/Mu/XpIUAAAA"
+    ]
   },
   {
     "title": "Otto",
@@ -29,7 +35,12 @@
     ],
     "link": null,
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAj0lEQVR4nDWO2QrDIBRE/f+fi5JQklRtQbOpIfSpIQ+eoqEXhguzMCOc94QQKlJKnOeJGN+eaVnYto0YI9d1IZSSyKZBSom1lnKiHSyP0WC0Zpomcs6IURue2vCylnmeb3Loe7quRSlV4zmDWNe1lpRf2quzTCmtRdj3xLdM+rtucuc4PgjvPc65KpRECJEfraa5NG6Gtj0AAAAASUVORK5CYII=",
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAjklEQVR4nHWMOQ6DMAAE/SLyAN5Kz2eQkChIRyhSIAK2CT6wMRNB2mSblXZWI7z37PuONSs+JnqdEDHGazzhFiLSJQQ/Is5X13WUZUlRFMxSIpqmIc9zbll2dV3XX2fb3qmqCmstx3H8cW4hIKVCKo2zlkUphDGWYZyYpeL50ozaIdbVoJc3KQb6yfFQkQ9EJrf9KWug1AAAAABJRU5ErkJggg==",
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAlklEQVR4nFWOMQ6CQBBF525qjVdQT4WUaoG9WoproTbaWRFbCdBYsELY5ZkFSfQlk5n/M38yUlYVjsYaSgP3zCCPOMb3fRarJdfbjexVIOqgGAxHTKYzPG/M5XxCiqLAWtuecF3rN1LXNUel2EcRzyTBaUnTlHkQsNnuCMM1eZ53cWNM90HToLVGWvXFma6kH3752+zNDxGXthNGrx93AAAAAElFTkSuQmCC"
+    ]
   },
   {
     "title": "Freighter",
@@ -39,7 +50,10 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoKAAYAAUAmJQAAX1vT4PgAAP7+2zcWaOaZo7dmwvVv63Cyl3/vVpMqJgYB8BDkaWAAAA=="
+    ]
   },
   {
     "title": "Freighter",
@@ -61,7 +75,12 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRmYAAABXRUJQVlA4WAoAAAAQAAAABAAACQAAQUxQSBMAAAABD/D4/4iIIBBIVsifd4eI/ocGAFZQOCAsAAAA0AEAnQEqBQAKAAFAJiWkAALnS+lBeIAA/v4qA9rxZg1KPgCwksMdZHcAAAA=",
+      null,
+      null
+    ]
   },
   {
     "title": "Freighter",
@@ -73,7 +92,12 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      null,
+      null,
+      "data:image/webp;base64,UklGRmYAAABXRUJQVlA4WAoAAAAQAAAABAAACQAAQUxQSBMAAAABD/D4/4iIIBBIVsifd4eI/ocGAFZQOCAsAAAA0AEAnQEqBQAKAAFAJiWcAnQBDvjNo8AA/v2tOww5Nj4K15KhjrHP/QMD4AA="
+    ]
   },
   {
     "title": "Freighter",
@@ -95,7 +119,10 @@
     ],
     "link": "https://freighter.app",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAAAwAQCdASoKAAcAAUAmJaQAA3AA/vu2YXVVAUT/u6rf4N7fsGr9pHu5HtNPAAAA"
+    ]
   },
   {
     "title": "Snack",
@@ -105,7 +132,10 @@
     ],
     "link": "https://snack.xyz",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoKAAYAAUAmJQBOhggAMg9/nkAA/v7bNxw6C04QuZWJW/rpyRzeqglHjz+9VJ96hF2yB9VqTeugAAAA"
+    ]
   },
   {
     "title": "Snack",
@@ -125,7 +155,10 @@
     ],
     "link": "https://snack.xyz",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAAAwAQCdASoKAAcAAUAmJaQAA3AA/vzdTk5SbAgJv9YAAA=="
+    ]
   },
   {
     "title": "Snack",
@@ -135,7 +168,10 @@
     ],
     "link": "https://snack.xyz",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAACQAQCdASoKAAcAAUAmJaQAAudR6dAA/v8EHjiB1ZcjyAAA"
+    ]
   },
   {
     "title": "Laboratory",
@@ -167,7 +203,12 @@
     ],
     "link": "https://portal.eco.com/",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoFAAoAAUAmJaQAAudwn6zKAAD+/jiZ/ekRJkIsiirpDvj3yXbvRU0QEbIusAAA",
+      "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoFAAoAAUAmJZwCdEf/geh/NUQAAP7+ricqZnMighEKDtCk1qahg6K5aP1W/BSEHsFvnApAB9qAAA==",
+      "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACwAQCdASoFAAoAAUAmJaQAAp3GHSgAAP7+rTbu3xPBt1HpRLwAAA=="
+    ]
   },
   {
     "title": "Checkmate",
@@ -179,7 +220,12 @@
     ],
     "link": null,
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoFAAoAAUAmJYwCdAEOYTBIAP7+gNuykDjQEby9rvXj73nB1wjCITB6gsXXKQOUZvgspBAA",
+      "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoFAAoAAUAmJZQCdAEUpURg9YAA/v4SXJwpbnjuJCr2hGhTcP4IgsxMejYKQA95LuZ4zFbCUdl9SVff7UAAAA==",
+      "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoFAAoAAUAmJaQAAveCoqgAAP7+hZKGZwKCVNcGH9ic2aZBI+grJni6AAA="
+    ]
   },
   {
     "title": "Higher",
@@ -201,7 +247,12 @@
     ],
     "link": "https://rgbso.framer.website/",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoFAAoAAUAmJZwCw7EPBniX6oQA/v2ZVcn1iMU/NM++8HR3dU/ef5MOoHD9iYETPxwV+0/4pQFt9KitWGLdSrUKODGpaKCar6AAAA==",
+      "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoFAAoAAUAmJagCdGuAt/8DbVYZKAAA/vkJe4/2/5aprqKfV7lv8E7fBQbYMZzjBT2MZfScvziQr0kj/QgHwnp6f/cY3EtV2RTAonq6Cb1gAA==",
+      "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAQCdASoFAAoAAUAmJQBOgCHVz0LAAP79Of57d2NPkhsaOYT2Hx7wohU85sVFic33Bf0fUCg1f0vN7KLxqx39HW6mPWmm0w+j++DMXam0UasUXQYKPYKYG/GGAAAA"
+    ]
   },
   {
     "title": "AI Design Jobs",
@@ -211,7 +262,10 @@
     ],
     "link": "https://ai-design-jobs.vercel.app/",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdUlEQVR4nFWNSwoEIAxDvf8JdalLERcqKv4ypIMyI8TQ8Jqqcw723lhrPWd2xYyu+HnvYYyB1hohhC+0D/bZAlIKAFprSCmh1vrXeNukkWDvXTTG4Ig5pyxwkRf4Hsgw5/xAtpVS4Jz7BZuAMUbx28jZWivgB9EW6k7gmn6OAAAAAElFTkSuQmCC"
+    ]
   },
   {
     "title": "Rat Labs",
@@ -221,7 +275,10 @@
     ],
     "link": "https://ratlabs.xyz",
     "logo": null,
-    "ratio": "16:9"
+    "ratio": "16:9",
+    "blurDataURLs": [
+      "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACQAQCdASoKAAYAAUAmJaQAAuTsuCAA/v55o77orxmo4LJW/a4o10fF1d1aKihPndrG1YcAAAA="
+    ]
   },
   {
     "title": "by.computer",

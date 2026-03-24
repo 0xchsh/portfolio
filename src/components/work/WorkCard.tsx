@@ -7,6 +7,7 @@ export type WorkItem = {
   title: string;
   description: string;
   src: string[];
+  blurDataURLs?: (string | null)[];
   link: string | null;
   logo: string | null;
   ratio: '16:9' | '1:1';
@@ -17,7 +18,7 @@ function isVideoSrc(src: string) {
   return src.endsWith('.mp4') || src.endsWith('.webm');
 }
 
-export function SingleMedia({ src, alt, objectPosition, eager, sizes }: { src: string; alt: string; objectPosition?: string; eager?: boolean; sizes?: string }) {
+export function SingleMedia({ src, alt, objectPosition, eager, sizes, blurDataURL }: { src: string; alt: string; objectPosition?: string; eager?: boolean; sizes?: string; blurDataURL?: string | null }) {
   const isVideo = isVideoSrc(src);
   const pos = objectPosition || 'top';
 
@@ -33,6 +34,8 @@ export function SingleMedia({ src, alt, objectPosition, eager, sizes }: { src: s
       alt={alt}
       fill
       sizes={sizes ?? '(min-width: 640px) 704px, 100vw'}
+      placeholder={blurDataURL ? 'blur' : 'empty'}
+      blurDataURL={blurDataURL ?? undefined}
       className="object-cover"
       style={{ objectPosition: pos }}
     />
@@ -93,7 +96,7 @@ export function VideoWithBlur({ src, className, eager }: { src: string; classNam
   );
 }
 
-export function MobileFrame({ src, alt, transparent, eager }: { src: string; alt: string; transparent?: boolean; eager?: boolean }) {
+export function MobileFrame({ src, alt, transparent, eager, blurDataURL }: { src: string; alt: string; transparent?: boolean; eager?: boolean; blurDataURL?: string | null }) {
   const isVideo = isVideoSrc(src);
   const ref = useRef<HTMLDivElement>(null);
   const [radius, setRadius] = useState(32);
@@ -125,6 +128,8 @@ export function MobileFrame({ src, alt, transparent, eager }: { src: string; alt
             alt={alt}
             fill
             sizes="(min-width: 640px) 220px, 50vw"
+            placeholder={blurDataURL ? 'blur' : 'empty'}
+            blurDataURL={blurDataURL ?? undefined}
             className="object-cover"
           />
         )}
@@ -138,6 +143,8 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
   const isSingle = item.src.length === 1;
   const isMobileSingle = isSingle && item.ratio === '1:1';
 
+  const blur = item.blurDataURLs ?? [];
+
   // mediaOnly: fills an absolute-positioned parent, no wrapper card or text
   if (mediaOnly) {
     return (
@@ -145,16 +152,16 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
         {isMobileSingle ? (
           <div className="h-full flex items-center justify-center">
             <div className="h-[85%]" style={{ aspectRatio: '9 / 19.5' }}>
-              <MobileFrame src={item.src[0]} alt={item.title} eager />
+              <MobileFrame src={item.src[0]} alt={item.title} eager blurDataURL={blur[0]} />
             </div>
           </div>
         ) : isSingle ? (
-          <SingleMedia src={item.src[0]} alt={item.title} objectPosition={item.objectPosition} eager sizes="(min-width: 860px) 320px, 100vw" />
+          <SingleMedia src={item.src[0]} alt={item.title} objectPosition={item.objectPosition} eager sizes="(min-width: 860px) 320px, 100vw" blurDataURL={blur[0]} />
         ) : (
           <div className="h-full flex items-center justify-center gap-3 px-10 py-8">
             {item.src.map((src, j) => (
               <div key={j} className="h-full" style={{ aspectRatio: '9 / 19.5' }}>
-                <MobileFrame src={src} alt={`${item.title} ${j + 1}`} eager />
+                <MobileFrame src={src} alt={`${item.title} ${j + 1}`} eager blurDataURL={blur[j]} />
               </div>
             ))}
           </div>
@@ -172,7 +179,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
           style={{ aspectRatio: '16 / 9' }}
         >
           <div className="h-[85%]" style={{ aspectRatio: '9 / 19.5' }}>
-            <MobileFrame src={item.src[0]} alt={item.title} />
+            <MobileFrame src={item.src[0]} alt={item.title} blurDataURL={blur[0]} />
           </div>
         </div>
       ) : isSingle ? (
@@ -183,7 +190,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
             backgroundColor: '#f5f5f5',
           }}
         >
-          <SingleMedia src={item.src[0]} alt={item.title} objectPosition={item.objectPosition} />
+          <SingleMedia src={item.src[0]} alt={item.title} objectPosition={item.objectPosition} blurDataURL={blur[0]} />
         </div>
       ) : (
         <div
@@ -193,7 +200,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
           <div className="h-full flex items-center justify-center gap-3 px-10 py-8">
             {item.src.map((src, j) => (
               <div key={j} className="h-full" style={{ aspectRatio: '9 / 19.5' }}>
-                <MobileFrame src={src} alt={`${item.title} ${j + 1}`} />
+                <MobileFrame src={src} alt={`${item.title} ${j + 1}`} blurDataURL={blur[j]} />
               </div>
             ))}
           </div>
