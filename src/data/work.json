@@ -132,6 +132,7 @@
     "src": [
       "/work/snack/00-snack-cover.webp"
     ],
+    "cover": true,
     "link": "https://snack.xyz",
     "logo": null,
     "ratio": "16:9",
