@@ -286,7 +286,7 @@ export default async function V2Home() {
           </div>
 
           {/* Bio + sections — col 1 row 2 on desktop, order 3 on mobile */}
-          <div className="order-[3] desktop:order-none desktop:col-start-1 desktop:row-start-2">
+          <div className="order-[3] mt-8 desktop:mt-0 desktop:order-none desktop:col-start-1 desktop:row-start-2">
 
             {/* Bio */}
             <FadeIn delay={75}>
