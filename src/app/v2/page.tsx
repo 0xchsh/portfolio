@@ -424,9 +424,10 @@ export default async function V2Home() {
               <span className="text-sm text-neutral-400 dark:text-neutral-600"><LiveClock /></span>
             </div>
 
-            {/* Controls — mobile only */}
-            <div className="flex desktop:hidden mb-4">
+            {/* Controls + Time — mobile only */}
+            <div className="flex desktop:hidden mb-4 items-center justify-between">
               <V2Controls />
+              <span className="text-sm text-neutral-400 dark:text-neutral-600"><LiveClock /></span>
             </div>
 
             <WorkCarousel />
