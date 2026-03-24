@@ -15,7 +15,7 @@ Still in active development. I treat it as ongoing research into what a human-fa
 
   Otto: `AI assistant for car owners. Car problems show up as symptoms - strange sounds, warning lights, unusual behavior - but translating those into something actionable usually means a shop visit or hours of forum research. Otto short-circuits that.
 
-Started as a personal frustration. I had a car throwing an error code, and looking it up was terrible: conflicting forum threads, generic OBD lookups, sponsored ads. I wanted someone to just tell me what was probably happening and what to do about it.
+Started from a specific frustration. I got a new car and noticed the reverse camera had no beep. Took it to the dealership - they said it was a software issue. Took it to a second shop - same answer. A third specialist finally told me what was actually going on: it was a trim-level feature that had been cut. Three visits to learn one fact that should have taken thirty seconds.
 
 The tone is confident and plain. No excessive disclaimers, no boilerplate. Otto assumes you're an adult.
 

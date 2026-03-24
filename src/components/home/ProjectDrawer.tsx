@@ -177,6 +177,13 @@ export function ProjectDrawer({
                       })}
                     </div>
                   )}
+                  {project.name === 'Otto' && (
+                    <div className="max-w-[480px] mx-auto w-full">
+                      <button disabled className="inline-flex items-center text-xs font-medium text-neutral-400 dark:text-neutral-600 bg-neutral-100 dark:bg-neutral-800 px-3 py-1.5 rounded-full cursor-not-allowed">
+                        Pending Approval
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
