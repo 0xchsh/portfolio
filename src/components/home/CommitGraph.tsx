@@ -76,7 +76,7 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
                       {day.count} commit{day.count !== 1 ? 's' : ''}
                     </p>
                     {day.repos.length > 0 && (
-                      <p className="text-neutral-400 font-mono text-[10px]">
+                      <p className="text-neutral-400 text-[10px]">
                         {day.repos.join(', ')}
                       </p>
                     )}
