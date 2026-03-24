@@ -62,17 +62,17 @@ export function ProjectDrawer({
                   height={20}
                   className="shrink-0 dark:invert"
                 />
-                <p className="text-sm font-semibold text-foreground leading-snug">
+                <p className="text-sm leading-5 font-semibold text-foreground">
                   {project.name}
                   {/* Desktop: always show desc. Mobile: fade between desc and Visit button */}
                   <span className="hidden desktop:inline">
                     <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
-                    <span className="font-normal text-neutral-400 dark:text-neutral-500">{project.desc}</span>
+                    <span className="font-medium text-neutral-500 dark:text-neutral-500">{project.desc}</span>
                   </span>
                   <span className="desktop:hidden relative inline-block ml-1" style={{ minWidth: '4rem' }}>
                     <span className={`transition-opacity duration-500 ${showVisit ? 'opacity-0' : 'opacity-100'}`}>
                       <span className="text-neutral-300 dark:text-neutral-600 mx-[2px]">·</span>
-                      <span className="font-normal text-neutral-400 dark:text-neutral-500">{project.desc}</span>
+                      <span className="font-medium text-neutral-500 dark:text-neutral-500">{project.desc}</span>
                     </span>
                     {hasVisit && (
                       <a
@@ -107,43 +107,45 @@ export function ProjectDrawer({
 
           {/* Body */}
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
-            <div className="max-w-[704px] mx-auto pt-12 pb-16 flex flex-col gap-12">
+            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-8">
               {caseStudySections[project.name] ? (
                 caseStudySections[project.name].map((section, i) => (
-                  <div key={i} className="flex flex-col gap-6">
+                  <div key={i} className="flex flex-col gap-8">
                     {i > 0 && (
-                      <div className="w-[72px] mx-auto border-t border-dotted border-neutral-300 dark:border-neutral-600 mb-6" />
+                      <div className="text-neutral-400 dark:text-neutral-600 text-sm text-center select-none">···</div>
                     )}
                     {section.mockups && section.mockups.length > 0 && (
                       section.mockups[0].type === 'mobile' ? (
-                        <div className="flex gap-3 justify-center">
+                        <div className="flex gap-3 justify-center items-start">
                           {section.mockups.map((m, j) => (
                             <div key={j} className="relative rounded-[20px] overflow-hidden bg-neutral-100 dark:bg-neutral-800" style={{ width: `calc((100% - ${(section.mockups!.length - 1) * 12}px) / ${section.mockups!.length})`, maxWidth: '160px', aspectRatio: '9 / 19.5' }}>
                               {m.src.endsWith('.mp4') || m.src.endsWith('.webm') ? (
-                                <VideoWithBlur src={m.src} className="absolute inset-0 w-full h-full object-cover" eager />
+                                <VideoWithBlur src={m.src} className="absolute inset-0 w-full h-full object-cover object-top" eager />
                               ) : (
-                                <Image src={m.src} alt="" fill unoptimized className="object-cover" />
+                                <Image src={m.src} alt="" fill unoptimized className="object-cover object-top" />
                               )}
                             </div>
                           ))}
                         </div>
                       ) : (
-                        <div className="w-full rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800">
+                        <div className="w-full rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800">
                           {section.mockups[0].src.endsWith('.mp4') || section.mockups[0].src.endsWith('.webm') ? (
                             <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
-                              <VideoWithBlur src={section.mockups[0].src} className="absolute inset-0 w-full h-full object-cover" eager />
+                              <VideoWithBlur src={section.mockups[0].src} className="absolute inset-0 w-full h-full object-cover object-top" eager />
                             </div>
                           ) : (
-                            <Image src={section.mockups[0].src} alt="" width={704} height={396} unoptimized className="w-full h-auto" />
+                            <Image src={section.mockups[0].src} alt="" width={704} height={396} unoptimized className="w-full h-auto object-top" />
                           )}
                         </div>
                       )
                     )}
-                    <div className="text-sm leading-[1.75] text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto w-full">
-                      {section.text.split('\n\n').map((para, j) => (
-                        <p key={j}>{para}</p>
-                      ))}
-                    </div>
+                    {section.text && (
+                      <div className="text-sm leading-5 text-neutral-600 dark:text-neutral-400 flex flex-col gap-3 max-w-[480px] mx-auto w-full">
+                        {section.text.split('\n\n').map((para, j) => (
+                          <p key={j}>{para}</p>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))
               ) : (
@@ -156,7 +158,7 @@ export function ProjectDrawer({
                     </div>
                   )}
                   {projectSummaries[project.name] && (
-                    <div className="text-sm leading-[1.75] text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
+                    <div className="text-sm leading-5 font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
                       {projectSummaries[project.name].split('\n\n').map((para, i) => (
                         <p key={i}>{para}</p>
                       ))}

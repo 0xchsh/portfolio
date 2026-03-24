@@ -50,7 +50,7 @@ export function Description({ text, className }: DescriptionProps) {
           // Text before any heading
           if (!section.trim()) return null;
           return (
-            <p key={i} className="text-foreground text-sm desktop:text-base leading-relaxed whitespace-pre-line">
+            <p key={i} className="text-foreground text-sm leading-5 font-medium whitespace-pre-line">
               {parseInlineCode(section.trim())}
             </p>
           );
@@ -61,11 +61,11 @@ export function Description({ text, className }: DescriptionProps) {
         const body = newlineIndex !== -1 ? section.slice(newlineIndex + 1).trim() : '';
         return (
           <div key={i} className="flex flex-col gap-1">
-            <h3 className="text-muted-foreground text-xs desktop:text-sm uppercase tracking-wider">
+            <h3 className="text-muted-foreground text-xs uppercase tracking-wider">
               {title}
             </h3>
             {body && (
-              <p className="text-foreground text-sm desktop:text-base leading-relaxed whitespace-pre-line">
+              <p className="text-foreground text-sm leading-5 font-medium whitespace-pre-line">
                 {parseInlineCode(body)}
               </p>
             )}

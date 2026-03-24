@@ -12,7 +12,7 @@ export function WorkViewToggle({
   onChange: (view: WorkView) => void;
 }) {
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center bg-white/80 backdrop-blur-md rounded-full border border-neutral-200 p-1 shadow-sm">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center bg-white/80 backdrop-blur-md rounded-full border border-neutral-100 p-1 shadow-sm">
       <button
         onClick={() => onChange('stack')}
         className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-colors duration-150 cursor-pointer ${

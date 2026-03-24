@@ -6,15 +6,11 @@ import { useTheme } from '@/components/providers/ThemeProvider';
 import { useAgentMode } from '@/components/providers/AgentModeProvider';
 
 function AgentToggleIcon() {
-  const { agentMode, toggleAgentMode } = useAgentMode();
+  const { toggleAgentMode } = useAgentMode();
   return (
     <button
       onClick={toggleAgentMode}
-      className={`transition-colors duration-150 cursor-pointer ${
-        agentMode
-          ? 'text-neutral-900 dark:text-neutral-100'
-          : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400'
-      }`}
+      className="text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors duration-150 cursor-pointer"
     >
       <Robot size={16} weight="bold" />
     </button>

@@ -46,10 +46,10 @@ export function ArtDrawer({
                 <div className="shrink-0 w-5 h-5 rounded-[3px] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                   <Image src={item.images[0]} alt={item.title} width={20} height={20} unoptimized className="object-cover" />
                 </div>
-                <p className="text-sm font-semibold text-foreground leading-snug">
+                <p className="text-sm leading-5 font-semibold text-foreground">
                   {item.title}
                   <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
-                  <span className="font-normal text-neutral-400 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
+                  <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
                 </p>
               </div>
               <a
@@ -68,10 +68,10 @@ export function ArtDrawer({
 
           {/* Body */}
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
-            <div className="max-w-[704px] mx-auto py-5 pb-16 flex flex-col gap-8">
-              <div className="flex flex-row gap-4">
+            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-8">
+              <div className="flex flex-row gap-8">
                 {item.images.map((src, i) => (
-                  <div key={i} className="relative flex-1 aspect-square rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700">
+                  <div key={i} className="relative flex-1 aspect-square rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700">
                     <Image
                       src={src}
                       alt={`${item.title} ${i + 1}`}
@@ -83,26 +83,26 @@ export function ArtDrawer({
                 ))}
               </div>
               {projectSummaries[item.title] && (
-                <div className="text-sm leading-[1.75] text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
+                <div className="text-sm leading-5 font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
                   {projectSummaries[item.title].split('\n\n').map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
                 </div>
               )}
               {item.sections?.map((section, i) => (
-                <div key={i} className="flex flex-col gap-6">
-                  <div className="w-full bg-neutral-100 dark:bg-neutral-800 rounded-xl border border-neutral-100 dark:border-neutral-700">
+                <div key={i} className="flex flex-col gap-8">
+                  <div className="w-full bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-100 dark:border-neutral-700">
                     <Image
                       src={section.image}
                       alt={`${item.title} ${i + 3}`}
                       width={704}
                       height={704}
                       unoptimized
-                      className="w-full h-auto rounded-xl"
+                      className="w-full h-auto rounded-lg"
                     />
                   </div>
                   {section.text && (
-                    <div className="text-sm leading-[1.75] text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
+                    <div className="text-sm leading-5 font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-4 max-w-[480px] mx-auto">
                       {section.text.split('\n\n').map((para, j) => (
                         <p key={j}>{para}</p>
                       ))}

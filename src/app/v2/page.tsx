@@ -7,7 +7,9 @@ import { CopyEmail } from '@/components/home/CopyEmail';
 import { WeatherPill } from '@/components/home/WeatherPill';
 import { LiveClock } from '@/components/home/LiveClock';
 import { V2Controls } from '@/components/home/V2Controls';
-import { AgentModeOverlay } from '@/components/shared/AgentModeOverlay';
+import { V2BottomFade } from '@/components/home/V2BottomFade';
+import { V2TopFade } from '@/components/home/V2TopFade';
+import { V2LeftContent } from '@/components/home/V2LeftContent';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { ProjectDrawer } from '@/components/home/ProjectDrawer';
 import { ArtDrawer } from '@/components/home/ArtDrawer';
@@ -260,18 +262,10 @@ export default async function V2Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-clip">
-      <AgentModeOverlay />
-
       {/* Top fade — solid fill for Safari safe area + gradient */}
-      <div className="fixed top-0 left-0 right-0 pointer-events-none z-30">
-        <div className="bg-background" style={{ height: 'env(safe-area-inset-top)' }} />
-        <div className="h-20 bg-gradient-to-b from-background to-transparent" />
-      </div>
+      <V2TopFade />
       {/* Bottom fade — gradient + solid fill for Safari safe area */}
-      <div className="fixed bottom-0 left-0 right-0 pointer-events-none z-30" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
-        <div className="h-20 bg-gradient-to-t from-background to-transparent" />
-        <div className="bg-background" style={{ height: 'env(safe-area-inset-bottom)' }} />
-      </div>
+      <V2BottomFade />
 
       <div className="max-w-[900px] mx-auto px-5 sm:px-8 pt-12 pb-16">
 
@@ -293,6 +287,7 @@ export default async function V2Home() {
 
           {/* Bio + sections — col 1 row 2 on desktop, order 3 on mobile */}
           <div className="order-[3] mt-8 desktop:mt-0 desktop:order-none desktop:col-start-1 desktop:row-start-2">
+          <V2LeftContent>
 
             {/* Bio */}
             <FadeIn delay={75}>
@@ -416,6 +411,7 @@ export default async function V2Home() {
               </div>
             </div>
             </FadeIn>
+          </V2LeftContent>
           </div>
 
           {/* Right column — col 2 rows 1-2 on desktop, order 2 on mobile */}

@@ -55,15 +55,15 @@ ShinCN is the foundation for this portfolio, Otto, ClawPanel, and various experi
 
   'Rat Labs': `Rat Labs is the onchain product studio I co-founded to build software at the intersection of blockchain infrastructure and everyday utility. The name was chosen for its deliberate contrast with the earnestness of most crypto branding — a scrappy, prolific operation more interested in shipping than manifesto-writing.
 
-The studio was born from frustration with how most onchain products got built: either by protocol teams with no attention to UX, or by startups chasing the same few successful archetypes. Rat Labs was designed to occupy a different space — smaller surface area, sharper utility, higher design quality.
+My role was design lead across all products: product definition, interface design, front-end development, and brand direction. Building and designing simultaneously created a feedback loop that compressed iteration significantly.
 
-My role was design lead across all products: product definition, interface design, front-end development, and brand direction. Building and designing simultaneously created a feedback loop that compressed iteration significantly — I could test ideas in the browser directly rather than waiting for a handoff.
-
-The studio's first significant product was rgb.fun, an NFT collection encoding all 16,777,216 possible RGB color values as onchain tokens. Other work included onchain media experiments, protocol UI contributions, and utility tools built in days rather than weeks.
-
-The design philosophy was shaped by high user skepticism. Blockchain products have burned users, and the default assumption many bring to a new product is that something is broken or not to be trusted. This shaped everything: progressive disclosure of complexity, conservative use of technical terminology, and a visual language that avoided crypto aesthetic clichés.
-
-Designing for wallets was one of the most valuable lessons — connecting a wallet is a moment of genuine financial decision-making, and every detail of that flow matters.`,
+- RGB · Onchain color protocol
+- Noundation · Design studio for DAOs
+- Gerund · Crypto-native apparel
+- Squads · Community coordination
+- Lag Sucks · Gaming media & content
+- Nounhood · Generative art collection
+- Nounable · Nourish goods & merch`,
 
   'Hyperbrand: Opepen': `Opepen is a cultural canvas — the result of a hyperculture around VV, pfps, and digital natives.
 

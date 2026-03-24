@@ -160,7 +160,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
       {/* Media */}
       {isMobileSingle ? (
         <div
-          className="rounded-xl overflow-hidden flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800"
+          className="rounded-lg overflow-hidden flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800"
           style={{ aspectRatio: '16 / 9' }}
         >
           <div className="h-[85%]" style={{ aspectRatio: '9 / 19.5' }}>
@@ -169,7 +169,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
         </div>
       ) : isSingle ? (
         <div
-          className="rounded-xl overflow-hidden relative border border-neutral-200 dark:border-neutral-800"
+          className="rounded-lg overflow-hidden relative border border-neutral-100 dark:border-neutral-800"
           style={{
             aspectRatio: '16 / 9',
             backgroundColor: '#f5f5f5',
@@ -179,7 +179,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
         </div>
       ) : (
         <div
-          className="rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800"
+          className="rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800"
           style={{ aspectRatio: '16 / 9' }}
         >
           <div className="h-full flex items-center justify-center gap-3 px-10 py-8">
@@ -193,7 +193,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
       )}
 
       {/* Info */}
-      <div className="flex items-center gap-1 mt-3 mb-6">
+      {(!hideTitle || (item.description && !hideDescription)) && <div className="flex items-center gap-1 mt-3 mb-6">
         {!hideTitle && item.logo && (
           <Image
             src={item.logo}
@@ -217,11 +217,11 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
         ))}
         {item.description && !hideDescription && (
           <>
-            {!hideTitle && <span className="text-sm text-neutral-400">·</span>}
-            <span className="text-sm text-neutral-400">{item.description}</span>
+            {!hideTitle && <span className="text-sm leading-5 text-neutral-500">·</span>}
+            <span className="text-sm leading-5 text-neutral-500">{item.description}</span>
           </>
         )}
-      </div>
+      </div>}
     </>
   );
 }

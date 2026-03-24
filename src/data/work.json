@@ -21,7 +21,7 @@
   },
   {
     "title": "Otto",
-    "description": "Ask anything about your cars",
+    "description": "",
     "src": [
       "/work/otto/otto-01.png",
       "/work/otto/otto-02.png",
@@ -193,7 +193,7 @@
   },
   {
     "title": "RGB",
-    "description": "Onchain media",
+    "description": "",
     "src": [
       "/work/misc/rgb-01.webp",
       "/work/misc/rgb-02.webp",
@@ -215,7 +215,7 @@
   },
   {
     "title": "Rat Labs",
-    "description": "Onchain product studio",
+    "description": "",
     "src": [
       "/work/misc/ratlabs.webp"
     ],

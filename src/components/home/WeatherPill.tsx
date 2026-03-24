@@ -107,7 +107,7 @@ function useCryptoPrices() {
   return prices;
 }
 
-const widgetCard = 'btn-classic btn-classic-outline bg-background rounded-xl pointer-events-none border border-transparent bg-clip-padding';
+const widgetCard = 'btn-classic btn-classic-outline bg-background rounded-lg pointer-events-none border border-transparent bg-clip-padding';
 
 export function WeatherPill({ weather, variant }: { weather: Weather; variant?: 'static' }) {
   if (variant === 'static') {
