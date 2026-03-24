@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
-import Link from 'next/link';
 import workData from '@/data/work.json';
+import { WorkDrawer } from '@/components/home/WorkDrawer';
 import type { WorkItem } from '@/app/work/page';
 import { WorkCardContent } from '@/components/work/WorkCard';
 
@@ -104,12 +104,11 @@ export function WorkCarousel() {
       <div className="absolute inset-0 rounded-[8px] ring-1 ring-inset ring-neutral-200 dark:ring-neutral-700 pointer-events-none" style={{ zIndex: 20 }} />
 
       <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 10 }}>
-        <Link
-          href="/work"
-          className="px-3.5 py-1.5 rounded-full text-sm font-medium text-white backdrop-blur-md bg-black/20 border border-white/15 shadow-[0_1px_3px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.1)] transition-all duration-150 hover:bg-black/30"
-        >
-          View work
-        </Link>
+        <WorkDrawer>
+          <button className="px-3.5 py-1.5 rounded-full text-sm font-medium text-white backdrop-blur-md bg-black/20 border border-white/15 shadow-[0_1px_3px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.1)] transition-all duration-150 hover:bg-black/30">
+            View work
+          </button>
+        </WorkDrawer>
       </div>
     </div>
   );
