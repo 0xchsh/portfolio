@@ -76,10 +76,10 @@ export function ProjectDrawer({
 
           {/* Body */}
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
-            <div className="max-w-[704px] mx-auto py-5 pb-16 flex flex-col gap-10">
+            <div className="max-w-[704px] mx-auto py-5 pb-16 flex flex-col gap-12">
               {caseStudySections[project.name] ? (
                 caseStudySections[project.name].map((section, i) => (
-                  <div key={i} className="flex flex-col gap-5">
+                  <div key={i} className="flex flex-col gap-6">
                     {section.mockups && section.mockups.length > 0 && (
                       section.mockups[0].type === 'mobile' ? (
                         <div className="flex gap-3">
