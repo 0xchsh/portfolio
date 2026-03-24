@@ -5,21 +5,17 @@ Color is just one expression of that constraint. rgb(255,153,0) could map to �
 
 Signatures are the visual representation of RGB values in the metadata. Non-arbitrary, equally unique, equally rare. There will only ever be 16,777,216 of them.`,
 
-  ClawPanel: `ClawPanel is the dashboard for OpenClaw, my browser automation backend for running persistent agents, scrapers, and long-running task queues. Without it, OpenClaw was a black box.
+  ClawPanel: `OpenClaw is my browser automation backend for running persistent agents, scrapers, and long-running task queues. Without a dashboard it was a black box. ClawPanel fixes that.
 
-The goal was legibility. See what's active, what failed, how the system is performing - without touching the API.
+Failures surface with high contrast. A quick glance tells you if things are healthy. Each task is expandable: URLs visited, retry counts, timing, structured data extracted.
 
-Failures surface with high contrast. A quick glance tells you if things are healthy. Each task is expandable: URLs visited, retry counts, timing, any structured data extracted.
+Still in active development. I'm using it to figure out what a human-facing interface for AI agents should actually look like.`,
 
-Still in active development. I treat it as ongoing research into what a human-facing interface for AI agents should actually look like.`,
+  Otto: `Car problems show up as symptoms. Strange sounds, warning lights, behavior that's hard to describe. Getting an answer usually means a shop visit or hours of forum research. Otto cuts that short.
 
-  Otto: `Car problems show up as symptoms - strange sounds, warning lights, unusual behavior - but translating those into something actionable usually means a shop visit or hours of forum research. Otto short-circuits that.
+I got a new car and noticed the reverse camera had no beep. Took it to the dealership and they said software issue. Second shop, same answer. Third specialist finally told me it was a trim-level feature that had been cut from my model. Three visits for one fact that should've taken thirty seconds.
 
-Started from a specific frustration. I got a new car and noticed the reverse camera had no beep. Took it to the dealership - they said it was a software issue. Took it to a second shop - same answer. A third specialist finally told me what was actually going on: it was a trim-level feature that had been cut. Three visits to learn one fact that should have taken thirty seconds.
-
-The tone is confident and plain. No excessive disclaimers, no boilerplate. Otto assumes you're an adult.
-
-Add your car once - year, make, model, trim - and every conversation draws on that context without needing to restate it.`,
+Add your car once, year, make, model, trim, and every conversation already knows what you're driving.`,
 
   Snack: `Snack is the simplest way to save and share links. Started when I tried to build a directory of the best crypto websites and realized there was no tool to just make one.
 
@@ -31,17 +27,15 @@ Creating a list takes under thirty seconds. No separate edit mode - if you're th
 
 Distribution is still the hardest part. Browser extension and mobile app in progress.`,
 
-  ShinCN: `ShinCN is my personal design system - a component library and visual language I use across all my projects. The name combines my last name with shadcn/ui, which it builds on top of.
+  ShinCN: `My personal design system, a component library and visual language I use across all my projects. The name combines my last name with shadcn/ui, which it builds on.
 
-Makes my preferences explicit and reusable. Same foundational decisions, every time, without redoing them from scratch.
+Same decisions every time, without redoing them from scratch. Open Runde as the base font, colors in OKLCH, button shadows that add depth without announcing themselves.
 
-Built on Tailwind and shadcn/ui. Custom font stack anchored by Open Runde, color system in OKLCH, layered button shadows that create subtle depth without being obvious about it.
+Everything I build starts here.`,
 
-The base for this portfolio, Otto, ClawPanel, and everything else I build.`,
+  'Rat Labs': `Rat Labs is the onchain product studio I co-founded. The name was a deliberate contrast to the earnestness of most crypto branding. Scrappy, prolific, more interested in shipping than manifesto-writing.
 
-  'Rat Labs': `Rat Labs is the onchain product studio I co-founded. The name was a deliberate contrast to the earnestness of most crypto branding - scrappy, prolific, more interested in shipping than manifesto-writing.
-
-Design lead across everything: product definition, interface design, front-end, brand.
+Product definition, interface design, front-end, brand.
 
 - RGB · Onchain color protocol
 - Noundation · Design studio for DAOs
@@ -67,17 +61,15 @@ CC0, no rights reserved. Anyone can use, remix, or build on it. Open and free fo
 
 100 tokens, one shape, differentiated only by color. Same glassy material across all of them - specular highlight, soft shadow, colored reflection below.`,
 
-  'rgb.fun': `rgb.fun is an NFT collection representing every possible RGB color: 16,777,216 tokens, each a unique combination of red, green, and blue. Each token is its color. No artwork, no traits, no rarity - just pure color, onchain.
+  'rgb.fun': `rgb.fun is an NFT collection representing every possible RGB color. 16,777,216 tokens, each a unique combination of red, green, and blue. Each token is its color. No artwork, no traits, no rarity, just pure color onchain.
 
-The question was: what's the most minimal meaningful NFT? For designers and developers who think about color obsessively, the answer was yes.
+For designers and developers who think about color obsessively, the question was obvious: what's the most minimal meaningful NFT?
 
 Most NFT interfaces are built for collections of 5-10k tokens. Sixteen million required rethinking almost every assumption.
 
-Main interface decision: prioritize search over browse. Pagination at 100 per page would take 167,772 pages. Instead, the primary interaction is color search - enter hex, RGB, or HSL and get the token directly.
+Search won over browse. Pagination at 100 per page would take 167,772 pages, so the main interaction is color search. Enter a hex, RGB, or HSL value and get the token directly. For browsing, a spectrum grid maps a sampled slice of the color space. Thousands of tokens at once as colored squares, arranged by hue, saturation, and lightness.
 
-For browsing, I built a spectrum grid mapping a sampled slice of the color space. Thousands of tokens at once as colored squares, arranged by hue, saturation, and lightness.
-
-Individual token pages are minimal: full-screen color swatch, hex and RGB values, ownership. Nothing else, because there's nothing else to say.`,
+Individual token pages are just the color, full screen, with the hex and RGB values. Nothing else to say.`,
 
   Freighter: `Freighter is Stellar's flagship non-custodial wallet. Launched in 2020 as a browser extension, expanded to mobile as smart contracts arrived on Stellar.
 

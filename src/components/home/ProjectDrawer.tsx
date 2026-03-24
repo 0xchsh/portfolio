@@ -47,7 +47,7 @@ export function ProjectDrawer({
         <Drawer.Overlay className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px]" />
         <Drawer.Content
           className="fixed bottom-0 left-0 right-0 z-50 flex flex-col bg-background outline-none rounded-t-2xl"
-          style={{ height: '90vh' }}
+          style={{ maxHeight: '90vh' }}
         >
           <Drawer.Title className="sr-only">{project.name}</Drawer.Title>
 
