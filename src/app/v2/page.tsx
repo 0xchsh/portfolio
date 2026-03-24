@@ -262,8 +262,11 @@ export default async function V2Home() {
     <div className="min-h-screen bg-background text-foreground overflow-x-clip">
       <AgentModeOverlay />
 
-      {/* Top fade */}
-      <div className="fixed top-0 left-0 right-0 h-20 pointer-events-none z-30 bg-gradient-to-b from-background to-transparent" />
+      {/* Top fade — solid fill for Safari safe area + gradient */}
+      <div className="fixed top-0 left-0 right-0 pointer-events-none z-30">
+        <div className="bg-background" style={{ height: 'env(safe-area-inset-top)' }} />
+        <div className="h-20 bg-gradient-to-b from-background to-transparent" />
+      </div>
       {/* Bottom fade — gradient + solid fill for Safari safe area */}
       <div className="fixed bottom-0 left-0 right-0 pointer-events-none z-30" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
         <div className="h-20 bg-gradient-to-t from-background to-transparent" />
