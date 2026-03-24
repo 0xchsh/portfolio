@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { X, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { Drawer } from 'vaul';
 import { useState, useEffect } from 'react';
+
+const BLUR_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
 import workData from '@/data/work.json';
 import type { WorkItem } from '@/components/work/WorkCard';
 import { WorkCardContent, VideoWithBlur } from '@/components/work/WorkCard';
@@ -124,7 +126,7 @@ export function ProjectDrawer({
                               {m.src.endsWith('.mp4') || m.src.endsWith('.webm') ? (
                                 <VideoWithBlur src={m.src} className="absolute inset-0 w-full h-full object-cover object-top" eager />
                               ) : (
-                                <Image src={m.src} alt="" fill unoptimized className="object-cover object-top" />
+                                <Image src={m.src} alt="" fill unoptimized placeholder="blur" blurDataURL={BLUR_PLACEHOLDER} className="object-cover object-top" />
                               )}
                             </div>
                           ))}
@@ -136,7 +138,7 @@ export function ProjectDrawer({
                               <VideoWithBlur src={section.mockups[0].src} className="absolute inset-0 w-full h-full object-cover object-top" eager />
                             </div>
                           ) : (
-                            <Image src={section.mockups[0].src} alt="" width={704} height={396} unoptimized className="w-full h-auto object-top" />
+                            <Image src={section.mockups[0].src} alt="" width={704} height={396} unoptimized placeholder="blur" blurDataURL={BLUR_PLACEHOLDER} className="w-full h-auto object-top" />
                           )}
                         </div>
                       )

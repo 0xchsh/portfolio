@@ -134,7 +134,7 @@ const caseStudies = [
 
 // directLink: true = external link, false/undefined = opens drawer
 const projects: (ProjectItem & { directLink?: boolean })[] = [
-  { name: 'AI Design Jobs', desc: 'AI design job board', href: 'https://ai-design-jobs.vercel.app/', icon: '/icons/aidesignjobs.png', workTitle: 'AI Design Jobs', directLink: true },
+  { name: 'AI Design Jobs', desc: 'Curated design jobs', href: 'https://ai-design-jobs.vercel.app/', icon: '/icons/aidesignjobs.png', workTitle: 'AI Design Jobs', directLink: true },
   { name: 'Otto', desc: 'AI assistant for car owners', href: '#', icon: '/icons/otto.svg', workTitle: 'Otto' },
   { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg', directLink: true },
   { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', directLink: true },
@@ -175,7 +175,7 @@ type ProjectItem = {
 
 function ProjectRow({ item, hideIcon, directLink }: { item: ProjectItem; hideIcon?: boolean; directLink?: boolean }) {
   const rowClass =
-    'flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
+    'flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
   const inner = (
     <>
       {!hideIcon && (
@@ -223,7 +223,7 @@ const artItems = feedData.art as ArtItem[];
 
 function ArtRow({ item }: { item: ArtItem }) {
   const rowClass =
-    'flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
+    'flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
   return (
     <ArtDrawer item={item}>
       <button className={rowClass}>
@@ -347,7 +347,7 @@ export default async function V2Home() {
               <SectionLabel>Connect</SectionLabel>
               <div className="mt-3 desktop:mt-4 flex flex-col gap-3">
                 <CopyEmailRow />
-                <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)]">
+                <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 w-[calc(100%+1.5rem)]">
                   <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center">
                     <XLogo size={20} weight="bold" className="text-foreground" />
                   </div>
@@ -357,7 +357,7 @@ export default async function V2Home() {
                   </div>
                   <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
                 </a>
-                <a href="https://github.com/0xchsh" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)]">
+                <a href="https://github.com/0xchsh" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 w-[calc(100%+1.5rem)]">
                   <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center">
                     <GithubLogo size={20} weight="fill" className="text-foreground" />
                   </div>
@@ -367,7 +367,7 @@ export default async function V2Home() {
                   </div>
                   <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
                 </a>
-                <a href="https://farcaster.xyz/chsh.eth" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)]">
+                <a href="https://farcaster.xyz/chsh.eth" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 w-[calc(100%+1.5rem)]">
                   <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-foreground" aria-hidden="true">
                       <path d="M18.24.24H5.76C2.5789.24 0 2.8188 0 6v12c0 3.1811 2.5789 5.76 5.76 5.76h12.48c3.1812 0 5.76-2.5789 5.76-5.76V6C24 2.8188 21.4212.24 18.24.24m.8155 17.1662v.504c.2868-.0256.5458.1905.5439.479v.5688h-5.1437v-.5688c-.0019-.2885.2576-.5047.5443-.479v-.504c0-.22.1525-.402.358-.458l-.0095-4.3645c-.1589-1.7366-1.6402-3.0979-3.4435-3.0979-1.8038 0-3.2846 1.3613-3.4435 3.0979l-.0096 4.3578c.2276.0424.5318.2083.5395.4648v.504c.2863-.0256.5457.1905.5438.479v.5688H4.3915v-.5688c-.0019-.2885.2575-.5047.5438-.479v-.504c0-.2529.2011-.4548.4536-.4724v-7.895h-.4905L4.2898 7.008l2.6405-.0005V5.0419h9.9495v1.9656h2.8219l-.6091 2.0314h-.4901v7.8949c.2519.0177.453.2195.453.4724" />
