@@ -397,7 +397,7 @@ export default async function V2Home() {
                       href={commitHash.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs font-mono text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors duration-100 underline decoration-dotted underline-offset-2"
+                      className="text-xs text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors duration-100 underline decoration-dotted underline-offset-2"
                     >
                       {commitHash.sha.toUpperCase()}
                     </a>

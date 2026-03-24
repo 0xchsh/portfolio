@@ -8,6 +8,7 @@
     "link": null,
     "logo": null,
     "ratio": "16:9",
+    "cover": true,
     "blurDataURLs": [
       "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoKAAYAAUAmJYgCdDBAAZB5+gAA/v7Z7FgbJ2Mmu8t54TEmzklSQ1OPxcUlo21yHtRld/h8daeQAA=="
     ]
@@ -51,6 +52,7 @@
     "link": "https://freighter.app",
     "logo": null,
     "ratio": "16:9",
+    "cover": true,
     "blurDataURLs": [
       "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoKAAYAAUAmJQAAX1vT4PgAAP7+2zcWaOaZo7dmwvVv63Cyl3/vVpMqJgYB8BDkaWAAAA=="
     ]

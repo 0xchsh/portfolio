@@ -12,6 +12,7 @@ export type WorkItem = {
   logo: string | null;
   ratio: '16:9' | '1:1';
   objectPosition?: string;
+  cover?: boolean;
 };
 
 function isVideoSrc(src: string) {
