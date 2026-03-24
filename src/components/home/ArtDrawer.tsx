@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { X, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { Drawer } from 'vaul';
+import { useState, useEffect } from 'react';
 import { projectSummaries } from '@/data/project-summaries';
 
 type ArtSection = {
@@ -48,6 +49,13 @@ export function ArtDrawer({
   item: ArtItem;
   children: React.ReactNode;
 }) {
+  const [showCollect, setShowCollect] = useState(false);
+
+  useEffect(() => {
+    const id = setInterval(() => setShowCollect((v) => !v), 3000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <Drawer.Root direction="bottom">
       <Drawer.Trigger asChild>{children}</Drawer.Trigger>
@@ -62,21 +70,42 @@ export function ArtDrawer({
           {/* Header */}
           <div className="shrink-0 border-b border-neutral-100 dark:border-neutral-800 px-5 pt-5 pb-4 relative">
             <div className="max-w-[704px] mx-auto flex items-center justify-between">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 min-w-0">
                 <div className="shrink-0 w-5 h-5 rounded-[3px] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                   <Image src={item.images[0]} alt={item.title} width={20} height={20} unoptimized className="object-cover" />
                 </div>
                 <p className="text-sm leading-5 font-semibold text-foreground">
                   {item.title}
-                  <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
-                  <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
+                  {/* Desktop: always show size */}
+                  <span className="hidden desktop:inline">
+                    <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
+                    <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
+                  </span>
+                  {/* Mobile: fade between size and collect button */}
+                  <span className="desktop:hidden relative inline-block ml-1" style={{ minWidth: '4rem' }}>
+                    <span className={`transition-opacity duration-500 ${showCollect ? 'opacity-0' : 'opacity-100'}`}>
+                      <span className="text-neutral-300 dark:text-neutral-600 mx-[2px]">·</span>
+                      <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
+                    </span>
+                    <a
+                      href={item.collectionHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className={`absolute left-0 top-0 inline-flex items-center text-sm font-medium text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full transition-opacity duration-500 ${showCollect ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                    >
+                      {item.collectionLabel}
+                      <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
+                    </a>
+                  </span>
                 </p>
               </div>
+              {/* Desktop only collect button */}
               <a
                 href={item.collectionHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-xs font-medium text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100"
+                className="hidden desktop:inline-flex items-center text-sm font-medium text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 dark:hover:text-neutral-100 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100 shrink-0"
               >
                 {item.collectionLabel}
                 <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
