@@ -424,9 +424,9 @@ export default async function V2Home() {
               <span className="text-sm text-neutral-400 dark:text-neutral-600"><LiveClock /></span>
             </div>
 
-            {/* Weather pill — mobile only */}
+            {/* Controls — mobile only */}
             <div className="flex desktop:hidden mb-4">
-              <WeatherPill weather={weather} variant="static" />
+              <V2Controls />
             </div>
 
             <WorkCarousel />
