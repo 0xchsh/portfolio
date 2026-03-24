@@ -71,8 +71,8 @@ export function ArtDrawer({
           <div className="shrink-0 border-b border-neutral-100 dark:border-neutral-800 px-5 pt-5 pb-4 relative">
             <div className="max-w-[704px] mx-auto flex items-center justify-between">
               <div className="flex items-center gap-3 min-w-0">
-                <div className="shrink-0 w-5 h-5 rounded-[3px] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-                  <Image src={item.images[0]} alt={item.title} width={20} height={20} unoptimized className="object-cover" />
+                <div className="shrink-0 w-4 h-4 rounded-[3px] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                  <Image src={item.images[0]} alt={item.title} width={16} height={16} unoptimized className="object-cover" />
                 </div>
                 <p className="text-sm leading-5 font-semibold text-foreground">
                   {item.title}

@@ -58,8 +58,8 @@ export function ProjectDrawer({
                 <Image
                   src={project.icon}
                   alt={project.name}
-                  width={20}
-                  height={20}
+                  width={16}
+                  height={16}
                   className="shrink-0 dark:invert"
                 />
                 <p className="text-sm leading-5 font-semibold text-foreground">
