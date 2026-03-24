@@ -95,7 +95,7 @@ export function ProjectDrawer({
                   href={project.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden desktop:inline-flex items-center text-xs font-medium text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100 shrink-0"
+                  className="hidden desktop:inline-flex items-center text-xs font-medium text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 dark:hover:text-neutral-100 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100 shrink-0"
                 >
                   Visit
                   <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
