@@ -57,7 +57,7 @@ async function getCommitData() {
         const date = toLocalDate(new Date(event.created_at));
         const entry = commitsByDay.get(date);
         if (entry) {
-          entry.count += event.payload?.commits?.length || event.payload?.size || 1;
+          entry.count += event.payload?.distinct_size ?? event.payload?.commits?.filter((c: { distinct: boolean }) => c.distinct).length ?? 1;
           const repo = event.repo?.name?.split('/')[1] || event.repo?.name;
           if (repo) entry.repos.add(repo);
         }
