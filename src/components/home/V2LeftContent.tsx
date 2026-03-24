@@ -47,7 +47,7 @@ function CharlesMdRow() {
         <p className="text-sm font-medium text-foreground leading-[20px]">shincn</p>
         <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">Design instructions for LLMs</p>
       </div>
-      <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+      <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
     </a>
   );
 }
@@ -85,7 +85,7 @@ export function V2LeftContent({ children }: { children: React.ReactNode }) {
                   <p className="text-sm font-medium text-foreground leading-[20px]">llms.txt is set up</p>
                   <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">Structured context at ch.sh/llms.txt</p>
                 </div>
-                <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+                <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
               </a>
             </div>
           </section>

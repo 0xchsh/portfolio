@@ -21,7 +21,7 @@ export function CopyEmailRow() {
         <p className="text-sm font-medium text-foreground leading-[20px]">hi@ch.sh</p>
         <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">Email</p>
       </div>
-      <Copy size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+      <Copy size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
     </button>
   );
 }

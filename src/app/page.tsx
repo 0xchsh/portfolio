@@ -192,7 +192,7 @@ function ProjectRow({ item, hideIcon, directLink }: { item: ProjectItem; hideIco
     return (
       <a href={item.href} target="_blank" rel="noopener noreferrer" className={`${rowClass} group`}>
         {inner}
-        <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+        <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
       </a>
     );
   }
@@ -351,7 +351,7 @@ export default async function V2Home() {
                     <p className="text-sm font-medium text-foreground leading-[20px]">chshux</p>
                     <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">X.com</p>
                   </div>
-                  <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+                  <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
                 </a>
                 <a href="https://github.com/0xchsh" target="_blank" rel="noopener noreferrer" className="group flex items-start gap-3 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)]">
                   <GithubLogo size={14} weight="fill" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[3px]" />
@@ -359,7 +359,7 @@ export default async function V2Home() {
                     <p className="text-sm font-medium text-foreground leading-[20px]">0xchsh</p>
                     <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">GitHub</p>
                   </div>
-                  <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+                  <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
                 </a>
                 <a href="https://farcaster.xyz/chsh.eth" target="_blank" rel="noopener noreferrer" className="group flex items-start gap-3 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)]">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[3px]" aria-hidden="true">
@@ -369,7 +369,7 @@ export default async function V2Home() {
                     <p className="text-sm font-medium text-foreground leading-[20px]">chsh</p>
                     <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">Farcaster</p>
                   </div>
-                  <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+                  <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
                 </a>
               </div>
             </section>
