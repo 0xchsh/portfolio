@@ -82,13 +82,11 @@ export function ProjectDrawer({
                   <div key={i} className="flex flex-col gap-5">
                     {section.mockups && section.mockups.length > 0 && (
                       section.mockups[0].type === 'mobile' ? (
-                        <div className="flex gap-3 h-[300px]">
+                        <div className="flex gap-3">
                           {section.mockups.map((m, j) => (
-                            <div key={j} className="h-full rounded-[20px] overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex-1" style={{ aspectRatio: '9 / 19.5', flexGrow: 0, flexShrink: 0, width: `calc((100% - ${(section.mockups!.length - 1) * 12}px) / ${section.mockups!.length})` }}>
+                            <div key={j} className="relative rounded-[20px] overflow-hidden bg-neutral-100 dark:bg-neutral-800" style={{ width: `calc((100% - ${(section.mockups!.length - 1) * 12}px) / ${section.mockups!.length})`, aspectRatio: '9 / 19.5' }}>
                               {m.src.endsWith('.mp4') || m.src.endsWith('.webm') ? (
-                                <div className="relative w-full h-full">
-                                  <VideoWithBlur src={m.src} className="absolute inset-0 w-full h-full object-cover" eager />
-                                </div>
+                                <VideoWithBlur src={m.src} className="absolute inset-0 w-full h-full object-cover" eager />
                               ) : (
                                 <Image src={m.src} alt="" fill unoptimized className="object-cover" />
                               )}
