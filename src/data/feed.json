@@ -1,18 +1,51 @@
 {
   "experiments": [
-    { "title": "AI Design Jobs", "number": "004", "href": "https://ai-design-jobs.vercel.app/" },
-    { "title": "Otto", "number": "003", "href": null },
-    { "title": "ClawPanel", "number": "002", "href": null },
-    { "title": "Rat Labs", "number": "001", "href": "https://www.ratlabs.xyz/" }
+    {
+      "title": "AI Design Jobs",
+      "number": "004",
+      "href": "https://ai-design-jobs.vercel.app/"
+    },
+    {
+      "title": "Otto",
+      "number": "003",
+      "href": null
+    },
+    {
+      "title": "ClawPanel",
+      "number": "002",
+      "href": null
+    },
+    {
+      "title": "Rat Labs",
+      "number": "001",
+      "href": "https://www.ratlabs.xyz/"
+    }
   ],
   "lists": [
-    { "title": "Must-Have Software", "href": "https://app.snack.xyz/charles/T773dJ7t" },
-    { "title": "Must-Have Hardware", "href": "https://app.snack.xyz/charles/kJwtD9E9" },
-    { "title": "Must-Listen Mixes", "href": "https://app.snack.xyz/charles/T9SqGbhs" }
+    {
+      "title": "Must-Have Software",
+      "href": "https://app.snack.xyz/charles/T773dJ7t"
+    },
+    {
+      "title": "Must-Have Hardware",
+      "href": "https://app.snack.xyz/charles/kJwtD9E9"
+    },
+    {
+      "title": "Must-Listen Mixes",
+      "href": "https://app.snack.xyz/charles/T9SqGbhs"
+    }
   ],
   "writing": [
-    { "title": "Introduction to RGB", "slug": "article-001", "href": "/posts/article-001" },
-    { "title": "Hyperbrand: Opepen", "slug": "article-002", "href": "/posts/article-002" }
+    {
+      "title": "Introduction to RGB",
+      "slug": "article-001",
+      "href": "/posts/article-001"
+    },
+    {
+      "title": "Hyperbrand: Opepen",
+      "slug": "article-002",
+      "href": "/posts/article-002"
+    }
   ],
   "art": [
     {
@@ -21,46 +54,49 @@
       "year": "2024",
       "images": [
         "/work/art/rgb/signatures.gif",
-        "/work/art/rgb/signatures.png"
+        "/work/art/rgb/signatures.webp"
       ],
       "sections": [
         {
-          "image": "/work/art/rgb/01.png",
-          "text": "RGB values follow an 8-bit color model — a range of 0 to 255 for each R, G, and B channel."
+          "image": "/work/art/rgb/01.webp",
+          "text": "RGB values follow an 8-bit color model \u2014 a range of 0 to 255 for each R, G, and B channel."
         },
         {
-          "image": "/work/art/rgb/02.png",
+          "image": "/work/art/rgb/02.webp",
           "text": "Encoded into binary, values can be expressed in 2 states: 0 & 1."
         },
         {
-          "image": "/work/art/rgb/03.png",
+          "image": "/work/art/rgb/03.webp",
           "text": "Visually, 0 is represented by a black square and 1 by a white square."
         },
         {
-          "image": "/work/art/rgb/04.png",
-          "text": "The squares represent the binary values for each R, G, and B channel — 3 sets of 8 binary strings, 24 values in total."
+          "image": "/work/art/rgb/04.webp",
+          "text": "The squares represent the binary values for each R, G, and B channel \u2014 3 sets of 8 binary strings, 24 values in total."
         },
         {
-          "image": "/work/art/rgb/05.png",
+          "image": "/work/art/rgb/05.webp",
           "text": "These visual values are arranged sequentially around a perfect square, with an empty space in the center."
         },
         {
-          "image": "/work/art/rgb/06.png",
+          "image": "/work/art/rgb/06.webp",
           "text": "Markers are placed at the R, G, and B starting points. One marker is placed in the center."
         },
         {
-          "image": "/work/art/rgb/07.png",
+          "image": "/work/art/rgb/07.webp",
           "text": "Combined altogether results in an RGB Signature."
         },
         {
-          "image": "/work/art/rgb/08.png",
+          "image": "/work/art/rgb/08.webp",
           "text": "There are 16,777,216 RGB Signatures in total. No two are alike and each one can only be minted once."
         }
       ],
       "size": "16,777,216",
-      "type": ["NFT"],
+      "type": [
+        "NFT"
+      ],
       "collectionHref": "https://rgb.fun/",
-      "collectionLabel": "Mint on rgb.fun"
+      "collectionLabel": "Mint on rgb.fun",
+      "icon": null
     },
     {
       "title": "RGB Friends",
@@ -68,22 +104,44 @@
       "year": "2024",
       "images": [
         "/work/art/rgb-friends/rgb-friends.gif",
-        "/work/art/rgb-friends/rgb-friends.png"
+        "/work/art/rgb-friends/rgb-friends.webp"
       ],
       "size": "26,500+",
-      "type": ["NFT"],
+      "type": [
+        "NFT"
+      ],
       "sections": [
-        { "image": "/work/art/rgb-friends/anatomy.png" },
-        { "image": "/work/art/rgb-friends/collab-base.png", "half": true },
-        { "image": "/work/art/rgb-friends/collab-nouns.png", "half": true },
-        { "image": "/work/art/rgb-friends/collab-higher.png", "half": true },
-        { "image": "/work/art/rgb-friends/collab-pudgies.png", "half": true }
+        {
+          "image": "/work/art/rgb-friends/anatomy.webp"
+        },
+        {
+          "image": "/work/art/rgb-friends/collab-base.webp",
+          "half": true
+        },
+        {
+          "image": "/work/art/rgb-friends/collab-nouns.webp",
+          "half": true
+        },
+        {
+          "image": "/work/art/rgb-friends/collab-higher.webp",
+          "half": true
+        },
+        {
+          "image": "/work/art/rgb-friends/collab-pudgies.webp",
+          "half": true
+        }
       ],
       "collectionHref": "https://highlight.xyz/mint/66744e64e610ed36adeb1a64",
       "collectionLabel": "Mint on Highlight",
       "links": [
-        { "label": "Tweet by @chshux", "href": "https://x.com/chshux/status/1803835217968533979?s=20" },
-        { "label": "Tweet by @Highlight_xyz", "href": "https://x.com/Highlight_xyz/status/1813556499156734332" }
+        {
+          "label": "Tweet by @chshux",
+          "href": "https://x.com/chshux/status/1803835217968533979?s=20"
+        },
+        {
+          "label": "Tweet by @Highlight_xyz",
+          "href": "https://x.com/Highlight_xyz/status/1813556499156734332"
+        }
       ]
     },
     {
@@ -92,7 +150,7 @@
       "year": "2023",
       "icon": "/work/art/opepen/The Hundred.gif",
       "images": [
-        "/work/art/opepen/opepen-01.jpeg",
+        "/work/art/opepen/opepen-01.webp",
         "/work/art/opepen/opepen-02.gif"
       ],
       "sections": [
@@ -100,21 +158,26 @@
           "image": "/work/art/opepen/The Hundred.gif"
         },
         {
-          "image": "/work/art/opepen/opepen-04.jpeg",
+          "image": "/work/art/opepen/opepen-04.webp",
           "half": true
         },
         {
-          "image": "/work/art/opepen/opepen-05.jpeg",
+          "image": "/work/art/opepen/opepen-05.webp",
           "half": true,
-          "text": "A brand is a memetic container for commerce. A hyperbrand is a memetic container for culture.\n\nTherefore, hyperbrand × brand = culture × commerce. Hyperbrands like Opepen, Zora, and Nouns have the unique ability to remix culture and commerce."
+          "text": "A brand is a memetic container for commerce. A hyperbrand is a memetic container for culture.\n\nTherefore, hyperbrand \u00d7 brand = culture \u00d7 commerce. Hyperbrands like Opepen, Zora, and Nouns have the unique ability to remix culture and commerce."
         }
       ],
       "size": "100",
-      "type": ["NFT"],
+      "type": [
+        "NFT"
+      ],
       "collectionHref": "https://zora.co/collect/zora:0x787c6366341fbb8a7bfff1064009bce60796338f",
       "collectionLabel": "Mint on Zora",
       "links": [
-        { "label": "Original tweet", "href": "https://x.com/chshux/status/1737895581308321887?s=20" }
+        {
+          "label": "Original tweet",
+          "href": "https://x.com/chshux/status/1737895581308321887?s=20"
+        }
       ]
     },
     {
@@ -122,15 +185,20 @@
       "desc": "PFPs from Zorbs",
       "year": "2023",
       "images": [
-        "/work/art/zorps/zorps-01.png",
-        "/work/art/zorps/zorps-02.jpg"
+        "/work/art/zorps/zorps-01.webp",
+        "/work/art/zorps/zorps-02.webp"
       ],
       "size": "100",
-      "type": ["NFT"],
+      "type": [
+        "NFT"
+      ],
       "collectionHref": "https://zora.co/collect/zora:0x525e87462e5f4b0703dce7ed18f55dd72aea3bde",
       "collectionLabel": "Mint on Zora",
       "links": [
-        { "label": "Tweet by @chshux", "href": "https://x.com/chshux/status/1739300093935911180?s=20" }
+        {
+          "label": "Tweet by @chshux",
+          "href": "https://x.com/chshux/status/1739300093935911180?s=20"
+        }
       ]
     }
   ]

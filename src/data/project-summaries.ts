@@ -55,15 +55,7 @@ Design lead across everything: product definition, interface design, front-end, 
 
 I wanted to experiment with combining an internet-native constraint and established brands, so I made a piece every day for 100 days using Opepen as a canvas.
 
-Credit to Jack Butcher for creating Opepen and for the many bits of inspiration.`,
-
-  RGB: `RGB is an onchain media app where what you own is the content. Your collection is your profile. Curation is the product.
-
-Following someone means following what they collect, not what they create. The feed surfaces owned work - by collector, by collection, by creator. Taste becomes visible.
-
-Discovery is organized around collections, not individual tokens. Browsing on RGB is closer to a gallery than a marketplace.
-
-RGB Signatures are the identity system. Each one is a unique binary visual encoding of an RGB value - your color, your mark. 16,777,216 possible identities, each yours the moment you mint it.`,
+Credit to [Jack Butcher](https://x.com/jalilwahdat/status/1858508196593185144?s=20) for creating Opepen and for the many bits of inspiration.`,
 
   'RGB Friends': `RGB Friends is a CC0 generative pixel character collection - a collaboration between Internet Friends and RGB. Each character is built on the RGB color framework, a small figure rendered in a distinct RGB value.
 

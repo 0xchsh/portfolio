@@ -156,7 +156,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
   }
 
   return (
-    <>
+    <div>
       {/* Media */}
       {isMobileSingle ? (
         <div
@@ -193,7 +193,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
       )}
 
       {/* Info */}
-      {(!hideTitle || (item.description && !hideDescription)) && <div className="flex items-center gap-1 mt-3 mb-6">
+      {(!hideTitle || (item.description && !hideDescription)) && <div className="flex items-center gap-1 mt-4">
         {!hideTitle && item.logo && (
           <Image
             src={item.logo}
@@ -222,7 +222,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
           </>
         )}
       </div>}
-    </>
+    </div>
   );
 }
 

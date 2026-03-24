@@ -24,6 +24,22 @@ type ArtItem = {
   links?: { label: string; href: string }[];
 };
 
+function renderInlineLinks(text: string) {
+  const parts = text.split(/(\[([^\]]+)\]\(([^)]+)\))/g);
+  const result: React.ReactNode[] = [];
+  let i = 0;
+  while (i < parts.length) {
+    if (parts[i].startsWith('[') && i + 2 < parts.length) {
+      result.push(<a key={i} href={parts[i + 2]} target="_blank" rel="noopener noreferrer" className="underline decoration-dotted underline-offset-2 hover:text-foreground transition-colors duration-100">{parts[i + 1]}</a>);
+      i += 3;
+    } else {
+      if (parts[i]) result.push(parts[i]);
+      i++;
+    }
+  }
+  return result;
+}
+
 export function ArtDrawer({
   item,
   children,
@@ -72,7 +88,7 @@ export function ArtDrawer({
 
           {/* Body */}
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
-            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-4">
+            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-8">
               <div className="flex flex-row gap-8">
                 {item.images.map((src, i) => (
                   <div key={i} className="relative flex-1 aspect-square rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700">
@@ -100,7 +116,7 @@ export function ArtDrawer({
                         </ul>
                       );
                     }
-                    return <p key={i}>{block}</p>;
+                    return <p key={i}>{renderInlineLinks(block)}</p>;
                   })}
                 </div>
               )}
@@ -139,7 +155,7 @@ export function ArtDrawer({
                 return groups.map((group, gi) =>
                   Array.isArray(group) ? (
                     <div key={gi} className="flex flex-col gap-8">
-                      <div className="flex gap-3">
+                      <div className="flex gap-8">
                         {group.map((section, j) => (
                           <div key={j} className="flex-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-100 dark:border-neutral-700 overflow-hidden">
                             <Image src={section.image} alt={`${item.title} ${gi}-${j}`} width={176} height={176} unoptimized className="w-full h-auto" />

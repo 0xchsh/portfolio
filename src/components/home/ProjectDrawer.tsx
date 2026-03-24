@@ -151,7 +151,7 @@ export function ProjectDrawer({
                   </div>
                 ))
               ) : (
-                <>
+                <div className="flex flex-col gap-8">
                   {workItems.length > 0 && (
                     <div className="flex flex-col">
                       {workItems.map((item, i) => (
@@ -177,7 +177,7 @@ export function ProjectDrawer({
                       })}
                     </div>
                   )}
-                </>
+                </div>
               )}
             </div>
           </div>

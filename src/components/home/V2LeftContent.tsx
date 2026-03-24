@@ -73,11 +73,20 @@ export function V2LeftContent({ children }: { children: React.ReactNode }) {
         <FadeIn delay={150}>
           <section className="mt-8">
             <SectionLabel>For Agents</SectionLabel>
-            <div className="mt-4 flex flex-col gap-1">
-              <p className="text-sm font-medium text-foreground">llms.txt is set up</p>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400">Structured context is available at{' '}
-                <a href="/llms.txt" target="_blank" rel="noopener noreferrer" className="underline decoration-dotted underline-offset-2 hover:text-foreground transition-colors duration-100">ch.sh/llms.txt</a>
-              </p>
+            <div className="mt-4 flex flex-col gap-2">
+              <a
+                href="/llms.txt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${rowClass} items-start group`}
+              >
+                <FileText size={14} weight="bold" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[3px]" />
+                <div>
+                  <p className="text-sm font-medium text-foreground leading-[20px]">llms.txt is set up</p>
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">Structured context at ch.sh/llms.txt</p>
+                </div>
+                <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+              </a>
             </div>
           </section>
         </FadeIn>

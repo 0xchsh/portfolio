@@ -5,6 +5,27 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
+export function CopyEmailRow() {
+  const handleCopy = () => {
+    navigator.clipboard.writeText('hi@ch.sh');
+    toast.success('Email copied to clipboard');
+  };
+
+  return (
+    <button
+      onClick={handleCopy}
+      className="group flex items-start gap-3 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-150 w-[calc(100%+1.5rem)] cursor-pointer text-left"
+    >
+      <Envelope size={14} weight="bold" className="shrink-0 text-neutral-500 dark:text-neutral-400 mt-[3px]" />
+      <div>
+        <p className="text-sm font-medium text-foreground leading-[20px]">hi@ch.sh</p>
+        <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">Email</p>
+      </div>
+      <Copy size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+    </button>
+  );
+}
+
 export function CopyEmail({ className, variant, noIcon }: { className?: string; variant?: 'pill'; noIcon?: boolean }) {
   const handleCopy = () => {
     navigator.clipboard.writeText('hi@ch.sh');
@@ -23,7 +44,7 @@ export function CopyEmail({ className, variant, noIcon }: { className?: string; 
   return (
     <Button
       variant="ghost"
-      className={cn('inline-flex items-center gap-1 h-auto px-0 py-0 hover:bg-transparent', className)}
+      className={cn('inline-flex items-center gap-1 h-auto px-0 py-0 hover:bg-transparent dark:hover:bg-transparent', className)}
       onClick={handleCopy}
     >
       hi@ch.sh
