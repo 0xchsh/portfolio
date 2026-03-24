@@ -125,7 +125,6 @@ async function getWeather() {
 // ---------------------------------------------------------------------------
 
 const projects = [
-  { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', workTitle: 'Snack' },
   { name: 'Otto', desc: 'Ask anything about your cars', href: '#', icon: '/icons/otto.svg', workTitle: 'Otto' },
   { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', workTitle: 'Rat Labs' },
   { name: 'RGB', desc: 'Onchain media app', href: 'https://rgb.fun', icon: '/icons/rgb.svg', workTitle: 'RGB' },
@@ -133,6 +132,7 @@ const projects = [
 
 const caseStudies = [
   { name: 'Freighter', desc: 'Flagship Stellar wallet', href: 'https://freighter.app', icon: '/icons/freighter.svg', workTitle: 'Freighter' },
+  { name: 'Snack', desc: 'List curation tool', href: 'https://snack.xyz', icon: '/icons/snack.svg', workTitle: 'Snack' },
   { name: 'Laboratory', desc: 'Stellar developer sandbox', href: 'https://laboratory.stellar.org', icon: '/icons/lab.svg', workTitle: 'Laboratory' },
 ];
 
