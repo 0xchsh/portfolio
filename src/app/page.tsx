@@ -388,16 +388,16 @@ export default async function V2Home() {
                     playsInline
                     className="w-4 h-4 rounded-full object-cover shrink-0"
                   />
-                  <span className="text-xs text-neutral-400 dark:text-neutral-600">신 © 2026</span>
+                  <span className="text-sm text-neutral-500 dark:text-neutral-400">신 © 2026</span>
                 </div>
                 {commitHash && (
                   <>
-                    <span className="text-xs text-neutral-400 dark:text-neutral-600">·</span>
+                    <span className="text-sm text-neutral-500 dark:text-neutral-400">·</span>
                     <a
                       href={commitHash.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors duration-100 underline decoration-dotted underline-offset-2"
+                      className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors duration-100 underline decoration-dotted underline-offset-2"
                     >
                       {commitHash.sha.toUpperCase()}
                     </a>
@@ -406,7 +406,7 @@ export default async function V2Home() {
               </div>
               <div className="flex items-center gap-[2px]">
                 <WeatherIcon code={weather.code} size={16} />
-                <span className="text-xs text-neutral-400 dark:text-neutral-600">Chicago, IL</span>
+                <span className="text-sm text-neutral-500 dark:text-neutral-400">Chicago, IL</span>
               </div>
             </div>
             </FadeIn>
