@@ -214,7 +214,6 @@ body {
   }
 }
 
-/* .dark theme variables — kept for reference, activate when dark mode is designed
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -248,7 +247,6 @@ body {
   --sidebar-border: oklch(0.369 0 0);
   --sidebar-ring: oklch(0.556 0 0);
 }
-*/
 
 /* Sidebar navigation animations */
 @keyframes slide-in-from-right {
@@ -504,6 +502,35 @@ body {
     box-shadow: inset 0 -1px 1px 0 oklch(0.94 0 0);
   }
 
+  /* Dark mode overrides for outline button and widget card */
+  .dark .btn-classic-outline {
+    background-image:
+      linear-gradient(to bottom, oklch(0.22 0 0) 50%, oklch(0.18 0 0)),
+      linear-gradient(to bottom, oklch(0.22 0 0) 50%, oklch(0.22 0 0) 80%);
+    box-shadow:
+      inset 0 1px 0 0 oklch(1 0 0 / 0.07),
+      0 1px 2px 0 oklch(0 0 0 / 0.4),
+      0 0 0 1px var(--border);
+  }
+
+  .dark .btn-classic-outline::after {
+    box-shadow: inset 0 -1px 1px 0 oklch(0 0 0 / 0.25);
+  }
+
+  .dark .widget-card {
+    background-image:
+      linear-gradient(to bottom, oklch(0.22 0 0) 50%, oklch(0.18 0 0)),
+      linear-gradient(to bottom, oklch(0.22 0 0) 50%, oklch(0.22 0 0) 80%);
+    box-shadow:
+      inset 0 1px 0 0 oklch(1 0 0 / 0.07),
+      0 1px 2px 0 oklch(0 0 0 / 0.4),
+      0 0 0 1px var(--border);
+  }
+
+  .dark .widget-card::after {
+    box-shadow: inset 0 -1px 1px 0 oklch(0 0 0 / 0.25);
+  }
+
   .btn-classic-secondary {
     --btn-classic-bg: var(--secondary);
     box-shadow:
@@ -579,7 +606,18 @@ body {
   }
 }
 
-/* .dark theme variables — activate when dark mode is designed
+@keyframes push-down-in {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes push-down-out {
+  from { transform: translateY(0); }
+  to { transform: translateY(100%); }
+}
+
+/* duplicate dark vars removed — see .dark block above */
+/*
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -614,3 +652,29 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 */
+/* ── View Transitions ───────────────────────────────────────────────────── */
+
+@keyframes vt-fade-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-6px); }
+}
+
+@keyframes vt-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+::view-transition-old(root) {
+  animation: vt-fade-out 180ms cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+
+::view-transition-new(root) {
+  animation: vt-fade-in 280ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}

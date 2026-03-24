@@ -17,10 +17,11 @@
   "art": [
     {
       "title": "RGB Signatures",
+      "desc": "Binary visual representation",
       "year": "2024",
       "images": [
-        "https://framerusercontent.com/images/MKjzR3zSxtd763fhCL34rq5AQs.gif",
-        "https://framerusercontent.com/images/jgcVsYmjcCwXm6R0gaGeuL5P2g.png"
+        "/work/art/rgb/signatures.gif",
+        "/work/art/rgb/signatures.png"
       ],
       "size": "16,777,216",
       "type": ["NFT"],
@@ -29,10 +30,11 @@
     },
     {
       "title": "RGB Friends",
+      "desc": "Generative pixel characters",
       "year": "2024",
       "images": [
-        "https://framerusercontent.com/images/6sMJ3uhCeGGG7EbSkDjAOMZujE.gif",
-        "https://framerusercontent.com/images/jQlpmJlpeYmoHQV3aFXVRct4UmE.png"
+        "/work/art/rgb-friends/rgb-friends.gif",
+        "/work/art/rgb-friends/rgb-friends.png"
       ],
       "size": "26,500+",
       "type": ["Generative", "NFT"],
@@ -41,10 +43,24 @@
     },
     {
       "title": "Hyperbrand: Opepen",
+      "desc": "Hypercultures extended",
       "year": "2023",
       "images": [
-        "https://framerusercontent.com/images/IJbzb6nK9tUZDpUFxW6VC4peeFo.gif",
-        "https://framerusercontent.com/images/DuACajQRkuGJED2kKmf2tu08WVk.png"
+        "/work/art/opepen/opepen-01.jpeg",
+        "/work/art/opepen/opepen-02.gif"
+      ],
+      "sections": [
+        {
+          "image": "/work/art/opepen/opepen-03.jpeg",
+          "text": "The name of this collection is Hyperbrand: Opepen. The goal is to demonstrate Opepen as a hyperbrand.\n\nA hyperbrand is a crypto reputation that can proliferate for free and forever, without maintenance, interruption, or intermediaries. Other hyperbrands include Zora and Nouns."
+        },
+        {
+          "image": "/work/art/opepen/opepen-04.jpeg"
+        },
+        {
+          "image": "/work/art/opepen/opepen-05.jpeg",
+          "text": "A brand is a memetic container for commerce. A hyperbrand is a memetic container for culture.\n\nTherefore, hyperbrand × brand = culture × commerce. Hyperbrands like Opepen, Zora, and Nouns have the unique ability to remix culture and commerce."
+        }
       ],
       "size": "100",
       "type": ["NFT"],
@@ -53,10 +69,11 @@
     },
     {
       "title": "Zorps",
+      "desc": "PFPs from Zorbs",
       "year": "2023",
       "images": [
-        "https://framerusercontent.com/images/rP5ah6Zn65At63TW7y44ntdAnU.png",
-        "https://framerusercontent.com/images/iGTfuMc0GZYBDKDAfuwTao2e3E.jpg"
+        "/work/art/zorps/zorps-01.png",
+        "/work/art/zorps/zorps-02.jpg"
       ],
       "size": "100",
       "type": ["NFT"],

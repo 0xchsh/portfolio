@@ -60,10 +60,10 @@ export function LiveClock() {
     return () => clearInterval(interval);
   }, []);
 
-  if (!time) return <span className="text-neutral-400 tabular-nums">{'\u00A0'}</span>;
+  if (!time) return <span className="tabular-nums">{'\u00A0'}</span>;
 
   return (
-    <span className="text-neutral-400 tabular-nums">
+    <span className="tabular-nums">
       {time.split('').map((char, i) => (
         <AnimatedChar key={i} char={char} className={char === ' ' ? 'w-[0.25em]' : undefined} />
       ))}

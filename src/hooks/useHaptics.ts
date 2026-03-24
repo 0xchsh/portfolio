@@ -49,16 +49,15 @@ export function useGlobalHaptics() {
       if (navigator.vibrate) navigator.vibrate(8);
     }
 
-    function handlePointerDown(e: PointerEvent) {
-      const target = e.target as HTMLElement;
-      if (target.closest('a, button, [role="button"], [data-haptic]')) {
+    function handlePointerDown() {
+      if (localStorage.getItem('haptics-muted') !== 'true') {
         playClick();
       }
     }
 
-    document.addEventListener('pointerdown', handlePointerDown, true);
+    document.addEventListener('click', handlePointerDown, true);
     return () => {
-      document.removeEventListener('pointerdown', handlePointerDown, true);
+      document.removeEventListener('click', handlePointerDown, true);
     };
   }, []);
 }

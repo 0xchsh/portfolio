@@ -9,13 +9,13 @@ function isVideoSrc(src: string) {
   return src.endsWith('.mp4') || src.endsWith('.webm');
 }
 
-export function SingleMedia({ src, alt, objectPosition }: { src: string; alt: string; objectPosition?: string }) {
+export function SingleMedia({ src, alt, objectPosition, eager }: { src: string; alt: string; objectPosition?: string; eager?: boolean }) {
   const isVideo = isVideoSrc(src);
   const pos = objectPosition || 'top';
 
   if (isVideo) {
     return (
-      <VideoWithBlur src={src} className={`w-full h-full object-cover object-${pos}`} />
+      <VideoWithBlur src={src} className={`w-full h-full object-cover object-${pos}`} eager={eager} />
     );
   }
 
@@ -24,7 +24,7 @@ export function SingleMedia({ src, alt, objectPosition }: { src: string; alt: st
       src={src}
       alt={alt}
       fill
-      unoptimized
+      sizes="(min-width: 860px) 288px, 100vw"
       className="object-cover"
       style={{ objectPosition: pos }}
     />
@@ -126,16 +126,41 @@ export function MobileFrame({ src, alt, transparent, eager }: { src: string; alt
 }
 
 /** Presentation-only card — no grid/layout logic */
-export function WorkCardContent({ item }: { item: WorkItem }) {
+export function WorkCardContent({ item, mediaOnly, hideTitle }: { item: WorkItem; mediaOnly?: boolean; hideTitle?: boolean }) {
   const isSingle = item.src.length === 1;
   const isMobileSingle = isSingle && item.ratio === '1:1';
+
+  // mediaOnly: fills an absolute-positioned parent, no wrapper card or text
+  if (mediaOnly) {
+    return (
+      <div className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800">
+        {isMobileSingle ? (
+          <div className="h-full flex items-center justify-center">
+            <div className="h-[85%]" style={{ aspectRatio: '9 / 19.5' }}>
+              <MobileFrame src={item.src[0]} alt={item.title} eager />
+            </div>
+          </div>
+        ) : isSingle ? (
+          <SingleMedia src={item.src[0]} alt={item.title} objectPosition={item.objectPosition} eager />
+        ) : (
+          <div className="h-full flex items-center justify-center gap-3 px-10 py-8">
+            {item.src.map((src, j) => (
+              <div key={j} className="h-full" style={{ aspectRatio: '9 / 19.5' }}>
+                <MobileFrame src={src} alt={`${item.title} ${j + 1}`} eager />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <>
       {/* Media */}
       {isMobileSingle ? (
         <div
-          className="rounded-xl overflow-hidden flex items-center justify-center bg-neutral-100 border border-neutral-200"
+          className="rounded-xl overflow-hidden flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
           style={{ aspectRatio: '16 / 9' }}
         >
           <div className="h-[85%]" style={{ aspectRatio: '9 / 19.5' }}>
@@ -144,7 +169,7 @@ export function WorkCardContent({ item }: { item: WorkItem }) {
         </div>
       ) : isSingle ? (
         <div
-          className="rounded-xl overflow-hidden relative border border-neutral-200"
+          className="rounded-xl overflow-hidden relative border border-neutral-200 dark:border-neutral-700"
           style={{
             aspectRatio: '16 / 9',
             backgroundColor: '#f5f5f5',
@@ -154,7 +179,7 @@ export function WorkCardContent({ item }: { item: WorkItem }) {
         </div>
       ) : (
         <div
-          className="rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200"
+          className="rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
           style={{ aspectRatio: '16 / 9' }}
         >
           <div className="h-full flex items-center justify-center gap-3 px-10 py-8">
@@ -169,7 +194,7 @@ export function WorkCardContent({ item }: { item: WorkItem }) {
 
       {/* Info */}
       <div className="flex items-center gap-1 mt-3 mb-6">
-        {item.logo && (
+        {!hideTitle && item.logo && (
           <Image
             src={item.logo}
             alt=""
@@ -178,7 +203,7 @@ export function WorkCardContent({ item }: { item: WorkItem }) {
             className="shrink-0"
           />
         )}
-        {item.link ? (
+        {!hideTitle && (item.link ? (
           <a
             href={item.link}
             target="_blank"
@@ -189,10 +214,10 @@ export function WorkCardContent({ item }: { item: WorkItem }) {
           </a>
         ) : (
           <span className="text-sm font-medium">{item.title}</span>
-        )}
+        ))}
         {item.description && (
           <>
-            <span className="text-sm text-neutral-400">·</span>
+            {!hideTitle && <span className="text-sm text-neutral-400">·</span>}
             <span className="text-sm text-neutral-400">{item.description}</span>
           </>
         )}

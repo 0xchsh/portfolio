@@ -5,12 +5,12 @@ import type { CommitDay } from '@/app/page';
 import { playTick } from '@/lib/tick';
 
 function commitLevel(count: number, max: number): string {
-  if (count === 0) return 'bg-neutral-200';
+  if (count === 0) return 'bg-neutral-200 dark:bg-neutral-700';
   const ratio = count / max;
-  if (ratio <= 0.25) return 'bg-[#9be9a8]';
-  if (ratio <= 0.5) return 'bg-[#40c463]';
-  if (ratio <= 0.75) return 'bg-[#30a14e]';
-  return 'bg-[#216e39]';
+  if (ratio <= 0.25) return 'bg-green-300 dark:bg-green-400';
+  if (ratio <= 0.5) return 'bg-green-500';
+  if (ratio <= 0.75) return 'bg-green-600';
+  return 'bg-green-800 dark:bg-green-700';
 }
 
 function formatDate(dateStr: string) {
@@ -48,7 +48,7 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
           >
             {/* Bar */}
             <div
-              className={`w-full rounded-sm ${commitLevel(day.count, max)}`}
+              className={`w-full rounded-[3px] ${commitLevel(day.count, max)}`}
               style={{
                 height: isHovered ? 12 : isNeighbor ? 16 : 20,
                 transition: isHovered || isNeighbor

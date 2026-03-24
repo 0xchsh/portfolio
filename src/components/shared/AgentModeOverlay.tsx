@@ -8,13 +8,13 @@ const MARKDOWN = `# Charles Shin
 
 ## About
 
-I'm Charles, a product designer based in Chicago. I care about making interfaces and interactions that feel simple, clear, and enjoyable to use — especially in blockchain and AI, where these patterns are being designed for the first time.
+I'm currently the Lead Product Designer at Stellar (https://stellar.org). Previously at Warby Parker, Uber, and Weebly.
 
-I'm currently the Lead Product Designer at Stellar (https://stellar.org).
+Running a small software factory off a Mac Mini. Wiring together agents — Claude Code, OpenClaw, Paperclip — and watching them ship things without me in the room. Still figuring out where the designer fits when the loop closes itself.
 
-Previously at Warby Parker, Uber, and Weebly. I do my best work iterating fast with talented engineers, staying close to the thing we're making.
+Most of my thinking lives at the intersection of crypto and AI: wallets that act, payments without friction, agents that own resources. These problems don't have design patterns yet. That's the whole point.
 
-If you're working on something interesting, let's chat. Send me an email at hi@ch.sh or dm on x.com (@chshux).
+Reach me at hi@ch.sh or dm on x.com (@chshux).
 
 ## Experience
 

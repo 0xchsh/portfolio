@@ -27,7 +27,12 @@ function Sparkline({ data, up, width = 60, height = 24 }: { data: number[]; up: 
   useEffect(() => {
     const el = pathRef.current;
     if (!el) return;
-    const len = el.getTotalLength();
+    let len: number;
+    try {
+      len = el.getTotalLength();
+    } catch {
+      return; // element not rendered (e.g. inside display:none container)
+    }
     el.style.transition = 'none';
     el.style.strokeDasharray = `${len}`;
     el.style.strokeDashoffset = `${len}`;
@@ -104,7 +109,18 @@ function useCryptoPrices() {
 
 const widgetCard = 'btn-classic btn-classic-outline bg-background rounded-xl pointer-events-none border border-transparent bg-clip-padding';
 
-export function WeatherPill({ weather }: { weather: Weather }) {
+export function WeatherPill({ weather, variant }: { weather: Weather; variant?: 'static' }) {
+  if (variant === 'static') {
+    return (
+      <div className="flex w-full items-center justify-between text-sm font-medium text-neutral-400 dark:text-neutral-500">
+        <div className="flex items-center gap-1">
+          <span>Chicago, IL</span>
+          <WeatherIcon code={weather.code} />
+        </div>
+        <LiveClock />
+      </div>
+    );
+  }
   const [open, setOpen] = useState(false);
   const [openCount, setOpenCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
