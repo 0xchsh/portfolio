@@ -5,6 +5,9 @@ import { X, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { Drawer } from 'vaul';
 import { useState, useEffect } from 'react';
 import { projectSummaries } from '@/data/project-summaries';
+import { useDrawerNav } from '@/components/home/DrawerNav';
+
+const BLUR_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
 
 type ArtSection = {
   image: string;
@@ -17,6 +20,7 @@ type ArtSection = {
 type ArtItem = {
   title: string;
   year: string;
+  icon?: string | null;
   images: string[];
   sections?: ArtSection[];
   size: string;
@@ -45,11 +49,17 @@ function renderInlineLinks(text: string) {
 export function ArtDrawer({
   item,
   children,
+  navIndex,
 }: {
   item: ArtItem;
   children: React.ReactNode;
+  navIndex?: number;
 }) {
   const [showCollect, setShowCollect] = useState(false);
+  const nav = useDrawerNav();
+
+  const isControlled = navIndex !== undefined;
+  const isOpen = isControlled ? nav.openIndex === navIndex : undefined;
 
   useEffect(() => {
     const id = setInterval(() => setShowCollect((v) => !v), 3000);
@@ -57,7 +67,13 @@ export function ArtDrawer({
   }, []);
 
   return (
-    <Drawer.Root direction="bottom">
+    <Drawer.Root
+      direction="bottom"
+      {...(isControlled ? {
+        open: isOpen,
+        onOpenChange: (v) => v ? nav.open(navIndex!) : nav.close(),
+      } : {})}
+    >
       <Drawer.Trigger asChild>{children}</Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px]" />
@@ -72,19 +88,21 @@ export function ArtDrawer({
             <div className="max-w-[704px] mx-auto flex items-center justify-between">
               <div className="flex items-center gap-3 min-w-0">
                 <div className="shrink-0 w-4 h-4 rounded-[3px] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-                  <Image src={item.images[0]} alt={item.title} width={16} height={16} unoptimized className="object-cover" />
+                  <Image src={item.icon ?? item.images[0]} alt={item.title} width={16} height={16} unoptimized className="object-cover" />
                 </div>
                 <p className="text-sm leading-5 font-semibold text-foreground">
                   {item.title}
                   {/* Desktop: always show size */}
                   <span className="hidden desktop:inline">
-                    <span className="text-neutral-300 dark:text-neutral-600 ml-[2px] mr-[4px]">·</span>
+                    <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
                     <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
                   </span>
                   {/* Mobile: fade between size and collect button */}
-                  <span className="desktop:hidden relative inline-block ml-2" style={{ minWidth: '4rem' }}>
+                  <span className="desktop:hidden">
+                    <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
+                  </span>
+                  <span className="desktop:hidden relative inline-block" style={{ minWidth: '4rem' }}>
                     <span className={`transition-opacity duration-500 ${showCollect ? 'opacity-0' : 'opacity-100'}`}>
-                      <span className="text-neutral-300 dark:text-neutral-600 ml-[2px] mr-[4px]">·</span>
                       <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
                     </span>
                     <a
@@ -127,6 +145,8 @@ export function ArtDrawer({
                       alt={`${item.title} ${i + 1}`}
                       fill
                       unoptimized
+                      placeholder="blur"
+                      blurDataURL={BLUR_PLACEHOLDER}
                       className="object-cover"
                     />
                   </div>

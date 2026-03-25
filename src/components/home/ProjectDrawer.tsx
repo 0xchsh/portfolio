@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { X, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { Drawer } from 'vaul';
 import { useState, useEffect } from 'react';
+import { useDrawerNav } from '@/components/home/DrawerNav';
 
 const BLUR_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
 import workData from '@/data/work.json';
@@ -25,9 +26,11 @@ const allWork = workData as WorkItem[];
 export function ProjectDrawer({
   project,
   children,
+  navIndex,
 }: {
   project: Project;
   children: React.ReactNode;
+  navIndex?: number;
 }) {
   const workItems = project.workTitle
     ? allWork.filter((w) => w.title === project.workTitle)
@@ -35,6 +38,10 @@ export function ProjectDrawer({
 
   const hasVisit = project.href !== '#';
   const [showVisit, setShowVisit] = useState(false);
+  const nav = useDrawerNav();
+
+  const isControlled = navIndex !== undefined;
+  const isOpen = isControlled ? nav.openIndex === navIndex : undefined;
 
   useEffect(() => {
     if (!hasVisit) return;
@@ -43,7 +50,13 @@ export function ProjectDrawer({
   }, [hasVisit]);
 
   return (
-    <Drawer.Root direction="bottom">
+    <Drawer.Root
+      direction="bottom"
+      {...(isControlled ? {
+        open: isOpen,
+        onOpenChange: (v) => v ? nav.open(navIndex!) : nav.close(),
+      } : {})}
+    >
       <Drawer.Trigger asChild>{children}</Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px]" />
@@ -68,12 +81,14 @@ export function ProjectDrawer({
                   {project.name}
                   {/* Desktop: always show desc. Mobile: fade between desc and Visit button */}
                   <span className="hidden desktop:inline">
-                    <span className="text-neutral-300 dark:text-neutral-600 ml-[2px] mr-[4px]">·</span>
+                    <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
                     <span className="font-medium text-neutral-500 dark:text-neutral-500">{project.desc}</span>
                   </span>
-                  <span className="desktop:hidden relative inline-block ml-2" style={{ minWidth: '4rem' }}>
+                  <span className="desktop:hidden">
+                    <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
+                  </span>
+                  <span className="desktop:hidden relative inline-block" style={{ minWidth: '4rem' }}>
                     <span className={`transition-opacity duration-500 ${showVisit ? 'opacity-0' : 'opacity-100'}`}>
-                      <span className="text-neutral-300 dark:text-neutral-600 ml-[2px] mr-[4px]">·</span>
                       <span className="font-medium text-neutral-500 dark:text-neutral-500">{project.desc}</span>
                     </span>
                     {hasVisit && (
@@ -111,7 +126,7 @@ export function ProjectDrawer({
 
           {/* Body */}
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
-            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-8">
+            <div className={`max-w-[704px] mx-auto pb-16 flex flex-col gap-8 ${caseStudySections[project.name] ? 'pt-16' : 'pt-8'}`}>
               {caseStudySections[project.name] ? (
                 caseStudySections[project.name].map((section, i) => (
                   <div key={i} className="flex flex-col gap-8">
@@ -143,13 +158,46 @@ export function ProjectDrawer({
                         </div>
                       )
                     )}
-                    {section.text && (
-                      <div className="text-sm leading-5 text-neutral-600 dark:text-neutral-400 flex flex-col gap-3 max-w-[480px] mx-auto w-full">
-                        {section.text.split('\n\n').map((para, j) => (
-                          <p key={j}>{para}</p>
-                        ))}
+                    {(section.title || section.text || section.footnote) && (() => {
+                      const hasSubheadings = section.text?.includes('\n## ') || section.text?.startsWith('## ');
+                      return (
+                      <div className={`text-sm leading-5 text-neutral-600 dark:text-neutral-400 flex flex-col max-w-[480px] mx-auto w-full ${hasSubheadings ? 'gap-6' : 'gap-4'}`}>
+                        {section.title && (
+                          <div className={`flex items-center gap-3 ${hasSubheadings ? 'mb-2' : ''}`}>
+                            <span className="text-neutral-400 dark:text-neutral-600 shrink-0">{section.title}</span>
+                            <div className="flex-1 border-t border-dotted border-neutral-300 dark:border-neutral-600" />
+                          </div>
+                        )}
+                        {section.text && section.text.split('\n\n').map((para, j) => {
+                          const lines = para.split('\n');
+                          if (lines[0].startsWith('## ')) {
+                            const label = lines[0].slice(3);
+                            const rest = lines.slice(1);
+                            const isList = rest.length > 0 && rest.every(l => l.startsWith('- '));
+                            return (
+                              <div key={j} className="flex flex-col gap-1">
+                                <span className="text-xs leading-4 text-neutral-400 dark:text-neutral-600">{label}</span>
+                                {isList ? (
+                                  <ul className="flex flex-col gap-1 list-disc list-inside">
+                                    {rest.map((l, k) => <li key={k}>{l.slice(2)}</li>)}
+                                  </ul>
+                                ) : rest.length > 0 ? (
+                                  <p>{rest.join('\n')}</p>
+                                ) : null}
+                              </div>
+                            );
+                          }
+                          return <p key={j}>{para}</p>;
+                        })}
+                        {section.footnote && (
+                          <>
+                            <div className="border-t border-dotted border-neutral-300 dark:border-neutral-600" />
+                            <p className="text-xs leading-4 text-neutral-400 dark:text-neutral-500">{section.footnote}</p>
+                          </>
+                        )}
                       </div>
-                    )}
+                      );
+                    })()}
                   </div>
                 ))
               ) : (

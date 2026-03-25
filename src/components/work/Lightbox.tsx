@@ -12,7 +12,7 @@ function isVideoSrc(src: string) {
   return src.endsWith('.mp4') || src.endsWith('.webm');
 }
 
-function DesktopFrame({ src, alt, eager }: { src: string; alt: string; eager?: boolean }) {
+function DesktopFrame({ src, alt, eager, blurDataURL }: { src: string; alt: string; eager?: boolean; blurDataURL?: string | null }) {
   const isVideo = isVideoSrc(src);
   const ref = useRef<HTMLDivElement>(null);
   const [radius, setRadius] = useState(16);
@@ -43,6 +43,8 @@ function DesktopFrame({ src, alt, eager }: { src: string; alt: string; eager?: b
             alt={alt}
             fill
             unoptimized
+            placeholder={blurDataURL ? 'blur' : 'empty'}
+            blurDataURL={blurDataURL ?? undefined}
             className="object-cover object-top"
           />
         )}
@@ -141,6 +143,7 @@ export function Lightbox({
                   alt={displayItem.title}
                   transparent
                   eager
+                  blurDataURL={displayItem.blurDataURLs?.[0]}
                 />
               </div>
             ) : isSingle ? (
@@ -149,6 +152,7 @@ export function Lightbox({
                   src={displayItem.src[0]}
                   alt={displayItem.title}
                   eager
+                  blurDataURL={displayItem.blurDataURLs?.[0]}
                 />
               </div>
             ) : (
@@ -164,6 +168,7 @@ export function Lightbox({
                       alt={`${displayItem.title} ${j + 1}`}
                       transparent
                       eager
+                      blurDataURL={displayItem.blurDataURLs?.[j]}
                     />
                   </div>
                 ))}

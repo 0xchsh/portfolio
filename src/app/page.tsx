@@ -13,6 +13,7 @@ import { V2LeftContent } from '@/components/home/V2LeftContent';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { ProjectDrawer } from '@/components/home/ProjectDrawer';
 import { ArtDrawer } from '@/components/home/ArtDrawer';
+import { DrawerNavProvider } from '@/components/home/DrawerNav';
 import feedData from '@/data/feed.json';
 
 export const revalidate = 3600;
@@ -173,7 +174,7 @@ type ProjectItem = {
   workTitle?: string;
 };
 
-function ProjectRow({ item, hideIcon, directLink }: { item: ProjectItem; hideIcon?: boolean; directLink?: boolean }) {
+function ProjectRow({ item, hideIcon, directLink, navIndex }: { item: ProjectItem; hideIcon?: boolean; directLink?: boolean; navIndex?: number }) {
   const rowClass =
     'flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
   const inner = (
@@ -200,7 +201,7 @@ function ProjectRow({ item, hideIcon, directLink }: { item: ProjectItem; hideIco
   }
 
   return (
-    <ProjectDrawer project={item}>
+    <ProjectDrawer project={item} navIndex={navIndex}>
       <button className={rowClass}>{inner}</button>
     </ProjectDrawer>
   );
@@ -221,11 +222,11 @@ type ArtItem = {
 
 const artItems = feedData.art as ArtItem[];
 
-function ArtRow({ item }: { item: ArtItem }) {
+function ArtRow({ item, navIndex }: { item: ArtItem; navIndex?: number }) {
   const rowClass =
     'flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
   return (
-    <ArtDrawer item={item}>
+    <ArtDrawer item={item} navIndex={navIndex}>
       <button className={rowClass}>
         <div className="shrink-0 w-10 h-10 rounded-[10px] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
           <Image src={item.icon ?? item.images[0]} alt={item.title} width={40} height={40} unoptimized className="object-cover w-full h-full" />
@@ -249,6 +250,14 @@ export default async function V2Home() {
     getWeather(),
     getLatestCommit(),
   ]);
+
+  const projectsWithDrawer = projects.filter(p => !p.directLink);
+  const navTotal = caseStudies.length + projectsWithDrawer.length + artItems.length;
+  // Nav indices: caseStudies 0..2, projectsWithDrawer 3, artItems 4..
+  const artNavStart = caseStudies.length + projectsWithDrawer.length;
+  const projectNavMap = new Map<string, number>();
+  let pIdx = caseStudies.length;
+  for (const p of projectsWithDrawer) projectNavMap.set(p.name, pIdx++);
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-clip">
@@ -279,6 +288,7 @@ export default async function V2Home() {
 
           {/* Bio + sections — col 1 row 2 on desktop, order 3 on mobile */}
           <div className="order-[3] mt-8 desktop:mt-0 desktop:order-none desktop:col-start-1 desktop:row-start-2">
+          <DrawerNavProvider total={navTotal}>
           <V2LeftContent>
 
             {/* Bio */}
@@ -310,8 +320,8 @@ export default async function V2Home() {
             <section className="mt-8">
               <SectionLabel>Featured</SectionLabel>
               <div className="mt-3 desktop:mt-4 flex flex-col gap-3">
-                {caseStudies.map((item) => (
-                  <ProjectRow key={item.name} item={item} />
+                {caseStudies.map((item, i) => (
+                  <ProjectRow key={item.name} item={item} navIndex={i} />
                 ))}
               </div>
             </section>
@@ -323,7 +333,7 @@ export default async function V2Home() {
               <SectionLabel>Projects</SectionLabel>
               <div className="mt-3 desktop:mt-4 flex flex-col gap-3">
                 {projects.map((item) => (
-                  <ProjectRow key={item.name} item={item} directLink={item.directLink} />
+                  <ProjectRow key={item.name} item={item} directLink={item.directLink} navIndex={projectNavMap.get(item.name)} />
                 ))}
               </div>
             </section>
@@ -334,8 +344,8 @@ export default async function V2Home() {
             <section className="mt-8">
               <SectionLabel>Art</SectionLabel>
               <div className="mt-3 desktop:mt-4 flex flex-col gap-3">
-                {artItems.map((item) => (
-                  <ArtRow key={item.title} item={item} />
+                {artItems.map((item, i) => (
+                  <ArtRow key={item.title} item={item} navIndex={artNavStart + i} />
                 ))}
               </div>
             </section>
@@ -421,6 +431,7 @@ export default async function V2Home() {
             </div>
             </FadeIn>
           </V2LeftContent>
+          </DrawerNavProvider>
           </div>
 
           {/* Right column — col 2 rows 1-2 on desktop, order 2 on mobile */}
