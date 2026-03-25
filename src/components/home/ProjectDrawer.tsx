@@ -82,7 +82,7 @@ export function ProjectDrawer({
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className={`absolute left-0 top-0 inline-flex items-center text-sm font-medium text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full transition-opacity duration-500 ${showVisit ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                        className={`absolute left-0 top-1/2 -translate-y-1/2 inline-flex items-center whitespace-nowrap text-sm font-medium text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full transition-opacity duration-500 ${showVisit ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                       >
                         Visit
                         <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
