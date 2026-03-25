@@ -24,7 +24,7 @@ export default function NotFound() {
 
         {/* Back home */}
         <FadeIn delay={175}>
-          <Link href="/" style={{ paddingTop: '6px', paddingBottom: '6px', paddingLeft: '12px', paddingRight: '12px' }} className="rounded-full text-sm font-medium text-neutral-600 dark:text-neutral-200 backdrop-blur-md bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-[0_1px_3px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.9)] dark:shadow-[0_1px_3px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-150 hover:bg-neutral-200 dark:hover:bg-neutral-700">
+          <Link href="/" className="px-3 py-1.5 rounded-full text-sm font-medium text-neutral-600 dark:text-neutral-200 backdrop-blur-md bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-[0_1px_3px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.9)] dark:shadow-[0_1px_3px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-150 hover:bg-neutral-200 dark:hover:bg-neutral-700">
             Back home
           </Link>
         </FadeIn>
