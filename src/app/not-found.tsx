@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowLeft } from '@phosphor-icons/react/dist/ssr';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { NotFoundBg } from './NotFoundBg';
 
@@ -25,8 +24,7 @@ export default function NotFound() {
 
         {/* Back home */}
         <FadeIn delay={175}>
-          <Link href="/" className="inline-flex items-center text-sm font-medium text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 dark:hover:text-neutral-100 bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-neutral-600 px-4 py-2 rounded-full transition-colors duration-100">
-            <ArrowLeft size={12} weight="bold" className="mr-0.5" />
+          <Link href="/" className="px-3.5 py-1.5 rounded-full text-sm font-medium text-neutral-600 dark:text-neutral-200 backdrop-blur-md bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-[0_1px_3px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.9)] dark:shadow-[0_1px_3px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-150 hover:bg-neutral-200 dark:hover:bg-neutral-700">
             Back home
           </Link>
         </FadeIn>
