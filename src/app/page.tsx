@@ -38,7 +38,8 @@ async function getCommitData() {
     const toLocalDate = (d: Date) => d.toLocaleDateString('en-CA', { timeZone: TZ });
 
     const now = new Date();
-    const since = new Date(now.getTime() - 29 * 86_400_000).toISOString();
+    const sinceDate = new Date(now.getTime() - 29 * 86_400_000);
+    const since = new Date(toLocalDate(sinceDate) + 'T00:00:00').toISOString();
 
     const commitsByDay = new Map<string, { count: number; repos: Set<string> }>();
     for (let i = 29; i >= 0; i--) {
