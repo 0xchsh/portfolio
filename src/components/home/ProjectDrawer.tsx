@@ -111,7 +111,7 @@ export function ProjectDrawer({
 
           {/* Body */}
           <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
-            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-4">
+            <div className="max-w-[704px] mx-auto pt-8 pb-16 flex flex-col gap-8">
               {caseStudySections[project.name] ? (
                 caseStudySections[project.name].map((section, i) => (
                   <div key={i} className="flex flex-col gap-8">
