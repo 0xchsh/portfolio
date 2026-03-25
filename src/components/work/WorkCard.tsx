@@ -209,14 +209,14 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
       )}
 
       {/* Info */}
-      {(!hideTitle || (item.description && !hideDescription)) && <div className="flex items-center gap-1 mt-4">
+      {(!hideTitle || (item.description && !hideDescription)) && <div className="flex items-center mt-4">
         {!hideTitle && item.logo && (
           <Image
             src={item.logo}
             alt=""
             width={14}
             height={14}
-            className="shrink-0"
+            className="shrink-0 mr-[4px]"
           />
         )}
         {!hideTitle && (item.link ? (
@@ -233,7 +233,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
         ))}
         {item.description && !hideDescription && (
           <>
-            {!hideTitle && <span className="text-sm leading-5 text-neutral-500">·</span>}
+            {!hideTitle && <span className="text-sm leading-5 text-neutral-300 dark:text-neutral-600 ml-[2px] mr-[4px]">·</span>}
             <span className="text-sm leading-5 text-neutral-500">{item.description}</span>
           </>
         )}
