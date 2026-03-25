@@ -78,13 +78,13 @@ export function ArtDrawer({
                   {item.title}
                   {/* Desktop: always show size */}
                   <span className="hidden desktop:inline">
-                    <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
+                    <span className="text-neutral-300 dark:text-neutral-600 ml-[2px] mr-[4px]">·</span>
                     <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
                   </span>
                   {/* Mobile: fade between size and collect button */}
                   <span className="desktop:hidden relative inline-block ml-2" style={{ minWidth: '4rem' }}>
                     <span className={`transition-opacity duration-500 ${showCollect ? 'opacity-0' : 'opacity-100'}`}>
-                      <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
+                      <span className="text-neutral-300 dark:text-neutral-600 ml-[2px] mr-[4px]">·</span>
                       <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
                     </span>
                     <a
