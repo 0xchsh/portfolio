@@ -56,21 +56,26 @@ async function getCommitData() {
     });
     const repos: { name: string; fork: boolean }[] = reposRes.ok ? await reposRes.json() : [];
 
-    // For each non-fork repo, fetch commits in the last 30 days sequentially to avoid rate limits
+    // For each non-fork repo, paginate through all commits in the last 30 days
     for (const repo of repos.filter((r) => !r.fork)) {
-      const res = await fetch(
-        `https://api.github.com/repos/0xchsh/${repo.name}/commits?author=0xchsh&since=${since}&per_page=100`,
-        { headers, next: { revalidate: 3600 } },
-      );
-      const commits: { commit: { author: { date: string } } }[] = res.ok ? await res.json() : [];
-      if (!Array.isArray(commits)) continue;
-      for (const commit of commits) {
-        const date = toLocalDate(new Date(commit.commit?.author?.date));
-        const entry = commitsByDay.get(date);
-        if (entry) {
-          entry.count += 1;
-          entry.repos.add(repo.name);
+      let page = 1;
+      while (true) {
+        const res = await fetch(
+          `https://api.github.com/repos/0xchsh/${repo.name}/commits?author=0xchsh&since=${since}&per_page=100&page=${page}`,
+          { headers, next: { revalidate: 3600 } },
+        );
+        const commits: { commit: { author: { date: string } } }[] = res.ok ? await res.json() : [];
+        if (!Array.isArray(commits) || commits.length === 0) break;
+        for (const commit of commits) {
+          const date = toLocalDate(new Date(commit.commit?.author?.date));
+          const entry = commitsByDay.get(date);
+          if (entry) {
+            entry.count += 1;
+            entry.repos.add(repo.name);
+          }
         }
+        if (commits.length < 100) break;
+        page++;
       }
     }
 
