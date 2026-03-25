@@ -82,7 +82,7 @@ export function ArtDrawer({
                     <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
                   </span>
                   {/* Mobile: fade between size and collect button */}
-                  <span className="desktop:hidden relative inline-block ml-1" style={{ minWidth: '4rem' }}>
+                  <span className="desktop:hidden relative inline-block ml-2" style={{ minWidth: '4rem' }}>
                     <span className={`transition-opacity duration-500 ${showCollect ? 'opacity-0' : 'opacity-100'}`}>
                       <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
                       <span className="font-medium text-neutral-500 dark:text-neutral-500">{item.type.filter(t => t !== 'NFT').join(', ')}{item.type.filter(t => t !== 'NFT').length > 0 ? ' · ' : ''}{item.size}</span>
@@ -94,7 +94,7 @@ export function ArtDrawer({
                       onClick={(e) => e.stopPropagation()}
                       className={`absolute left-0 top-1/2 -translate-y-1/2 inline-flex items-center whitespace-nowrap text-sm font-medium text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full transition-opacity duration-500 ${showCollect ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                     >
-                      {item.collectionLabel}
+                      Collect
                       <ArrowUpRight size={12} weight="bold" className="ml-0.5" />
                     </a>
                   </span>

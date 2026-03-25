@@ -73,7 +73,7 @@ export function ProjectDrawer({
                   </span>
                   <span className="desktop:hidden relative inline-block ml-1" style={{ minWidth: '4rem' }}>
                     <span className={`transition-opacity duration-500 ${showVisit ? 'opacity-0' : 'opacity-100'}`}>
-                      <span className="text-neutral-300 dark:text-neutral-600 mx-[2px]">·</span>
+                      <span className="text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>
                       <span className="font-medium text-neutral-500 dark:text-neutral-500">{project.desc}</span>
                     </span>
                     {hasVisit && (
