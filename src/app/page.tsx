@@ -285,15 +285,15 @@ export default async function V2Home() {
             <FadeIn delay={75}>
             <div className="text-sm leading-relaxed text-neutral-500 dark:text-neutral-400 flex flex-col gap-3">
               <p>
-                Designing interfaces and interactions that feel simple, clear, and enjoyable, especially in blockchain and AI, where new patterns are being shaped for the first time.
-              </p>
-              <p>
                 Currently the Lead Product Designer at{' '}
                 <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className={linkClass}>Stellar</a>.
                 {' '}Previously at{' '}
                 <a href="https://warbyparker.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Warby Parker</a>,{' '}
                 <a href="https://uber.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Uber</a>, and{' '}
                 <a href="https://weebly.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Weebly</a>.
+              </p>
+              <p>
+                Designing interfaces and interactions that feel simple, clear, and enjoyable, especially in blockchain and AI, where new patterns are being shaped for the first time.
               </p>
               <p>
                 Writing code through conversation and wiring agents together (Claude Code, OpenClaw, Paperclip).

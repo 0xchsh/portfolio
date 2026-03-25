@@ -73,6 +73,8 @@ export function WorkCarousel() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const nextIdx = (currentIdx + 1) % slides.length;
+
   return (
     <div
       className="relative w-full aspect-video rounded-[8px] overflow-hidden bg-neutral-200 dark:bg-neutral-800 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.04)]"
@@ -81,6 +83,8 @@ export function WorkCarousel() {
       {slides.map((slide, i) => {
         const isExiting  = i === exitingIdx;
         const isCurrent  = i === currentIdx;
+        const isNext     = i === nextIdx;
+        if (!isExiting && !isCurrent && !isNext) return null;
         return (
           <div
             key={i}
