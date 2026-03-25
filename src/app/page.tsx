@@ -34,38 +34,49 @@ export type CommitDay = {
 
 async function getCommitData() {
   try {
-    const responses = await Promise.all(
-      [1, 2, 3].map((page) =>
-        fetch(
-          `https://api.github.com/users/0xchsh/events?per_page=100&page=${page}`,
-          { next: { revalidate: 3600 } },
-        ).then((r) => (r.ok ? r.json() : [])),
-      ),
-    );
-    const events = responses.flat();
-    if (!Array.isArray(events)) return { days: [] as CommitDay[], totalCommits: 0 };
-
     const TZ = 'America/Chicago';
     const toLocalDate = (d: Date) => d.toLocaleDateString('en-CA', { timeZone: TZ });
 
     const now = new Date();
+    const since = new Date(now.getTime() - 29 * 86_400_000).toISOString();
+
     const commitsByDay = new Map<string, { count: number; repos: Set<string> }>();
     for (let i = 29; i >= 0; i--) {
       const d = new Date(now.getTime() - i * 86_400_000);
       commitsByDay.set(toLocalDate(d), { count: 0, repos: new Set() });
     }
 
-    for (const event of events) {
-      if (event.type === 'PushEvent') {
-        const date = toLocalDate(new Date(event.created_at));
-        const entry = commitsByDay.get(date);
-        if (entry) {
-          entry.count += event.payload?.distinct_size ?? event.payload?.commits?.filter((c: { distinct: boolean }) => c.distinct).length ?? 1;
-          const repo = event.repo?.name?.split('/')[1] || event.repo?.name;
-          if (repo) entry.repos.add(repo);
-        }
-      }
-    }
+    // Fetch all public repos
+    const reposRes = await fetch('https://api.github.com/users/0xchsh/repos?per_page=100', {
+      next: { revalidate: 3600 },
+    });
+    const repos: { name: string; fork: boolean }[] = reposRes.ok ? await reposRes.json() : [];
+
+    // For each non-fork repo, fetch commits in the last 30 days
+    await Promise.all(
+      repos
+        .filter((r) => !r.fork)
+        .map(async (repo) => {
+          const pages = await Promise.all(
+            [1, 2].map((page) =>
+              fetch(
+                `https://api.github.com/repos/0xchsh/${repo.name}/commits?author=0xchsh&since=${since}&per_page=100&page=${page}`,
+                { next: { revalidate: 3600 } },
+              ).then((r) => (r.ok ? r.json() : [])),
+            ),
+          );
+          const commits = pages.flat();
+          if (!Array.isArray(commits)) return;
+          for (const commit of commits) {
+            const date = toLocalDate(new Date(commit.commit?.author?.date ?? commit.commit?.committer?.date));
+            const entry = commitsByDay.get(date);
+            if (entry) {
+              entry.count += 1;
+              entry.repos.add(repo.name);
+            }
+          }
+        }),
+    );
 
     const days: CommitDay[] = Array.from(commitsByDay.entries())
       .sort(([a], [b]) => a.localeCompare(b))
