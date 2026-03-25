@@ -13,100 +13,6 @@ type Weather = {
   lowF: number | null;
 };
 
-type CryptoPrice = {
-  symbol: string;
-  price: string;
-  change: string;
-  up: boolean;
-  sparkline: number[];
-};
-
-function Sparkline({ data, up, width = 60, height = 24 }: { data: number[]; up: boolean; width?: number; height?: number }) {
-  const pathRef = useRef<SVGPolylineElement>(null);
-
-  useEffect(() => {
-    const el = pathRef.current;
-    if (!el) return;
-    let len: number;
-    try {
-      len = el.getTotalLength();
-    } catch {
-      return; // element not rendered (e.g. inside display:none container)
-    }
-    el.style.transition = 'none';
-    el.style.strokeDasharray = `${len}`;
-    el.style.strokeDashoffset = `${len}`;
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        el.style.transition = 'stroke-dashoffset 800ms cubic-bezier(0.215, 0.61, 0.355, 1)';
-        el.style.strokeDashoffset = '0';
-      });
-    });
-  }, [data, up]);
-
-  if (!data.length) return null;
-  const min = Math.min(...data);
-  const max = Math.max(...data);
-  const range = max - min || 1;
-  const points = data.map((v, i) => {
-    const x = (i / (data.length - 1)) * width;
-    const pad = 2;
-    const y = pad + (height - pad * 2) - ((v - min) / range) * (height - pad * 2);
-    return `${x},${y}`;
-  }).join(' ');
-
-  return (
-    <svg width="100%" height={height} viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none" className="block">
-      <polyline
-        ref={pathRef}
-        points={points}
-        fill="none"
-        stroke={up ? '#22c55e' : '#ef4444'}
-        strokeWidth={1.25}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function useCryptoPrices() {
-  const [prices, setPrices] = useState<CryptoPrice[] | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    async function fetchPrices() {
-      try {
-        const res = await fetch(
-          'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum&sparkline=true&price_change_percentage=24h',
-        );
-        if (!res.ok) return;
-        const data = await res.json();
-        if (cancelled) return;
-        setPrices(
-          data.map((coin: { symbol: string; current_price: number; price_change_percentage_24h: number; sparkline_in_7d?: { price: number[] } }) => {
-            const change = coin.price_change_percentage_24h ?? 0;
-            // Use last 24 data points from 7d sparkline (each point ≈ 1hr, last 24 = last day)
-            const fullSparkline = coin.sparkline_in_7d?.price ?? [];
-            const sparkline = fullSparkline.slice(-24);
-            return {
-              symbol: coin.symbol.toUpperCase(),
-              price: Math.round(coin.current_price).toLocaleString(),
-              change: change.toFixed(2),
-              up: change >= 0,
-              sparkline,
-            };
-          }),
-        );
-      } catch {}
-    }
-    fetchPrices();
-    return () => { cancelled = true; };
-  }, []);
-
-  return prices;
-}
-
 const widgetCard = 'btn-classic btn-classic-outline bg-background rounded-lg pointer-events-none border border-transparent bg-clip-padding';
 
 export function WeatherPill({ weather, variant }: { weather: Weather; variant?: 'static' }) {
@@ -122,10 +28,8 @@ export function WeatherPill({ weather, variant }: { weather: Weather; variant?: 
     );
   }
   const [open, setOpen] = useState(false);
-  const [openCount, setOpenCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const prices = useCryptoPrices();
   const [now, setNow] = useState(() => new Date());
 
   useEffect(() => {
@@ -162,12 +66,7 @@ export function WeatherPill({ weather, variant }: { weather: Weather; variant?: 
       />
       <button
         ref={buttonRef}
-        onClick={() => {
-          setOpen((v) => {
-            if (!v) setOpenCount((c) => c + 1);
-            return !v;
-          });
-        }}
+        onClick={() => setOpen((v) => !v)}
         className="inline-flex items-center justify-center gap-1 text-sm font-medium border border-transparent bg-clip-padding rounded-lg px-2.5 h-7 cursor-pointer sm:min-w-[204px] sm:w-auto whitespace-nowrap btn-classic btn-classic-outline bg-background"
       >
         <span className="text-neutral-400 hidden sm:inline">Chicago, IL</span>
@@ -232,40 +131,6 @@ export function WeatherPill({ weather, variant }: { weather: Weather; variant?: 
               )}
             </div>
           </div>
-        </div>
-
-        {/* Crypto */}
-        <div
-          className="flex gap-3"
-          style={{
-            opacity: open ? 1 : 0,
-            transform: open ? 'translateY(0)' : 'translateY(-8px)',
-            transition: open
-              ? 'opacity 200ms 100ms cubic-bezier(0.215, 0.61, 0.355, 1), transform 200ms 100ms cubic-bezier(0.215, 0.61, 0.355, 1)'
-              : 'opacity 120ms 0ms ease, transform 120ms 0ms ease',
-          }}
-        >
-          {(prices ?? [
-            { symbol: 'BTC', price: '—', change: '0.00', up: true, sparkline: [] },
-            { symbol: 'ETH', price: '—', change: '0.00', up: true, sparkline: [] },
-          ]).map((coin) => (
-            <div key={coin.symbol} className={`${widgetCard} flex-1 p-3 overflow-hidden`}>
-              <div className="flex items-center justify-between leading-none">
-                <span className="text-xs font-semibold text-neutral-950">{coin.symbol}</span>
-                <span className={`text-[10px] font-medium tabular-nums ${coin.up ? 'text-green-500' : 'text-red-500'}`}>
-                  {coin.up ? '+' : ''}{coin.change}%
-                </span>
-              </div>
-              {coin.sparkline.length > 0 && (
-                <div className="mt-1.5">
-                  <Sparkline key={openCount} data={coin.sparkline} up={coin.up} width={80} height={32} />
-                </div>
-              )}
-              <div className="text-sm font-semibold text-neutral-950 leading-tight mt-2">
-                ${coin.price}
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>

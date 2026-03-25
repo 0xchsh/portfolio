@@ -35,7 +35,7 @@ export function MockupFrame({ mockup, className }: MockupFrameProps) {
             loop
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
             className="w-full h-auto block"
           />
         ) : (
