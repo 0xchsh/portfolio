@@ -25,7 +25,7 @@ export default function NotFound() {
 
         {/* Back home */}
         <FadeIn delay={175}>
-          <Link href="/" className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 dark:hover:text-neutral-100 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 border border-neutral-200 dark:border-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100">
+          <Link href="/" className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 dark:hover:text-neutral-100 bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 px-3 py-1.5 rounded-full transition-colors duration-100">
             <ArrowLeft size={12} weight="bold" />
             Back home
           </Link>
