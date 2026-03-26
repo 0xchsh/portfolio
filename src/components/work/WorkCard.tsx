@@ -48,7 +48,7 @@ export function VideoWithBlur({ src, className, eager }: { src: string; classNam
   const containerRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
   const [inView, setInView] = useState(eager ?? false);
-  const poster = src.replace(/\.(mp4|webm)$/, '-poster.webp');
+  const poster = src.replace('/img/', '/webp/').replace(/\.(mp4|webm)$/, '-poster.webp');
 
   // Lazy load: only start loading video when near viewport
   useEffect(() => {
@@ -233,7 +233,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
         ))}
         {item.description && !hideDescription && (
           <>
-            {!hideTitle && <span className="text-sm leading-5 text-neutral-300 dark:text-neutral-600 ml-[2px] mr-[4px]">·</span>}
+            {!hideTitle && <span className="text-sm leading-5 text-neutral-300 dark:text-neutral-600 mx-[4px]">·</span>}
             <span className="text-sm leading-5 text-neutral-500">{item.description}</span>
           </>
         )}

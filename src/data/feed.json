@@ -53,47 +53,47 @@
       "desc": "Onchain binary values",
       "year": "2024",
       "images": [
-        "/work/art/rgb/signatures.gif",
-        "/work/art/rgb/signatures.webp"
+        "/work/art/rgb/img/signatures.gif",
+        "/work/art/rgb/webp/signatures.webp"
       ],
       "sections": [
         {
-          "image": "/work/art/rgb/01.webp",
+          "image": "/work/art/rgb/webp/01.webp",
           "text": "RGB values follow an 8-bit color model: a range of 0 to 255 for each R, G, and B channel.",
           "blurDataURL": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoKAAUAAUAmJaQAA3AA/vyzqbwxgAAA"
         },
         {
-          "image": "/work/art/rgb/02.webp",
+          "image": "/work/art/rgb/webp/02.webp",
           "text": "Encoded into binary, values can be expressed in 2 states: 0 & 1.",
           "blurDataURL": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoKAAUAAUAmJaQAA3AA/vyzpP+60AAA"
         },
         {
-          "image": "/work/art/rgb/03.webp",
+          "image": "/work/art/rgb/webp/03.webp",
           "text": "Visually, 0 is represented by a black square and 1 by a white square.",
           "blurDataURL": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoKAAUAAUAmJaQAA3AA/vyzqZNpFAAA"
         },
         {
-          "image": "/work/art/rgb/04.webp",
+          "image": "/work/art/rgb/webp/04.webp",
           "text": "The squares represent the binary values for each R, G, and B channel: 3 sets of 8 binary strings, 24 values in total.",
           "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAABwAQCdASoKAAUAAUAmJaQEGAAG4AD+/KzTuteuGBgWTWNcGz4lGL2fZ9Wy9/zj4AAAAA=="
         },
         {
-          "image": "/work/art/rgb/05.webp",
+          "image": "/work/art/rgb/webp/05.webp",
           "text": "These visual values are arranged sequentially around a perfect square, with an empty space in the center.",
           "blurDataURL": "data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBoAAAAwAQCdASoKAAUAAUAmJaQAA3AA/vyzqJQAAA=="
         },
         {
-          "image": "/work/art/rgb/06.webp",
+          "image": "/work/art/rgb/webp/06.webp",
           "text": "Markers are placed at the R, G, and B starting points. One marker is placed in the center.",
           "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoKAAUAAUAmJaQAAxU/n3GYAP7+7XxX3b8V8hvab0FspoAAAAA="
         },
         {
-          "image": "/work/art/rgb/07.webp",
+          "image": "/work/art/rgb/webp/07.webp",
           "text": "Combined altogether results in an RGB Signature.",
           "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoKAAUAAUAmJaQAAp1YqhMAAP7+7X+4bLEAnaP8DGxd3wuQAAA="
         },
         {
-          "image": "/work/art/rgb/08.webp",
+          "image": "/work/art/rgb/webp/08.webp",
           "text": "There are 16,777,216 RGB Signatures in total. No two are alike and each one can only be minted once.",
           "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAABwAQCdASoKAAUAAUAmJaQ24QAXQAD+/LZo2ylNyfCplZA6RAEQAAAA"
         }
@@ -111,8 +111,8 @@
       "desc": "Colorful generative characters",
       "year": "2024",
       "images": [
-        "/work/art/rgb-friends/rgb-friends.gif",
-        "/work/art/rgb-friends/rgb-friends.webp"
+        "/work/art/rgb-friends/img/rgb-friends.gif",
+        "/work/art/rgb-friends/webp/rgb-friends.webp"
       ],
       "size": "26,500+",
       "type": [
@@ -120,26 +120,26 @@
       ],
       "sections": [
         {
-          "image": "/work/art/rgb-friends/anatomy.webp",
+          "image": "/work/art/rgb-friends/webp/anatomy.webp",
           "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoKAAYAAUAmJZQCdH8AFcren6sAAP7/AK+JA5fXhIERcRHIHuHPXPKHoKAxlboIoxdy4AAA"
         },
         {
-          "image": "/work/art/rgb-friends/collab-base.webp",
+          "image": "/work/art/rgb-friends/webp/collab-base.webp",
           "half": true,
           "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoKAAoAAUAmJZwC7AELYJ0SDEAA/v7f+DGYQntukzVot320E5eQf/chPNnJYmpNmjKIHAAA"
         },
         {
-          "image": "/work/art/rgb-friends/collab-nouns.webp",
+          "image": "/work/art/rgb-friends/webp/collab-nouns.webp",
           "half": true,
           "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAABwAQCdASoKAAoAAUAmJaQC7AFAAAD+/K0PdfEVT8lMCWlK1zB/2+EMC7rP/JkzVsn8/zdj1RK+AUVJANA0gvAHEAA="
         },
         {
-          "image": "/work/art/rgb-friends/collab-higher.webp",
+          "image": "/work/art/rgb-friends/webp/collab-higher.webp",
           "half": true,
           "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoKAAoAAUAmJZwC7AELXbdogAAA/v7f3VaYnwaNZZUEvvBD05aCZ9T6/uJ+HlgD00AAAA=="
         },
         {
-          "image": "/work/art/rgb-friends/collab-pudgies.webp",
+          "image": "/work/art/rgb-friends/webp/collab-pudgies.webp",
           "half": true,
           "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoKAAoAAUAmJaQAAt0BBG6wQAD+/t/dVqDUIecEnAn933A2oKhkKSKfdZ2APAAC4OAAAA=="
         }
@@ -161,23 +161,23 @@
       "title": "Hyperbrand: Opepen",
       "desc": "Daily brand remixes",
       "year": "2023",
-      "icon": "/work/art/opepen/The Hundred.gif",
+      "icon": "/work/art/opepen/img/The Hundred.gif",
       "images": [
-        "/work/art/opepen/opepen-01.webp",
-        "/work/art/opepen/opepen-02.gif"
+        "/work/art/opepen/webp/opepen-01.webp",
+        "/work/art/opepen/img/opepen-02.gif"
       ],
       "sections": [
         {
-          "image": "/work/art/opepen/The Hundred.gif",
+          "image": "/work/art/opepen/img/The Hundred.gif",
           "blurDataURL": null
         },
         {
-          "image": "/work/art/opepen/opepen-04.webp",
+          "image": "/work/art/opepen/webp/opepen-04.webp",
           "half": true,
           "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoKAAoAAUAmJZwAD4SQNgmUogAAAP7+3WTK45SoewUoV3/1eOBrb1n+VQSo2TZ6aCu+DUuh9vgIIAAA"
         },
         {
-          "image": "/work/art/opepen/opepen-05.webp",
+          "image": "/work/art/opepen/webp/opepen-05.webp",
           "half": true,
           "text": "A brand is a memetic container for commerce. A hyperbrand is a memetic container for culture.\n\nTherefore, hyperbrand × brand = culture × commerce. Hyperbrands like Opepen, Zora, and Nouns have the unique ability to remix culture and commerce.",
           "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoKAAoAAUAmJZwC7AELZIIBcAAA/v7f36dXGrbp3ovTcz9EEn+/EWwUeQVo8PVCvP0zIYJPkXZ8kNhqC42gAA=="
@@ -201,8 +201,8 @@
       "desc": "Zorb profile collection",
       "year": "2023",
       "images": [
-        "/work/art/zorps/zorps-01.webp",
-        "/work/art/zorps/zorps-02.webp"
+        "/work/art/zorps/webp/zorps-01.webp",
+        "/work/art/zorps/webp/zorps-02.webp"
       ],
       "size": "100",
       "type": [

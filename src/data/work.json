@@ -3,7 +3,7 @@
     "title": "Freighter",
     "description": "Flagship Stellar wallet",
     "src": [
-      "/work/freighter/00-cover-freighter.webp"
+      "/work/freighter/webp/00-cover-freighter.webp"
     ],
     "link": "https://freighter.app",
     "logo": null,
@@ -17,7 +17,7 @@
     "title": "Freighter",
     "description": "Home",
     "src": [
-      "/work/freighter/01-home.mp4"
+      "/work/freighter/img/01-home.mp4"
     ],
     "link": "https://freighter.app",
     "logo": null,
@@ -27,9 +27,9 @@
     "title": "Freighter",
     "description": "History",
     "src": [
-      "/work/freighter/02-past-transactions.webp",
-      "/work/freighter/02-history-details.mp4",
-      "/work/freighter/02-wallets.mp4"
+      "/work/freighter/webp/02-past-transactions.webp",
+      "/work/freighter/img/02-history-details.mp4",
+      "/work/freighter/img/02-wallets.mp4"
     ],
     "link": "https://freighter.app",
     "logo": null,
@@ -44,9 +44,9 @@
     "title": "Freighter",
     "description": "Discover",
     "src": [
-      "/work/freighter/03-discover-1.mp4",
-      "/work/freighter/03-discover-2.mp4",
-      "/work/freighter/03-in-app-browser.webp"
+      "/work/freighter/img/03-discover-1.mp4",
+      "/work/freighter/img/03-discover-2.mp4",
+      "/work/freighter/webp/03-in-app-browser.webp"
     ],
     "link": "https://freighter.app",
     "logo": null,
@@ -61,9 +61,9 @@
     "title": "Freighter",
     "description": "Transactions",
     "src": [
-      "/work/freighter/04-details.mp4",
-      "/work/freighter/04-details-mal.mp4",
-      "/work/freighter/04-review-transactions.mp4"
+      "/work/freighter/img/04-details.mp4",
+      "/work/freighter/img/04-details-mal.mp4",
+      "/work/freighter/img/04-review-transactions.mp4"
     ],
     "link": "https://freighter.app",
     "logo": null,
@@ -73,7 +73,7 @@
     "title": "Freighter",
     "description": "Website",
     "src": [
-      "/work/freighter/05-website.webp"
+      "/work/freighter/webp/05-website.webp"
     ],
     "link": "https://freighter.app",
     "logo": null,
@@ -86,7 +86,7 @@
     "title": "Snack",
     "description": "List curation tool",
     "src": [
-      "/work/snack/00-snack-cover.webp"
+      "/work/snack/webp/00-snack-cover.webp"
     ],
     "cover": true,
     "link": "https://snack.xyz",
@@ -100,7 +100,7 @@
     "title": "Snack",
     "description": "Create list",
     "src": [
-      "/work/snack/01 create-list.mp4"
+      "/work/snack/img/01 create-list.mp4"
     ],
     "link": "https://snack.xyz",
     "logo": null,
@@ -110,7 +110,7 @@
     "title": "Snack",
     "description": "Dashboard",
     "src": [
-      "/work/snack/02 dashboard.webp"
+      "/work/snack/webp/02 dashboard.webp"
     ],
     "link": "https://snack.xyz",
     "logo": null,
@@ -123,7 +123,7 @@
     "title": "Snack",
     "description": "Stats",
     "src": [
-      "/work/snack/05 stats.webp"
+      "/work/snack/webp/05 stats.webp"
     ],
     "link": "https://snack.xyz",
     "logo": null,
@@ -136,7 +136,7 @@
     "title": "Laboratory",
     "description": "Account",
     "src": [
-      "/work/lab/01 account.mp4"
+      "/work/lab/img/01 account.mp4"
     ],
     "link": "https://lab.stellar.org",
     "logo": null,
@@ -146,7 +146,7 @@
     "title": "Laboratory",
     "description": "Transaction",
     "src": [
-      "/work/lab/02 transaction.mp4"
+      "/work/lab/img/02 transaction.mp4"
     ],
     "link": "https://lab.stellar.org",
     "logo": null,
@@ -156,7 +156,7 @@
     "title": "AI Design Jobs",
     "description": "Curated design jobs",
     "src": [
-      "/work/misc/design-jobs-01.webp"
+      "/work/misc/webp/design-jobs-01.webp"
     ],
     "link": "https://ai-design-jobs.vercel.app/",
     "logo": null,
@@ -167,11 +167,11 @@
   },
   {
     "title": "Otto",
-    "description": "",
+    "description": "AI assistant for car owners",
     "src": [
-      "/work/otto/otto-01.png",
-      "/work/otto/otto-02.png",
-      "/work/otto/otto-03.png"
+      "/work/otto/img/otto-01.png",
+      "/work/otto/img/otto-02.png",
+      "/work/otto/img/otto-03.png"
     ],
     "link": null,
     "logo": null,
@@ -186,7 +186,7 @@
     "title": "by.computer",
     "description": "Startup template downloads",
     "src": [
-      "/work/by-computer/by-computer-01.webm"
+      "/work/by-computer/webp/by-computer-01.webm"
     ],
     "link": null,
     "logo": null,
@@ -196,7 +196,7 @@
     "title": "ShinCN",
     "description": "Personal brand design system",
     "src": [
-      "/work/misc/shincn.webp"
+      "/work/misc/webp/shincn.webp"
     ],
     "link": "https://ui.ch.sh",
     "logo": null,
@@ -209,9 +209,9 @@
     "title": "Eco",
     "description": "Cross-chain bridge",
     "src": [
-      "/work/misc/eco-01.webp",
-      "/work/misc/eco-02.webp",
-      "/work/misc/eco-03.webp"
+      "/work/misc/webp/eco-01.webp",
+      "/work/misc/webp/eco-02.webp",
+      "/work/misc/webp/eco-03.webp"
     ],
     "link": "https://portal.eco.com/",
     "logo": null,
@@ -226,9 +226,9 @@
     "title": "Checkmate",
     "description": "Discover with friends",
     "src": [
-      "/work/misc/checkmate-01.webp",
-      "/work/misc/checkmate-02.webp",
-      "/work/misc/checkmate-03.webp"
+      "/work/misc/webp/checkmate-01.webp",
+      "/work/misc/webp/checkmate-02.webp",
+      "/work/misc/webp/checkmate-03.webp"
     ],
     "link": null,
     "logo": null,
@@ -243,7 +243,7 @@
     "title": "Higher",
     "description": "Community-owned brand",
     "src": [
-      "/work/misc/higher.mp4"
+      "/work/misc/img/higher.mp4"
     ],
     "link": "https://aimhigher.net",
     "logo": null,
@@ -253,9 +253,9 @@
     "title": "RGB",
     "description": "Onchain media",
     "src": [
-      "/work/misc/rgb-01.webp",
-      "/work/misc/rgb-02.webp",
-      "/work/misc/rgb-03.webp"
+      "/work/misc/webp/rgb-01.webp",
+      "/work/misc/webp/rgb-02.webp",
+      "/work/misc/webp/rgb-03.webp"
     ],
     "link": "https://rgbso.framer.website/",
     "logo": null,
@@ -270,7 +270,7 @@
     "title": "Rat Labs",
     "description": "Onchain product studio",
     "src": [
-      "/work/misc/ratlabs.webp"
+      "/work/misc/webp/ratlabs.webp"
     ],
     "link": "https://ratlabs.xyz",
     "logo": null,
@@ -280,10 +280,21 @@
     ]
   },
   {
+    "title": "CLI UI",
+    "description": "Terminal UI component explorations",
+    "src": [
+      "/work/misc/img/cli-ui.png"
+    ],
+    "link": null,
+    "logo": null,
+    "ratio": "16:9",
+    "blurDataURLs": []
+  },
+  {
     "title": "ClawPanel",
     "description": "Browser automation dashboard",
     "src": [
-      "/work/clawpanel/00-clawpanel-cover.webp"
+      "/work/clawpanel/webp/00-clawpanel-cover.webp"
     ],
     "link": null,
     "logo": null,
@@ -297,7 +308,7 @@
     "title": "ClawPanel",
     "description": "Overview",
     "src": [
-      "/work/clawpanel/01-clawpanel.webp"
+      "/work/clawpanel/webp/01-clawpanel.webp"
     ],
     "link": null,
     "logo": null,
