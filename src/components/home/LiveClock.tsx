@@ -65,7 +65,7 @@ export function LiveClock() {
   return (
     <span className="tabular-nums">
       {time.split('').map((char, i) => (
-        <AnimatedChar key={i} char={char} className={char === ' ' ? 'w-[0.25em]' : undefined} />
+        <AnimatedChar key={i} char={char} className={/\d/.test(char) ? 'w-[1ch] text-center' : char === ' ' ? 'w-[0.25em]' : undefined} />
       ))}
     </span>
   );
