@@ -15,7 +15,7 @@ type Cell = {
 export function NotFoundBg() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouse = useRef({ x: -999, y: -999 });
-  const raf = useRef<number>();
+  const raf = useRef<number>(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
