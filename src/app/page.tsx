@@ -147,7 +147,7 @@ const caseStudies = [
 
 // directLink: true = external link, false/undefined = opens drawer
 const projects: (ProjectItem & { directLink?: boolean })[] = [
-  { name: 'AI Design Jobs', desc: 'Curated design jobs', href: 'https://ai-design-jobs.vercel.app/', icon: '/icons/aidesignjobs.png', workTitle: 'AI Design Jobs', directLink: true },
+  { name: 'AI Design Jobs', desc: 'Curated design jobs', href: 'https://ai-design-jobs.vercel.app/', icon: '/icons/ai-jobs.svg', workTitle: 'AI Design Jobs', directLink: true },
   { name: 'Otto', desc: 'AI assistant for car owners', href: '#', icon: '/icons/otto.svg', workTitle: 'Otto' },
   { name: 'ShinCN', desc: 'Personal brand design system', href: 'https://ui.ch.sh', icon: '/icons/shin.svg', directLink: true },
   { name: 'Rat Labs', desc: 'Onchain product studio', href: 'https://www.ratlabs.xyz/', icon: '/icons/ratlabs.svg', directLink: true },

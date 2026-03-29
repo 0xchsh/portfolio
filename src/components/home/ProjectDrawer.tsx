@@ -205,7 +205,7 @@ export function ProjectDrawer({
                   {workItems.length > 0 && (
                     <div className="flex flex-col">
                       {workItems.map((item, i) => (
-                        <WorkCardContent key={i} item={item} hideTitle />
+                        <WorkCardContent key={i} item={item} hideTitle hideDescription />
                       ))}
                     </div>
                   )}
