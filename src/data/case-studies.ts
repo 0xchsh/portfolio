@@ -67,7 +67,7 @@ export const caseStudySections: Record<string, CaseStudySection[]> = {
   Snack: [
     {
       title: 'Overview',
-      text: `Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.\n\nThe core interaction is paste-to-save: drop a URL, and Snack scrapes the metadata instantly. No formatting, no organizing, just a running list you can share with one link. It's live at snack.xyz.`,
+      text: `Snack is the simplest way to save and share links. It started when I tried to build a directory of the best crypto websites. Every directory was custom-built, and there was no simple tool to create and manage one.\n\nThe core interaction is paste-to-save: drop a URL, and Snack scrapes the metadata instantly. No formatting, no organizing, just a running list you can share with one link. It's live at [snack.xyz](https://snack.xyz).`,
     },
     {
       title: 'Approach',

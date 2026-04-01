@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function parseLinks(text: string): React.ReactNode[] {
+export function parseLinks(text: string, linkClassName?: string): React.ReactNode[] {
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
@@ -25,7 +25,7 @@ export function parseLinks(text: string): React.ReactNode[] {
           href: match[2],
           target: '_blank',
           rel: 'noopener noreferrer',
-          className:
+          className: linkClassName ??
             'text-foreground underline underline-offset-4 decoration-dashed decoration-muted-foreground/50 hover:text-muted-foreground transition-colors',
         },
         match[1]

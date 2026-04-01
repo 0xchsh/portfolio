@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@/lib/utils';
+import { cn, parseLinks } from '@/lib/utils';
 
 // Parse inline code (backticks) and render with styling
 function parseInlineCode(text: string): React.ReactNode[] {
@@ -51,7 +51,7 @@ export function Description({ text, className }: DescriptionProps) {
           if (!section.trim()) return null;
           return (
             <p key={i} className="text-foreground text-sm leading-5 font-medium whitespace-pre-line">
-              {parseInlineCode(section.trim())}
+              {parseLinks(section.trim(), 'font-medium underline decoration-dotted decoration-neutral-300 dark:decoration-neutral-600 underline-offset-[4px] hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors duration-100')}
             </p>
           );
         }
@@ -66,7 +66,7 @@ export function Description({ text, className }: DescriptionProps) {
             </h3>
             {body && (
               <p className="text-foreground text-sm leading-5 font-medium whitespace-pre-line">
-                {parseInlineCode(body)}
+                {parseLinks(body, 'font-medium underline decoration-dotted decoration-neutral-300 dark:decoration-neutral-600 underline-offset-[4px] hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors duration-100')}
               </p>
             )}
           </div>

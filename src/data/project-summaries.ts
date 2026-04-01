@@ -19,7 +19,7 @@ The reason Google doesn't work for this is that it has no idea what car you have
 
   Snack: `Snack is the simplest way to save and share links. Started when I tried to build a directory of the best crypto websites and realized there was no tool to just make one.
 
-Paste a URL, Snack scrapes the metadata. No formatting, no organizing - just a running list you can share with one link. Live at snack.xyz.
+Paste a URL, Snack scrapes the metadata. No formatting, no organizing - just a running list you can share with one link. Live at [snack.xyz](https://snack.xyz).
 
 I spent $30,000 out of pocket on an agency MVP, then Claude Code came out and I rebuilt everything and more from scratch in a month. The leverage is real and it compounds.
 

@@ -11,6 +11,7 @@ import workData from '@/data/work.json';
 import type { WorkItem } from '@/components/work/WorkCard';
 import { WorkCardContent, VideoWithBlur } from '@/components/work/WorkCard';
 import { projectSummaries } from '@/data/project-summaries';
+import { parseLinks } from '@/lib/utils';
 import { caseStudySections } from '@/data/case-studies';
 
 type Project = {
@@ -187,7 +188,7 @@ export function ProjectDrawer({
                               </div>
                             );
                           }
-                          return <p key={j}>{para}</p>;
+                          return <p key={j}>{parseLinks(para, 'font-medium underline decoration-dotted decoration-neutral-300 dark:decoration-neutral-600 underline-offset-[4px] hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors duration-100')}</p>;
                         })}
                         {section.footnote && (
                           <>
@@ -223,7 +224,7 @@ export function ProjectDrawer({
                             </ul>
                           );
                         }
-                        return <p key={i}>{block}</p>;
+                        return <p key={i}>{parseLinks(block, 'font-medium underline decoration-dotted decoration-neutral-300 dark:decoration-neutral-600 underline-offset-[4px] hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors duration-100')}</p>;
                       })}
                     </div>
                   )}
