@@ -1,5 +1,13 @@
 let audioCtx: AudioContext | null = null;
 
+export function unlockTickAudio() {
+  if (!audioCtx) {
+    audioCtx = new AudioContext();
+  } else if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+}
+
 export function playTick() {
   if (!audioCtx) audioCtx = new AudioContext();
   const ctx = audioCtx;

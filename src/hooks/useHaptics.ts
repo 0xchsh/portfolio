@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { unlockTickAudio } from '@/lib/tick';
 
 export function playHapticClick(ctx: AudioContext) {
   if (ctx.state === 'suspended') ctx.resume();
@@ -81,6 +82,7 @@ export function useGlobalHaptics() {
     }
 
     function handlePointerDown() {
+      unlockTickAudio();
       if (localStorage.getItem('haptics-muted') !== 'true') {
         playClick();
       }
