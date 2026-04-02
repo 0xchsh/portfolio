@@ -166,6 +166,17 @@
     ]
   },
   {
+    "title": "ElevenRooms",
+    "description": "Soundscapes powered by ElevenLabs",
+    "src": [
+      "/work/misc/img/elevenrooms-reel.mp4"
+    ],
+    "link": "https://elevenrooms.vercel.app",
+    "logo": null,
+    "ratio": "16:9",
+    "objectPosition": "bottom"
+  },
+  {
     "title": "Otto",
     "description": "AI assistant for car owners",
     "src": [

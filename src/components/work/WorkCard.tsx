@@ -25,7 +25,7 @@ export function SingleMedia({ src, alt, objectPosition, eager, sizes, blurDataUR
 
   if (isVideo) {
     return (
-      <VideoWithBlur src={src} className={`w-full h-full object-cover object-${pos}`} eager={eager} />
+      <VideoWithBlur src={src} className="w-full h-full object-cover" objectPosition={pos} eager={eager} />
     );
   }
 
@@ -43,7 +43,7 @@ export function SingleMedia({ src, alt, objectPosition, eager, sizes, blurDataUR
   );
 }
 
-export function VideoWithBlur({ src, className, eager }: { src: string; className: string; eager?: boolean }) {
+export function VideoWithBlur({ src, className, objectPosition, eager }: { src: string; className: string; objectPosition?: string; eager?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
@@ -80,7 +80,8 @@ export function VideoWithBlur({ src, className, eager }: { src: string; classNam
         src={poster}
         alt=""
         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-        className={`absolute inset-0 w-full h-full object-cover ${className.includes('object-top') ? 'object-top' : ''} transition-opacity duration-300 ${loaded ? 'opacity-0' : 'opacity-100'}`}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${loaded ? 'opacity-0' : 'opacity-100'}`}
+        style={objectPosition ? { objectPosition } : undefined}
       />
       {inView && (
         <video
@@ -91,6 +92,7 @@ export function VideoWithBlur({ src, className, eager }: { src: string; classNam
           muted
           playsInline
           className={`${className} transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+          style={objectPosition ? { objectPosition } : undefined}
         />
       )}
     </div>
@@ -176,7 +178,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
       {/* Media */}
       {isMobileSingle ? (
         <div
-          className="rounded-lg overflow-hidden flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800"
+          className="rounded-xl overflow-hidden flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800"
           style={{ aspectRatio: '16 / 9' }}
         >
           <div className="h-[85%]" style={{ aspectRatio: '9 / 19.5' }}>
@@ -185,7 +187,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
         </div>
       ) : isSingle ? (
         <div
-          className="rounded-lg overflow-hidden relative border border-neutral-100 dark:border-neutral-800"
+          className="rounded-xl overflow-hidden relative border border-neutral-100 dark:border-neutral-800"
           style={{
             aspectRatio: '16 / 9',
             backgroundColor: '#f5f5f5',
@@ -195,7 +197,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
         </div>
       ) : (
         <div
-          className="rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800"
+          className="rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800"
           style={{ aspectRatio: '16 / 9' }}
         >
           <div className="h-full flex items-center justify-center gap-3 px-10 py-8">

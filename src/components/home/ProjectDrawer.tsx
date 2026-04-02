@@ -126,7 +126,7 @@ export function ProjectDrawer({
           </div>
 
           {/* Body */}
-          <div className="flex-1 overflow-y-auto px-5" data-vaul-no-drag>
+          <div className="flex-1 overflow-y-auto px-5 select-text" data-vaul-no-drag>
             <div className={`max-w-[704px] mx-auto pb-16 flex flex-col gap-8 ${caseStudySections[project.name] ? 'pt-16' : 'pt-8'}`}>
               {caseStudySections[project.name] ? (
                 caseStudySections[project.name].map((section, i) => (
