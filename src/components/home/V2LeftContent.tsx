@@ -60,6 +60,7 @@ const MY_STACK: { name: string; description: string; href?: string }[] = [
   { name: 'agent-browser', description: 'Browser automation for agents', href: 'https://skills.sh/vercel-labs/agent-browser/agent-browser' },
   { name: 'agentation', description: 'Agentation toolbar for Next.js', href: 'https://www.agentation.com/' },
   { name: 'copywriting', description: 'Marketing copy for any page', href: 'https://skills.sh/coreyhaines31/marketingskills/copywriting' },
+  { name: 'electron', description: 'Cross-platform desktop apps', href: 'https://skills.sh/teachingai/full-stack-skills/electron' },
   { name: 'emil-design-engineering', description: 'Polished web interface patterns', href: 'https://animations.dev/learn/emil-skill' },
   { name: 'find-skills', description: 'Discover and install skills', href: 'https://skills.sh/vercel-labs/skills/find-skills' },
   { name: 'frontend-design', description: 'Production-grade UI components', href: 'https://skills.sh/anthropics/skills/frontend-design' },
