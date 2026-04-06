@@ -153,6 +153,17 @@
     "ratio": "16:9"
   },
   {
+    "title": "ElevenRooms",
+    "description": "Soundscapes powered by ElevenLabs",
+    "src": [
+      "/work/misc/img/elevenrooms-reel.mp4"
+    ],
+    "link": "https://elevenrooms.vercel.app",
+    "logo": null,
+    "ratio": "16:9",
+    "objectPosition": "bottom"
+  },
+  {
     "title": "AI Design Jobs",
     "description": "Curated design jobs",
     "src": [
@@ -164,17 +175,6 @@
     "blurDataURLs": [
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdUlEQVR4nFWNSwoEIAxDvf8JdalLERcqKv4ypIMyI8TQ8Jqqcw723lhrPWd2xYyu+HnvYYyB1hohhC+0D/bZAlIKAFprSCmh1vrXeNukkWDvXTTG4Ig5pyxwkRf4Hsgw5/xAtpVS4Jz7BZuAMUbx28jZWivgB9EW6k7gmn6OAAAAAElFTkSuQmCC"
     ]
-  },
-  {
-    "title": "ElevenRooms",
-    "description": "Soundscapes powered by ElevenLabs",
-    "src": [
-      "/work/misc/img/elevenrooms-reel.mp4"
-    ],
-    "link": "https://elevenrooms.vercel.app",
-    "logo": null,
-    "ratio": "16:9",
-    "objectPosition": "bottom"
   },
   {
     "title": "Otto",
