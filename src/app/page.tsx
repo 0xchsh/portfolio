@@ -38,7 +38,8 @@ async function getCommitData() {
     const toLocalDate = (d: Date) => d.toLocaleDateString('en-CA', { timeZone: TZ });
 
     const now = new Date();
-    const since = new Date(now.getTime() - 30 * 86_400_000).toISOString();
+    const from = new Date(now.getTime() - 30 * 86_400_000).toISOString();
+    const to = now.toISOString();
 
     const commitsByDay = new Map<string, { count: number; repos: Set<string> }>();
     for (let i = 29; i >= 0; i--) {
@@ -47,35 +48,44 @@ async function getCommitData() {
     }
 
     const token = process.env.GITHUB_TOKEN;
-    const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
+    if (!token) return { days: [] as CommitDay[], totalCommits: 0 };
 
-    // Fetch all public repos
-    const reposRes = await fetch('https://api.github.com/users/0xchsh/repos?per_page=100', {
-      headers,
-      next: { revalidate: 3600 },
-    });
-    const repos: { name: string; fork: boolean }[] = reposRes.ok ? await reposRes.json() : [];
-
-    // For each non-fork repo, paginate through all commits in the last 30 days
-    for (const repo of repos.filter((r) => !r.fork)) {
-      let page = 1;
-      while (true) {
-        const res = await fetch(
-          `https://api.github.com/repos/0xchsh/${repo.name}/commits?author=0xchsh&since=${since}&per_page=100&page=${page}`,
-          { headers, next: { revalidate: 3600 } },
-        );
-        const commits: { commit: { author: { date: string } } }[] = res.ok ? await res.json() : [];
-        if (!Array.isArray(commits) || commits.length === 0) break;
-        for (const commit of commits) {
-          const date = toLocalDate(new Date(commit.commit?.author?.date));
-          const entry = commitsByDay.get(date);
-          if (entry) {
-            entry.count += 1;
-            entry.repos.add(repo.name);
+    const query = `
+      query($from: DateTime!, $to: DateTime!) {
+        user(login: "0xchsh") {
+          contributionsCollection(from: $from, to: $to) {
+            commitContributionsByRepository(maxRepositories: 100) {
+              repository { name }
+              contributions(first: 100) {
+                nodes {
+                  occurredAt
+                  commitCount
+                }
+              }
+            }
           }
         }
-        if (commits.length < 100) break;
-        page++;
+      }
+    `;
+
+    const res = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query, variables: { from, to } }),
+      next: { revalidate: 3600 },
+    });
+
+    const json = await res.json();
+    const byRepo = json?.data?.user?.contributionsCollection?.commitContributionsByRepository ?? [];
+
+    for (const { repository, contributions } of byRepo) {
+      for (const node of contributions.nodes) {
+        const date = toLocalDate(new Date(node.occurredAt));
+        const entry = commitsByDay.get(date);
+        if (entry) {
+          entry.count += node.commitCount;
+          entry.repos.add(repository.name);
+        }
       }
     }
 
