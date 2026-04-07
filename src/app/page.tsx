@@ -49,19 +49,34 @@ async function getCommitData() {
     const token = process.env.GITHUB_TOKEN;
     const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
 
-    // Fetch all public repos
-    const reposRes = await fetch('https://api.github.com/users/0xchsh/repos?per_page=100', {
-      headers,
-      next: { revalidate: 3600 },
-    });
-    const repos: { name: string; fork: boolean }[] = reposRes.ok ? await reposRes.json() : [];
+    // Fetch all repos (including private ones when authenticated)
+    const allRepos: { name: string; fork: boolean; owner: { login: string } }[] = [];
+    {
+      let page = 1;
+      const baseUrl = token
+        ? 'https://api.github.com/user/repos?affiliation=owner,collaborator,organization_member&per_page=100'
+        : 'https://api.github.com/users/0xchsh/repos?per_page=100';
+      while (true) {
+        const reposRes = await fetch(`${baseUrl}&page=${page}`, {
+          headers,
+          next: { revalidate: 3600 },
+        });
+        const batch: { name: string; fork: boolean; owner: { login: string } }[] = reposRes.ok ? await reposRes.json() : [];
+        if (!Array.isArray(batch) || batch.length === 0) break;
+        allRepos.push(...batch);
+        if (batch.length < 100) break;
+        page++;
+      }
+    }
+    const repos = allRepos;
 
     // For each non-fork repo, paginate through all commits in the last 30 days
     for (const repo of repos.filter((r) => !r.fork)) {
+      const repoFullName = `${repo.owner?.login ?? '0xchsh'}/${repo.name}`;
       let page = 1;
       while (true) {
         const res = await fetch(
-          `https://api.github.com/repos/0xchsh/${repo.name}/commits?author=0xchsh&since=${since}&per_page=100&page=${page}`,
+          `https://api.github.com/repos/${repoFullName}/commits?author=0xchsh&since=${since}&per_page=100&page=${page}`,
           { headers, next: { revalidate: 3600 } },
         );
         const commits: { commit: { author: { date: string } } }[] = res.ok ? await res.json() : [];
