@@ -4,6 +4,7 @@ import { SquircleNoScript } from "@squircle-js/react";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { AgentModeProvider } from "@/components/providers/AgentModeProvider";
 import { GlobalHaptics } from "@/components/shared/GlobalHaptics";
+import { ClickSpark } from "@/components/shared/ClickSpark";
 import { Toaster } from "sonner";
 import "./globals.css";
 
@@ -36,6 +37,7 @@ export default function RootLayout({
       >
         <SquircleNoScript />
         <GlobalHaptics />
+        <ClickSpark />
         <ThemeProvider>
           <AgentModeProvider>
             {children}
