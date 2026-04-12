@@ -4,9 +4,10 @@ export async function GET() {
   const token = process.env.GITHUB_TOKEN?.trim();
   if (!token) return NextResponse.json({
     error: 'No token',
-    allEnvKeys: Object.keys(process.env).sort(),
-    hasGithubToken: 'GITHUB_TOKEN' in process.env,
-    githubTokenValue: process.env.GITHUB_TOKEN ? `${process.env.GITHUB_TOKEN.slice(0,4)}...len=${process.env.GITHUB_TOKEN.length}` : 'undefined',
+    projectId: process.env.VERCEL_PROJECT_ID,
+    projectName: process.env.VERCEL_PROJECT_NAME,
+    env: process.env.VERCEL_ENV,
+    url: process.env.VERCEL_PROJECT_PRODUCTION_URL,
   });
 
   const now = new Date();
