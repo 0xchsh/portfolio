@@ -283,6 +283,8 @@ export default async function V2Home() {
   ]);
   const { days, totalCommits } = commitData;
   console.warn('[V2Home] received totalCommits:', totalCommits, 'days.length:', days.length);
+  // DEBUG: hardcode to test rendering
+  const debugTotal = 999;
 
   const projectsWithDrawer = projects.filter(p => !p.directLink);
   const navTotal = caseStudies.length + projectsWithDrawer.length + artItems.length;
@@ -464,7 +466,7 @@ export default async function V2Home() {
           <CommitGraph days={days} />
           <div className="flex items-center justify-between">
             <span className={metaLabel}>Last 30 days</span>
-            <span className={`${metaLabel} tabular-nums`}>{totalCommits} commits</span>
+            <span className={`${metaLabel} tabular-nums`}>{debugTotal} commits (real: {totalCommits})</span>
           </div>
         </section>
       </FadeIn>
