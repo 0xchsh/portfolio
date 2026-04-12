@@ -201,7 +201,7 @@ export function StackContent() {
                         : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
                     )}
                   >
-                    <SquaresFour size={14} weight={view === 'grid' ? 'fill' : 'regular'} />
+                    <SquaresFour size={16} weight={view === 'grid' ? 'fill' : 'regular'} />
                   </button>
                   <button
                     onClick={() => setView('list')}
@@ -212,7 +212,7 @@ export function StackContent() {
                         : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
                     )}
                   >
-                    <List size={14} weight={view === 'list' ? 'bold' : 'regular'} />
+                    <List size={16} weight={view === 'list' ? 'bold' : 'regular'} />
                   </button>
               </div>
             }
@@ -238,7 +238,7 @@ export function StackContent() {
                           : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
                       )}
                     >
-                      <SquaresFour size={14} weight={view === 'grid' ? 'fill' : 'regular'} />
+                      <SquaresFour size={16} weight={view === 'grid' ? 'fill' : 'regular'} />
                     </button>
                     <button
                       onClick={() => setView('list')}
@@ -249,7 +249,7 @@ export function StackContent() {
                           : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
                       )}
                     >
-                      <List size={14} weight={view === 'list' ? 'bold' : 'regular'} />
+                      <List size={16} weight={view === 'list' ? 'bold' : 'regular'} />
                     </button>
                 </div>
               }

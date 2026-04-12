@@ -36,7 +36,7 @@ function HapticsToggle() {
           {muted ? <SpeakerSlash size={16} weight="bold" /> : <SpeakerHigh size={16} weight="bold" />}
         </button>
       </TooltipTrigger>
-      <TooltipContent side="top" sideOffset={4} className="px-2 py-1">
+      <TooltipContent side="top" sideOffset={2} className="px-1.5 py-0 text-[10px]">
         {muted ? 'Unmute' : 'Mute'}
       </TooltipContent>
     </Tooltip>
@@ -56,7 +56,7 @@ function DarkModeToggle() {
           {theme === 'dark' ? <Sun size={16} weight="bold" /> : <Moon size={16} weight="bold" />}
         </button>
       </TooltipTrigger>
-      <TooltipContent side="top" sideOffset={4} className="px-2 py-1">
+      <TooltipContent side="top" sideOffset={2} className="px-1.5 py-0 text-[10px]">
         {theme === 'dark' ? 'Light mode' : 'Dark mode'}
       </TooltipContent>
     </Tooltip>
@@ -81,7 +81,7 @@ export function V2Controls() {
             <Files size={16} weight={pathname === '/skills' ? 'fill' : 'bold'} />
           </Link>
         </TooltipTrigger>
-        <TooltipContent side="top" sideOffset={4} className="px-2 py-1">Skills</TooltipContent>
+        <TooltipContent side="top" sideOffset={2} className="px-1.5 py-0 text-[10px]">Skills</TooltipContent>
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -97,7 +97,7 @@ export function V2Controls() {
             <Star size={16} weight={pathname === '/stack' ? 'fill' : 'bold'} />
           </Link>
         </TooltipTrigger>
-        <TooltipContent side="top" sideOffset={4} className="px-2 py-1">Stack</TooltipContent>
+        <TooltipContent side="top" sideOffset={2} className="px-1.5 py-0 text-[10px]">Stack</TooltipContent>
       </Tooltip>
       <HapticsToggle />
       <DarkModeToggle />
