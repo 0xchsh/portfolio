@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { unstable_noStore as noStore } from 'next/cache';
 import { XLogo, GithubLogo, Envelope, ArrowUpRight, Copy } from '@phosphor-icons/react/dist/ssr';
 import { WorkCarousel } from '@/components/home/WorkCarousel';
 import { WeatherIcon } from '@/components/home/WeatherIcon';
@@ -66,11 +65,7 @@ async function getCommitData() {
 
     const res = await fetch('https://api.github.com/graphql', {
       method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-        'X-Cache-Bust': 'v2',
-      },
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ query, variables: { from, to } }),
       next: { revalidate: 3600 },
     });
@@ -101,11 +96,9 @@ async function getCommitData() {
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([date, { count, repos }]) => ({ date, count, repos: Array.from(repos) }));
 
-    const total = days.reduce((s, d) => s + d.count, 0);
-    process.stdout.write(`[CommitGraph] total=${total} days=${days.length}\n`);
-    return { days, totalCommits: total };
+    return { days, totalCommits: days.reduce((s, d) => s + d.count, 0) };
   } catch (err) {
-    process.stderr.write(`[CommitGraph] Exception: ${err}\n`);
+    console.error('[CommitGraph] Exception:', err);
     return { days: [] as CommitDay[], totalCommits: 0 };
   }
 }
@@ -278,7 +271,6 @@ function ArtRow({ item, navIndex }: { item: ArtItem; navIndex?: number }) {
 // ---------------------------------------------------------------------------
 
 export default async function V2Home() {
-  noStore();
   const [{ days, totalCommits }, weather, commitHash] = await Promise.all([
     getCommitData(),
     getWeather(),
