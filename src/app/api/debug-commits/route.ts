@@ -2,7 +2,12 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   const token = process.env.GITHUB_TOKEN?.trim();
-  if (!token) return NextResponse.json({ error: 'No token', envKeys: Object.keys(process.env).filter(k => k.includes('GIT')) });
+  if (!token) return NextResponse.json({
+    error: 'No token',
+    allEnvKeys: Object.keys(process.env).sort(),
+    hasGithubToken: 'GITHUB_TOKEN' in process.env,
+    githubTokenValue: process.env.GITHUB_TOKEN ? `${process.env.GITHUB_TOKEN.slice(0,4)}...len=${process.env.GITHUB_TOKEN.length}` : 'undefined',
+  });
 
   const now = new Date();
   const from = new Date(now.getTime() - 30 * 86_400_000).toISOString();
