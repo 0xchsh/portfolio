@@ -24,16 +24,28 @@ interface Spark {
 
 export function ClickSpark({
   sparkColor = "currentColor",
-  sparkOpacity = 0.5,
-  sparkSize = 10,
-  sparkRadius = 15,
-  sparkCount = 8,
-  duration = 400,
+  sparkOpacity = 0.3,
+  sparkSize = 6,
+  sparkRadius = 12,
+  sparkCount = 6,
+  duration = 300,
   easing = "ease-out",
   extraScale = 1.0,
 }: ClickSparkProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const sparksRef = useRef<Spark[]>([]);
+  const mutedRef = useRef(false);
+
+  useEffect(() => {
+    mutedRef.current = localStorage.getItem('haptics-muted') === 'true';
+    const onStorage = () => { mutedRef.current = localStorage.getItem('haptics-muted') === 'true'; };
+    window.addEventListener('storage', onStorage);
+    window.addEventListener('haptics-muted-change', onStorage);
+    return () => {
+      window.removeEventListener('storage', onStorage);
+      window.removeEventListener('haptics-muted-change', onStorage);
+    };
+  }, []);
 
   const easeFunc = useCallback(
     (t: number) => {
@@ -89,7 +101,8 @@ export function ClickSpark({
           sparkColor === "currentColor"
             ? getComputedStyle(canvas).color
             : sparkColor;
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 1.5;
+        ctx.lineCap = "round";
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
@@ -101,6 +114,7 @@ export function ClickSpark({
     animationId = requestAnimationFrame(draw);
 
     const handleClick = (e: MouseEvent) => {
+      if (mutedRef.current) return;
       const now = performance.now();
       const newSparks: Spark[] = Array.from({ length: sparkCount }, (_, i) => ({
         x: e.clientX,

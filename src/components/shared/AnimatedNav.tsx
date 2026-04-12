@@ -7,14 +7,15 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { ButtonGroup } from '@/components/ui/button-group';
 import {
-  HandWaving, SquaresFour,
+  HandWaving, Stack, Plugs,
 } from '@phosphor-icons/react';
 
 type PhosphorIcon = ComponentType<{ size?: number; weight?: 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone' }>;
 
 const navItems: { href: string; label: string; icon: PhosphorIcon }[] = [
   { href: '/', label: 'About', icon: HandWaving },
-  { href: '/work', label: 'Work', icon: SquaresFour },
+  { href: '/stack', label: 'Stack', icon: Stack },
+  { href: '/apis', label: 'APIs', icon: Plugs },
 ];
 
 function MobileNav() {

@@ -178,7 +178,7 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
       {/* Media */}
       {isMobileSingle ? (
         <div
-          className="rounded-xl overflow-hidden flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800"
+          className="rounded-xl overflow-hidden flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-transparent"
           style={{ aspectRatio: '16 / 9' }}
         >
           <div className="h-[85%]" style={{ aspectRatio: '9 / 19.5' }}>
@@ -187,17 +187,14 @@ export function WorkCardContent({ item, mediaOnly, hideTitle, hideDescription }:
         </div>
       ) : isSingle ? (
         <div
-          className="rounded-xl overflow-hidden relative border border-neutral-100 dark:border-neutral-800"
-          style={{
-            aspectRatio: '16 / 9',
-            backgroundColor: '#f5f5f5',
-          }}
+          className="rounded-xl overflow-hidden relative bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-transparent"
+          style={{ aspectRatio: '16 / 9' }}
         >
           <SingleMedia src={item.src[0]} alt={item.title} objectPosition={item.objectPosition} blurDataURL={blur[0]} />
         </div>
       ) : (
         <div
-          className="rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-800"
+          className="rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-100 dark:border-transparent"
           style={{ aspectRatio: '16 / 9' }}
         >
           <div className="h-full flex items-center justify-center gap-3 px-10 py-8">

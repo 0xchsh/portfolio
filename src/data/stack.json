@@ -1,0 +1,714 @@
+{
+  "categories": [
+    {
+      "name": "Agents",
+      "items": [
+        {
+          "name": "Companies.sh",
+          "url": "companies.sh",
+          "description": "Agent company directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=companies.sh&sz=64"
+        },
+        {
+          "name": "Paperclip",
+          "url": "paperclip.ing",
+          "description": "AI agent platform",
+          "favicon": "https://www.google.com/s2/favicons?domain=paperclip.ing&sz=64"
+        },
+        {
+          "name": "Conductor",
+          "url": "conductor.build",
+          "description": "Workflow automation",
+          "favicon": "https://www.google.com/s2/favicons?domain=conductor.build&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Articles",
+      "items": [
+        {
+          "name": "Casino on Mars",
+          "url": "paradigm.xyz",
+          "href": "paradigm.xyz/2023/09/casino-on-mars",
+          "description": "Paradigm on crypto infrastructure",
+          "favicon": "https://www.google.com/s2/favicons?domain=paradigm.xyz&sz=64"
+        },
+        {
+          "name": "Chimeric Worlding",
+          "url": "chimeric-worlding.netlify.app",
+          "description": "Speculative design essay",
+          "favicon": "https://www.google.com/s2/favicons?domain=chimeric-worlding.netlify.app&sz=64"
+        },
+        {
+          "name": "Family Values",
+          "url": "benji.org",
+          "href": "benji.org/family-values",
+          "description": "Benji on family values",
+          "favicon": "https://www.google.com/s2/favicons?domain=benji.org&sz=64"
+        },
+        {
+          "name": "How We Built the v0 iOS App",
+          "url": "vercel.com",
+          "href": "vercel.com/blog/how-we-built-the-v0-ios-app",
+          "description": "Vercel engineering blog",
+          "favicon": "https://www.google.com/s2/favicons?domain=vercel.com&sz=64"
+        },
+        {
+          "name": "Jack Clark on AI",
+          "url": "x.com",
+          "href": "x.com/jackclarksf/status/2003526145380151614",
+          "description": "AI discourse on X",
+          "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64"
+        },
+        {
+          "name": "Let the Robots Have This One",
+          "url": "theargumentmag.com",
+          "href": "theargumentmag.com/p/please-let-the-robots-have-this-one",
+          "description": "The Argument on AI and labor",
+          "favicon": "https://www.google.com/s2/favicons?domain=theargumentmag.com&sz=64"
+        },
+        {
+          "name": "My Life Is a Lie",
+          "url": "www.yesigiveafig.com",
+          "href": "www.yesigiveafig.com/p/part-1-my-life-is-a-lie",
+          "description": "Personal essay",
+          "favicon": "https://www.google.com/s2/favicons?domain=yesigiveafig.com&sz=64"
+        },
+        {
+          "name": "Notes on Internet Addiction",
+          "url": "benroy.substack.com",
+          "href": "benroy.substack.com/p/notes-on-internet-addiction",
+          "description": "Ben Roy on internet habits",
+          "favicon": "https://www.google.com/s2/favicons?domain=substack.com&sz=64"
+        },
+        {
+          "name": "Optimism vs Pessimism in Design",
+          "url": "itsnicethat.com",
+          "href": "itsnicethat.com/articles/elizabeth-goodspeed-optimism-vs-pessimism-graphic-design-270325",
+          "description": "Elizabeth Goodspeed on graphic design",
+          "favicon": "https://www.google.com/s2/favicons?domain=itsnicethat.com&sz=64"
+        },
+        {
+          "name": "Product-Led Protocols",
+          "url": "danromero.org",
+          "href": "danromero.org/product-led-protocols.html",
+          "description": "Dan Romero on protocol growth",
+          "favicon": "https://www.google.com/s2/favicons?domain=danromero.org&sz=64"
+        },
+        {
+          "name": "Shape of AI",
+          "url": "shapeof.ai",
+          "description": "AI interface patterns",
+          "favicon": "https://www.google.com/s2/favicons?domain=shapeof.ai&sz=64"
+        },
+        {
+          "name": "Sufficient Decentralization",
+          "url": "varunsrinivasan.com",
+          "href": "varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks",
+          "description": "Decentralization for social networks",
+          "favicon": "https://www.google.com/s2/favicons?domain=varunsrinivasan.com&sz=64"
+        },
+        {
+          "name": "Tech Stack",
+          "url": "visitors.now",
+          "href": "visitors.now/blog/tech-stack",
+          "description": "Visitors tech stack breakdown",
+          "favicon": "https://www.google.com/s2/favicons?domain=visitors.now&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Components",
+      "items": [
+        {
+          "name": "Animate UI",
+          "url": "animate-ui.com",
+          "href": "animate-ui.com/docs/components",
+          "description": "Animation component library",
+          "favicon": "https://www.google.com/s2/favicons?domain=animate-ui.com&sz=64"
+        },
+        {
+          "name": "Animated React Collection",
+          "url": "github.com",
+          "href": "github.com/sanjay10985/animated-react-collection",
+          "description": "Animated React components",
+          "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=64"
+        },
+        {
+          "name": "Boneyard",
+          "url": "github.com",
+          "href": "github.com/0xGF/boneyard",
+          "description": "Skeleton UI components",
+          "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=64"
+        },
+        {
+          "name": "CSS Loaders",
+          "url": "css-loaders.com",
+          "href": "css-loaders.com/classic",
+          "description": "Pure CSS loading animations",
+          "favicon": "https://www.google.com/s2/favicons?domain=css-loaders.com&sz=64"
+        },
+        {
+          "name": "MapCN",
+          "url": "mapcn.dev",
+          "description": "Map components",
+          "favicon": "https://www.google.com/s2/favicons?domain=mapcn.dev&sz=64"
+        },
+        {
+          "name": "React Bits",
+          "url": "reactbits.dev",
+          "description": "Animated UI components",
+          "favicon": "https://www.google.com/s2/favicons?domain=reactbits.dev&sz=64"
+        },
+        {
+          "name": "Reactiive",
+          "url": "reactiive.io",
+          "href": "reactiive.io/demos",
+          "description": "React component demos",
+          "favicon": "https://www.google.com/s2/favicons?domain=reactiive.io&sz=64"
+        },
+        {
+          "name": "Three.js",
+          "url": "threejs.org",
+          "description": "3D graphics for the web",
+          "favicon": "https://www.google.com/s2/favicons?domain=threejs.org&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Courses",
+      "items": [
+        {
+          "name": "Animations.dev",
+          "url": "animations.dev",
+          "description": "Web animations course",
+          "favicon": "https://www.google.com/s2/favicons?domain=animations.dev&sz=64"
+        },
+        {
+          "name": "Devouring Details",
+          "url": "devouringdetails.com",
+          "href": "devouringdetails.com/introduction",
+          "description": "Design details course",
+          "favicon": "https://www.google.com/s2/favicons?domain=devouringdetails.com&sz=64"
+        },
+        {
+          "name": "Interface Craft",
+          "url": "interfacecraft.dev",
+          "description": "UI engineering course",
+          "favicon": "https://www.google.com/s2/favicons?domain=interfacecraft.dev&sz=64"
+        },
+        {
+          "name": "Making Software",
+          "url": "makingsoftware.com",
+          "description": "Software craft course",
+          "favicon": "https://www.google.com/s2/favicons?domain=makingsoftware.com&sz=64"
+        },
+        {
+          "name": "Shift Nudge",
+          "url": "shiftnudge.com",
+          "href": "shiftnudge.com/portfolio",
+          "description": "Interface design course",
+          "favicon": "https://www.google.com/s2/favicons?domain=shiftnudge.com&sz=64"
+        },
+        {
+          "name": "SVG Guide",
+          "url": "svg.guide",
+          "description": "SVG fundamentals",
+          "favicon": "https://www.google.com/s2/favicons?domain=svg.guide&sz=64"
+        },
+        {
+          "name": "User Interface Wiki",
+          "url": "userinterface.wiki",
+          "description": "UI design knowledge base",
+          "favicon": "https://www.google.com/s2/favicons?domain=userinterface.wiki&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Design Skills",
+      "items": [
+        {
+          "name": "Agentation",
+          "url": "agentation.com",
+          "description": "Agent skills",
+          "favicon": "https://www.google.com/s2/favicons?domain=agentation.com&sz=64"
+        },
+        {
+          "name": "Design MD",
+          "url": "getdesign.md",
+          "description": "Design specs from Figma",
+          "favicon": "https://www.google.com/s2/favicons?domain=getdesign.md&sz=64"
+        },
+        {
+          "name": "Impeccable",
+          "url": "impeccable.style",
+          "description": "Design quality tool",
+          "favicon": "https://www.google.com/s2/favicons?domain=impeccable.style&sz=64"
+        },
+        {
+          "name": "Mesurer",
+          "url": "mesurer.ibelick.com",
+          "description": "Measurement tool",
+          "favicon": "https://www.google.com/s2/favicons?domain=ibelick.com&sz=64"
+        },
+        {
+          "name": "Emil Kowalski",
+          "url": "emilkowal.ski",
+          "href": "emilkowal.ski/skill",
+          "description": "Design engineering skill",
+          "favicon": "https://www.google.com/s2/favicons?domain=emilkowal.ski&sz=64"
+        },
+        {
+          "name": "Haptics",
+          "url": "haptics.lochie.me",
+          "description": "Haptic feedback patterns",
+          "favicon": "https://www.google.com/s2/favicons?domain=haptics.lochie.me&sz=64"
+        },
+        {
+          "name": "Rams",
+          "url": "rams.ai",
+          "description": "Design review AI",
+          "favicon": "https://www.google.com/s2/favicons?domain=rams.ai&sz=64"
+        },
+        {
+          "name": "UI Skills",
+          "url": "ui-skills.com",
+          "description": "UI design skills",
+          "favicon": "https://www.google.com/s2/favicons?domain=ui-skills.com&sz=64"
+        },
+        {
+          "name": "UI.sh",
+          "url": "ui.sh",
+          "description": "UI skills",
+          "favicon": "https://www.google.com/s2/favicons?domain=ui.sh&sz=64"
+        },
+        {
+          "name": "Web Interface Guidelines",
+          "url": "github.com",
+          "href": "github.com/vercel-labs/web-interface-guidelines",
+          "description": "Vercel web interface guidelines",
+          "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Design Systems",
+      "items": [
+        {
+          "name": "Base UI",
+          "url": "base-ui.com",
+          "description": "Unstyled UI components by MUI",
+          "favicon": "https://www.google.com/s2/favicons?domain=base-ui.com&sz=64"
+        },
+        {
+          "name": "ElevenLabs UI",
+          "url": "ui.elevenlabs.io",
+          "description": "ElevenLabs design system",
+          "favicon": "https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=64"
+        },
+        {
+          "name": "Radix UI",
+          "url": "radix-ui.com",
+          "description": "Unstyled, accessible primitives",
+          "favicon": "https://www.google.com/s2/favicons?domain=radix-ui.com&sz=64"
+        },
+        {
+          "name": "shadcn/ui",
+          "url": "ui.shadcn.com",
+          "description": "Beautifully designed components",
+          "favicon": "https://www.google.com/s2/favicons?domain=ui.shadcn.com&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Design Tools",
+      "items": [
+        {
+          "name": "Figma",
+          "url": "figma.com",
+          "description": "Interface design and prototyping",
+          "favicon": "https://www.google.com/s2/favicons?domain=figma.com&sz=64"
+        },
+        {
+          "name": "Framer",
+          "url": "framer.com",
+          "description": "Marketing sites and landing pages",
+          "favicon": "https://www.google.com/s2/favicons?domain=framer.com&sz=64"
+        },
+        {
+          "name": "Magic Patterns",
+          "url": "magicpatterns.com",
+          "description": "AI UI generation",
+          "favicon": "https://www.google.com/s2/favicons?domain=magicpatterns.com&sz=64"
+        },
+        {
+          "name": "Paper",
+          "url": "paper.design",
+          "description": "Design tool",
+          "favicon": "https://www.google.com/s2/favicons?domain=paper.design&sz=64"
+        },
+        {
+          "name": "Pencil",
+          "url": "pencil.dev",
+          "description": "AI design tool",
+          "favicon": "https://www.google.com/s2/favicons?domain=pencil.dev&sz=64"
+        },
+        {
+          "name": "Unicorn Studio",
+          "url": "unicorn.studio",
+          "description": "WebGL design tool",
+          "favicon": "https://www.google.com/s2/favicons?domain=unicorn.studio&sz=64"
+        },
+        {
+          "name": "MagicPath",
+          "url": "magicpath.ai",
+          "description": "AI design tool",
+          "favicon": "https://www.google.com/s2/favicons?domain=magicpath.ai&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Fun Sites",
+      "items": [
+        {
+          "name": "Calligrapher.ai",
+          "url": "calligrapher.ai",
+          "description": "AI handwriting generation",
+          "favicon": "https://www.google.com/s2/favicons?domain=calligrapher.ai&sz=64"
+        },
+        {
+          "name": "CLI Guidelines",
+          "url": "clig.dev",
+          "description": "Command line interface guidelines",
+          "favicon": "https://www.google.com/s2/favicons?domain=clig.dev&sz=64"
+        },
+        {
+          "name": "Day Rose Lane Hydrants",
+          "url": "dayroselane.com",
+          "href": "dayroselane.com/hydrants",
+          "description": "Fire hydrant collection",
+          "favicon": "https://www.google.com/s2/favicons?domain=dayroselane.com&sz=64"
+        },
+        {
+          "name": "Deck of Cards",
+          "url": "deck.of.cards",
+          "description": "Interactive card deck",
+          "favicon": "https://www.google.com/s2/favicons?domain=deck.of.cards&sz=64"
+        },
+        {
+          "name": "FFFFFFT",
+          "url": "fffffft.com",
+          "description": "Creative web experiment",
+          "favicon": "https://www.google.com/s2/favicons?domain=fffffft.com&sz=64"
+        },
+        {
+          "name": "ISO City",
+          "url": "iso-city.com",
+          "description": "Isometric city builder",
+          "favicon": "https://www.google.com/s2/favicons?domain=iso-city.com&sz=64"
+        },
+        {
+          "name": "Local Geographic",
+          "url": "localgeographic.co",
+          "description": "Local photography",
+          "favicon": "https://www.google.com/s2/favicons?domain=localgeographic.co&sz=64"
+        },
+        {
+          "name": "Parallel",
+          "url": "parallel.ai",
+          "description": "AI experience",
+          "favicon": "https://www.google.com/s2/favicons?domain=parallel.ai&sz=64"
+        },
+        {
+          "name": "Rovers Land",
+          "url": "rovers.land",
+          "description": "Interactive experience",
+          "favicon": "https://www.google.com/s2/favicons?domain=rovers.land&sz=64"
+        },
+        {
+          "name": "Text to ASCII Art",
+          "url": "patorjk.com",
+          "href": "patorjk.com/software/taag/#p=testall&f=Cards&t=HELLO+ANTHROPIC&x=none&v=4&h=4&w=80&we=false",
+          "description": "ASCII art generator",
+          "favicon": "https://www.google.com/s2/favicons?domain=patorjk.com&sz=64"
+        },
+        {
+          "name": "Train Jazz",
+          "url": "www.trainjazz.com",
+          "description": "Creative web experience",
+          "favicon": "https://www.google.com/s2/favicons?domain=www.trainjazz.com&sz=64"
+        },
+        {
+          "name": "Old City Mail Room",
+          "url": "www.oldcitymailroom.com",
+          "description": "Interactive mail experience",
+          "favicon": "https://www.google.com/s2/favicons?domain=www.oldcitymailroom.com&sz=64"
+        },
+        {
+          "name": "Neave.tv",
+          "url": "neave.tv",
+          "description": "Creative experiments",
+          "favicon": "https://www.google.com/s2/favicons?domain=neave.tv&sz=64"
+        },
+        {
+          "name": "This Is Sand",
+          "url": "thisissand.com",
+          "description": "Falling sand art",
+          "favicon": "https://www.google.com/s2/favicons?domain=thisissand.com&sz=64"
+        },
+        {
+          "name": "Chrome Music Lab",
+          "url": "musiclab.chromeexperiments.com",
+          "description": "Chrome music experiments",
+          "favicon": "https://www.google.com/s2/favicons?domain=musiclab.chromeexperiments.com&sz=64"
+        },
+        {
+          "name": "The Pudding",
+          "url": "pudding.cool",
+          "description": "Visual essays and data journalism",
+          "favicon": "https://www.google.com/s2/favicons?domain=pudding.cool&sz=64"
+        },
+        {
+          "name": "Oimo.io",
+          "url": "oimo.io",
+          "description": "Creative physics experiments",
+          "favicon": "https://www.google.com/s2/favicons?domain=oimo.io&sz=64"
+        },
+        {
+          "name": "Radio Garden",
+          "url": "radio.garden",
+          "description": "Listen to radio stations around the globe",
+          "favicon": "https://www.google.com/s2/favicons?domain=radio.garden&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Hardware",
+      "items": [
+        {
+          "name": "Curated Supply",
+          "url": "curated.supply",
+          "description": "Curated hardware",
+          "favicon": "https://www.google.com/s2/favicons?domain=curated.supply&sz=64"
+        },
+        {
+          "name": "EarPods USB-C",
+          "url": "apple.com",
+          "href": "apple.com/shop/product/myqy3am/a/earpods-usb-c",
+          "description": "Earphones",
+          "favicon": "https://www.google.com/s2/favicons?domain=apple.com&sz=64"
+        },
+        {
+          "name": "Mac Mini",
+          "url": "apple.com",
+          "href": "apple.com/mac-mini",
+          "description": "Primary machine",
+          "favicon": "https://www.google.com/s2/favicons?domain=apple.com&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Inspiration",
+      "items": [
+        {
+          "name": "Cosmos",
+          "url": "cosmos.so",
+          "description": "Design inspiration",
+          "favicon": "https://www.google.com/s2/favicons?domain=cosmos.so&sz=64"
+        },
+        {
+          "name": "Detail",
+          "url": "detail.design",
+          "description": "Design details and breakdowns",
+          "favicon": "https://www.google.com/s2/favicons?domain=detail.design&sz=64"
+        },
+        {
+          "name": "Godly",
+          "url": "godly.website",
+          "description": "Web design inspiration",
+          "favicon": "https://www.google.com/s2/favicons?domain=godly.website&sz=64"
+        },
+        {
+          "name": "Origami Archive",
+          "url": "origamiarchive.com",
+          "description": "Origami collection",
+          "favicon": "https://www.google.com/s2/favicons?domain=origamiarchive.com&sz=64"
+        },
+        {
+          "name": "Interface in Game",
+          "url": "interfaceingame.com",
+          "description": "Game UI design inspiration",
+          "favicon": "https://www.google.com/s2/favicons?domain=interfaceingame.com&sz=64"
+        },
+        {
+          "name": "Mobbin",
+          "url": "mobbin.com",
+          "description": "UI & UX design patterns",
+          "favicon": "https://www.google.com/s2/favicons?domain=mobbin.com&sz=64"
+        },
+        {
+          "name": "Spotted in Prod",
+          "url": "spottedinprod.com",
+          "description": "Real-world UI screenshots",
+          "favicon": "https://www.google.com/s2/favicons?domain=spottedinprod.com&sz=64"
+        },
+        {
+          "name": "Logobook",
+          "url": "logobook.com",
+          "description": "Logo design inspiration",
+          "favicon": "https://www.google.com/s2/favicons?domain=logobook.com&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "On Repeat",
+      "items": [
+        {
+          "name": "Fred again.. & Thomas Bangalter",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=gfF8jzBVWvM",
+          "description": "USB002, Alexandra Palace, London",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "Fred again.. - Arun's Roof",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=6MAzUT1YhWE",
+          "description": "Rooftop Live, London",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "Fred again.. - Fede's Roof",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=2yfyPeAEV3A",
+          "description": "Rooftop Live, Naples",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "Jersey - Boiler Room Lyon",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=bj2xzFkNJBs",
+          "description": "Boiler Room set",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "Jersey - Don't Break Our Synths",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=skpjLxgSsW4",
+          "description": "Live synth session",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "Jersey - Break Our Synths",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=HarjsbMkhLQ",
+          "description": "Live synth session",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "Yousuke Yukimatsu - Boiler Room Tokyo",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=T1tcUfUhR5U",
+          "description": "Boiler Room set",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "Fred again.. & Jamie T - Lights Burn Dimmer",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=qm43he27-s8",
+          "description": "USB002 Apple Music Live, Dublin",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "Fred again.. - Boiler Room London",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=c0-hvjV2A5Y",
+          "description": "Boiler Room set",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Software",
+      "items": [
+        {
+          "name": "Arc",
+          "url": "arc.net",
+          "description": "Browser",
+          "favicon": "https://www.google.com/s2/favicons?domain=arc.net&sz=64"
+        },
+        {
+          "name": "CleanShot X",
+          "url": "cleanshot.com",
+          "description": "Screenshot and screen recording",
+          "favicon": "https://www.google.com/s2/favicons?domain=cleanshot.com&sz=64"
+        },
+        {
+          "name": "Magnet",
+          "url": "magnet.crowdcafe.com",
+          "description": "Window manager",
+          "favicon": "https://www.google.com/s2/favicons?domain=magnet.crowdcafe.com&sz=64"
+        },
+        {
+          "name": "Notion",
+          "url": "notion.so",
+          "description": "Notes and documentation",
+          "favicon": "https://www.google.com/s2/favicons?domain=notion.so&sz=64"
+        },
+        {
+          "name": "Obsidian",
+          "url": "obsidian.md",
+          "description": "Knowledge base and note-taking",
+          "favicon": "https://www.google.com/s2/favicons?domain=obsidian.md&sz=64"
+        },
+        {
+          "name": "Screen Studio",
+          "url": "screen.studio",
+          "description": "Screen recording",
+          "favicon": "https://www.google.com/s2/favicons?domain=screen.studio&sz=64"
+        },
+        {
+          "name": "Superwhisper",
+          "url": "superwhisper.com",
+          "description": "Voice-to-text",
+          "favicon": "https://www.google.com/s2/favicons?domain=superwhisper.com&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Typography",
+      "items": [
+        {
+          "name": "Collletttivo",
+          "url": "www.collletttivo.it",
+          "description": "Open-source type foundry",
+          "favicon": "https://www.google.com/s2/favicons?domain=www.collletttivo.it&sz=64"
+        },
+        {
+          "name": "Fontshare",
+          "url": "www.fontshare.com",
+          "description": "Free quality fonts",
+          "favicon": "https://www.google.com/s2/favicons?domain=www.fontshare.com&sz=64"
+        },
+        {
+          "name": "Mockups Digital",
+          "url": "mockups.digital",
+          "description": "Digital mockup templates",
+          "favicon": "https://www.google.com/s2/favicons?domain=mockups.digital&sz=64"
+        },
+        {
+          "name": "Uncut",
+          "url": "uncut.wtf",
+          "description": "Free typeface catalogue",
+          "favicon": "https://www.google.com/s2/favicons?domain=uncut.wtf&sz=64"
+        },
+        {
+          "name": "Velvetyne",
+          "url": "velvetyne.fr",
+          "description": "Free and open-source fonts",
+          "favicon": "https://www.google.com/s2/favicons?domain=velvetyne.fr&sz=64"
+        }
+      ]
+    }
+  ]
+}

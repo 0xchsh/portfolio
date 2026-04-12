@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
-import type { CommitDay } from '@/app/page';
+import { useState, useRef, useCallback, useEffect } from 'react';
+import type { CommitDay } from '@/app/(main)/page';
 import { playTick } from '@/lib/tick';
 
 function commitLevel(count: number, max: number): string {
@@ -20,8 +20,14 @@ function formatDate(dateStr: string) {
 
 export function CommitGraph({ days }: { days: CommitDay[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
   const max = Math.max(...days.map((d) => d.count), 1);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   const handleEnter = useCallback((i: number) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -51,9 +57,12 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
               className={`w-full rounded-[3px] ${commitLevel(day.count, max)}`}
               style={{
                 height: isHovered ? 12 : isNeighbor ? 16 : 20,
-                transition: isHovered || isNeighbor
-                  ? 'height 150ms cubic-bezier(0.215, 0.61, 0.355, 1)'
-                  : 'height 100ms ease',
+                transform: mounted ? 'scaleY(1)' : 'scaleY(0)',
+                opacity: mounted ? 1 : 0,
+                transition: mounted
+                  ? `transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1) ${i * 20}ms, opacity 300ms ease ${i * 20}ms, height ${isHovered || isNeighbor ? '150ms cubic-bezier(0.215, 0.61, 0.355, 1)' : '100ms ease'}`
+                  : 'none',
+                transformOrigin: 'bottom',
               }}
             />
 

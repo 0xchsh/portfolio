@@ -1,21 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { SpeakerHigh, SpeakerSlash, Sun, Moon, Robot } from '@phosphor-icons/react';
+import { SpeakerHigh, SpeakerSlash, Sun, Moon, Robot, Stack } from '@phosphor-icons/react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useTheme } from '@/components/providers/ThemeProvider';
-import { useAgentMode } from '@/components/providers/AgentModeProvider';
-
-function AgentToggleIcon() {
-  const { toggleAgentMode } = useAgentMode();
-  return (
-    <button
-      onClick={toggleAgentMode}
-      className="text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors duration-150 cursor-pointer"
-    >
-      <Robot size={16} weight="bold" />
-    </button>
-  );
-}
 
 function HapticsToggle() {
   const [muted, setMuted] = useState(false);
@@ -28,6 +17,7 @@ function HapticsToggle() {
     const next = !muted;
     setMuted(next);
     localStorage.setItem('haptics-muted', String(next));
+    window.dispatchEvent(new Event('haptics-muted-change'));
   };
 
   return (
@@ -60,9 +50,38 @@ function DarkModeToggle() {
 export function V2Controls() {
   return (
     <div className="flex items-center gap-3">
-      <AgentToggleIcon />
+      <Link
+        href="/skills"
+        className="text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors duration-150"
+      >
+        <Robot size={16} weight="bold" />
+      </Link>
+      <Link
+        href="/stack"
+        className="text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors duration-150"
+      >
+        <Stack size={16} weight="bold" />
+      </Link>
       <HapticsToggle />
       <DarkModeToggle />
+    </div>
+  );
+}
+
+/**
+ * Desktop controls row that shifts icons left on /stack
+ * to align with the Links column.
+ */
+export function DesktopControlsRow() {
+  const pathname = usePathname();
+  const isStack = pathname === '/stack';
+
+  return (
+    <div
+      className="opacity-0 group-hover/page:opacity-100 transition-all duration-300"
+      style={{ transform: isStack ? 'translateX(-161px)' : 'translateX(0)' }}
+    >
+      <V2Controls />
     </div>
   );
 }
