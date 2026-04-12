@@ -43,7 +43,6 @@ async function getCommitData() {
     }
 
     const token = process.env.GITHUB_TOKEN?.trim();
-    console.warn('[CommitGraph] token present:', !!token, 'length:', token?.length ?? 0);
     if (!token) return { days: [] as CommitDay[], totalCommits: 0 };
 
     const query = `
@@ -66,14 +65,17 @@ async function getCommitData() {
 
     const res = await fetch('https://api.github.com/graphql', {
       method: 'POST',
-      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        'X-Cache-Bust': 'v2',
+      },
       body: JSON.stringify({ query, variables: { from, to } }),
       next: { revalidate: 3600 },
     });
 
-    console.warn('[CommitGraph] GitHub API status:', res.status);
     if (!res.ok) {
-      console.warn('[CommitGraph] GitHub API error:', res.status, await res.text().catch(() => ''));
+      console.error('[CommitGraph] GitHub API error:', res.status, await res.text().catch(() => ''));
       return { days: [] as CommitDay[], totalCommits: 0 };
     }
 
@@ -82,7 +84,6 @@ async function getCommitData() {
       console.error('[CommitGraph] GraphQL errors:', JSON.stringify(json.errors));
     }
     const byRepo = json?.data?.user?.contributionsCollection?.commitContributionsByRepository ?? [];
-    console.warn('[CommitGraph] repos found:', byRepo.length);
 
     for (const { repository, contributions } of byRepo) {
       for (const node of contributions.nodes) {
@@ -99,11 +100,9 @@ async function getCommitData() {
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([date, { count, repos }]) => ({ date, count, repos: Array.from(repos) }));
 
-    const totalCommits = days.reduce((s, d) => s + d.count, 0);
-    console.warn('[CommitGraph] totalCommits:', totalCommits, 'days with data:', days.filter(d => d.count > 0).length);
-    return { days, totalCommits };
+    return { days, totalCommits: days.reduce((s, d) => s + d.count, 0) };
   } catch (err) {
-    console.warn('[CommitGraph] Exception:', err);
+    console.error('[CommitGraph] Exception:', err);
     return { days: [] as CommitDay[], totalCommits: 0 };
   }
 }
@@ -276,15 +275,11 @@ function ArtRow({ item, navIndex }: { item: ArtItem; navIndex?: number }) {
 // ---------------------------------------------------------------------------
 
 export default async function V2Home() {
-  const [commitData, weather, commitHash] = await Promise.all([
+  const [{ days, totalCommits }, weather, commitHash] = await Promise.all([
     getCommitData(),
     getWeather(),
     getLatestCommit(),
   ]);
-  const { days, totalCommits } = commitData;
-  console.warn('[V2Home] received totalCommits:', totalCommits, 'days.length:', days.length);
-  // DEBUG: hardcode to test rendering
-  const debugTotal = 999;
 
   const projectsWithDrawer = projects.filter(p => !p.directLink);
   const navTotal = caseStudies.length + projectsWithDrawer.length + artItems.length;
@@ -466,7 +461,7 @@ export default async function V2Home() {
           <CommitGraph days={days} />
           <div className="flex items-center justify-between">
             <span className={metaLabel}>Last 30 days</span>
-            <span className={`${metaLabel} tabular-nums`}>{debugTotal} commits (real: {totalCommits})</span>
+            <span className={`${metaLabel} tabular-nums`}>{totalCommits} commits</span>
           </div>
         </section>
       </FadeIn>
