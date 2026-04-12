@@ -14,7 +14,7 @@ export default function MainLayout({
 }) {
   return (
     <PlayerProvider>
-      <div className="min-h-screen bg-background text-foreground overflow-x-clip">
+      <div className="min-h-screen bg-background text-foreground">
         <V2TopFade />
         <V2BottomFade />
 
