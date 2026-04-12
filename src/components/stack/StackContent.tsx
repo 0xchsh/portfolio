@@ -308,7 +308,7 @@ export function StackContent() {
                     className="group block"
                   >
                     {/* Thumbnail */}
-                    <div className="relative overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 aspect-[1200/630]">
+                    <div className="relative overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 aspect-[1200/630] [&>img]:scale-[1.02]">
                       {ogImage && !brokenImages.has(itemKey(item)) ? (
                         /* eslint-disable-next-line @next/next/no-img-element */
                         <img

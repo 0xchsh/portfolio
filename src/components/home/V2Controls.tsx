@@ -57,7 +57,7 @@ export function V2Controls() {
         className={cn(
           'transition-colors duration-150',
           pathname === '/skills'
-            ? 'text-foreground'
+            ? 'text-neutral-600 dark:text-neutral-400'
             : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
         )}
       >
@@ -68,7 +68,7 @@ export function V2Controls() {
         className={cn(
           'transition-colors duration-150',
           pathname === '/stack'
-            ? 'text-foreground'
+            ? 'text-neutral-600 dark:text-neutral-400'
             : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
         )}
       >
