@@ -6,6 +6,7 @@ import { LiveClock } from '@/components/home/LiveClock';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { Subtitle } from '@/components/shared/Subtitle';
 import { PlayerProvider } from '@/components/shared/MiniPlayer';
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 export default function MainLayout({
   children,
@@ -13,6 +14,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
+    <TooltipProvider>
     <PlayerProvider>
       <div className="min-h-screen bg-background text-foreground">
         <V2TopFade />
@@ -63,5 +65,6 @@ export default function MainLayout({
         </div>
       </div>
     </PlayerProvider>
+    </TooltipProvider>
   );
 }

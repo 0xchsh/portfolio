@@ -70,7 +70,15 @@ async function getCommitData() {
       next: { revalidate: 3600 },
     });
 
+    if (!res.ok) {
+      console.error('[CommitGraph] GitHub API error:', res.status, await res.text().catch(() => ''));
+      return { days: [] as CommitDay[], totalCommits: 0 };
+    }
+
     const json = await res.json();
+    if (json.errors) {
+      console.error('[CommitGraph] GraphQL errors:', JSON.stringify(json.errors));
+    }
     const byRepo = json?.data?.user?.contributionsCollection?.commitContributionsByRepository ?? [];
 
     for (const { repository, contributions } of byRepo) {
@@ -89,7 +97,8 @@ async function getCommitData() {
       .map(([date, { count, repos }]) => ({ date, count, repos: Array.from(repos) }));
 
     return { days, totalCommits: days.reduce((s, d) => s + d.count, 0) };
-  } catch {
+  } catch (err) {
+    console.error('[CommitGraph] Exception:', err);
     return { days: [] as CommitDay[], totalCommits: 0 };
   }
 }
