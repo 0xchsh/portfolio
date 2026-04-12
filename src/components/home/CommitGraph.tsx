@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useCallback, useEffect } from 'react';
-import type { CommitDay } from '@/app/(main)/page';
+import type { CommitDay } from '@/app/page';
 import { playTick } from '@/lib/tick';
 
 function commitLevel(count: number, max: number): string {

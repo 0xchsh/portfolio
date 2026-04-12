@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { FadeIn } from '@/components/shared/FadeIn';
-import { NotFoundBg } from './NotFoundBg';
+import { NotFoundBg } from '@/components/shared/NotFoundBg';
 
 export default function NotFound() {
   return (
-    <div className="relative min-h-screen bg-background text-foreground flex flex-col items-center justify-center px-5">
+    <div className="relative flex flex-col items-center justify-center py-24">
       <NotFoundBg />
       <div className="max-w-[320px] w-full flex flex-col items-center text-center gap-8">
 
