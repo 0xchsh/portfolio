@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { unstable_noStore as noStore } from 'next/cache';
 import { XLogo, GithubLogo, Envelope, ArrowUpRight, Copy } from '@phosphor-icons/react/dist/ssr';
 import { WorkCarousel } from '@/components/home/WorkCarousel';
 import { WeatherIcon } from '@/components/home/WeatherIcon';
@@ -100,9 +101,11 @@ async function getCommitData() {
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([date, { count, repos }]) => ({ date, count, repos: Array.from(repos) }));
 
-    return { days, totalCommits: days.reduce((s, d) => s + d.count, 0) };
+    const total = days.reduce((s, d) => s + d.count, 0);
+    process.stdout.write(`[CommitGraph] total=${total} days=${days.length}\n`);
+    return { days, totalCommits: total };
   } catch (err) {
-    console.error('[CommitGraph] Exception:', err);
+    process.stderr.write(`[CommitGraph] Exception: ${err}\n`);
     return { days: [] as CommitDay[], totalCommits: 0 };
   }
 }
@@ -275,6 +278,7 @@ function ArtRow({ item, navIndex }: { item: ArtItem; navIndex?: number }) {
 // ---------------------------------------------------------------------------
 
 export default async function V2Home() {
+  noStore();
   const [{ days, totalCommits }, weather, commitHash] = await Promise.all([
     getCommitData(),
     getWeather(),
