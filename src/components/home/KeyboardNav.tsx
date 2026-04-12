@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
-const routes = ['/', '/stack', '/apis'];
+const routes = ['/', '/stack'];
 
 export function KeyboardNav() {
   const pathname = usePathname();

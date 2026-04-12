@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { SpeakerHigh, SpeakerSlash, Sun, Moon, Robot, Stack } from '@phosphor-icons/react';
+import { SpeakerHigh, SpeakerSlash, Sun, Moon, Files, Star } from '@phosphor-icons/react';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { useTheme } from '@/components/providers/ThemeProvider';
 
@@ -48,19 +49,30 @@ function DarkModeToggle() {
 }
 
 export function V2Controls() {
+  const pathname = usePathname();
   return (
     <div className="flex items-center gap-3">
       <Link
         href="/skills"
-        className="text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors duration-150"
+        className={cn(
+          'transition-colors duration-150',
+          pathname === '/skills'
+            ? 'text-foreground'
+            : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
+        )}
       >
-        <Robot size={16} weight="bold" />
+        <Files size={16} weight={pathname === '/skills' ? 'fill' : 'bold'} />
       </Link>
       <Link
         href="/stack"
-        className="text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors duration-150"
+        className={cn(
+          'transition-colors duration-150',
+          pathname === '/stack'
+            ? 'text-foreground'
+            : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
+        )}
       >
-        <Stack size={16} weight="bold" />
+        <Star size={16} weight={pathname === '/stack' ? 'fill' : 'bold'} />
       </Link>
       <HapticsToggle />
       <DarkModeToggle />

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa } from '@phosphor-icons/react';
+import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { usePlayer, extractYouTubeId } from '@/components/shared/MiniPlayer';
@@ -36,6 +36,7 @@ const categoryIcons: Record<string, React.ElementType> = {
   Courses: GraduationCap,
   'On Repeat': MusicNote,
   Typography: TextAa,
+  APIs: Plugs,
 };
 
 function SectionLabel({ children, trailing }: { children: React.ReactNode; trailing?: React.ReactNode }) {
@@ -199,8 +200,8 @@ export function StackContent() {
                       className={cn(
                         'p-1 rounded transition-colors duration-100 cursor-pointer',
                         view === 'grid'
-                          ? 'text-foreground'
-                          : 'text-neutral-400 dark:text-neutral-600 hover:text-foreground',
+                          ? 'text-neutral-600 dark:text-neutral-400'
+                          : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
                       )}
                     >
                       <SquaresFour size={14} weight={view === 'grid' ? 'fill' : 'regular'} />
@@ -210,8 +211,8 @@ export function StackContent() {
                       className={cn(
                         'p-1 rounded transition-colors duration-100 cursor-pointer',
                         view === 'list'
-                          ? 'text-foreground'
-                          : 'text-neutral-400 dark:text-neutral-600 hover:text-foreground',
+                          ? 'text-neutral-600 dark:text-neutral-400'
+                          : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
                       )}
                     >
                       <List size={14} weight={view === 'list' ? 'bold' : 'regular'} />

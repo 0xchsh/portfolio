@@ -7,15 +7,14 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { ButtonGroup } from '@/components/ui/button-group';
 import {
-  HandWaving, Stack, Plugs,
+  HandWaving, Star,
 } from '@phosphor-icons/react';
 
 type PhosphorIcon = ComponentType<{ size?: number; weight?: 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone' }>;
 
 const navItems: { href: string; label: string; icon: PhosphorIcon }[] = [
   { href: '/', label: 'About', icon: HandWaving },
-  { href: '/stack', label: 'Stack', icon: Stack },
-  { href: '/apis', label: 'APIs', icon: Plugs },
+  { href: '/stack', label: 'Stack', icon: Star },
 ];
 
 function MobileNav() {
@@ -90,7 +89,7 @@ function MobileNav() {
                   : 'text-muted-foreground hover:bg-muted hover:text-foreground',
               )}
             >
-              <Icon weight="regular" data-icon="inline-start" />
+              <Icon weight={isActive ? 'fill' : 'regular'} data-icon="inline-start" />
               {label}
             </Link>
           );
@@ -118,7 +117,7 @@ function DesktopNav() {
                 !isActive && 'text-muted-foreground',
               )}
             >
-              <Icon size={14} weight="regular" data-icon="inline-start" />
+              <Icon size={14} weight={isActive ? 'fill' : 'regular'} data-icon="inline-start" />
               {label}
             </Button>
           );
