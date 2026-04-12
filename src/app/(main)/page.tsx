@@ -276,11 +276,13 @@ function ArtRow({ item, navIndex }: { item: ArtItem; navIndex?: number }) {
 // ---------------------------------------------------------------------------
 
 export default async function V2Home() {
-  const [{ days, totalCommits }, weather, commitHash] = await Promise.all([
+  const [commitData, weather, commitHash] = await Promise.all([
     getCommitData(),
     getWeather(),
     getLatestCommit(),
   ]);
+  const { days, totalCommits } = commitData;
+  console.warn('[V2Home] received totalCommits:', totalCommits, 'days.length:', days.length);
 
   const projectsWithDrawer = projects.filter(p => !p.directLink);
   const navTotal = caseStudies.length + projectsWithDrawer.length + artItems.length;
