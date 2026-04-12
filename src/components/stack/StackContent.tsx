@@ -159,38 +159,72 @@ export function StackContent() {
         </div>
       </div>
 
-      {/* Filter badges (mobile) */}
-      <div className="desktop:hidden -mx-4 px-4 overflow-x-auto scrollbar-none">
-        <div className="flex gap-1.5 pb-1">
-          {categories.map((cat, i) => {
-            const Icon = categoryIcons[cat.name];
-            return (
-              <button
-                key={cat.name}
-                onClick={() => setActiveIndex(i)}
-                className={cn(
-                  'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap cursor-pointer transition-colors duration-100 shrink-0 border',
-                  'border-transparent',
-                  i === activeIndex
-                    ? 'bg-foreground text-background'
-                    : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400',
-                )}
-              >
-                {Icon && <Icon size={12} weight="bold" />}
-                {cat.name}
-                <span className={cn(
-                  'tabular-nums',
-                  i === activeIndex ? 'text-background/60' : 'text-neutral-400 dark:text-neutral-600',
-                )}>{cat.items.length}</span>
-              </button>
-            );
-          })}
+      {/* Filter badges + Links header (mobile — sticky) */}
+      <div className="desktop:hidden sticky top-0 z-10 bg-background pb-4">
+        <div className="-mx-4 px-4 overflow-x-auto scrollbar-none">
+          <div className="flex gap-1.5 pb-1">
+            {categories.map((cat, i) => {
+              const Icon = categoryIcons[cat.name];
+              return (
+                <button
+                  key={cat.name}
+                  onClick={() => setActiveIndex(i)}
+                  className={cn(
+                    'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap cursor-pointer transition-colors duration-100 shrink-0 border',
+                    'border-transparent',
+                    i === activeIndex
+                      ? 'bg-foreground text-background'
+                      : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400',
+                  )}
+                >
+                  {Icon && <Icon size={12} weight="bold" />}
+                  {cat.name}
+                  <span className={cn(
+                    'tabular-nums',
+                    i === activeIndex ? 'text-background/60' : 'text-neutral-400 dark:text-neutral-600',
+                  )}>{cat.items.length}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+        <div className="mt-4 px-1.5">
+          <SectionLabel
+            trailing={
+              <div className="flex items-center gap-0.5 -my-1">
+                  <button
+                    onClick={() => setView('grid')}
+                    className={cn(
+                      'p-1 rounded transition-colors duration-100 cursor-pointer',
+                      view === 'grid'
+                        ? 'text-neutral-600 dark:text-neutral-400'
+                        : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
+                    )}
+                  >
+                    <SquaresFour size={14} weight={view === 'grid' ? 'fill' : 'regular'} />
+                  </button>
+                  <button
+                    onClick={() => setView('list')}
+                    className={cn(
+                      'p-1 rounded transition-colors duration-100 cursor-pointer',
+                      view === 'list'
+                        ? 'text-neutral-600 dark:text-neutral-400'
+                        : 'text-neutral-400 dark:text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-400',
+                    )}
+                  >
+                    <List size={14} weight={view === 'list' ? 'bold' : 'regular'} />
+                  </button>
+              </div>
+            }
+          >
+            Links
+          </SectionLabel>
         </div>
       </div>
 
       {/* Main list */}
-      <div className="mt-8 desktop:mt-0 w-full">
-        <div className="px-1.5">
+      <div className="desktop:mt-0 w-full">
+        <div className="px-1.5 hidden desktop:block">
           <FadeIn delay={50}>
             <SectionLabel
               trailing={
@@ -283,7 +317,7 @@ export function StackContent() {
           </div>
         ) : (
           /* Grid thumbnails */
-          <div key="grid" className="grid grid-cols-2 gap-4 px-1.5">
+          <div key="grid" className="grid grid-cols-1 desktop:grid-cols-2 gap-4 px-1.5">
             {activeCategory.items.map((item, i) => {
               const ogImage = ogImages[itemKey(item)];
               const isYT = isYouTubeItem(item);

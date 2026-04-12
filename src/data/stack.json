@@ -145,6 +145,12 @@
       "name": "Components",
       "items": [
         {
+          "name": "Aceternity UI",
+          "url": "ui.aceternity.com",
+          "description": "Animated UI components",
+          "favicon": "https://www.google.com/s2/favicons?domain=ui.aceternity.com&sz=64"
+        },
+        {
           "name": "Animate UI",
           "url": "animate-ui.com",
           "href": "animate-ui.com/docs/components",
@@ -179,6 +185,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=mapcn.dev&sz=64"
         },
         {
+          "name": "Motion",
+          "url": "motion.dev",
+          "description": "Production-ready animations for React",
+          "favicon": "https://www.google.com/s2/favicons?domain=motion.dev&sz=64"
+        },
+        {
           "name": "React Bits",
           "url": "reactbits.dev",
           "description": "Animated UI components",
@@ -192,10 +204,22 @@
           "favicon": "https://www.google.com/s2/favicons?domain=reactiive.io&sz=64"
         },
         {
+          "name": "Sonner",
+          "url": "sonner.emilkowal.ski",
+          "description": "Toast component for React",
+          "favicon": "https://www.google.com/s2/favicons?domain=sonner.emilkowal.ski&sz=64"
+        },
+        {
           "name": "Three.js",
           "url": "threejs.org",
           "description": "3D graphics for the web",
           "favicon": "https://www.google.com/s2/favicons?domain=threejs.org&sz=64"
+        },
+        {
+          "name": "Vaul",
+          "url": "vaul.emilkowal.ski",
+          "description": "Drawer component for React",
+          "favicon": "https://www.google.com/s2/favicons?domain=vaul.emilkowal.ski&sz=64"
         }
       ]
     },
@@ -358,6 +382,12 @@
           "url": "framer.com",
           "description": "Marketing sites and landing pages",
           "favicon": "https://www.google.com/s2/favicons?domain=framer.com&sz=64"
+        },
+        {
+          "name": "Jitter",
+          "url": "jitter.video",
+          "description": "Motion design for the web",
+          "favicon": "https://www.google.com/s2/favicons?domain=jitter.video&sz=64"
         },
         {
           "name": "Magic Patterns",
