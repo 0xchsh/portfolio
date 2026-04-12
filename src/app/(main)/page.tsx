@@ -99,9 +99,11 @@ async function getCommitData() {
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([date, { count, repos }]) => ({ date, count, repos: Array.from(repos) }));
 
-    return { days, totalCommits: days.reduce((s, d) => s + d.count, 0) };
+    const totalCommits = days.reduce((s, d) => s + d.count, 0);
+    console.warn('[CommitGraph] totalCommits:', totalCommits, 'days with data:', days.filter(d => d.count > 0).length);
+    return { days, totalCommits };
   } catch (err) {
-    console.error('[CommitGraph] Exception:', err);
+    console.warn('[CommitGraph] Exception:', err);
     return { days: [] as CommitDay[], totalCommits: 0 };
   }
 }
