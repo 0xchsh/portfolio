@@ -42,7 +42,7 @@ async function getCommitData() {
       commitsByDay.set(toLocalDate(d), { count: 0, repos: new Set() });
     }
 
-    const token = process.env.GITHUB_TOKEN;
+    const token = process.env.GITHUB_TOKEN?.trim();
     if (!token) return { days: [] as CommitDay[], totalCommits: 0 };
 
     const query = `
