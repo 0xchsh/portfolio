@@ -43,6 +43,7 @@ async function getCommitData() {
     }
 
     const token = process.env.GITHUB_TOKEN?.trim();
+    console.warn('[CommitGraph] token present:', !!token, 'length:', token?.length ?? 0);
     if (!token) return { days: [] as CommitDay[], totalCommits: 0 };
 
     const query = `
@@ -70,8 +71,9 @@ async function getCommitData() {
       next: { revalidate: 3600 },
     });
 
+    console.warn('[CommitGraph] GitHub API status:', res.status);
     if (!res.ok) {
-      console.error('[CommitGraph] GitHub API error:', res.status, await res.text().catch(() => ''));
+      console.warn('[CommitGraph] GitHub API error:', res.status, await res.text().catch(() => ''));
       return { days: [] as CommitDay[], totalCommits: 0 };
     }
 
@@ -80,6 +82,7 @@ async function getCommitData() {
       console.error('[CommitGraph] GraphQL errors:', JSON.stringify(json.errors));
     }
     const byRepo = json?.data?.user?.contributionsCollection?.commitContributionsByRepository ?? [];
+    console.warn('[CommitGraph] repos found:', byRepo.length);
 
     for (const { repository, contributions } of byRepo) {
       for (const node of contributions.nodes) {
