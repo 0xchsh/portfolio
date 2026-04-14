@@ -7,6 +7,7 @@ const subtitles: Record<string, string> = {
   '/': 'Software Designer',
   '/skills': 'Curated Skills',
   '/stack': 'Curated Resources',
+  '/work': 'Prepared for Exa',
 };
 
 export function Subtitle() {

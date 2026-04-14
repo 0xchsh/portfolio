@@ -65,6 +65,7 @@ function DarkModeToggle() {
 
 export function V2Controls() {
   const pathname = usePathname();
+  if (pathname === '/work') return null;
   return (
     <div className="flex items-center gap-3">
       <Tooltip>
@@ -112,6 +113,8 @@ export function V2Controls() {
 export function DesktopControlsRow() {
   const pathname = usePathname();
   const isStack = pathname === '/stack';
+
+  if (pathname === '/work') return null;
 
   return (
     <div

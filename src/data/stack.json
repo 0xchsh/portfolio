@@ -511,6 +511,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=radio.garden&sz=64"
         },
         {
+          "name": "RGB World",
+          "url": "rgb-world.vercel.app",
+          "description": "Interactive RGB color world",
+          "favicon": "https://www.google.com/s2/favicons?domain=rgb-world.vercel.app&sz=64"
+        },
+        {
           "name": "Rovers Land",
           "url": "rovers.land",
           "description": "Interactive experience",
