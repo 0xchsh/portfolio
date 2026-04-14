@@ -34,16 +34,16 @@
           "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=64"
         },
         {
+          "name": "Public APIs Dev",
+          "url": "publicapis.dev",
+          "description": "Free public APIs directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=publicapis.dev&sz=64"
+        },
+        {
           "name": "Try Open Data",
           "url": "tryopendata.ai",
           "description": "Open data API",
           "favicon": "https://www.google.com/s2/favicons?domain=tryopendata.ai&sz=64"
-        },
-        {
-          "name": "Undesign",
-          "url": "undesign.learn.uno",
-          "description": "Collection of free design tools and resources",
-          "favicon": "https://www.google.com/s2/favicons?domain=undesign.learn.uno&sz=64"
         }
       ]
     },
@@ -208,6 +208,13 @@
           "url": "sonner.emilkowal.ski",
           "description": "Toast component for React",
           "favicon": "https://www.google.com/s2/favicons?domain=sonner.emilkowal.ski&sz=64"
+        },
+        {
+          "name": "Tegaki",
+          "url": "gkurt.com",
+          "href": "gkurt.com/tegaki",
+          "description": "Animated handwriting from any Google Font",
+          "favicon": "https://www.google.com/s2/favicons?domain=gkurt.com&sz=64"
         },
         {
           "name": "Three.js",
