@@ -429,6 +429,42 @@
       ]
     },
     {
+      "name": "Directories",
+      "items": [
+        {
+          "name": "Curated Supply",
+          "url": "curated.supply",
+          "description": "Curated hardware",
+          "favicon": "https://www.google.com/s2/favicons?domain=curated.supply&sz=64"
+        },
+        {
+          "name": "Godly",
+          "url": "godly.website",
+          "description": "Web design inspiration",
+          "favicon": "https://www.google.com/s2/favicons?domain=godly.website&sz=64"
+        },
+        {
+          "name": "Deck Gallery",
+          "url": "deck.gallery",
+          "description": "Curated deck designs",
+          "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
+        },
+        {
+          "name": "Footer Design",
+          "url": "footer.design",
+          "description": "Curated footer designs",
+          "favicon": "https://www.google.com/s2/favicons?domain=footer.design&sz=64"
+        },
+        {
+          "name": "Minimal Gallery Tools",
+          "url": "minimal.gallery",
+          "href": "minimal.gallery/tools",
+          "description": "Curated tools directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=minimal.gallery&sz=64"
+        }
+      ]
+    },
+    {
       "name": "Fun Sites",
       "items": [
         {
