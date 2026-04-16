@@ -678,3 +678,12 @@ body {
     animation: none;
   }
 }
+
+/* ── Scrollbar utilities ────────────────────────────────────────────────── */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

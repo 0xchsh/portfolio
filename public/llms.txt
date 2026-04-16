@@ -66,3 +66,8 @@ Reach me at hi@ch.sh or dm on x.com (@chshux).
 
 - Skill: https://github.com/0xchsh/agent-skills/blob/main/shincn/SKILL.md
 - Install: npx skills add 0xchsh/agent-skills@shincn -g
+
+## Skills
+
+- Machine-readable list of created and installed skills: https://ch.sh/skills.json
+- Human-readable page: https://ch.sh/skills

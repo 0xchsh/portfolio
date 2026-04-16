@@ -68,7 +68,7 @@ export default function WorkPage() {
     <div className="relative flex flex-col h-[calc(100svh-200px)] min-h-[600px]">
       {/* Horizontal scroll gallery */}
       <div className="flex-1 w-screen ml-[calc(50%-50vw)] overflow-x-auto overflow-y-hidden scrollbar-none">
-        <div className="h-full flex items-center gap-4 px-5 sm:px-8 w-fit">
+        <div className={`h-full flex gap-4 px-5 sm:px-8 w-fit ${isPortrait ? 'items-center' : 'items-start pt-12'}`}>
           {screens.map((screen) => {
             const dimmed = hoveredSrc !== null && hoveredSrc !== screen.src;
             const style = {
@@ -111,7 +111,7 @@ export default function WorkPage() {
       </div>
 
       {/* Toggle group */}
-      <div className="flex justify-center pb-6 pt-2">
+      <div className="flex justify-center pb-12 pt-2">
         <div className="flex items-center gap-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800/60 p-1">
           {TABS.map((tab) => (
             <button

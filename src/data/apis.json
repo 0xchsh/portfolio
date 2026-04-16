@@ -1,9 +1,0 @@
-{
-  "items": [
-    { "name": "Try Open Data", "url": "tryopendata.ai", "description": "Open data API", "favicon": "https://www.google.com/s2/favicons?domain=tryopendata.ai&sz=64" },
-    { "name": "Public APIs", "url": "github.com", "href": "github.com/public-apis/public-apis", "description": "Collective list of free APIs", "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=64" },
-    { "name": "RapidAPI", "url": "rapidapi.com", "description": "API marketplace and hub", "favicon": "https://www.google.com/s2/favicons?domain=rapidapi.com&sz=64" },
-    { "name": "Undesign", "url": "undesign.learn.uno", "description": "Collection of free design tools and resources", "favicon": "https://www.google.com/s2/favicons?domain=undesign.learn.uno&sz=64" },
-    { "name": "Any API", "url": "any-api.com", "description": "API directory", "favicon": "https://www.google.com/s2/favicons?domain=any-api.com&sz=64" }
-  ]
-}

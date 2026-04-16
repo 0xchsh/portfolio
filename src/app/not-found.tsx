@@ -4,9 +4,9 @@ import { NotFoundBg } from '@/components/shared/NotFoundBg';
 
 export default function NotFound() {
   return (
-    <div className="relative flex flex-col items-center justify-center py-24">
+    <div className="relative min-h-[60vh] flex flex-col items-center justify-center overflow-hidden w-full max-w-[704px] mx-auto">
       <NotFoundBg />
-      <div className="max-w-[320px] w-full flex flex-col items-center text-center gap-8">
+      <div className="relative max-w-[320px] w-full flex flex-col items-center text-center gap-8">
 
         {/* 404 display */}
         <FadeIn delay={60}>
