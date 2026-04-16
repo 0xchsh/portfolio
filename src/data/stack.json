@@ -438,29 +438,34 @@
           "favicon": "https://www.google.com/s2/favicons?domain=curated.supply&sz=64"
         },
         {
-          "name": "Godly",
-          "url": "godly.website",
-          "description": "Web design inspiration",
-          "favicon": "https://www.google.com/s2/favicons?domain=godly.website&sz=64"
+          "name": "Freelance Things",
+          "url": "freelancethings.co",
+          "description": "Freelance resources directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=freelancethings.co&sz=64"
         },
         {
-          "name": "Deck Gallery",
-          "url": "deck.gallery",
-          "description": "Curated deck designs",
-          "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
+          "name": "Marketing Examples",
+          "url": "marketingexamples.com",
+          "description": "Marketing examples directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=marketingexamples.com&sz=64"
         },
         {
-          "name": "Footer Design",
-          "url": "footer.design",
-          "description": "Curated footer designs",
-          "favicon": "https://www.google.com/s2/favicons?domain=footer.design&sz=64"
+          "name": "OpenAlternative",
+          "url": "openalternative.co",
+          "description": "Open source software alternatives",
+          "favicon": "https://www.google.com/s2/favicons?domain=openalternative.co&sz=64"
         },
         {
-          "name": "Minimal Gallery Tools",
-          "url": "minimal.gallery",
-          "href": "minimal.gallery/tools",
-          "description": "Curated tools directory",
-          "favicon": "https://www.google.com/s2/favicons?domain=minimal.gallery&sz=64"
+          "name": "Product Hunt",
+          "url": "producthunt.com",
+          "description": "New product launches",
+          "favicon": "https://www.google.com/s2/favicons?domain=producthunt.com&sz=64"
+        },
+        {
+          "name": "Rocumentaries",
+          "url": "rocumentaries.com",
+          "description": "Curated documentaries",
+          "favicon": "https://www.google.com/s2/favicons?domain=rocumentaries.com&sz=64"
         },
         {
           "name": "There's An AI For That",
@@ -469,10 +474,22 @@
           "favicon": "https://www.google.com/s2/favicons?domain=theresanaiforthat.com&sz=64"
         },
         {
-          "name": "Rebrand Gallery",
-          "url": "rebrand.gallery",
-          "description": "Curated rebrand showcases",
-          "favicon": "https://www.google.com/s2/favicons?domain=rebrand.gallery&sz=64"
+          "name": "Tiny Startups",
+          "url": "tinystartups.com",
+          "description": "Tiny startup directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=tinystartups.com&sz=64"
+        },
+        {
+          "name": "Toolfolio",
+          "url": "toolfolio.io",
+          "description": "Curated tools directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=toolfolio.io&sz=64"
+        },
+        {
+          "name": "Workspaces",
+          "url": "workspaces.xyz",
+          "description": "Curated workspace setups",
+          "favicon": "https://www.google.com/s2/favicons?domain=workspaces.xyz&sz=64"
         }
       ]
     },
@@ -626,16 +643,40 @@
       "name": "Inspiration",
       "items": [
         {
+          "name": "404s",
+          "url": "404s.design",
+          "description": "Curated 404 page designs",
+          "favicon": "https://www.google.com/s2/favicons?domain=404s.design&sz=64"
+        },
+        {
+          "name": "AB Test Design",
+          "url": "abtest.design",
+          "description": "A/B test design inspiration",
+          "favicon": "https://www.google.com/s2/favicons?domain=abtest.design&sz=64"
+        },
+        {
           "name": "Cosmos",
           "url": "cosmos.so",
           "description": "Design inspiration",
           "favicon": "https://www.google.com/s2/favicons?domain=cosmos.so&sz=64"
         },
         {
+          "name": "Deck Gallery",
+          "url": "deck.gallery",
+          "description": "Curated deck designs",
+          "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
+        },
+        {
           "name": "Detail",
           "url": "detail.design",
           "description": "Design details and breakdowns",
           "favicon": "https://www.google.com/s2/favicons?domain=detail.design&sz=64"
+        },
+        {
+          "name": "Footer Design",
+          "url": "footer.design",
+          "description": "Curated footer designs",
+          "favicon": "https://www.google.com/s2/favicons?domain=footer.design&sz=64"
         },
         {
           "name": "Godly",
@@ -656,6 +697,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=logobook.com&sz=64"
         },
         {
+          "name": "Minimal Gallery Tools",
+          "url": "minimal.gallery",
+          "href": "minimal.gallery/tools",
+          "description": "Curated tools directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=minimal.gallery&sz=64"
+        },
+        {
           "name": "Mobbin",
           "url": "mobbin.com",
           "description": "UI & UX design patterns",
@@ -666,6 +714,12 @@
           "url": "origamiarchive.com",
           "description": "Origami collection",
           "favicon": "https://www.google.com/s2/favicons?domain=origamiarchive.com&sz=64"
+        },
+        {
+          "name": "Rebrand Gallery",
+          "url": "rebrand.gallery",
+          "description": "Curated rebrand showcases",
+          "favicon": "https://www.google.com/s2/favicons?domain=rebrand.gallery&sz=64"
         },
         {
           "name": "Spotted in Prod",
