@@ -322,8 +322,8 @@ export function StackContent() {
                     <div className="shrink-0 w-[12px] h-[16px] flex items-center justify-center overflow-hidden">
                       <BookCover book={book} mini />
                     </div>
-                    <span className="text-sm font-medium text-foreground min-w-[100px]">{book.title}</span>
-                    <span className="text-xs text-neutral-400 dark:text-neutral-600 flex-1 text-right hidden desktop:block transition-transform duration-150 truncate group-hover:-translate-x-4">
+                    <span className="text-sm font-medium text-foreground truncate">{book.title}</span>
+                    <span className="text-xs text-neutral-400 dark:text-neutral-600 flex-1 text-right transition-transform duration-150 truncate group-hover:-translate-x-4">
                       {book.author}
                     </span>
                     <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-all duration-150 translate-x-1 group-hover:translate-x-0 absolute right-3" />
