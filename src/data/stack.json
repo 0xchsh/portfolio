@@ -798,6 +798,29 @@
       ]
     },
     {
+      "name": "Read",
+      "items": [
+        {
+          "title": "Project Hail Mary",
+          "author": "Andy Weir",
+          "url": "goodreads.com/book/show/54493401-project-hail-mary",
+          "bgColor": "#2563EB"
+        },
+        {
+          "title": "Ready Player One",
+          "author": "Ernest Cline",
+          "url": "goodreads.com/book/show/9969571-ready-player-one",
+          "bgColor": "#7C3AED"
+        },
+        {
+          "title": "The Design of Everyday Things",
+          "author": "Don Norman",
+          "url": "goodreads.com/book/show/840.The_Design_of_Everyday_Things",
+          "bgColor": "#E85D2F"
+        }
+      ]
+    },
+    {
       "name": "Software",
       "items": [
         {

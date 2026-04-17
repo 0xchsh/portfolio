@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen } from '@phosphor-icons/react';
+import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen, Book } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { usePlayer, extractYouTubeId } from '@/components/shared/MiniPlayer';
@@ -15,12 +15,23 @@ type StackItem = {
   favicon: string;
 };
 
+type Book = {
+  title: string;
+  author: string;
+  url: string;
+  bgColor: string;
+};
+
 type Category = {
   name: string;
-  items: StackItem[];
+  items: StackItem[] | Book[];
 };
 
 const categories = stackData.categories as Category[];
+
+function isBookCategory(cat: Category): cat is { name: string; items: Book[] } {
+  return cat.name === 'Read';
+}
 
 const categoryIcons: Record<string, React.ElementType> = {
   Agents: Robot,
@@ -38,7 +49,41 @@ const categoryIcons: Record<string, React.ElementType> = {
   Typography: TextAa,
   APIs: Plugs,
   Directories: BookOpen,
+  Read: Book,
 };
+
+function BookCover({ book, mini = false }: { book: Book; mini?: boolean }) {
+  const spineWidth = mini ? '18%' : '7%';
+  return (
+    <div
+      className={cn(
+        'relative w-full h-full overflow-hidden',
+        mini ? 'rounded-[1.5px]' : 'rounded-r-md rounded-l-[2px]',
+      )}
+      style={{ background: book.bgColor }}
+    >
+      {/* Spine face — rounded cylinder shading via overlay blend (adapts to any color) */}
+      <div
+        className="absolute inset-y-0 left-0 pointer-events-none [mix-blend-mode:overlay]"
+        style={{
+          width: spineWidth,
+          background:
+            'linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(255,255,255,0.55) 28%, rgba(255,255,255,0.2) 55%, rgba(0,0,0,0.4) 100%)',
+        }}
+      />
+      {/* Groove — darker crevice between spine and cover */}
+      <div
+        className="absolute inset-y-0 pointer-events-none [mix-blend-mode:overlay]"
+        style={{ left: spineWidth, width: '1px', background: 'rgba(0,0,0,0.6)' }}
+      />
+      {/* Subtle highlight on cover edge just after groove */}
+      <div
+        className="absolute inset-y-0 pointer-events-none [mix-blend-mode:overlay]"
+        style={{ left: `calc(${spineWidth} + 1px)`, width: '1px', background: 'rgba(255,255,255,0.25)' }}
+      />
+    </div>
+  );
+}
 
 function SectionLabel({ children, trailing }: { children: React.ReactNode; trailing?: React.ReactNode }) {
   return (
@@ -119,7 +164,8 @@ export function StackContent() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [view, setView] = useState<'grid' | 'list'>('grid');
   const activeCategory = categories[activeIndex];
-  const ogImages = useOgImages(activeCategory.items);
+  const isBooks = isBookCategory(activeCategory);
+  const ogImages = useOgImages(isBooks ? [] : (activeCategory.items as StackItem[]));
   const [brokenImages, setBrokenImages] = useState<Set<string>>(new Set());
   const { play, current, playing: playerPlaying, togglePlay } = usePlayer();
 
@@ -261,10 +307,61 @@ export function StackContent() {
         </div>
         <div className="mt-4" />
 
-        {view === 'list' ? (
+        {isBooks ? (
+          view === 'list' ? (
+            /* Books list */
+            <div key="books-list" className="flex flex-col gap-0.5">
+              {(activeCategory.items as Book[]).map((book, i) => (
+                <FadeIn key={book.title} delay={i * 25}>
+                  <a
+                    href={`https://${book.url}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center gap-2 px-3 py-1.5 rounded-md transition-colors duration-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  >
+                    <div className="shrink-0 w-[12px] h-[16px] flex items-center justify-center overflow-hidden">
+                      <BookCover book={book} mini />
+                    </div>
+                    <span className="text-sm font-medium text-foreground min-w-[100px]">{book.title}</span>
+                    <span className="text-xs text-neutral-400 dark:text-neutral-600 flex-1 text-right hidden desktop:block transition-transform duration-150 truncate group-hover:-translate-x-4">
+                      {book.author}
+                    </span>
+                    <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-all duration-150 translate-x-1 group-hover:translate-x-0 absolute right-3" />
+                  </a>
+                </FadeIn>
+              ))}
+            </div>
+          ) : (
+            /* Books grid */
+            <div key="books-grid" className="grid grid-cols-2 desktop:grid-cols-3 gap-4 px-1.5">
+              {(activeCategory.items as Book[]).map((book, i) => (
+                <FadeIn key={book.title} delay={i * 40}>
+                  <a
+                    href={`https://${book.url}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block"
+                  >
+                    <div className="relative aspect-[3/4] w-full [perspective:1400px] transition-transform duration-300 group-hover:-translate-y-0.5">
+                      <div className="relative w-full h-full [transform-style:preserve-3d] [transform-origin:left_center] transition-transform duration-300 group-hover:[transform:rotateY(-10deg)]">
+                        <div className="relative w-full h-full drop-shadow-[0_4px_8px_rgba(0,0,0,0.08)] dark:drop-shadow-[0_4px_8px_rgba(0,0,0,0.35)]">
+                          <BookCover book={book} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center mt-2.5 px-0.5 min-w-0">
+                      <span className="text-xs font-medium text-foreground truncate">{book.title}</span>
+                      <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ml-1" />
+                    </div>
+                  </a>
+                </FadeIn>
+              ))}
+            </div>
+          )
+        ) : view === 'list' ? (
           /* List rows */
           <div key="list" className="flex flex-col gap-0.5">
-            {activeCategory.items.map((item, i) => {
+            {(activeCategory.items as StackItem[]).map((item, i) => {
               const isYT = isYouTubeItem(item);
               const ytVideoId = isYT ? extractYouTubeId(item.href || item.url) : null;
               const isCurrent = isYT && ytVideoId === current?.videoId;
@@ -319,7 +416,7 @@ export function StackContent() {
         ) : (
           /* Grid thumbnails */
           <div key="grid" className="grid grid-cols-1 desktop:grid-cols-2 gap-4 px-1.5">
-            {activeCategory.items.map((item, i) => {
+            {(activeCategory.items as StackItem[]).map((item, i) => {
               const ogImage = ogImages[itemKey(item)];
               const isYT = isYouTubeItem(item);
               const gridYtVideoId = isYT ? extractYouTubeId(item.href || item.url) : null;
