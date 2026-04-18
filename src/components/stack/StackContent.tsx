@@ -88,20 +88,6 @@ function BookCover({ book, mini = false }: { book: Book; mini?: boolean }) {
           }}
         />
       )}
-      {/* Top page-edge strip (pages peeking above cover) */}
-      {!mini && (
-        <div
-          className="absolute top-0 pointer-events-none"
-          style={{
-            left: spineWidth,
-            right: 0,
-            height: '3px',
-            background:
-              'linear-gradient(to bottom, #EFE4CC 0%, #D9CBAD 55%, #8A7A5A 100%)',
-            boxShadow: 'inset 0 -0.5px 0 rgba(0,0,0,0.35)',
-          }}
-        />
-      )}
       {/* Spine face — rounded cylinder shading via overlay blend (adapts to any color) */}
       <div
         className="absolute inset-y-0 left-0 pointer-events-none [mix-blend-mode:overlay]"
