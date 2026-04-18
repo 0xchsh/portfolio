@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useId } from 'react';
 import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen, Book } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { FadeIn } from '@/components/shared/FadeIn';
@@ -54,6 +54,8 @@ const categoryIcons: Record<string, React.ElementType> = {
 
 function BookCover({ book, mini = false }: { book: Book; mini?: boolean }) {
   const spineWidth = mini ? '18%' : '7%';
+  const rawId = useId();
+  const noiseId = `noise-${rawId.replace(/[:]/g, '')}`;
   return (
     <div
       className={cn(
@@ -62,6 +64,44 @@ function BookCover({ book, mini = false }: { book: Book; mini?: boolean }) {
       )}
       style={{ background: book.bgColor }}
     >
+      {/* Paper noise texture */}
+      {!mini && (
+        <svg
+          aria-hidden
+          preserveAspectRatio="none"
+          className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.14] [mix-blend-mode:overlay]"
+        >
+          <filter id={noiseId}>
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+            <feColorMatrix type="saturate" values="0" />
+          </filter>
+          <rect width="100%" height="100%" filter={`url(#${noiseId})`} />
+        </svg>
+      )}
+      {/* Vignette — corner darkening + subtle center glow */}
+      {!mini && (
+        <div
+          className="absolute inset-0 pointer-events-none [mix-blend-mode:overlay]"
+          style={{
+            background:
+              'radial-gradient(ellipse at 55% 45%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 55%, rgba(0,0,0,0.38) 100%)',
+          }}
+        />
+      )}
+      {/* Top page-edge strip (pages peeking above cover) */}
+      {!mini && (
+        <div
+          className="absolute top-0 pointer-events-none"
+          style={{
+            left: spineWidth,
+            right: 0,
+            height: '3px',
+            background:
+              'linear-gradient(to bottom, #EFE4CC 0%, #D9CBAD 55%, #8A7A5A 100%)',
+            boxShadow: 'inset 0 -0.5px 0 rgba(0,0,0,0.35)',
+          }}
+        />
+      )}
       {/* Spine face — rounded cylinder shading via overlay blend (adapts to any color) */}
       <div
         className="absolute inset-y-0 left-0 pointer-events-none [mix-blend-mode:overlay]"
