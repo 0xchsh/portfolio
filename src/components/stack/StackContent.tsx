@@ -27,7 +27,29 @@ type Category = {
   items: StackItem[] | Book[];
 };
 
-const categories = stackData.categories as Category[];
+function sortKey(value: string): string {
+  return value.toLowerCase().replace(/^the\s+/, '');
+}
+
+function itemSortKey(item: StackItem | Book): string {
+  return sortKey('title' in item ? item.title : item.name);
+}
+
+const UNSORTED_CATEGORIES = new Set(['On Repeat']);
+
+const categories = (stackData.categories as Category[])
+  .slice()
+  .sort((a, b) => sortKey(a.name).localeCompare(sortKey(b.name)))
+  .map((cat) =>
+    UNSORTED_CATEGORIES.has(cat.name)
+      ? cat
+      : {
+          ...cat,
+          items: ([...cat.items] as (StackItem | Book)[]).sort((a, b) =>
+            itemSortKey(a).localeCompare(itemSortKey(b)),
+          ),
+        },
+  ) as Category[];
 
 function isBookCategory(cat: Category): cat is { name: string; items: Book[] } {
   return cat.name === 'Read';
