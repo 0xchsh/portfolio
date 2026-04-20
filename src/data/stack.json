@@ -853,6 +853,12 @@
           "author": "Neal Stephenson",
           "url": "goodreads.com/book/show/61240297-snow-crash",
           "bgColor": "#5A7395"
+        },
+        {
+          "title": "The Antisocial Network",
+          "author": "Ben Mezrich",
+          "url": "goodreads.com/en/book/show/57796397-the-antisocial-network",
+          "bgColor": "#5A8B6C"
         }
       ]
     },
