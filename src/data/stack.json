@@ -667,6 +667,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=404s.design&sz=64"
         },
         {
+          "name": "60fps Design",
+          "url": "60fps.design",
+          "description": "Curated UI animation examples",
+          "favicon": "https://www.google.com/s2/favicons?domain=60fps.design&sz=64"
+        },
+        {
           "name": "AB Test Design",
           "url": "abtest.design",
           "description": "A/B test design inspiration",
