@@ -223,6 +223,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=threejs.org&sz=64"
         },
         {
+          "name": "Transitions.dev",
+          "url": "transitions.dev",
+          "description": "Copy-paste web transitions",
+          "favicon": "https://www.google.com/s2/favicons?domain=transitions.dev&sz=64"
+        },
+        {
           "name": "Vaul",
           "url": "vaul.emilkowal.ski",
           "description": "Drawer component for React",
@@ -497,6 +503,12 @@
       "name": "Fun Sites",
       "items": [
         {
+          "name": "Blueprint",
+          "url": "www.blueprint.am",
+          "description": "AI for hardware design",
+          "favicon": "https://www.google.com/s2/favicons?domain=www.blueprint.am&sz=64"
+        },
+        {
           "name": "Calligrapher.ai",
           "url": "calligrapher.ai",
           "description": "AI handwriting generation",
@@ -507,6 +519,12 @@
           "url": "musiclab.chromeexperiments.com",
           "description": "Chrome music experiments",
           "favicon": "https://www.google.com/s2/favicons?domain=musiclab.chromeexperiments.com&sz=64"
+        },
+        {
+          "name": "Chus Margallo",
+          "url": "chusmargallo.space",
+          "description": "Interactive desktop portfolio",
+          "favicon": "https://www.google.com/s2/favicons?domain=chusmargallo.space&sz=64"
         },
         {
           "name": "CLI Guidelines",
@@ -906,6 +924,12 @@
           "url": "screen.studio",
           "description": "Screen recording",
           "favicon": "https://www.google.com/s2/favicons?domain=screen.studio&sz=64"
+        },
+        {
+          "name": "Snack",
+          "url": "snack.xyz",
+          "description": "Curated link collections",
+          "favicon": "https://www.google.com/s2/favicons?domain=snack.xyz&sz=64"
         },
         {
           "name": "Superwhisper",
