@@ -153,6 +153,17 @@
     "ratio": "16:9"
   },
   {
+    "title": "Ramp",
+    "description": "Card Customization",
+    "src": [
+      "/work/misc/img/ramp-chsh.webm"
+    ],
+    "link": "https://ramp.ch.sh",
+    "logo": null,
+    "ratio": "16:9",
+    "objectPosition": "top"
+  },
+  {
     "title": "ElevenRooms",
     "description": "Soundscapes powered by ElevenLabs",
     "src": [
