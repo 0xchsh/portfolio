@@ -606,6 +606,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=rovers.land&sz=64"
         },
         {
+          "name": "Smallbits",
+          "url": "smallbits.design",
+          "description": "Tiny interactive design bits",
+          "favicon": "https://www.google.com/s2/favicons?domain=smallbits.design&sz=64"
+        },
+        {
           "name": "Text to ASCII Art",
           "url": "patorjk.com",
           "href": "patorjk.com/software/taag/#p=testall&f=Cards&t=HELLO+ANTHROPIC&x=none&v=4&h=4&w=80&we=false",
