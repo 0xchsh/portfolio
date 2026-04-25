@@ -889,6 +889,12 @@
           "author": "Ben Mezrich",
           "url": "goodreads.com/en/book/show/57796397-the-antisocial-network",
           "bgColor": "#5A8B6C"
+        },
+        {
+          "title": "The Hobbit",
+          "author": "J.R.R. Tolkien",
+          "url": "goodreads.com/book/show/5907.The_Hobbit",
+          "bgColor": "#2E5E3E"
         }
       ]
     },
