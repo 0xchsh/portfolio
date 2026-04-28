@@ -450,6 +450,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=freelancethings.co&sz=64"
         },
         {
+          "name": "Macfolio",
+          "url": "macfolio.com",
+          "description": "Curated Mac apps",
+          "favicon": "https://www.google.com/s2/favicons?domain=macfolio.com&sz=64"
+        },
+        {
           "name": "Marketing Examples",
           "url": "marketingexamples.com",
           "description": "Marketing examples directory",
@@ -460,6 +466,12 @@
           "url": "openalternative.co",
           "description": "Open source software alternatives",
           "favicon": "https://www.google.com/s2/favicons?domain=openalternative.co&sz=64"
+        },
+        {
+          "name": "Osscar",
+          "url": "osscar.dev",
+          "description": "Curated directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=osscar.dev&sz=64"
         },
         {
           "name": "Product Hunt",
