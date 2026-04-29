@@ -613,6 +613,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=parallel.ai&sz=64"
         },
         {
+          "name": "Pioneers",
+          "url": "pioneers.parallel.ai",
+          "description": "Parallel pioneers experience",
+          "favicon": "https://www.google.com/s2/favicons?domain=parallel.ai&sz=64"
+        },
+        {
           "name": "Radio Garden",
           "url": "radio.garden",
           "description": "Listen to radio stations around the globe",
