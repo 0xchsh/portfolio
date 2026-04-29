@@ -133,6 +133,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=varunsrinivasan.com&sz=64"
         },
         {
+          "name": "SVG Guide",
+          "url": "svg.guide",
+          "description": "Guide to working with SVG",
+          "favicon": "https://www.google.com/s2/favicons?domain=svg.guide&sz=64"
+        },
+        {
           "name": "Tech Stack",
           "url": "visitors.now",
           "href": "visitors.now/blog/tech-stack",
