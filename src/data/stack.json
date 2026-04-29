@@ -551,6 +551,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=clig.dev&sz=64"
         },
         {
+          "name": "Cursor Camp",
+          "url": "neal.fun",
+          "href": "neal.fun/cursor-camp",
+          "description": "Neal.fun cursor experiment",
+          "favicon": "https://www.google.com/s2/favicons?domain=neal.fun&sz=64"
+        },
+        {
           "name": "Day Rose Lane Hydrants",
           "url": "dayroselane.com",
           "href": "dayroselane.com/hydrants",
