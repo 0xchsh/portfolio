@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { XLogo, GithubLogo, Envelope, ArrowUpRight, Copy } from '@phosphor-icons/react/dist/ssr';
+import { XLogo, GithubLogo, LinkedinLogo, Envelope, ArrowUpRight, Copy } from '@phosphor-icons/react/dist/ssr';
 import { WorkCarousel } from '@/components/home/WorkCarousel';
 import { WeatherIcon } from '@/components/home/WeatherIcon';
 import { CommitGraph } from '@/components/home/CommitGraph';
@@ -356,7 +356,7 @@ export default async function V2Home() {
         <section className="mt-8">
           <FadeIn delay={225 + (caseStudies.length + projects.length + artItems.length) * 40}><SectionLabel>Connect</SectionLabel></FadeIn>
           <div className="mt-3 desktop:mt-4 flex flex-col gap-3">
-            {[0, 1, 2, 3].map((i) => {
+            {[0, 1, 2, 3, 4].map((i) => {
               const connectBase = 250 + (caseStudies.length + projects.length + artItems.length) * 40;
               const d = connectBase + i * 40;
               if (i === 0) return <FadeIn key="email" delay={d}><CopyEmailRow /></FadeIn>;
@@ -383,6 +383,20 @@ export default async function V2Home() {
                     <div>
                       <p className="text-sm font-medium text-foreground leading-[20px]">0xchsh</p>
                       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">GitHub</p>
+                    </div>
+                    <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
+                  </a>
+                </FadeIn>
+              );
+              if (i === 3) return (
+                <FadeIn key="linkedin" delay={d}>
+                  <a href="https://www.linkedin.com/in/chshux/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 w-[calc(100%+1.5rem)]">
+                    <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center overflow-hidden">
+                      <LinkedinLogo size={20} weight="fill" className="text-foreground transition-transform duration-150 group-hover:scale-110" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground leading-[20px]">chshux</p>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">LinkedIn</p>
                     </div>
                     <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
                   </a>

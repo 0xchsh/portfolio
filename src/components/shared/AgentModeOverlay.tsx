@@ -48,6 +48,7 @@ Reach me at hi@ch.sh or dm on x.com (@chshux).
 
 - X: @chshux · https://x.com/chshux
 - GitHub: @0xchsh · https://github.com/0xchsh
+- LinkedIn: @chshux · https://www.linkedin.com/in/chshux/
 - Farcaster: @chsh.eth · https://warpcast.com/chsh.eth
 - Email: hi@ch.sh
 
