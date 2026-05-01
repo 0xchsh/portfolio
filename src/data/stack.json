@@ -666,6 +666,12 @@
           "url": "www.trainjazz.com",
           "description": "Creative web experience",
           "favicon": "https://www.google.com/s2/favicons?domain=www.trainjazz.com&sz=64"
+        },
+        {
+          "name": "YOYOYO",
+          "url": "www.yoyoyo.ai",
+          "description": "DeepMind x Porto Rocha AI yo-yo",
+          "favicon": "https://www.google.com/s2/favicons?domain=www.yoyoyo.ai&sz=64"
         }
       ]
     },
