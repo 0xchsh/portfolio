@@ -1,6 +1,11 @@
 {
   "created": [
     {
+      "name": "enforce-design-system",
+      "description": "Audit code against a design system",
+      "href": "https://github.com/0xchsh/agent-skills/blob/main/enforce-design-system/SKILL.md"
+    },
+    {
       "name": "shincn",
       "description": "Design instructions for LLMs",
       "href": "https://github.com/0xchsh/agent-skills/blob/main/shincn/SKILL.md"
