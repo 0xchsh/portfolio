@@ -157,6 +157,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=ui.aceternity.com&sz=64"
         },
         {
+          "name": "AI SDK Agents",
+          "url": "aisdkagents.com",
+          "description": "AI SDK agent components",
+          "favicon": "https://www.google.com/s2/favicons?domain=aisdkagents.com&sz=64"
+        },
+        {
           "name": "Animate UI",
           "url": "animate-ui.com",
           "href": "animate-ui.com/docs/components",
