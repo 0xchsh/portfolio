@@ -439,6 +439,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=pencil.dev&sz=64"
         },
         {
+          "name": "Shader Lab",
+          "url": "eng.basement.studio",
+          "href": "eng.basement.studio/tools/shader-lab",
+          "description": "Shader playground by basement.studio",
+          "favicon": "https://www.google.com/s2/favicons?domain=basement.studio&sz=64"
+        },
+        {
           "name": "Unicorn Studio",
           "url": "unicorn.studio",
           "description": "WebGL design tool",
@@ -575,6 +582,13 @@
           "url": "deck.of.cards",
           "description": "Interactive card deck",
           "favicon": "https://www.google.com/s2/favicons?domain=deck.of.cards&sz=64"
+        },
+        {
+          "name": "Empty Screenings",
+          "url": "walzr.com",
+          "href": "walzr.com/empty-screenings",
+          "description": "Movies playing to empty theaters",
+          "favicon": "https://www.google.com/s2/favicons?domain=walzr.com&sz=64"
         },
         {
           "name": "FFFFFFT",
