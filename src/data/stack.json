@@ -1036,6 +1036,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=mockups.digital&sz=64"
         },
         {
+          "name": "Taylor Penton",
+          "url": "taylorpenton.com",
+          "description": "Type designer portfolio",
+          "favicon": "https://www.google.com/s2/favicons?domain=taylorpenton.com&sz=64"
+        },
+        {
           "name": "Uncut",
           "url": "uncut.wtf",
           "description": "Free typeface catalogue",
