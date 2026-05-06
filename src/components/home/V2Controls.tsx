@@ -113,13 +113,14 @@ export function V2Controls() {
 export function DesktopControlsRow() {
   const pathname = usePathname();
   const isStack = pathname === '/stack';
+  const isIndex = pathname === '/index';
 
   if (pathname === '/work') return null;
 
   return (
     <div
       className="opacity-0 group-hover/page:opacity-100 transition-all duration-300"
-      style={{ transform: isStack ? 'translateX(-161px)' : 'translateX(0)' }}
+      style={{ transform: isStack || isIndex ? 'translateX(-161px)' : 'translateX(0)' }}
     >
       <V2Controls />
     </div>

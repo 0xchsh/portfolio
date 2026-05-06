@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "name": "Company",
+      "items": [
+        { "name": "Eco", "url": "portal.eco.com", "description": "Cross-chain bridge" },
+        { "name": "Noundation", "url": "noundation.framer.website", "description": "Community design system" },
+        { "name": "Noundation UI", "url": "noundationkit.framer.website/landing", "description": "Framer design kit" },
+        { "name": "Rat Labs", "url": "ratlabs.xyz", "description": "Onchain product studio" },
+        { "name": "RGB", "url": "rgb.fun", "description": "Onchain identity framework" },
+        { "name": "ShinCN", "url": "ui.ch.sh", "description": "Personal design system" },
+        { "name": "Snack", "url": "snack.xyz", "description": "List curation tool" }
+      ]
+    },
+    {
+      "name": "Clients",
+      "items": [
+        { "name": "Freighter Mobile", "url": "freighter.app", "description": "Stellar" },
+        { "name": "Freighter Extension", "url": "freighter.app", "description": "Stellar" },
+        { "name": "Stellar Design System", "url": "design-system.stellar.org", "description": "Stellar" },
+        { "name": "Stellar Laboratory", "url": "lab.stellar.org", "description": "Stellar" },
+        { "name": "Stellar Community Fund", "url": "", "description": "Stellar" },
+        { "name": "Stellar Disbursement Platform", "url": "https://stellar.org/products-and-tools/disbursement-platform", "description": "Stellar" },
+        { "name": "Stellar Account Viewer", "url": "", "description": "Stellar" },
+        { "name": "Stellar Metrics Dashboard", "url": "", "description": "Stellar" },
+        { "name": "Mobile Try-On", "url": "", "description": "Warby Parker" },
+        { "name": "Cart and Checkout", "url": "", "description": "Warby Parker" },
+        { "name": "Global Navigation", "url": "", "description": "Warby Parker" },
+        { "name": "Uber Rentals", "url": "https://www.uber.com/us/en/ride/car-rentals/", "description": "Uber" },
+        { "name": "Abandoned Cart Dashboard", "url": "", "description": "Weebly" },
+        { "name": "Mobile Onboarding", "url": "", "description": "Weebly" },
+        { "name": "Growth Email Campaigns", "url": "", "description": "Weebly" }
+      ]
+    },
+    {
+      "name": "Personal",
+      "items": [
+        { "name": "AI Design Jobs", "url": "ai-design-jobs.vercel.app", "description": "Curated design jobs" },
+        { "name": "by.computer", "url": "", "description": "Startup template downloads" },
+        { "name": "Checkmate", "url": "", "description": "Discover with friends" },
+        { "name": "CLI UI", "url": "", "description": "Terminal UI explorations" },
+        { "name": "ClawPanel", "url": "", "description": "Browser automation dashboard" },
+        { "name": "ElevenRooms", "url": "elevenrooms.vercel.app", "description": "ASCII soundscapes" },
+        { "name": "Higher", "url": "aimhigher.net", "description": "Community-owned brand" },
+        { "name": "Hyperbrand: Opepen", "url": "https://zora.co/collect/zora:0x787c6366341fbb8a7bfff1064009bce60796338f", "description": "Daily brand remixes" },
+        { "name": "Otto", "url": "", "description": "AI assistant for car owners" },
+        { "name": "Ramp", "url": "ramp.ch.sh", "description": "Card customization" },
+        { "name": "RGB Friends", "url": "https://highlight.xyz/mint/66744e64e610ed36adeb1a64", "description": "Generative pixel characters" },
+        { "name": "RGB Signatures", "url": "rgb.fun", "description": "Onchain binary art" },
+        { "name": "Zorps", "url": "https://zora.co/collect/zora:0x525e87462e5f4b0703dce7ed18f55dd72aea3bde", "description": "Zorb profile collection" }
+      ]
+    }
+  ]
+}

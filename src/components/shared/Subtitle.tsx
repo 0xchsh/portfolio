@@ -7,6 +7,7 @@ const subtitles: Record<string, string> = {
   '/': 'Software Designer',
   '/skills': 'Curated Skills',
   '/stack': 'Curated Resources',
+  '/index': 'Personal Index',
   '/work': 'Prepared for Exa',
 };
 

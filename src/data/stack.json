@@ -670,6 +670,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=rovers.land&sz=64"
         },
         {
+          "name": "Shader",
+          "url": "www.shader.se",
+          "description": "Interactive 3D studio",
+          "favicon": "https://www.google.com/s2/favicons?domain=shader.se&sz=64"
+        },
+        {
           "name": "Smallbits",
           "url": "smallbits.design",
           "description": "Tiny interactive design bits",
