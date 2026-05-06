@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback, useId } from 'react';
-import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen, Book } from '@phosphor-icons/react';
+import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen, Book, FrameCorners } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { usePlayer, extractYouTubeId } from '@/components/shared/MiniPlayer';
@@ -61,6 +61,7 @@ const categoryIcons: Record<string, React.ElementType> = {
   Components: Atom,
   'Design Systems': Palette,
   Inspiration: Sparkle,
+  Mockups: FrameCorners,
   Software: AppWindow,
   Hardware: Desktop,
   Articles: Article,

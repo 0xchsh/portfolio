@@ -1054,6 +1054,31 @@
           "favicon": "https://www.google.com/s2/favicons?domain=velvetyne.fr&sz=64"
         }
       ]
+    },
+    {
+      "name": "Mockups",
+      "items": [
+        {
+          "name": "Layers",
+          "url": "layers.design",
+          "href": "layers.design/shop",
+          "description": "Design mockups and templates",
+          "favicon": "https://www.google.com/s2/favicons?domain=layers.design&sz=64"
+        },
+        {
+          "name": "LS Graphics",
+          "url": "www.ls.graphics",
+          "description": "Premium device mockups and templates",
+          "favicon": "https://www.google.com/s2/favicons?domain=ls.graphics&sz=64"
+        },
+        {
+          "name": "Supply Family",
+          "url": "supply.family",
+          "href": "supply.family/shop",
+          "description": "Curated mockups and design assets",
+          "favicon": "https://www.google.com/s2/favicons?domain=supply.family&sz=64"
+        }
+      ]
     }
   ]
 }
