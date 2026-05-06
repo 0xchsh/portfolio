@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback, useEffect, useLayoutEffect } from 'react';
 import type { CommitDay } from '@/app/page';
 import { playTick } from '@/lib/tick';
 
@@ -23,11 +23,40 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
   const [mounted, setMounted] = useState(false);
   const max = Math.max(...days.map((d) => d.count), 1);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const tooltipRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [offsets, setOffsets] = useState<number[]>([]);
 
   useEffect(() => {
     const id = requestAnimationFrame(() => setMounted(true));
     return () => cancelAnimationFrame(id);
   }, []);
+
+  // Clamp tooltip positions so edge tooltips don't overflow the container
+  useLayoutEffect(() => {
+    if (!mounted) return;
+    const compute = () => {
+      const container = containerRef.current;
+      if (!container) return;
+      const cw = container.getBoundingClientRect().width;
+      const next = days.map((_, i) => {
+        const tip = tooltipRefs.current[i];
+        const bar = container.children[i] as HTMLElement | undefined;
+        if (!tip || !bar) return 0;
+        const tipW = tip.offsetWidth;
+        const barCenter = bar.offsetLeft + bar.offsetWidth / 2;
+        const left = barCenter - tipW / 2;
+        const right = barCenter + tipW / 2;
+        if (left < 0) return -left;
+        if (right > cw) return cw - right;
+        return 0;
+      });
+      setOffsets(next);
+    };
+    compute();
+    window.addEventListener('resize', compute);
+    return () => window.removeEventListener('resize', compute);
+  }, [mounted, days]);
 
   const handleEnter = useCallback((i: number) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -40,10 +69,11 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
   }, []);
 
   return (
-    <div className="relative flex gap-[3px]">
+    <div ref={containerRef} className="relative flex gap-[3px]">
       {days.map((day, i) => {
         const isHovered = hovered === i;
         const isNeighbor = hovered !== null && (hovered === i - 1 || hovered === i + 1);
+        const offset = offsets[i] ?? 0;
 
         return (
           <div
@@ -68,9 +98,10 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
 
             {/* Tooltip — always mounted, animated via opacity + translate */}
             <div
+              ref={(el) => { tooltipRefs.current[i] = el; }}
               className="absolute bottom-full left-1/2 mb-2 z-50 pointer-events-none"
               style={{
-                transform: `translateX(-50%) translateY(${isHovered ? '0px' : '4px'})`,
+                transform: `translateX(calc(-50% + ${offset}px)) translateY(${isHovered ? '0px' : '4px'})`,
                 opacity: isHovered ? 1 : 0,
                 transition: isHovered
                   ? 'opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1), transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1)'

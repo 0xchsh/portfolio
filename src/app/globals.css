@@ -177,6 +177,8 @@ body {
   --tracking-normal: -0.01em;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --toast-success-bg: oklch(0.94 0.06 145);
+  --toast-success-fg: oklch(0.42 0.13 145);
 }
 
 @layer base {
@@ -246,6 +248,8 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.369 0 0);
   --sidebar-ring: oklch(0.556 0 0);
+  --toast-success-bg: oklch(0.32 0.06 145);
+  --toast-success-fg: oklch(0.85 0.13 145);
 }
 
 /* Sidebar navigation animations */
@@ -386,7 +390,7 @@ body {
 }
 
 .header-gradient {
-  background: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%);
+  background: linear-gradient(to bottom, var(--background) 0%, var(--background) 72%, oklch(from var(--background) l c h / 0) 100%);
 }
 
 @media (min-width: 860px) {

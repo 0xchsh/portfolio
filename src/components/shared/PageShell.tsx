@@ -64,7 +64,7 @@ export async function PageShell({
   const [weather, commitHash] = await Promise.all([getWeather(), getLatestCommit()]);
 
   return (
-    <div className={`min-h-screen flex flex-col ${isCanvas ? '' : 'bg-gradient-to-b from-white to-neutral-50'}`}>
+    <div className={`min-h-screen flex flex-col ${isCanvas ? '' : 'bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900'}`}>
       <AgentModeOverlay />
       <KeyboardNav />
       {/* ── Header ─────────────────────────────────────────────────────── */}
@@ -85,7 +85,7 @@ export async function PageShell({
         <footer className="w-full z-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0">
           <div className="flex justify-between items-end px-4 py-6 sm:px-6"
             style={{
-              background: 'linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 72%, rgb(255 255 255 / 0) 100%)',
+              background: 'linear-gradient(to top, var(--background) 0%, var(--background) 72%, oklch(from var(--background) l c h / 0) 100%)',
               paddingTop: '1.5rem',
             }}
           >

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback, useId } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen, Book, FrameCorners } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { FadeIn } from '@/components/shared/FadeIn';
@@ -75,10 +75,29 @@ const categoryIcons: Record<string, React.ElementType> = {
   Read: Book,
 };
 
+const BOOK_NOISE_FILTER_ID = 'book-cover-noise';
+
+function BookNoiseDefs() {
+  return (
+    <svg
+      aria-hidden
+      width="0"
+      height="0"
+      className="absolute pointer-events-none"
+      style={{ position: 'absolute' }}
+    >
+      <defs>
+        <filter id={BOOK_NOISE_FILTER_ID}>
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+          <feColorMatrix type="saturate" values="0" />
+        </filter>
+      </defs>
+    </svg>
+  );
+}
+
 function BookCover({ book, mini = false }: { book: Book; mini?: boolean }) {
   const spineWidth = mini ? '18%' : '7%';
-  const rawId = useId();
-  const noiseId = `noise-${rawId.replace(/[:]/g, '')}`;
   return (
     <div
       className={cn(
@@ -94,11 +113,7 @@ function BookCover({ book, mini = false }: { book: Book; mini?: boolean }) {
           preserveAspectRatio="none"
           className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.14] [mix-blend-mode:overlay]"
         >
-          <filter id={noiseId}>
-            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
-            <feColorMatrix type="saturate" values="0" />
-          </filter>
-          <rect width="100%" height="100%" filter={`url(#${noiseId})`} />
+          <rect width="100%" height="100%" filter={`url(#${BOOK_NOISE_FILTER_ID})`} />
         </svg>
       )}
       {/* Vignette — corner darkening + subtle center glow */}
@@ -150,6 +165,8 @@ function itemKey(item: StackItem) {
   return item.href || item.url;
 }
 
+const OG_FETCH_CONCURRENCY = 4;
+
 function useOgImages(items: StackItem[]) {
   const [ogImages, setOgImages] = useState<Record<string, string | null>>({});
   const cacheRef = useRef<Record<string, string | null>>({});
@@ -187,19 +204,31 @@ function useOgImages(items: StackItem[]) {
 
     if (toFetch.length === 0) return;
 
-    for (const item of toFetch) {
-      const key = itemKey(item);
-      fetch(`/api/og?url=${encodeURIComponent(key)}`)
-        .then((res) => res.json())
-        .then((data: { image: string | null }) => {
+    const controller = new AbortController();
+    let cursor = 0;
+
+    const worker = async () => {
+      while (cursor < toFetch.length) {
+        const item = toFetch[cursor++];
+        const key = itemKey(item);
+        try {
+          const res = await fetch(`/api/og?url=${encodeURIComponent(key)}`, { signal: controller.signal });
+          const data = (await res.json()) as { image: string | null };
+          if (controller.signal.aborted) return;
           cacheRef.current[key] = data.image;
           setOgImages((prev) => ({ ...prev, [key]: data.image }));
-        })
-        .catch(() => {
+        } catch (err) {
+          if ((err as { name?: string })?.name === 'AbortError') return;
           cacheRef.current[key] = null;
           setOgImages((prev) => ({ ...prev, [key]: null }));
-        });
-    }
+        }
+      }
+    };
+
+    const workers = Array.from({ length: Math.min(OG_FETCH_CONCURRENCY, toFetch.length) }, worker);
+    Promise.all(workers);
+
+    return () => controller.abort();
   }, [items]);
 
   return ogImages;
@@ -224,6 +253,7 @@ export function StackContent() {
 
   return (
     <div className="flex flex-col desktop:grid desktop:grid-cols-[200px_1fr] desktop:gap-x-8 desktop:items-start desktop:max-w-[720px] desktop:mx-auto">
+      {isBooks && <BookNoiseDefs />}
       {/* Sidebar (desktop) */}
       <div className="hidden desktop:block">
         <div className="px-2.5">
@@ -445,7 +475,7 @@ export function StackContent() {
                       )
                     ) : (
                       /* eslint-disable-next-line @next/next/no-img-element */
-                      <img src={item.favicon} alt={item.name} width={14} height={14} className="" />
+                      <img src={item.favicon} alt={item.name} width={14} height={14} loading="lazy" decoding="async" className="" />
                     )}
                   </div>
                   <span className="text-sm font-medium text-foreground min-w-[100px]">{item.name}</span>
@@ -495,6 +525,8 @@ export function StackContent() {
                         <img
                           src={ogImage}
                           alt={item.name}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover block"
                           onError={() => handleImageError(itemKey(item))}
                         />
@@ -502,7 +534,7 @@ export function StackContent() {
                         <div className="w-full aspect-[1200/630] flex items-center justify-center">
                           {ogImage === null || brokenImages.has(itemKey(item)) ? (
                             /* eslint-disable-next-line @next/next/no-img-element */
-                            <img src={item.favicon} alt={item.name} width={24} height={24} className="opacity-40" />
+                            <img src={item.favicon} alt={item.name} width={24} height={24} loading="lazy" decoding="async" className="opacity-40" />
                           ) : (
                             <div className="size-3 rounded-full border-2 border-neutral-300 dark:border-neutral-700 border-t-transparent animate-spin" />
                           )}
@@ -529,7 +561,7 @@ export function StackContent() {
                     {/* Label */}
                     <div className="flex items-center mt-1.5 px-0.5 min-w-0">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={item.favicon} alt="" width={12} height={12} className="shrink-0" />
+                      <img src={item.favicon} alt="" width={12} height={12} loading="lazy" decoding="async" className="shrink-0" />
                       <span className="text-xs font-medium text-foreground truncate ml-1.5">{item.name}</span>
                       <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ml-1" />
                     </div>

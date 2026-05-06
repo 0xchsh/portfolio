@@ -540,6 +540,13 @@
       "name": "Fun Sites",
       "items": [
         {
+          "name": "Bao Thien To Timer",
+          "url": "www.baothiento.com",
+          "href": "www.baothiento.com/timer",
+          "description": "Minimal countdown timer",
+          "favicon": "https://www.google.com/s2/favicons?domain=baothiento.com&sz=64"
+        },
+        {
           "name": "Blueprint",
           "url": "www.blueprint.am",
           "description": "AI for hardware design",

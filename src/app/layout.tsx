@@ -69,11 +69,11 @@ export default function RootLayout({
           position="top-center"
           toastOptions={{
             style: {
-              background: '#dcfce7',
+              background: 'var(--toast-success-bg)',
               border: 'none',
-              color: '#15803d',
+              color: 'var(--toast-success-fg)',
               padding: '8px 16px',
-              boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+              boxShadow: '0 1px 3px rgb(0 0 0 / 0.06)',
             },
           }}
         />

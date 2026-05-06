@@ -65,7 +65,7 @@ export default function WorkPage() {
   const isPortrait = active === 'Freighter';
 
   return (
-    <div className="relative flex flex-col h-[calc(100svh-200px)] min-h-[600px]">
+    <div className="relative flex flex-col h-[clamp(600px,calc(100svh-14rem),1000px)]">
       {/* Horizontal scroll gallery */}
       <div className="flex-1 w-screen ml-[calc(50%-50vw)] overflow-x-auto overflow-y-hidden scrollbar-none">
         <div className={`h-full flex gap-4 px-5 sm:px-8 w-fit ${isPortrait ? 'items-center' : 'items-start pt-12'}`}>
