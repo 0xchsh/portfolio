@@ -92,6 +92,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=theargumentmag.com&sz=64"
         },
         {
+          "name": "Making Software",
+          "url": "makingsoftware.com",
+          "description": "Essays on building software",
+          "favicon": "https://www.google.com/s2/favicons?domain=makingsoftware.com&sz=64"
+        },
+        {
           "name": "My Life Is a Lie",
           "url": "www.yesigiveafig.com",
           "href": "www.yesigiveafig.com/p/part-1-my-life-is-a-lie",
