@@ -32,12 +32,17 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
     return () => cancelAnimationFrame(id);
   }, []);
 
-  // Clamp tooltip positions so edge tooltips don't overflow the container
+  // Clamp tooltip positions so edge tooltips don't overflow the container.
+  // Mobile only — on desktop the page has plenty of horizontal room.
   useLayoutEffect(() => {
     if (!mounted) return;
     const compute = () => {
       const container = containerRef.current;
       if (!container) return;
+      if (window.innerWidth >= 860) {
+        setOffsets((prev) => (prev.length === 0 ? prev : []));
+        return;
+      }
       const cw = container.getBoundingClientRect().width;
       const next = days.map((_, i) => {
         const tip = tooltipRefs.current[i];
