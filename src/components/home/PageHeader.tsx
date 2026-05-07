@@ -6,6 +6,7 @@ import { FadeIn } from '@/components/shared/FadeIn';
 import { Subtitle } from '@/components/shared/Subtitle';
 import { V2Controls, DesktopControlsRow } from '@/components/home/V2Controls';
 import { LiveClock } from '@/components/home/LiveClock';
+import { BirthdayCake } from '@/components/home/BirthdayCake';
 
 function NameMark() {
   return (
@@ -15,6 +16,7 @@ function NameMark() {
         <span className="transition-colors duration-150 group-hover/name:text-neutral-300 dark:group-hover/name:text-neutral-600">arles</span>{' '}
         <span>Sh</span>
         <span className="transition-colors duration-150 group-hover/name:text-neutral-300 dark:group-hover/name:text-neutral-600">in</span>
+        <BirthdayCake />
       </h1>
     </Link>
   );
