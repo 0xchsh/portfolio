@@ -206,7 +206,7 @@ function ProjectRow({ item, hideIcon, directLink, navIndex }: { item: ProjectIte
   const inner = (
     <>
       {!hideIcon && (
-        <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center overflow-hidden">
+        <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 dark:group-hover:bg-neutral-700 transition-colors duration-150 flex items-center justify-center overflow-hidden">
           <Image src={item.icon} alt={item.name} width={16} height={16} className="dark:invert transition-transform duration-150 group-hover:scale-110" />
         </div>
       )}
@@ -250,11 +250,11 @@ const artItems = feedData.art as ArtItem[];
 
 function ArtRow({ item, navIndex }: { item: ArtItem; navIndex?: number }) {
   const rowClass =
-    'flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
+    'group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
   return (
     <ArtDrawer item={item} navIndex={navIndex}>
       <button className={rowClass}>
-        <div className="shrink-0 w-10 h-10 rounded-[10px] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+        <div className="shrink-0 w-10 h-10 rounded-[10px] overflow-hidden bg-neutral-100 dark:bg-neutral-800 dark:group-hover:bg-neutral-700 transition-colors duration-150">
           <Image src={item.icon ?? item.images[0]} alt={item.title} width={40} height={40} unoptimized className="object-cover w-full h-full" />
         </div>
         <div>
@@ -363,7 +363,7 @@ export default async function V2Home() {
               if (i === 1) return (
                 <FadeIn key="x" delay={d}>
                   <a href="https://x.com/chshux" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 w-[calc(100%+1.5rem)]">
-                    <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center overflow-hidden">
+                    <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 dark:group-hover:bg-neutral-700 transition-colors duration-150 flex items-center justify-center overflow-hidden">
                       <XLogo size={20} weight="bold" className="text-foreground transition-transform duration-150 group-hover:scale-110" />
                     </div>
                     <div>
@@ -377,7 +377,7 @@ export default async function V2Home() {
               if (i === 2) return (
                 <FadeIn key="github" delay={d}>
                   <a href="https://github.com/0xchsh" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 w-[calc(100%+1.5rem)]">
-                    <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center overflow-hidden">
+                    <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 dark:group-hover:bg-neutral-700 transition-colors duration-150 flex items-center justify-center overflow-hidden">
                       <GithubLogo size={20} weight="fill" className="text-foreground transition-transform duration-150 group-hover:scale-110" />
                     </div>
                     <div>
@@ -391,7 +391,7 @@ export default async function V2Home() {
               if (i === 3) return (
                 <FadeIn key="linkedin" delay={d}>
                   <a href="https://www.linkedin.com/in/chshux/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 w-[calc(100%+1.5rem)]">
-                    <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center overflow-hidden">
+                    <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 dark:group-hover:bg-neutral-700 transition-colors duration-150 flex items-center justify-center overflow-hidden">
                       <LinkedinLogo size={20} weight="fill" className="text-foreground transition-transform duration-150 group-hover:scale-110" />
                     </div>
                     <div>
@@ -405,7 +405,7 @@ export default async function V2Home() {
               return (
                 <FadeIn key="farcaster" delay={d}>
                   <a href="https://farcaster.xyz/chsh.eth" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 w-[calc(100%+1.5rem)]">
-                    <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center overflow-hidden">
+                    <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 dark:group-hover:bg-neutral-700 transition-colors duration-150 flex items-center justify-center overflow-hidden">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-foreground transition-transform duration-150 group-hover:scale-110" aria-hidden="true">
                         <path d="M18.24.24H5.76C2.5789.24 0 2.8188 0 6v12c0 3.1811 2.5789 5.76 5.76 5.76h12.48c3.1812 0 5.76-2.5789 5.76-5.76V6C24 2.8188 21.4212.24 18.24.24m.8155 17.1662v.504c.2868-.0256.5458.1905.5439.479v.5688h-5.1437v-.5688c-.0019-.2885.2576-.5047.5443-.479v-.504c0-.22.1525-.402.358-.458l-.0095-4.3645c-.1589-1.7366-1.6402-3.0979-3.4435-3.0979-1.8038 0-3.2846 1.3613-3.4435 3.0979l-.0096 4.3578c.2276.0424.5318.2083.5395.4648v.504c.2863-.0256.5457.1905.5438.479v.5688H4.3915v-.5688c-.0019-.2885.2575-.5047.5438-.479v-.504c0-.2529.2011-.4548.4536-.4724v-7.895h-.4905L4.2898 7.008l2.6405-.0005V5.0419h9.9495v1.9656h2.8219l-.6091 2.0314h-.4901v7.8949c.2519.0177.453.2195.453.4724" />
                       </svg>
