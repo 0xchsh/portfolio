@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-og-cache": "node scripts/build-og-cache.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
