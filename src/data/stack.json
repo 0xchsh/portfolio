@@ -850,6 +850,12 @@
           "url": "spottedinprod.com",
           "description": "Real-world UI screenshots",
           "favicon": "https://www.google.com/s2/favicons?domain=spottedinprod.com&sz=64"
+        },
+        {
+          "name": "Tiny UI",
+          "url": "tinyui.org",
+          "description": "Tiny UI showcase",
+          "favicon": "https://www.google.com/s2/favicons?domain=tinyui.org&sz=64"
         }
       ]
     },

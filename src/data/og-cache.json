@@ -49,7 +49,7 @@
   "base-ui.com": "https://base-ui.com/opengraph-image-j8qpfc.png?b1b9e0366e512854",
   "ui.elevenlabs.io": "https://ui.elevenlabs.io/og?title=ElevenLabs%20UI&amp;description=A%20collection%20of%20Open%20Source%20agent%20and%20audio%20components%20that%20you%20can%20customize%20and%20extend.",
   "ui-skills.com": "https://www.ui-skills.com/UI-OG.png",
-  "github.com/vercel-labs/web-interface-guidelines": "https://opengraph.githubassets.com/019044c04e474e1c1627a21e3af83fbc2ca9a8e35c74bb8caa5431017ea519bd/vercel-labs/web-interface-guidelines",
+  "github.com/vercel-labs/web-interface-guidelines": "https://opengraph.githubassets.com/c3092bba2274d770e4339c5f90220812e330f52bd0ec10a017523c3727177a86/vercel-labs/web-interface-guidelines",
   "ui.shadcn.com": "https://ui.shadcn.com/og?title=The%20Foundation%20for%20your%20Design%20System&amp;description=A%20set%20of%20beautifully%20designed%20components%20that%20you%20can%20customize%2C%20extend%2C%20and%20build%20on.%20Start%20here%20then%20make%20it%20your%20own.%20Open%20Source.%20Open%20Code.",
   "ui-design-dictionary.pages.dev": null,
   "radix-ui.com": "https://radix-ui.com/social/themes.png",
@@ -140,5 +140,6 @@
   "supply.family/shop": "https://supply.family/wp-content/uploads/2024/10/seo-4.jpg",
   "www.collletttivo.it": "https://www.collletttivo.it/__og-image__/image/og.png",
   "velvetyne.fr": "https://velvetyne.fr/site/templates/img/og.gif",
-  "photogradient.com": "https://photogradient.com/./social-image.png"
+  "photogradient.com": "https://photogradient.com/./social-image.png",
+  "tinyui.org": "https://tinyui.org/opengraph.png?v=2"
 }
