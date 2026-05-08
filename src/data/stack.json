@@ -396,6 +396,12 @@
           "url": "ui.shadcn.com",
           "description": "Beautifully designed components",
           "favicon": "https://www.google.com/s2/favicons?domain=ui.shadcn.com&sz=64"
+        },
+        {
+          "name": "UI Design Dictionary",
+          "url": "ui-design-dictionary.pages.dev",
+          "description": "Interface terminology reference",
+          "favicon": "https://www.google.com/s2/favicons?domain=ui-design-dictionary.pages.dev&sz=64"
         }
       ]
     },
@@ -614,6 +620,12 @@
           "url": "iso-city.com",
           "description": "Isometric city builder",
           "favicon": "https://www.google.com/s2/favicons?domain=iso-city.com&sz=64"
+        },
+        {
+          "name": "Lax Space",
+          "url": "laxspace.co",
+          "description": "Creative director portfolio",
+          "favicon": "https://www.google.com/s2/favicons?domain=laxspace.co&sz=64"
         },
         {
           "name": "Local Geographic",
