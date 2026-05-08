@@ -8,7 +8,7 @@ const MARKDOWN = `# Charles Shin
 
 ## About
 
-I'm currently the Lead Product Designer at Stellar (https://stellar.org). Previously at Warby Parker, Uber, and Weebly.
+I'm currently the Lead Product Designer at Exa (https://exa.ai). Previously at Stellar, Warby Parker, Uber, and Weebly.
 
 Running a small software factory off a Mac Mini. Wiring together agents (Claude Code, OpenClaw, Paperclip) and watching them ship things without me in the room. Still figuring out where the designer fits when the loop closes itself.
 
@@ -18,7 +18,9 @@ Reach me at hi@ch.sh or dm on x.com (@chshux).
 
 ## Experience
 
-- **Stellar** · Blockchain for payments · Current
+- **Exa** · AI search · Current
+  https://exa.ai
+- **Stellar** · Blockchain for payments · 2026
   https://stellar.org
 - **Warby Parker** · Lifestyle eyewear brand · 2018
   https://warbyparker.com
@@ -60,7 +62,7 @@ Reach me at hi@ch.sh or dm on x.com (@chshux).
 
 - Name: Charles Shin
 - Role: Lead Product Designer
-- Company: Stellar (stellar.org)
+- Company: Exa (exa.ai)
 - Location: Chicago, IL
 - Timezone: Central Time (CT)
 - Work style: Remote
