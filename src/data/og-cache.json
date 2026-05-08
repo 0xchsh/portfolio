@@ -78,7 +78,7 @@
   "calligrapher.ai": "https://www.calligrapher.ai/og_image.png",
   "musiclab.chromeexperiments.com": "https://musiclab.chromeexperiments.com/static/share.jpg",
   "www.blueprint.am": "https://blueprint.am/favicons/BlueprintOG.png",
-  "neal.fun/cursor-camp": null,
+  "neal.fun/cursor-camp": "https://neal.fun/share-cards/cursor-camp.png",
   "clig.dev": "https://clig.dev/CLIG-social-card.jpg",
   "www.baothiento.com/timer": "https://baothiento.com/timer/opengraph-image?e1a70d2b3f1356d3",
   "chusmargallo.space": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f35ccf97-6ca7-4d1d-a8c5-60b3def83077/id-preview-c79118f2--1e62a8ec-41b3-4502-a50b-620454047c9b.lovable.app-1777244040057.png",
@@ -139,5 +139,6 @@
   "layers.design/shop": "https://www.datocms-assets.com/99609/1687251963-layers_social_sharing_image_1200x1200.webp?auto=format&amp;fit=max&amp;w=1200",
   "supply.family/shop": "https://supply.family/wp-content/uploads/2024/10/seo-4.jpg",
   "www.collletttivo.it": "https://www.collletttivo.it/__og-image__/image/og.png",
-  "velvetyne.fr": null
+  "velvetyne.fr": "https://velvetyne.fr/site/templates/img/og.gif",
+  "photogradient.com": "https://photogradient.com/./social-image.png"
 }

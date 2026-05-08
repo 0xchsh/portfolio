@@ -451,6 +451,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=pencil.dev&sz=64"
         },
         {
+          "name": "Photogradient",
+          "url": "photogradient.com",
+          "description": "Image to mesh gradient",
+          "favicon": "https://www.google.com/s2/favicons?domain=photogradient.com&sz=64"
+        },
+        {
           "name": "Shader Lab",
           "url": "eng.basement.studio",
           "href": "eng.basement.studio/tools/shader-lab",
