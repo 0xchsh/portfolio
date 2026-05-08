@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { usePlayer, extractYouTubeId } from '@/components/shared/MiniPlayer';
 import stackData from '@/data/stack.json';
+import ogCache from '@/data/og-cache.json';
 
 type StackItem = {
   name: string;
@@ -167,9 +168,11 @@ function itemKey(item: StackItem) {
 
 const OG_FETCH_CONCURRENCY = 4;
 
+const PREBAKED_OG = ogCache as Record<string, string | null>;
+
 function useOgImages(items: StackItem[]) {
-  const [ogImages, setOgImages] = useState<Record<string, string | null>>({});
-  const cacheRef = useRef<Record<string, string | null>>({});
+  const [ogImages, setOgImages] = useState<Record<string, string | null>>(PREBAKED_OG);
+  const cacheRef = useRef<Record<string, string | null>>({ ...PREBAKED_OG });
 
   useEffect(() => {
     // For YouTube items, use thumbnail directly
@@ -238,6 +241,11 @@ function isYouTubeItem(item: StackItem) {
   return (item.href || item.url).includes('youtube.com');
 }
 
+const STAGGER_CAP = 12;
+function staggerDelay(i: number, step: number) {
+  return Math.min(i, STAGGER_CAP) * step;
+}
+
 export function StackContent() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [view, setView] = useState<'grid' | 'list'>('grid');
@@ -263,7 +271,7 @@ export function StackContent() {
           {categories.map((cat, i) => {
             const Icon = categoryIcons[cat.name];
             return (
-            <FadeIn key={cat.name} delay={75 + i * 30}>
+            <FadeIn key={cat.name} delay={75 + staggerDelay(i, 30)}>
               <button
                 onClick={() => setActiveIndex(i)}
                 className={cn(
@@ -391,21 +399,21 @@ export function StackContent() {
             /* Books list */
             <div key="books-list" className="flex flex-col gap-0.5">
               {(activeCategory.items as Book[]).map((book, i) => (
-                <FadeIn key={book.title} delay={i * 25}>
+                <FadeIn key={book.title} delay={staggerDelay(i, 25)}>
                   <a
                     href={`https://${book.url}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative flex items-center gap-2 px-3 py-1.5 rounded-md transition-colors duration-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                    className="group relative grid grid-cols-[12px_minmax(0,1fr)_auto] items-center gap-2 pl-3 pr-8 py-1.5 rounded-md transition-colors duration-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   >
-                    <div className="shrink-0 w-[12px] h-[16px] flex items-center justify-center overflow-hidden">
+                    <div className="w-[12px] h-[16px] flex items-center justify-center overflow-hidden">
                       <BookCover book={book} mini />
                     </div>
                     <span className="text-sm font-medium text-foreground truncate">{book.title}</span>
-                    <span className="text-xs text-neutral-400 dark:text-neutral-600 flex-1 text-right transition-transform duration-150 truncate group-hover:-translate-x-4">
+                    <span className="text-xs text-neutral-400 dark:text-neutral-600 max-w-[140px] truncate text-right">
                       {book.author}
                     </span>
-                    <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-all duration-150 translate-x-1 group-hover:translate-x-0 absolute right-3" />
+                    <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute right-3" />
                   </a>
                 </FadeIn>
               ))}
@@ -414,7 +422,7 @@ export function StackContent() {
             /* Books grid */
             <div key="books-grid" className="grid grid-cols-2 desktop:grid-cols-3 gap-4 px-1.5">
               {(activeCategory.items as Book[]).map((book, i) => (
-                <FadeIn key={book.title} delay={i * 40}>
+                <FadeIn key={book.title} delay={staggerDelay(i, 40)}>
                   <a
                     href={`https://${book.url}`}
                     target="_blank"
@@ -454,7 +462,7 @@ export function StackContent() {
                 }
               } : undefined;
               return (
-              <FadeIn key={item.name} delay={i * 25}>
+              <FadeIn key={item.name} delay={staggerDelay(i, 25)}>
                 <a
                   href={`https://${item.href || item.url}`}
                   target={isYT ? undefined : '_blank'}
@@ -510,7 +518,7 @@ export function StackContent() {
                 }
               } : undefined;
               return (
-                <FadeIn key={item.name} delay={i * 40}>
+                <FadeIn key={item.name} delay={staggerDelay(i, 40)}>
                   <a
                     href={`https://${item.href || item.url}`}
                     target={isYT ? undefined : '_blank'}

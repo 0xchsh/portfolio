@@ -8,6 +8,11 @@ import skillsData from '@/data/skills.json';
 
 const { created: CREATED_SKILLS, installed: INSTALLED_SKILLS } = skillsData;
 
+const STAGGER_CAP = 12;
+function staggerDelay(i: number, step: number) {
+  return Math.min(i, STAGGER_CAP) * step;
+}
+
 // ---------------------------------------------------------------------------
 // Components
 // ---------------------------------------------------------------------------
@@ -62,16 +67,16 @@ export default function SkillsPage() {
           <FadeIn delay={75}><SectionLabel>Created Skills</SectionLabel></FadeIn>
           <div className="mt-4 flex flex-col gap-2">
             {CREATED_SKILLS.map((skill, i) => (
-              <FadeIn key={skill.name} delay={100 + i * 40}>
+              <FadeIn key={skill.name} delay={100 + staggerDelay(i, 40)}>
                 <SkillRow {...skill} />
               </FadeIn>
             ))}
           </div>
         </section>
         <section className="mt-8">
-          <FadeIn delay={100 + CREATED_SKILLS.length * 40}><SectionLabel>For Agents</SectionLabel></FadeIn>
+          <FadeIn delay={100 + staggerDelay(CREATED_SKILLS.length, 40)}><SectionLabel>For Agents</SectionLabel></FadeIn>
           <div className="mt-4 flex flex-col gap-2">
-            <FadeIn delay={125 + CREATED_SKILLS.length * 40}>
+            <FadeIn delay={125 + staggerDelay(CREATED_SKILLS.length, 40)}>
               <a
                 href="/llms.txt"
                 target="_blank"
@@ -96,7 +101,7 @@ export default function SkillsPage() {
           <FadeIn delay={75}><SectionLabel>Installed Skills</SectionLabel></FadeIn>
           <div className="mt-4 flex flex-col gap-2">
             {INSTALLED_SKILLS.map((skill, i) => (
-              <FadeIn key={skill.name} delay={100 + i * 30}>
+              <FadeIn key={skill.name} delay={100 + staggerDelay(i, 30)}>
                 <SkillRow {...skill} />
               </FadeIn>
             ))}
