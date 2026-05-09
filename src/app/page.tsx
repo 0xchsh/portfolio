@@ -6,7 +6,7 @@ import { CommitGraph } from '@/components/home/CommitGraph';
 import { CopyEmail, CopyEmailRow } from '@/components/home/CopyEmail';
 import { V2LeftContent } from '@/components/home/V2LeftContent';
 import { FadeIn } from '@/components/shared/FadeIn';
-import { ProjectDrawer } from '@/components/home/ProjectDrawer';
+import { ProjectRow, type ProjectItem } from '@/components/home/ProjectRow';
 import { ArtDrawer } from '@/components/home/ArtDrawer';
 import { DrawerNavProvider } from '@/components/home/DrawerNav';
 import feedData from '@/data/feed.json';
@@ -188,50 +188,10 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-// ---------------------------------------------------------------------------
-// Project list
-// ---------------------------------------------------------------------------
-
-type ProjectItem = {
-  name: string;
-  desc: string;
-  href: string;
-  icon: string;
-  workTitle?: string;
-};
-
-function ProjectRow({ item, hideIcon, directLink, navIndex }: { item: ProjectItem; hideIcon?: boolean; directLink?: boolean; navIndex?: number }) {
-  const rowClass =
-    'group flex items-center gap-4 pl-3 pr-4 py-1.5 -mx-3 rounded-[6px] hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all duration-150 cursor-pointer w-[calc(100%+1.5rem)] text-left';
-  const inner = (
-    <>
-      {!hideIcon && (
-        <div className="shrink-0 w-10 h-10 rounded-[10px] bg-neutral-50 dark:bg-neutral-800 dark:group-hover:bg-neutral-700 transition-colors duration-150 flex items-center justify-center overflow-hidden">
-          <Image src={item.icon} alt={item.name} width={16} height={16} className="dark:invert transition-transform duration-150 group-hover:scale-110" />
-        </div>
-      )}
-      <div>
-        <p className="text-sm font-medium text-foreground leading-[20px]">{item.name}</p>
-        <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-[20px]">{item.desc}</p>
-      </div>
-    </>
-  );
-
-  if (directLink) {
-    return (
-      <a href={item.href} target="_blank" rel="noopener noreferrer" className={`${rowClass} group`}>
-        {inner}
-        <ArrowUpRight size={14} weight="bold" className="ml-auto shrink-0 self-center text-neutral-400 desktop:opacity-0 desktop:group-hover:opacity-100 transition-opacity duration-150" />
-      </a>
-    );
-  }
-
-  return (
-    <ProjectDrawer project={item} navIndex={navIndex}>
-      <button className={rowClass}>{inner}</button>
-    </ProjectDrawer>
-  );
-}
+// ProjectRow lives in src/components/home/ProjectRow.tsx (client component) so
+// the <button> child it passes to ProjectDrawer is a real React element rather
+// than a server-component lazy reference. vaul's Drawer.Root suppresses lazy
+// children during dev-mode SSR streaming, which left Featured rows blank.
 
 type ArtItem = {
   title: string;
