@@ -481,6 +481,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=curated.supply&sz=64"
         },
         {
+          "name": "Deck Gallery",
+          "url": "deck.gallery",
+          "description": "Presentation design gallery",
+          "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
+        },
+        {
           "name": "Freelance Things",
           "url": "freelancethings.co",
           "description": "Freelance resources directory",
@@ -729,6 +735,13 @@
           "url": "www.yoyoyo.ai",
           "description": "DeepMind x Porto Rocha AI yo-yo",
           "favicon": "https://www.google.com/s2/favicons?domain=www.yoyoyo.ai&sz=64"
+        },
+        {
+          "name": "Fun with Computer Vision NYC",
+          "url": "www.funwithcomputervision.com",
+          "href": "www.funwithcomputervision.com/nyc",
+          "description": "Computer vision experiments in NYC",
+          "favicon": "https://www.google.com/s2/favicons?domain=funwithcomputervision.com&sz=64"
         }
       ]
     },
