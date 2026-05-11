@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen, Book, FrameCorners } from '@phosphor-icons/react';
+import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen, Book, FrameCorners, Buildings } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { usePlayer, extractYouTubeId } from '@/components/shared/MiniPlayer';
@@ -58,6 +58,7 @@ function isBookCategory(cat: Category): cat is { name: string; items: Book[] } {
 
 const categoryIcons: Record<string, React.ElementType> = {
   Agents: Robot,
+  'Design Agencies': Buildings,
   'Design Tools': PaintBrush,
   Components: Atom,
   'Design Systems': Palette,

@@ -304,6 +304,35 @@
       ]
     },
     {
+      "name": "Design Agencies",
+      "items": [
+        {
+          "name": "AREA 17",
+          "url": "area17.com",
+          "description": "Brand and experience studio",
+          "favicon": "https://www.google.com/s2/favicons?domain=area17.com&sz=64"
+        },
+        {
+          "name": "Basement Studio",
+          "url": "basement.studio",
+          "description": "Creative digital studio",
+          "favicon": "https://www.google.com/s2/favicons?domain=basement.studio&sz=64"
+        },
+        {
+          "name": "Primary",
+          "url": "primary.studio",
+          "description": "Brand sprint agency",
+          "favicon": "https://www.google.com/s2/favicons?domain=primary.studio&sz=64"
+        },
+        {
+          "name": "Smith & Diction",
+          "url": "smith-diction.com",
+          "description": "Design and branding studio",
+          "favicon": "https://www.google.com/s2/favicons?domain=smith-diction.com&sz=64"
+        }
+      ]
+    },
+    {
       "name": "Design Skills",
       "items": [
         {
