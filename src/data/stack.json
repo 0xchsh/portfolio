@@ -624,6 +624,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=clig.dev&sz=64"
         },
         {
+          "name": "Cosmos Pokemon",
+          "url": "cosmos.zip",
+          "href": "cosmos.zip/pokemon",
+          "description": "Pokemon explorer",
+          "favicon": "https://www.google.com/s2/favicons?domain=cosmos.zip&sz=64"
+        },
+        {
           "name": "Cursor Camp",
           "url": "neal.fun",
           "href": "neal.fun/cursor-camp",
