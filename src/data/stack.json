@@ -522,6 +522,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
         },
         {
+          "name": "Desengs",
+          "url": "desengs.com",
+          "description": "Design directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=desengs.com&sz=64"
+        },
+        {
           "name": "Freelance Things",
           "url": "freelancethings.co",
           "description": "Freelance resources directory",
