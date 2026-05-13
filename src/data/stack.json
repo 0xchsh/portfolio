@@ -1069,6 +1069,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=cleanshot.com&sz=64"
         },
         {
+          "name": "iTerm2",
+          "url": "iterm2.com",
+          "description": "Terminal emulator",
+          "favicon": "https://www.google.com/s2/favicons?domain=iterm2.com&sz=64"
+        },
+        {
           "name": "Klack",
           "url": "tryklack.com",
           "description": "Mechanical keyboard sounds",
