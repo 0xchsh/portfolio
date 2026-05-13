@@ -25,7 +25,7 @@
   "reactbits.dev": "https://reactbits.dev/og-pic.png",
   "svg.guide": "https://animating-svgs-rmom9spkv-nan-fyi.vercel.app/opengraph-image.png?0616b3ae80ba09a4",
   "github.com/sanjay10985/animated-react-collection": "https://opengraph.githubassets.com/600a4a87fe29fe44a2fce11388c3fb746ec3b8fcf6fe4f19a0b33e2cd9cd5352/sanjay10985/animated-react-collection",
-  "github.com/0xGF/boneyard": "https://opengraph.githubassets.com/54e878ba407eda512bdfc6243a5d8fce0943e9612f457f66b25e1384f9bcd3e1/0xGF/boneyard",
+  "github.com/0xGF/boneyard": "https://opengraph.githubassets.com/84e9adb05081e7552298aff455f93b33c5ac464401d41b161627f68f6cfb0d0d/0xGF/boneyard",
   "motion.dev": "https://framerusercontent.com/images/9IOwyTKAykVZTetDEOb7qh81ZQ.png",
   "sonner.emilkowal.ski": "https://sonner.emilkowal.ski/opengraph-image.png?d5e368c2f1b9b507",
   "reactiive.io/demos": "https://reactiive.io/og/demos.png",
@@ -78,7 +78,7 @@
   "calligrapher.ai": "https://www.calligrapher.ai/og_image.png",
   "musiclab.chromeexperiments.com": "https://musiclab.chromeexperiments.com/static/share.jpg",
   "www.blueprint.am": "https://blueprint.am/favicons/BlueprintOG.png",
-  "neal.fun/cursor-camp": null,
+  "neal.fun/cursor-camp": "https://neal.fun/share-cards/cursor-camp.png",
   "clig.dev": "https://clig.dev/CLIG-social-card.jpg",
   "www.baothiento.com/timer": "https://baothiento.com/timer/opengraph-image?e1a70d2b3f1356d3",
   "chusmargallo.space": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f35ccf97-6ca7-4d1d-a8c5-60b3def83077/id-preview-c79118f2--1e62a8ec-41b3-4502-a50b-620454047c9b.lovable.app-1777244040057.png",
@@ -147,5 +147,6 @@
   "basement.studio": "https://basement.studio/images/opengraph-image.gif",
   "primary.studio": "https://framerusercontent.com/images/ExdqBZdi7vwilxNcAMIuDdWdUyM.png",
   "smith-diction.com": "https://smith-diction.com/wp-content/uploads/2024/11/SD_Page_Transition.jpg",
-  "cosmos.zip/pokemon": "https://cdn.cosmos.so/31714f3b-61d5-4d59-9adc-d26c6f4213fe?rect=0%2C0%2C256%2C256&amp;format=webp&amp;w=400"
+  "cosmos.zip/pokemon": "https://cdn.cosmos.so/31714f3b-61d5-4d59-9adc-d26c6f4213fe?rect=0%2C0%2C256%2C256&amp;format=webp&amp;w=400",
+  "composio.dev": null
 }

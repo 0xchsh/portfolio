@@ -10,6 +10,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=companies.sh&sz=64"
         },
         {
+          "name": "Composio",
+          "url": "composio.dev",
+          "description": "Agent tool integrations",
+          "favicon": "https://www.google.com/s2/favicons?domain=composio.dev&sz=64"
+        },
+        {
           "name": "Conductor",
           "url": "conductor.build",
           "description": "Workflow automation",
