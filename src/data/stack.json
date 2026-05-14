@@ -670,6 +670,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=walzr.com&sz=64"
         },
         {
+          "name": "Explorer",
+          "url": "explorer.samismith.com",
+          "description": "Sam Smith interactive explorer",
+          "favicon": "https://www.google.com/s2/favicons?domain=samismith.com&sz=64"
+        },
+        {
           "name": "FFFFFFT",
           "url": "fffffft.com",
           "description": "Creative web experiment",
