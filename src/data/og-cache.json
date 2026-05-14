@@ -25,7 +25,7 @@
   "reactbits.dev": "https://reactbits.dev/og-pic.png",
   "svg.guide": "https://animating-svgs-rmom9spkv-nan-fyi.vercel.app/opengraph-image.png?0616b3ae80ba09a4",
   "github.com/sanjay10985/animated-react-collection": "https://opengraph.githubassets.com/600a4a87fe29fe44a2fce11388c3fb746ec3b8fcf6fe4f19a0b33e2cd9cd5352/sanjay10985/animated-react-collection",
-  "github.com/0xGF/boneyard": "https://opengraph.githubassets.com/18c5e536f5c8d225de5fc07896dd9a0f380b5cf36d4ed355cc91db1bbe659277/0xGF/boneyard",
+  "github.com/0xGF/boneyard": "https://opengraph.githubassets.com/3f182fee3dcf9eeab5c14835a18e4a44d2a59d977d7a7008bab2083d0924d739/0xGF/boneyard",
   "motion.dev": "https://framerusercontent.com/images/9IOwyTKAykVZTetDEOb7qh81ZQ.png",
   "sonner.emilkowal.ski": "https://sonner.emilkowal.ski/opengraph-image.png?d5e368c2f1b9b507",
   "reactiive.io/demos": "https://reactiive.io/og/demos.png",
@@ -49,7 +49,7 @@
   "base-ui.com": "https://base-ui.com/opengraph-image-j8qpfc.png?b1b9e0366e512854",
   "ui.elevenlabs.io": "https://ui.elevenlabs.io/og?title=ElevenLabs%20UI&amp;description=A%20collection%20of%20Open%20Source%20agent%20and%20audio%20components%20that%20you%20can%20customize%20and%20extend.",
   "ui-skills.com": "https://www.ui-skills.com/UI-OG.png",
-  "github.com/vercel-labs/web-interface-guidelines": "https://opengraph.githubassets.com/4166fabd33dc89d7f5c48f4a297c7e3b64d662755c81a7bad01334a4a5b89380/vercel-labs/web-interface-guidelines",
+  "github.com/vercel-labs/web-interface-guidelines": "https://opengraph.githubassets.com/9be05a23e1e36f594e5e62938bc020c799e4f3465a8b106bc788b46b277e04ae/vercel-labs/web-interface-guidelines",
   "ui.shadcn.com": "https://ui.shadcn.com/og?title=The%20Foundation%20for%20your%20Design%20System&amp;description=A%20set%20of%20beautifully%20designed%20components%20that%20you%20can%20customize%2C%20extend%2C%20and%20build%20on.%20Start%20here%20then%20make%20it%20your%20own.%20Open%20Source.%20Open%20Code.",
   "ui-design-dictionary.pages.dev": null,
   "radix-ui.com": "https://radix-ui.com/social/themes.png",
@@ -111,7 +111,7 @@
   "detail.design": "https://detail.design/og.png",
   "cosmos.so": "https://www.cosmos.so/opengraph-image.jpg",
   "godly.website": null,
-  "workspaces.xyz": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/thumbnail/9e0ab799-69a2-448f-b9a1-c03f8f3356e9/landscape_WorkspacesOG.png?v=1778641666",
+  "workspaces.xyz": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/thumbnail/9e0ab799-69a2-448f-b9a1-c03f8f3356e9/landscape_WorkspacesOG.png?v=1778728080",
   "footer.design": "https://cdn.prod.website-files.com/64fe0870e6e4f3a42a145c1c/6514c4e3bcde78421b541de9_open-graph.webp",
   "interfaceingame.com": "https://interfaceingame.com/wp-content/uploads/share_twitter_interfaceingame.jpg",
   "mobbin.com": "https://mobbin.com/og_image.png?v=4.0",
@@ -149,5 +149,8 @@
   "smith-diction.com": "https://smith-diction.com/wp-content/uploads/2024/11/SD_Page_Transition.jpg",
   "cosmos.zip/pokemon": "https://cdn.cosmos.so/31714f3b-61d5-4d59-9adc-d26c6f4213fe?rect=0%2C0%2C256%2C256&amp;format=webp&amp;w=400",
   "composio.dev": null,
-  "iterm2.com": null
+  "iterm2.com": null,
+  "sdk.markets": "https://sdk.markets/opengraph-image.png?opengraph-image.17v8sx1q3819u.png?dpl=dpl_AmAQjoCnqUwhGDoiTheWBofS3i6P",
+  "desengs.com": "https://desengs.com/og.png",
+  "explorer.samismith.com": "https://explorer.samismith.com/og.png"
 }

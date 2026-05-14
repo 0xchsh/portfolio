@@ -228,6 +228,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=reactiive.io&sz=64"
         },
         {
+          "name": "SDK Markets",
+          "url": "sdk.markets",
+          "description": "Prediction markets SDK",
+          "favicon": "https://www.google.com/s2/favicons?domain=sdk.markets&sz=64"
+        },
+        {
           "name": "Sonner",
           "url": "sonner.emilkowal.ski",
           "description": "Toast component for React",
@@ -990,6 +996,13 @@
           "url": "youtube.com",
           "href": "youtube.com/watch?v=T1tcUfUhR5U",
           "description": "Boiler Room set",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "ODESZA - The Finale",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=9s1x9eHoEBE",
+          "description": "Live from the Gorge",
           "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
         }
       ]
