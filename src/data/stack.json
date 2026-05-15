@@ -70,13 +70,6 @@
           "favicon": "https://www.google.com/s2/favicons?domain=chimeric-worlding.netlify.app&sz=64"
         },
         {
-          "name": "Family Values",
-          "url": "benji.org",
-          "href": "benji.org/family-values",
-          "description": "Benji on family values",
-          "favicon": "https://www.google.com/s2/favicons?domain=benji.org&sz=64"
-        },
-        {
           "name": "How We Built the v0 iOS App",
           "url": "vercel.com",
           "href": "vercel.com/blog/how-we-built-the-v0-ios-app",
@@ -96,12 +89,6 @@
           "href": "theargumentmag.com/p/please-let-the-robots-have-this-one",
           "description": "The Argument on AI and labor",
           "favicon": "https://www.google.com/s2/favicons?domain=theargumentmag.com&sz=64"
-        },
-        {
-          "name": "Making Software",
-          "url": "makingsoftware.com",
-          "description": "Essays on building software",
-          "favicon": "https://www.google.com/s2/favicons?domain=makingsoftware.com&sz=64"
         },
         {
           "name": "My Life Is a Lie",
@@ -143,19 +130,6 @@
           "href": "varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks",
           "description": "Decentralization for social networks",
           "favicon": "https://www.google.com/s2/favicons?domain=varunsrinivasan.com&sz=64"
-        },
-        {
-          "name": "SVG Guide",
-          "url": "svg.guide",
-          "description": "Guide to working with SVG",
-          "favicon": "https://www.google.com/s2/favicons?domain=svg.guide&sz=64"
-        },
-        {
-          "name": "Tech Stack",
-          "url": "visitors.now",
-          "href": "visitors.now/blog/tech-stack",
-          "description": "Visitors tech stack breakdown",
-          "favicon": "https://www.google.com/s2/favicons?domain=visitors.now&sz=64"
         }
       ]
     },
@@ -201,6 +175,12 @@
           "href": "css-loaders.com/classic",
           "description": "Pure CSS loading animations",
           "favicon": "https://www.google.com/s2/favicons?domain=css-loaders.com&sz=64"
+        },
+        {
+          "name": "Gradient Border",
+          "url": "gradient-border.floriankiem.com",
+          "description": "CSS gradient borders by Florian Kiem",
+          "favicon": "https://www.google.com/s2/favicons?domain=gradient-border.floriankiem.com&sz=64"
         },
         {
           "name": "MapCN",
@@ -1140,6 +1120,63 @@
           "url": "superwhisper.com",
           "description": "Voice-to-text",
           "favicon": "https://www.google.com/s2/favicons?domain=superwhisper.com&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Specs",
+      "items": [
+        {
+          "name": "Agentation",
+          "url": "benji.org",
+          "href": "benji.org/agentation",
+          "description": "Benji on agentation",
+          "favicon": "https://www.google.com/s2/favicons?domain=benji.org&sz=64"
+        },
+        {
+          "name": "Algebrica",
+          "url": "algebrica.org",
+          "description": "Algebrica spec",
+          "favicon": "https://www.google.com/s2/favicons?domain=algebrica.org&sz=64"
+        },
+        {
+          "name": "Family Values",
+          "url": "benji.org",
+          "href": "benji.org/family-values",
+          "description": "Benji on family values",
+          "favicon": "https://www.google.com/s2/favicons?domain=benji.org&sz=64"
+        },
+        {
+          "name": "Interfaces.dev",
+          "url": "interfaces.dev",
+          "description": "Interface design specs",
+          "favicon": "https://www.google.com/s2/favicons?domain=interfaces.dev&sz=64"
+        },
+        {
+          "name": "Liveline",
+          "url": "benji.org",
+          "href": "benji.org/liveline",
+          "description": "Benji on liveline",
+          "favicon": "https://www.google.com/s2/favicons?domain=benji.org&sz=64"
+        },
+        {
+          "name": "Making Software",
+          "url": "makingsoftware.com",
+          "description": "Essays on building software",
+          "favicon": "https://www.google.com/s2/favicons?domain=makingsoftware.com&sz=64"
+        },
+        {
+          "name": "SVG Guide",
+          "url": "svg.guide",
+          "description": "Guide to working with SVG",
+          "favicon": "https://www.google.com/s2/favicons?domain=svg.guide&sz=64"
+        },
+        {
+          "name": "Tech Stack",
+          "url": "visitors.now",
+          "href": "visitors.now/blog/tech-stack",
+          "description": "Visitors tech stack breakdown",
+          "favicon": "https://www.google.com/s2/favicons?domain=visitors.now&sz=64"
         }
       ]
     },

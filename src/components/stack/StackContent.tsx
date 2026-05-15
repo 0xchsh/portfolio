@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen, Book, FrameCorners, Buildings } from '@phosphor-icons/react';
+import { ArrowUpRight, PaintBrush, Desktop, Atom, Palette, List, SquaresFour, AppWindow, Sparkle, Article, Globe, Wrench, GraduationCap, Play, Pause, MusicNote, Robot, TextAa, Plugs, BookOpen, Book, FrameCorners, Buildings, ClipboardText } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { FadeIn } from '@/components/shared/FadeIn';
 import { usePlayer, extractYouTubeId } from '@/components/shared/MiniPlayer';
@@ -75,6 +75,7 @@ const categoryIcons: Record<string, React.ElementType> = {
   APIs: Plugs,
   Directories: BookOpen,
   Read: Book,
+  Specs: ClipboardText,
 };
 
 const BOOK_NOISE_FILTER_ID = 'book-cover-noise';
