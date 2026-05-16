@@ -436,6 +436,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=figma.com&sz=64"
         },
         {
+          "name": "Flora",
+          "url": "flora.ai",
+          "description": "AI creative tool",
+          "favicon": "https://www.google.com/s2/favicons?domain=flora.ai&sz=64"
+        },
+        {
           "name": "Framer",
           "url": "framer.com",
           "description": "Marketing sites and landing pages",
