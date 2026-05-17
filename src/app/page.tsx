@@ -257,8 +257,9 @@ export default async function V2Home() {
         <div className="text-sm leading-relaxed text-neutral-500 dark:text-neutral-400 flex flex-col gap-3">
           <p>
             Currently the Lead Product Designer at{' '}
-            <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className={linkClass}>Stellar</a>.
+            <a href="https://exa.ai" target="_blank" rel="noopener noreferrer" className={linkClass}>Exa</a>.
             {' '}Previously at{' '}
+            <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className={linkClass}>Stellar</a>,{' '}
             <a href="https://warbyparker.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Warby Parker</a>,{' '}
             <a href="https://uber.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Uber</a>, and{' '}
             <a href="https://weebly.com" target="_blank" rel="noopener noreferrer" className={linkClass}>Weebly</a>.
