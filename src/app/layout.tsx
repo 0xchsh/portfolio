@@ -34,7 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script defer src="https://cdn.visitors.now/v.js" data-token="e209edb5-006f-43c7-b9e2-907ff33b3b31"></script>
+        {process.env.NODE_ENV === 'production' && (
+          <script defer src="https://cdn.visitors.now/v.js" data-token="e209edb5-006f-43c7-b9e2-907ff33b3b31"></script>
+        )}
       </head>
       <body
         className="font-sans antialiased max-w-[100vw]"

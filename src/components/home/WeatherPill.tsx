@@ -67,7 +67,7 @@ export function WeatherPill({ weather, variant }: { weather: Weather; variant?: 
       <button
         ref={buttonRef}
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex items-center justify-center gap-1 text-sm font-medium border border-transparent bg-clip-padding rounded-lg px-2.5 h-7 cursor-pointer sm:min-w-[204px] sm:w-auto whitespace-nowrap btn-classic btn-classic-outline bg-background"
+        className="inline-flex items-center justify-center gap-1 text-xs font-medium border border-transparent bg-clip-padding rounded-lg px-2.5 h-7 cursor-pointer sm:min-w-[204px] sm:w-auto whitespace-nowrap btn-classic btn-classic-outline bg-background"
       >
         <span className="text-neutral-400 hidden sm:inline">Chicago, IL</span>
         <WeatherIcon code={weather.code} />

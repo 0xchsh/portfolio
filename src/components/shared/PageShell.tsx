@@ -51,7 +51,7 @@ async function getLatestCommit() {
   }
 }
 
-const mutedLabel = 'text-sm uppercase text-neutral-400 tracking-wide';
+const mutedLabel = 'text-xs uppercase text-neutral-400 tracking-wide';
 
 export async function PageShell({
   children,
@@ -97,7 +97,7 @@ export async function PageShell({
                     href={commitHash.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-normal uppercase text-neutral-400 tracking-wide underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-500 hover:decoration-neutral-400 transition-colors duration-100"
+                    className="text-xs font-normal uppercase text-neutral-400 tracking-wide underline decoration-dotted decoration-neutral-300 underline-offset-[4px] hover:text-neutral-500 hover:decoration-neutral-400 transition-colors duration-100"
                   >
                     {commitHash.sha}
                   </a>
