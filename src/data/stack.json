@@ -668,6 +668,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=deck.of.cards&sz=64"
         },
         {
+          "name": "Educated Supply",
+          "url": "educated.supply",
+          "description": "Curated learning resources",
+          "favicon": "https://www.google.com/s2/favicons?domain=educated.supply&sz=64"
+        },
+        {
           "name": "Empty Screenings",
           "url": "walzr.com",
           "href": "walzr.com/empty-screenings",
@@ -788,6 +794,12 @@
           "url": "www.trainjazz.com",
           "description": "Creative web experience",
           "favicon": "https://www.google.com/s2/favicons?domain=www.trainjazz.com&sz=64"
+        },
+        {
+          "name": "Wear Gallery",
+          "url": "wear.gallery",
+          "description": "Curated apparel gallery",
+          "favicon": "https://www.google.com/s2/favicons?domain=wear.gallery&sz=64"
         },
         {
           "name": "YOYOYO",
