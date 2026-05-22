@@ -472,6 +472,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=magicpath.ai&sz=64"
         },
         {
+          "name": "Napkin",
+          "url": "napkin.ai",
+          "description": "Text to visuals and diagrams",
+          "favicon": "https://www.google.com/s2/favicons?domain=napkin.ai&sz=64"
+        },
+        {
           "name": "Paper",
           "url": "paper.design",
           "description": "Design tool",
@@ -488,6 +494,12 @@
           "url": "photogradient.com",
           "description": "Image to mesh gradient",
           "favicon": "https://www.google.com/s2/favicons?domain=photogradient.com&sz=64"
+        },
+        {
+          "name": "Remotion",
+          "url": "remotion.dev",
+          "description": "Programmatic video in React",
+          "favicon": "https://www.google.com/s2/favicons?domain=remotion.dev&sz=64"
         },
         {
           "name": "Shader Lab",
