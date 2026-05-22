@@ -597,6 +597,12 @@
       "name": "Fun Sites",
       "items": [
         {
+          "name": "AI 2027",
+          "url": "ai-2027.com",
+          "description": "AI forecast scenario",
+          "favicon": "https://www.google.com/s2/favicons?domain=ai-2027.com&sz=64"
+        },
+        {
           "name": "Bao Thien To Timer",
           "url": "www.baothiento.com",
           "href": "www.baothiento.com/timer",
