@@ -22,6 +22,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=conductor.build&sz=64"
         },
         {
+          "name": "Hermes",
+          "url": "hermes-agent.nousresearch.com",
+          "description": "Nous Research agent",
+          "favicon": "https://www.google.com/s2/favicons?domain=nousresearch.com&sz=64"
+        },
+        {
           "name": "Paperclip",
           "url": "paperclip.ing",
           "description": "AI agent platform",
@@ -448,6 +454,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=flora.ai&sz=64"
         },
         {
+          "name": "Flow",
+          "url": "labs.google/fx/tools/flow",
+          "href": "labs.google/fx/tools/flow#tools",
+          "description": "AI filmmaking tool by Google",
+          "favicon": "https://www.google.com/s2/favicons?domain=labs.google&sz=64"
+        },
+        {
           "name": "Framer",
           "url": "framer.com",
           "description": "Marketing sites and landing pages",
@@ -458,6 +471,13 @@
           "url": "jitter.video",
           "description": "Motion design for the web",
           "favicon": "https://www.google.com/s2/favicons?domain=jitter.video&sz=64"
+        },
+        {
+          "name": "Locale",
+          "url": "joshpuckett.me",
+          "href": "joshpuckett.me/locale",
+          "description": "Typography and localization tool by Josh Puckett",
+          "favicon": "https://www.google.com/s2/favicons?domain=joshpuckett.me&sz=64"
         },
         {
           "name": "Magic Patterns",
@@ -476,6 +496,12 @@
           "url": "napkin.ai",
           "description": "Text to visuals and diagrams",
           "favicon": "https://www.google.com/s2/favicons?domain=napkin.ai&sz=64"
+        },
+        {
+          "name": "Neato Studio",
+          "url": "studio.neato.fun",
+          "description": "Creative design tool",
+          "favicon": "https://www.google.com/s2/favicons?domain=neato.fun&sz=64"
         },
         {
           "name": "Paper",
@@ -507,6 +533,12 @@
           "href": "eng.basement.studio/tools/shader-lab",
           "description": "Shader playground by basement.studio",
           "favicon": "https://www.google.com/s2/favicons?domain=basement.studio&sz=64"
+        },
+        {
+          "name": "Tooooools",
+          "url": "www.tooooools.app",
+          "description": "Collection of design tools",
+          "favicon": "https://www.google.com/s2/favicons?domain=tooooools.app&sz=64"
         },
         {
           "name": "Unicorn Studio",
@@ -680,6 +712,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=dayroselane.com&sz=64"
         },
         {
+          "name": "Digitalt Museum",
+          "url": "digitaltmuseum.org",
+          "description": "Nordic museum collections archive",
+          "favicon": "https://www.google.com/s2/favicons?domain=digitaltmuseum.org&sz=64"
+        },
+        {
           "name": "Deck of Cards",
           "url": "deck.of.cards",
           "description": "Interactive card deck",
@@ -727,6 +765,12 @@
           "url": "localgeographic.co",
           "description": "Local photography",
           "favicon": "https://www.google.com/s2/favicons?domain=localgeographic.co&sz=64"
+        },
+        {
+          "name": "Muni Maker",
+          "url": "www.munimaker.app",
+          "description": "Make your own transit map",
+          "favicon": "https://www.google.com/s2/favicons?domain=munimaker.app&sz=64"
         },
         {
           "name": "Neave.tv",
@@ -1251,10 +1295,24 @@
           "favicon": "https://www.google.com/s2/favicons?domain=www.collletttivo.it&sz=64"
         },
         {
+          "name": "Font Brief",
+          "url": "www.fontbrief.com",
+          "href": "www.fontbrief.com/fontbrief",
+          "description": "Type pairing and font briefs",
+          "favicon": "https://www.google.com/s2/favicons?domain=fontbrief.com&sz=64"
+        },
+        {
           "name": "Fontshare",
           "url": "www.fontshare.com",
           "description": "Free quality fonts",
           "favicon": "https://www.google.com/s2/favicons?domain=www.fontshare.com&sz=64"
+        },
+        {
+          "name": "Locale",
+          "url": "joshpuckett.me",
+          "href": "joshpuckett.me/locale",
+          "description": "Typography and localization tool by Josh Puckett",
+          "favicon": "https://www.google.com/s2/favicons?domain=joshpuckett.me&sz=64"
         },
         {
           "name": "Mockups Digital",
@@ -1267,6 +1325,12 @@
           "url": "taylorpenton.com",
           "description": "Type designer portfolio",
           "favicon": "https://www.google.com/s2/favicons?domain=taylorpenton.com&sz=64"
+        },
+        {
+          "name": "Typefoundry Directory",
+          "url": "typefoundry.directory",
+          "description": "Directory of type foundries",
+          "favicon": "https://www.google.com/s2/favicons?domain=typefoundry.directory&sz=64"
         },
         {
           "name": "Uncut",
