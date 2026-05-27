@@ -189,6 +189,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=css-loaders.com&sz=64"
         },
         {
+          "name": "Glimm",
+          "url": "glimm.dev",
+          "description": "WebGL shader page transitions for React",
+          "favicon": "https://www.google.com/s2/favicons?domain=glimm.dev&sz=64"
+        },
+        {
           "name": "Gradient Border",
           "url": "gradient-border.floriankiem.com",
           "description": "CSS gradient borders by Florian Kiem",
@@ -321,6 +327,12 @@
           "url": "basement.studio",
           "description": "Creative digital studio",
           "favicon": "https://www.google.com/s2/favicons?domain=basement.studio&sz=64"
+        },
+        {
+          "name": "Molly",
+          "url": "molly.studio",
+          "description": "Product design studio for AI",
+          "favicon": "https://www.google.com/s2/favicons?domain=molly.studio&sz=64"
         },
         {
           "name": "Primary",
