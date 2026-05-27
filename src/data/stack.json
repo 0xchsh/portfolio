@@ -876,6 +876,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=wear.gallery&sz=64"
         },
         {
+          "name": "Wild Tools",
+          "url": "66.as.wild.tools",
+          "description": "Wild Tools experiment",
+          "favicon": "https://www.google.com/s2/favicons?domain=wild.tools&sz=64"
+        },
+        {
           "name": "YOYOYO",
           "url": "www.yoyoyo.ai",
           "description": "DeepMind x Porto Rocha AI yo-yo",
