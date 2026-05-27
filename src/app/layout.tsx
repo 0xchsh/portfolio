@@ -17,7 +17,10 @@ export const metadata: Metadata = {
   title: "Charles Shin – Portfolio",
   description: "Hello! I'm Charles, a software designer building ai + onchain experiences based in Chicago.",
   icons: {
-    icon: "/images/favicon.png",
+    icon: [
+      { url: "/images/favicon.png", media: "(prefers-color-scheme: light)" },
+      { url: "/images/favicon-dark.png", media: "(prefers-color-scheme: dark)" },
+    ],
   },
   openGraph: {
     title: "Charles Shin – Portfolio",

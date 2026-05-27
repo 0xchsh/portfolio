@@ -39,6 +39,20 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       root.classList.remove('dark');
     }
     localStorage.setItem('theme', theme);
+
+    const faviconHref = theme === 'dark' ? '/images/favicon-dark.png' : '/images/favicon.png';
+    const iconLinks = document.querySelectorAll<HTMLLinkElement>("link[rel~='icon']");
+    if (iconLinks.length === 0) {
+      const link = document.createElement('link');
+      link.rel = 'icon';
+      link.href = faviconHref;
+      document.head.appendChild(link);
+    } else {
+      iconLinks.forEach((link) => {
+        link.removeAttribute('media');
+        link.href = faviconHref;
+      });
+    }
   }, [theme, mounted]);
 
   const toggleTheme = () => {
