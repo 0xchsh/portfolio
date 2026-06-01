@@ -845,6 +845,19 @@
           "favicon": "https://www.google.com/s2/favicons?domain=smallbits.design&sz=64"
         },
         {
+          "name": "Spiral",
+          "url": "spiral.soot.com",
+          "description": "Soot spiral experience",
+          "favicon": "https://www.google.com/s2/favicons?domain=soot.com&sz=64"
+        },
+        {
+          "name": "Tau Ceti",
+          "url": "tauceti.world",
+          "href": "tauceti.world/explorer",
+          "description": "Interactive star system explorer",
+          "favicon": "https://www.google.com/s2/favicons?domain=tauceti.world&sz=64"
+        },
+        {
           "name": "Text to ASCII Art",
           "url": "patorjk.com",
           "href": "patorjk.com/software/taag/#p=testall&f=Cards&t=HELLO+ANTHROPIC&x=none&v=4&h=4&w=80&we=false",
@@ -1249,6 +1262,12 @@
           "url": "superwhisper.com",
           "description": "Voice-to-text",
           "favicon": "https://www.google.com/s2/favicons?domain=superwhisper.com&sz=64"
+        },
+        {
+          "name": "Writer",
+          "url": "writer.computer",
+          "description": "Minimal writing app",
+          "favicon": "https://www.google.com/s2/favicons?domain=writer.computer&sz=64"
         }
       ]
     },
