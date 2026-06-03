@@ -425,6 +425,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=base-ui.com&sz=64"
         },
         {
+          "name": "Design Systems Surf",
+          "url": "designsystems.surf",
+          "description": "Design systems gallery",
+          "favicon": "https://www.google.com/s2/favicons?domain=designsystems.surf&sz=64"
+        },
+        {
           "name": "ElevenLabs UI",
           "url": "ui.elevenlabs.io",
           "description": "ElevenLabs design system",
@@ -1208,6 +1214,12 @@
           "url": "cleanshot.com",
           "description": "Screenshot and screen recording",
           "favicon": "https://www.google.com/s2/favicons?domain=cleanshot.com&sz=64"
+        },
+        {
+          "name": "Chops",
+          "url": "chops.md",
+          "description": "Browse and manage AI agent skills",
+          "favicon": "https://www.google.com/s2/favicons?domain=chops.md&sz=64"
         },
         {
           "name": "Codexbar",
