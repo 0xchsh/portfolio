@@ -51,6 +51,12 @@
       "name": "APIs",
       "items": [
         {
+          "name": "Projects.dev",
+          "url": "projects.dev",
+          "description": "API project directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=projects.dev&sz=64"
+        },
+        {
           "name": "Public APIs",
           "url": "github.com",
           "href": "github.com/public-apis/public-apis",
