@@ -389,6 +389,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=haptics.lochie.me&sz=64"
         },
         {
+          "name": "How to Articulate",
+          "url": "index.how",
+          "href": "index.how/to/articulate",
+          "description": "Guide to articulating design",
+          "favicon": "https://www.google.com/s2/favicons?domain=index.how&sz=64"
+        },
+        {
           "name": "Impeccable",
           "url": "impeccable.style",
           "description": "Design quality tool",
