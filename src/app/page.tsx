@@ -82,7 +82,7 @@ async function getCommitData() {
     const byRepo = json?.data?.user?.contributionsCollection?.commitContributionsByRepository ?? [];
 
     for (const { repository, contributions } of byRepo) {
-      const displayName = repository.isPrivate ? 'private' : repository.name;
+      const displayName = repository.isPrivate ? 'exa' : repository.name;
       for (const node of contributions.nodes) {
         const date = toLocalDate(new Date(node.occurredAt));
         const entry = commitsByDay.get(date);
