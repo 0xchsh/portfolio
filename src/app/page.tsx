@@ -50,7 +50,7 @@ async function getCommitData() {
         user(login: "0xchsh") {
           contributionsCollection(from: $from, to: $to) {
             commitContributionsByRepository(maxRepositories: 100) {
-              repository { name isPrivate }
+              repository { name isPrivate owner { login } }
               contributions(first: 100) {
                 nodes {
                   occurredAt
@@ -82,7 +82,9 @@ async function getCommitData() {
     const byRepo = json?.data?.user?.contributionsCollection?.commitContributionsByRepository ?? [];
 
     for (const { repository, contributions } of byRepo) {
-      const displayName = repository.isPrivate ? 'exa' : repository.name;
+      const ownerLogin: string = repository.owner?.login ?? '';
+      const isExa = ownerLogin === 'exa-labs';
+      const displayName = isExa ? 'exa' : repository.isPrivate ? 'private' : repository.name;
       for (const node of contributions.nodes) {
         const date = toLocalDate(new Date(node.occurredAt));
         const entry = commitsByDay.get(date);
