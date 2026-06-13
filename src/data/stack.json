@@ -414,6 +414,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=rams.ai&sz=64"
         },
         {
+          "name": "Transitions",
+          "url": "transitions.dev",
+          "description": "UI transition patterns",
+          "favicon": "https://www.google.com/s2/favicons?domain=transitions.dev&sz=64"
+        },
+        {
           "name": "UI Skills",
           "url": "ui-skills.com",
           "description": "UI design skills",
