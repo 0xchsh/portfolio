@@ -649,6 +649,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=producthunt.com&sz=64"
         },
         {
+          "name": "Recent",
+          "url": "recent.design",
+          "description": "Recent design directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=recent.design&sz=64"
+        },
+        {
           "name": "Rocumentaries",
           "url": "rocumentaries.com",
           "description": "Curated documentaries",
