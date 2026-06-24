@@ -213,6 +213,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=gradient-border.floriankiem.com&sz=64"
         },
         {
+          "name": "Loaders.wtf",
+          "url": "loaders.wtf",
+          "description": "Loading spinner components",
+          "favicon": "https://www.google.com/s2/favicons?domain=loaders.wtf&sz=64"
+        },
+        {
           "name": "MapCN",
           "url": "mapcn.dev",
           "description": "Map components",
