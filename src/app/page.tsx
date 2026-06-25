@@ -33,8 +33,6 @@ async function getCommitData() {
     const toLocalDate = (d: Date) => d.toLocaleDateString('en-CA', { timeZone: TZ });
 
     const now = new Date();
-    const from = new Date(now.getTime() - 30 * 86_400_000).toISOString();
-    const to = now.toISOString();
 
     const commitsByDay = new Map<string, { count: number; repos: Set<string> }>();
     for (let i = 29; i >= 0; i--) {
@@ -45,54 +43,54 @@ async function getCommitData() {
     const token = process.env.GITHUB_TOKEN?.trim();
     if (!token) return { days: [] as CommitDay[], totalCommits: 0 };
 
-    const query = `
-      query($from: DateTime!, $to: DateTime!) {
-        user(login: "0xchsh") {
-          contributionsCollection(from: $from, to: $to) {
-            commitContributionsByRepository(maxRepositories: 100) {
-              repository { name isPrivate owner { login } }
-              contributions(first: 100) {
-                nodes {
-                  occurredAt
-                  commitCount
-                }
-              }
-            }
-          }
-        }
+    // Oldest day bucket (YYYY-MM-DD) — lower bound for the commit search.
+    const since = Array.from(commitsByDay.keys()).sort()[0];
+
+    // Use the commit search API rather than contributionsCollection. The
+    // contributions API omits private-repo commits unless GitHub's "include
+    // private contributions on my profile" toggle is on *and* a long list of
+    // other visibility rules line up — so private/org commits silently vanish.
+    // search/commits returns every commit the token can see, so private and
+    // org (exa-labs) commits show as long as the token has access to the repo.
+    const headers = {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github.cloak-preview+json',
+    };
+
+    const MAX_PAGES = 10; // 100/page → up to 1000 commits, well past 30d of activity
+    for (let page = 1; page <= MAX_PAGES; page++) {
+      const q = encodeURIComponent(`author:0xchsh author-date:>=${since}`);
+      const url = `https://api.github.com/search/commits?q=${q}&sort=author-date&order=desc&per_page=100&page=${page}`;
+
+      const res = await fetch(url, { headers, next: { revalidate: 3600 } });
+      if (!res.ok) {
+        console.error('[CommitGraph] search/commits error:', res.status, await res.text().catch(() => ''));
+        break;
       }
-    `;
 
-    const res = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query, variables: { from, to } }),
-      next: { revalidate: 3600 },
-    });
+      const json = await res.json();
+      const items: Array<{
+        commit?: { author?: { date?: string } };
+        repository?: { name?: string; private?: boolean; owner?: { login?: string } };
+      }> = json?.items ?? [];
+      if (items.length === 0) break;
 
-    if (!res.ok) {
-      console.error('[CommitGraph] GitHub API error:', res.status, await res.text().catch(() => ''));
-      return { days: [] as CommitDay[], totalCommits: 0 };
-    }
-
-    const json = await res.json();
-    if (json.errors) {
-      console.error('[CommitGraph] GraphQL errors:', JSON.stringify(json.errors));
-    }
-    const byRepo = json?.data?.user?.contributionsCollection?.commitContributionsByRepository ?? [];
-
-    for (const { repository, contributions } of byRepo) {
-      const ownerLogin: string = repository.owner?.login ?? '';
-      const isExa = ownerLogin === 'exa-labs';
-      const displayName = isExa ? 'exa' : repository.isPrivate ? 'private' : repository.name;
-      for (const node of contributions.nodes) {
-        const date = toLocalDate(new Date(node.occurredAt));
+      for (const item of items) {
+        const occurredAt = item?.commit?.author?.date;
+        if (!occurredAt) continue;
+        const date = toLocalDate(new Date(occurredAt));
         const entry = commitsByDay.get(date);
-        if (entry) {
-          entry.count += node.commitCount;
-          entry.repos.add(displayName);
-        }
+        if (!entry) continue; // outside the 30-day window
+
+        const repo = item.repository ?? {};
+        const ownerLogin = repo.owner?.login ?? '';
+        const isExa = ownerLogin === 'exa-labs';
+        const displayName = isExa ? 'exa' : repo.private ? 'private' : repo.name;
+        entry.count += 1;
+        if (displayName) entry.repos.add(displayName);
       }
+
+      if (items.length < 100) break;
     }
 
     const days: CommitDay[] = Array.from(commitsByDay.entries())
