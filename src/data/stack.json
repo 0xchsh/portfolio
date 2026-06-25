@@ -154,6 +154,13 @@
           "href": "varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks",
           "description": "Decentralization for social networks",
           "favicon": "https://www.google.com/s2/favicons?domain=varunsrinivasan.com&sz=64"
+        },
+        {
+          "name": "Teaching Agents Product Design",
+          "url": "vercel.com",
+          "href": "vercel.com/blog/teaching-agents-product-design-at-vercel",
+          "description": "Vercel on teaching agents design",
+          "favicon": "https://www.google.com/s2/favicons?domain=vercel.com&sz=64"
         }
       ]
     },
