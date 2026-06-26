@@ -4,6 +4,12 @@
       "name": "Agents",
       "items": [
         {
+          "name": "Caddy",
+          "url": "caddy.app",
+          "description": "AI agent",
+          "favicon": "https://www.google.com/s2/favicons?domain=caddy.app&sz=64"
+        },
+        {
           "name": "Clicky",
           "url": "www.heyclicky.com",
           "description": "AI agent",
@@ -44,6 +50,12 @@
           "url": "runner.now",
           "description": "Agent runner",
           "favicon": "https://www.google.com/s2/favicons?domain=runner.now&sz=64"
+        },
+        {
+          "name": "Text Agent",
+          "url": "textagent.store",
+          "description": "Text-based AI agent",
+          "favicon": "https://www.google.com/s2/favicons?domain=textagent.store&sz=64"
         }
       ]
     },
