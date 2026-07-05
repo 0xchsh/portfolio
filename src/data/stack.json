@@ -727,6 +727,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=ai-2027.com&sz=64"
         },
         {
+          "name": "Alien Computer",
+          "url": "arcade.pirillo.com",
+          "href": "arcade.pirillo.com/alien-computer.html",
+          "description": "Interactive alien computer",
+          "favicon": "https://www.google.com/s2/favicons?domain=arcade.pirillo.com&sz=64"
+        },
+        {
           "name": "Bao Thien To Timer",
           "url": "www.baothiento.com",
           "href": "www.baothiento.com/timer",
