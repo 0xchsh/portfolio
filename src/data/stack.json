@@ -269,6 +269,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=sdk.markets&sz=64"
         },
         {
+          "name": "Shaders",
+          "url": "shaders.com",
+          "description": "Shader components",
+          "favicon": "https://www.google.com/s2/favicons?domain=shaders.com&sz=64"
+        },
+        {
           "name": "Sonner",
           "url": "sonner.emilkowal.ski",
           "description": "Toast component for React",
