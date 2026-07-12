@@ -269,7 +269,7 @@ export default async function V2Home() {
             Designing interfaces and interactions that feel simple, clear, and enjoyable, especially in blockchain and AI, where new patterns are being shaped for the first time.
           </p>
           <p>
-            Writing code through conversation and wiring agents together (Claude Code, Hermes, Paperclip).
+            Spending my time writing code through conversation and wiring agents together.
           </p>
           <p>
             Reach me at <CopyEmail className={linkClass} /> or dm on{' '}
