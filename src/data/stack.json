@@ -439,6 +439,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=ibelick.com&sz=64"
         },
         {
+          "name": "Name That UI",
+          "url": "namethatui.com",
+          "description": "UI element naming quiz",
+          "favicon": "https://www.google.com/s2/favicons?domain=namethatui.com&sz=64"
+        },
+        {
           "name": "Rams",
           "url": "rams.ai",
           "description": "Design review AI",
