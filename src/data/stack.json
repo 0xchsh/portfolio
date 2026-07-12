@@ -227,6 +227,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=css-loaders.com&sz=64"
         },
         {
+          "name": "Cuelume",
+          "url": "cuelume-site.pages.dev",
+          "description": "Cuelume components",
+          "favicon": "https://www.google.com/s2/favicons?domain=cuelume-site.pages.dev&sz=64"
+        },
+        {
           "name": "Glimm",
           "url": "glimm.dev",
           "description": "WebGL shader page transitions for React",
@@ -237,6 +243,12 @@
           "url": "gradient-border.floriankiem.com",
           "description": "CSS gradient borders by Florian Kiem",
           "favicon": "https://www.google.com/s2/favicons?domain=gradient-border.floriankiem.com&sz=64"
+        },
+        {
+          "name": "Gradient Spin",
+          "url": "gradient-spin.vercel.app",
+          "description": "Spinning gradient component",
+          "favicon": "https://www.google.com/s2/favicons?domain=gradient-spin.vercel.app&sz=64"
         },
         {
           "name": "Loaders.wtf",
