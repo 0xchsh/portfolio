@@ -7,7 +7,7 @@ Currently the Lead Product Designer at Exa (https://exa.ai). Previously at Stell
 
 Designing interfaces and interactions that feel simple, clear, and enjoyable, especially in blockchain and AI, where new patterns are being shaped for the first time.
 
-Writing code through conversation and wiring agents together (Claude Code, OpenClaw, Paperclip).
+Writing code through conversation and wiring agents together (Claude Code, Hermes, Paperclip).
 
 Reach me at hi@ch.sh or dm on x.com (@chshux).
 
@@ -59,7 +59,7 @@ Reach me at hi@ch.sh or dm on x.com (@chshux).
 - Website: ch.sh
 - Portfolio: ch.sh/work
 - Specialties: Product design, blockchain, AI interfaces, interaction design
-- Interests: Vibecoding, agentic workflows, automations, OpenClaw agents
+- Interests: Vibecoding, agentic workflows, automations, Hermes agents
 - In short: Design lead with 8+ years of experience, quick to adapt with any design tool, comfortable creating code via conversation
 
 ## Design System

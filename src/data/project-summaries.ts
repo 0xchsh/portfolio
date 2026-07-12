@@ -5,7 +5,7 @@ Color is just one expression of that constraint. rgb(255,153,0) could map to ðŸŽ
 
 Signatures are the visual representation of RGB values in the metadata. Non-arbitrary, equally unique, equally rare. There will only ever be 16,777,216 of them.`,
 
-  ClawPanel: `OpenClaw is my browser automation backend for running persistent agents, scrapers, and long-running task queues. Without a dashboard it was a black box. ClawPanel fixes that.
+  ClawPanel: `Hermes is my browser automation backend for running persistent agents, scrapers, and long-running task queues. Without a dashboard it was a black box. ClawPanel fixes that.
 
 Failures surface with high contrast. A quick glance tells you if things are healthy. Each task is expandable: URLs visited, retry counts, timing, structured data extracted.
 

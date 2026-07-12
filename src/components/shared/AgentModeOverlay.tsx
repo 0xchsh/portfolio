@@ -10,7 +10,7 @@ const MARKDOWN = `# Charles Shin
 
 I'm currently the Lead Product Designer at Exa (https://exa.ai). Previously at Stellar, Warby Parker, Uber, and Weebly.
 
-Running a small software factory off a Mac Mini. Wiring together agents (Claude Code, OpenClaw, Paperclip) and watching them ship things without me in the room. Still figuring out where the designer fits when the loop closes itself.
+Running a small software factory off a Mac Mini. Wiring together agents (Claude Code, Hermes, Paperclip) and watching them ship things without me in the room. Still figuring out where the designer fits when the loop closes itself.
 
 Most of my thinking lives at the intersection of crypto and AI: wallets that act, payments without friction, agents that own resources. These problems don't have design patterns yet. That's the whole point.
 
@@ -31,7 +31,7 @@ Reach me at hi@ch.sh or dm on x.com (@chshux).
 
 ## Projects
 
-- **ClawPanel** · Dashboard for OpenClaw · 2026
+- **ClawPanel** · Dashboard for Hermes · 2026
 - **Otto** · Ask anything about your cars · 2026
 - **Snack** · List curation tool · 2025
   https://snack.xyz
@@ -72,7 +72,7 @@ Reach me at hi@ch.sh or dm on x.com (@chshux).
 - Website: ch.sh
 - Portfolio: ch.sh/work
 - Specialties: Product design, blockchain, AI interfaces, interaction design
-- Interests: Vibecoding, agentic workflows, automations, OpenClaw agents
+- Interests: Vibecoding, agentic workflows, automations, Hermes agents
 - In short: Design lead with 8+ years of experience, quick to adapt with any design tool, comfortable creating code via conversation`;
 
 function highlightLine(line: string, i: number) {
