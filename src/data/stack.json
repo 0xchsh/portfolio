@@ -349,6 +349,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=interfacecraft.dev&sz=64"
         },
         {
+          "name": "Interfaces",
+          "url": "interfaces.dev",
+          "description": "Interface design course",
+          "favicon": "https://www.google.com/s2/favicons?domain=interfaces.dev&sz=64"
+        },
+        {
           "name": "Making Software",
           "url": "makingsoftware.com",
           "description": "Software craft course",
