@@ -213,6 +213,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=arlan.me&sz=64"
         },
         {
+          "name": "Assistant UI",
+          "url": "www.assistant-ui.com",
+          "description": "AI assistant UI components",
+          "favicon": "https://www.google.com/s2/favicons?domain=assistant-ui.com&sz=64"
+        },
+        {
           "name": "Boneyard",
           "url": "github.com",
           "href": "github.com/0xGF/boneyard",
