@@ -23,6 +23,7 @@
     "agentation-mcp": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cuelume": "^0.1.2",
     "framer-motion": "^12.34.2",
     "lucide-react": "^0.540.0",
     "mesurer": "^0.0.3",

@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useCallback, useEffect, useRef } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import { playHapticClick } from '@/hooks/useHaptics';
 
 type DrawerNavContextType = {
@@ -19,7 +19,6 @@ const DrawerNavContext = createContext<DrawerNavContextType>({
 
 export function DrawerNavProvider({ children, total }: { children: React.ReactNode; total: number }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const audioCtxRef = useRef<AudioContext | null>(null);
 
   const open = useCallback((i: number) => setOpenIndex(i), []);
   const close = useCallback(() => setOpenIndex(null), []);
@@ -30,8 +29,7 @@ export function DrawerNavProvider({ children, total }: { children: React.ReactNo
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
       if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
         e.preventDefault();
-        if (!audioCtxRef.current) audioCtxRef.current = new AudioContext();
-        playHapticClick(audioCtxRef.current);
+        playHapticClick();
         setOpenIndex(prev => {
           if (prev === null) return null;
           return e.key === 'ArrowRight' ? (prev + 1) % total : ((prev - 1) + total) % total;
