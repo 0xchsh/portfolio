@@ -219,11 +219,23 @@
           "favicon": "https://www.google.com/s2/favicons?domain=assistant-ui.com&sz=64"
         },
         {
+          "name": "Blossom Carousel",
+          "url": "blossom-carousel.com",
+          "description": "Native scrolling carousel",
+          "favicon": "https://www.google.com/s2/favicons?domain=blossom-carousel.com&sz=64"
+        },
+        {
           "name": "Boneyard",
           "url": "github.com",
           "href": "github.com/0xGF/boneyard",
           "description": "Skeleton UI components",
           "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=64"
+        },
+        {
+          "name": "Canvas UI",
+          "url": "canvasui.dev",
+          "description": "Canvas and WebGL components",
+          "favicon": "https://www.google.com/s2/favicons?domain=canvasui.dev&sz=64"
         },
         {
           "name": "CSS Loaders",
@@ -273,6 +285,12 @@
           "url": "motion.dev",
           "description": "Production-ready animations for React",
           "favicon": "https://www.google.com/s2/favicons?domain=motion.dev&sz=64"
+        },
+        {
+          "name": "NumberFlow",
+          "url": "number-flow.barvian.me",
+          "description": "Animated number component for React",
+          "favicon": "https://www.google.com/s2/favicons?domain=number-flow.barvian.me&sz=64"
         },
         {
           "name": "React Bits",
@@ -777,6 +795,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=arcade.pirillo.com&sz=64"
         },
         {
+          "name": "Backyard Designers",
+          "url": "backyarddesigners.club",
+          "description": "Fantasy draft for designers",
+          "favicon": "https://www.google.com/s2/favicons?domain=backyarddesigners.club&sz=64"
+        },
+        {
           "name": "Bao Thien To Timer",
           "url": "www.baothiento.com",
           "href": "www.baothiento.com/timer",
@@ -1202,6 +1226,13 @@
           "url": "youtube.com",
           "href": "youtube.com/watch?v=gfF8jzBVWvM",
           "description": "USB002, Alexandra Palace, London",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+        },
+        {
+          "name": "Fred again.. & LATIN MAFIA - under the fabric",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=0sZF6YzhrRU",
+          "description": "Mexico City, December 2025",
           "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
         },
         {
