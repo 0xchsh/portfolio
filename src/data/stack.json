@@ -106,6 +106,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=chimeric-worlding.netlify.app&sz=64"
         },
         {
+          "name": "How to Ask for a Business Introduction",
+          "url": "sole.io",
+          "href": "sole.io/howtointro",
+          "description": "Pete Kazanjy on effective introductions",
+          "favicon": "https://www.google.com/s2/favicons?domain=sole.io&sz=64"
+        },
+        {
           "name": "How We Built the v0 iOS App",
           "url": "vercel.com",
           "href": "vercel.com/blog/how-we-built-the-v0-ios-app",
@@ -125,6 +132,13 @@
           "href": "theargumentmag.com/p/please-let-the-robots-have-this-one",
           "description": "The Argument on AI and labor",
           "favicon": "https://www.google.com/s2/favicons?domain=theargumentmag.com&sz=64"
+        },
+        {
+          "name": "Mental Models",
+          "url": "fs.blog",
+          "href": "fs.blog/mental-models",
+          "description": "Farnam Street on better decision-making",
+          "favicon": "https://www.google.com/s2/favicons?domain=fs.blog&sz=64"
         },
         {
           "name": "My Life Is a Lie",
@@ -173,6 +187,18 @@
           "href": "vercel.com/blog/teaching-agents-product-design-at-vercel",
           "description": "Vercel on teaching agents design",
           "favicon": "https://www.google.com/s2/favicons?domain=vercel.com&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Brand",
+      "items": [
+        {
+          "name": "Quartr Edge",
+          "url": "quartr.com",
+          "href": "quartr.com/edge",
+          "description": "Business stories and visual storytelling",
+          "favicon": "https://www.google.com/s2/favicons?domain=quartr.com&sz=64"
         }
       ]
     },
@@ -251,6 +277,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=cuelume-site.pages.dev&sz=64"
         },
         {
+          "name": "Dqnamo",
+          "url": "www.dqnamo.com",
+          "description": "Interface experiments and component demos",
+          "favicon": "https://www.google.com/s2/favicons?domain=dqnamo.com&sz=64"
+        },
+        {
           "name": "Glimm",
           "url": "glimm.dev",
           "description": "WebGL shader page transitions for React",
@@ -291,6 +323,13 @@
           "url": "number-flow.barvian.me",
           "description": "Animated number component for React",
           "favicon": "https://www.google.com/s2/favicons?domain=number-flow.barvian.me&sz=64"
+        },
+        {
+          "name": "Pretext",
+          "url": "x.com",
+          "href": "x.com/_chenglou/status/2037713766205608234",
+          "description": "Fast multiline text measurement and layout",
+          "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64"
         },
         {
           "name": "React Bits",
@@ -576,6 +615,12 @@
     {
       "name": "Design Tools",
       "items": [
+        {
+          "name": "Butter",
+          "url": "www.butter.video",
+          "description": "Video editor for modern brands",
+          "favicon": "https://www.google.com/s2/favicons?domain=butter.video&sz=64"
+        },
         {
           "name": "Figma",
           "url": "figma.com",
@@ -973,6 +1018,12 @@
           "url": "rovers.land",
           "description": "Interactive experience",
           "favicon": "https://www.google.com/s2/favicons?domain=rovers.land&sz=64"
+        },
+        {
+          "name": "Schemas of Uncertainty",
+          "url": "schemasofuncertainty.com",
+          "description": "Research project on prediction and uncertainty",
+          "favicon": "https://www.google.com/s2/favicons?domain=schemasofuncertainty.com&sz=64"
         },
         {
           "name": "Shader",
