@@ -575,6 +575,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=base-ui.com&sz=64"
         },
         {
+          "name": "Checklist Design",
+          "url": "www.checklist.design",
+          "description": "UI/UX design checklist",
+          "favicon": "https://www.google.com/s2/favicons?domain=checklist.design&sz=64"
+        },
+        {
           "name": "Design Systems Surf",
           "url": "designsystems.surf",
           "description": "Design systems gallery",
