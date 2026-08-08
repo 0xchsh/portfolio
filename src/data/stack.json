@@ -110,7 +110,8 @@
           "url": "sole.io",
           "href": "sole.io/howtointro",
           "description": "Pete Kazanjy on effective introductions",
-          "favicon": "https://www.google.com/s2/favicons?domain=sole.io&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=sole.io&sz=64",
+          "added": "2026-08-08"
         },
         {
           "name": "How We Built the v0 iOS App",
@@ -138,7 +139,8 @@
           "url": "fs.blog",
           "href": "fs.blog/mental-models",
           "description": "Farnam Street on better decision-making",
-          "favicon": "https://www.google.com/s2/favicons?domain=fs.blog&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=fs.blog&sz=64",
+          "added": "2026-08-08"
         },
         {
           "name": "My Life Is a Lie",
@@ -198,7 +200,8 @@
           "url": "quartr.com",
           "href": "quartr.com/edge",
           "description": "Business stories and visual storytelling",
-          "favicon": "https://www.google.com/s2/favicons?domain=quartr.com&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=quartr.com&sz=64",
+          "added": "2026-08-08"
         }
       ]
     },
@@ -248,7 +251,8 @@
           "name": "Blossom Carousel",
           "url": "blossom-carousel.com",
           "description": "Native scrolling carousel",
-          "favicon": "https://www.google.com/s2/favicons?domain=blossom-carousel.com&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=blossom-carousel.com&sz=64",
+          "added": "2026-08-04"
         },
         {
           "name": "Boneyard",
@@ -261,7 +265,8 @@
           "name": "Canvas UI",
           "url": "canvasui.dev",
           "description": "Canvas and WebGL components",
-          "favicon": "https://www.google.com/s2/favicons?domain=canvasui.dev&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=canvasui.dev&sz=64",
+          "added": "2026-08-04"
         },
         {
           "name": "CSS Loaders",
@@ -280,7 +285,8 @@
           "name": "Dqnamo",
           "url": "www.dqnamo.com",
           "description": "Interface experiments and component demos",
-          "favicon": "https://www.google.com/s2/favicons?domain=dqnamo.com&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=dqnamo.com&sz=64",
+          "added": "2026-08-08"
         },
         {
           "name": "Glimm",
@@ -322,14 +328,16 @@
           "name": "NumberFlow",
           "url": "number-flow.barvian.me",
           "description": "Animated number component for React",
-          "favicon": "https://www.google.com/s2/favicons?domain=number-flow.barvian.me&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=number-flow.barvian.me&sz=64",
+          "added": "2026-08-04"
         },
         {
           "name": "Pretext",
           "url": "x.com",
           "href": "x.com/_chenglou/status/2037713766205608234",
           "description": "Fast multiline text measurement and layout",
-          "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64",
+          "added": "2026-08-08"
         },
         {
           "name": "React Bits",
@@ -578,7 +586,8 @@
           "name": "Checklist Design",
           "url": "www.checklist.design",
           "description": "UI/UX design checklist",
-          "favicon": "https://www.google.com/s2/favicons?domain=checklist.design&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=checklist.design&sz=64",
+          "added": "2026-08-08"
         },
         {
           "name": "Design Systems Surf",
@@ -625,7 +634,8 @@
           "name": "Butter",
           "url": "www.butter.video",
           "description": "Video editor for modern brands",
-          "favicon": "https://www.google.com/s2/favicons?domain=butter.video&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=butter.video&sz=64",
+          "added": "2026-08-08"
         },
         {
           "name": "Figma",
@@ -849,7 +859,8 @@
           "name": "Backyard Designers",
           "url": "backyarddesigners.club",
           "description": "Fantasy draft for designers",
-          "favicon": "https://www.google.com/s2/favicons?domain=backyarddesigners.club&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=backyarddesigners.club&sz=64",
+          "added": "2026-08-04"
         },
         {
           "name": "Bao Thien To Timer",
@@ -1029,7 +1040,8 @@
           "name": "Schemas of Uncertainty",
           "url": "schemasofuncertainty.com",
           "description": "Research project on prediction and uncertainty",
-          "favicon": "https://www.google.com/s2/favicons?domain=schemasofuncertainty.com&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=schemasofuncertainty.com&sz=64",
+          "added": "2026-08-08"
         },
         {
           "name": "Shader",
@@ -1290,7 +1302,8 @@
           "url": "youtube.com",
           "href": "youtube.com/watch?v=0sZF6YzhrRU",
           "description": "Mexico City, December 2025",
-          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64"
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64",
+          "added": "2026-08-04"
         },
         {
           "name": "Jersey - Boiler Room Lyon",

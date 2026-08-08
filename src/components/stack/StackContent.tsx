@@ -14,6 +14,7 @@ type StackItem = {
   href?: string;
   description: string;
   favicon: string;
+  added?: string;
 };
 
 type Book = {
@@ -21,7 +22,24 @@ type Book = {
   author: string;
   url: string;
   bgColor: string;
+  added?: string;
 };
+
+const NEW_WINDOW_MS = 7 * 86_400_000;
+
+function isNew(added?: string) {
+  if (!added) return false;
+  const ts = new Date(added + 'T00:00:00').getTime();
+  return !Number.isNaN(ts) && Date.now() - ts < NEW_WINDOW_MS;
+}
+
+function NewBadge() {
+  return (
+    <span className="shrink-0 ml-1.5 px-1 py-px rounded text-[9px] font-semibold tracking-wide bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400">
+      NEW
+    </span>
+  );
+}
 
 type Category = {
   name: string;
@@ -412,7 +430,10 @@ export function StackContent() {
                     <div className="w-[12px] h-[16px] flex items-center justify-center overflow-hidden">
                       <BookCover book={book} mini />
                     </div>
-                    <span className="text-sm font-medium text-foreground truncate">{book.title}</span>
+                    <span className="flex items-center min-w-0">
+                      <span className="text-sm font-medium text-foreground truncate">{book.title}</span>
+                      {isNew(book.added) && <NewBadge />}
+                    </span>
                     <span className="text-xs text-neutral-400 dark:text-neutral-600 max-w-[140px] truncate text-right">
                       {book.author}
                     </span>
@@ -441,6 +462,7 @@ export function StackContent() {
                     </div>
                     <div className="flex items-center mt-2.5 px-0.5 min-w-0">
                       <span className="text-xs font-medium text-foreground truncate">{book.title}</span>
+                      {isNew(book.added) && <NewBadge />}
                       <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ml-1" />
                     </div>
                   </a>
@@ -489,7 +511,10 @@ export function StackContent() {
                       <img src={item.favicon} alt={item.name} width={14} height={14} loading="lazy" decoding="async" className="" />
                     )}
                   </div>
-                  <span className="text-sm font-medium text-foreground min-w-[100px]">{item.name}</span>
+                  <span className="flex items-center min-w-[100px]">
+                    <span className="text-sm font-medium text-foreground">{item.name}</span>
+                    {isNew(item.added) && <NewBadge />}
+                  </span>
                   {!isYT && (
                     <span className="text-xs text-neutral-400 dark:text-neutral-600 flex-1 text-right hidden desktop:block transition-transform duration-150 truncate group-hover:-translate-x-4">
                       {item.url}
@@ -574,6 +599,7 @@ export function StackContent() {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={item.favicon} alt="" width={12} height={12} loading="lazy" decoding="async" className="shrink-0" />
                       <span className="text-xs font-medium text-foreground truncate ml-1.5">{item.name}</span>
+                      {isNew(item.added) && <NewBadge />}
                       <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ml-1" />
                     </div>
                   </a>
