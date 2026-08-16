@@ -135,6 +135,14 @@
           "favicon": "https://www.google.com/s2/favicons?domain=theargumentmag.com&sz=64"
         },
         {
+          "name": "The Making of Cursor's Icons",
+          "url": "www.minoradventures.co",
+          "href": "www.minoradventures.co/blog/the-making-of-cursors-icons",
+          "description": "Minor Adventures on icon design",
+          "favicon": "https://www.google.com/s2/favicons?domain=minoradventures.co&sz=64",
+          "added": "2026-08-16"
+        },
+        {
           "name": "Mental Models",
           "url": "fs.blog",
           "href": "fs.blog/mental-models",
