@@ -256,6 +256,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=assistant-ui.com&sz=64"
         },
         {
+          "name": "Beautiful UI",
+          "url": "www.beautifului.dev",
+          "description": "Copy-paste components for AI-native interfaces",
+          "favicon": "https://www.google.com/s2/favicons?domain=beautifului.dev&sz=64",
+          "added": "2026-08-17"
+        },
+        {
           "name": "Blossom Carousel",
           "url": "blossom-carousel.com",
           "description": "Native scrolling carousel",
@@ -295,6 +302,12 @@
           "description": "Interface experiments and component demos",
           "favicon": "https://www.google.com/s2/favicons?domain=dqnamo.com&sz=64",
           "added": "2026-08-08"
+        },
+        {
+          "name": "Generative Loaders",
+          "url": "generativeloaders.com",
+          "description": "Animated React loaders for generation states",
+          "favicon": "https://www.google.com/s2/favicons?domain=generativeloaders.com&sz=64"
         },
         {
           "name": "Glimm",
@@ -346,6 +359,13 @@
           "description": "Fast multiline text measurement and layout",
           "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64",
           "added": "2026-08-08"
+        },
+        {
+          "name": "Procedural Sounds",
+          "url": "procedural-sounds.vercel.app",
+          "description": "Generate and export procedural interface sounds",
+          "favicon": "https://www.google.com/s2/favicons?domain=procedural-sounds.vercel.app&sz=64",
+          "added": "2026-08-16"
         },
         {
           "name": "React Bits",
@@ -1595,6 +1615,12 @@
           "url": "mockups.digital",
           "description": "Digital mockup templates",
           "favicon": "https://www.google.com/s2/favicons?domain=mockups.digital&sz=64"
+        },
+        {
+          "name": "Open Foundry",
+          "url": "open-foundry.com",
+          "description": "Curated free fonts",
+          "favicon": "https://www.google.com/s2/favicons?domain=open-foundry.com&sz=64"
         },
         {
           "name": "Taylor Penton",
