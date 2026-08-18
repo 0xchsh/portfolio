@@ -29,73 +29,84 @@ export type CommitDay = {
 
 async function getCommitData() {
   try {
-    const TZ = 'America/Chicago';
-    const toLocalDate = (d: Date) => d.toLocaleDateString('en-CA', { timeZone: TZ });
-
     const now = new Date();
+    const today = now.toISOString().slice(0, 10);
+    const firstDay = new Date(`${today}T00:00:00.000Z`);
+    firstDay.setUTCDate(firstDay.getUTCDate() - 29);
+    const firstDate = firstDay.toISOString().slice(0, 10);
 
-    const commitsByDay = new Map<string, { count: number; repos: Set<string> }>();
-    for (let i = 29; i >= 0; i--) {
-      const d = new Date(now.getTime() - i * 86_400_000);
-      commitsByDay.set(toLocalDate(d), { count: 0, repos: new Set() });
+    const contributionsByDay = new Map<string, number>();
+    for (let i = 0; i < 30; i++) {
+      const date = new Date(firstDay);
+      date.setUTCDate(firstDay.getUTCDate() + i);
+      contributionsByDay.set(date.toISOString().slice(0, 10), 0);
     }
 
     const token = process.env.GITHUB_TOKEN?.trim();
     if (!token) return { days: [] as CommitDay[], totalCommits: 0 };
 
-    // Oldest day bucket (YYYY-MM-DD) — lower bound for the commit search.
-    const since = Array.from(commitsByDay.keys()).sort()[0];
-
-    // Use the commit search API rather than contributionsCollection. The
-    // contributions API omits private-repo commits unless GitHub's "include
-    // private contributions on my profile" toggle is on *and* a long list of
-    // other visibility rules line up — so private/org commits silently vanish.
-    // search/commits returns every commit the token can see, so private and
-    // org (exa-labs) commits show as long as the token has access to the repo.
-    const headers = {
-      Authorization: `Bearer ${token}`,
-      Accept: 'application/vnd.github.cloak-preview+json',
-    };
-
-    const MAX_PAGES = 10; // 100/page → up to 1000 commits, well past 30d of activity
-    for (let page = 1; page <= MAX_PAGES; page++) {
-      const q = encodeURIComponent(`author:0xchsh author-date:>=${since}`);
-      const url = `https://api.github.com/search/commits?q=${q}&sort=author-date&order=desc&per_page=100&page=${page}`;
-
-      const res = await fetch(url, { headers, next: { revalidate: 3600 } });
-      if (!res.ok) {
-        console.error('[CommitGraph] search/commits error:', res.status, await res.text().catch(() => ''));
-        break;
+    // The contribution calendar mirrors the GitHub profile graph and can
+    // include anonymized private activity without granting this deployment
+    // access to every private organization repository.
+    const query = `
+      query ContributionCalendar($login: String!, $from: DateTime!, $to: DateTime!) {
+        user(login: $login) {
+          contributionsCollection(from: $from, to: $to) {
+            contributionCalendar {
+              weeks {
+                contributionDays {
+                  contributionCount
+                  date
+                }
+              }
+            }
+          }
+        }
       }
+    `;
+    const res = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query,
+        variables: {
+          login: process.env.GITHUB_USERNAME?.trim() || '0xchsh',
+          from: `${firstDate}T00:00:00.000Z`,
+          to: `${today}T23:59:59.999Z`,
+        },
+      }),
+      next: { revalidate: 3600 },
+    });
 
-      const json = await res.json();
-      const items: Array<{
-        commit?: { author?: { date?: string } };
-        repository?: { name?: string; private?: boolean; owner?: { login?: string } };
-      }> = json?.items ?? [];
-      if (items.length === 0) break;
-
-      for (const item of items) {
-        const occurredAt = item?.commit?.author?.date;
-        if (!occurredAt) continue;
-        const date = toLocalDate(new Date(occurredAt));
-        const entry = commitsByDay.get(date);
-        if (!entry) continue; // outside the 30-day window
-
-        const repo = item.repository ?? {};
-        const ownerLogin = repo.owner?.login ?? '';
-        const isExa = ownerLogin === 'exa-labs';
-        const displayName = isExa ? 'exa' : repo.private ? 'private' : repo.name;
-        entry.count += 1;
-        if (displayName) entry.repos.add(displayName);
-      }
-
-      if (items.length < 100) break;
+    if (!res.ok) {
+      console.error('[CommitGraph] GitHub GraphQL error:', res.status, await res.text().catch(() => ''));
+      return { days: [] as CommitDay[], totalCommits: 0 };
     }
 
-    const days: CommitDay[] = Array.from(commitsByDay.entries())
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([date, { count, repos }]) => ({ date, count, repos: Array.from(repos) }));
+    const json = await res.json();
+    if (json.errors?.length) {
+      console.error('[CommitGraph] GitHub GraphQL errors:', json.errors);
+      return { days: [] as CommitDay[], totalCommits: 0 };
+    }
+
+    const weeks = json.data?.user?.contributionsCollection?.contributionCalendar?.weeks ?? [];
+    for (const week of weeks) {
+      for (const day of week.contributionDays ?? []) {
+        if (contributionsByDay.has(day.date)) {
+          contributionsByDay.set(day.date, day.contributionCount);
+        }
+      }
+    }
+
+    const days: CommitDay[] = Array.from(contributionsByDay, ([date, count]) => ({
+      date,
+      count,
+      // Private contribution details stay anonymous, matching GitHub's profile.
+      repos: [],
+    }));
 
     return { days, totalCommits: days.reduce((s, d) => s + d.count, 0) };
   } catch (err) {
@@ -425,7 +436,7 @@ export default async function V2Home() {
       </DrawerNavProvider>
       </div>
 
-      {/* Right column — carousel + commits */}
+      {/* Right column — carousel + contributions */}
       <FadeIn delay={50} className="order-[2] desktop:order-none desktop:sticky desktop:top-12">
         <WorkCarousel />
 
@@ -433,7 +444,7 @@ export default async function V2Home() {
           <CommitGraph days={days} />
           <div className="flex items-center justify-between">
             <span className={metaLabel}>Last 30 days</span>
-            <span className={`${metaLabel} tabular-nums`}>{totalCommits} commits</span>
+            <span className={`${metaLabel} tabular-nums`}>{totalCommits} contributions</span>
           </div>
         </section>
       </FadeIn>
