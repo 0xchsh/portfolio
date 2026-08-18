@@ -33,9 +33,14 @@ function isNew(added?: string) {
   return !Number.isNaN(ts) && Date.now() - ts < NEW_WINDOW_MS;
 }
 
-function NewBadge() {
+function NewBadge({ overlay = false }: { overlay?: boolean }) {
   return (
-    <span className="shrink-0 ml-1.5 px-1 py-px rounded text-[9px] font-semibold tracking-wide bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400">
+    <span
+      className={cn(
+        'shrink-0 px-1 py-px rounded text-[9px] font-semibold tracking-wide bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400',
+        overlay ? 'absolute top-2 right-2 z-10 pointer-events-none' : 'ml-1.5',
+      )}
+    >
       NEW
     </span>
   );
@@ -459,10 +464,10 @@ export function StackContent() {
                           <BookCover book={book} />
                         </div>
                       </div>
+                      {isNew(book.added) && <NewBadge overlay />}
                     </div>
                     <div className="flex items-center mt-2.5 px-0.5 min-w-0">
                       <span className="text-xs font-medium text-foreground truncate">{book.title}</span>
-                      {isNew(book.added) && <NewBadge />}
                       <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ml-1" />
                     </div>
                   </a>
@@ -576,6 +581,7 @@ export function StackContent() {
                           )}
                         </div>
                       )}
+                      {isNew(item.added) && <NewBadge overlay />}
                       {/* Hover overlay */}
                       <div className={cn(
                         'absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-200 flex items-center justify-center',
@@ -599,7 +605,6 @@ export function StackContent() {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={item.favicon} alt="" width={12} height={12} loading="lazy" decoding="async" className="shrink-0" />
                       <span className="text-xs font-medium text-foreground truncate ml-1.5">{item.name}</span>
-                      {isNew(item.added) && <NewBadge />}
                       <ArrowUpRight size={12} weight="bold" className="shrink-0 text-neutral-400 dark:text-neutral-600 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ml-1" />
                     </div>
                   </a>
