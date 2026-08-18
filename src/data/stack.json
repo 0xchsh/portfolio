@@ -106,6 +106,14 @@
           "favicon": "https://www.google.com/s2/favicons?domain=chimeric-worlding.netlify.app&sz=64"
         },
         {
+          "name": "How things win",
+          "url": "stephango.com",
+          "href": "stephango.com/moats",
+          "description": "Steph Ango on competitive advantages and moats",
+          "favicon": "https://www.google.com/s2/favicons?domain=stephango.com&sz=64",
+          "added": "2026-08-17"
+        },
+        {
           "name": "How to Ask for a Business Introduction",
           "url": "sole.io",
           "href": "sole.io/howtointro",
