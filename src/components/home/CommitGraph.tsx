@@ -118,7 +118,7 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
                 {day.count > 0 ? (
                   <>
                     <p className="text-neutral-300">
-                      {day.count} commit{day.count !== 1 ? 's' : ''}
+                      {day.count} contribution{day.count !== 1 ? 's' : ''}
                     </p>
                     {day.repos.length > 0 && (
                       <p className="text-neutral-400 text-[10px]">
@@ -127,7 +127,7 @@ export function CommitGraph({ days }: { days: CommitDay[] }) {
                     )}
                   </>
                 ) : (
-                  <p className="text-neutral-400">No commits</p>
+                  <p className="text-neutral-400">No contributions</p>
                 )}
               </div>
             </div>
