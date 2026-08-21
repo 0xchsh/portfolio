@@ -193,6 +193,14 @@
           "favicon": "https://www.google.com/s2/favicons?domain=shapeof.ai&sz=64"
         },
         {
+          "name": "Should You Use AI for a Task?",
+          "url": "www.schneier.com",
+          "href": "www.schneier.com/essays/archives/2026/07/should-you-use-ai-for-a-task-heres-a-simple-way-to-decide.html",
+          "description": "Bruce Schneier on when to use AI",
+          "favicon": "https://www.google.com/s2/favicons?domain=schneier.com&sz=64",
+          "added": "2026-08-21"
+        },
+        {
           "name": "Sufficient Decentralization",
           "url": "varunsrinivasan.com",
           "href": "varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks",
