@@ -428,6 +428,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=threejs.org&sz=64"
         },
         {
+          "name": "ThreeUI",
+          "url": "threeui.com",
+          "description": "3D UI components",
+          "favicon": "https://www.google.com/s2/favicons?domain=threeui.com&sz=64",
+          "added": "2026-08-22"
+        },
+        {
           "name": "Transitions.dev",
           "url": "transitions.dev",
           "description": "Copy-paste web transitions",
