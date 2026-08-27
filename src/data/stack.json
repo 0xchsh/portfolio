@@ -40,6 +40,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=nousresearch.com&sz=64"
         },
         {
+          "name": "OpenBenchmarks",
+          "url": "openbenchmarks.com",
+          "description": "Independent, reproducible benchmarks",
+          "favicon": "https://www.google.com/s2/favicons?domain=openbenchmarks.com&sz=64",
+          "added": "2026-08-24"
+        },
+        {
           "name": "Paperclip",
           "url": "paperclip.ing",
           "description": "AI agent platform",
@@ -112,6 +119,14 @@
           "description": "Steph Ango on competitive advantages and moats",
           "favicon": "https://www.google.com/s2/favicons?domain=stephango.com&sz=64",
           "added": "2026-08-17"
+        },
+        {
+          "name": "How teams build",
+          "url": "linear.app",
+          "href": "linear.app/data",
+          "description": "Linear on AI usage patterns in software teams",
+          "favicon": "https://www.google.com/s2/favicons?domain=linear.app&sz=64",
+          "added": "2026-08-18"
         },
         {
           "name": "How to Ask for a Business Introduction",
@@ -420,6 +435,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=threejs.org&sz=64"
         },
         {
+          "name": "Three.js Resources",
+          "url": "threejsresources.com",
+          "description": "Curated Three.js tools and learning resources",
+          "favicon": "https://www.google.com/s2/favicons?domain=threejsresources.com&sz=64",
+          "added": "2026-08-26"
+        },
+        {
           "name": "Transitions.dev",
           "url": "transitions.dev",
           "description": "Copy-paste web transitions",
@@ -430,6 +452,13 @@
           "url": "vaul.emilkowal.ski",
           "description": "Drawer component for React",
           "favicon": "https://www.google.com/s2/favicons?domain=vaul.emilkowal.ski&sz=64"
+        },
+        {
+          "name": "vgpu",
+          "url": "vgpu.sh",
+          "description": "WebGPU library designed for agents",
+          "favicon": "https://www.google.com/s2/favicons?domain=vgpu.sh&sz=64",
+          "added": "2026-08-27"
         }
       ]
     },
@@ -796,12 +825,6 @@
           "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
         },
         {
-          "name": "Desengs",
-          "url": "desengs.com",
-          "description": "Design directory",
-          "favicon": "https://www.google.com/s2/favicons?domain=desengs.com&sz=64"
-        },
-        {
           "name": "Freelance Things",
           "url": "freelancethings.co",
           "description": "Freelance resources directory",
@@ -878,6 +901,13 @@
     {
       "name": "Fun Sites",
       "items": [
+        {
+          "name": "1K Papers",
+          "url": "www.1kpapers.com",
+          "description": "Essential AI research from 2025–2026",
+          "favicon": "https://www.google.com/s2/favicons?domain=www.1kpapers.com&sz=64",
+          "added": "2026-08-20"
+        },
         {
           "name": "AI 2027",
           "url": "ai-2027.com",
@@ -964,6 +994,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=dayroselane.com&sz=64"
         },
         {
+          "name": "Doodles",
+          "url": "doodles.toys",
+          "description": "Interactive drawing toys",
+          "favicon": "https://www.google.com/s2/favicons?domain=doodles.toys&sz=64",
+          "added": "2026-08-21"
+        },
+        {
           "name": "Digitalt Museum",
           "url": "digitaltmuseum.org",
           "description": "Nordic museum collections archive",
@@ -999,6 +1036,13 @@
           "url": "fffffft.com",
           "description": "Creative web experiment",
           "favicon": "https://www.google.com/s2/favicons?domain=fffffft.com&sz=64"
+        },
+        {
+          "name": "ICQR Magic Tree",
+          "url": "tree.icqr.com",
+          "description": "3D QR code tree generator",
+          "favicon": "https://www.google.com/s2/favicons?domain=tree.icqr.com&sz=64",
+          "added": "2026-08-26"
         },
         {
           "name": "ISO City",
@@ -1078,6 +1122,13 @@
           "description": "Research project on prediction and uncertainty",
           "favicon": "https://www.google.com/s2/favicons?domain=schemasofuncertainty.com&sz=64",
           "added": "2026-08-08"
+        },
+        {
+          "name": "Semicolon Inspector",
+          "url": "semicolon.trm.sh",
+          "description": "Find one missing semicolon in 187,421 lines",
+          "favicon": "https://www.google.com/s2/favicons?domain=semicolon.trm.sh&sz=64",
+          "added": "2026-08-27"
         },
         {
           "name": "Shader",
@@ -1227,6 +1278,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
         },
         {
+          "name": "DesEngs",
+          "url": "desengs.com",
+          "description": "Curated design engineering resources",
+          "favicon": "https://www.google.com/s2/favicons?domain=desengs.com&sz=64",
+          "added": "2026-08-24"
+        },
+        {
           "name": "Detail",
           "url": "detail.design",
           "description": "Design details and breakdowns",
@@ -1268,6 +1326,27 @@
           "url": "mobbin.com",
           "description": "UI & UX design patterns",
           "favicon": "https://www.google.com/s2/favicons?domain=mobbin.com&sz=64"
+        },
+        {
+          "name": "Minimum",
+          "url": "mnmm.xyz",
+          "description": "Curated minimal website gallery",
+          "favicon": "https://www.google.com/s2/favicons?domain=mnmm.xyz&sz=64",
+          "added": "2026-08-24"
+        },
+        {
+          "name": "Noiced",
+          "url": "noiced.com",
+          "description": "Daily web design inspiration",
+          "favicon": "https://www.google.com/s2/favicons?domain=noiced.com&sz=64",
+          "added": "2026-08-24"
+        },
+        {
+          "name": "OGPedia",
+          "url": "ogpedia.xyz",
+          "description": "Curated Open Graph image gallery",
+          "favicon": "https://www.google.com/s2/favicons?domain=ogpedia.xyz&sz=64",
+          "added": "2026-08-24"
         },
         {
           "name": "Origami Archive",
@@ -1604,6 +1683,13 @@
           "href": "www.fontbrief.com/fontbrief",
           "description": "Type pairing and font briefs",
           "favicon": "https://www.google.com/s2/favicons?domain=fontbrief.com&sz=64"
+        },
+        {
+          "name": "Fonts Compare",
+          "url": "fontscompare.com",
+          "description": "Compare 1,600+ Google Fonts",
+          "favicon": "https://www.google.com/s2/favicons?domain=fontscompare.com&sz=64",
+          "added": "2026-08-25"
         },
         {
           "name": "Fontshare",
