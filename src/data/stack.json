@@ -927,6 +927,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=www.blueprint.am&sz=64"
         },
         {
+          "name": "Brand My Mac",
+          "url": "brandmymac.com",
+          "description": "Custom Mac branding mockups",
+          "favicon": "https://www.google.com/s2/favicons?domain=brandmymac.com&sz=64",
+          "added": "2026-08-27"
+        },
+        {
           "name": "Calligrapher.ai",
           "url": "calligrapher.ai",
           "description": "AI handwriting generation",
