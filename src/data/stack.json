@@ -327,6 +327,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=cuelume-site.pages.dev&sz=64"
         },
         {
+          "name": "Dot Matrix",
+          "url": "dotmatrix.zzzzshawn.cloud",
+          "description": "Dot matrix loaders for React",
+          "favicon": "https://www.google.com/s2/favicons?domain=dotmatrix.zzzzshawn.cloud&sz=64",
+          "added": "2026-08-28"
+        },
+        {
           "name": "Dqnamo",
           "url": "www.dqnamo.com",
           "description": "Interface experiments and component demos",
