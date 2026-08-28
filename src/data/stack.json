@@ -1038,6 +1038,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=fffffft.com&sz=64"
         },
         {
+          "name": "Hoodmaps",
+          "url": "hoodmaps.com",
+          "description": "Crowdsourced neighborhood maps",
+          "favicon": "https://www.google.com/s2/favicons?domain=hoodmaps.com&sz=64",
+          "added": "2026-08-27"
+        },
+        {
           "name": "ICQR Magic Tree",
           "url": "tree.icqr.com",
           "description": "3D QR code tree generator",
