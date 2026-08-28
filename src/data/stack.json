@@ -459,6 +459,14 @@
           "description": "WebGPU library designed for agents",
           "favicon": "https://www.google.com/s2/favicons?domain=vgpu.sh&sz=64",
           "added": "2026-08-27"
+        },
+        {
+          "name": "vgpu Examples",
+          "url": "vgpu.sh",
+          "href": "vgpu.sh/examples",
+          "description": "WebGPU shaders and compute pipeline demos",
+          "favicon": "https://www.google.com/s2/favicons?domain=vgpu.sh&sz=64",
+          "added": "2026-08-28"
         }
       ]
     },
