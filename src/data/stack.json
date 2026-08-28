@@ -358,12 +358,6 @@
           "favicon": "https://www.google.com/s2/favicons?domain=gradient-spin.vercel.app&sz=64"
         },
         {
-          "name": "Loaders.wtf",
-          "url": "loaders.wtf",
-          "description": "Loading spinner components",
-          "favicon": "https://www.google.com/s2/favicons?domain=loaders.wtf&sz=64"
-        },
-        {
           "name": "MapCN",
           "url": "mapcn.dev",
           "description": "Map components",
@@ -747,6 +741,12 @@
           "url": "jitter.video",
           "description": "Motion design for the web",
           "favicon": "https://www.google.com/s2/favicons?domain=jitter.video&sz=64"
+        },
+        {
+          "name": "Loaders.wtf",
+          "url": "loaders.wtf",
+          "description": "Loading spinner components",
+          "favicon": "https://www.google.com/s2/favicons?domain=loaders.wtf&sz=64"
         },
         {
           "name": "Locale",
