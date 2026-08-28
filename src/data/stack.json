@@ -424,6 +424,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=shaders.com&sz=64"
         },
         {
+          "name": "Shoogle",
+          "url": "shoogle.dev",
+          "description": "Search engine for shadcn registries",
+          "favicon": "https://www.google.com/s2/favicons?domain=shoogle.dev&sz=64",
+          "added": "2026-08-28"
+        },
+        {
           "name": "Sonner",
           "url": "sonner.emilkowal.ski",
           "description": "Toast component for React",
