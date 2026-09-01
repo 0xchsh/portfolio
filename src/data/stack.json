@@ -854,6 +854,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
         },
         {
+          "name": "Design Engineer Tools",
+          "url": "designengineer.tools",
+          "description": "Tools for web-focused design engineers",
+          "favicon": "https://www.google.com/s2/favicons?domain=designengineer.tools&sz=64",
+          "added": "2026-08-31"
+        },
+        {
           "name": "Freelance Things",
           "url": "freelancethings.co",
           "description": "Freelance resources directory",
