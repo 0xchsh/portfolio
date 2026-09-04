@@ -835,6 +835,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=photogradient.com&sz=64"
         },
         {
+          "name": "playgrnd",
+          "url": "www.playgrnd.tools",
+          "description": "Browser-based generative design tools",
+          "favicon": "https://www.google.com/s2/favicons?domain=playgrnd.tools&sz=64",
+          "added": "2026-09-04"
+        },
+        {
           "name": "Remotion",
           "url": "remotion.dev",
           "description": "Programmatic video in React",
