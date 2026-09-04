@@ -37,7 +37,7 @@ function NewBadge({ overlay = false }: { overlay?: boolean }) {
   return (
     <span
       className={cn(
-        'shrink-0 px-1 py-px rounded text-[9px] font-semibold tracking-wide bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400',
+        'shrink-0 px-1 py-px rounded text-[9px] leading-3 font-semibold tracking-wide bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400',
         overlay ? 'absolute top-2 right-2 z-10 pointer-events-none' : 'ml-1.5',
       )}
     >

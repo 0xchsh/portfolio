@@ -40,6 +40,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=nousresearch.com&sz=64"
         },
         {
+          "name": "OpenBenchmarks",
+          "url": "openbenchmarks.com",
+          "description": "Independent, reproducible benchmarks",
+          "favicon": "https://www.google.com/s2/favicons?domain=openbenchmarks.com&sz=64",
+          "added": "2026-08-24"
+        },
+        {
           "name": "Paperclip",
           "url": "paperclip.ing",
           "description": "AI agent platform",
@@ -106,12 +113,28 @@
           "favicon": "https://www.google.com/s2/favicons?domain=chimeric-worlding.netlify.app&sz=64"
         },
         {
+          "name": "Designing Grok Bot for a world of persistent agents",
+          "url": "x.ai",
+          "href": "x.ai/news/designing-grok-bot",
+          "description": "xAI on interfaces for persistent agents",
+          "favicon": "https://www.google.com/s2/favicons?domain=x.ai&sz=64",
+          "added": "2026-09-03"
+        },
+        {
           "name": "How things win",
           "url": "stephango.com",
           "href": "stephango.com/moats",
           "description": "Steph Ango on competitive advantages and moats",
           "favicon": "https://www.google.com/s2/favicons?domain=stephango.com&sz=64",
           "added": "2026-08-17"
+        },
+        {
+          "name": "How teams build",
+          "url": "linear.app",
+          "href": "linear.app/data",
+          "description": "Linear on AI usage patterns in software teams",
+          "favicon": "https://www.google.com/s2/favicons?domain=linear.app&sz=64",
+          "added": "2026-08-18"
         },
         {
           "name": "How to Ask for a Business Introduction",
@@ -300,6 +323,13 @@
           "added": "2026-08-04"
         },
         {
+          "name": "Circle Loaders",
+          "url": "circleloaders.dominikakissi.com",
+          "description": "24 dependency-free animated SVG spinners",
+          "favicon": "https://www.google.com/s2/favicons?domain=circleloaders.dominikakissi.com&sz=64",
+          "added": "2026-08-28"
+        },
+        {
           "name": "CSS Loaders",
           "url": "css-loaders.com",
           "href": "css-loaders.com/classic",
@@ -311,6 +341,13 @@
           "url": "cuelume-site.pages.dev",
           "description": "Cuelume components",
           "favicon": "https://www.google.com/s2/favicons?domain=cuelume-site.pages.dev&sz=64"
+        },
+        {
+          "name": "Dot Matrix",
+          "url": "dotmatrix.zzzzshawn.cloud",
+          "description": "Dot matrix loaders for React",
+          "favicon": "https://www.google.com/s2/favicons?domain=dotmatrix.zzzzshawn.cloud&sz=64",
+          "added": "2026-08-28"
         },
         {
           "name": "Dqnamo",
@@ -342,12 +379,6 @@
           "url": "gradient-spin.vercel.app",
           "description": "Spinning gradient component",
           "favicon": "https://www.google.com/s2/favicons?domain=gradient-spin.vercel.app&sz=64"
-        },
-        {
-          "name": "Loaders.wtf",
-          "url": "loaders.wtf",
-          "description": "Loading spinner components",
-          "favicon": "https://www.google.com/s2/favicons?domain=loaders.wtf&sz=64"
         },
         {
           "name": "MapCN",
@@ -409,6 +440,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=shaders.com&sz=64"
         },
         {
+          "name": "Shoogle",
+          "url": "shoogle.dev",
+          "description": "Search engine for shadcn registries",
+          "favicon": "https://www.google.com/s2/favicons?domain=shoogle.dev&sz=64",
+          "added": "2026-08-28"
+        },
+        {
           "name": "Sonner",
           "url": "sonner.emilkowal.ski",
           "description": "Toast component for React",
@@ -428,6 +466,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=threejs.org&sz=64"
         },
         {
+          "name": "Three.js Resources",
+          "url": "threejsresources.com",
+          "description": "Curated Three.js tools and learning resources",
+          "favicon": "https://www.google.com/s2/favicons?domain=threejsresources.com&sz=64",
+          "added": "2026-08-26"
+        },
+        {
           "name": "ThreeUI",
           "url": "threeui.com",
           "description": "3D UI components",
@@ -445,6 +490,21 @@
           "url": "vaul.emilkowal.ski",
           "description": "Drawer component for React",
           "favicon": "https://www.google.com/s2/favicons?domain=vaul.emilkowal.ski&sz=64"
+        },
+        {
+          "name": "vgpu",
+          "url": "vgpu.sh",
+          "description": "WebGPU library designed for agents",
+          "favicon": "https://www.google.com/s2/favicons?domain=vgpu.sh&sz=64",
+          "added": "2026-08-27"
+        },
+        {
+          "name": "vgpu Examples",
+          "url": "vgpu.sh",
+          "href": "vgpu.sh/examples",
+          "description": "WebGPU shaders and compute pipeline demos",
+          "favicon": "https://www.google.com/s2/favicons?domain=vgpu.sh&sz=64",
+          "added": "2026-08-28"
         }
       ]
     },
@@ -720,6 +780,12 @@
           "favicon": "https://www.google.com/s2/favicons?domain=jitter.video&sz=64"
         },
         {
+          "name": "Loaders.wtf",
+          "url": "loaders.wtf",
+          "description": "Loading spinner components",
+          "favicon": "https://www.google.com/s2/favicons?domain=loaders.wtf&sz=64"
+        },
+        {
           "name": "Locale",
           "url": "joshpuckett.me",
           "href": "joshpuckett.me/locale",
@@ -769,6 +835,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=photogradient.com&sz=64"
         },
         {
+          "name": "playgrnd",
+          "url": "www.playgrnd.tools",
+          "description": "Browser-based generative design tools",
+          "favicon": "https://www.google.com/s2/favicons?domain=playgrnd.tools&sz=64",
+          "added": "2026-09-04"
+        },
+        {
           "name": "Remotion",
           "url": "remotion.dev",
           "description": "Programmatic video in React",
@@ -811,10 +884,11 @@
           "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
         },
         {
-          "name": "Desengs",
-          "url": "desengs.com",
-          "description": "Design directory",
-          "favicon": "https://www.google.com/s2/favicons?domain=desengs.com&sz=64"
+          "name": "Design Engineer Tools",
+          "url": "designengineer.tools",
+          "description": "Tools for web-focused design engineers",
+          "favicon": "https://www.google.com/s2/favicons?domain=designengineer.tools&sz=64",
+          "added": "2026-08-31"
         },
         {
           "name": "Freelance Things",
@@ -893,6 +967,13 @@
     {
       "name": "Fun Sites",
       "items": [
+        {
+          "name": "1K Papers",
+          "url": "www.1kpapers.com",
+          "description": "Essential AI research from 2025–2026",
+          "favicon": "https://www.google.com/s2/favicons?domain=www.1kpapers.com&sz=64",
+          "added": "2026-08-20"
+        },
         {
           "name": "AI 2027",
           "url": "ai-2027.com",
@@ -986,6 +1067,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=dayroselane.com&sz=64"
         },
         {
+          "name": "Doodles",
+          "url": "doodles.toys",
+          "description": "Interactive drawing toys",
+          "favicon": "https://www.google.com/s2/favicons?domain=doodles.toys&sz=64",
+          "added": "2026-08-21"
+        },
+        {
           "name": "Digitalt Museum",
           "url": "digitaltmuseum.org",
           "description": "Nordic museum collections archive",
@@ -1017,10 +1105,31 @@
           "favicon": "https://www.google.com/s2/favicons?domain=samismith.com&sz=64"
         },
         {
+          "name": "fal.live",
+          "url": "fal.live",
+          "description": "Audience-directed AI television",
+          "favicon": "https://www.google.com/s2/favicons?domain=fal.live&sz=64",
+          "added": "2026-09-03"
+        },
+        {
           "name": "FFFFFFT",
           "url": "fffffft.com",
           "description": "Creative web experiment",
           "favicon": "https://www.google.com/s2/favicons?domain=fffffft.com&sz=64"
+        },
+        {
+          "name": "Hoodmaps",
+          "url": "hoodmaps.com",
+          "description": "Crowdsourced neighborhood maps",
+          "favicon": "https://www.google.com/s2/favicons?domain=hoodmaps.com&sz=64",
+          "added": "2026-08-27"
+        },
+        {
+          "name": "ICQR Magic Tree",
+          "url": "tree.icqr.com",
+          "description": "3D QR code tree generator",
+          "favicon": "https://www.google.com/s2/favicons?domain=tree.icqr.com&sz=64",
+          "added": "2026-08-26"
         },
         {
           "name": "ISO City",
@@ -1100,6 +1209,13 @@
           "description": "Research project on prediction and uncertainty",
           "favicon": "https://www.google.com/s2/favicons?domain=schemasofuncertainty.com&sz=64",
           "added": "2026-08-08"
+        },
+        {
+          "name": "Semicolon Inspector",
+          "url": "semicolon.trm.sh",
+          "description": "Find one missing semicolon in 187,421 lines",
+          "favicon": "https://www.google.com/s2/favicons?domain=semicolon.trm.sh&sz=64",
+          "added": "2026-08-27"
         },
         {
           "name": "Shader",
@@ -1249,6 +1365,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=64"
         },
         {
+          "name": "DesEngs",
+          "url": "desengs.com",
+          "description": "Curated design engineering resources",
+          "favicon": "https://www.google.com/s2/favicons?domain=desengs.com&sz=64",
+          "added": "2026-08-24"
+        },
+        {
           "name": "Detail",
           "url": "detail.design",
           "description": "Design details and breakdowns",
@@ -1290,6 +1413,27 @@
           "url": "mobbin.com",
           "description": "UI & UX design patterns",
           "favicon": "https://www.google.com/s2/favicons?domain=mobbin.com&sz=64"
+        },
+        {
+          "name": "Minimum",
+          "url": "mnmm.xyz",
+          "description": "Curated minimal website gallery",
+          "favicon": "https://www.google.com/s2/favicons?domain=mnmm.xyz&sz=64",
+          "added": "2026-08-24"
+        },
+        {
+          "name": "Noiced",
+          "url": "noiced.com",
+          "description": "Daily web design inspiration",
+          "favicon": "https://www.google.com/s2/favicons?domain=noiced.com&sz=64",
+          "added": "2026-08-24"
+        },
+        {
+          "name": "OGPedia",
+          "url": "ogpedia.xyz",
+          "description": "Curated Open Graph image gallery",
+          "favicon": "https://www.google.com/s2/favicons?domain=ogpedia.xyz&sz=64",
+          "added": "2026-08-24"
         },
         {
           "name": "Origami Archive",
@@ -1626,6 +1770,13 @@
           "href": "www.fontbrief.com/fontbrief",
           "description": "Type pairing and font briefs",
           "favicon": "https://www.google.com/s2/favicons?domain=fontbrief.com&sz=64"
+        },
+        {
+          "name": "Fonts Compare",
+          "url": "fontscompare.com",
+          "description": "Compare 1,600+ Google Fonts",
+          "favicon": "https://www.google.com/s2/favicons?domain=fontscompare.com&sz=64",
+          "added": "2026-08-25"
         },
         {
           "name": "Fontshare",
