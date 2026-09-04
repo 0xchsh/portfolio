@@ -113,6 +113,14 @@
           "favicon": "https://www.google.com/s2/favicons?domain=chimeric-worlding.netlify.app&sz=64"
         },
         {
+          "name": "Designing Grok Bot for a world of persistent agents",
+          "url": "x.ai",
+          "href": "x.ai/news/designing-grok-bot",
+          "description": "xAI on interfaces for persistent agents",
+          "favicon": "https://www.google.com/s2/favicons?domain=x.ai&sz=64",
+          "added": "2026-09-03"
+        },
+        {
           "name": "How things win",
           "url": "stephango.com",
           "href": "stephango.com/moats",
