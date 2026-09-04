@@ -208,6 +208,14 @@
           "favicon": "https://www.google.com/s2/favicons?domain=shapeof.ai&sz=64"
         },
         {
+          "name": "Should You Use AI for a Task?",
+          "url": "www.schneier.com",
+          "href": "www.schneier.com/essays/archives/2026/07/should-you-use-ai-for-a-task-heres-a-simple-way-to-decide.html",
+          "description": "Bruce Schneier on when to use AI",
+          "favicon": "https://www.google.com/s2/favicons?domain=schneier.com&sz=64",
+          "added": "2026-08-21"
+        },
+        {
           "name": "Sufficient Decentralization",
           "url": "varunsrinivasan.com",
           "href": "varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks",
@@ -455,6 +463,13 @@
           "description": "Curated Three.js tools and learning resources",
           "favicon": "https://www.google.com/s2/favicons?domain=threejsresources.com&sz=64",
           "added": "2026-08-26"
+        },
+        {
+          "name": "ThreeUI",
+          "url": "threeui.com",
+          "description": "3D UI components",
+          "favicon": "https://www.google.com/s2/favicons?domain=threeui.com&sz=64",
+          "added": "2026-08-22"
         },
         {
           "name": "Transitions.dev",
@@ -976,6 +991,13 @@
           "url": "www.blueprint.am",
           "description": "AI for hardware design",
           "favicon": "https://www.google.com/s2/favicons?domain=www.blueprint.am&sz=64"
+        },
+        {
+          "name": "Brand My Mac",
+          "url": "brandmymac.com",
+          "description": "Custom Mac branding mockups",
+          "favicon": "https://www.google.com/s2/favicons?domain=brandmymac.com&sz=64",
+          "added": "2026-08-27"
         },
         {
           "name": "Calligrapher.ai",
