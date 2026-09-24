@@ -203,6 +203,14 @@
           "favicon": "https://www.google.com/s2/favicons?domain=itsnicethat.com&sz=64"
         },
         {
+          "name": "The perfect app has no loading states",
+          "url": "floriankiem.com",
+          "href": "floriankiem.com/writing/the-perfect-app-has-no-loading-states",
+          "description": "Florian Kiem on designing apps without loading states",
+          "favicon": "https://www.google.com/s2/favicons?domain=floriankiem.com&sz=64",
+          "added": "2026-09-24"
+        },
+        {
           "name": "Product-Led Protocols",
           "url": "danromero.org",
           "href": "danromero.org/product-led-protocols.html",
@@ -1612,6 +1620,18 @@
           "author": "J.R.R. Tolkien",
           "url": "goodreads.com/book/show/5907.The_Hobbit",
           "bgColor": "#2E5E3E"
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "items": [
+        {
+          "name": "Designeer",
+          "url": "designeer.xyz",
+          "description": "Design resources",
+          "favicon": "https://www.google.com/s2/favicons?domain=designeer.xyz&sz=64",
+          "added": "2026-09-24"
         }
       ]
     },

@@ -99,6 +99,7 @@ const categoryIcons: Record<string, React.ElementType> = {
   APIs: Plugs,
   Directories: BookOpen,
   Read: Book,
+  Resources: BookOpen,
   Specs: ClipboardText,
 };
 
