@@ -1853,6 +1853,18 @@
           "favicon": "https://www.google.com/s2/favicons?domain=supply.family&sz=64"
         }
       ]
+    },
+    {
+      "name": "Motion",
+      "items": [
+        {
+          "name": "Prompt Motion",
+          "url": "prompt-motion.com",
+          "description": "Motion design prompts",
+          "favicon": "https://www.google.com/s2/favicons?domain=prompt-motion.com&sz=64",
+          "added": "2026-10-07"
+        }
+      ]
     }
   ]
 }
