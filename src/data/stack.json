@@ -251,12 +251,27 @@
       "name": "Brand",
       "items": [
         {
+          "name": "playgrnd",
+          "url": "www.playgrnd.tools",
+          "description": "Browser-based generative design tools",
+          "favicon": "https://www.google.com/s2/favicons?domain=playgrnd.tools&sz=64",
+          "added": "2026-10-07"
+        },
+        {
           "name": "Quartr Edge",
           "url": "quartr.com",
           "href": "quartr.com/edge",
           "description": "Business stories and visual storytelling",
           "favicon": "https://www.google.com/s2/favicons?domain=quartr.com&sz=64",
           "added": "2026-08-08"
+        },
+        {
+          "name": "UX Pilot Labs",
+          "url": "uxpilot.ai",
+          "href": "uxpilot.ai/labs",
+          "description": "Free tools for gradients, patterns, and visual effects",
+          "favicon": "https://www.google.com/s2/favicons?domain=uxpilot.ai&sz=64",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -268,6 +283,14 @@
           "url": "ui.aceternity.com",
           "description": "Animated UI components",
           "favicon": "https://www.google.com/s2/favicons?domain=ui.aceternity.com&sz=64"
+        },
+        {
+          "name": "affectUI",
+          "url": "www.affectui.com",
+          "href": "www.affectui.com/components",
+          "description": "React UI components for AI products",
+          "favicon": "https://www.google.com/s2/favicons?domain=affectui.com&sz=64",
+          "added": "2026-10-20"
         },
         {
           "name": "AI SDK Agents",
@@ -308,6 +331,13 @@
           "description": "Copy-paste components for AI-native interfaces",
           "favicon": "https://www.google.com/s2/favicons?domain=beautifului.dev&sz=64",
           "added": "2026-08-17"
+        },
+        {
+          "name": "Bencho",
+          "url": "bencho.dev",
+          "description": "Interactive React components and micro-interactions",
+          "favicon": "https://www.google.com/s2/favicons?domain=bencho.dev&sz=64",
+          "added": "2026-10-20"
         },
         {
           "name": "Blossom Carousel",
@@ -395,6 +425,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=mapcn.dev&sz=64"
         },
         {
+          "name": "Morphin",
+          "url": "morphin.dev",
+          "description": "UI components and interaction inspiration",
+          "favicon": "https://www.google.com/s2/favicons?domain=morphin.dev&sz=64",
+          "added": "2026-10-20"
+        },
+        {
           "name": "Motion",
           "url": "motion.dev",
           "description": "Production-ready animations for React",
@@ -406,6 +443,14 @@
           "description": "Animated number component for React",
           "favicon": "https://www.google.com/s2/favicons?domain=number-flow.barvian.me&sz=64",
           "added": "2026-08-04"
+        },
+        {
+          "name": "Poimandres Math",
+          "url": "pmndrs.github.io",
+          "href": "pmndrs.github.io/math/examples",
+          "description": "Math library examples by Poimandres",
+          "favicon": "https://www.google.com/s2/favicons?domain=pmndrs.github.io&sz=64",
+          "added": "2026-09-25"
         },
         {
           "name": "Pretext",
@@ -880,6 +925,13 @@
       "name": "Directories",
       "items": [
         {
+          "name": "Bot Directory",
+          "url": "botdirectory.ai",
+          "description": "AI bots and Grok Bot prompts",
+          "favicon": "https://www.google.com/s2/favicons?domain=botdirectory.ai&sz=64",
+          "added": "2026-10-07"
+        },
+        {
           "name": "Curated Supply",
           "url": "curated.supply",
           "description": "Curated hardware",
@@ -905,6 +957,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=freelancethings.co&sz=64"
         },
         {
+          "name": "H1 Gallery",
+          "url": "h1gallery.com",
+          "description": "Curated marketing headlines",
+          "favicon": "https://www.google.com/s2/favicons?domain=h1gallery.com&sz=64",
+          "added": "2026-10-07"
+        },
+        {
           "name": "Macfolio",
           "url": "macfolio.com",
           "description": "Curated Mac apps",
@@ -927,6 +986,13 @@
           "url": "osscar.dev",
           "description": "Curated directory",
           "favicon": "https://www.google.com/s2/favicons?domain=osscar.dev&sz=64"
+        },
+        {
+          "name": "Perfolios",
+          "url": "perfolios.shwn.design",
+          "description": "Portfolio directory",
+          "favicon": "https://www.google.com/s2/favicons?domain=perfolios.shwn.design&sz=64",
+          "added": "2026-09-29"
         },
         {
           "name": "Product Hunt",
@@ -963,6 +1029,13 @@
           "url": "toolfolio.io",
           "description": "Curated tools directory",
           "favicon": "https://www.google.com/s2/favicons?domain=toolfolio.io&sz=64"
+        },
+        {
+          "name": "What Ships",
+          "url": "whatships.com",
+          "description": "Curated startup launch videos and product demos",
+          "favicon": "https://www.google.com/s2/favicons?domain=whatships.com&sz=64",
+          "added": "2026-09-27"
         },
         {
           "name": "Workspaces",
@@ -1470,6 +1543,18 @@
       ]
     },
     {
+      "name": "Motion",
+      "items": [
+        {
+          "name": "Prompt Motion",
+          "url": "prompt-motion.com",
+          "description": "Motion design resource",
+          "favicon": "https://www.google.com/s2/favicons?domain=prompt-motion.com&sz=64",
+          "added": "2026-10-07"
+        }
+      ]
+    },
+    {
       "name": "On Repeat",
       "items": [
         {
@@ -1805,6 +1890,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=www.fontshare.com&sz=64"
         },
         {
+          "name": "Free Faces",
+          "url": "www.freefaces.gallery",
+          "description": "Curated collection of free typefaces",
+          "favicon": "https://www.google.com/s2/favicons?domain=freefaces.gallery&sz=64",
+          "added": "2026-10-07"
+        },
+        {
           "name": "Locale",
           "url": "joshpuckett.me",
           "href": "joshpuckett.me/locale",
@@ -1830,6 +1922,14 @@
           "favicon": "https://www.google.com/s2/favicons?domain=taylorpenton.com&sz=64"
         },
         {
+          "name": "Timeless Type",
+          "url": "www.timeless.co",
+          "href": "www.timeless.co/type",
+          "description": "Free variable typefaces with matching italics",
+          "favicon": "https://www.google.com/s2/favicons?domain=timeless.co&sz=64",
+          "added": "2026-10-07"
+        },
+        {
           "name": "Typefoundry Directory",
           "url": "typefoundry.directory",
           "description": "Directory of type foundries",
@@ -1846,6 +1946,18 @@
           "url": "velvetyne.fr",
           "description": "Free and open-source fonts",
           "favicon": "https://www.google.com/s2/favicons?domain=velvetyne.fr&sz=64"
+        }
+      ]
+    },
+    {
+      "name": "Vectors",
+      "items": [
+        {
+          "name": "iso-glow",
+          "url": "isoglow.dev",
+          "description": "Interactive isometric line drawings with glow lighting",
+          "favicon": "https://www.google.com/s2/favicons?domain=isoglow.dev&sz=64",
+          "added": "2026-10-07"
         }
       ]
     },

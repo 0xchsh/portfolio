@@ -88,6 +88,7 @@ const categoryIcons: Record<string, React.ElementType> = {
   'Design Systems': Palette,
   Inspiration: Sparkle,
   Mockups: FrameCorners,
+  Motion: Play,
   Software: AppWindow,
   Hardware: Desktop,
   Articles: Article,
@@ -101,6 +102,7 @@ const categoryIcons: Record<string, React.ElementType> = {
   Read: Book,
   Resources: BookOpen,
   Specs: ClipboardText,
+  Vectors: FrameCorners,
 };
 
 const BOOK_NOISE_FILTER_ID = 'book-cover-noise';
