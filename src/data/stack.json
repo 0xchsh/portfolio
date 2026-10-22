@@ -682,6 +682,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=emilkowal.ski&sz=64"
         },
         {
+          "name": "Hallmark",
+          "url": "www.usehallmark.com",
+          "description": "AI skill for building and reviewing interface designs",
+          "favicon": "https://www.google.com/s2/favicons?domain=usehallmark.com&sz=64",
+          "added": "2026-10-21"
+        },
+        {
           "name": "Haptics",
           "url": "haptics.lochie.me",
           "description": "Haptic feedback patterns",
