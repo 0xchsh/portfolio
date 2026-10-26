@@ -35,6 +35,9 @@ async function getCommitData() {
     firstDay.setUTCDate(firstDay.getUTCDate() - 29);
     const firstDate = firstDay.toISOString().slice(0, 10);
 
+    const yearStart = `${now.getUTCFullYear()}-01-01`;
+    const queryStart = firstDate < yearStart ? firstDate : yearStart;
+
     const contributionsByDay = new Map<string, number>();
     for (let i = 0; i < 30; i++) {
       const date = new Date(firstDay);
@@ -43,7 +46,7 @@ async function getCommitData() {
     }
 
     const token = process.env.GITHUB_TOKEN?.trim();
-    if (!token) return { days: [] as CommitDay[], totalCommits: 0 };
+    if (!token) return { days: [] as CommitDay[], totalCommits: 0, yearToDateContributions: 0 };
 
     // The contribution calendar mirrors the GitHub profile graph and can
     // include anonymized private activity without granting this deployment
@@ -74,7 +77,7 @@ async function getCommitData() {
         query,
         variables: {
           login: process.env.GITHUB_USERNAME?.trim() || '0xchsh',
-          from: `${firstDate}T00:00:00.000Z`,
+          from: `${queryStart}T00:00:00.000Z`,
           to: `${today}T23:59:59.999Z`,
         },
       }),
@@ -83,18 +86,22 @@ async function getCommitData() {
 
     if (!res.ok) {
       console.error('[CommitGraph] GitHub GraphQL error:', res.status, await res.text().catch(() => ''));
-      return { days: [] as CommitDay[], totalCommits: 0 };
+      return { days: [] as CommitDay[], totalCommits: 0, yearToDateContributions: 0 };
     }
 
     const json = await res.json();
     if (json.errors?.length) {
       console.error('[CommitGraph] GitHub GraphQL errors:', json.errors);
-      return { days: [] as CommitDay[], totalCommits: 0 };
+      return { days: [] as CommitDay[], totalCommits: 0, yearToDateContributions: 0 };
     }
 
     const weeks = json.data?.user?.contributionsCollection?.contributionCalendar?.weeks ?? [];
+    let yearToDateContributions = 0;
     for (const week of weeks) {
       for (const day of week.contributionDays ?? []) {
+        if (day.date >= yearStart && day.date <= today) {
+          yearToDateContributions += day.contributionCount;
+        }
         if (contributionsByDay.has(day.date)) {
           contributionsByDay.set(day.date, day.contributionCount);
         }
@@ -108,10 +115,10 @@ async function getCommitData() {
       repos: [],
     }));
 
-    return { days, totalCommits: days.reduce((s, d) => s + d.count, 0) };
+    return { days, totalCommits: days.reduce((s, d) => s + d.count, 0), yearToDateContributions };
   } catch (err) {
     console.error('[CommitGraph] Exception:', err);
-    return { days: [] as CommitDay[], totalCommits: 0 };
+    return { days: [] as CommitDay[], totalCommits: 0, yearToDateContributions: 0 };
   }
 }
 
@@ -243,7 +250,7 @@ function ArtRow({ item, navIndex }: { item: ArtItem; navIndex?: number }) {
 // ---------------------------------------------------------------------------
 
 export default async function V2Home() {
-  const [{ days, totalCommits }, weather, commitHash] = await Promise.all([
+  const [{ days, totalCommits, yearToDateContributions }, weather, commitHash] = await Promise.all([
     getCommitData(),
     getWeather(),
     getLatestCommit(),
@@ -445,6 +452,10 @@ export default async function V2Home() {
           <div className="flex items-center justify-between">
             <span className={metaLabel}>Last 30 days</span>
             <span className={`${metaLabel} tabular-nums`}>{totalCommits} contributions</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className={metaLabel}>Year to date</span>
+            <span className={`${metaLabel} tabular-nums`}>{yearToDateContributions} contributions</span>
           </div>
         </section>
       </FadeIn>

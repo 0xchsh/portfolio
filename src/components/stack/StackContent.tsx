@@ -100,7 +100,9 @@ const categoryIcons: Record<string, React.ElementType> = {
   APIs: Plugs,
   Directories: BookOpen,
   Read: Book,
+  Resources: BookOpen,
   Specs: ClipboardText,
+  Vectors: FrameCorners,
 };
 
 const BOOK_NOISE_FILTER_ID = 'book-cover-noise';
