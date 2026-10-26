@@ -259,6 +259,27 @@
       "name": "Brand",
       "items": [
         {
+          "name": "6TM Magazine",
+          "url": "shop.6tm-magazine.com",
+          "description": "Fonts, graphics, and design resources",
+          "favicon": "https://www.google.com/s2/favicons?domain=shop.6tm-magazine.com&sz=64",
+          "added": "2026-10-26"
+        },
+        {
+          "name": "Design Syndrome",
+          "url": "designsyndrome.com",
+          "description": "Graphic design assets, textures, and mockups",
+          "favicon": "https://www.google.com/s2/favicons?domain=designsyndrome.com&sz=64",
+          "added": "2026-10-26"
+        },
+        {
+          "name": "Fox Rockett Studio",
+          "url": "foxrockettstudio.com",
+          "description": "Vectors, textures, fonts, and design templates",
+          "favicon": "https://www.google.com/s2/favicons?domain=foxrockettstudio.com&sz=64",
+          "added": "2026-10-26"
+        },
+        {
           "name": "playgrnd",
           "url": "www.playgrnd.tools",
           "description": "Browser-based generative design tools",
@@ -1133,6 +1154,14 @@
           "url": "clig.dev",
           "description": "Command line interface guidelines",
           "favicon": "https://www.google.com/s2/favicons?domain=clig.dev&sz=64"
+        },
+        {
+          "name": "Colorfigures",
+          "url": "april-zhu.com",
+          "href": "april-zhu.com/colorfigures",
+          "description": "Interactive isometric drawings of everyday objects",
+          "favicon": "https://www.google.com/s2/favicons?domain=april-zhu.com&sz=64",
+          "added": "2026-10-26"
         },
         {
           "name": "Cosmos Pokemon",
