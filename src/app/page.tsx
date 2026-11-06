@@ -33,10 +33,8 @@ async function getCommitData() {
     const today = now.toISOString().slice(0, 10);
     const firstDay = new Date(`${today}T00:00:00.000Z`);
     firstDay.setUTCDate(firstDay.getUTCDate() - 29);
-    const firstDate = firstDay.toISOString().slice(0, 10);
 
     const yearStart = `${now.getUTCFullYear()}-01-01`;
-    const queryStart = firstDate < yearStart ? firstDate : yearStart;
 
     const contributionsByDay = new Map<string, number>();
     for (let i = 0; i < 30; i++) {
@@ -45,67 +43,45 @@ async function getCommitData() {
       contributionsByDay.set(date.toISOString().slice(0, 10), 0);
     }
 
-    const token = process.env.GITHUB_TOKEN?.trim();
-    if (!token) return { days: [] as CommitDay[], totalCommits: 0, yearToDateContributions: 0 };
-
-    // The contribution calendar mirrors the GitHub profile graph and can
-    // include anonymized private activity without granting this deployment
-    // access to every private organization repository.
-    const query = `
-      query ContributionCalendar($login: String!, $from: DateTime!, $to: DateTime!) {
-        user(login: $login) {
-          contributionsCollection(from: $from, to: $to) {
-            contributionCalendar {
-              weeks {
-                contributionDays {
-                  contributionCount
-                  date
-                }
-              }
-            }
-          }
-        }
-      }
-    `;
-    const res = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query,
-        variables: {
-          login: process.env.GITHUB_USERNAME?.trim() || '0xchsh',
-          from: `${queryStart}T00:00:00.000Z`,
-          to: `${today}T23:59:59.999Z`,
-        },
-      }),
+    // Read the public profile calendar instead of the GraphQL API. It already
+    // includes anonymized private counts, and needs no token — the API only
+    // returns private activity with the `repo` scope, which grants write access
+    // to every private repository the account can reach.
+    const login = process.env.GITHUB_USERNAME?.trim() || '0xchsh';
+    const res = await fetch(`https://github.com/users/${login}/contributions`, {
       next: { revalidate: 3600 },
     });
 
     if (!res.ok) {
-      console.error('[CommitGraph] GitHub GraphQL error:', res.status, await res.text().catch(() => ''));
+      console.error('[CommitGraph] GitHub contributions error:', res.status);
       return { days: [] as CommitDay[], totalCommits: 0, yearToDateContributions: 0 };
     }
 
-    const json = await res.json();
-    if (json.errors?.length) {
-      console.error('[CommitGraph] GitHub GraphQL errors:', json.errors);
-      return { days: [] as CommitDay[], totalCommits: 0, yearToDateContributions: 0 };
+    // Each day is a <td data-date id> cell; its count lives in a <tool-tip for=id>.
+    const html = await res.text();
+    const dateById = new Map<string, string>();
+    for (const [cell] of html.matchAll(/<td\b[^>]*ContributionCalendar-day[^>]*>/g)) {
+      const date = cell.match(/data-date="([\d-]+)"/)?.[1];
+      const id = cell.match(/id="([^"]+)"/)?.[1];
+      if (date && id) dateById.set(id, date);
     }
 
-    const weeks = json.data?.user?.contributionsCollection?.contributionCalendar?.weeks ?? [];
     let yearToDateContributions = 0;
-    for (const week of weeks) {
-      for (const day of week.contributionDays ?? []) {
-        if (day.date >= yearStart && day.date <= today) {
-          yearToDateContributions += day.contributionCount;
-        }
-        if (contributionsByDay.has(day.date)) {
-          contributionsByDay.set(day.date, day.contributionCount);
-        }
+    for (const [, id, label] of html.matchAll(/<tool-tip\b[^>]*for="([^"]+)"[^>]*>([^<]*)<\/tool-tip>/g)) {
+      const date = dateById.get(id);
+      if (!date) continue;
+      const count = Number(label.match(/^([\d,]+) contributions?/)?.[1].replace(/,/g, '') ?? 0);
+      if (date >= yearStart && date <= today) {
+        yearToDateContributions += count;
       }
+      if (contributionsByDay.has(date)) {
+        contributionsByDay.set(date, count);
+      }
+    }
+
+    if (dateById.size === 0) {
+      console.error('[CommitGraph] Could not parse GitHub contributions calendar');
+      return { days: [] as CommitDay[], totalCommits: 0, yearToDateContributions: 0 };
     }
 
     const days: CommitDay[] = Array.from(contributionsByDay, ([date, count]) => ({
@@ -275,7 +251,7 @@ export default async function V2Home() {
         <FadeIn delay={75}>
         <div className="text-sm leading-relaxed text-neutral-500 dark:text-neutral-400 flex flex-col gap-3">
           <p>
-            Currently the Lead Product Designer at{' '}
+            Currently the Design Lead at{' '}
             <a href="https://exa.ai" target="_blank" rel="noopener noreferrer" className={linkClass}>Exa</a>.
             {' '}Previously at{' '}
             <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className={linkClass}>Stellar</a>,{' '}
@@ -453,6 +429,7 @@ export default async function V2Home() {
             <span className={metaLabel}>Last 30 days</span>
             <span className={`${metaLabel} tabular-nums`}>{totalCommits} contributions</span>
           </div>
+          <div className="border-t border-dotted border-neutral-200 dark:border-neutral-700" />
           <div className="flex items-center justify-between">
             <span className={metaLabel}>Year to date</span>
             <span className={`${metaLabel} tabular-nums`}>{yearToDateContributions} contributions</span>
