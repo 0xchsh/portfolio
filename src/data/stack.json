@@ -831,6 +831,14 @@
       "name": "Design Tools",
       "items": [
         {
+          "name": "Brik",
+          "url": "brik.space",
+          "href": "brik.space/gallery",
+          "description": "Community-made design tools to remix",
+          "favicon": "https://www.google.com/s2/favicons?domain=brik.space&sz=64",
+          "added": "2026-11-05"
+        },
+        {
           "name": "Butter",
           "url": "www.butter.video",
           "description": "Video editor for modern brands",
@@ -1590,6 +1598,14 @@
       "name": "Motion",
       "items": [
         {
+          "name": "Emil Widlund on X",
+          "url": "x.com",
+          "href": "x.com/emilwidlund/status/2115213417539879300",
+          "description": "Post by Emil Widlund",
+          "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64",
+          "added": "2026-10-28"
+        },
+        {
           "name": "One Shot Prompts",
           "url": "oneshotprompts.com",
           "description": "Motion design prompts",
@@ -1602,6 +1618,13 @@
           "description": "Motion design prompts",
           "favicon": "https://www.google.com/s2/favicons?domain=prompt-motion.com&sz=64",
           "added": "2026-10-07"
+        },
+        {
+          "name": "Remotion",
+          "url": "remotion.dev",
+          "description": "Programmatic video in React",
+          "favicon": "https://www.google.com/s2/favicons?domain=remotion.dev&sz=64",
+          "added": "2026-10-28"
         }
       ]
     },
