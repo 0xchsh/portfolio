@@ -1436,6 +1436,14 @@
           "url": "waratlas.org",
           "description": "Interactive war atlas",
           "favicon": "https://www.google.com/s2/favicons?domain=waratlas.org&sz=64"
+        },
+        {
+          "name": "Devouring Details Mantras",
+          "url": "devouringdetails.com",
+          "href": "devouringdetails.com/mantras",
+          "description": "Some things you perhaps needed to hear",
+          "favicon": "https://www.google.com/s2/favicons?domain=devouringdetails.com&sz=64",
+          "added": "2026-11-09"
         }
       ]
     },
