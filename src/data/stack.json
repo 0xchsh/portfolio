@@ -100,6 +100,22 @@
       "name": "Articles",
       "items": [
         {
+          "name": "Brand as infrastructure",
+          "url": "x.com",
+          "href": "x.com/PaulJun_/status/2122714711095468195",
+          "description": "Paul Jun on building Ramp's internal brand agent",
+          "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64",
+          "added": "2026-11-19"
+        },
+        {
+          "name": "Brand as software",
+          "url": "x.com",
+          "href": "x.com/PaulJun_/status/2098386367898079729",
+          "description": "Paul Jun on brand systems that behave like jazz",
+          "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64",
+          "added": "2026-11-19"
+        },
+        {
           "name": "Casino on Mars",
           "url": "paradigm.xyz",
           "href": "paradigm.xyz/2023/09/casino-on-mars",
@@ -831,6 +847,13 @@
       "name": "Design Tools",
       "items": [
         {
+          "name": "Blueprint",
+          "url": "blueprint.page",
+          "description": "Prompt-to-generative design tools",
+          "favicon": "https://www.google.com/s2/favicons?domain=blueprint.page&sz=64",
+          "added": "2026-11-16"
+        },
+        {
           "name": "Brik",
           "url": "brik.space",
           "href": "brik.space/gallery",
@@ -1283,6 +1306,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=localgeographic.co&sz=64"
         },
         {
+          "name": "Luis Bizarro",
+          "url": "webgl.dev",
+          "description": "WebGL and WebGPU portfolio",
+          "favicon": "https://www.google.com/s2/favicons?domain=webgl.dev&sz=64",
+          "added": "2026-11-19"
+        },
+        {
           "name": "Muni Maker",
           "url": "www.munimaker.app",
           "description": "Make your own transit map",
@@ -1411,6 +1441,13 @@
           "url": "wear.gallery",
           "description": "Curated apparel gallery",
           "favicon": "https://www.google.com/s2/favicons?domain=wear.gallery&sz=64"
+        },
+        {
+          "name": "WebGPU Toys",
+          "url": "webgpu.toys",
+          "description": "WebGPU experiments by Luis Bizarro",
+          "favicon": "https://www.google.com/s2/favicons?domain=webgpu.toys&sz=64",
+          "added": "2026-11-19"
         },
         {
           "name": "Wild Tools",
