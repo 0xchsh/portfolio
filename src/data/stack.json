@@ -968,6 +968,14 @@
           "favicon": "https://www.google.com/s2/favicons?domain=remotion.dev&sz=64"
         },
         {
+          "name": "Stageshow",
+          "url": "benji.org",
+          "href": "benji.org/stageshow",
+          "description": "Agent skill for faux product UI by Benji Taylor",
+          "favicon": "https://www.google.com/s2/favicons?domain=benji.org&sz=64",
+          "added": "2026-11-22"
+        },
+        {
           "name": "Shader Lab",
           "url": "eng.basement.studio",
           "href": "eng.basement.studio/tools/shader-lab",
@@ -2077,6 +2085,13 @@
           "description": "Interactive isometric line drawings with glow lighting",
           "favicon": "https://www.google.com/s2/favicons?domain=isoglow.dev&sz=64",
           "added": "2026-10-07"
+        },
+        {
+          "name": "Illos",
+          "url": "illos.dev",
+          "description": "Animated SVG illustrations and agent skills by Naved Alam",
+          "favicon": "https://www.google.com/s2/favicons?domain=illos.dev&sz=64",
+          "added": "2026-11-22"
         }
       ]
     },
