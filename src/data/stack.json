@@ -900,6 +900,14 @@
           "favicon": "https://www.google.com/s2/favicons?domain=jitter.video&sz=64"
         },
         {
+          "name": "Limora",
+          "url": "limora.ai",
+          "href": "limora.ai/app/community?tab=skills",
+          "description": "AI image, vector, video and 3D studio with community skills",
+          "favicon": "https://www.google.com/s2/favicons?domain=limora.ai&sz=64",
+          "added": "2026-11-22"
+        },
+        {
           "name": "Loaders.wtf",
           "url": "loaders.wtf",
           "description": "Loading spinner components",
