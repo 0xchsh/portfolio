@@ -296,6 +296,14 @@
           "added": "2026-10-26"
         },
         {
+          "name": "The Michelin star brand vending machine",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=P5yPMQXzXSE",
+          "description": "Paul Jun on Ramp's brand agent, on Dive Club",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64",
+          "added": "2026-11-23"
+        },
+        {
           "name": "playgrnd",
           "url": "www.playgrnd.tools",
           "description": "Browser-based generative design tools",
@@ -1365,6 +1373,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=parallel.ai&sz=64"
         },
         {
+          "name": "Pointer Pointer",
+          "url": "pointerpointer.com",
+          "description": "Photos of people pointing at your cursor",
+          "favicon": "https://www.google.com/s2/favicons?domain=pointerpointer.com&sz=64",
+          "added": "2026-11-23"
+        },
+        {
           "name": "Radio Garden",
           "url": "radio.garden",
           "description": "Listen to radio stations around the globe",
@@ -1686,6 +1701,13 @@
           "description": "Programmatic video in React",
           "favicon": "https://www.google.com/s2/favicons?domain=remotion.dev&sz=64",
           "added": "2026-10-28"
+        },
+        {
+          "name": "snapcn",
+          "url": "snapcn.dev",
+          "description": "Remotion components for product demo videos",
+          "favicon": "https://www.google.com/s2/favicons?domain=snapcn.dev&sz=64",
+          "added": "2026-11-23"
         }
       ]
     },
