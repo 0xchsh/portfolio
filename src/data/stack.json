@@ -100,6 +100,22 @@
       "name": "Articles",
       "items": [
         {
+          "name": "Brand as infrastructure",
+          "url": "x.com",
+          "href": "x.com/PaulJun_/status/2122714711095468195",
+          "description": "Paul Jun on building Ramp's internal brand agent",
+          "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64",
+          "added": "2026-11-19"
+        },
+        {
+          "name": "Brand as software",
+          "url": "x.com",
+          "href": "x.com/PaulJun_/status/2098386367898079729",
+          "description": "Paul Jun on brand systems that behave like jazz",
+          "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=64",
+          "added": "2026-11-19"
+        },
+        {
           "name": "Casino on Mars",
           "url": "paradigm.xyz",
           "href": "paradigm.xyz/2023/09/casino-on-mars",
@@ -278,6 +294,14 @@
           "description": "Vectors, textures, fonts, and design templates",
           "favicon": "https://www.google.com/s2/favicons?domain=foxrockettstudio.com&sz=64",
           "added": "2026-10-26"
+        },
+        {
+          "name": "The Michelin star brand vending machine",
+          "url": "youtube.com",
+          "href": "youtube.com/watch?v=P5yPMQXzXSE",
+          "description": "Paul Jun on Ramp's brand agent, on Dive Club",
+          "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=64",
+          "added": "2026-11-23"
         },
         {
           "name": "playgrnd",
@@ -831,6 +855,13 @@
       "name": "Design Tools",
       "items": [
         {
+          "name": "Blueprint",
+          "url": "blueprint.page",
+          "description": "Prompt-to-generative design tools",
+          "favicon": "https://www.google.com/s2/favicons?domain=blueprint.page&sz=64",
+          "added": "2026-11-16"
+        },
+        {
           "name": "Brik",
           "url": "brik.space",
           "href": "brik.space/gallery",
@@ -875,6 +906,14 @@
           "url": "jitter.video",
           "description": "Motion design for the web",
           "favicon": "https://www.google.com/s2/favicons?domain=jitter.video&sz=64"
+        },
+        {
+          "name": "Limora",
+          "url": "limora.ai",
+          "href": "limora.ai/app/community?tab=skills",
+          "description": "AI image, vector, video and 3D studio with community skills",
+          "favicon": "https://www.google.com/s2/favicons?domain=limora.ai&sz=64",
+          "added": "2026-11-22"
         },
         {
           "name": "Loaders.wtf",
@@ -943,6 +982,14 @@
           "url": "remotion.dev",
           "description": "Programmatic video in React",
           "favicon": "https://www.google.com/s2/favicons?domain=remotion.dev&sz=64"
+        },
+        {
+          "name": "Stageshow",
+          "url": "benji.org",
+          "href": "benji.org/stageshow",
+          "description": "Agent skill for faux product UI by Benji Taylor",
+          "favicon": "https://www.google.com/s2/favicons?domain=benji.org&sz=64",
+          "added": "2026-11-22"
         },
         {
           "name": "Shader Lab",
@@ -1283,6 +1330,13 @@
           "favicon": "https://www.google.com/s2/favicons?domain=localgeographic.co&sz=64"
         },
         {
+          "name": "Luis Bizarro",
+          "url": "webgl.dev",
+          "description": "WebGL and WebGPU portfolio",
+          "favicon": "https://www.google.com/s2/favicons?domain=webgl.dev&sz=64",
+          "added": "2026-11-19"
+        },
+        {
           "name": "Muni Maker",
           "url": "www.munimaker.app",
           "description": "Make your own transit map",
@@ -1317,6 +1371,13 @@
           "url": "pioneers.parallel.ai",
           "description": "Parallel pioneers experience",
           "favicon": "https://www.google.com/s2/favicons?domain=parallel.ai&sz=64"
+        },
+        {
+          "name": "Pointer Pointer",
+          "url": "pointerpointer.com",
+          "description": "Photos of people pointing at your cursor",
+          "favicon": "https://www.google.com/s2/favicons?domain=pointerpointer.com&sz=64",
+          "added": "2026-11-23"
         },
         {
           "name": "Radio Garden",
@@ -1411,6 +1472,13 @@
           "url": "wear.gallery",
           "description": "Curated apparel gallery",
           "favicon": "https://www.google.com/s2/favicons?domain=wear.gallery&sz=64"
+        },
+        {
+          "name": "WebGPU Toys",
+          "url": "webgpu.toys",
+          "description": "WebGPU experiments by Luis Bizarro",
+          "favicon": "https://www.google.com/s2/favicons?domain=webgpu.toys&sz=64",
+          "added": "2026-11-19"
         },
         {
           "name": "Wild Tools",
@@ -1633,6 +1701,13 @@
           "description": "Programmatic video in React",
           "favicon": "https://www.google.com/s2/favicons?domain=remotion.dev&sz=64",
           "added": "2026-10-28"
+        },
+        {
+          "name": "snapcn",
+          "url": "snapcn.dev",
+          "description": "Remotion components for product demo videos",
+          "favicon": "https://www.google.com/s2/favicons?domain=snapcn.dev&sz=64",
+          "added": "2026-11-23"
         }
       ]
     },
@@ -2040,6 +2115,13 @@
           "description": "Interactive isometric line drawings with glow lighting",
           "favicon": "https://www.google.com/s2/favicons?domain=isoglow.dev&sz=64",
           "added": "2026-10-07"
+        },
+        {
+          "name": "Illos",
+          "url": "illos.dev",
+          "description": "Animated SVG illustrations and agent skills by Naved Alam",
+          "favicon": "https://www.google.com/s2/favicons?domain=illos.dev&sz=64",
+          "added": "2026-11-22"
         }
       ]
     },
